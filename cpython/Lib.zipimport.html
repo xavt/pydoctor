@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.zipimport : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.zipimport.html" class="code" data-type="Module">zipimport</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">zipimport provides support for importing Python modules from Zip archives.
+
+This module exports three objects:
+- zipimporter: a class; its constructor takes a path to a Zip archive.
+- ZipImportError: exception raised by zipimporter objects. It's a
+  subclass of ImportError, so it can be caught as ImportError, too.
+- _zip_directory_cache: a dict, mapping archive paths to zip directory
+  info dicts, as used in zipimporter._files.
+
+It is usually not needed to use the zipimport module explicitly; it is
+used by the builtin import mechanism for sys.path items that are paths
+to Zip archives.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id12233">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipimport.html#alt_path_sep" class="code" data-type="Variable">alt_path_sep</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.zipimport.ZipImportError.html" class="code" data-type="Class">ZipImportError</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipimport.html#END_CENTRAL_DIR_SIZE" class="code" data-type="Variable">END_CENTRAL_DIR_SIZE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipimport.html#STRING_END_ARCHIVE" class="code" data-type="Variable">STRING_END_ARCHIVE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipimport.html#MAX_COMMENT_LEN" class="code" data-type="Variable">MAX_COMMENT_LEN</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.zipimport.zipimporter.html" class="code" data-type="Class">zipimporter</a></td>
+    <td><span>zipimporter(archivepath) -&gt; zipimporter object</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipimport.html#cp437_table" class="code" data-type="Variable">cp437_table</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipimport.html#_zip_directory_cache" class="code" data-type="Variable">_zip_directory_cache</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipimport.html#_module_type" class="code" data-type="Variable">_module_type</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipimport.html#_zip_searchorder" class="code" data-type="Variable">_zip_searchorder</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipimport.html#_get_module_path" class="code" data-type="Function">_get_module_path</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipimport.html#_is_dir" class="code" data-type="Function">_is_dir</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipimport.html#_get_module_info" class="code" data-type="Function">_get_module_info</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipimport.html#_read_directory" class="code" data-type="Function">_read_directory</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipimport.html#_importing_zlib" class="code" data-type="Variable">_importing_zlib</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipimport.html#_get_decompress_func" class="code" data-type="Function">_get_decompress_func</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipimport.html#_get_data" class="code" data-type="Function">_get_data</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipimport.html#_eq_mtime" class="code" data-type="Function">_eq_mtime</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipimport.html#_unmarshal_code" class="code" data-type="Function">_unmarshal_code</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipimport.html#_code_type" class="code" data-type="Variable">_code_type</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipimport.html#_normalize_line_endings" class="code" data-type="Function">_normalize_line_endings</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipimport.html#_compile_source" class="code" data-type="Function">_compile_source</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipimport.html#_parse_dostime" class="code" data-type="Function">_parse_dostime</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipimport.html#_get_mtime_and_size_of_source" class="code" data-type="Function">_get_mtime_and_size_of_source</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipimport.html#_get_pyc_source" class="code" data-type="Function">_get_pyc_source</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipimport.html#_get_module_code" class="code" data-type="Function">_get_module_code</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.zipimport.alt_path_sep">
+    
+  </a>
+  <a name="alt_path_sep">
+    
+  </a>
+  <div class="functionHeader">
+    alt_path_sep =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipimport._zip_directory_cache">
+    
+  </a>
+  <a name="_zip_directory_cache">
+    
+  </a>
+  <div class="functionHeader">
+    _zip_directory_cache =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipimport._module_type">
+    
+  </a>
+  <a name="_module_type">
+    
+  </a>
+  <div class="functionHeader">
+    _module_type =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipimport.END_CENTRAL_DIR_SIZE">
+    
+  </a>
+  <a name="END_CENTRAL_DIR_SIZE">
+    
+  </a>
+  <div class="functionHeader">
+    END_CENTRAL_DIR_SIZE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipimport.STRING_END_ARCHIVE">
+    
+  </a>
+  <a name="STRING_END_ARCHIVE">
+    
+  </a>
+  <div class="functionHeader">
+    STRING_END_ARCHIVE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipimport.MAX_COMMENT_LEN">
+    
+  </a>
+  <a name="MAX_COMMENT_LEN">
+    
+  </a>
+  <div class="functionHeader">
+    MAX_COMMENT_LEN =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipimport._zip_searchorder">
+    
+  </a>
+  <a name="_zip_searchorder">
+    
+  </a>
+  <div class="functionHeader">
+    _zip_searchorder =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.zipimport._get_module_path">
+    
+  </a>
+  <a name="_get_module_path">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_module_path(self, fullname):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.zipimport._is_dir">
+    
+  </a>
+  <a name="_is_dir">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _is_dir(self, path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.zipimport._get_module_info">
+    
+  </a>
+  <a name="_get_module_info">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_module_info(self, fullname):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.zipimport._read_directory">
+    
+  </a>
+  <a name="_read_directory">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _read_directory(archive):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipimport.cp437_table">
+    
+  </a>
+  <a name="cp437_table">
+    
+  </a>
+  <div class="functionHeader">
+    cp437_table =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipimport._importing_zlib">
+    
+  </a>
+  <a name="_importing_zlib">
+    
+  </a>
+  <div class="functionHeader">
+    _importing_zlib =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.zipimport._get_decompress_func">
+    
+  </a>
+  <a name="_get_decompress_func">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_decompress_func():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.zipimport._get_data">
+    
+  </a>
+  <a name="_get_data">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_data(archive, toc_entry):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.zipimport._eq_mtime">
+    
+  </a>
+  <a name="_eq_mtime">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _eq_mtime(t1, t2):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.zipimport._unmarshal_code">
+    
+  </a>
+  <a name="_unmarshal_code">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _unmarshal_code(self, pathname, fullpath, fullname, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipimport._code_type">
+    
+  </a>
+  <a name="_code_type">
+    
+  </a>
+  <div class="functionHeader">
+    _code_type =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.zipimport._normalize_line_endings">
+    
+  </a>
+  <a name="_normalize_line_endings">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _normalize_line_endings(source):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.zipimport._compile_source">
+    
+  </a>
+  <a name="_compile_source">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _compile_source(pathname, source):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.zipimport._parse_dostime">
+    
+  </a>
+  <a name="_parse_dostime">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _parse_dostime(d, t):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.zipimport._get_mtime_and_size_of_source">
+    
+  </a>
+  <a name="_get_mtime_and_size_of_source">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_mtime_and_size_of_source(self, path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.zipimport._get_pyc_source">
+    
+  </a>
+  <a name="_get_pyc_source">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_pyc_source(self, path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.zipimport._get_module_code">
+    
+  </a>
+  <a name="_get_module_code">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_module_code(self, fullname):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

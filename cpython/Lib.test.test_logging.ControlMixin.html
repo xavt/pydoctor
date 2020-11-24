@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.test.test_logging.ControlMixin : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.test.html" class="code" data-type="Package">test</a>.<a href="Lib.test.test_logging.html" class="code" data-type="Module">test_logging</a>.<a href="Lib.test.test_logging.ControlMixin.html" class="code" data-type="Class">ControlMixin</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.test.test_logging.ControlMixin(<span title="object">object</span>):</code></p><p>Known subclasses: <a href="Lib.test.test_logging.TestHTTPServer.html" class="code" data-type="Class">Lib.test.test_logging.TestHTTPServer</a>, <a href="Lib.test.test_logging.TestTCPServer.html" class="code" data-type="Class">Lib.test.test_logging.TestTCPServer</a>, <a href="Lib.test.test_logging.TestUDPServer.html" class="code" data-type="Class">Lib.test.test_logging.TestUDPServer</a></p>
+        <p><a href="classIndex.html#Lib.test.test_logging.ControlMixin">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">This mixin is used to start a server on a separate thread, and
+shut it down programmatically. Request handling is simplified - instead
+of needing to derive a suitable RequestHandler subclass, you just
+provide a callable which will be passed each received request to be
+processed.
+
+:param handler: A handler callable which will be called with a
+                single parameter - the request - in order to
+                process the request. This handler is called on the
+                server thread, effectively meaning that requests are
+                processed serially. While not quite Web scale ;-),
+                this should be fine for testing applications.
+:param poll_interval: The polling interval in seconds.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id7462">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_logging.ControlMixin.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_logging.ControlMixin.html#poll_interval" class="code" data-type="Instance Variable">poll_interval</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_logging.ControlMixin.html#ready" class="code" data-type="Instance Variable">ready</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_logging.ControlMixin.html#start" class="code" data-type="Method">start</a></td>
+    <td><span>Create a daemon thread to run the server, and start it.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_logging.ControlMixin.html#serve_forever" class="code" data-type="Method">serve_forever</a></td>
+    <td><span>Run the server. Set the ready flag before entering the service loop.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_logging.ControlMixin.html#stop" class="code" data-type="Method">stop</a></td>
+    <td><span>Tell the server thread to stop, and wait for it to do so.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_logging.ControlMixin.html#_thread" class="code" data-type="Instance Variable">_thread</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_logging.ControlMixin.html#_handler" class="code" data-type="Instance Variable">_handler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.test.test_logging.ControlMixin.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, handler, poll_interval):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.test.test_logging.TestHTTPServer.html" class="code" data-type="Class">Lib.test.test_logging.TestHTTPServer</a>, <a href="Lib.test.test_logging.TestTCPServer.html" class="code" data-type="Class">Lib.test.test_logging.TestTCPServer</a>, <a href="Lib.test.test_logging.TestUDPServer.html" class="code" data-type="Class">Lib.test.test_logging.TestUDPServer</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.test.test_logging.ControlMixin._thread">
+    
+  </a>
+  <a name="_thread">
+    
+  </a>
+  <div class="functionHeader">
+    _thread =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_logging.ControlMixin.poll_interval">
+    
+  </a>
+  <a name="poll_interval">
+    
+  </a>
+  <div class="functionHeader">
+    poll_interval =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.test.test_logging.ControlMixin._handler">
+    
+  </a>
+  <a name="_handler">
+    
+  </a>
+  <div class="functionHeader">
+    _handler =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_logging.ControlMixin.ready">
+    
+  </a>
+  <a name="ready">
+    
+  </a>
+  <div class="functionHeader">
+    ready =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_logging.ControlMixin.start">
+    
+  </a>
+  <a name="start">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    start(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create a daemon thread to run the server, and start it.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_logging.ControlMixin.serve_forever">
+    
+  </a>
+  <a name="serve_forever">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    serve_forever(self, poll_interval):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Run the server. Set the ready flag before entering the
+service loop.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_logging.ControlMixin.stop">
+    
+  </a>
+  <a name="stop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    stop(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Tell the server thread to stop, and wait for it to do so.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

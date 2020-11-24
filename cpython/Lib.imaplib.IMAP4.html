@@ -1,0 +1,2698 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.imaplib.IMAP4 : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.imaplib.html" class="code" data-type="Module">imaplib</a>.<a href="Lib.imaplib.IMAP4.html" class="code" data-type="Class">IMAP4</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.imaplib.IMAP4:</code></p><p>Known subclasses: <a href="Lib.imaplib.IMAP4_SSL.html" class="code" data-type="Class">Lib.imaplib.IMAP4_SSL</a>, <a href="Lib.imaplib.IMAP4_stream.html" class="code" data-type="Class">Lib.imaplib.IMAP4_stream</a></p>
+        <p><a href="classIndex.html#Lib.imaplib.IMAP4">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">IMAP4 client class.
+
+Instantiate with: IMAP4([host[, port[, timeout=None]]])
+
+        host - host's name (default: localhost);
+        port - port number (default: standard IMAP4 port).
+        timeout - socket timeout (default: None)
+                  If timeout is not given or is None,
+                  the global default socket timeout is used
+
+All IMAP4rev1 commands are supported by methods of the same
+name (in lower-case).
+
+All arguments to commands are converted to strings, except for
+AUTHENTICATE, and the last argument to APPEND which is passed as
+an IMAP4 literal.  If necessary (the string contains any
+non-printing characters or white-space and isn't enclosed with
+either parentheses or double quotes) each string is quoted.
+However, the 'password' argument to the LOGIN command is always
+quoted.  If you want to avoid having an argument string quoted
+(eg: the 'flags' argument to STORE) then enclose the string in
+parentheses (eg: "(\Deleted)").
+
+Each command returns a tuple: (type, [data, ...]) where 'type'
+is usually 'OK' or 'NO', and 'data' is either the text from the
+tagged response, or untagged results from command. Each 'data'
+is either a string, or a tuple. If a tuple, then the first part
+is the header of the response, and the second part contains
+the data (ie: 'literal' value).
+
+Errors raise the exception class &lt;instance&gt;.error("&lt;reason&gt;").
+IMAP4 server errors raise &lt;instance&gt;.abort("&lt;reason&gt;"),
+which is a sub-class of 'error'. Mailbox status changes
+from READ-WRITE to READ-ONLY raise the exception class
+&lt;instance&gt;.readonly("&lt;reason&gt;"), which is a sub-class of 'abort'.
+
+"error" exceptions imply a program error.
+"abort" exceptions imply the connection should be reset, and
+        the command re-tried.
+"readonly" exceptions imply the command should be re-tried.
+
+Note: to use this module, you must read the RFCs pertaining to the
+IMAP4 protocol, as the semantics of the arguments to each IMAP4
+command are left to the invoker, not to mention the results. Also,
+most IMAP servers implement a sub-set of the commands available here.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2512">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.imaplib.IMAP4.error.html" class="code" data-type="Class">error</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.imaplib.IMAP4.abort.html" class="code" data-type="Class">abort</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.imaplib.IMAP4.readonly.html" class="code" data-type="Class">readonly</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.imaplib.IMAP4.html#debug" class="code" data-type="Instance Variable">debug</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.imaplib.IMAP4.html#state" class="code" data-type="Instance Variable">state</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.imaplib.IMAP4.html#literal" class="code" data-type="Instance Variable">literal</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.imaplib.IMAP4.html#tagged_commands" class="code" data-type="Instance Variable">tagged_commands</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.imaplib.IMAP4.html#untagged_responses" class="code" data-type="Instance Variable">untagged_responses</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.imaplib.IMAP4.html#continuation_response" class="code" data-type="Instance Variable">continuation_response</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.imaplib.IMAP4.html#is_readonly" class="code" data-type="Instance Variable">is_readonly</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.imaplib.IMAP4.html#tagnum" class="code" data-type="Instance Variable">tagnum</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.imaplib.IMAP4.html#utf8_enabled" class="code" data-type="Instance Variable">utf8_enabled</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.imaplib.IMAP4.html#Literal" class="code" data-type="Instance Variable">Literal</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.imaplib.IMAP4.html#Untagged_status" class="code" data-type="Instance Variable">Untagged_status</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.imaplib.IMAP4.html#tagpre" class="code" data-type="Instance Variable">tagpre</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.imaplib.IMAP4.html#tagre" class="code" data-type="Instance Variable">tagre</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.imaplib.IMAP4.html#welcome" class="code" data-type="Instance Variable">welcome</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.imaplib.IMAP4.html#PROTOCOL_VERSION" class="code" data-type="Instance Variable">PROTOCOL_VERSION</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#__getattr__" class="code" data-type="Method">__getattr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#__enter__" class="code" data-type="Method">__enter__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#__exit__" class="code" data-type="Method">__exit__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#open" class="code" data-type="Method">open</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.imaplib.IMAP4.html#host" class="code" data-type="Instance Variable">host</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.imaplib.IMAP4.html#port" class="code" data-type="Instance Variable">port</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.imaplib.IMAP4.html#sock" class="code" data-type="Instance Variable">sock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.imaplib.IMAP4.html#file" class="code" data-type="Instance Variable">file</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#read" class="code" data-type="Method">read</a></td>
+    <td><span>Read 'size' bytes from remote.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#readline" class="code" data-type="Method">readline</a></td>
+    <td><span>Read line from remote.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#send" class="code" data-type="Method">send</a></td>
+    <td><span>Send data to remote.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#shutdown" class="code" data-type="Method">shutdown</a></td>
+    <td><span>Close I/O established in "open".</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#socket" class="code" data-type="Method">socket</a></td>
+    <td><span>Return socket instance used to connect to IMAP4 server.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#recent" class="code" data-type="Method">recent</a></td>
+    <td><span>Return most recent 'RECENT' responses if any exist, else prompt server for an update using the 'NOOP' command.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#response" class="code" data-type="Method">response</a></td>
+    <td><span>Return data for response 'code' if received, or None.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#append" class="code" data-type="Method">append</a></td>
+    <td><span>Append message to named mailbox.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#authenticate" class="code" data-type="Method">authenticate</a></td>
+    <td><span>Authenticate command - requires response processing.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#capability" class="code" data-type="Method">capability</a></td>
+    <td><span>(typ, [data]) = &lt;instance&gt;.capability() Fetch capabilities list from server.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#check" class="code" data-type="Method">check</a></td>
+    <td><span>Checkpoint mailbox on server.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#close" class="code" data-type="Method">close</a></td>
+    <td><span>Close currently selected mailbox.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#copy" class="code" data-type="Method">copy</a></td>
+    <td><span>Copy 'message_set' messages onto end of 'new_mailbox'.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#create" class="code" data-type="Method">create</a></td>
+    <td><span>Create new mailbox.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#delete" class="code" data-type="Method">delete</a></td>
+    <td><span>Delete old mailbox.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#deleteacl" class="code" data-type="Method">deleteacl</a></td>
+    <td><span>Delete the ACLs (remove any rights) set for who on mailbox.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#enable" class="code" data-type="Method">enable</a></td>
+    <td><span>Send an RFC5161 enable string to the server.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#expunge" class="code" data-type="Method">expunge</a></td>
+    <td><span>Permanently remove deleted items from selected mailbox.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#fetch" class="code" data-type="Method">fetch</a></td>
+    <td><span>Fetch (parts of) messages.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#getacl" class="code" data-type="Method">getacl</a></td>
+    <td><span>Get the ACLs for a mailbox.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#getannotation" class="code" data-type="Method">getannotation</a></td>
+    <td><span>(typ, [data]) = &lt;instance&gt;.getannotation(mailbox, entry, attribute) Retrieve ANNOTATIONs.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#getquota" class="code" data-type="Method">getquota</a></td>
+    <td><span>Get the quota root's resource usage and limits.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#getquotaroot" class="code" data-type="Method">getquotaroot</a></td>
+    <td><span>Get the list of quota roots for the named mailbox.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#list" class="code" data-type="Method">list</a></td>
+    <td><span>List mailbox names in directory matching pattern.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#login" class="code" data-type="Method">login</a></td>
+    <td><span>Identify client using plaintext password.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#login_cram_md5" class="code" data-type="Method">login_cram_md5</a></td>
+    <td><span>Force use of CRAM-MD5 authentication.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.imaplib.IMAP4.html#user" class="code" data-type="Instance Variable">user</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.imaplib.IMAP4.html#password" class="code" data-type="Instance Variable">password</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#logout" class="code" data-type="Method">logout</a></td>
+    <td><span>Shutdown connection to server.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#lsub" class="code" data-type="Method">lsub</a></td>
+    <td><span>List 'subscribed' mailbox names in directory matching pattern.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#myrights" class="code" data-type="Method">myrights</a></td>
+    <td><span>Show my ACLs for a mailbox (i.e. the rights that I have on mailbox).</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#namespace" class="code" data-type="Method">namespace</a></td>
+    <td><span>Returns IMAP namespaces ala rfc2342</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#noop" class="code" data-type="Method">noop</a></td>
+    <td><span>Send NOOP command.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#partial" class="code" data-type="Method">partial</a></td>
+    <td><span>Fetch truncated part of a message.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#proxyauth" class="code" data-type="Method">proxyauth</a></td>
+    <td><span>Assume authentication as "user".</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#rename" class="code" data-type="Method">rename</a></td>
+    <td><span>Rename old mailbox name to new.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#search" class="code" data-type="Method">search</a></td>
+    <td><span>Search mailbox for matching messages.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#select" class="code" data-type="Method">select</a></td>
+    <td><span>Select a mailbox.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#setacl" class="code" data-type="Method">setacl</a></td>
+    <td><span>Set a mailbox acl.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#setannotation" class="code" data-type="Method">setannotation</a></td>
+    <td><span>(typ, [data]) = &lt;instance&gt;.setannotation(mailbox[, entry, attribute]+) Set ANNOTATIONs.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#setquota" class="code" data-type="Method">setquota</a></td>
+    <td><span>Set the quota root's resource limits.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#sort" class="code" data-type="Method">sort</a></td>
+    <td><span>IMAP4rev1 extension SORT command.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#starttls" class="code" data-type="Method">starttls</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#status" class="code" data-type="Method">status</a></td>
+    <td><span>Request named status conditions for mailbox.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#store" class="code" data-type="Method">store</a></td>
+    <td><span>Alters flag dispositions for messages in mailbox.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#subscribe" class="code" data-type="Method">subscribe</a></td>
+    <td><span>Subscribe to new mailbox.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#thread" class="code" data-type="Method">thread</a></td>
+    <td><span>IMAPrev1 extension THREAD command.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#uid" class="code" data-type="Method">uid</a></td>
+    <td><span>Execute "command arg ..." with messages identified by UID, rather than message number.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#unsubscribe" class="code" data-type="Method">unsubscribe</a></td>
+    <td><span>Unsubscribe from old mailbox.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#unselect" class="code" data-type="Method">unselect</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#xatom" class="code" data-type="Method">xatom</a></td>
+    <td><span>Allow simple extension commands notified by server in CAPABILITY response.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.imaplib.IMAP4.html#capabilities" class="code" data-type="Instance Variable">capabilities</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.imaplib.IMAP4.html#mo" class="code" data-type="Instance Variable">mo</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#print_log" class="code" data-type="Method">print_log</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.imaplib.IMAP4.html#_tls_established" class="code" data-type="Instance Variable">_tls_established</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#_mode_ascii" class="code" data-type="Method">_mode_ascii</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.imaplib.IMAP4.html#_encoding" class="code" data-type="Instance Variable">_encoding</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#_mode_utf8" class="code" data-type="Method">_mode_utf8</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#_connect" class="code" data-type="Method">_connect</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.imaplib.IMAP4.html#_cmd_log_len" class="code" data-type="Instance Variable">_cmd_log_len</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.imaplib.IMAP4.html#_cmd_log_idx" class="code" data-type="Instance Variable">_cmd_log_idx</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.imaplib.IMAP4.html#_cmd_log" class="code" data-type="Instance Variable">_cmd_log</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#_create_socket" class="code" data-type="Method">_create_socket</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#_CRAM_MD5_AUTH" class="code" data-type="Method">_CRAM_MD5_AUTH</a></td>
+    <td><span>Authobject to use with CRAM-MD5 authentication.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#_append_untagged" class="code" data-type="Method">_append_untagged</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#_check_bye" class="code" data-type="Method">_check_bye</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#_command" class="code" data-type="Method">_command</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#_command_complete" class="code" data-type="Method">_command_complete</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#_get_capabilities" class="code" data-type="Method">_get_capabilities</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#_get_response" class="code" data-type="Method">_get_response</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#_get_tagged_response" class="code" data-type="Method">_get_tagged_response</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#_get_line" class="code" data-type="Method">_get_line</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#_match" class="code" data-type="Method">_match</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#_new_tag" class="code" data-type="Method">_new_tag</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#_quote" class="code" data-type="Method">_quote</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#_simple_command" class="code" data-type="Method">_simple_command</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#_untagged_response" class="code" data-type="Method">_untagged_response</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#_mesg" class="code" data-type="Method">_mesg</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#_dump_ur" class="code" data-type="Method">_dump_ur</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.imaplib.IMAP4.html#_log" class="code" data-type="Method">_log</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, host="""""", port=IMAP4_PORT, timeout=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.imaplib.IMAP4_SSL.html" class="code" data-type="Class">Lib.imaplib.IMAP4_SSL</a>, <a href="Lib.imaplib.IMAP4_stream.html" class="code" data-type="Class">Lib.imaplib.IMAP4_stream</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.imaplib.IMAP4.debug">
+    
+  </a>
+  <a name="debug">
+    
+  </a>
+  <div class="functionHeader">
+    debug =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.imaplib.IMAP4.state">
+    
+  </a>
+  <a name="state">
+    
+  </a>
+  <div class="functionHeader">
+    state =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.imaplib.IMAP4.literal">
+    
+  </a>
+  <a name="literal">
+    
+  </a>
+  <div class="functionHeader">
+    literal =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.imaplib.IMAP4.tagged_commands">
+    
+  </a>
+  <a name="tagged_commands">
+    
+  </a>
+  <div class="functionHeader">
+    tagged_commands =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.imaplib.IMAP4.untagged_responses">
+    
+  </a>
+  <a name="untagged_responses">
+    
+  </a>
+  <div class="functionHeader">
+    untagged_responses =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.imaplib.IMAP4.continuation_response">
+    
+  </a>
+  <a name="continuation_response">
+    
+  </a>
+  <div class="functionHeader">
+    continuation_response =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.imaplib.IMAP4.is_readonly">
+    
+  </a>
+  <a name="is_readonly">
+    
+  </a>
+  <div class="functionHeader">
+    is_readonly =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.imaplib.IMAP4.tagnum">
+    
+  </a>
+  <a name="tagnum">
+    
+  </a>
+  <div class="functionHeader">
+    tagnum =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.imaplib.IMAP4._tls_established">
+    
+  </a>
+  <a name="_tls_established">
+    
+  </a>
+  <div class="functionHeader">
+    _tls_established =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.imaplib.IMAP4._mode_ascii">
+    
+  </a>
+  <a name="_mode_ascii">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _mode_ascii(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.imaplib.IMAP4.utf8_enabled">
+    
+  </a>
+  <a name="utf8_enabled">
+    
+  </a>
+  <div class="functionHeader">
+    utf8_enabled =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.imaplib.IMAP4._encoding">
+    
+  </a>
+  <a name="_encoding">
+    
+  </a>
+  <div class="functionHeader">
+    _encoding =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.imaplib.IMAP4.Literal">
+    
+  </a>
+  <a name="Literal">
+    
+  </a>
+  <div class="functionHeader">
+    Literal =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.imaplib.IMAP4.Untagged_status">
+    
+  </a>
+  <a name="Untagged_status">
+    
+  </a>
+  <div class="functionHeader">
+    Untagged_status =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.imaplib.IMAP4._mode_utf8">
+    
+  </a>
+  <a name="_mode_utf8">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _mode_utf8(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.imaplib.IMAP4._connect">
+    
+  </a>
+  <a name="_connect">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _connect(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.imaplib.IMAP4.tagpre">
+    
+  </a>
+  <a name="tagpre">
+    
+  </a>
+  <div class="functionHeader">
+    tagpre =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.imaplib.IMAP4.tagre">
+    
+  </a>
+  <a name="tagre">
+    
+  </a>
+  <div class="functionHeader">
+    tagre =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.imaplib.IMAP4._cmd_log_len">
+    
+  </a>
+  <a name="_cmd_log_len">
+    
+  </a>
+  <div class="functionHeader">
+    _cmd_log_len =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.imaplib.IMAP4._cmd_log_idx">
+    
+  </a>
+  <a name="_cmd_log_idx">
+    
+  </a>
+  <div class="functionHeader">
+    _cmd_log_idx =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.imaplib.IMAP4._cmd_log">
+    
+  </a>
+  <a name="_cmd_log">
+    
+  </a>
+  <div class="functionHeader">
+    _cmd_log =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.imaplib.IMAP4.welcome">
+    
+  </a>
+  <a name="welcome">
+    
+  </a>
+  <div class="functionHeader">
+    welcome =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.imaplib.IMAP4.PROTOCOL_VERSION">
+    
+  </a>
+  <a name="PROTOCOL_VERSION">
+    
+  </a>
+  <div class="functionHeader">
+    PROTOCOL_VERSION =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.__getattr__">
+    
+  </a>
+  <a name="__getattr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __getattr__(self, attr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.__enter__">
+    
+  </a>
+  <a name="__enter__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __enter__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.__exit__">
+    
+  </a>
+  <a name="__exit__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __exit__(self, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.imaplib.IMAP4._create_socket">
+    
+  </a>
+  <a name="_create_socket">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _create_socket(self, timeout):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.imaplib.IMAP4_SSL.html" class="code" data-type="Class">Lib.imaplib.IMAP4_SSL</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.open">
+    
+  </a>
+  <a name="open">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    open(self, host="""""", port=IMAP4_PORT, timeout=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.imaplib.IMAP4_SSL.html" class="code" data-type="Class">Lib.imaplib.IMAP4_SSL</a>, <a href="Lib.imaplib.IMAP4_stream.html" class="code" data-type="Class">Lib.imaplib.IMAP4_stream</a></div>
+    
+    <div><p class="pre">Setup connection to remote server on "host:port"
+    (default: localhost:standard IMAP4 port).
+This connection will be used by the routines:
+    read, readline, send, shutdown.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.imaplib.IMAP4.host">
+    
+  </a>
+  <a name="host">
+    
+  </a>
+  <div class="functionHeader">
+    host =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.imaplib.IMAP4_stream.html" class="code" data-type="Class">Lib.imaplib.IMAP4_stream</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.imaplib.IMAP4.port">
+    
+  </a>
+  <a name="port">
+    
+  </a>
+  <div class="functionHeader">
+    port =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.imaplib.IMAP4_stream.html" class="code" data-type="Class">Lib.imaplib.IMAP4_stream</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.imaplib.IMAP4.sock">
+    
+  </a>
+  <a name="sock">
+    
+  </a>
+  <div class="functionHeader">
+    sock =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.imaplib.IMAP4_stream.html" class="code" data-type="Class">Lib.imaplib.IMAP4_stream</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.imaplib.IMAP4.file">
+    
+  </a>
+  <a name="file">
+    
+  </a>
+  <div class="functionHeader">
+    file =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.imaplib.IMAP4_stream.html" class="code" data-type="Class">Lib.imaplib.IMAP4_stream</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.read">
+    
+  </a>
+  <a name="read">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    read(self, size):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.imaplib.IMAP4_stream.html" class="code" data-type="Class">Lib.imaplib.IMAP4_stream</a></div>
+    
+    <div><p class="pre">Read 'size' bytes from remote.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.readline">
+    
+  </a>
+  <a name="readline">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    readline(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.imaplib.IMAP4_stream.html" class="code" data-type="Class">Lib.imaplib.IMAP4_stream</a></div>
+    
+    <div><p class="pre">Read line from remote.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.send">
+    
+  </a>
+  <a name="send">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    send(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.imaplib.IMAP4_stream.html" class="code" data-type="Class">Lib.imaplib.IMAP4_stream</a></div>
+    
+    <div><p class="pre">Send data to remote.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.shutdown">
+    
+  </a>
+  <a name="shutdown">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    shutdown(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.imaplib.IMAP4_stream.html" class="code" data-type="Class">Lib.imaplib.IMAP4_stream</a></div>
+    
+    <div><p class="pre">Close I/O established in "open".</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.socket">
+    
+  </a>
+  <a name="socket">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    socket(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return socket instance used to connect to IMAP4 server.
+
+socket = &lt;instance&gt;.socket()</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.recent">
+    
+  </a>
+  <a name="recent">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    recent(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return most recent 'RECENT' responses if any exist,
+else prompt server for an update using the 'NOOP' command.
+
+(typ, [data]) = &lt;instance&gt;.recent()
+
+'data' is None if no new messages,
+else list of RECENT responses, most recent last.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.response">
+    
+  </a>
+  <a name="response">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    response(self, code):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return data for response 'code' if received, or None.
+
+Old value for response 'code' is cleared.
+
+(code, [data]) = &lt;instance&gt;.response(code)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.append">
+    
+  </a>
+  <a name="append">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    append(self, mailbox, flags, date_time, message):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Append message to named mailbox.
+
+(typ, [data]) = &lt;instance&gt;.append(mailbox, flags, date_time, message)
+
+        All args except `message' can be None.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.authenticate">
+    
+  </a>
+  <a name="authenticate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    authenticate(self, mechanism, authobject):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Authenticate command - requires response processing.
+
+'mechanism' specifies which authentication mechanism is to
+be used - it must appear in &lt;instance&gt;.capabilities in the
+form AUTH=&lt;mechanism&gt;.
+
+'authobject' must be a callable object:
+
+        data = authobject(response)
+
+It will be called to process server continuation responses; the
+response argument it is passed will be a bytes.  It should return bytes
+data that will be base64 encoded and sent to the server.  It should
+return None if the client abort response '*' should be sent instead.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.capability">
+    
+  </a>
+  <a name="capability">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    capability(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">(typ, [data]) = &lt;instance&gt;.capability()
+Fetch capabilities list from server.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.check">
+    
+  </a>
+  <a name="check">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    check(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Checkpoint mailbox on server.
+
+(typ, [data]) = &lt;instance&gt;.check()</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.close">
+    
+  </a>
+  <a name="close">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    close(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Close currently selected mailbox.
+
+Deleted messages are removed from writable mailbox.
+This is the recommended command before 'LOGOUT'.
+
+(typ, [data]) = &lt;instance&gt;.close()</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.copy">
+    
+  </a>
+  <a name="copy">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    copy(self, message_set, new_mailbox):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Copy 'message_set' messages onto end of 'new_mailbox'.
+
+(typ, [data]) = &lt;instance&gt;.copy(message_set, new_mailbox)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.create">
+    
+  </a>
+  <a name="create">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    create(self, mailbox):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create new mailbox.
+
+(typ, [data]) = &lt;instance&gt;.create(mailbox)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.delete">
+    
+  </a>
+  <a name="delete">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    delete(self, mailbox):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Delete old mailbox.
+
+(typ, [data]) = &lt;instance&gt;.delete(mailbox)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.deleteacl">
+    
+  </a>
+  <a name="deleteacl">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    deleteacl(self, mailbox, who):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Delete the ACLs (remove any rights) set for who on mailbox.
+
+(typ, [data]) = &lt;instance&gt;.deleteacl(mailbox, who)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.enable">
+    
+  </a>
+  <a name="enable">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    enable(self, capability):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Send an RFC5161 enable string to the server.
+
+(typ, [data]) = &lt;instance&gt;.enable(capability)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.expunge">
+    
+  </a>
+  <a name="expunge">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    expunge(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Permanently remove deleted items from selected mailbox.
+
+Generates 'EXPUNGE' response for each deleted message.
+
+(typ, [data]) = &lt;instance&gt;.expunge()
+
+'data' is list of 'EXPUNGE'd message numbers in order received.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.fetch">
+    
+  </a>
+  <a name="fetch">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    fetch(self, message_set, message_parts):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Fetch (parts of) messages.
+
+(typ, [data, ...]) = &lt;instance&gt;.fetch(message_set, message_parts)
+
+'message_parts' should be a string of selected parts
+enclosed in parentheses, eg: "(UID BODY[TEXT])".
+
+'data' are tuples of message part envelope and data.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.getacl">
+    
+  </a>
+  <a name="getacl">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getacl(self, mailbox):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get the ACLs for a mailbox.
+
+(typ, [data]) = &lt;instance&gt;.getacl(mailbox)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.getannotation">
+    
+  </a>
+  <a name="getannotation">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getannotation(self, mailbox, entry, attribute):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">(typ, [data]) = &lt;instance&gt;.getannotation(mailbox, entry, attribute)
+Retrieve ANNOTATIONs.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.getquota">
+    
+  </a>
+  <a name="getquota">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getquota(self, root):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get the quota root's resource usage and limits.
+
+Part of the IMAP4 QUOTA extension defined in rfc2087.
+
+(typ, [data]) = &lt;instance&gt;.getquota(root)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.getquotaroot">
+    
+  </a>
+  <a name="getquotaroot">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getquotaroot(self, mailbox):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get the list of quota roots for the named mailbox.
+
+(typ, [[QUOTAROOT responses...], [QUOTA responses]]) = &lt;instance&gt;.getquotaroot(mailbox)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.list">
+    
+  </a>
+  <a name="list">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    list(self, directory=""""\"""", pattern="""*"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">List mailbox names in directory matching pattern.
+
+(typ, [data]) = &lt;instance&gt;.list(directory='""', pattern='*')
+
+'data' is list of LIST responses.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.login">
+    
+  </a>
+  <a name="login">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    login(self, user, password):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Identify client using plaintext password.
+
+(typ, [data]) = &lt;instance&gt;.login(user, password)
+
+NB: 'password' will be quoted.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.login_cram_md5">
+    
+  </a>
+  <a name="login_cram_md5">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    login_cram_md5(self, user, password):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Force use of CRAM-MD5 authentication.
+
+(typ, [data]) = &lt;instance&gt;.login_cram_md5(user, password)</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.imaplib.IMAP4.user">
+    
+  </a>
+  <a name="user">
+    
+  </a>
+  <div class="functionHeader">
+    user =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.imaplib.IMAP4.password">
+    
+  </a>
+  <a name="password">
+    
+  </a>
+  <div class="functionHeader">
+    password =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.imaplib.IMAP4._CRAM_MD5_AUTH">
+    
+  </a>
+  <a name="_CRAM_MD5_AUTH">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _CRAM_MD5_AUTH(self, challenge):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Authobject to use with CRAM-MD5 authentication. </p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.logout">
+    
+  </a>
+  <a name="logout">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    logout(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Shutdown connection to server.
+
+(typ, [data]) = &lt;instance&gt;.logout()
+
+Returns server 'BYE' response.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.lsub">
+    
+  </a>
+  <a name="lsub">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    lsub(self, directory=""""\"""", pattern="""*"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">List 'subscribed' mailbox names in directory matching pattern.
+
+(typ, [data, ...]) = &lt;instance&gt;.lsub(directory='""', pattern='*')
+
+'data' are tuples of message part envelope and data.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.myrights">
+    
+  </a>
+  <a name="myrights">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    myrights(self, mailbox):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Show my ACLs for a mailbox (i.e. the rights that I have on mailbox).
+
+(typ, [data]) = &lt;instance&gt;.myrights(mailbox)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.namespace">
+    
+  </a>
+  <a name="namespace">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    namespace(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns IMAP namespaces ala rfc2342
+
+(typ, [data, ...]) = &lt;instance&gt;.namespace()</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.noop">
+    
+  </a>
+  <a name="noop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    noop(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Send NOOP command.
+
+(typ, [data]) = &lt;instance&gt;.noop()</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.partial">
+    
+  </a>
+  <a name="partial">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    partial(self, message_num, message_part, start, length):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Fetch truncated part of a message.
+
+(typ, [data, ...]) = &lt;instance&gt;.partial(message_num, message_part, start, length)
+
+'data' is tuple of message part envelope and data.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.proxyauth">
+    
+  </a>
+  <a name="proxyauth">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    proxyauth(self, user):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Assume authentication as "user".
+
+Allows an authorised administrator to proxy into any user's
+mailbox.
+
+(typ, [data]) = &lt;instance&gt;.proxyauth(user)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.rename">
+    
+  </a>
+  <a name="rename">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    rename(self, oldmailbox, newmailbox):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Rename old mailbox name to new.
+
+(typ, [data]) = &lt;instance&gt;.rename(oldmailbox, newmailbox)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.search">
+    
+  </a>
+  <a name="search">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    search(self, charset, *criteria):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Search mailbox for matching messages.
+
+(typ, [data]) = &lt;instance&gt;.search(charset, criterion, ...)
+
+'data' is space separated list of matching message numbers.
+If UTF8 is enabled, charset MUST be None.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.select">
+    
+  </a>
+  <a name="select">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    select(self, mailbox="""INBOX""", readonly=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Select a mailbox.
+
+Flush all untagged responses.
+
+(typ, [data]) = &lt;instance&gt;.select(mailbox='INBOX', readonly=False)
+
+'data' is count of messages in mailbox ('EXISTS' response).
+
+Mandated responses are ('FLAGS', 'EXISTS', 'RECENT', 'UIDVALIDITY'), so
+other responses should be obtained via &lt;instance&gt;.response('FLAGS') etc.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.setacl">
+    
+  </a>
+  <a name="setacl">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setacl(self, mailbox, who, what):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set a mailbox acl.
+
+(typ, [data]) = &lt;instance&gt;.setacl(mailbox, who, what)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.setannotation">
+    
+  </a>
+  <a name="setannotation">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setannotation(self, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">(typ, [data]) = &lt;instance&gt;.setannotation(mailbox[, entry, attribute]+)
+Set ANNOTATIONs.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.setquota">
+    
+  </a>
+  <a name="setquota">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setquota(self, root, limits):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set the quota root's resource limits.
+
+(typ, [data]) = &lt;instance&gt;.setquota(root, limits)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.sort">
+    
+  </a>
+  <a name="sort">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    sort(self, sort_criteria, charset, *search_criteria):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">IMAP4rev1 extension SORT command.
+
+(typ, [data]) = &lt;instance&gt;.sort(sort_criteria, charset, search_criteria, ...)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.starttls">
+    
+  </a>
+  <a name="starttls">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    starttls(self, ssl_context=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.status">
+    
+  </a>
+  <a name="status">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    status(self, mailbox, names):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Request named status conditions for mailbox.
+
+(typ, [data]) = &lt;instance&gt;.status(mailbox, names)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.store">
+    
+  </a>
+  <a name="store">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    store(self, message_set, command, flags):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Alters flag dispositions for messages in mailbox.
+
+(typ, [data]) = &lt;instance&gt;.store(message_set, command, flags)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.subscribe">
+    
+  </a>
+  <a name="subscribe">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    subscribe(self, mailbox):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Subscribe to new mailbox.
+
+(typ, [data]) = &lt;instance&gt;.subscribe(mailbox)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.thread">
+    
+  </a>
+  <a name="thread">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    thread(self, threading_algorithm, charset, *search_criteria):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">IMAPrev1 extension THREAD command.
+
+(type, [data]) = &lt;instance&gt;.thread(threading_algorithm, charset, search_criteria, ...)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.uid">
+    
+  </a>
+  <a name="uid">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    uid(self, command, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Execute "command arg ..." with messages identified by UID,
+        rather than message number.
+
+(typ, [data]) = &lt;instance&gt;.uid(command, arg1, arg2, ...)
+
+Returns response appropriate to 'command'.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.unsubscribe">
+    
+  </a>
+  <a name="unsubscribe">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    unsubscribe(self, mailbox):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Unsubscribe from old mailbox.
+
+(typ, [data]) = &lt;instance&gt;.unsubscribe(mailbox)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.unselect">
+    
+  </a>
+  <a name="unselect">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    unselect(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Free server's resources associated with the selected mailbox
+and returns the server to the authenticated state.
+This command performs the same actions as CLOSE, except
+that no messages are permanently removed from the currently
+selected mailbox.
+
+(typ, [data]) = &lt;instance&gt;.unselect()</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.xatom">
+    
+  </a>
+  <a name="xatom">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    xatom(self, name, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Allow simple extension commands
+        notified by server in CAPABILITY response.
+
+Assumes command is legal in current state.
+
+(typ, [data]) = &lt;instance&gt;.xatom(name, arg, ...)
+
+Returns response appropriate to extension command `name'.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.imaplib.IMAP4._append_untagged">
+    
+  </a>
+  <a name="_append_untagged">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _append_untagged(self, typ, dat):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.imaplib.IMAP4._check_bye">
+    
+  </a>
+  <a name="_check_bye">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _check_bye(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.imaplib.IMAP4._command">
+    
+  </a>
+  <a name="_command">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _command(self, name, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.imaplib.IMAP4._command_complete">
+    
+  </a>
+  <a name="_command_complete">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _command_complete(self, name, tag):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.imaplib.IMAP4._get_capabilities">
+    
+  </a>
+  <a name="_get_capabilities">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_capabilities(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.imaplib.IMAP4.capabilities">
+    
+  </a>
+  <a name="capabilities">
+    
+  </a>
+  <div class="functionHeader">
+    capabilities =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.imaplib.IMAP4._get_response">
+    
+  </a>
+  <a name="_get_response">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_response(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.imaplib.IMAP4._get_tagged_response">
+    
+  </a>
+  <a name="_get_tagged_response">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_tagged_response(self, tag, expect_bye=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.imaplib.IMAP4._get_line">
+    
+  </a>
+  <a name="_get_line">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_line(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.imaplib.IMAP4._match">
+    
+  </a>
+  <a name="_match">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _match(self, cre, s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.imaplib.IMAP4.mo">
+    
+  </a>
+  <a name="mo">
+    
+  </a>
+  <div class="functionHeader">
+    mo =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.imaplib.IMAP4._new_tag">
+    
+  </a>
+  <a name="_new_tag">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _new_tag(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.imaplib.IMAP4._quote">
+    
+  </a>
+  <a name="_quote">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _quote(self, arg):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.imaplib.IMAP4._simple_command">
+    
+  </a>
+  <a name="_simple_command">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _simple_command(self, name, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.imaplib.IMAP4._untagged_response">
+    
+  </a>
+  <a name="_untagged_response">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _untagged_response(self, typ, dat, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.imaplib.IMAP4._mesg">
+    
+  </a>
+  <a name="_mesg">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _mesg(self, s, secs=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.imaplib.IMAP4._dump_ur">
+    
+  </a>
+  <a name="_dump_ur">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _dump_ur(self, untagged_resp_dict):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.imaplib.IMAP4._log">
+    
+  </a>
+  <a name="_log">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _log(self, line):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.imaplib.IMAP4.print_log">
+    
+  </a>
+  <a name="print_log">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    print_log(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

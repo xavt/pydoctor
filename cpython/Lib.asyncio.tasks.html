@@ -1,0 +1,888 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.asyncio.tasks : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.asyncio.html" class="code" data-type="Package">asyncio</a>.<a href="Lib.asyncio.tasks.html" class="code" data-type="Module">tasks</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Support for tasks, coroutines and the scheduler.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id391">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.tasks.html#current_task" class="code" data-type="Function">current_task</a></td>
+    <td><span>Return a currently executed task.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.tasks.html#all_tasks" class="code" data-type="Function">all_tasks</a></td>
+    <td><span>Return a set of all tasks for the loop.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.asyncio.tasks.Task.html" class="code" data-type="Class">Task</a></td>
+    <td><span>A coroutine wrapped in a Future.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.tasks.html#create_task" class="code" data-type="Function">create_task</a></td>
+    <td><span>Schedule the execution of a coroutine object in a spawn task.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.asyncio.tasks.html#loop" class="code" data-type="Variable">loop</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.asyncio.tasks.html#fs" class="code" data-type="Variable">fs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.asyncio.tasks.html#fut" class="code" data-type="Variable">fut</a></td>
+    <td><span>Internal helper for wait().</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.asyncio.tasks.html#waiter" class="code" data-type="Variable">waiter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.asyncio.tasks.html#timeout_handle" class="code" data-type="Variable">timeout_handle</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.asyncio.tasks.html#cb" class="code" data-type="Variable">cb</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.asyncio.tasks.html#counter" class="code" data-type="Variable">counter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.asyncio.tasks.html#done" class="code" data-type="Variable">done</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.asyncio.tasks.html#pending" class="code" data-type="Variable">pending</a></td>
+    <td><span>Cancel the *fut* future or task and wait until it completes.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.tasks.html#as_completed" class="code" data-type="Function">as_completed</a></td>
+    <td><span>Return an iterator whose values are coroutines.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.asyncio.tasks.html#future" class="code" data-type="Variable">future</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.asyncio.tasks.html#h" class="code" data-type="Variable">h</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.tasks.html#ensure_future" class="code" data-type="Function">ensure_future</a></td>
+    <td><span>Wrap a coroutine or an awaitable in a future.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.tasks.html#gather" class="code" data-type="Function">gather</a></td>
+    <td><span>Return a future aggregating results from the given coroutines/futures.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.tasks.html#shield" class="code" data-type="Function">shield</a></td>
+    <td><span>Wait for a future, shielding it from cancellation.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.tasks.html#run_coroutine_threadsafe" class="code" data-type="Function">run_coroutine_threadsafe</a></td>
+    <td><span>Submit a coroutine object to a given event loop.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.asyncio.tasks.html#_task_name_counter" class="code" data-type="Variable">_task_name_counter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.tasks.html#_all_tasks_compat" class="code" data-type="Function">_all_tasks_compat</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.tasks.html#_set_task_name" class="code" data-type="Function">_set_task_name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.tasks.html#_release_waiter" class="code" data-type="Function">_release_waiter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.tasks.html#_on_completion" class="code" data-type="Function">_on_completion</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.tasks.html#__sleep0" class="code" data-type="Function">__sleep0</a></td>
+    <td><span>Skip one event loop run cycle.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.tasks.html#_wrap_awaitable" class="code" data-type="Function">_wrap_awaitable</a></td>
+    <td><span>Helper for asyncio.ensure_future().</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.asyncio.tasks._GatheringFuture.html" class="code" data-type="Class">_GatheringFuture</a></td>
+    <td><span>Helper for gather().</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.asyncio.tasks.html#_all_tasks" class="code" data-type="Variable">_all_tasks</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.asyncio.tasks.html#_current_tasks" class="code" data-type="Variable">_current_tasks</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.tasks.html#_register_task" class="code" data-type="Function">_register_task</a></td>
+    <td><span>Register a new task in asyncio as executed by loop.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.tasks.html#_enter_task" class="code" data-type="Function">_enter_task</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.tasks.html#_leave_task" class="code" data-type="Function">_leave_task</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.tasks.html#_unregister_task" class="code" data-type="Function">_unregister_task</a></td>
+    <td><span>Unregister a task.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable private">
+  
+  <a name="Lib.asyncio.tasks._task_name_counter">
+    
+  </a>
+  <a name="_task_name_counter">
+    
+  </a>
+  <div class="functionHeader">
+    _task_name_counter =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.asyncio.tasks.current_task">
+    
+  </a>
+  <a name="current_task">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    current_task(loop=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a currently executed task.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.asyncio.tasks.all_tasks">
+    
+  </a>
+  <a name="all_tasks">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    all_tasks(loop=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a set of all tasks for the loop.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.asyncio.tasks._all_tasks_compat">
+    
+  </a>
+  <a name="_all_tasks_compat">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _all_tasks_compat(loop=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.asyncio.tasks._set_task_name">
+    
+  </a>
+  <a name="_set_task_name">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _set_task_name(task, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.asyncio.tasks.create_task">
+    
+  </a>
+  <a name="create_task">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    create_task(coro):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Schedule the execution of a coroutine object in a spawn task.
+
+Return a Task object.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.asyncio.tasks.loop">
+    
+  </a>
+  <a name="loop">
+    
+  </a>
+  <div class="functionHeader">
+    loop =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.asyncio.tasks.fs">
+    
+  </a>
+  <a name="fs">
+    
+  </a>
+  <div class="functionHeader">
+    fs =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.asyncio.tasks._release_waiter">
+    
+  </a>
+  <a name="_release_waiter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _release_waiter(waiter, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.asyncio.tasks.fut">
+    
+  </a>
+  <a name="fut">
+    
+  </a>
+  <div class="functionHeader">
+    fut =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="pre">Internal helper for wait().
+
+The fs argument must be a collection of Futures.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.asyncio.tasks.waiter">
+    
+  </a>
+  <a name="waiter">
+    
+  </a>
+  <div class="functionHeader">
+    waiter =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.asyncio.tasks.timeout_handle">
+    
+  </a>
+  <a name="timeout_handle">
+    
+  </a>
+  <div class="functionHeader">
+    timeout_handle =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.asyncio.tasks.cb">
+    
+  </a>
+  <a name="cb">
+    
+  </a>
+  <div class="functionHeader">
+    cb =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.asyncio.tasks.counter">
+    
+  </a>
+  <a name="counter">
+    
+  </a>
+  <div class="functionHeader">
+    counter =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.asyncio.tasks._on_completion">
+    
+  </a>
+  <a name="_on_completion">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _on_completion(f):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.asyncio.tasks.done">
+    
+  </a>
+  <a name="done">
+    
+  </a>
+  <div class="functionHeader">
+    done =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.asyncio.tasks.pending">
+    
+  </a>
+  <a name="pending">
+    
+  </a>
+  <div class="functionHeader">
+    pending =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="pre">Cancel the *fut* future or task and wait until it completes.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.asyncio.tasks.as_completed">
+    
+  </a>
+  <a name="as_completed">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    as_completed(fs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return an iterator whose values are coroutines.
+
+When waiting for the yielded coroutines you'll get the results (or
+exceptions!) of the original Futures (or coroutines), in the order
+in which and as soon as they complete.
+
+This differs from PEP 3148; the proper way to use this is:
+
+    for f in as_completed(fs):
+        result = await f  # The 'await' may raise.
+        # Use result.
+
+If a timeout is specified, the 'await' will raise
+TimeoutError when the timeout occurs before all Futures are done.
+
+Note: The futures 'f' are not necessarily members of fs.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.asyncio.tasks.__sleep0">
+    
+  </a>
+  <a name="__sleep0">
+    
+  </a>
+  <div class="functionHeader">
+    @types.coroutine<br />
+    def
+    __sleep0():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Skip one event loop run cycle.
+
+This is a private helper for 'asyncio.sleep()', used
+when the 'delay' is set to 0.  It uses a bare 'yield'
+expression (which Task.__step knows how to handle)
+instead of creating a Future object.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.asyncio.tasks.future">
+    
+  </a>
+  <a name="future">
+    
+  </a>
+  <div class="functionHeader">
+    future =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.asyncio.tasks.h">
+    
+  </a>
+  <a name="h">
+    
+  </a>
+  <div class="functionHeader">
+    h =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.asyncio.tasks.ensure_future">
+    
+  </a>
+  <a name="ensure_future">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ensure_future(coro_or_future):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Wrap a coroutine or an awaitable in a future.
+
+If the argument is a Future, it is returned directly.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.asyncio.tasks._wrap_awaitable">
+    
+  </a>
+  <a name="_wrap_awaitable">
+    
+  </a>
+  <div class="functionHeader">
+    @types.coroutine<br />
+    def
+    _wrap_awaitable(awaitable):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Helper for asyncio.ensure_future().
+
+Wraps awaitable (an object with __await__) into a coroutine
+that will later be wrapped in a Task by ensure_future().</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.asyncio.tasks.gather">
+    
+  </a>
+  <a name="gather">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    gather(*coros_or_futures):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a future aggregating results from the given coroutines/futures.
+
+Coroutines will be wrapped in a future and scheduled in the event
+loop. They will not necessarily be scheduled in the same order as
+passed in.
+
+All futures must share the same event loop.  If all the tasks are
+done successfully, the returned future's result is the list of
+results (in the order of the original sequence, not necessarily
+the order of results arrival).  If *return_exceptions* is True,
+exceptions in the tasks are treated the same as successful
+results, and gathered in the result list; otherwise, the first
+raised exception will be immediately propagated to the returned
+future.
+
+Cancellation: if the outer Future is cancelled, all children (that
+have not completed yet) are also cancelled.  If any child is
+cancelled, this is treated as if it raised CancelledError --
+the outer Future is *not* cancelled in this case.  (This is to
+prevent the cancellation of one child to cause other children to
+be cancelled.)
+
+If *return_exceptions* is False, cancelling gather() after it
+has been marked done won't cancel any submitted awaitables.
+For instance, gather can be marked done after propagating an
+exception to the caller, therefore, calling ``gather.cancel()``
+after catching an exception (raised by one of the awaitables) from
+gather won't cancel any other awaitables.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.asyncio.tasks.shield">
+    
+  </a>
+  <a name="shield">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    shield(arg):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Wait for a future, shielding it from cancellation.
+
+The statement
+
+    res = await shield(something())
+
+is exactly equivalent to the statement
+
+    res = await something()
+
+*except* that if the coroutine containing it is cancelled, the
+task running in something() is not cancelled.  From the POV of
+something(), the cancellation did not happen.  But its caller is
+still cancelled, so the yield-from expression still raises
+CancelledError.  Note: If something() is cancelled by other means
+this will still cancel shield().
+
+If you want to completely ignore cancellation (not recommended)
+you can combine shield() with a try/except clause, as follows:
+
+    try:
+        res = await shield(something())
+    except CancelledError:
+        res = None</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.asyncio.tasks.run_coroutine_threadsafe">
+    
+  </a>
+  <a name="run_coroutine_threadsafe">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    run_coroutine_threadsafe(coro, loop):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Submit a coroutine object to a given event loop.
+
+Return a concurrent.futures.Future to access the result.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.asyncio.tasks._all_tasks">
+    
+  </a>
+  <a name="_all_tasks">
+    
+  </a>
+  <div class="functionHeader">
+    _all_tasks =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.asyncio.tasks._current_tasks">
+    
+  </a>
+  <a name="_current_tasks">
+    
+  </a>
+  <div class="functionHeader">
+    _current_tasks =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.asyncio.tasks._register_task">
+    
+  </a>
+  <a name="_register_task">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _register_task(task):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Register a new task in asyncio as executed by loop.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.asyncio.tasks._enter_task">
+    
+  </a>
+  <a name="_enter_task">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _enter_task(loop, task):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.asyncio.tasks._leave_task">
+    
+  </a>
+  <a name="_leave_task">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _leave_task(loop, task):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.asyncio.tasks._unregister_task">
+    
+  </a>
+  <a name="_unregister_task">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _unregister_task(task):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Unregister a task.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

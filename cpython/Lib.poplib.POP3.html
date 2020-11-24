@@ -1,0 +1,1020 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.poplib.POP3 : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.poplib.html" class="code" data-type="Module">poplib</a>.<a href="Lib.poplib.POP3.html" class="code" data-type="Class">POP3</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.poplib.POP3:</code></p><p>Known subclasses: <a href="Lib.poplib.POP3_SSL.html" class="code" data-type="Class">Lib.poplib.POP3_SSL</a></p>
+        <p><a href="classIndex.html#Lib.poplib.POP3">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">This class supports both the minimal and optional command sets.
+Arguments can be strings or integers (where appropriate)
+(e.g.: retr(1) and retr('1') both work equally well.
+
+Minimal Command Set:
+        USER name               user(name)
+        PASS string             pass_(string)
+        STAT                    stat()
+        LIST [msg]              list(msg = None)
+        RETR msg                retr(msg)
+        DELE msg                dele(msg)
+        NOOP                    noop()
+        RSET                    rset()
+        QUIT                    quit()
+
+Optional Commands (some servers support these):
+        RPOP name               rpop(name)
+        APOP name digest        apop(name, digest)
+        TOP msg n               top(msg, n)
+        UIDL [msg]              uidl(msg = None)
+        CAPA                    capa()
+        STLS                    stls()
+        UTF8                    utf8()
+
+Raises one exception: 'error_proto'.
+
+Instantiate with:
+        POP3(hostname, port=110)
+
+NB:     the POP protocol locks the mailbox from user
+        authorization until QUIT, so be sure to get in, suck
+        the messages, and quit, each time you access the
+        mailbox.
+
+        POP is a line-based protocol, which means large mail
+        messages consume lots of python cycles reading them
+        line-by-line.
+
+        If it's available on your mail server, use IMAP4
+        instead, it doesn't suffer from the two problems
+        above.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3401">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.poplib.POP3.html#encoding" class="code" data-type="Class Variable">encoding</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.poplib.POP3.html#host" class="code" data-type="Instance Variable">host</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.poplib.POP3.html#port" class="code" data-type="Instance Variable">port</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.poplib.POP3.html#sock" class="code" data-type="Instance Variable">sock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.poplib.POP3.html#file" class="code" data-type="Instance Variable">file</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.poplib.POP3.html#welcome" class="code" data-type="Instance Variable">welcome</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#getwelcome" class="code" data-type="Method">getwelcome</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#set_debuglevel" class="code" data-type="Method">set_debuglevel</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#user" class="code" data-type="Method">user</a></td>
+    <td><span>Send user name, return response</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#pass_" class="code" data-type="Method">pass_</a></td>
+    <td><span>Send password, return response</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#stat" class="code" data-type="Method">stat</a></td>
+    <td><span>Get mailbox status.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#list" class="code" data-type="Method">list</a></td>
+    <td><span>Request listing, return result.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#retr" class="code" data-type="Method">retr</a></td>
+    <td><span>Retrieve whole message number 'which'.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#dele" class="code" data-type="Method">dele</a></td>
+    <td><span>Delete message number 'which'.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#noop" class="code" data-type="Method">noop</a></td>
+    <td><span>Does nothing.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#rset" class="code" data-type="Method">rset</a></td>
+    <td><span>Unmark all messages marked for deletion.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#quit" class="code" data-type="Method">quit</a></td>
+    <td><span>Signoff: commit changes on server, unlock mailbox, close connection.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#close" class="code" data-type="Method">close</a></td>
+    <td><span>Close the connection without assuming anything about it.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#rpop" class="code" data-type="Method">rpop</a></td>
+    <td><span>Not sure what this does.</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.poplib.POP3.html#timestamp" class="code" data-type="Class Variable">timestamp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#apop" class="code" data-type="Method">apop</a></td>
+    <td><span>Authorisation</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#top" class="code" data-type="Method">top</a></td>
+    <td><span>Retrieve message header of message number 'which' and first 'howmuch' lines of message body.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#uidl" class="code" data-type="Method">uidl</a></td>
+    <td><span>Return message digest (unique id) list.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#utf8" class="code" data-type="Method">utf8</a></td>
+    <td><span>Try to enter UTF-8 mode (see RFC 6856). Returns server response.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#capa" class="code" data-type="Method">capa</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#stls" class="code" data-type="Method">stls</a></td>
+    <td><span>Start a TLS session on the active connection as specified in RFC 2595.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.poplib.POP3.html#_tls_established" class="code" data-type="Instance Variable">_tls_established</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.poplib.POP3.html#_debugging" class="code" data-type="Instance Variable">_debugging</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#_create_socket" class="code" data-type="Method">_create_socket</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#_putline" class="code" data-type="Method">_putline</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#_putcmd" class="code" data-type="Method">_putcmd</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#_getline" class="code" data-type="Method">_getline</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#_getresp" class="code" data-type="Method">_getresp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#_getlongresp" class="code" data-type="Method">_getlongresp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#_shortcmd" class="code" data-type="Method">_shortcmd</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#_longcmd" class="code" data-type="Method">_longcmd</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.poplib.POP3.encoding">
+    
+  </a>
+  <a name="encoding">
+    
+  </a>
+  <div class="functionHeader">
+    encoding =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.poplib.POP3.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, host, port=POP3_PORT, timeout=socket._GLOBAL_DEFAULT_TIMEOUT):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.poplib.POP3_SSL.html" class="code" data-type="Class">Lib.poplib.POP3_SSL</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.poplib.POP3.host">
+    
+  </a>
+  <a name="host">
+    
+  </a>
+  <div class="functionHeader">
+    host =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.poplib.POP3.port">
+    
+  </a>
+  <a name="port">
+    
+  </a>
+  <div class="functionHeader">
+    port =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.poplib.POP3._tls_established">
+    
+  </a>
+  <a name="_tls_established">
+    
+  </a>
+  <div class="functionHeader">
+    _tls_established =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.poplib.POP3.sock">
+    
+  </a>
+  <a name="sock">
+    
+  </a>
+  <div class="functionHeader">
+    sock =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.poplib.POP3.file">
+    
+  </a>
+  <a name="file">
+    
+  </a>
+  <div class="functionHeader">
+    file =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.poplib.POP3._debugging">
+    
+  </a>
+  <a name="_debugging">
+    
+  </a>
+  <div class="functionHeader">
+    _debugging =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.poplib.POP3.welcome">
+    
+  </a>
+  <a name="welcome">
+    
+  </a>
+  <div class="functionHeader">
+    welcome =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.poplib.POP3._create_socket">
+    
+  </a>
+  <a name="_create_socket">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _create_socket(self, timeout):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.poplib.POP3_SSL.html" class="code" data-type="Class">Lib.poplib.POP3_SSL</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.poplib.POP3._putline">
+    
+  </a>
+  <a name="_putline">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _putline(self, line):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.poplib.POP3._putcmd">
+    
+  </a>
+  <a name="_putcmd">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _putcmd(self, line):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.poplib.POP3._getline">
+    
+  </a>
+  <a name="_getline">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _getline(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.poplib.POP3._getresp">
+    
+  </a>
+  <a name="_getresp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _getresp(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.poplib.POP3._getlongresp">
+    
+  </a>
+  <a name="_getlongresp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _getlongresp(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.poplib.POP3._shortcmd">
+    
+  </a>
+  <a name="_shortcmd">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _shortcmd(self, line):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.poplib.POP3._longcmd">
+    
+  </a>
+  <a name="_longcmd">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _longcmd(self, line):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.poplib.POP3.getwelcome">
+    
+  </a>
+  <a name="getwelcome">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getwelcome(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.poplib.POP3.set_debuglevel">
+    
+  </a>
+  <a name="set_debuglevel">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_debuglevel(self, level):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.poplib.POP3.user">
+    
+  </a>
+  <a name="user">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    user(self, user):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Send user name, return response
+
+(should indicate password required).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.poplib.POP3.pass_">
+    
+  </a>
+  <a name="pass_">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    pass_(self, pswd):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Send password, return response
+
+(response includes message count, mailbox size).
+
+NB: mailbox is locked by server from here to 'quit()'</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.poplib.POP3.stat">
+    
+  </a>
+  <a name="stat">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    stat(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get mailbox status.
+
+Result is tuple of 2 ints (message count, mailbox size)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.poplib.POP3.list">
+    
+  </a>
+  <a name="list">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    list(self, which=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Request listing, return result.
+
+Result without a message number argument is in form
+['response', ['mesg_num octets', ...], octets].
+
+Result when a message number argument is given is a
+single response: the "scan listing" for that message.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.poplib.POP3.retr">
+    
+  </a>
+  <a name="retr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    retr(self, which):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Retrieve whole message number 'which'.
+
+Result is in form ['response', ['line', ...], octets].</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.poplib.POP3.dele">
+    
+  </a>
+  <a name="dele">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    dele(self, which):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Delete message number 'which'.
+
+Result is 'response'.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.poplib.POP3.noop">
+    
+  </a>
+  <a name="noop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    noop(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Does nothing.
+
+One supposes the response indicates the server is alive.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.poplib.POP3.rset">
+    
+  </a>
+  <a name="rset">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    rset(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Unmark all messages marked for deletion.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.poplib.POP3.quit">
+    
+  </a>
+  <a name="quit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    quit(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Signoff: commit changes on server, unlock mailbox, close connection.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.poplib.POP3.close">
+    
+  </a>
+  <a name="close">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    close(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Close the connection without assuming anything about it.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.poplib.POP3.rpop">
+    
+  </a>
+  <a name="rpop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    rpop(self, user):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Not sure what this does.</p></div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.poplib.POP3.timestamp">
+    
+  </a>
+  <a name="timestamp">
+    
+  </a>
+  <div class="functionHeader">
+    timestamp =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.poplib.POP3.apop">
+    
+  </a>
+  <a name="apop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    apop(self, user, password):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Authorisation
+
+- only possible if server has supplied a timestamp in initial greeting.
+
+Args:
+        user     - mailbox user;
+        password - mailbox password.
+
+NB: mailbox is locked by server from here to 'quit()'</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.poplib.POP3.top">
+    
+  </a>
+  <a name="top">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    top(self, which, howmuch):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Retrieve message header of message number 'which'
+and first 'howmuch' lines of message body.
+
+Result is in form ['response', ['line', ...], octets].</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.poplib.POP3.uidl">
+    
+  </a>
+  <a name="uidl">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    uidl(self, which=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return message digest (unique id) list.
+
+If 'which', result contains unique id for that message
+in the form 'response mesgnum uid', otherwise result is
+the list ['response', ['mesgnum uid', ...], octets]</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.poplib.POP3.utf8">
+    
+  </a>
+  <a name="utf8">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    utf8(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Try to enter UTF-8 mode (see RFC 6856). Returns server response.
+        </p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.poplib.POP3.capa">
+    
+  </a>
+  <a name="capa">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    capa(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return server capabilities (RFC 2449) as a dictionary
+&gt;&gt;&gt; c=poplib.POP3('localhost')
+&gt;&gt;&gt; c.capa()
+{'IMPLEMENTATION': ['Cyrus', 'POP3', 'server', 'v2.2.12'],
+ 'TOP': [], 'LOGIN-DELAY': ['0'], 'AUTH-RESP-CODE': [],
+ 'EXPIRE': ['NEVER'], 'USER': [], 'STLS': [], 'PIPELINING': [],
+ 'UIDL': [], 'RESP-CODES': []}
+&gt;&gt;&gt;
+
+Really, according to RFC 2449, the cyrus folks should avoid
+having the implementation split into multiple arguments...</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.poplib.POP3.stls">
+    
+  </a>
+  <a name="stls">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    stls(self, context=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.poplib.POP3_SSL.html" class="code" data-type="Class">Lib.poplib.POP3_SSL</a></div>
+    
+    <div><p class="pre">Start a TLS session on the active connection as specified in RFC 2595.
+
+context - a ssl.SSLContext</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

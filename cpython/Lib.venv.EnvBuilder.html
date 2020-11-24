@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.venv.EnvBuilder : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.venv.html" class="code" data-type="Package">venv</a>.<a href="Lib.venv.EnvBuilder.html" class="code" data-type="Class">EnvBuilder</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.venv.EnvBuilder:</code></p>
+        <p><a href="classIndex.html#Lib.venv.EnvBuilder">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">This class exists to allow virtual environment creation to be
+customized. The constructor parameters determine the builder's
+behaviour when called upon to create a virtual environment.
+
+By default, the builder makes the system (global) site-packages dir
+*un*available to the created environment.
+
+If invoked using the Python -m option, the default is to use copying
+on Windows platforms but symlinks elsewhere. If instantiated some
+other way, the default is to *not* use symlinks.
+
+:param system_site_packages: If True, the system (global) site-packages
+                             dir is available to created environments.
+:param clear: If True, delete the contents of the environment directory if
+              it already exists, before environment creation.
+:param symlinks: If True, attempt to symlink rather than copy files into
+                 virtual environment.
+:param upgrade: If True, upgrade an existing virtual environment.
+:param with_pip: If True, ensure pip is installed in the virtual
+                 environment
+:param prompt: Alternative terminal prefix for the environment.
+:param upgrade_deps: Update the base venv modules to the latest on PyPI</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id11932">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.venv.EnvBuilder.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.venv.EnvBuilder.html#system_site_packages" class="code" data-type="Instance Variable">system_site_packages</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.venv.EnvBuilder.html#clear" class="code" data-type="Instance Variable">clear</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.venv.EnvBuilder.html#symlinks" class="code" data-type="Instance Variable">symlinks</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.venv.EnvBuilder.html#upgrade" class="code" data-type="Instance Variable">upgrade</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.venv.EnvBuilder.html#with_pip" class="code" data-type="Instance Variable">with_pip</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.venv.EnvBuilder.html#prompt" class="code" data-type="Instance Variable">prompt</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.venv.EnvBuilder.html#upgrade_deps" class="code" data-type="Instance Variable">upgrade_deps</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.venv.EnvBuilder.html#create" class="code" data-type="Method">create</a></td>
+    <td><span>Create a virtual environment in a directory.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.venv.EnvBuilder.html#clear_directory" class="code" data-type="Method">clear_directory</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.venv.EnvBuilder.html#ensure_directories" class="code" data-type="Method">ensure_directories</a></td>
+    <td><span>Create the directories for the environment.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.venv.EnvBuilder.html#create_configuration" class="code" data-type="Method">create_configuration</a></td>
+    <td><span>Create a configuration file indicating where the environment's Python was copied from, and whether the system site-packages should be made available in the environment.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.venv.EnvBuilder.html#symlink_or_copy" class="code" data-type="Method">symlink_or_copy</a></td>
+    <td><span>Try symlinking a file, and if that fails, fall back to copying.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.venv.EnvBuilder.html#setup_python" class="code" data-type="Method">setup_python</a></td>
+    <td><span>Set up a Python executable in the environment.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.venv.EnvBuilder.html#setup_scripts" class="code" data-type="Method">setup_scripts</a></td>
+    <td><span>Set up scripts into the created environment from a directory.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.venv.EnvBuilder.html#post_setup" class="code" data-type="Method">post_setup</a></td>
+    <td><span>Hook for post-setup modification of the venv. Subclasses may install additional packages or scripts here, add activation shell scripts, etc.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.venv.EnvBuilder.html#replace_variables" class="code" data-type="Method">replace_variables</a></td>
+    <td><span>Replace variable placeholders in script text with context-specific variables.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.venv.EnvBuilder.html#install_scripts" class="code" data-type="Method">install_scripts</a></td>
+    <td><span>Install scripts into the created environment from a directory.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.venv.EnvBuilder.html#upgrade_dependencies" class="code" data-type="Method">upgrade_dependencies</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.venv.EnvBuilder.html#_setup_pip" class="code" data-type="Method">_setup_pip</a></td>
+    <td><span>Installs or upgrades pip in a virtual environment</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.venv.EnvBuilder.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, system_site_packages=(False), clear=(False), symlinks=(False), upgrade=(False), with_pip=(False), prompt=None, upgrade_deps=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.venv.EnvBuilder.system_site_packages">
+    
+  </a>
+  <a name="system_site_packages">
+    
+  </a>
+  <div class="functionHeader">
+    system_site_packages =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.venv.EnvBuilder.clear">
+    
+  </a>
+  <a name="clear">
+    
+  </a>
+  <div class="functionHeader">
+    clear =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.venv.EnvBuilder.symlinks">
+    
+  </a>
+  <a name="symlinks">
+    
+  </a>
+  <div class="functionHeader">
+    symlinks =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.venv.EnvBuilder.upgrade">
+    
+  </a>
+  <a name="upgrade">
+    
+  </a>
+  <div class="functionHeader">
+    upgrade =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.venv.EnvBuilder.with_pip">
+    
+  </a>
+  <a name="with_pip">
+    
+  </a>
+  <div class="functionHeader">
+    with_pip =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.venv.EnvBuilder.prompt">
+    
+  </a>
+  <a name="prompt">
+    
+  </a>
+  <div class="functionHeader">
+    prompt =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.venv.EnvBuilder.upgrade_deps">
+    
+  </a>
+  <a name="upgrade_deps">
+    
+  </a>
+  <div class="functionHeader">
+    upgrade_deps =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.venv.EnvBuilder.create">
+    
+  </a>
+  <a name="create">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    create(self, env_dir):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create a virtual environment in a directory.
+
+:param env_dir: The target directory to create an environment in.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.venv.EnvBuilder.clear_directory">
+    
+  </a>
+  <a name="clear_directory">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    clear_directory(self, path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.venv.EnvBuilder.ensure_directories">
+    
+  </a>
+  <a name="ensure_directories">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ensure_directories(self, env_dir):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create the directories for the environment.
+
+Returns a context object which holds paths in the environment,
+for use by subsequent logic.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.venv.EnvBuilder.create_configuration">
+    
+  </a>
+  <a name="create_configuration">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    create_configuration(self, context):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create a configuration file indicating where the environment's Python
+was copied from, and whether the system site-packages should be made
+available in the environment.
+
+:param context: The information for the environment creation request
+                being processed.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.venv.EnvBuilder.symlink_or_copy">
+    
+  </a>
+  <a name="symlink_or_copy">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    symlink_or_copy(self, src, dst, relative_symlinks_ok=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Try symlinking a file, and if that fails, fall back to copying.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.venv.EnvBuilder.setup_python">
+    
+  </a>
+  <a name="setup_python">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setup_python(self, context):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set up a Python executable in the environment.
+
+:param context: The information for the environment creation request
+                being processed.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.venv.EnvBuilder._setup_pip">
+    
+  </a>
+  <a name="_setup_pip">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _setup_pip(self, context):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Installs or upgrades pip in a virtual environment</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.venv.EnvBuilder.setup_scripts">
+    
+  </a>
+  <a name="setup_scripts">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setup_scripts(self, context):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set up scripts into the created environment from a directory.
+
+This method installs the default scripts into the environment
+being created. You can prevent the default installation by overriding
+this method if you really need to, or if you need to specify
+a different location for the scripts to install. By default, the
+'scripts' directory in the venv package is used as the source of
+scripts to install.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.venv.EnvBuilder.post_setup">
+    
+  </a>
+  <a name="post_setup">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    post_setup(self, context):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Hook for post-setup modification of the venv. Subclasses may install
+additional packages or scripts here, add activation shell scripts, etc.
+
+:param context: The information for the environment creation request
+                being processed.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.venv.EnvBuilder.replace_variables">
+    
+  </a>
+  <a name="replace_variables">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    replace_variables(self, text, context):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Replace variable placeholders in script text with context-specific
+variables.
+
+Return the text passed in , but with variables replaced.
+
+:param text: The text in which to replace placeholder variables.
+:param context: The information for the environment creation request
+                being processed.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.venv.EnvBuilder.install_scripts">
+    
+  </a>
+  <a name="install_scripts">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    install_scripts(self, context, path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Install scripts into the created environment from a directory.
+
+:param context: The information for the environment creation request
+                being processed.
+:param path:    Absolute pathname of a directory containing script.
+                Scripts in the 'common' subdirectory of this directory,
+                and those in the directory named for the platform
+                being run on, are installed in the created environment.
+                Placeholder variables are replaced with environment-
+                specific values.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.venv.EnvBuilder.upgrade_dependencies">
+    
+  </a>
+  <a name="upgrade_dependencies">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    upgrade_dependencies(self, context):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

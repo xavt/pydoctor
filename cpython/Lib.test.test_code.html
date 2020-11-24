@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.test.test_code : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.test.html" class="code" data-type="Package">test</a>.<a href="Lib.test.test_code.html" class="code" data-type="Module">test_code</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">This module includes tests of the code object representation.
+
+&gt;&gt;&gt; def f(x):
+...     def g(y):
+...         return x + y
+...     return g
+...
+
+&gt;&gt;&gt; dump(f.__code__)
+name: f
+argcount: 1
+posonlyargcount: 0
+kwonlyargcount: 0
+names: ()
+varnames: ('x', 'g')
+cellvars: ('x',)
+freevars: ()
+nlocals: 2
+flags: 3
+consts: ('None', '&lt;code object g&gt;', "'f.&lt;locals&gt;.g'")
+
+&gt;&gt;&gt; dump(f(4).__code__)
+name: g
+argcount: 1
+posonlyargcount: 0
+kwonlyargcount: 0
+names: ()
+varnames: ('y',)
+cellvars: ()
+freevars: ('x',)
+nlocals: 1
+flags: 19
+consts: ('None',)
+
+&gt;&gt;&gt; def h(x, y):
+...     a = x + y
+...     b = x - y
+...     c = a * b
+...     return c
+...
+
+&gt;&gt;&gt; dump(h.__code__)
+name: h
+argcount: 2
+posonlyargcount: 0
+kwonlyargcount: 0
+names: ()
+varnames: ('x', 'y', 'a', 'b', 'c')
+cellvars: ()
+freevars: ()
+nlocals: 5
+flags: 67
+consts: ('None',)
+
+&gt;&gt;&gt; def attrs(obj):
+...     print(obj.attr1)
+...     print(obj.attr2)
+...     print(obj.attr3)
+
+&gt;&gt;&gt; dump(attrs.__code__)
+name: attrs
+argcount: 1
+posonlyargcount: 0
+kwonlyargcount: 0
+names: ('print', 'attr1', 'attr2', 'attr3')
+varnames: ('obj',)
+cellvars: ()
+freevars: ()
+nlocals: 1
+flags: 67
+consts: ('None',)
+
+&gt;&gt;&gt; def optimize_away():
+...     'doc string'
+...     'not a docstring'
+...     53
+...     0x53
+
+&gt;&gt;&gt; dump(optimize_away.__code__)
+name: optimize_away
+argcount: 0
+posonlyargcount: 0
+kwonlyargcount: 0
+names: ()
+varnames: ()
+cellvars: ()
+freevars: ()
+nlocals: 0
+flags: 67
+consts: ("'doc string'", 'None')
+
+&gt;&gt;&gt; def keywordonly_args(a,b,*,k1):
+...     return a,b,k1
+...
+
+&gt;&gt;&gt; dump(keywordonly_args.__code__)
+name: keywordonly_args
+argcount: 2
+posonlyargcount: 0
+kwonlyargcount: 1
+names: ()
+varnames: ('a', 'b', 'k1')
+cellvars: ()
+freevars: ()
+nlocals: 3
+flags: 67
+consts: ('None',)
+
+&gt;&gt;&gt; def posonly_args(a,b,/,c):
+...     return a,b,c
+...
+
+&gt;&gt;&gt; dump(posonly_args.__code__)
+name: posonly_args
+argcount: 3
+posonlyargcount: 2
+kwonlyargcount: 0
+names: ()
+varnames: ('a', 'b', 'c')
+cellvars: ()
+freevars: ()
+nlocals: 3
+flags: 67
+consts: ('None',)</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id5231">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.test.test_code.html#ctypes" class="code" data-type="Variable">ctypes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_code.html#consts" class="code" data-type="Function">consts</a></td>
+    <td><span>Yield a doctest-safe sequence of object reprs.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_code.html#dump" class="code" data-type="Function">dump</a></td>
+    <td><span>Print out a text representation of a code object.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_code.html#external_getitem" class="code" data-type="Function">external_getitem</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_code.CodeTest.html" class="code" data-type="Class">CodeTest</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_code.html#isinterned" class="code" data-type="Function">isinterned</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_code.CodeConstsTest.html" class="code" data-type="Class">CodeConstsTest</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_code.CodeWeakRefTest.html" class="code" data-type="Class">CodeWeakRefTest</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.test.test_code.html#freefunc" class="code" data-type="Variable">freefunc</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.test.test_code.html#LAST_FREED" class="code" data-type="Variable">LAST_FREED</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_code.html#myfree" class="code" data-type="Function">myfree</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.test.test_code.html#FREE_FUNC" class="code" data-type="Variable">FREE_FUNC</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.test.test_code.html#FREE_INDEX" class="code" data-type="Variable">FREE_INDEX</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_code.CoExtra.html" class="code" data-type="Class">CoExtra</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_code.html#test_main" class="code" data-type="Function">test_main</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.test.test_code.ctypes">
+    
+  </a>
+  <a name="ctypes">
+    
+  </a>
+  <div class="functionHeader">
+    ctypes =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.test_code.consts">
+    
+  </a>
+  <a name="consts">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    consts(t):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Yield a doctest-safe sequence of object reprs.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.test_code.dump">
+    
+  </a>
+  <a name="dump">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    dump(co):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Print out a text representation of a code object.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.test_code.external_getitem">
+    
+  </a>
+  <a name="external_getitem">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    external_getitem(self, i):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.test_code.isinterned">
+    
+  </a>
+  <a name="isinterned">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    isinterned(s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.test.test_code.freefunc">
+    
+  </a>
+  <a name="freefunc">
+    
+  </a>
+  <div class="functionHeader">
+    freefunc =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.test.test_code.LAST_FREED">
+    
+  </a>
+  <a name="LAST_FREED">
+    
+  </a>
+  <div class="functionHeader">
+    LAST_FREED =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.test_code.myfree">
+    
+  </a>
+  <a name="myfree">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    myfree(ptr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.test.test_code.FREE_FUNC">
+    
+  </a>
+  <a name="FREE_FUNC">
+    
+  </a>
+  <div class="functionHeader">
+    FREE_FUNC =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.test.test_code.FREE_INDEX">
+    
+  </a>
+  <a name="FREE_INDEX">
+    
+  </a>
+  <div class="functionHeader">
+    FREE_INDEX =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.test_code.test_main">
+    
+  </a>
+  <a name="test_main">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_main(verbose=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

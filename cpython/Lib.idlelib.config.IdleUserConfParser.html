@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.idlelib.config.IdleUserConfParser : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.idlelib.html" class="code" data-type="Package">idlelib</a>.<a href="Lib.idlelib.config.html" class="code" data-type="Module">config</a>.<a href="Lib.idlelib.config.IdleUserConfParser.html" class="code" data-type="Class">IdleUserConfParser</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.idlelib.config.IdleUserConfParser(<a href="Lib.idlelib.config.IdleConfParser.html" class="code" data-type="Class">IdleConfParser</a>):</code></p>
+        <p><a href="classIndex.html#Lib.idlelib.config.IdleUserConfParser">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">IdleConfigParser specialised for user configuration handling.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2057">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleUserConfParser.html#SetOption" class="code" data-type="Method">SetOption</a></td>
+    <td><span>Return True if option is added or changed to value, else False.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleUserConfParser.html#RemoveOption" class="code" data-type="Method">RemoveOption</a></td>
+    <td><span>Return True if option is removed from section, else False.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleUserConfParser.html#AddSection" class="code" data-type="Method">AddSection</a></td>
+    <td><span>If section doesn't exist, add it.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleUserConfParser.html#RemoveEmptySections" class="code" data-type="Method">RemoveEmptySections</a></td>
+    <td><span>Remove any sections that have no options.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleUserConfParser.html#IsEmpty" class="code" data-type="Method">IsEmpty</a></td>
+    <td><span>Return True if no sections after removing empty sections.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleUserConfParser.html#Save" class="code" data-type="Method">Save</a></td>
+    <td><span>Update user configuration file.</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.idlelib.config.IdleConfParser.html" class="code" data-type="Class">IdleConfParser</a>:
+          </p>
+          <table class="children sortable" id="id2058">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleConfParser.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>cfgFile - string, fully specified configuration file name</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.config.IdleConfParser.html#file" class="code" data-type="Instance Variable">file</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleConfParser.html#Get" class="code" data-type="Method">Get</a></td>
+    <td><span>Get an option value for given section/option or return default. If type is specified, return as type.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleConfParser.html#GetOptionList" class="code" data-type="Method">GetOptionList</a></td>
+    <td><span>Return a list of options for given section, else [].</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleConfParser.html#Load" class="code" data-type="Method">Load</a></td>
+    <td><span>Load the configuration file from disk.</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleUserConfParser.SetOption">
+    
+  </a>
+  <a name="SetOption">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    SetOption(self, section, option, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True if option is added or changed to value, else False.
+
+Add section if required.  False means option already had value.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleUserConfParser.RemoveOption">
+    
+  </a>
+  <a name="RemoveOption">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    RemoveOption(self, section, option):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True if option is removed from section, else False.
+
+False if either section does not exist or did not have option.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleUserConfParser.AddSection">
+    
+  </a>
+  <a name="AddSection">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    AddSection(self, section):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">If section doesn't exist, add it.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleUserConfParser.RemoveEmptySections">
+    
+  </a>
+  <a name="RemoveEmptySections">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    RemoveEmptySections(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Remove any sections that have no options.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleUserConfParser.IsEmpty">
+    
+  </a>
+  <a name="IsEmpty">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    IsEmpty(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True if no sections after removing empty sections.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleUserConfParser.Save">
+    
+  </a>
+  <a name="Save">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    Save(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Update user configuration file.
+
+If self not empty after removing empty sections, write the file
+to disk. Otherwise, remove the file from disk if it exists.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

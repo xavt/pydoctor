@@ -1,0 +1,1585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.email.message.Message : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.email.html" class="code" data-type="Package">email</a>.<a href="Lib.email.message.html" class="code" data-type="Module">message</a>.<a href="Lib.email.message.Message.html" class="code" data-type="Class">Message</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.email.message.Message:</code></p><p>Known subclasses: <a href="Lib.email.message.MIMEPart.html" class="code" data-type="Class">Lib.email.message.MIMEPart</a></p>
+        <p><a href="classIndex.html#Lib.email.message.Message">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Basic message object.
+
+A message object is defined as something that has a bunch of RFC 2822
+headers and a payload.  It may optionally have an envelope header
+(a.k.a. Unix-From or From_ header).  If the message is a container (i.e. a
+multipart or a message/rfc822), then the payload is a list of Message
+objects, otherwise it is a string.
+
+Message objects implement part of the `mapping' interface, which assumes
+there is exactly one occurrence of the header per message.  Some headers
+do in fact appear multiple times (e.g. Received) and for those headers,
+you must use the explicit API to set or get all the headers.  Not all of
+the mapping methods are implemented.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id1335">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.email.message.Message.html#policy" class="code" data-type="Instance Variable">policy</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.email.message.Message.html#preamble" class="code" data-type="Instance Variable">preamble</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.email.message.Message.html#epilogue" class="code" data-type="Instance Variable">epilogue</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.email.message.Message.html#defects" class="code" data-type="Instance Variable">defects</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#__str__" class="code" data-type="Method">__str__</a></td>
+    <td><span>Return the entire formatted message as a string.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#as_string" class="code" data-type="Method">as_string</a></td>
+    <td><span>Return the entire formatted message as a string.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#__bytes__" class="code" data-type="Method">__bytes__</a></td>
+    <td><span>Return the entire formatted message as a bytes object.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#as_bytes" class="code" data-type="Method">as_bytes</a></td>
+    <td><span>Return the entire formatted message as a bytes object.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#is_multipart" class="code" data-type="Method">is_multipart</a></td>
+    <td><span>Return True if the message consists of multiple parts.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#set_unixfrom" class="code" data-type="Method">set_unixfrom</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#get_unixfrom" class="code" data-type="Method">get_unixfrom</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#attach" class="code" data-type="Method">attach</a></td>
+    <td><span>Add the given payload to the current payload.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#get_payload" class="code" data-type="Method">get_payload</a></td>
+    <td><span>Return a reference to the payload.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#set_payload" class="code" data-type="Method">set_payload</a></td>
+    <td><span>Set the payload to the given value.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#set_charset" class="code" data-type="Method">set_charset</a></td>
+    <td><span>Set the charset of the payload to a given character set.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#get_charset" class="code" data-type="Method">get_charset</a></td>
+    <td><span>Return the Charset instance associated with the message's payload.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#__len__" class="code" data-type="Method">__len__</a></td>
+    <td><span>Return the total number of headers, including duplicates.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#__getitem__" class="code" data-type="Method">__getitem__</a></td>
+    <td><span>Get a header value.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#__setitem__" class="code" data-type="Method">__setitem__</a></td>
+    <td><span>Set the value of a header.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#__delitem__" class="code" data-type="Method">__delitem__</a></td>
+    <td><span>Delete all occurrences of a header, if present.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#__contains__" class="code" data-type="Method">__contains__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#__iter__" class="code" data-type="Method">__iter__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#keys" class="code" data-type="Method">keys</a></td>
+    <td><span>Return a list of all the message's header field names.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#values" class="code" data-type="Method">values</a></td>
+    <td><span>Return a list of all the message's header values.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#items" class="code" data-type="Method">items</a></td>
+    <td><span>Get all the message's header fields and values.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#get" class="code" data-type="Method">get</a></td>
+    <td><span>Get a header value.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#set_raw" class="code" data-type="Method">set_raw</a></td>
+    <td><span>Store name and value in the model without modification.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#raw_items" class="code" data-type="Method">raw_items</a></td>
+    <td><span>Return the (name, value) header pairs without modification.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#get_all" class="code" data-type="Method">get_all</a></td>
+    <td><span>Return a list of all the values for the named field.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#add_header" class="code" data-type="Method">add_header</a></td>
+    <td><span>Extended header setting.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#replace_header" class="code" data-type="Method">replace_header</a></td>
+    <td><span>Replace a header.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#get_content_type" class="code" data-type="Method">get_content_type</a></td>
+    <td><span>Return the message's content type.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#get_content_maintype" class="code" data-type="Method">get_content_maintype</a></td>
+    <td><span>Return the message's main content type.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#get_content_subtype" class="code" data-type="Method">get_content_subtype</a></td>
+    <td><span>Returns the message's sub-content type.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#get_default_type" class="code" data-type="Method">get_default_type</a></td>
+    <td><span>Return the `default' content type.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#set_default_type" class="code" data-type="Method">set_default_type</a></td>
+    <td><span>Set the `default' content type.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#get_params" class="code" data-type="Method">get_params</a></td>
+    <td><span>Return the message's Content-Type parameters, as a list.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#get_param" class="code" data-type="Method">get_param</a></td>
+    <td><span>Return the parameter value if found in the Content-Type header.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#set_param" class="code" data-type="Method">set_param</a></td>
+    <td><span>Set a parameter in the Content-Type header.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#del_param" class="code" data-type="Method">del_param</a></td>
+    <td><span>Remove the given parameter completely from the Content-Type header.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#set_type" class="code" data-type="Method">set_type</a></td>
+    <td><span>Set the main type and subtype for the Content-Type header.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#get_filename" class="code" data-type="Method">get_filename</a></td>
+    <td><span>Return the filename associated with the payload if present.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#get_boundary" class="code" data-type="Method">get_boundary</a></td>
+    <td><span>Return the boundary associated with the payload if present.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#set_boundary" class="code" data-type="Method">set_boundary</a></td>
+    <td><span>Set the boundary parameter in Content-Type to 'boundary'.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#get_content_charset" class="code" data-type="Method">get_content_charset</a></td>
+    <td><span>Return the charset parameter of the Content-Type header.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#get_charsets" class="code" data-type="Method">get_charsets</a></td>
+    <td><span>Return a list containing the charset(s) used in this message.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#get_content_disposition" class="code" data-type="Method">get_content_disposition</a></td>
+    <td><span>Return the message's content-disposition if it exists, or None.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.email.message.Message.html#_headers" class="code" data-type="Instance Variable">_headers</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.email.message.Message.html#_unixfrom" class="code" data-type="Instance Variable">_unixfrom</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.email.message.Message.html#_payload" class="code" data-type="Instance Variable">_payload</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.email.message.Message.html#_charset" class="code" data-type="Instance Variable">_charset</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.email.message.Message.html#_default_type" class="code" data-type="Instance Variable">_default_type</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.message.Message.html#_get_params_preserve" class="code" data-type="Method">_get_params_preserve</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.email.message.Message.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, policy=compat32):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.email.message.MIMEPart.html" class="code" data-type="Class">Lib.email.message.MIMEPart</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.email.message.Message.policy">
+    
+  </a>
+  <a name="policy">
+    
+  </a>
+  <div class="functionHeader">
+    policy =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.email.message.Message._headers">
+    
+  </a>
+  <a name="_headers">
+    
+  </a>
+  <div class="functionHeader">
+    _headers =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.email.message.MIMEPart.html" class="code" data-type="Class">Lib.email.message.MIMEPart</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.email.message.Message._unixfrom">
+    
+  </a>
+  <a name="_unixfrom">
+    
+  </a>
+  <div class="functionHeader">
+    _unixfrom =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.email.message.Message._payload">
+    
+  </a>
+  <a name="_payload">
+    
+  </a>
+  <div class="functionHeader">
+    _payload =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.email.message.MIMEPart.html" class="code" data-type="Class">Lib.email.message.MIMEPart</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.email.message.Message._charset">
+    
+  </a>
+  <a name="_charset">
+    
+  </a>
+  <div class="functionHeader">
+    _charset =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.email.message.Message.preamble">
+    
+  </a>
+  <a name="preamble">
+    
+  </a>
+  <div class="functionHeader">
+    preamble =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.email.message.Message.epilogue">
+    
+  </a>
+  <a name="epilogue">
+    
+  </a>
+  <div class="functionHeader">
+    epilogue =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.email.message.Message.defects">
+    
+  </a>
+  <a name="defects">
+    
+  </a>
+  <div class="functionHeader">
+    defects =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.email.message.Message._default_type">
+    
+  </a>
+  <a name="_default_type">
+    
+  </a>
+  <div class="functionHeader">
+    _default_type =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.__str__">
+    
+  </a>
+  <a name="__str__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __str__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.email.message.MIMEPart.html" class="code" data-type="Class">Lib.email.message.MIMEPart</a></div>
+    
+    <div><p class="pre">Return the entire formatted message as a string.
+        </p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.as_string">
+    
+  </a>
+  <a name="as_string">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    as_string(self, unixfrom=(False), maxheaderlen=0, policy=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.email.message.MIMEPart.html" class="code" data-type="Class">Lib.email.message.MIMEPart</a></div>
+    
+    <div><p class="pre">Return the entire formatted message as a string.
+
+Optional 'unixfrom', when true, means include the Unix From_ envelope
+header.  For backward compatibility reasons, if maxheaderlen is
+not specified it defaults to 0, so you must override it explicitly
+if you want a different maxheaderlen.  'policy' is passed to the
+Generator instance used to serialize the message; if it is not
+specified the policy associated with the message instance is used.
+
+If the message object contains binary data that is not encoded
+according to RFC standards, the non-compliant data will be replaced by
+unicode "unknown character" code points.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.__bytes__">
+    
+  </a>
+  <a name="__bytes__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __bytes__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the entire formatted message as a bytes object.
+        </p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.as_bytes">
+    
+  </a>
+  <a name="as_bytes">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    as_bytes(self, unixfrom=(False), policy=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the entire formatted message as a bytes object.
+
+Optional 'unixfrom', when true, means include the Unix From_ envelope
+header.  'policy' is passed to the BytesGenerator instance used to
+serialize the message; if not specified the policy associated with
+the message instance is used.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.is_multipart">
+    
+  </a>
+  <a name="is_multipart">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_multipart(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True if the message consists of multiple parts.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.set_unixfrom">
+    
+  </a>
+  <a name="set_unixfrom">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_unixfrom(self, unixfrom):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.get_unixfrom">
+    
+  </a>
+  <a name="get_unixfrom">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_unixfrom(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.attach">
+    
+  </a>
+  <a name="attach">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    attach(self, payload):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Add the given payload to the current payload.
+
+The current payload will always be a list of objects after this method
+is called.  If you want to set the payload to a scalar object, use
+set_payload() instead.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.get_payload">
+    
+  </a>
+  <a name="get_payload">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_payload(self, i=None, decode=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a reference to the payload.
+
+The payload will either be a list object or a string.  If you mutate
+the list object, you modify the message's payload in place.  Optional
+i returns that index into the payload.
+
+Optional decode is a flag indicating whether the payload should be
+decoded or not, according to the Content-Transfer-Encoding header
+(default is False).
+
+When True and the message is not a multipart, the payload will be
+decoded if this header's value is `quoted-printable' or `base64'.  If
+some other encoding is used, or the header is missing, or if the
+payload has bogus data (i.e. bogus base64 or uuencoded data), the
+payload is returned as-is.
+
+If the message is a multipart and the decode flag is True, then None
+is returned.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.set_payload">
+    
+  </a>
+  <a name="set_payload">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_payload(self, payload, charset=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set the payload to the given value.
+
+Optional charset sets the message's default character set.  See
+set_charset() for details.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.set_charset">
+    
+  </a>
+  <a name="set_charset">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_charset(self, charset):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set the charset of the payload to a given character set.
+
+charset can be a Charset instance, a string naming a character set, or
+None.  If it is a string it will be converted to a Charset instance.
+If charset is None, the charset parameter will be removed from the
+Content-Type field.  Anything else will generate a TypeError.
+
+The message will be assumed to be of type text/* encoded with
+charset.input_charset.  It will be converted to charset.output_charset
+and encoded properly, if needed, when generating the plain text
+representation of the message.  MIME headers (MIME-Version,
+Content-Type, Content-Transfer-Encoding) will be added as needed.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.get_charset">
+    
+  </a>
+  <a name="get_charset">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_charset(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the Charset instance associated with the message's payload.
+        </p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.__len__">
+    
+  </a>
+  <a name="__len__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __len__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the total number of headers, including duplicates.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.__getitem__">
+    
+  </a>
+  <a name="__getitem__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __getitem__(self, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get a header value.
+
+Return None if the header is missing instead of raising an exception.
+
+Note that if the header appeared multiple times, exactly which
+occurrence gets returned is undefined.  Use get_all() to get all
+the values matching a header field name.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.__setitem__">
+    
+  </a>
+  <a name="__setitem__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __setitem__(self, name, val):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set the value of a header.
+
+Note: this does not overwrite an existing header with the same field
+name.  Use __delitem__() first to delete any existing headers.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.__delitem__">
+    
+  </a>
+  <a name="__delitem__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __delitem__(self, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Delete all occurrences of a header, if present.
+
+Does not raise an exception if the header is missing.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.__contains__">
+    
+  </a>
+  <a name="__contains__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __contains__(self, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.__iter__">
+    
+  </a>
+  <a name="__iter__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __iter__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.keys">
+    
+  </a>
+  <a name="keys">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    keys(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a list of all the message's header field names.
+
+These will be sorted in the order they appeared in the original
+message, or were added to the message, and may contain duplicates.
+Any fields deleted and re-inserted are always appended to the header
+list.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.values">
+    
+  </a>
+  <a name="values">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    values(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a list of all the message's header values.
+
+These will be sorted in the order they appeared in the original
+message, or were added to the message, and may contain duplicates.
+Any fields deleted and re-inserted are always appended to the header
+list.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.items">
+    
+  </a>
+  <a name="items">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    items(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get all the message's header fields and values.
+
+These will be sorted in the order they appeared in the original
+message, or were added to the message, and may contain duplicates.
+Any fields deleted and re-inserted are always appended to the header
+list.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.get">
+    
+  </a>
+  <a name="get">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get(self, name, failobj=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get a header value.
+
+Like __getitem__() but return failobj instead of None when the field
+is missing.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.set_raw">
+    
+  </a>
+  <a name="set_raw">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_raw(self, name, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Store name and value in the model without modification.
+
+This is an "internal" API, intended only for use by a parser.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.raw_items">
+    
+  </a>
+  <a name="raw_items">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    raw_items(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the (name, value) header pairs without modification.
+
+This is an "internal" API, intended only for use by a generator.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.get_all">
+    
+  </a>
+  <a name="get_all">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_all(self, name, failobj=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a list of all the values for the named field.
+
+These will be sorted in the order they appeared in the original
+message, and may contain duplicates.  Any fields deleted and
+re-inserted are always appended to the header list.
+
+If no such fields exist, failobj is returned (defaults to None).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.add_header">
+    
+  </a>
+  <a name="add_header">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    add_header(self, _name, _value, **_params):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Extended header setting.
+
+name is the header field to add.  keyword arguments can be used to set
+additional parameters for the header field, with underscores converted
+to dashes.  Normally the parameter will be added as key="value" unless
+value is None, in which case only the key will be added.  If a
+parameter value contains non-ASCII characters it can be specified as a
+three-tuple of (charset, language, value), in which case it will be
+encoded according to RFC2231 rules.  Otherwise it will be encoded using
+the utf-8 charset and a language of ''.
+
+Examples:
+
+msg.add_header('content-disposition', 'attachment', filename='bud.gif')
+msg.add_header('content-disposition', 'attachment',
+               filename=('utf-8', '', Fußballer.ppt'))
+msg.add_header('content-disposition', 'attachment',
+               filename='Fußballer.ppt'))</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.replace_header">
+    
+  </a>
+  <a name="replace_header">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    replace_header(self, _name, _value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Replace a header.
+
+Replace the first matching header found in the message, retaining
+header order and case.  If no matching header was found, a KeyError is
+raised.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.get_content_type">
+    
+  </a>
+  <a name="get_content_type">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_content_type(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the message's content type.
+
+The returned string is coerced to lower case of the form
+`maintype/subtype'.  If there was no Content-Type header in the
+message, the default type as given by get_default_type() will be
+returned.  Since according to RFC 2045, messages always have a default
+type this will always return a value.
+
+RFC 2045 defines a message's default type to be text/plain unless it
+appears inside a multipart/digest container, in which case it would be
+message/rfc822.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.get_content_maintype">
+    
+  </a>
+  <a name="get_content_maintype">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_content_maintype(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the message's main content type.
+
+This is the `maintype' part of the string returned by
+get_content_type().</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.get_content_subtype">
+    
+  </a>
+  <a name="get_content_subtype">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_content_subtype(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns the message's sub-content type.
+
+This is the `subtype' part of the string returned by
+get_content_type().</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.get_default_type">
+    
+  </a>
+  <a name="get_default_type">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_default_type(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the `default' content type.
+
+Most messages have a default content type of text/plain, except for
+messages that are subparts of multipart/digest containers.  Such
+subparts have a default content type of message/rfc822.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.set_default_type">
+    
+  </a>
+  <a name="set_default_type">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_default_type(self, ctype):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set the `default' content type.
+
+ctype should be either "text/plain" or "message/rfc822", although this
+is not enforced.  The default content type is not stored in the
+Content-Type header.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.email.message.Message._get_params_preserve">
+    
+  </a>
+  <a name="_get_params_preserve">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_params_preserve(self, failobj, header):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.get_params">
+    
+  </a>
+  <a name="get_params">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_params(self, failobj=None, header="""content-type""", unquote=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the message's Content-Type parameters, as a list.
+
+The elements of the returned list are 2-tuples of key/value pairs, as
+split on the `=' sign.  The left hand side of the `=' is the key,
+while the right hand side is the value.  If there is no `=' sign in
+the parameter the value is the empty string.  The value is as
+described in the get_param() method.
+
+Optional failobj is the object to return if there is no Content-Type
+header.  Optional header is the header to search instead of
+Content-Type.  If unquote is True, the value is unquoted.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.get_param">
+    
+  </a>
+  <a name="get_param">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_param(self, param, failobj=None, header="""content-type""", unquote=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the parameter value if found in the Content-Type header.
+
+Optional failobj is the object to return if there is no Content-Type
+header, or the Content-Type header has no such parameter.  Optional
+header is the header to search instead of Content-Type.
+
+Parameter keys are always compared case insensitively.  The return
+value can either be a string, or a 3-tuple if the parameter was RFC
+2231 encoded.  When it's a 3-tuple, the elements of the value are of
+the form (CHARSET, LANGUAGE, VALUE).  Note that both CHARSET and
+LANGUAGE can be None, in which case you should consider VALUE to be
+encoded in the us-ascii charset.  You can usually ignore LANGUAGE.
+The parameter value (either the returned string, or the VALUE item in
+the 3-tuple) is always unquoted, unless unquote is set to False.
+
+If your application doesn't care whether the parameter was RFC 2231
+encoded, it can turn the return value into a string as follows:
+
+    rawparam = msg.get_param('foo')
+    param = email.utils.collapse_rfc2231_value(rawparam)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.set_param">
+    
+  </a>
+  <a name="set_param">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_param(self, param, value, header="""Content-Type""", requote=(True), charset=None, language="""""", replace=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set a parameter in the Content-Type header.
+
+If the parameter already exists in the header, its value will be
+replaced with the new value.
+
+If header is Content-Type and has not yet been defined for this
+message, it will be set to "text/plain" and the new parameter and
+value will be appended as per RFC 2045.
+
+An alternate header can be specified in the header argument, and all
+parameters will be quoted as necessary unless requote is False.
+
+If charset is specified, the parameter will be encoded according to RFC
+2231.  Optional language specifies the RFC 2231 language, defaulting
+to the empty string.  Both charset and language should be strings.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.del_param">
+    
+  </a>
+  <a name="del_param">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    del_param(self, param, header="""content-type""", requote=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Remove the given parameter completely from the Content-Type header.
+
+The header will be re-written in place without the parameter or its
+value. All values will be quoted as necessary unless requote is
+False.  Optional header specifies an alternative to the Content-Type
+header.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.set_type">
+    
+  </a>
+  <a name="set_type">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_type(self, type, header="""Content-Type""", requote=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set the main type and subtype for the Content-Type header.
+
+type must be a string in the form "maintype/subtype", otherwise a
+ValueError is raised.
+
+This method replaces the Content-Type header, keeping all the
+parameters in place.  If requote is False, this leaves the existing
+header's quoting as is.  Otherwise, the parameters will be quoted (the
+default).
+
+An alternative header can be specified in the header argument.  When
+the Content-Type header is set, we'll always also add a MIME-Version
+header.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.get_filename">
+    
+  </a>
+  <a name="get_filename">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_filename(self, failobj=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the filename associated with the payload if present.
+
+The filename is extracted from the Content-Disposition header's
+`filename' parameter, and it is unquoted.  If that header is missing
+the `filename' parameter, this method falls back to looking for the
+`name' parameter.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.get_boundary">
+    
+  </a>
+  <a name="get_boundary">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_boundary(self, failobj=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the boundary associated with the payload if present.
+
+The boundary is extracted from the Content-Type header's `boundary'
+parameter, and it is unquoted.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.set_boundary">
+    
+  </a>
+  <a name="set_boundary">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_boundary(self, boundary):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set the boundary parameter in Content-Type to 'boundary'.
+
+This is subtly different than deleting the Content-Type header and
+adding a new one with a new boundary parameter via add_header().  The
+main difference is that using the set_boundary() method preserves the
+order of the Content-Type header in the original message.
+
+HeaderParseError is raised if the message has no Content-Type header.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.get_content_charset">
+    
+  </a>
+  <a name="get_content_charset">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_content_charset(self, failobj=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the charset parameter of the Content-Type header.
+
+The returned string is always coerced to lower case.  If there is no
+Content-Type header, or if that header has no charset parameter,
+failobj is returned.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.get_charsets">
+    
+  </a>
+  <a name="get_charsets">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_charsets(self, failobj=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a list containing the charset(s) used in this message.
+
+The returned list of items describes the Content-Type headers'
+charset parameter for this message and all the subparts in its
+payload.
+
+Each item will either be a string (the value of the charset parameter
+in the Content-Type header of that part) or the value of the
+'failobj' parameter (defaults to None), if the part does not have a
+main MIME type of "text", or the charset is not defined.
+
+The list will contain one string for each part of the message, plus
+one for the container message (i.e. self), so that a non-multipart
+message will still return a list of length 1.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.message.Message.get_content_disposition">
+    
+  </a>
+  <a name="get_content_disposition">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_content_disposition(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the message's content-disposition if it exists, or None.
+
+The return values can be either 'inline', 'attachment' or None
+according to the rfc2183.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

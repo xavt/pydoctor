@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.idlelib.query.Query : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.idlelib.html" class="code" data-type="Package">idlelib</a>.<a href="Lib.idlelib.query.html" class="code" data-type="Module">query</a>.<a href="Lib.idlelib.query.Query.html" class="code" data-type="Class">Query</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.idlelib.query.Query(<span title="tkinter.Toplevel">Toplevel</span>):</code></p><p>Known subclasses: <a href="Lib.idlelib.query.CustomRun.html" class="code" data-type="Class">Lib.idlelib.query.CustomRun</a>, <a href="Lib.idlelib.query.Goto.html" class="code" data-type="Class">Lib.idlelib.query.Goto</a>, <a href="Lib.idlelib.query.HelpSource.html" class="code" data-type="Class">Lib.idlelib.query.HelpSource</a>, <a href="Lib.idlelib.query.ModuleName.html" class="code" data-type="Class">Lib.idlelib.query.ModuleName</a>, <a href="Lib.idlelib.query.SectionName.html" class="code" data-type="Class">Lib.idlelib.query.SectionName</a></p>
+        <p><a href="classIndex.html#Lib.idlelib.query.Query">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Base class for getting verified answer from a user.
+
+For this base class, accept any non-blank string.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2415">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.query.Query.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Create modal popup, return when destroyed.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.query.Query.html#parent" class="code" data-type="Instance Variable">parent</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.query.Query.html#message" class="code" data-type="Instance Variable">message</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.query.Query.html#text0" class="code" data-type="Instance Variable">text0</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.query.Query.html#used_names" class="code" data-type="Instance Variable">used_names</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.query.Query.html#create_widgets" class="code" data-type="Method">create_widgets</a></td>
+    <td><span>Create entry (rows, extras, buttons.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.query.Query.html#frame" class="code" data-type="Instance Variable">frame</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.query.Query.html#entryvar" class="code" data-type="Instance Variable">entryvar</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.query.Query.html#entry" class="code" data-type="Instance Variable">entry</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.query.Query.html#error_font" class="code" data-type="Instance Variable">error_font</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.query.Query.html#entry_error" class="code" data-type="Instance Variable">entry_error</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.query.Query.html#button_ok" class="code" data-type="Instance Variable">button_ok</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.query.Query.html#button_cancel" class="code" data-type="Instance Variable">button_cancel</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.query.Query.html#create_extra" class="code" data-type="Method">create_extra</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.query.Query.html#showerror" class="code" data-type="Method">showerror</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.query.Query.html#entry_ok" class="code" data-type="Method">entry_ok</a></td>
+    <td><span>Return non-blank entry or None.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.query.Query.html#ok" class="code" data-type="Method">ok</a></td>
+    <td><span>If entry is valid, bind it to 'result' and destroy tk widget.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.query.Query.html#result" class="code" data-type="Instance Variable">result</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.query.Query.html#cancel" class="code" data-type="Method">cancel</a></td>
+    <td><span>Set dialog result to None and destroy tk widget.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.query.Query.html#destroy" class="code" data-type="Method">destroy</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.idlelib.query.Query.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, parent, title, message):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.idlelib.query.CustomRun.html" class="code" data-type="Class">Lib.idlelib.query.CustomRun</a>, <a href="Lib.idlelib.query.HelpSource.html" class="code" data-type="Class">Lib.idlelib.query.HelpSource</a>, <a href="Lib.idlelib.query.ModuleName.html" class="code" data-type="Class">Lib.idlelib.query.ModuleName</a>, <a href="Lib.idlelib.query.SectionName.html" class="code" data-type="Class">Lib.idlelib.query.SectionName</a></div>
+    
+    <div><p class="pre">Create modal popup, return when destroyed.
+
+Additional subclass init must be done before this unless
+_utest=True is passed to suppress wait_window().
+
+title - string, title of popup dialog
+message - string, informational message to display
+text0 - initial value for entry
+used_names - names already in use
+_htest - bool, change box location when running htest
+_utest - bool, leave window hidden and not modal</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.query.Query.parent">
+    
+  </a>
+  <a name="parent">
+    
+  </a>
+  <div class="functionHeader">
+    parent =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.query.Query.message">
+    
+  </a>
+  <a name="message">
+    
+  </a>
+  <div class="functionHeader">
+    message =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.query.Query.text0">
+    
+  </a>
+  <a name="text0">
+    
+  </a>
+  <div class="functionHeader">
+    text0 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.query.Query.used_names">
+    
+  </a>
+  <a name="used_names">
+    
+  </a>
+  <div class="functionHeader">
+    used_names =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.query.Query.create_widgets">
+    
+  </a>
+  <a name="create_widgets">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    create_widgets(self, ok_text="""OK"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create entry (rows, extras, buttons.
+
+Entry stuff on rows 0-2, spanning cols 0-2.
+Buttons on row 99, cols 1, 2.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.query.Query.frame">
+    
+  </a>
+  <a name="frame">
+    
+  </a>
+  <div class="functionHeader">
+    frame =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.query.Query.entryvar">
+    
+  </a>
+  <a name="entryvar">
+    
+  </a>
+  <div class="functionHeader">
+    entryvar =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.query.Query.entry">
+    
+  </a>
+  <a name="entry">
+    
+  </a>
+  <div class="functionHeader">
+    entry =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.query.Query.error_font">
+    
+  </a>
+  <a name="error_font">
+    
+  </a>
+  <div class="functionHeader">
+    error_font =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.query.Query.entry_error">
+    
+  </a>
+  <a name="entry_error">
+    
+  </a>
+  <div class="functionHeader">
+    entry_error =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.query.Query.button_ok">
+    
+  </a>
+  <a name="button_ok">
+    
+  </a>
+  <div class="functionHeader">
+    button_ok =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.query.Query.button_cancel">
+    
+  </a>
+  <a name="button_cancel">
+    
+  </a>
+  <div class="functionHeader">
+    button_cancel =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.query.Query.create_extra">
+    
+  </a>
+  <a name="create_extra">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    create_extra(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.idlelib.query.CustomRun.html" class="code" data-type="Class">Lib.idlelib.query.CustomRun</a>, <a href="Lib.idlelib.query.HelpSource.html" class="code" data-type="Class">Lib.idlelib.query.HelpSource</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.query.Query.showerror">
+    
+  </a>
+  <a name="showerror">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    showerror(self, message, widget=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.query.Query.entry_ok">
+    
+  </a>
+  <a name="entry_ok">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    entry_ok(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.idlelib.query.CustomRun.html" class="code" data-type="Class">Lib.idlelib.query.CustomRun</a>, <a href="Lib.idlelib.query.Goto.html" class="code" data-type="Class">Lib.idlelib.query.Goto</a>, <a href="Lib.idlelib.query.HelpSource.html" class="code" data-type="Class">Lib.idlelib.query.HelpSource</a>, <a href="Lib.idlelib.query.ModuleName.html" class="code" data-type="Class">Lib.idlelib.query.ModuleName</a>, <a href="Lib.idlelib.query.SectionName.html" class="code" data-type="Class">Lib.idlelib.query.SectionName</a></div>
+    
+    <div><p class="pre">Return non-blank entry or None.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.query.Query.ok">
+    
+  </a>
+  <a name="ok">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ok(self, event=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">If entry is valid, bind it to 'result' and destroy tk widget.
+
+Otherwise leave dialog open for user to correct entry or cancel.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.query.Query.result">
+    
+  </a>
+  <a name="result">
+    
+  </a>
+  <div class="functionHeader">
+    result =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.query.Query.cancel">
+    
+  </a>
+  <a name="cancel">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    cancel(self, event=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set dialog result to None and destroy tk widget.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.query.Query.destroy">
+    
+  </a>
+  <a name="destroy">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    destroy(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

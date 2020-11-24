@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib._aix_support : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module private"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib._aix_support.html" class="code" data-type="Module">_aix_support</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Shared AIX support functions.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id4">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib._aix_support.html#aix_platform" class="code" data-type="Function">aix_platform</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib._aix_support.html#aix_buildtag" class="code" data-type="Function">aix_buildtag</a></td>
+    <td><span>Return the platform_tag of the system Python was built on.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._aix_support.html#_aix_tag" class="code" data-type="Function">_aix_tag</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._aix_support.html#_aix_vrtl" class="code" data-type="Function">_aix_vrtl</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._aix_support.html#_aix_bosmp64" class="code" data-type="Function">_aix_bosmp64</a></td>
+    <td><span>Return a Tuple[str, int] e.g., ['7.1.4.34', 1806] The fileset bos.mp64 is the AIX kernel. It's VRMF and builddate reflect the current ABI levels of the runtime environment.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._aix_support.html#_aix_bgt" class="code" data-type="Function">_aix_bgt</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction private">
+  
+  <a name="Lib._aix_support._aix_tag">
+    
+  </a>
+  <a name="_aix_tag">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _aix_tag(vrtl, bd):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._aix_support._aix_vrtl">
+    
+  </a>
+  <a name="_aix_vrtl">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _aix_vrtl(vrmf):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._aix_support._aix_bosmp64">
+    
+  </a>
+  <a name="_aix_bosmp64">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _aix_bosmp64():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a Tuple[str, int] e.g., ['7.1.4.34', 1806]
+The fileset bos.mp64 is the AIX kernel. It's VRMF and builddate
+reflect the current ABI levels of the runtime environment.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib._aix_support.aix_platform">
+    
+  </a>
+  <a name="aix_platform">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    aix_platform():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">AIX filesets are identified by four decimal values: V.R.M.F.
+V (version) and R (release) can be retreived using ``uname``
+Since 2007, starting with AIX 5.3 TL7, the M value has been
+included with the fileset bos.mp64 and represents the Technology
+Level (TL) of AIX. The F (Fix) value also increases, but is not
+relevant for comparing releases and binary compatibility.
+For binary compatibility the so-called builddate is needed.
+Again, the builddate of an AIX release is associated with bos.mp64.
+AIX ABI compatibility is described  as guaranteed at: https://www.ibm.com/    support/knowledgecenter/en/ssw_aix_72/install/binary_compatability.html
+
+For pep425 purposes the AIX platform tag becomes:
+"aix-{:1x}{:1d}{:02d}-{:04d}-{}".format(v, r, tl, builddate, bitsize)
+e.g., "aix-6107-1415-32" for AIX 6.1 TL7 bd 1415, 32-bit
+and, "aix-6107-1415-64" for AIX 6.1 TL7 bd 1415, 64-bit</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._aix_support._aix_bgt">
+    
+  </a>
+  <a name="_aix_bgt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _aix_bgt():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib._aix_support.aix_buildtag">
+    
+  </a>
+  <a name="aix_buildtag">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    aix_buildtag():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the platform_tag of the system Python was built on.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

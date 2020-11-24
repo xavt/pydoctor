@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.poplib.POP3_SSL : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.poplib.html" class="code" data-type="Module">poplib</a>.<a href="Lib.poplib.POP3_SSL.html" class="code" data-type="Class">POP3_SSL</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.poplib.POP3_SSL(<a href="Lib.poplib.POP3.html" class="code" data-type="Class">POP3</a>):</code></p>
+        <p><a href="classIndex.html#Lib.poplib.POP3_SSL">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">POP3 client class over SSL connection
+
+Instantiate with: POP3_SSL(hostname, port=995, keyfile=None, certfile=None,
+                           context=None)
+
+       hostname - the hostname of the pop3 over ssl server
+       port - port number
+       keyfile - PEM formatted file that contains your private key
+       certfile - PEM formatted certificate chain file
+       context - a ssl.SSLContext
+
+See the methods of the parent class POP3 for more documentation.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3402">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3_SSL.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.poplib.POP3_SSL.html#keyfile" class="code" data-type="Instance Variable">keyfile</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.poplib.POP3_SSL.html#certfile" class="code" data-type="Instance Variable">certfile</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.poplib.POP3_SSL.html#context" class="code" data-type="Instance Variable">context</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3_SSL.html#stls" class="code" data-type="Method">stls</a></td>
+    <td><span>The method unconditionally raises an exception since the STLS command doesn't make any sense on an already established SSL/TLS session.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3_SSL.html#_create_socket" class="code" data-type="Method">_create_socket</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.poplib.POP3.html" class="code" data-type="Class">POP3</a>:
+          </p>
+          <table class="children sortable" id="id3403">
+  
+  <tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.poplib.POP3.html#encoding" class="code" data-type="Class Variable">encoding</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.poplib.POP3.html#host" class="code" data-type="Instance Variable">host</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.poplib.POP3.html#port" class="code" data-type="Instance Variable">port</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.poplib.POP3.html#sock" class="code" data-type="Instance Variable">sock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.poplib.POP3.html#file" class="code" data-type="Instance Variable">file</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.poplib.POP3.html#welcome" class="code" data-type="Instance Variable">welcome</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#getwelcome" class="code" data-type="Method">getwelcome</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#set_debuglevel" class="code" data-type="Method">set_debuglevel</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#user" class="code" data-type="Method">user</a></td>
+    <td><span>Send user name, return response</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#pass_" class="code" data-type="Method">pass_</a></td>
+    <td><span>Send password, return response</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#stat" class="code" data-type="Method">stat</a></td>
+    <td><span>Get mailbox status.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#list" class="code" data-type="Method">list</a></td>
+    <td><span>Request listing, return result.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#retr" class="code" data-type="Method">retr</a></td>
+    <td><span>Retrieve whole message number 'which'.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#dele" class="code" data-type="Method">dele</a></td>
+    <td><span>Delete message number 'which'.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#noop" class="code" data-type="Method">noop</a></td>
+    <td><span>Does nothing.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#rset" class="code" data-type="Method">rset</a></td>
+    <td><span>Unmark all messages marked for deletion.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#quit" class="code" data-type="Method">quit</a></td>
+    <td><span>Signoff: commit changes on server, unlock mailbox, close connection.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#close" class="code" data-type="Method">close</a></td>
+    <td><span>Close the connection without assuming anything about it.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#rpop" class="code" data-type="Method">rpop</a></td>
+    <td><span>Not sure what this does.</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.poplib.POP3.html#timestamp" class="code" data-type="Class Variable">timestamp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#apop" class="code" data-type="Method">apop</a></td>
+    <td><span>Authorisation</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#top" class="code" data-type="Method">top</a></td>
+    <td><span>Retrieve message header of message number 'which' and first 'howmuch' lines of message body.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#uidl" class="code" data-type="Method">uidl</a></td>
+    <td><span>Return message digest (unique id) list.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#utf8" class="code" data-type="Method">utf8</a></td>
+    <td><span>Try to enter UTF-8 mode (see RFC 6856). Returns server response.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#capa" class="code" data-type="Method">capa</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.poplib.POP3.html#_tls_established" class="code" data-type="Instance Variable">_tls_established</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.poplib.POP3.html#_debugging" class="code" data-type="Instance Variable">_debugging</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#_putline" class="code" data-type="Method">_putline</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#_putcmd" class="code" data-type="Method">_putcmd</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#_getline" class="code" data-type="Method">_getline</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#_getresp" class="code" data-type="Method">_getresp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#_getlongresp" class="code" data-type="Method">_getlongresp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#_shortcmd" class="code" data-type="Method">_shortcmd</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.poplib.POP3.html#_longcmd" class="code" data-type="Method">_longcmd</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.poplib.POP3_SSL.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, host, port=POP3_SSL_PORT, keyfile=None, certfile=None, timeout=socket._GLOBAL_DEFAULT_TIMEOUT, context=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.poplib.POP3.html#__init__" class="code" data-type="Method">Lib.poplib.POP3.__init__</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.poplib.POP3_SSL.keyfile">
+    
+  </a>
+  <a name="keyfile">
+    
+  </a>
+  <div class="functionHeader">
+    keyfile =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.poplib.POP3_SSL.certfile">
+    
+  </a>
+  <a name="certfile">
+    
+  </a>
+  <div class="functionHeader">
+    certfile =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.poplib.POP3_SSL.context">
+    
+  </a>
+  <a name="context">
+    
+  </a>
+  <div class="functionHeader">
+    context =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.poplib.POP3_SSL._create_socket">
+    
+  </a>
+  <a name="_create_socket">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _create_socket(self, timeout):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.poplib.POP3.html#_create_socket" class="code" data-type="Method">Lib.poplib.POP3._create_socket</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.poplib.POP3_SSL.stls">
+    
+  </a>
+  <a name="stls">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    stls(self, keyfile=None, certfile=None, context=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.poplib.POP3.html#stls" class="code" data-type="Method">Lib.poplib.POP3.stls</a></div>
+    
+    <div><p class="pre">The method unconditionally raises an exception since the
+STLS command doesn't make any sense on an already established
+SSL/TLS session.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.tracemalloc : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.tracemalloc.html" class="code" data-type="Module">tracemalloc</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div class="undocumented">Undocumented</div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id11458">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tracemalloc.Statistic.html" class="code" data-type="Class">Statistic</a></td>
+    <td><span>Statistic difference on memory allocations between two Snapshot instance.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tracemalloc.StatisticDiff.html" class="code" data-type="Class">StatisticDiff</a></td>
+    <td><span>Statistic difference on memory allocations between an old and a new Snapshot instance.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tracemalloc.Frame.html" class="code" data-type="Class">Frame</a></td>
+    <td><span>Frame of a traceback.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tracemalloc.Traceback.html" class="code" data-type="Class">Traceback</a></td>
+    <td><span>Sequence of Frame instances sorted from the oldest frame to the most recent frame.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.tracemalloc.html#get_object_traceback" class="code" data-type="Function">get_object_traceback</a></td>
+    <td><span>Get the traceback where the Python object *obj* was allocated. Return a Traceback instance.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tracemalloc.Trace.html" class="code" data-type="Class">Trace</a></td>
+    <td><span>Trace of a memory block.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tracemalloc.BaseFilter.html" class="code" data-type="Class">BaseFilter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tracemalloc.Filter.html" class="code" data-type="Class">Filter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tracemalloc.DomainFilter.html" class="code" data-type="Class">DomainFilter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tracemalloc.Snapshot.html" class="code" data-type="Class">Snapshot</a></td>
+    <td><span>Snapshot of traces of memory blocks allocated by Python.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.tracemalloc.html#take_snapshot" class="code" data-type="Function">take_snapshot</a></td>
+    <td><span>Take a snapshot of traces of memory blocks allocated by Python.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.tracemalloc.html#_format_size" class="code" data-type="Function">_format_size</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.tracemalloc.html#_compare_grouped_stats" class="code" data-type="Function">_compare_grouped_stats</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.tracemalloc._Traces.html" class="code" data-type="Class">_Traces</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.tracemalloc.html#_normalize_filename" class="code" data-type="Function">_normalize_filename</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction private">
+  
+  <a name="Lib.tracemalloc._format_size">
+    
+  </a>
+  <a name="_format_size">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _format_size(size, sign):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.tracemalloc._compare_grouped_stats">
+    
+  </a>
+  <a name="_compare_grouped_stats">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _compare_grouped_stats(old_group, new_group):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.tracemalloc.get_object_traceback">
+    
+  </a>
+  <a name="get_object_traceback">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_object_traceback(obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get the traceback where the Python object *obj* was allocated.
+Return a Traceback instance.
+
+Return None if the tracemalloc module is not tracing memory allocations or
+did not trace the allocation of the object.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.tracemalloc._normalize_filename">
+    
+  </a>
+  <a name="_normalize_filename">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _normalize_filename(filename):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.tracemalloc.take_snapshot">
+    
+  </a>
+  <a name="take_snapshot">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    take_snapshot():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Take a snapshot of traces of memory blocks allocated by Python.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

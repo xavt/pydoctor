@@ -1,0 +1,1001 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.tkinter.ttk.Treeview : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.tkinter.html" class="code" data-type="Package">tkinter</a>.<a href="Lib.tkinter.ttk.html" class="code" data-type="Module">ttk</a>.<a href="Lib.tkinter.ttk.Treeview.html" class="code" data-type="Class">Treeview</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.tkinter.ttk.Treeview(<a href="Lib.tkinter.ttk.Widget.html" class="code" data-type="Class">Widget</a>, <span title="tkinter.XView">tkinter.XView</span>, <span title="tkinter.YView">tkinter.YView</span>):</code></p>
+        <p><a href="classIndex.html#Lib.tkinter.ttk.Treeview">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Ttk Treeview widget displays a hierarchical collection of items.
+
+Each item has a textual label, an optional image, and an optional list
+of data values. The data values are displayed in successive columns
+after the tree label.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id11440">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Construct a Ttk Treeview with parent master.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#bbox" class="code" data-type="Method">bbox</a></td>
+    <td><span>Returns the bounding box (relative to the treeview widget's window) of the specified item in the form x y width height.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#get_children" class="code" data-type="Method">get_children</a></td>
+    <td><span>Returns a tuple of children belonging to item.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#set_children" class="code" data-type="Method">set_children</a></td>
+    <td><span>Replaces item's child with newchildren.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#column" class="code" data-type="Method">column</a></td>
+    <td><span>Query or modify the options for the specified column.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#delete" class="code" data-type="Method">delete</a></td>
+    <td><span>Delete all specified items and all their descendants. The root item may not be deleted.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#detach" class="code" data-type="Method">detach</a></td>
+    <td><span>Unlinks all of the specified items from the tree.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#exists" class="code" data-type="Method">exists</a></td>
+    <td><span>Returns True if the specified item is present in the tree, False otherwise.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#focus" class="code" data-type="Method">focus</a></td>
+    <td><span>If item is specified, sets the focus item to item. Otherwise, returns the current focus item, or '' if there is none.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#heading" class="code" data-type="Method">heading</a></td>
+    <td><span>Query or modify the heading options for the specified column.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#identify" class="code" data-type="Method">identify</a></td>
+    <td><span>Returns a description of the specified component under the point given by x and y, or the empty string if no such component is present at that position.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#identify_row" class="code" data-type="Method">identify_row</a></td>
+    <td><span>Returns the item ID of the item at position y.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#identify_column" class="code" data-type="Method">identify_column</a></td>
+    <td><span>Returns the data column identifier of the cell at position x.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#identify_region" class="code" data-type="Method">identify_region</a></td>
+    <td><span>Returns one of:</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#identify_element" class="code" data-type="Method">identify_element</a></td>
+    <td><span>Returns the element at position x, y.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#index" class="code" data-type="Method">index</a></td>
+    <td><span>Returns the integer index of item within its parent's list of children.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#insert" class="code" data-type="Method">insert</a></td>
+    <td><span>Creates a new item and return the item identifier of the newly created item.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#item" class="code" data-type="Method">item</a></td>
+    <td><span>Query or modify the options for the specified item.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#move" class="code" data-type="Method">move</a></td>
+    <td><span>Moves item to position index in parent's list of children.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#next" class="code" data-type="Method">next</a></td>
+    <td><span>Returns the identifier of item's next sibling, or '' if item is the last child of its parent.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#parent" class="code" data-type="Method">parent</a></td>
+    <td><span>Returns the ID of the parent of item, or '' if item is at the top level of the hierarchy.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#prev" class="code" data-type="Method">prev</a></td>
+    <td><span>Returns the identifier of item's previous sibling, or '' if item is the first child of its parent.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#see" class="code" data-type="Method">see</a></td>
+    <td><span>Ensure that item is visible.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#selection" class="code" data-type="Method">selection</a></td>
+    <td><span>Returns the tuple of selected items.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#selection_set" class="code" data-type="Method">selection_set</a></td>
+    <td><span>The specified items becomes the new selection.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#selection_add" class="code" data-type="Method">selection_add</a></td>
+    <td><span>Add all of the specified items to the selection.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#selection_remove" class="code" data-type="Method">selection_remove</a></td>
+    <td><span>Remove all of the specified items from the selection.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#selection_toggle" class="code" data-type="Method">selection_toggle</a></td>
+    <td><span>Toggle the selection state of each specified item.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#set" class="code" data-type="Method">set</a></td>
+    <td><span>Query or set the value of given item.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#tag_bind" class="code" data-type="Method">tag_bind</a></td>
+    <td><span>Bind a callback for the given event sequence to the tag tagname. When an event is delivered to an item, the callbacks for each of the item's tags option are called.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#tag_configure" class="code" data-type="Method">tag_configure</a></td>
+    <td><span>Query or modify the options for the specified tagname.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#tag_has" class="code" data-type="Method">tag_has</a></td>
+    <td><span>If item is specified, returns 1 or 0 depending on whether the specified item has the given tagname. Otherwise, returns a list of all items which have the specified tag.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Treeview.html#_selection" class="code" data-type="Method">_selection</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.tkinter.ttk.Widget.html" class="code" data-type="Class">Widget</a>:
+          </p>
+          <table class="children sortable" id="id11441">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Widget.html#instate" class="code" data-type="Method">instate</a></td>
+    <td><span>Test the widget's state.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Widget.html#state" class="code" data-type="Method">state</a></td>
+    <td><span>Modify or inquire widget state.</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, master=None, **kw):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.tkinter.ttk.Widget.html#__init__" class="code" data-type="Method">Lib.tkinter.ttk.Widget.__init__</a></div>
+    
+    <div><p class="pre">Construct a Ttk Treeview with parent master.
+
+STANDARD OPTIONS
+
+    class, cursor, style, takefocus, xscrollcommand,
+    yscrollcommand
+
+WIDGET-SPECIFIC OPTIONS
+
+    columns, displaycolumns, height, padding, selectmode, show
+
+ITEM OPTIONS
+
+    text, image, values, open, tags
+
+TAG OPTIONS
+
+    foreground, background, font, image</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.bbox">
+    
+  </a>
+  <a name="bbox">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    bbox(self, item, column=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns the bounding box (relative to the treeview widget's
+window) of the specified item in the form x y width height.
+
+If column is specified, returns the bounding box of that cell.
+If the item is not visible (i.e., if it is a descendant of a
+closed item or is scrolled offscreen), returns an empty string.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.get_children">
+    
+  </a>
+  <a name="get_children">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_children(self, item=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns a tuple of children belonging to item.
+
+If item is not specified, returns root children.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.set_children">
+    
+  </a>
+  <a name="set_children">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_children(self, item, *newchildren):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Replaces item's child with newchildren.
+
+Children present in item that are not present in newchildren
+are detached from tree. No items in newchildren may be an
+ancestor of item.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.column">
+    
+  </a>
+  <a name="column">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    column(self, column, option=None, **kw):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Query or modify the options for the specified column.
+
+If kw is not given, returns a dict of the column option values. If
+option is specified then the value for that option is returned.
+Otherwise, sets the options to the corresponding values.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.delete">
+    
+  </a>
+  <a name="delete">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    delete(self, *items):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Delete all specified items and all their descendants. The root
+item may not be deleted.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.detach">
+    
+  </a>
+  <a name="detach">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    detach(self, *items):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Unlinks all of the specified items from the tree.
+
+The items and all of their descendants are still present, and may
+be reinserted at another point in the tree, but will not be
+displayed. The root item may not be detached.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.exists">
+    
+  </a>
+  <a name="exists">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    exists(self, item):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns True if the specified item is present in the tree,
+False otherwise.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.focus">
+    
+  </a>
+  <a name="focus">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    focus(self, item=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">If item is specified, sets the focus item to item. Otherwise,
+returns the current focus item, or '' if there is none.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.heading">
+    
+  </a>
+  <a name="heading">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    heading(self, column, option=None, **kw):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Query or modify the heading options for the specified column.
+
+If kw is not given, returns a dict of the heading option values. If
+option is specified then the value for that option is returned.
+Otherwise, sets the options to the corresponding values.
+
+Valid options/values are:
+    text: text
+        The text to display in the column heading
+    image: image_name
+        Specifies an image to display to the right of the column
+        heading
+    anchor: anchor
+        Specifies how the heading text should be aligned. One of
+        the standard Tk anchor values
+    command: callback
+        A callback to be invoked when the heading label is
+        pressed.
+
+To configure the tree column heading, call this with column = "#0" </p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.identify">
+    
+  </a>
+  <a name="identify">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    identify(self, component, x, y):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.tkinter.ttk.Widget.html#identify" class="code" data-type="Method">Lib.tkinter.ttk.Widget.identify</a></div>
+    
+    <div><p class="pre">Returns a description of the specified component under the
+point given by x and y, or the empty string if no such component
+is present at that position.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.identify_row">
+    
+  </a>
+  <a name="identify_row">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    identify_row(self, y):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns the item ID of the item at position y.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.identify_column">
+    
+  </a>
+  <a name="identify_column">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    identify_column(self, x):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns the data column identifier of the cell at position x.
+
+The tree column has ID #0.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.identify_region">
+    
+  </a>
+  <a name="identify_region">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    identify_region(self, x, y):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns one of:
+
+heading: Tree heading area.
+separator: Space between two columns headings;
+tree: The tree area.
+cell: A data cell.
+
+* Availability: Tk 8.6</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.identify_element">
+    
+  </a>
+  <a name="identify_element">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    identify_element(self, x, y):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns the element at position x, y.
+
+* Availability: Tk 8.6</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.index">
+    
+  </a>
+  <a name="index">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    index(self, item):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns the integer index of item within its parent's list
+of children.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.insert">
+    
+  </a>
+  <a name="insert">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    insert(self, parent, index, iid=None, **kw):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Creates a new item and return the item identifier of the newly
+created item.
+
+parent is the item ID of the parent item, or the empty string
+to create a new top-level item. index is an integer, or the value
+end, specifying where in the list of parent's children to insert
+the new item. If index is less than or equal to zero, the new node
+is inserted at the beginning, if index is greater than or equal to
+the current number of children, it is inserted at the end. If iid
+is specified, it is used as the item identifier, iid must not
+already exist in the tree. Otherwise, a new unique identifier
+is generated.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.item">
+    
+  </a>
+  <a name="item">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    item(self, item, option=None, **kw):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Query or modify the options for the specified item.
+
+If no options are given, a dict with options/values for the item
+is returned. If option is specified then the value for that option
+is returned. Otherwise, sets the options to the corresponding
+values as given by kw.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.move">
+    
+  </a>
+  <a name="move">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    move(self, item, parent, index):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Moves item to position index in parent's list of children.
+
+It is illegal to move an item under one of its descendants. If
+index is less than or equal to zero, item is moved to the
+beginning, if greater than or equal to the number of children,
+it is moved to the end. If item was detached it is reattached.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.next">
+    
+  </a>
+  <a name="next">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    next(self, item):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns the identifier of item's next sibling, or '' if item
+is the last child of its parent.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.parent">
+    
+  </a>
+  <a name="parent">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parent(self, item):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns the ID of the parent of item, or '' if item is at the
+top level of the hierarchy.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.prev">
+    
+  </a>
+  <a name="prev">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    prev(self, item):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns the identifier of item's previous sibling, or '' if
+item is the first child of its parent.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.see">
+    
+  </a>
+  <a name="see">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    see(self, item):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Ensure that item is visible.
+
+Sets all of item's ancestors open option to True, and scrolls
+the widget if necessary so that item is within the visible
+portion of the tree.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.selection">
+    
+  </a>
+  <a name="selection">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    selection(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns the tuple of selected items.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.tkinter.ttk.Treeview._selection">
+    
+  </a>
+  <a name="_selection">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _selection(self, selop, items):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.selection_set">
+    
+  </a>
+  <a name="selection_set">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    selection_set(self, *items):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">The specified items becomes the new selection.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.selection_add">
+    
+  </a>
+  <a name="selection_add">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    selection_add(self, *items):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Add all of the specified items to the selection.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.selection_remove">
+    
+  </a>
+  <a name="selection_remove">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    selection_remove(self, *items):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Remove all of the specified items from the selection.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.selection_toggle">
+    
+  </a>
+  <a name="selection_toggle">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    selection_toggle(self, *items):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Toggle the selection state of each specified item.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.set">
+    
+  </a>
+  <a name="set">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set(self, item, column=None, value=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Query or set the value of given item.
+
+With one argument, return a dictionary of column/value pairs
+for the specified item. With two arguments, return the current
+value of the specified column. With three arguments, set the
+value of given column in given item to the specified value.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.tag_bind">
+    
+  </a>
+  <a name="tag_bind">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tag_bind(self, tagname, sequence=None, callback=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Bind a callback for the given event sequence to the tag tagname.
+When an event is delivered to an item, the callbacks for each
+of the item's tags option are called.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.tag_configure">
+    
+  </a>
+  <a name="tag_configure">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tag_configure(self, tagname, option=None, **kw):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Query or modify the options for the specified tagname.
+
+If kw is not given, returns a dict of the option settings for tagname.
+If option is specified, returns the value for that option for the
+specified tagname. Otherwise, sets the options to the corresponding
+values for the given tagname.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Treeview.tag_has">
+    
+  </a>
+  <a name="tag_has">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tag_has(self, tagname, item=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">If item is specified, returns 1 or 0 depending on whether the
+specified item has the given tagname. Otherwise, returns a list of
+all items which have the specified tag.
+
+* Availability: Tk 8.6</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.asyncio.streams : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.asyncio.html" class="code" data-type="Package">asyncio</a>.<a href="Lib.asyncio.streams.html" class="code" data-type="Module">streams</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div class="undocumented">Undocumented</div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id382">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.asyncio.streams.html#loop" class="code" data-type="Variable">loop</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.asyncio.streams.html#reader" class="code" data-type="Variable">reader</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.asyncio.streams.html#protocol" class="code" data-type="Variable">protocol</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.asyncio.streams.html#transport" class="code" data-type="Variable">transport</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.asyncio.streams.html#writer" class="code" data-type="Variable">writer</a></td>
+    <td><span>Start a socket server, call back for each client connected.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.streams.html#factory" class="code" data-type="Function">factory</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.asyncio.streams.FlowControlMixin.html" class="code" data-type="Class">FlowControlMixin</a></td>
+    <td><span>Reusable flow control logic for StreamWriter.drain().</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.asyncio.streams.StreamReaderProtocol.html" class="code" data-type="Class">StreamReaderProtocol</a></td>
+    <td><span>Helper class to adapt between Protocol and StreamReader.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.asyncio.streams.StreamWriter.html" class="code" data-type="Class">StreamWriter</a></td>
+    <td><span>Wraps a Transport.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.asyncio.streams.StreamReader.html" class="code" data-type="Class">StreamReader</a></td>
+    <td><span class="undocumented">No class3/12 class variables docstring; , 0/9 instance variables docstring; , 2/11 methods documented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.asyncio.streams.html#_DEFAULT_LIMIT" class="code" data-type="Variable">_DEFAULT_LIMIT</a></td>
+    <td><span>A wrapper for create_connection() returning a (reader, writer) pair.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.asyncio.streams.html#_" class="code" data-type="Variable">_</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable private">
+  
+  <a name="Lib.asyncio.streams._DEFAULT_LIMIT">
+    
+  </a>
+  <a name="_DEFAULT_LIMIT">
+    
+  </a>
+  <div class="functionHeader">
+    _DEFAULT_LIMIT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="pre">A wrapper for create_connection() returning a (reader, writer) pair.
+
+The reader returned is a StreamReader instance; the writer is a
+StreamWriter instance.
+
+The arguments are all the usual arguments to create_connection()
+except protocol_factory; most common are positional host and port,
+with various optional keyword arguments following.
+
+Additional optional keyword arguments are loop (to set the event loop
+instance to use) and limit (to set the buffer limit passed to the
+StreamReader).
+
+(If you want to customize the StreamReader and/or
+StreamReaderProtocol classes, just copy the code -- there's
+really nothing special here except some convenience.)</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.asyncio.streams.loop">
+    
+  </a>
+  <a name="loop">
+    
+  </a>
+  <div class="functionHeader">
+    loop =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.asyncio.streams.reader">
+    
+  </a>
+  <a name="reader">
+    
+  </a>
+  <div class="functionHeader">
+    reader =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.asyncio.streams.protocol">
+    
+  </a>
+  <a name="protocol">
+    
+  </a>
+  <div class="functionHeader">
+    protocol =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.asyncio.streams.transport">
+    
+  </a>
+  <a name="transport">
+    
+  </a>
+  <div class="functionHeader">
+    transport =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.asyncio.streams._">
+    
+  </a>
+  <a name="_">
+    
+  </a>
+  <div class="functionHeader">
+    _ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.asyncio.streams.writer">
+    
+  </a>
+  <a name="writer">
+    
+  </a>
+  <div class="functionHeader">
+    writer =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="pre">Start a socket server, call back for each client connected.
+
+The first parameter, `client_connected_cb`, takes two parameters:
+client_reader, client_writer.  client_reader is a StreamReader
+object, while client_writer is a StreamWriter object.  This
+parameter can either be a plain callback function or a coroutine;
+if it is a coroutine, it will be automatically converted into a
+Task.
+
+The rest of the arguments are all the usual arguments to
+loop.create_server() except protocol_factory; most common are
+positional host and port, with various optional keyword arguments
+following.  The return value is the same as loop.create_server().
+
+Additional optional keyword arguments are loop (to set the event loop
+instance to use) and limit (to set the buffer limit passed to the
+StreamReader).
+
+The return value is the same as loop.create_server(), i.e. a
+Server object which can be used to stop the service.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.asyncio.streams.factory">
+    
+  </a>
+  <a name="factory">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    factory():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

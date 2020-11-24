@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.bdb : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.bdb.html" class="code" data-type="Module">bdb</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Debugger basics</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id455">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.bdb.html#GENERATOR_AND_COROUTINE_FLAGS" class="code" data-type="Variable">GENERATOR_AND_COROUTINE_FLAGS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.bdb.BdbQuit.html" class="code" data-type="Class">BdbQuit</a></td>
+    <td><span>Exception to give up completely.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.bdb.Bdb.html" class="code" data-type="Class">Bdb</a></td>
+    <td><span>Generic Python debugger base class.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.bdb.html#set_trace" class="code" data-type="Function">set_trace</a></td>
+    <td><span>Start debugging with a Bdb instance from the caller's frame.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.bdb.Breakpoint.html" class="code" data-type="Class">Breakpoint</a></td>
+    <td><span>Breakpoint class.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.bdb.html#checkfuncname" class="code" data-type="Function">checkfuncname</a></td>
+    <td><span>Return True if break should happen here.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.bdb.html#effective" class="code" data-type="Function">effective</a></td>
+    <td><span>Determine which breakpoint for this file:line is to be acted upon.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.bdb.Tdb.html" class="code" data-type="Class">Tdb</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.bdb.html#foo" class="code" data-type="Function">foo</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.bdb.html#bar" class="code" data-type="Function">bar</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.bdb.html#test" class="code" data-type="Function">test</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.bdb.GENERATOR_AND_COROUTINE_FLAGS">
+    
+  </a>
+  <a name="GENERATOR_AND_COROUTINE_FLAGS">
+    
+  </a>
+  <div class="functionHeader">
+    GENERATOR_AND_COROUTINE_FLAGS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.bdb.set_trace">
+    
+  </a>
+  <a name="set_trace">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_trace():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Start debugging with a Bdb instance from the caller's frame.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.bdb.checkfuncname">
+    
+  </a>
+  <a name="checkfuncname">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    checkfuncname(b, frame):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True if break should happen here.
+
+Whether a break should happen depends on the way that b (the breakpoint)
+was set.  If it was set via line number, check if b.line is the same as
+the one in the frame.  If it was set via function name, check if this is
+the right function and if it is on the first executable line.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.bdb.effective">
+    
+  </a>
+  <a name="effective">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    effective(file, line, frame):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Determine which breakpoint for this file:line is to be acted upon.
+
+Called only if we know there is a breakpoint at this location.  Return
+the breakpoint that was triggered and a boolean that indicates if it is
+ok to delete a temporary breakpoint.  Return (None, None) if there is no
+matching breakpoint.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.bdb.foo">
+    
+  </a>
+  <a name="foo">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    foo(n):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.bdb.bar">
+    
+  </a>
+  <a name="bar">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    bar(a):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.bdb.test">
+    
+  </a>
+  <a name="test">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

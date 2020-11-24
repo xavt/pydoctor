@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.wsgiref.handlers : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.wsgiref.html" class="code" data-type="Package">wsgiref</a>.<a href="Lib.wsgiref.handlers.html" class="code" data-type="Module">handlers</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Base classes for server/gateway implementations</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id11985">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.wsgiref.handlers.html#format_date_time" class="code" data-type="Function">format_date_time</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.wsgiref.handlers.html#read_environ" class="code" data-type="Function">read_environ</a></td>
+    <td><span>Read environment, fixing HTTP variables</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html" class="code" data-type="Class">BaseHandler</a></td>
+    <td><span>Manage the invocation of a WSGI application</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.wsgiref.handlers.SimpleHandler.html" class="code" data-type="Class">SimpleHandler</a></td>
+    <td><span>Handler that's just initialized with streams, environment, etc.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.wsgiref.handlers.BaseCGIHandler.html" class="code" data-type="Class">BaseCGIHandler</a></td>
+    <td><span>CGI-like systems using input/output/error streams and environ mapping</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.wsgiref.handlers.CGIHandler.html" class="code" data-type="Class">CGIHandler</a></td>
+    <td><span>CGI-based invocation via sys.stdin/stdout/stderr and os.environ</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.wsgiref.handlers.IISCGIHandler.html" class="code" data-type="Class">IISCGIHandler</a></td>
+    <td><span>CGI-based invocation with workaround for IIS path bug</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.wsgiref.handlers.html#_weekdayname" class="code" data-type="Variable">_weekdayname</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.wsgiref.handlers.html#_monthname" class="code" data-type="Variable">_monthname</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.wsgiref.handlers.html#_is_request" class="code" data-type="Variable">_is_request</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.wsgiref.handlers.html#_needs_transcode" class="code" data-type="Function">_needs_transcode</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable private">
+  
+  <a name="Lib.wsgiref.handlers._weekdayname">
+    
+  </a>
+  <a name="_weekdayname">
+    
+  </a>
+  <div class="functionHeader">
+    _weekdayname =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[str]</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.wsgiref.handlers._monthname">
+    
+  </a>
+  <a name="_monthname">
+    
+  </a>
+  <div class="functionHeader">
+    _monthname =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.wsgiref.handlers.format_date_time">
+    
+  </a>
+  <a name="format_date_time">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    format_date_time(timestamp):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.wsgiref.handlers._is_request">
+    
+  </a>
+  <a name="_is_request">
+    
+  </a>
+  <div class="functionHeader">
+    _is_request =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.wsgiref.handlers._needs_transcode">
+    
+  </a>
+  <a name="_needs_transcode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _needs_transcode(k):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.wsgiref.handlers.read_environ">
+    
+  </a>
+  <a name="read_environ">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    read_environ():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Read environment, fixing HTTP variables</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

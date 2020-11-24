@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.xml.dom.domreg : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.xml.html" class="code" data-type="Package">xml</a>.<a href="Lib.xml.dom.html" class="code" data-type="Package">dom</a>.<a href="Lib.xml.dom.domreg.html" class="code" data-type="Module">domreg</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Registration facilities for DOM. This module should not be used
+directly. Instead, the functions getDOMImplementation and
+registerDOMImplementation should be imported from xml.dom.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id12043">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xml.dom.domreg.html#well_known_implementations" class="code" data-type="Variable">well_known_implementations</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xml.dom.domreg.html#registered" class="code" data-type="Variable">registered</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.dom.domreg.html#registerDOMImplementation" class="code" data-type="Function">registerDOMImplementation</a></td>
+    <td><span>registerDOMImplementation(name, factory)</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.dom.domreg.html#getDOMImplementation" class="code" data-type="Function">getDOMImplementation</a></td>
+    <td><span>getDOMImplementation(name = None, features = ()) -&gt; DOM implementation.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.dom.domreg.html#_good_enough" class="code" data-type="Function">_good_enough</a></td>
+    <td><span>_good_enough(dom, features) -&gt; Return 1 if the dom offers the features</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.dom.domreg.html#_parse_feature_string" class="code" data-type="Function">_parse_feature_string</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.xml.dom.domreg.well_known_implementations">
+    
+  </a>
+  <a name="well_known_implementations">
+    
+  </a>
+  <div class="functionHeader">
+    well_known_implementations =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict[str, str]</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.xml.dom.domreg.registered">
+    
+  </a>
+  <a name="registered">
+    
+  </a>
+  <div class="functionHeader">
+    registered =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xml.dom.domreg.registerDOMImplementation">
+    
+  </a>
+  <a name="registerDOMImplementation">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    registerDOMImplementation(name, factory):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">registerDOMImplementation(name, factory)
+
+Register the factory function with the name. The factory function
+should return an object which implements the DOMImplementation
+interface. The factory function can either return the same object,
+or a new one (e.g. if that implementation supports some
+customization).</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xml.dom.domreg._good_enough">
+    
+  </a>
+  <a name="_good_enough">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _good_enough(dom, features):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">_good_enough(dom, features) -&gt; Return 1 if the dom offers the features</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xml.dom.domreg.getDOMImplementation">
+    
+  </a>
+  <a name="getDOMImplementation">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getDOMImplementation(name=None, features=()):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">getDOMImplementation(name = None, features = ()) -&gt; DOM implementation.
+
+Return a suitable DOM implementation. The name is either
+well-known, the module name of a DOM implementation, or None. If
+it is not None, imports the corresponding module and returns
+DOMImplementation object if the import succeeds.
+
+If name is not given, consider the available implementations to
+find one with the required feature set. If no implementation can
+be found, raise an ImportError. The features list must be a sequence
+of (feature, version) pairs which are passed to hasFeature.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xml.dom.domreg._parse_feature_string">
+    
+  </a>
+  <a name="_parse_feature_string">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _parse_feature_string(s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

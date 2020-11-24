@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.ssl.SSLObject : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.ssl.html" class="code" data-type="Module">ssl</a>.<a href="Lib.ssl.SSLObject.html" class="code" data-type="Class">SSLObject</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.ssl.SSLObject:</code></p>
+        <p><a href="classIndex.html#Lib.ssl.SSLObject">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">This class implements an interface on top of a low-level SSL object as
+implemented by OpenSSL. This object captures the state of an SSL connection
+but does not provide any network IO itself. IO needs to be performed
+through separate "BIO" objects which are OpenSSL's IO abstraction layer.
+
+This class does not have a public constructor. Instances are returned by
+``SSLContext.wrap_bio``. This class is typically used by framework authors
+that want to implement asynchronous IO for SSL through memory buffers.
+
+When compared to ``SSLSocket``, this object lacks the following features:
+
+ * Any form of network IO, including methods such as ``recv`` and ``send``.
+ * The ``do_handshake_on_connect`` and ``suppress_ragged_eofs`` machinery.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3661">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ssl.SSLObject.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ssl.SSLObject.html#context" class="code" data-type="Method">context</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ssl.SSLObject.html#session" class="code" data-type="Method">session</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ssl.SSLObject.html#session_reused" class="code" data-type="Method">session_reused</a></td>
+    <td><span>Was the client session reused during handshake</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ssl.SSLObject.html#server_side" class="code" data-type="Method">server_side</a></td>
+    <td><span>Whether this is a server-side socket.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ssl.SSLObject.html#server_hostname" class="code" data-type="Method">server_hostname</a></td>
+    <td><span>The currently set server hostname (for SNI), or ``None`` if no server hostname is set.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ssl.SSLObject.html#read" class="code" data-type="Method">read</a></td>
+    <td><span>Read up to 'len' bytes from the SSL object and return them.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ssl.SSLObject.html#write" class="code" data-type="Method">write</a></td>
+    <td><span>Write 'data' to the SSL object and return the number of bytes written.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ssl.SSLObject.html#getpeercert" class="code" data-type="Method">getpeercert</a></td>
+    <td><span>Returns a formatted version of the data in the certificate provided by the other end of the SSL channel.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ssl.SSLObject.html#selected_npn_protocol" class="code" data-type="Method">selected_npn_protocol</a></td>
+    <td><span>Return the currently selected NPN protocol as a string, or ``None`` if a next protocol was not negotiated or if NPN is not supported by one of the peers.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ssl.SSLObject.html#selected_alpn_protocol" class="code" data-type="Method">selected_alpn_protocol</a></td>
+    <td><span>Return the currently selected ALPN protocol as a string, or ``None`` if a next protocol was not negotiated or if ALPN is not supported by one of the peers.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ssl.SSLObject.html#cipher" class="code" data-type="Method">cipher</a></td>
+    <td><span>Return the currently selected cipher as a 3-tuple ``(name, ssl_version, secret_bits)``.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ssl.SSLObject.html#shared_ciphers" class="code" data-type="Method">shared_ciphers</a></td>
+    <td><span>Return a list of ciphers shared by the client during the handshake or None if this is not a valid server connection.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ssl.SSLObject.html#compression" class="code" data-type="Method">compression</a></td>
+    <td><span>Return the current compression algorithm in use, or ``None`` if compression was not negotiated or not supported by one of the peers.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ssl.SSLObject.html#pending" class="code" data-type="Method">pending</a></td>
+    <td><span>Return the number of bytes that can be read immediately.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ssl.SSLObject.html#do_handshake" class="code" data-type="Method">do_handshake</a></td>
+    <td><span>Start the SSL/TLS handshake.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ssl.SSLObject.html#unwrap" class="code" data-type="Method">unwrap</a></td>
+    <td><span>Start the SSL shutdown handshake.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ssl.SSLObject.html#get_channel_binding" class="code" data-type="Method">get_channel_binding</a></td>
+    <td><span>Get channel binding data for current connection.  Raise ValueError if the requested `cb_type` is not supported.  Return bytes of the data or None if the data is not available (e.g. before the handshake).</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ssl.SSLObject.html#version" class="code" data-type="Method">version</a></td>
+    <td><span>Return a string identifying the protocol version used by the current SSL channel.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ssl.SSLObject.html#verify_client_post_handshake" class="code" data-type="Method">verify_client_post_handshake</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.ssl.SSLObject.html#_create" class="code" data-type="Class Method">_create</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.ssl.SSLObject.html#_sslobj" class="code" data-type="Instance Variable">_sslobj</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.ssl.SSLObject.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassmethod private">
+  
+  <a name="Lib.ssl.SSLObject._create">
+    
+  </a>
+  <a name="_create">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    _create(cls, incoming, outgoing, server_side=(False), server_hostname=None, session=None, context=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.ssl.SSLObject._sslobj">
+    
+  </a>
+  <a name="_sslobj">
+    
+  </a>
+  <div class="functionHeader">
+    _sslobj =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ssl.SSLObject.context">
+    
+  </a>
+  <a name="context">
+    
+  </a>
+  <div class="functionHeader">
+    @context.setter<br />
+    def
+    context(self, ctx):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ssl.SSLObject.session">
+    
+  </a>
+  <a name="session">
+    
+  </a>
+  <div class="functionHeader">
+    @session.setter<br />
+    def
+    session(self, session):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ssl.SSLObject.session_reused">
+    
+  </a>
+  <a name="session_reused">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    session_reused(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Was the client session reused during handshake</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ssl.SSLObject.server_side">
+    
+  </a>
+  <a name="server_side">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    server_side(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Whether this is a server-side socket.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ssl.SSLObject.server_hostname">
+    
+  </a>
+  <a name="server_hostname">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    server_hostname(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">The currently set server hostname (for SNI), or ``None`` if no
+server hostname is set.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ssl.SSLObject.read">
+    
+  </a>
+  <a name="read">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    read(self, len=1024, buffer=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Read up to 'len' bytes from the SSL object and return them.
+
+If 'buffer' is provided, read into this buffer and return the number of
+bytes read.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ssl.SSLObject.write">
+    
+  </a>
+  <a name="write">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    write(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Write 'data' to the SSL object and return the number of bytes
+written.
+
+The 'data' argument must support the buffer interface.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ssl.SSLObject.getpeercert">
+    
+  </a>
+  <a name="getpeercert">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getpeercert(self, binary_form=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns a formatted version of the data in the certificate provided
+by the other end of the SSL channel.
+
+Return None if no certificate was provided, {} if a certificate was
+provided, but not validated.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ssl.SSLObject.selected_npn_protocol">
+    
+  </a>
+  <a name="selected_npn_protocol">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    selected_npn_protocol(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the currently selected NPN protocol as a string, or ``None``
+if a next protocol was not negotiated or if NPN is not supported by one
+of the peers.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ssl.SSLObject.selected_alpn_protocol">
+    
+  </a>
+  <a name="selected_alpn_protocol">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    selected_alpn_protocol(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the currently selected ALPN protocol as a string, or ``None``
+if a next protocol was not negotiated or if ALPN is not supported by one
+of the peers.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ssl.SSLObject.cipher">
+    
+  </a>
+  <a name="cipher">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    cipher(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the currently selected cipher as a 3-tuple ``(name,
+ssl_version, secret_bits)``.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ssl.SSLObject.shared_ciphers">
+    
+  </a>
+  <a name="shared_ciphers">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    shared_ciphers(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a list of ciphers shared by the client during the handshake or
+None if this is not a valid server connection.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ssl.SSLObject.compression">
+    
+  </a>
+  <a name="compression">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    compression(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the current compression algorithm in use, or ``None`` if
+compression was not negotiated or not supported by one of the peers.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ssl.SSLObject.pending">
+    
+  </a>
+  <a name="pending">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    pending(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the number of bytes that can be read immediately.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ssl.SSLObject.do_handshake">
+    
+  </a>
+  <a name="do_handshake">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    do_handshake(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Start the SSL/TLS handshake.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ssl.SSLObject.unwrap">
+    
+  </a>
+  <a name="unwrap">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    unwrap(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Start the SSL shutdown handshake.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ssl.SSLObject.get_channel_binding">
+    
+  </a>
+  <a name="get_channel_binding">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_channel_binding(self, cb_type="""tls-unique"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get channel binding data for current connection.  Raise ValueError
+if the requested `cb_type` is not supported.  Return bytes of the data
+or None if the data is not available (e.g. before the handshake).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ssl.SSLObject.version">
+    
+  </a>
+  <a name="version">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    version(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a string identifying the protocol version used by the
+current SSL channel. </p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ssl.SSLObject.verify_client_post_handshake">
+    
+  </a>
+  <a name="verify_client_post_handshake">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    verify_client_post_handshake(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

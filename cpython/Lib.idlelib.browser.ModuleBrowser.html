@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.idlelib.browser.ModuleBrowser : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.idlelib.html" class="code" data-type="Package">idlelib</a>.<a href="Lib.idlelib.browser.html" class="code" data-type="Module">browser</a>.<a href="Lib.idlelib.browser.ModuleBrowser.html" class="code" data-type="Class">ModuleBrowser</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.idlelib.browser.ModuleBrowser:</code></p>
+        <p><a href="classIndex.html#Lib.idlelib.browser.ModuleBrowser">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Browse module classes and functions in IDLE.
+    </p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2044">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.browser.ModuleBrowser.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Create a window for browsing a module's structure.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.browser.ModuleBrowser.html#master" class="code" data-type="Instance Variable">master</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.browser.ModuleBrowser.html#path" class="code" data-type="Instance Variable">path</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.browser.ModuleBrowser.html#close" class="code" data-type="Method">close</a></td>
+    <td><span>Dismiss the window and the tree nodes.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.browser.ModuleBrowser.html#init" class="code" data-type="Method">init</a></td>
+    <td><span>Create browser tkinter widgets, including the tree.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.browser.ModuleBrowser.html#top" class="code" data-type="Instance Variable">top</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.browser.ModuleBrowser.html#node" class="code" data-type="Instance Variable">node</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.browser.ModuleBrowser.html#settitle" class="code" data-type="Method">settitle</a></td>
+    <td><span>Set the window title.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.browser.ModuleBrowser.html#rootnode" class="code" data-type="Method">rootnode</a></td>
+    <td><span>Return a ModuleBrowserTreeItem as the root of the tree.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.browser.ModuleBrowser.html#_htest" class="code" data-type="Instance Variable">_htest</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.browser.ModuleBrowser.html#_utest" class="code" data-type="Instance Variable">_utest</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.idlelib.browser.ModuleBrowser.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, master, path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create a window for browsing a module's structure.
+
+Args:
+    master: parent for widgets.
+    path: full path of file to browse.
+    _htest - bool; change box location when running htest.
+    -utest - bool; suppress contents when running unittest.
+
+Global variables:
+    file_open: Function used for opening a file.
+
+Instance variables:
+    name: Module name.
+    file: Full path and module with .py extension.  Used in
+        creating ModuleBrowserTreeItem as the rootnode for
+        the tree and subsequently in the children.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.browser.ModuleBrowser.master">
+    
+  </a>
+  <a name="master">
+    
+  </a>
+  <div class="functionHeader">
+    master =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.browser.ModuleBrowser.path">
+    
+  </a>
+  <a name="path">
+    
+  </a>
+  <div class="functionHeader">
+    path =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.idlelib.browser.ModuleBrowser._htest">
+    
+  </a>
+  <a name="_htest">
+    
+  </a>
+  <div class="functionHeader">
+    _htest =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.idlelib.browser.ModuleBrowser._utest">
+    
+  </a>
+  <a name="_utest">
+    
+  </a>
+  <div class="functionHeader">
+    _utest =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.browser.ModuleBrowser.close">
+    
+  </a>
+  <a name="close">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    close(self, event=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Dismiss the window and the tree nodes.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.browser.ModuleBrowser.init">
+    
+  </a>
+  <a name="init">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    init(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create browser tkinter widgets, including the tree.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.browser.ModuleBrowser.top">
+    
+  </a>
+  <a name="top">
+    
+  </a>
+  <div class="functionHeader">
+    top =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.browser.ModuleBrowser.node">
+    
+  </a>
+  <a name="node">
+    
+  </a>
+  <div class="functionHeader">
+    node =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.browser.ModuleBrowser.settitle">
+    
+  </a>
+  <a name="settitle">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    settitle(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set the window title.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.browser.ModuleBrowser.rootnode">
+    
+  </a>
+  <a name="rootnode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    rootnode(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a ModuleBrowserTreeItem as the root of the tree.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

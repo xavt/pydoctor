@@ -1,0 +1,1508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.pydoc : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.pydoc.html" class="code" data-type="Module">pydoc</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Generate Python documentation in HTML or text for interactive use.
+
+At the Python interactive prompt, calling help(thing) on a Python object
+documents the object, and calling help() starts up an interactive
+help session.
+
+Or, at the shell command line outside of Python:
+
+Run "pydoc &lt;name&gt;" to show documentation on something.  &lt;name&gt; may be
+the name of a function, module, package, or a dotted reference to a
+class or function within a module or module in a package.  If the
+argument contains a path segment delimiter (e.g. slash on Unix,
+backslash on Windows) it is treated as the path to a Python source file.
+
+Run "pydoc -k &lt;keyword&gt;" to search for a keyword in the synopsis lines
+of all available modules.
+
+Run "pydoc -n &lt;hostname&gt;" to start an HTTP server with the given
+hostname (default: localhost) on the local machine.
+
+Run "pydoc -p &lt;port&gt;" to start an HTTP server on the given port on the
+local machine.  Port number 0 can be used to get an arbitrary unused port.
+
+Run "pydoc -b" to start an HTTP server on an arbitrary unused port and
+open a Web browser to interactively browse documentation.  Combine with
+the -n and -p options to control the hostname and port used.
+
+Run "pydoc -w &lt;name&gt;" to write out the HTML documentation for a module
+to a file named "&lt;name&gt;.html".
+
+Module docs for core modules are assumed to be in
+
+    https://docs.python.org/X.Y/library/
+
+This can be overridden by setting the PYTHONDOCS environment variable
+to a different URL or to a local directory containing the Library
+Reference Manual pages.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3431">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pydoc.html#__author__" class="code" data-type="Variable">__author__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pydoc.html#__date__" class="code" data-type="Variable">__date__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pydoc.html#__credits__" class="code" data-type="Variable">__credits__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#pathdirs" class="code" data-type="Function">pathdirs</a></td>
+    <td><span>Convert sys.path into a list of absolute, existing, unique paths.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#getdoc" class="code" data-type="Function">getdoc</a></td>
+    <td><span>Get the doc string or comments for an object.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#splitdoc" class="code" data-type="Function">splitdoc</a></td>
+    <td><span>Split a doc string into a synopsis line (if any) and the rest.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#classname" class="code" data-type="Function">classname</a></td>
+    <td><span>Get a class name and qualify it with a module name if necessary.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#isdata" class="code" data-type="Function">isdata</a></td>
+    <td><span>Check if an object is of a type that probably means it's data.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#replace" class="code" data-type="Function">replace</a></td>
+    <td><span>Do a series of global replacements on a string.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#cram" class="code" data-type="Function">cram</a></td>
+    <td><span>Omit part of a string if needed to make it fit in a maximum length.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#stripid" class="code" data-type="Function">stripid</a></td>
+    <td><span>Remove the hexadecimal id from a Python object representation.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#allmethods" class="code" data-type="Function">allmethods</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#visiblename" class="code" data-type="Function">visiblename</a></td>
+    <td><span>Decide whether to show documentation on a variable.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#classify_class_attrs" class="code" data-type="Function">classify_class_attrs</a></td>
+    <td><span>Wrap inspect.classify_class_attrs, with fixup for data descriptors.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#sort_attributes" class="code" data-type="Function">sort_attributes</a></td>
+    <td><span>Sort the attrs list in-place by _fields and then alphabetically by name</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#ispackage" class="code" data-type="Function">ispackage</a></td>
+    <td><span>Guess whether a path refers to a package directory.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#source_synopsis" class="code" data-type="Function">source_synopsis</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#synopsis" class="code" data-type="Function">synopsis</a></td>
+    <td><span>Get the one-line summary out of a module file.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.pydoc.ErrorDuringImport.html" class="code" data-type="Class">ErrorDuringImport</a></td>
+    <td><span>Errors that occurred while trying to import something to document it.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#importfile" class="code" data-type="Function">importfile</a></td>
+    <td><span>Import a Python source file or compiled file given its path.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#safeimport" class="code" data-type="Function">safeimport</a></td>
+    <td><span>Import a module; handle errors; return None if the module isn't found.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.pydoc.Doc.html" class="code" data-type="Class">Doc</a></td>
+    <td><span class="undocumented">No class0/1 class variables docstring; , 3/3 methods documented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.pydoc.HTMLRepr.html" class="code" data-type="Class">HTMLRepr</a></td>
+    <td><span>Class for safely making an HTML representation of a Python object.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.pydoc.HTMLDoc.html" class="code" data-type="Class">HTMLDoc</a></td>
+    <td><span>Formatter class for HTML documentation.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.pydoc.TextRepr.html" class="code" data-type="Class">TextRepr</a></td>
+    <td><span>Class for safely making a text representation of a Python object.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.pydoc.TextDoc.html" class="code" data-type="Class">TextDoc</a></td>
+    <td><span>Formatter class for text documentation.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#pager" class="code" data-type="Function">pager</a></td>
+    <td><span>The first time this is called, determine what kind of pager to use.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#getpager" class="code" data-type="Function">getpager</a></td>
+    <td><span>Decide what method to use for paging through text.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#plain" class="code" data-type="Function">plain</a></td>
+    <td><span>Remove boldface formatting from text.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#pipepager" class="code" data-type="Function">pipepager</a></td>
+    <td><span>Page through text by feeding it to another program.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#tempfilepager" class="code" data-type="Function">tempfilepager</a></td>
+    <td><span>Page through text by invoking a program on a temporary file.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#ttypager" class="code" data-type="Function">ttypager</a></td>
+    <td><span>Page through text on a text terminal.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#plainpager" class="code" data-type="Function">plainpager</a></td>
+    <td><span>Simply print unformatted text.  This is the ultimate fallback.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#describe" class="code" data-type="Function">describe</a></td>
+    <td><span>Produce a short description of the given thing.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#locate" class="code" data-type="Function">locate</a></td>
+    <td><span>Locate an object by name or dotted path, importing as necessary.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pydoc.html#text" class="code" data-type="Variable">text</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pydoc.html#plaintext" class="code" data-type="Variable">plaintext</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pydoc.html#html" class="code" data-type="Variable">html</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#resolve" class="code" data-type="Function">resolve</a></td>
+    <td><span>Given an object or a path to an object, get the object and its name.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#render_doc" class="code" data-type="Function">render_doc</a></td>
+    <td><span>Render text documentation, given an object or a path to an object.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#doc" class="code" data-type="Function">doc</a></td>
+    <td><span>Display text documentation, given an object or a path to an object.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#writedoc" class="code" data-type="Function">writedoc</a></td>
+    <td><span>Write HTML documentation to a file in the current directory.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#writedocs" class="code" data-type="Function">writedocs</a></td>
+    <td><span>Write out HTML documentation for all modules in a directory tree.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.pydoc.Helper.html" class="code" data-type="Class">Helper</a></td>
+    <td><span class="undocumented">No class0/6 class variables docstring; , 0/2 instance variables docstring; , 2/17 methods documented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pydoc.html#help" class="code" data-type="Variable">help</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.pydoc.ModuleScanner.html" class="code" data-type="Class">ModuleScanner</a></td>
+    <td><span>An interruptible scanner that searches module synopses.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#apropos" class="code" data-type="Function">apropos</a></td>
+    <td><span>Print all the one-line module summaries that contain a substring.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#browse" class="code" data-type="Function">browse</a></td>
+    <td><span>Start the enhanced pydoc Web server and open a Web browser.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#ispath" class="code" data-type="Function">ispath</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#cli" class="code" data-type="Function">cli</a></td>
+    <td><span>Command-line interface (looks at sys.argv to decide what to do).</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#_findclass" class="code" data-type="Function">_findclass</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#_finddoc" class="code" data-type="Function">_finddoc</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#_getowndoc" class="code" data-type="Function">_getowndoc</a></td>
+    <td><span>Get the documentation string for an object if it is not inherited from its class.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#_getdoc" class="code" data-type="Function">_getdoc</a></td>
+    <td><span>Get the documentation string for an object.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pydoc.html#_re_stripid" class="code" data-type="Variable">_re_stripid</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#_is_bound_method" class="code" data-type="Function">_is_bound_method</a></td>
+    <td><span>Returns True if fn is a bound method, regardless of whether fn was implemented in Python or in C.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#_split_list" class="code" data-type="Function">_split_list</a></td>
+    <td><span>Split sequence s via predicate, and return pair ([true], [false]).</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.pydoc._PlainTextDoc.html" class="code" data-type="Class">_PlainTextDoc</a></td>
+    <td><span>Subclass of TextDoc which overrides string styling</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#_escape_stdout" class="code" data-type="Function">_escape_stdout</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#_start_server" class="code" data-type="Function">_start_server</a></td>
+    <td><span>Start an HTTP server thread on a specific port.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#_url_handler" class="code" data-type="Function">_url_handler</a></td>
+    <td><span>The pydoc url handler for use with the pydoc server.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#_get_revised_path" class="code" data-type="Function">_get_revised_path</a></td>
+    <td><span>Ensures current directory is on returned path, and argv0 directory is not</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pydoc.html#_adjust_cli_sys_path" class="code" data-type="Function">_adjust_cli_sys_path</a></td>
+    <td><span>Ensures current directory is on sys.path, and __main__ directory is not.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.pydoc.__author__">
+    
+  </a>
+  <a name="__author__">
+    
+  </a>
+  <div class="functionHeader">
+    __author__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pydoc.__date__">
+    
+  </a>
+  <a name="__date__">
+    
+  </a>
+  <div class="functionHeader">
+    __date__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pydoc.__credits__">
+    
+  </a>
+  <a name="__credits__">
+    
+  </a>
+  <div class="functionHeader">
+    __credits__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.pathdirs">
+    
+  </a>
+  <a name="pathdirs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    pathdirs():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convert sys.path into a list of absolute, existing, unique paths.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pydoc._findclass">
+    
+  </a>
+  <a name="_findclass">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _findclass(func):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pydoc._finddoc">
+    
+  </a>
+  <a name="_finddoc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _finddoc(obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pydoc._getowndoc">
+    
+  </a>
+  <a name="_getowndoc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _getowndoc(obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get the documentation string for an object if it is not
+inherited from its class.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pydoc._getdoc">
+    
+  </a>
+  <a name="_getdoc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _getdoc(object):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get the documentation string for an object.
+
+All tabs are expanded to spaces.  To clean up docstrings that are
+indented to line up with blocks of code, any whitespace than can be
+uniformly removed from the second line onwards is removed.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.getdoc">
+    
+  </a>
+  <a name="getdoc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getdoc(object):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get the doc string or comments for an object.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.splitdoc">
+    
+  </a>
+  <a name="splitdoc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    splitdoc(doc):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Split a doc string into a synopsis line (if any) and the rest.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.classname">
+    
+  </a>
+  <a name="classname">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    classname(object, modname):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get a class name and qualify it with a module name if necessary.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.isdata">
+    
+  </a>
+  <a name="isdata">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    isdata(object):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Check if an object is of a type that probably means it's data.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.replace">
+    
+  </a>
+  <a name="replace">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    replace(text, *pairs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Do a series of global replacements on a string.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.cram">
+    
+  </a>
+  <a name="cram">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    cram(text, maxlen):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Omit part of a string if needed to make it fit in a maximum length.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.pydoc._re_stripid">
+    
+  </a>
+  <a name="_re_stripid">
+    
+  </a>
+  <div class="functionHeader">
+    _re_stripid =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.stripid">
+    
+  </a>
+  <a name="stripid">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    stripid(text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Remove the hexadecimal id from a Python object representation.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pydoc._is_bound_method">
+    
+  </a>
+  <a name="_is_bound_method">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _is_bound_method(fn):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns True if fn is a bound method, regardless of whether
+fn was implemented in Python or in C.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.allmethods">
+    
+  </a>
+  <a name="allmethods">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    allmethods(cl):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pydoc._split_list">
+    
+  </a>
+  <a name="_split_list">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _split_list(s, predicate):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Split sequence s via predicate, and return pair ([true], [false]).
+
+The return value is a 2-tuple of lists,
+    ([x for x in s if predicate(x)],
+     [x for x in s if not predicate(x)])</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.visiblename">
+    
+  </a>
+  <a name="visiblename">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visiblename(name, all=None, obj=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Decide whether to show documentation on a variable.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.classify_class_attrs">
+    
+  </a>
+  <a name="classify_class_attrs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    classify_class_attrs(object):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Wrap inspect.classify_class_attrs, with fixup for data descriptors.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.sort_attributes">
+    
+  </a>
+  <a name="sort_attributes">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    sort_attributes(attrs, object):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Sort the attrs list in-place by _fields and then alphabetically by name</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.ispackage">
+    
+  </a>
+  <a name="ispackage">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ispackage(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Guess whether a path refers to a package directory.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.source_synopsis">
+    
+  </a>
+  <a name="source_synopsis">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    source_synopsis(file):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.synopsis">
+    
+  </a>
+  <a name="synopsis">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    synopsis(filename, cache={}):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get the one-line summary out of a module file.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.importfile">
+    
+  </a>
+  <a name="importfile">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    importfile(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Import a Python source file or compiled file given its path.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.safeimport">
+    
+  </a>
+  <a name="safeimport">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    safeimport(path, forceload=0, cache={}):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Import a module; handle errors; return None if the module isn't found.
+
+If the module *is* found but an exception occurs, it's wrapped in an
+ErrorDuringImport exception and reraised.  Unlike __import__, if a
+package path is specified, the module at the end of the path is returned,
+not the package at the beginning.  If the optional 'forceload' argument
+is 1, we reload the module from disk (unless it's a dynamic extension).</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.pager">
+    
+  </a>
+  <a name="pager">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    pager(text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">The first time this is called, determine what kind of pager to use.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.getpager">
+    
+  </a>
+  <a name="getpager">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getpager():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Decide what method to use for paging through text.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.plain">
+    
+  </a>
+  <a name="plain">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    plain(text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Remove boldface formatting from text.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.pipepager">
+    
+  </a>
+  <a name="pipepager">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    pipepager(text, cmd):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Page through text by feeding it to another program.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.tempfilepager">
+    
+  </a>
+  <a name="tempfilepager">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tempfilepager(text, cmd):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Page through text by invoking a program on a temporary file.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pydoc._escape_stdout">
+    
+  </a>
+  <a name="_escape_stdout">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _escape_stdout(text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.ttypager">
+    
+  </a>
+  <a name="ttypager">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ttypager(text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Page through text on a text terminal.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.plainpager">
+    
+  </a>
+  <a name="plainpager">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    plainpager(text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Simply print unformatted text.  This is the ultimate fallback.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.describe">
+    
+  </a>
+  <a name="describe">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    describe(thing):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Produce a short description of the given thing.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.locate">
+    
+  </a>
+  <a name="locate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    locate(path, forceload=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Locate an object by name or dotted path, importing as necessary.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pydoc.text">
+    
+  </a>
+  <a name="text">
+    
+  </a>
+  <div class="functionHeader">
+    text =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pydoc.plaintext">
+    
+  </a>
+  <a name="plaintext">
+    
+  </a>
+  <div class="functionHeader">
+    plaintext =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pydoc.html">
+    
+  </a>
+  <a name="html">
+    
+  </a>
+  <div class="functionHeader">
+    html =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.resolve">
+    
+  </a>
+  <a name="resolve">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    resolve(thing, forceload=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Given an object or a path to an object, get the object and its name.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.render_doc">
+    
+  </a>
+  <a name="render_doc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    render_doc(thing, title="""Python Library Documentation: %s""", forceload=0, renderer=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Render text documentation, given an object or a path to an object.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.doc">
+    
+  </a>
+  <a name="doc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    doc(thing, title="""Python Library Documentation: %s""", forceload=0, output=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Display text documentation, given an object or a path to an object.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.writedoc">
+    
+  </a>
+  <a name="writedoc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    writedoc(thing, forceload=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Write HTML documentation to a file in the current directory.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.writedocs">
+    
+  </a>
+  <a name="writedocs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    writedocs(dir, pkgpath="""""", done=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Write out HTML documentation for all modules in a directory tree.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pydoc.help">
+    
+  </a>
+  <a name="help">
+    
+  </a>
+  <div class="functionHeader">
+    help =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.apropos">
+    
+  </a>
+  <a name="apropos">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    apropos(key):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Print all the one-line module summaries that contain a substring.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pydoc._start_server">
+    
+  </a>
+  <a name="_start_server">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _start_server(urlhandler, hostname, port):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Start an HTTP server thread on a specific port.
+
+Start an HTML/text server thread, so HTML or text documents can be
+browsed dynamically and interactively with a Web browser.  Example use:
+
+    &gt;&gt;&gt; import time
+    &gt;&gt;&gt; import pydoc
+
+    Define a URL handler.  To determine what the client is asking
+    for, check the URL and content_type.
+
+    Then get or generate some text or HTML code and return it.
+
+    &gt;&gt;&gt; def my_url_handler(url, content_type):
+    ...     text = 'the URL sent was: (%s, %s)' % (url, content_type)
+    ...     return text
+
+    Start server thread on port 0.
+    If you use port 0, the server will pick a random port number.
+    You can then use serverthread.port to get the port number.
+
+    &gt;&gt;&gt; port = 0
+    &gt;&gt;&gt; serverthread = pydoc._start_server(my_url_handler, port)
+
+    Check that the server is really started.  If it is, open browser
+    and get first page.  Use serverthread.url as the starting page.
+
+    &gt;&gt;&gt; if serverthread.serving:
+    ...    import webbrowser
+
+    The next two lines are commented out so a browser doesn't open if
+    doctest is run on this module.
+
+    #...    webbrowser.open(serverthread.url)
+    #True
+
+    Let the server do its thing. We just need to monitor its status.
+    Use time.sleep so the loop doesn't hog the CPU.
+
+    &gt;&gt;&gt; starttime = time.monotonic()
+    &gt;&gt;&gt; timeout = 1                    #seconds
+
+    This is a short timeout for testing purposes.
+
+    &gt;&gt;&gt; while serverthread.serving:
+    ...     time.sleep(.01)
+    ...     if serverthread.serving and time.monotonic() - starttime &gt; timeout:
+    ...          serverthread.stop()
+    ...          break
+
+    Print any errors that may have occurred.
+
+    &gt;&gt;&gt; print(serverthread.error)
+    None</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pydoc._url_handler">
+    
+  </a>
+  <a name="_url_handler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _url_handler(url, content_type="""text/html"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">The pydoc url handler for use with the pydoc server.
+
+If the content_type is 'text/css', the _pydoc.css style
+sheet is read and returned if it exits.
+
+If the content_type is 'text/html', then the result of
+get_html_page(url) is returned.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.browse">
+    
+  </a>
+  <a name="browse">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    browse(port=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Start the enhanced pydoc Web server and open a Web browser.
+
+Use port '0' to start the server on an arbitrary port.
+Set open_browser to False to suppress opening a browser.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.ispath">
+    
+  </a>
+  <a name="ispath">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ispath(x):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pydoc._get_revised_path">
+    
+  </a>
+  <a name="_get_revised_path">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_revised_path(given_path, argv0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Ensures current directory is on returned path, and argv0 directory is not
+
+Exception: argv0 dir is left alone if it's also pydoc's directory.
+
+Returns a new path entry list, or None if no adjustment is needed.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pydoc._adjust_cli_sys_path">
+    
+  </a>
+  <a name="_adjust_cli_sys_path">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _adjust_cli_sys_path():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Ensures current directory is on sys.path, and __main__ directory is not.
+
+Exception: __main__ dir is left alone if it's also pydoc's directory.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pydoc.cli">
+    
+  </a>
+  <a name="cli">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    cli():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Command-line interface (looks at sys.argv to decide what to do).</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

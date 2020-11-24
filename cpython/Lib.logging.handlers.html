@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.logging.handlers : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.logging.html" class="code" data-type="Package">logging</a>.<a href="Lib.logging.handlers.html" class="code" data-type="Module">handlers</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Additional handlers for the logging package for Python. The core package is
+based on PEP 282 and comments thereto in comp.lang.python.
+
+Copyright (C) 2001-2016 Vinay Sajip. All Rights Reserved.
+
+To use, simply 'import logging.handlers' and log away!</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3044">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.handlers.html#DEFAULT_TCP_LOGGING_PORT" class="code" data-type="Variable">DEFAULT_TCP_LOGGING_PORT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.handlers.html#DEFAULT_UDP_LOGGING_PORT" class="code" data-type="Variable">DEFAULT_UDP_LOGGING_PORT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.handlers.html#DEFAULT_HTTP_LOGGING_PORT" class="code" data-type="Variable">DEFAULT_HTTP_LOGGING_PORT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.handlers.html#DEFAULT_SOAP_LOGGING_PORT" class="code" data-type="Variable">DEFAULT_SOAP_LOGGING_PORT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.handlers.html#SYSLOG_UDP_PORT" class="code" data-type="Variable">SYSLOG_UDP_PORT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.handlers.html#SYSLOG_TCP_PORT" class="code" data-type="Variable">SYSLOG_TCP_PORT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.handlers.BaseRotatingHandler.html" class="code" data-type="Class">BaseRotatingHandler</a></td>
+    <td><span>Base class for handlers that rotate log files at a certain point. Not meant to be instantiated directly.  Instead, use RotatingFileHandler or TimedRotatingFileHandler.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.handlers.RotatingFileHandler.html" class="code" data-type="Class">RotatingFileHandler</a></td>
+    <td><span>Handler for logging to a set of files, which switches from one file to the next when the current file reaches a certain size.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.handlers.TimedRotatingFileHandler.html" class="code" data-type="Class">TimedRotatingFileHandler</a></td>
+    <td><span>Handler for logging to a file, rotating the log file at certain timed intervals.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.handlers.WatchedFileHandler.html" class="code" data-type="Class">WatchedFileHandler</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.handlers.SocketHandler.html" class="code" data-type="Class">SocketHandler</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.handlers.DatagramHandler.html" class="code" data-type="Class">DatagramHandler</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html" class="code" data-type="Class">SysLogHandler</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.handlers.SMTPHandler.html" class="code" data-type="Class">SMTPHandler</a></td>
+    <td><span>A handler class which sends an SMTP email for each logging event.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.handlers.NTEventLogHandler.html" class="code" data-type="Class">NTEventLogHandler</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.handlers.HTTPHandler.html" class="code" data-type="Class">HTTPHandler</a></td>
+    <td><span>A class which sends records to a Web server, using either GET or POST semantics.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.handlers.BufferingHandler.html" class="code" data-type="Class">BufferingHandler</a></td>
+    <td><span>A handler class which buffers logging records in memory. Whenever each record is added to the buffer, a check is made to see if the buffer should be flushed. If it should, then flush() is expected to do what's needed.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.handlers.MemoryHandler.html" class="code" data-type="Class">MemoryHandler</a></td>
+    <td><span>A handler class which buffers logging records in memory, periodically flushing them to a target handler. Flushing occurs whenever the buffer is full, or when an event of a certain severity or greater is seen.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.handlers.QueueHandler.html" class="code" data-type="Class">QueueHandler</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.handlers.QueueListener.html" class="code" data-type="Class">QueueListener</a></td>
+    <td><span>This class implements an internal threaded listener which watches for LogRecords being added to a queue, removes them and passes them to a list of handlers for processing.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.handlers.html#_MIDNIGHT" class="code" data-type="Variable">_MIDNIGHT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.logging.handlers.DEFAULT_TCP_LOGGING_PORT">
+    
+  </a>
+  <a name="DEFAULT_TCP_LOGGING_PORT">
+    
+  </a>
+  <div class="functionHeader">
+    DEFAULT_TCP_LOGGING_PORT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.logging.handlers.DEFAULT_UDP_LOGGING_PORT">
+    
+  </a>
+  <a name="DEFAULT_UDP_LOGGING_PORT">
+    
+  </a>
+  <div class="functionHeader">
+    DEFAULT_UDP_LOGGING_PORT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.logging.handlers.DEFAULT_HTTP_LOGGING_PORT">
+    
+  </a>
+  <a name="DEFAULT_HTTP_LOGGING_PORT">
+    
+  </a>
+  <div class="functionHeader">
+    DEFAULT_HTTP_LOGGING_PORT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.logging.handlers.DEFAULT_SOAP_LOGGING_PORT">
+    
+  </a>
+  <a name="DEFAULT_SOAP_LOGGING_PORT">
+    
+  </a>
+  <div class="functionHeader">
+    DEFAULT_SOAP_LOGGING_PORT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.logging.handlers.SYSLOG_UDP_PORT">
+    
+  </a>
+  <a name="SYSLOG_UDP_PORT">
+    
+  </a>
+  <div class="functionHeader">
+    SYSLOG_UDP_PORT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.logging.handlers.SYSLOG_TCP_PORT">
+    
+  </a>
+  <a name="SYSLOG_TCP_PORT">
+    
+  </a>
+  <div class="functionHeader">
+    SYSLOG_TCP_PORT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.logging.handlers._MIDNIGHT">
+    
+  </a>
+  <a name="_MIDNIGHT">
+    
+  </a>
+  <div class="functionHeader">
+    _MIDNIGHT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

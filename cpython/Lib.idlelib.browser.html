@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.idlelib.browser : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.idlelib.html" class="code" data-type="Package">idlelib</a>.<a href="Lib.idlelib.browser.html" class="code" data-type="Module">browser</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Module browser.
+
+XXX TO DO:
+
+- reparse when source changed (maybe just a button would be OK?)
+    (or recheck on window popup)
+- add popup menu with more options (e.g. doc strings, base classes, imports)
+- add base classes to class browser tree
+- finish removing limitation to x.py files (ModuleBrowserTreeItem)</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2043">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.browser.html#file_open" class="code" data-type="Variable">file_open</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.browser.html#transform_children" class="code" data-type="Function">transform_children</a></td>
+    <td><span>Transform a child dictionary to an ordered sequence of objects.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.browser.ModuleBrowser.html" class="code" data-type="Class">ModuleBrowser</a></td>
+    <td><span>Browse module classes and functions in IDLE.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.browser.ModuleBrowserTreeItem.html" class="code" data-type="Class">ModuleBrowserTreeItem</a></td>
+    <td><span>Browser tree for Python module.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.browser.ChildBrowserTreeItem.html" class="code" data-type="Class">ChildBrowserTreeItem</a></td>
+    <td><span>Browser tree for child nodes within the module.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.browser.html#_module_browser" class="code" data-type="Function">_module_browser</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.idlelib.browser.file_open">
+    
+  </a>
+  <a name="file_open">
+    
+  </a>
+  <div class="functionHeader">
+    file_open =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.browser.transform_children">
+    
+  </a>
+  <a name="transform_children">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    transform_children(child_dict, modname=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Transform a child dictionary to an ordered sequence of objects.
+
+The dictionary maps names to pyclbr information objects.
+Filter out imported objects.
+Augment class names with bases.
+The insertion order of the dictionary is assumed to have been in line
+number order, so sorting is not necessary.
+
+The current tree only calls this once per child_dict as it saves
+TreeItems once created.  A future tree and tests might violate this,
+so a check prevents multiple in-place augmentations.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.idlelib.browser._module_browser">
+    
+  </a>
+  <a name="_module_browser">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _module_browser(parent):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

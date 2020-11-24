@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.test.test_iterlen : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.test.html" class="code" data-type="Package">test</a>.<a href="Lib.test.test_iterlen.html" class="code" data-type="Module">test_iterlen</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Test Iterator Length Transparency
+
+Some functions or methods which accept general iterable arguments have
+optional, more efficient code paths if they know how many items to expect.
+For instance, map(func, iterable), will pre-allocate the exact amount of
+space required whenever the iterable can report its length.
+
+The desired invariant is:  len(it)==len(list(it)).
+
+A complication is that an iterable and iterator can be the same object. To
+maintain the invariant, an iterator needs to dynamically update its length.
+For instance, an iterable such as range(10) always reports its length as ten,
+but it=iter(range(10)) starts at ten, and then goes to nine after next(it).
+Having this capability means that map() can ignore the distinction between
+map(func, iterable) and map(func, iter(iterable)).
+
+When the iterable is immutable, the implementation can straight-forwardly
+report the original length minus the cumulative number of calls to next().
+This is the case for tuples, range objects, and itertools.repeat().
+
+Some containers become temporarily immutable during iteration.  This includes
+dicts, sets, and collections.deque.  Their implementation is equally simple
+though they need to permanently set their length to zero whenever there is
+an attempt to iterate after a length mutation.
+
+The situation slightly more involved whenever an object allows length mutation
+during iteration.  Lists and sequence iterators are dynamically updatable.
+So, if a list is extended during iteration, the iterator will continue through
+the new items.  If it shrinks to a point before the most recent iteration,
+then no further items are available and the length is reported at zero.
+
+Reversed objects can also be wrapped around mutable objects; however, any
+appends after the current position are ignored.  Any other approach leads
+to confusion and possibly returning the same item more than once.
+
+The iterators not listed above, such as enumerate and the other itertools,
+are not length transparent because they have no way to distinguish between
+iterables that report static length and iterators whose length changes with
+each call (i.e. the difference between enumerate('abc') and
+enumerate(iter('abc')).</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id7211">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.test.test_iterlen.html#n" class="code" data-type="Variable">n</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_iterlen.TestInvariantWithoutMutations.html" class="code" data-type="Class">TestInvariantWithoutMutations</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_iterlen.TestTemporarilyImmutable.html" class="code" data-type="Class">TestTemporarilyImmutable</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_iterlen.TestRepeat.html" class="code" data-type="Class">TestRepeat</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_iterlen.TestXrange.html" class="code" data-type="Class">TestXrange</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_iterlen.TestXrangeCustomReversed.html" class="code" data-type="Class">TestXrangeCustomReversed</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_iterlen.TestTuple.html" class="code" data-type="Class">TestTuple</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_iterlen.TestDeque.html" class="code" data-type="Class">TestDeque</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_iterlen.TestDequeReversed.html" class="code" data-type="Class">TestDequeReversed</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_iterlen.TestDictKeys.html" class="code" data-type="Class">TestDictKeys</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_iterlen.TestDictItems.html" class="code" data-type="Class">TestDictItems</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_iterlen.TestDictValues.html" class="code" data-type="Class">TestDictValues</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_iterlen.TestSet.html" class="code" data-type="Class">TestSet</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_iterlen.TestList.html" class="code" data-type="Class">TestList</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_iterlen.TestListReversed.html" class="code" data-type="Class">TestListReversed</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_iterlen.BadLen.html" class="code" data-type="Class">BadLen</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_iterlen.BadLengthHint.html" class="code" data-type="Class">BadLengthHint</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_iterlen.NoneLengthHint.html" class="code" data-type="Class">NoneLengthHint</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_iterlen.TestLengthHintExceptions.html" class="code" data-type="Class">TestLengthHintExceptions</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.test.test_iterlen.n">
+    
+  </a>
+  <a name="n">
+    
+  </a>
+  <div class="functionHeader">
+    n =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

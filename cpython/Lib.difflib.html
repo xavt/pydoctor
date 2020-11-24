@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.difflib : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.difflib.html" class="code" data-type="Module">difflib</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Module difflib -- helpers for computing deltas between objects.
+
+Function get_close_matches(word, possibilities, n=3, cutoff=0.6):
+    Use SequenceMatcher to return list of the best "good enough" matches.
+
+Function context_diff(a, b):
+    For two lists of strings, return a delta in context diff format.
+
+Function ndiff(a, b):
+    Return a delta: the difference between `a` and `b` (lists of strings).
+
+Function restore(delta, which):
+    Return one of the two sequences that generated an ndiff delta.
+
+Function unified_diff(a, b):
+    For two lists of strings, return a delta in unified diff format.
+
+Class SequenceMatcher:
+    A flexible class for comparing pairs of sequences of any type.
+
+Class Differ:
+    For producing human-readable deltas from sequences of lines of text.
+
+Class HtmlDiff:
+    For producing HTML side by side comparison with change highlights.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id896">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.difflib.html#Match" class="code" data-type="Variable">Match</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.difflib.SequenceMatcher.html" class="code" data-type="Class">SequenceMatcher</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.difflib.html#get_close_matches" class="code" data-type="Function">get_close_matches</a></td>
+    <td><span>Use SequenceMatcher to return list of the best "good enough" matches.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.difflib.Differ.html" class="code" data-type="Class">Differ</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.difflib.html#IS_LINE_JUNK" class="code" data-type="Function">IS_LINE_JUNK</a></td>
+    <td><span>Return True for ignorable line: iff `line` is blank or contains a single '#'.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.difflib.html#IS_CHARACTER_JUNK" class="code" data-type="Function">IS_CHARACTER_JUNK</a></td>
+    <td><span>Return True for ignorable character: iff `ch` is a space or tab.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.difflib.html#unified_diff" class="code" data-type="Function">unified_diff</a></td>
+    <td><span>Compare two sequences of lines; generate the delta as a unified diff.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.difflib.html#context_diff" class="code" data-type="Function">context_diff</a></td>
+    <td><span>Compare two sequences of lines; generate the delta as a context diff.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.difflib.html#diff_bytes" class="code" data-type="Function">diff_bytes</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.difflib.html#ndiff" class="code" data-type="Function">ndiff</a></td>
+    <td><span>Compare `a` and `b` (lists of strings); return a `Differ`-style delta.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.difflib.HtmlDiff.html" class="code" data-type="Class">HtmlDiff</a></td>
+    <td><span>For producing HTML side by side comparison with change highlights.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.difflib.html#restore" class="code" data-type="Function">restore</a></td>
+    <td><span>Generate one of the two sequences that generated a delta.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.difflib.html#_calculate_ratio" class="code" data-type="Function">_calculate_ratio</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.difflib.html#_keep_original_ws" class="code" data-type="Function">_keep_original_ws</a></td>
+    <td><span>Replace whitespace with the original whitespace characters in `s`</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.difflib.html#_format_range_unified" class="code" data-type="Function">_format_range_unified</a></td>
+    <td><span>Convert range to the "ed" format</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.difflib.html#_format_range_context" class="code" data-type="Function">_format_range_context</a></td>
+    <td><span>Convert range to the "ed" format</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.difflib.html#_check_types" class="code" data-type="Function">_check_types</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.difflib.html#_mdiff" class="code" data-type="Function">_mdiff</a></td>
+    <td><span>Returns generator yielding marked up from/to side by side differences.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.difflib.html#_file_template" class="code" data-type="Variable">_file_template</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.difflib.html#_styles" class="code" data-type="Variable">_styles</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.difflib.html#_table_template" class="code" data-type="Variable">_table_template</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.difflib.html#_legend" class="code" data-type="Variable">_legend</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.difflib.html#_test" class="code" data-type="Function">_test</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.difflib.Match">
+    
+  </a>
+  <a name="Match">
+    
+  </a>
+  <div class="functionHeader">
+    Match =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.difflib._calculate_ratio">
+    
+  </a>
+  <a name="_calculate_ratio">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _calculate_ratio(matches, length):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.difflib.get_close_matches">
+    
+  </a>
+  <a name="get_close_matches">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_close_matches(word, possibilities, n=3, cutoff=0.6):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Use SequenceMatcher to return list of the best "good enough" matches.
+
+word is a sequence for which close matches are desired (typically a
+string).
+
+possibilities is a list of sequences against which to match word
+(typically a list of strings).
+
+Optional arg n (default 3) is the maximum number of close matches to
+return.  n must be &gt; 0.
+
+Optional arg cutoff (default 0.6) is a float in [0, 1].  Possibilities
+that don't score at least that similar to word are ignored.
+
+The best (no more than n) matches among the possibilities are returned
+in a list, sorted by similarity score, most similar first.
+
+&gt;&gt;&gt; get_close_matches("appel", ["ape", "apple", "peach", "puppy"])
+['apple', 'ape']
+&gt;&gt;&gt; import keyword as _keyword
+&gt;&gt;&gt; get_close_matches("wheel", _keyword.kwlist)
+['while']
+&gt;&gt;&gt; get_close_matches("Apple", _keyword.kwlist)
+[]
+&gt;&gt;&gt; get_close_matches("accept", _keyword.kwlist)
+['except']</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.difflib._keep_original_ws">
+    
+  </a>
+  <a name="_keep_original_ws">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _keep_original_ws(s, tag_s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Replace whitespace with the original whitespace characters in `s`</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.difflib.IS_LINE_JUNK">
+    
+  </a>
+  <a name="IS_LINE_JUNK">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    IS_LINE_JUNK(line, pat=re.compile('\\s*(?:#\\s*)?$').match):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True for ignorable line: iff `line` is blank or contains a single '#'.
+
+Examples:
+
+&gt;&gt;&gt; IS_LINE_JUNK('\n')
+True
+&gt;&gt;&gt; IS_LINE_JUNK('  #   \n')
+True
+&gt;&gt;&gt; IS_LINE_JUNK('hello\n')
+False</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.difflib.IS_CHARACTER_JUNK">
+    
+  </a>
+  <a name="IS_CHARACTER_JUNK">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    IS_CHARACTER_JUNK(ch, ws=""" 	"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True for ignorable character: iff `ch` is a space or tab.
+
+Examples:
+
+&gt;&gt;&gt; IS_CHARACTER_JUNK(' ')
+True
+&gt;&gt;&gt; IS_CHARACTER_JUNK('\t')
+True
+&gt;&gt;&gt; IS_CHARACTER_JUNK('\n')
+False
+&gt;&gt;&gt; IS_CHARACTER_JUNK('x')
+False</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.difflib._format_range_unified">
+    
+  </a>
+  <a name="_format_range_unified">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _format_range_unified(start, stop):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convert range to the "ed" format</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.difflib.unified_diff">
+    
+  </a>
+  <a name="unified_diff">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    unified_diff(a, b, fromfile="""""", tofile="""""", fromfiledate="""""", tofiledate="""""", n=3, lineterm="""
+"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Compare two sequences of lines; generate the delta as a unified diff.
+
+Unified diffs are a compact way of showing line changes and a few
+lines of context.  The number of context lines is set by 'n' which
+defaults to three.
+
+By default, the diff control lines (those with ---, +++, or @@) are
+created with a trailing newline.  This is helpful so that inputs
+created from file.readlines() result in diffs that are suitable for
+file.writelines() since both the inputs and outputs have trailing
+newlines.
+
+For inputs that do not have trailing newlines, set the lineterm
+argument to "" so that the output will be uniformly newline free.
+
+The unidiff format normally has a header for filenames and modification
+times.  Any or all of these may be specified using strings for
+'fromfile', 'tofile', 'fromfiledate', and 'tofiledate'.
+The modification times are normally expressed in the ISO 8601 format.
+
+Example:
+
+&gt;&gt;&gt; for line in unified_diff('one two three four'.split(),
+...             'zero one tree four'.split(), 'Original', 'Current',
+...             '2005-01-26 23:30:50', '2010-04-02 10:20:52',
+...             lineterm=''):
+...     print(line)                 # doctest: +NORMALIZE_WHITESPACE
+--- Original        2005-01-26 23:30:50
++++ Current         2010-04-02 10:20:52
+@@ -1,4 +1,4 @@
++zero
+ one
+-two
+-three
++tree
+ four</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.difflib._format_range_context">
+    
+  </a>
+  <a name="_format_range_context">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _format_range_context(start, stop):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convert range to the "ed" format</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.difflib.context_diff">
+    
+  </a>
+  <a name="context_diff">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    context_diff(a, b, fromfile="""""", tofile="""""", fromfiledate="""""", tofiledate="""""", n=3, lineterm="""
+"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Compare two sequences of lines; generate the delta as a context diff.
+
+Context diffs are a compact way of showing line changes and a few
+lines of context.  The number of context lines is set by 'n' which
+defaults to three.
+
+By default, the diff control lines (those with *** or ---) are
+created with a trailing newline.  This is helpful so that inputs
+created from file.readlines() result in diffs that are suitable for
+file.writelines() since both the inputs and outputs have trailing
+newlines.
+
+For inputs that do not have trailing newlines, set the lineterm
+argument to "" so that the output will be uniformly newline free.
+
+The context diff format normally has a header for filenames and
+modification times.  Any or all of these may be specified using
+strings for 'fromfile', 'tofile', 'fromfiledate', and 'tofiledate'.
+The modification times are normally expressed in the ISO 8601 format.
+If not specified, the strings default to blanks.
+
+Example:
+
+&gt;&gt;&gt; print(''.join(context_diff('one\ntwo\nthree\nfour\n'.splitlines(True),
+...       'zero\none\ntree\nfour\n'.splitlines(True), 'Original', 'Current')),
+...       end="")
+*** Original
+--- Current
+***************
+*** 1,4 ****
+  one
+! two
+! three
+  four
+--- 1,4 ----
++ zero
+  one
+! tree
+  four</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.difflib._check_types">
+    
+  </a>
+  <a name="_check_types">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _check_types(a, b, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.difflib.diff_bytes">
+    
+  </a>
+  <a name="diff_bytes">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    diff_bytes(dfunc, a, b, fromfile=b'', tofile=b'', fromfiledate=b'', tofiledate=b'', n=3, lineterm=b'\n'):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Compare `a` and `b`, two sequences of lines represented as bytes rather
+than str. This is a wrapper for `dfunc`, which is typically either
+unified_diff() or context_diff(). Inputs are losslessly converted to
+strings so that `dfunc` only has to worry about strings, and encoded
+back to bytes on return. This is necessary to compare files with
+unknown or inconsistent encoding. All other inputs (except `n`) must be
+bytes rather than str.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.difflib.ndiff">
+    
+  </a>
+  <a name="ndiff">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ndiff(a, b, linejunk=None, charjunk=IS_CHARACTER_JUNK):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Compare `a` and `b` (lists of strings); return a `Differ`-style delta.
+
+Optional keyword parameters `linejunk` and `charjunk` are for filter
+functions, or can be None:
+
+- linejunk: A function that should accept a single string argument and
+  return true iff the string is junk.  The default is None, and is
+  recommended; the underlying SequenceMatcher class has an adaptive
+  notion of "noise" lines.
+
+- charjunk: A function that accepts a character (string of length
+  1), and returns true iff the character is junk. The default is
+  the module-level function IS_CHARACTER_JUNK, which filters out
+  whitespace characters (a blank or tab; note: it's a bad idea to
+  include newline in this!).
+
+Tools/scripts/ndiff.py is a command-line front-end to this function.
+
+Example:
+
+&gt;&gt;&gt; diff = ndiff('one\ntwo\nthree\n'.splitlines(keepends=True),
+...              'ore\ntree\nemu\n'.splitlines(keepends=True))
+&gt;&gt;&gt; print(''.join(diff), end="")
+- one
+?  ^
++ ore
+?  ^
+- two
+- three
+?  -
++ tree
++ emu</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.difflib._mdiff">
+    
+  </a>
+  <a name="_mdiff">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _mdiff(fromlines, tolines, context=None, linejunk=None, charjunk=IS_CHARACTER_JUNK):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns generator yielding marked up from/to side by side differences.
+
+Arguments:
+fromlines -- list of text lines to compared to tolines
+tolines -- list of text lines to be compared to fromlines
+context -- number of context lines to display on each side of difference,
+           if None, all from/to text lines will be generated.
+linejunk -- passed on to ndiff (see ndiff documentation)
+charjunk -- passed on to ndiff (see ndiff documentation)
+
+This function returns an iterator which returns a tuple:
+(from line tuple, to line tuple, boolean flag)
+
+from/to line tuple -- (line num, line text)
+    line num -- integer or None (to indicate a context separation)
+    line text -- original line text with following markers inserted:
+        '\0+' -- marks start of added text
+        '\0-' -- marks start of deleted text
+        '\0^' -- marks start of changed text
+        '\1' -- marks end of added/deleted/changed text
+
+boolean flag -- None indicates context separation, True indicates
+    either "from" or "to" line contains a change, otherwise False.
+
+This function/iterator was originally developed to generate side by side
+file difference for making HTML pages (see HtmlDiff class for example
+usage).
+
+Note, this function utilizes the ndiff function to generate the side by
+side difference markup.  Optional ndiff arguments may be passed to this
+function and they in turn will be passed to ndiff.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.difflib._file_template">
+    
+  </a>
+  <a name="_file_template">
+    
+  </a>
+  <div class="functionHeader">
+    _file_template =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.difflib._styles">
+    
+  </a>
+  <a name="_styles">
+    
+  </a>
+  <div class="functionHeader">
+    _styles =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.difflib._table_template">
+    
+  </a>
+  <a name="_table_template">
+    
+  </a>
+  <div class="functionHeader">
+    _table_template =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.difflib._legend">
+    
+  </a>
+  <a name="_legend">
+    
+  </a>
+  <div class="functionHeader">
+    _legend =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.difflib.restore">
+    
+  </a>
+  <a name="restore">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    restore(delta, which):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Generate one of the two sequences that generated a delta.
+
+Given a `delta` produced by `Differ.compare()` or `ndiff()`, extract
+lines originating from file 1 or 2 (parameter `which`), stripping off line
+prefixes.
+
+Examples:
+
+&gt;&gt;&gt; diff = ndiff('one\ntwo\nthree\n'.splitlines(keepends=True),
+...              'ore\ntree\nemu\n'.splitlines(keepends=True))
+&gt;&gt;&gt; diff = list(diff)
+&gt;&gt;&gt; print(''.join(restore(diff, 1)), end="")
+one
+two
+three
+&gt;&gt;&gt; print(''.join(restore(diff, 2)), end="")
+ore
+tree
+emu</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.difflib._test">
+    
+  </a>
+  <a name="_test">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _test():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

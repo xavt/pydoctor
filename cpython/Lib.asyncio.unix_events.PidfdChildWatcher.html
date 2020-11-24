@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.asyncio.unix_events.PidfdChildWatcher : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.asyncio.html" class="code" data-type="Package">asyncio</a>.<a href="Lib.asyncio.unix_events.html" class="code" data-type="Module">unix_events</a>.<a href="Lib.asyncio.unix_events.PidfdChildWatcher.html" class="code" data-type="Class">PidfdChildWatcher</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.asyncio.unix_events.PidfdChildWatcher(<a href="Lib.asyncio.unix_events.AbstractChildWatcher.html" class="code" data-type="Class">AbstractChildWatcher</a>):</code></p>
+        <p><a href="classIndex.html#Lib.asyncio.unix_events.PidfdChildWatcher">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Child watcher implementation using Linux's pid file descriptors.
+
+This child watcher polls process file descriptors (pidfds) to await child
+process termination. In some respects, PidfdChildWatcher is a "Goldilocks"
+child watcher implementation. It doesn't require signals or threads, doesn't
+interfere with any processes launched outside the event loop, and scales
+linearly with the number of subprocesses launched by the event loop. The
+main disadvantage is that pidfds are specific to Linux, and only work on
+recent (5.3+) kernels.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id423">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.unix_events.PidfdChildWatcher.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.unix_events.PidfdChildWatcher.html#__enter__" class="code" data-type="Method">__enter__</a></td>
+    <td><span>Enter the watcher's context and allow starting new processes</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.unix_events.PidfdChildWatcher.html#__exit__" class="code" data-type="Method">__exit__</a></td>
+    <td><span>Exit the watcher's context</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.unix_events.PidfdChildWatcher.html#is_active" class="code" data-type="Method">is_active</a></td>
+    <td><span>Return ``True`` if the watcher is active and is used by the event loop.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.unix_events.PidfdChildWatcher.html#close" class="code" data-type="Method">close</a></td>
+    <td><span>Close the watcher.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.unix_events.PidfdChildWatcher.html#attach_loop" class="code" data-type="Method">attach_loop</a></td>
+    <td><span>Attach the watcher to an event loop.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.unix_events.PidfdChildWatcher.html#add_child_handler" class="code" data-type="Method">add_child_handler</a></td>
+    <td><span>Register a new child handler.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.unix_events.PidfdChildWatcher.html#remove_child_handler" class="code" data-type="Method">remove_child_handler</a></td>
+    <td><span>Removes the handler for process 'pid'.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.unix_events.PidfdChildWatcher.html#_loop" class="code" data-type="Instance Variable">_loop</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.unix_events.PidfdChildWatcher.html#_callbacks" class="code" data-type="Instance Variable">_callbacks</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.unix_events.PidfdChildWatcher.html#_do_wait" class="code" data-type="Method">_do_wait</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.asyncio.unix_events.PidfdChildWatcher.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.unix_events.PidfdChildWatcher._loop">
+    
+  </a>
+  <a name="_loop">
+    
+  </a>
+  <div class="functionHeader">
+    _loop =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.unix_events.PidfdChildWatcher._callbacks">
+    
+  </a>
+  <a name="_callbacks">
+    
+  </a>
+  <div class="functionHeader">
+    _callbacks =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.unix_events.PidfdChildWatcher.__enter__">
+    
+  </a>
+  <a name="__enter__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __enter__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.asyncio.unix_events.AbstractChildWatcher.html#__enter__" class="code" data-type="Method">Lib.asyncio.unix_events.AbstractChildWatcher.__enter__</a></div>
+    
+    <div><p class="pre">Enter the watcher's context and allow starting new processes
+
+This function must return self</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.unix_events.PidfdChildWatcher.__exit__">
+    
+  </a>
+  <a name="__exit__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __exit__(self, exc_type, exc_value, exc_traceback):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.asyncio.unix_events.AbstractChildWatcher.html#__exit__" class="code" data-type="Method">Lib.asyncio.unix_events.AbstractChildWatcher.__exit__</a></div>
+    
+    <div><p class="pre">Exit the watcher's context</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.unix_events.PidfdChildWatcher.is_active">
+    
+  </a>
+  <a name="is_active">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_active(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.asyncio.unix_events.AbstractChildWatcher.html#is_active" class="code" data-type="Method">Lib.asyncio.unix_events.AbstractChildWatcher.is_active</a></div>
+    
+    <div><p class="pre">Return ``True`` if the watcher is active and is used by the event loop.
+
+Return True if the watcher is installed and ready to handle process exit
+notifications.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.unix_events.PidfdChildWatcher.close">
+    
+  </a>
+  <a name="close">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    close(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.asyncio.unix_events.AbstractChildWatcher.html#close" class="code" data-type="Method">Lib.asyncio.unix_events.AbstractChildWatcher.close</a></div>
+    
+    <div><p class="pre">Close the watcher.
+
+This must be called to make sure that any underlying resource is freed.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.unix_events.PidfdChildWatcher.attach_loop">
+    
+  </a>
+  <a name="attach_loop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    attach_loop(self, loop):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.asyncio.unix_events.AbstractChildWatcher.html#attach_loop" class="code" data-type="Method">Lib.asyncio.unix_events.AbstractChildWatcher.attach_loop</a></div>
+    
+    <div><p class="pre">Attach the watcher to an event loop.
+
+If the watcher was previously attached to an event loop, then it is
+first detached before attaching to the new loop.
+
+Note: loop may be None.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.unix_events.PidfdChildWatcher.add_child_handler">
+    
+  </a>
+  <a name="add_child_handler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    add_child_handler(self, pid, callback, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.asyncio.unix_events.AbstractChildWatcher.html#add_child_handler" class="code" data-type="Method">Lib.asyncio.unix_events.AbstractChildWatcher.add_child_handler</a></div>
+    
+    <div><p class="pre">Register a new child handler.
+
+Arrange for callback(pid, returncode, *args) to be called when
+process 'pid' terminates. Specifying another callback for the same
+process replaces the previous handler.
+
+Note: callback() must be thread-safe.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.asyncio.unix_events.PidfdChildWatcher._do_wait">
+    
+  </a>
+  <a name="_do_wait">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _do_wait(self, pid):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.unix_events.PidfdChildWatcher.remove_child_handler">
+    
+  </a>
+  <a name="remove_child_handler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    remove_child_handler(self, pid):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.asyncio.unix_events.AbstractChildWatcher.html#remove_child_handler" class="code" data-type="Method">Lib.asyncio.unix_events.AbstractChildWatcher.remove_child_handler</a></div>
+    
+    <div><p class="pre">Removes the handler for process 'pid'.
+
+The function returns True if the handler was successfully removed,
+False if there was nothing to remove.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

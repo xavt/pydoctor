@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.tkinter.tix.TixWidget : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.tkinter.html" class="code" data-type="Package">tkinter</a>.<a href="Lib.tkinter.tix.html" class="code" data-type="Module">tix</a>.<a href="Lib.tkinter.tix.TixWidget.html" class="code" data-type="Class">TixWidget</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.tkinter.tix.TixWidget(<span title="tkinter.Widget">tkinter.Widget</span>):</code></p><p>Known subclasses: <a href="Lib.tkinter.tix.Balloon.html" class="code" data-type="Class">Lib.tkinter.tix.Balloon</a>, <a href="Lib.tkinter.tix.ButtonBox.html" class="code" data-type="Class">Lib.tkinter.tix.ButtonBox</a>, <a href="Lib.tkinter.tix.CheckList.html" class="code" data-type="Class">Lib.tkinter.tix.CheckList</a>, <a href="Lib.tkinter.tix.CObjView.html" class="code" data-type="Class">Lib.tkinter.tix.CObjView</a>, <a href="Lib.tkinter.tix.ComboBox.html" class="code" data-type="Class">Lib.tkinter.tix.ComboBox</a>, <a href="Lib.tkinter.tix.Control.html" class="code" data-type="Class">Lib.tkinter.tix.Control</a>, <a href="Lib.tkinter.tix.DialogShell.html" class="code" data-type="Class">Lib.tkinter.tix.DialogShell</a>, <a href="Lib.tkinter.tix.DirList.html" class="code" data-type="Class">Lib.tkinter.tix.DirList</a>, <a href="Lib.tkinter.tix.DirSelectBox.html" class="code" data-type="Class">Lib.tkinter.tix.DirSelectBox</a>, <a href="Lib.tkinter.tix.DirSelectDialog.html" class="code" data-type="Class">Lib.tkinter.tix.DirSelectDialog</a>, <a href="Lib.tkinter.tix.DirTree.html" class="code" data-type="Class">Lib.tkinter.tix.DirTree</a>, <a href="Lib.tkinter.tix.ExFileSelectBox.html" class="code" data-type="Class">Lib.tkinter.tix.ExFileSelectBox</a>, <a href="Lib.tkinter.tix.ExFileSelectDialog.html" class="code" data-type="Class">Lib.tkinter.tix.ExFileSelectDialog</a>, <a href="Lib.tkinter.tix.FileEntry.html" class="code" data-type="Class">Lib.tkinter.tix.FileEntry</a>, <a href="Lib.tkinter.tix.FileSelectBox.html" class="code" data-type="Class">Lib.tkinter.tix.FileSelectBox</a>, <a href="Lib.tkinter.tix.FileSelectDialog.html" class="code" data-type="Class">Lib.tkinter.tix.FileSelectDialog</a>, <a href="Lib.tkinter.tix.Grid.html" class="code" data-type="Class">Lib.tkinter.tix.Grid</a>, <a href="Lib.tkinter.tix.HList.html" class="code" data-type="Class">Lib.tkinter.tix.HList</a>, <a href="Lib.tkinter.tix.InputOnly.html" class="code" data-type="Class">Lib.tkinter.tix.InputOnly</a>, <a href="Lib.tkinter.tix.LabelEntry.html" class="code" data-type="Class">Lib.tkinter.tix.LabelEntry</a>, <a href="Lib.tkinter.tix.LabelFrame.html" class="code" data-type="Class">Lib.tkinter.tix.LabelFrame</a>, <a href="Lib.tkinter.tix.ListNoteBook.html" class="code" data-type="Class">Lib.tkinter.tix.ListNoteBook</a>, <a href="Lib.tkinter.tix.Meter.html" class="code" data-type="Class">Lib.tkinter.tix.Meter</a>, <a href="Lib.tkinter.tix.NoteBook.html" class="code" data-type="Class">Lib.tkinter.tix.NoteBook</a>, <a href="Lib.tkinter.tix.NoteBookFrame.html" class="code" data-type="Class">Lib.tkinter.tix.NoteBookFrame</a>, <a href="Lib.tkinter.tix.OptionMenu.html" class="code" data-type="Class">Lib.tkinter.tix.OptionMenu</a>, <a href="Lib.tkinter.tix.PanedWindow.html" class="code" data-type="Class">Lib.tkinter.tix.PanedWindow</a>, <a href="Lib.tkinter.tix.PopupMenu.html" class="code" data-type="Class">Lib.tkinter.tix.PopupMenu</a>, <a href="Lib.tkinter.tix.ResizeHandle.html" class="code" data-type="Class">Lib.tkinter.tix.ResizeHandle</a>, <a href="Lib.tkinter.tix.ScrolledHList.html" class="code" data-type="Class">Lib.tkinter.tix.ScrolledHList</a>, <a href="Lib.tkinter.tix.ScrolledListBox.html" class="code" data-type="Class">Lib.tkinter.tix.ScrolledListBox</a>, <a href="Lib.tkinter.tix.ScrolledText.html" class="code" data-type="Class">Lib.tkinter.tix.ScrolledText</a>, <a href="Lib.tkinter.tix.ScrolledTList.html" class="code" data-type="Class">Lib.tkinter.tix.ScrolledTList</a>, <a href="Lib.tkinter.tix.ScrolledWindow.html" class="code" data-type="Class">Lib.tkinter.tix.ScrolledWindow</a>, <a href="Lib.tkinter.tix.Select.html" class="code" data-type="Class">Lib.tkinter.tix.Select</a>, <a href="Lib.tkinter.tix.Shell.html" class="code" data-type="Class">Lib.tkinter.tix.Shell</a>, <a href="Lib.tkinter.tix.StdButtonBox.html" class="code" data-type="Class">Lib.tkinter.tix.StdButtonBox</a>, <a href="Lib.tkinter.tix.TixSubWidget.html" class="code" data-type="Class">Lib.tkinter.tix.TixSubWidget</a>, <a href="Lib.tkinter.tix.TList.html" class="code" data-type="Class">Lib.tkinter.tix.TList</a>, <a href="Lib.tkinter.tix.Tree.html" class="code" data-type="Class">Lib.tkinter.tix.Tree</a></p>
+        <p><a href="classIndex.html#Lib.tkinter.tix.TixWidget">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">A TixWidget class is used to package all (or most) Tix widgets.
+
+Widget initialization is extended in two ways:
+   1) It is possible to give a list of options which must be part of
+   the creation command (so called Tix 'static' options). These cannot be
+   given as a 'config' command later.
+   2) It is possible to give the name of an existing TK widget. These are
+   child widgets created automatically by a Tix mega-widget. The Tk call
+   to create these widgets is therefore bypassed in TixWidget.__init__
+
+Both options are for use by subclasses only.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id11227">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.TixWidget.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tkinter.tix.TixWidget.html#widgetName" class="code" data-type="Instance Variable">widgetName</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tkinter.tix.TixWidget.html#subwidget_list" class="code" data-type="Instance Variable">subwidget_list</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.TixWidget.html#__getattr__" class="code" data-type="Method">__getattr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.TixWidget.html#set_silent" class="code" data-type="Method">set_silent</a></td>
+    <td><span>Set a variable without calling its action routine</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.TixWidget.html#subwidget" class="code" data-type="Method">subwidget</a></td>
+    <td><span>Return the named subwidget (which must have been created by the sub-class).</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.TixWidget.html#subwidgets_all" class="code" data-type="Method">subwidgets_all</a></td>
+    <td><span>Return all subwidgets.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.TixWidget.html#config_all" class="code" data-type="Method">config_all</a></td>
+    <td><span>Set configuration options for all subwidgets (and self).</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.TixWidget.html#image_create" class="code" data-type="Method">image_create</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.TixWidget.html#image_delete" class="code" data-type="Method">image_delete</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.TixWidget.html#_subwidget_name" class="code" data-type="Method">_subwidget_name</a></td>
+    <td><span>Get a subwidget name (returns a String, not a Widget !)</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.TixWidget.html#_subwidget_names" class="code" data-type="Method">_subwidget_names</a></td>
+    <td><span>Return the name of all subwidgets.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.TixWidget.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, master=None, widgetName=None, static_options=None, cnf={}, kw={}):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.tkinter.tix._dummyNoteBookFrame.html" class="code" data-type="Class">Lib.tkinter.tix._dummyNoteBookFrame</a>, <a href="Lib.tkinter.tix.Balloon.html" class="code" data-type="Class">Lib.tkinter.tix.Balloon</a>, <a href="Lib.tkinter.tix.ButtonBox.html" class="code" data-type="Class">Lib.tkinter.tix.ButtonBox</a>, <a href="Lib.tkinter.tix.CheckList.html" class="code" data-type="Class">Lib.tkinter.tix.CheckList</a>, <a href="Lib.tkinter.tix.ComboBox.html" class="code" data-type="Class">Lib.tkinter.tix.ComboBox</a>, <a href="Lib.tkinter.tix.Control.html" class="code" data-type="Class">Lib.tkinter.tix.Control</a>, <a href="Lib.tkinter.tix.DialogShell.html" class="code" data-type="Class">Lib.tkinter.tix.DialogShell</a>, <a href="Lib.tkinter.tix.DirList.html" class="code" data-type="Class">Lib.tkinter.tix.DirList</a>, <a href="Lib.tkinter.tix.DirSelectBox.html" class="code" data-type="Class">Lib.tkinter.tix.DirSelectBox</a>, <a href="Lib.tkinter.tix.DirSelectDialog.html" class="code" data-type="Class">Lib.tkinter.tix.DirSelectDialog</a>, <a href="Lib.tkinter.tix.DirTree.html" class="code" data-type="Class">Lib.tkinter.tix.DirTree</a>, <a href="Lib.tkinter.tix.ExFileSelectBox.html" class="code" data-type="Class">Lib.tkinter.tix.ExFileSelectBox</a>, <a href="Lib.tkinter.tix.ExFileSelectDialog.html" class="code" data-type="Class">Lib.tkinter.tix.ExFileSelectDialog</a>, <a href="Lib.tkinter.tix.FileEntry.html" class="code" data-type="Class">Lib.tkinter.tix.FileEntry</a>, <a href="Lib.tkinter.tix.FileSelectBox.html" class="code" data-type="Class">Lib.tkinter.tix.FileSelectBox</a>, <a href="Lib.tkinter.tix.FileSelectDialog.html" class="code" data-type="Class">Lib.tkinter.tix.FileSelectDialog</a>, <a href="Lib.tkinter.tix.Grid.html" class="code" data-type="Class">Lib.tkinter.tix.Grid</a>, <a href="Lib.tkinter.tix.HList.html" class="code" data-type="Class">Lib.tkinter.tix.HList</a>, <a href="Lib.tkinter.tix.InputOnly.html" class="code" data-type="Class">Lib.tkinter.tix.InputOnly</a>, <a href="Lib.tkinter.tix.LabelEntry.html" class="code" data-type="Class">Lib.tkinter.tix.LabelEntry</a>, <a href="Lib.tkinter.tix.LabelFrame.html" class="code" data-type="Class">Lib.tkinter.tix.LabelFrame</a>, <a href="Lib.tkinter.tix.ListNoteBook.html" class="code" data-type="Class">Lib.tkinter.tix.ListNoteBook</a>, <a href="Lib.tkinter.tix.Meter.html" class="code" data-type="Class">Lib.tkinter.tix.Meter</a>, <a href="Lib.tkinter.tix.NoteBook.html" class="code" data-type="Class">Lib.tkinter.tix.NoteBook</a>, <a href="Lib.tkinter.tix.OptionMenu.html" class="code" data-type="Class">Lib.tkinter.tix.OptionMenu</a>, <a href="Lib.tkinter.tix.PanedWindow.html" class="code" data-type="Class">Lib.tkinter.tix.PanedWindow</a>, <a href="Lib.tkinter.tix.PopupMenu.html" class="code" data-type="Class">Lib.tkinter.tix.PopupMenu</a>, <a href="Lib.tkinter.tix.ResizeHandle.html" class="code" data-type="Class">Lib.tkinter.tix.ResizeHandle</a>, <a href="Lib.tkinter.tix.ScrolledHList.html" class="code" data-type="Class">Lib.tkinter.tix.ScrolledHList</a>, <a href="Lib.tkinter.tix.ScrolledListBox.html" class="code" data-type="Class">Lib.tkinter.tix.ScrolledListBox</a>, <a href="Lib.tkinter.tix.ScrolledText.html" class="code" data-type="Class">Lib.tkinter.tix.ScrolledText</a>, <a href="Lib.tkinter.tix.ScrolledTList.html" class="code" data-type="Class">Lib.tkinter.tix.ScrolledTList</a>, <a href="Lib.tkinter.tix.ScrolledWindow.html" class="code" data-type="Class">Lib.tkinter.tix.ScrolledWindow</a>, <a href="Lib.tkinter.tix.Select.html" class="code" data-type="Class">Lib.tkinter.tix.Select</a>, <a href="Lib.tkinter.tix.Shell.html" class="code" data-type="Class">Lib.tkinter.tix.Shell</a>, <a href="Lib.tkinter.tix.StdButtonBox.html" class="code" data-type="Class">Lib.tkinter.tix.StdButtonBox</a>, <a href="Lib.tkinter.tix.TixSubWidget.html" class="code" data-type="Class">Lib.tkinter.tix.TixSubWidget</a>, <a href="Lib.tkinter.tix.TList.html" class="code" data-type="Class">Lib.tkinter.tix.TList</a>, <a href="Lib.tkinter.tix.Tree.html" class="code" data-type="Class">Lib.tkinter.tix.Tree</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.tkinter.tix.TixWidget.widgetName">
+    
+  </a>
+  <a name="widgetName">
+    
+  </a>
+  <div class="functionHeader">
+    widgetName =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.tkinter.tix.TixWidget.subwidget_list">
+    
+  </a>
+  <a name="subwidget_list">
+    
+  </a>
+  <div class="functionHeader">
+    subwidget_list =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.TixWidget.__getattr__">
+    
+  </a>
+  <a name="__getattr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __getattr__(self, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.TixWidget.set_silent">
+    
+  </a>
+  <a name="set_silent">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_silent(self, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set a variable without calling its action routine</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.TixWidget.subwidget">
+    
+  </a>
+  <a name="subwidget">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    subwidget(self, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the named subwidget (which must have been created by
+the sub-class).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.TixWidget.subwidgets_all">
+    
+  </a>
+  <a name="subwidgets_all">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    subwidgets_all(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return all subwidgets.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.tkinter.tix.TixWidget._subwidget_name">
+    
+  </a>
+  <a name="_subwidget_name">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _subwidget_name(self, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get a subwidget name (returns a String, not a Widget !)</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.tkinter.tix.TixWidget._subwidget_names">
+    
+  </a>
+  <a name="_subwidget_names">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _subwidget_names(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the name of all subwidgets.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.TixWidget.config_all">
+    
+  </a>
+  <a name="config_all">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    config_all(self, option, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set configuration options for all subwidgets (and self).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.TixWidget.image_create">
+    
+  </a>
+  <a name="image_create">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    image_create(self, imgtype, cnf={}, master=None, **kw):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.TixWidget.image_delete">
+    
+  </a>
+  <a name="image_delete">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    image_delete(self, imgname):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.lib2to3.btm_utils : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.lib2to3.html" class="code" data-type="Package">lib2to3</a>.<a href="Lib.lib2to3.btm_utils.html" class="code" data-type="Module">btm_utils</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Utility functions used by the btm_matcher module</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2664">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.btm_utils.html#TYPE_ANY" class="code" data-type="Variable">TYPE_ANY</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.btm_utils.html#TYPE_ALTERNATIVES" class="code" data-type="Variable">TYPE_ALTERNATIVES</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.btm_utils.html#TYPE_GROUP" class="code" data-type="Variable">TYPE_GROUP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.lib2to3.btm_utils.MinNode.html" class="code" data-type="Class">MinNode</a></td>
+    <td><span>This class serves as an intermediate representation of the pattern tree during the conversion to sets of leaf-to-root subpatterns</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.btm_utils.html#reduce_tree" class="code" data-type="Function">reduce_tree</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.btm_utils.html#get_characteristic_subpattern" class="code" data-type="Function">get_characteristic_subpattern</a></td>
+    <td><span>Picks the most characteristic from a list of linear patterns Current order used is: names &gt; common_names &gt; common_chars</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.btm_utils.html#rec_test" class="code" data-type="Function">rec_test</a></td>
+    <td><span>Tests test_func on all items of sequence and items of included sub-iterables</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.lib2to3.btm_utils.TYPE_ANY">
+    
+  </a>
+  <a name="TYPE_ANY">
+    
+  </a>
+  <div class="functionHeader">
+    TYPE_ANY =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.btm_utils.TYPE_ALTERNATIVES">
+    
+  </a>
+  <a name="TYPE_ALTERNATIVES">
+    
+  </a>
+  <div class="functionHeader">
+    TYPE_ALTERNATIVES =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.btm_utils.TYPE_GROUP">
+    
+  </a>
+  <a name="TYPE_GROUP">
+    
+  </a>
+  <div class="functionHeader">
+    TYPE_GROUP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.btm_utils.reduce_tree">
+    
+  </a>
+  <a name="reduce_tree">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    reduce_tree(node, parent=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Internal function. Reduces a compiled pattern tree to an
+intermediate representation suitable for feeding the
+automaton. This also trims off any optional pattern elements(like
+[a], a*).</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.btm_utils.get_characteristic_subpattern">
+    
+  </a>
+  <a name="get_characteristic_subpattern">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_characteristic_subpattern(subpatterns):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Picks the most characteristic from a list of linear patterns
+Current order used is:
+names &gt; common_names &gt; common_chars</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.btm_utils.rec_test">
+    
+  </a>
+  <a name="rec_test">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    rec_test(sequence, test_func):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Tests test_func on all items of sequence and items of included
+sub-iterables</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

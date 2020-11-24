@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.test.support.threading_helper.catch_threading_exception : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.test.html" class="code" data-type="Package">test</a>.<a href="Lib.test.support.html" class="code" data-type="Package">support</a>.<a href="Lib.test.support.threading_helper.html" class="code" data-type="Module">threading_helper</a>.<a href="Lib.test.support.threading_helper.catch_threading_exception.html" class="code" data-type="Class">catch_threading_exception</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.test.support.threading_helper.catch_threading_exception:</code></p>
+        <p><a href="classIndex.html#Lib.test.support.threading_helper.catch_threading_exception">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Context manager catching threading.Thread exception using
+threading.excepthook.
+
+Attributes set when an exception is catched:
+
+* exc_type
+* exc_value
+* exc_traceback
+* thread
+
+See threading.excepthook() documentation for these attributes.
+
+These attributes are deleted at the context manager exit.
+
+Usage:
+
+    with threading_helper.catch_threading_exception() as cm:
+        # code spawning a thread which raises an exception
+        ...
+
+        # check the thread exception, use cm attributes:
+        # exc_type, exc_value, exc_traceback, thread
+        ...
+
+    # exc_type, exc_value, exc_traceback, thread attributes of cm no longer
+    # exists at this point
+    # (to avoid reference cycles)</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id4184">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.support.threading_helper.catch_threading_exception.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.support.threading_helper.catch_threading_exception.html#exc_type" class="code" data-type="Instance Variable">exc_type</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.support.threading_helper.catch_threading_exception.html#exc_value" class="code" data-type="Instance Variable">exc_value</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.support.threading_helper.catch_threading_exception.html#exc_traceback" class="code" data-type="Instance Variable">exc_traceback</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.support.threading_helper.catch_threading_exception.html#thread" class="code" data-type="Instance Variable">thread</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.support.threading_helper.catch_threading_exception.html#__enter__" class="code" data-type="Method">__enter__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.support.threading_helper.catch_threading_exception.html#__exit__" class="code" data-type="Method">__exit__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.support.threading_helper.catch_threading_exception.html#_old_hook" class="code" data-type="Instance Variable">_old_hook</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.support.threading_helper.catch_threading_exception.html#_hook" class="code" data-type="Method">_hook</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.test.support.threading_helper.catch_threading_exception.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.support.threading_helper.catch_threading_exception.exc_type">
+    
+  </a>
+  <a name="exc_type">
+    
+  </a>
+  <div class="functionHeader">
+    exc_type =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.support.threading_helper.catch_threading_exception.exc_value">
+    
+  </a>
+  <a name="exc_value">
+    
+  </a>
+  <div class="functionHeader">
+    exc_value =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.support.threading_helper.catch_threading_exception.exc_traceback">
+    
+  </a>
+  <a name="exc_traceback">
+    
+  </a>
+  <div class="functionHeader">
+    exc_traceback =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.support.threading_helper.catch_threading_exception.thread">
+    
+  </a>
+  <a name="thread">
+    
+  </a>
+  <div class="functionHeader">
+    thread =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.test.support.threading_helper.catch_threading_exception._old_hook">
+    
+  </a>
+  <a name="_old_hook">
+    
+  </a>
+  <div class="functionHeader">
+    _old_hook =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.test.support.threading_helper.catch_threading_exception._hook">
+    
+  </a>
+  <a name="_hook">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _hook(self, args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.support.threading_helper.catch_threading_exception.__enter__">
+    
+  </a>
+  <a name="__enter__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __enter__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.support.threading_helper.catch_threading_exception.__exit__">
+    
+  </a>
+  <a name="__exit__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __exit__(self, *exc_info):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

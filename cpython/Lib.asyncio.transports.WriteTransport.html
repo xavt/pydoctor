@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.asyncio.transports.WriteTransport : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.asyncio.html" class="code" data-type="Package">asyncio</a>.<a href="Lib.asyncio.transports.html" class="code" data-type="Module">transports</a>.<a href="Lib.asyncio.transports.WriteTransport.html" class="code" data-type="Class">WriteTransport</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.asyncio.transports.WriteTransport(<a href="Lib.asyncio.transports.BaseTransport.html" class="code" data-type="Class">BaseTransport</a>):</code></p><p>Known subclasses: <a href="Lib.asyncio.transports.Transport.html" class="code" data-type="Class">Lib.asyncio.transports.Transport</a></p>
+        <p><a href="classIndex.html#Lib.asyncio.transports.WriteTransport">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Interface for write-only transports.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id399">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.asyncio.transports.WriteTransport.html#__slots__" class="code" data-type="Class Variable">__slots__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.transports.WriteTransport.html#set_write_buffer_limits" class="code" data-type="Method">set_write_buffer_limits</a></td>
+    <td><span>Set the high- and low-water limits for write flow control.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.transports.WriteTransport.html#get_write_buffer_size" class="code" data-type="Method">get_write_buffer_size</a></td>
+    <td><span>Return the current size of the write buffer.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.transports.WriteTransport.html#write" class="code" data-type="Method">write</a></td>
+    <td><span>Write some data bytes to the transport.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.transports.WriteTransport.html#writelines" class="code" data-type="Method">writelines</a></td>
+    <td><span>Write a list (or any iterable) of data bytes to the transport.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.transports.WriteTransport.html#write_eof" class="code" data-type="Method">write_eof</a></td>
+    <td><span>Close the write end after flushing buffered data.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.transports.WriteTransport.html#can_write_eof" class="code" data-type="Method">can_write_eof</a></td>
+    <td><span>Return True if this transport supports write_eof(), False if not.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.transports.WriteTransport.html#abort" class="code" data-type="Method">abort</a></td>
+    <td><span>Close the transport immediately.</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.asyncio.transports.BaseTransport.html" class="code" data-type="Class">BaseTransport</a>:
+          </p>
+          <table class="children sortable" id="id400">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.transports.BaseTransport.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.transports.BaseTransport.html#get_extra_info" class="code" data-type="Method">get_extra_info</a></td>
+    <td><span>Get optional transport information.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.transports.BaseTransport.html#is_closing" class="code" data-type="Method">is_closing</a></td>
+    <td><span>Return True if the transport is closing or closed.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.transports.BaseTransport.html#close" class="code" data-type="Method">close</a></td>
+    <td><span>Close the transport.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.transports.BaseTransport.html#set_protocol" class="code" data-type="Method">set_protocol</a></td>
+    <td><span>Set a new protocol.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.transports.BaseTransport.html#get_protocol" class="code" data-type="Method">get_protocol</a></td>
+    <td><span>Return the current protocol.</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.transports.BaseTransport.html#_extra" class="code" data-type="Instance Variable">_extra</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.asyncio.transports.WriteTransport.__slots__">
+    
+  </a>
+  <a name="__slots__">
+    
+  </a>
+  <div class="functionHeader">
+    __slots__ =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.asyncio.transports.BaseTransport.html#__slots__" class="code" data-type="Class Variable">Lib.asyncio.transports.BaseTransport.__slots__</a></div><div class="interfaceinfo">overridden in <a href="Lib.asyncio.transports.Transport.html" class="code" data-type="Class">Lib.asyncio.transports.Transport</a></div>
+    <div class="undocumented">Undocumented</div> (type: <code>Tuple</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.transports.WriteTransport.set_write_buffer_limits">
+    
+  </a>
+  <a name="set_write_buffer_limits">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_write_buffer_limits(self, high=None, low=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.asyncio.transports._FlowControlMixin.html" class="code" data-type="Class">Lib.asyncio.transports._FlowControlMixin</a></div>
+    
+    <div><p class="pre">Set the high- and low-water limits for write flow control.
+
+These two values control when to call the protocol's
+pause_writing() and resume_writing() methods.  If specified,
+the low-water limit must be less than or equal to the
+high-water limit.  Neither value can be negative.
+
+The defaults are implementation-specific.  If only the
+high-water limit is given, the low-water limit defaults to an
+implementation-specific value less than or equal to the
+high-water limit.  Setting high to zero forces low to zero as
+well, and causes pause_writing() to be called whenever the
+buffer becomes non-empty.  Setting low to zero causes
+resume_writing() to be called only once the buffer is empty.
+Use of zero for either limit is generally sub-optimal as it
+reduces opportunities for doing I/O and computation
+concurrently.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.transports.WriteTransport.get_write_buffer_size">
+    
+  </a>
+  <a name="get_write_buffer_size">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_write_buffer_size(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.asyncio.transports._FlowControlMixin.html" class="code" data-type="Class">Lib.asyncio.transports._FlowControlMixin</a></div>
+    
+    <div><p class="pre">Return the current size of the write buffer.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.transports.WriteTransport.write">
+    
+  </a>
+  <a name="write">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    write(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Write some data bytes to the transport.
+
+This does not block; it buffers the data and arranges for it
+to be sent out asynchronously.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.transports.WriteTransport.writelines">
+    
+  </a>
+  <a name="writelines">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    writelines(self, list_of_data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Write a list (or any iterable) of data bytes to the transport.
+
+The default implementation concatenates the arguments and
+calls write() on the result.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.transports.WriteTransport.write_eof">
+    
+  </a>
+  <a name="write_eof">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    write_eof(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Close the write end after flushing buffered data.
+
+(This is like typing ^D into a UNIX program reading from stdin.)
+
+Data may still be received.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.transports.WriteTransport.can_write_eof">
+    
+  </a>
+  <a name="can_write_eof">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    can_write_eof(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True if this transport supports write_eof(), False if not.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.transports.WriteTransport.abort">
+    
+  </a>
+  <a name="abort">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    abort(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Close the transport immediately.
+
+Buffered data will be lost.  No more data will be received.
+The protocol's connection_lost() method will (eventually) be
+called with None as its argument.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

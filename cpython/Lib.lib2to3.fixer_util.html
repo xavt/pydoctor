@@ -1,0 +1,1040 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.lib2to3.fixer_util : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.lib2to3.html" class="code" data-type="Package">lib2to3</a>.<a href="Lib.lib2to3.fixer_util.html" class="code" data-type="Module">fixer_util</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Utility functions, node construction macros, etc.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2670">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#KeywordArg" class="code" data-type="Function">KeywordArg</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#LParen" class="code" data-type="Function">LParen</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#RParen" class="code" data-type="Function">RParen</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#Assign" class="code" data-type="Function">Assign</a></td>
+    <td><span>Build an assignment statement</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#Name" class="code" data-type="Function">Name</a></td>
+    <td><span>Return a NAME leaf</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#Attr" class="code" data-type="Function">Attr</a></td>
+    <td><span>A node tuple for obj.attr</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#Comma" class="code" data-type="Function">Comma</a></td>
+    <td><span>A comma leaf</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#Dot" class="code" data-type="Function">Dot</a></td>
+    <td><span>A period (.) leaf</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#ArgList" class="code" data-type="Function">ArgList</a></td>
+    <td><span>A parenthesised argument list, used by Call()</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#Call" class="code" data-type="Function">Call</a></td>
+    <td><span>A function call</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#Newline" class="code" data-type="Function">Newline</a></td>
+    <td><span>A newline literal</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#BlankLine" class="code" data-type="Function">BlankLine</a></td>
+    <td><span>A blank line</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#Number" class="code" data-type="Function">Number</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#Subscript" class="code" data-type="Function">Subscript</a></td>
+    <td><span>A numeric or string subscript</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#String" class="code" data-type="Function">String</a></td>
+    <td><span>A string leaf</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#ListComp" class="code" data-type="Function">ListComp</a></td>
+    <td><span>A list comprehension of the form [xp for fp in it if test].</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#FromImport" class="code" data-type="Function">FromImport</a></td>
+    <td><span>Return an import statement in the form: from package import name_leafs</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#ImportAndCall" class="code" data-type="Function">ImportAndCall</a></td>
+    <td><span>Returns an import statement and calls a method of the module:</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#is_tuple" class="code" data-type="Function">is_tuple</a></td>
+    <td><span>Does the node represent a tuple literal?</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#is_list" class="code" data-type="Function">is_list</a></td>
+    <td><span>Does the node represent a list literal?</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#parenthesize" class="code" data-type="Function">parenthesize</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#consuming_calls" class="code" data-type="Variable">consuming_calls</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#attr_chain" class="code" data-type="Function">attr_chain</a></td>
+    <td><span>Follow an attribute chain.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#p0" class="code" data-type="Variable">p0</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#p1" class="code" data-type="Variable">p1</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#p2" class="code" data-type="Variable">p2</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#pats_built" class="code" data-type="Variable">pats_built</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#in_special_context" class="code" data-type="Function">in_special_context</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#is_probably_builtin" class="code" data-type="Function">is_probably_builtin</a></td>
+    <td><span>Check that something isn't an attribute or function name etc.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#find_indentation" class="code" data-type="Function">find_indentation</a></td>
+    <td><span>Find the indentation of *node*.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#make_suite" class="code" data-type="Function">make_suite</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#find_root" class="code" data-type="Function">find_root</a></td>
+    <td><span>Find the top level namespace.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#does_tree_import" class="code" data-type="Function">does_tree_import</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#is_import" class="code" data-type="Function">is_import</a></td>
+    <td><span>Returns true if the node is an import statement.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#touch_import" class="code" data-type="Function">touch_import</a></td>
+    <td><span>Works like `does_tree_import` but adds an import statement if it was not imported.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#find_binding" class="code" data-type="Function">find_binding</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#_def_syms" class="code" data-type="Variable">_def_syms</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#_block_syms" class="code" data-type="Variable">_block_syms</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#_find" class="code" data-type="Function">_find</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixer_util.html#_is_import_binding" class="code" data-type="Function">_is_import_binding</a></td>
+    <td><span>Will return node if node will import name, or node will import * from package.  None is returned otherwise. See test cases for examples.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixer_util.KeywordArg">
+    
+  </a>
+  <a name="KeywordArg">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    KeywordArg(keyword, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixer_util.LParen">
+    
+  </a>
+  <a name="LParen">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    LParen():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixer_util.RParen">
+    
+  </a>
+  <a name="RParen">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    RParen():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixer_util.Assign">
+    
+  </a>
+  <a name="Assign">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    Assign(target, source):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Build an assignment statement</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixer_util.Name">
+    
+  </a>
+  <a name="Name">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    Name(name, prefix=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a NAME leaf</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixer_util.Attr">
+    
+  </a>
+  <a name="Attr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    Attr(obj, attr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">A node tuple for obj.attr</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixer_util.Comma">
+    
+  </a>
+  <a name="Comma">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    Comma():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">A comma leaf</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixer_util.Dot">
+    
+  </a>
+  <a name="Dot">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    Dot():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">A period (.) leaf</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixer_util.ArgList">
+    
+  </a>
+  <a name="ArgList">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ArgList(args, lparen=LParen(), rparen=RParen()):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">A parenthesised argument list, used by Call()</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixer_util.Call">
+    
+  </a>
+  <a name="Call">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    Call(func_name, args=None, prefix=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">A function call</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixer_util.Newline">
+    
+  </a>
+  <a name="Newline">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    Newline():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">A newline literal</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixer_util.BlankLine">
+    
+  </a>
+  <a name="BlankLine">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    BlankLine():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">A blank line</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixer_util.Number">
+    
+  </a>
+  <a name="Number">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    Number(n, prefix=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixer_util.Subscript">
+    
+  </a>
+  <a name="Subscript">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    Subscript(index_node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">A numeric or string subscript</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixer_util.String">
+    
+  </a>
+  <a name="String">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    String(string, prefix=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">A string leaf</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixer_util.ListComp">
+    
+  </a>
+  <a name="ListComp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ListComp(xp, fp, it, test=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">A list comprehension of the form [xp for fp in it if test].
+
+If test is None, the "if test" part is omitted.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixer_util.FromImport">
+    
+  </a>
+  <a name="FromImport">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    FromImport(package_name, name_leafs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return an import statement in the form:
+from package import name_leafs</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixer_util.ImportAndCall">
+    
+  </a>
+  <a name="ImportAndCall">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ImportAndCall(node, results, names):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns an import statement and calls a method
+of the module:
+
+import module
+module.name()</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixer_util.is_tuple">
+    
+  </a>
+  <a name="is_tuple">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_tuple(node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Does the node represent a tuple literal?</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixer_util.is_list">
+    
+  </a>
+  <a name="is_list">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_list(node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Does the node represent a list literal?</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixer_util.parenthesize">
+    
+  </a>
+  <a name="parenthesize">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parenthesize(node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.fixer_util.consuming_calls">
+    
+  </a>
+  <a name="consuming_calls">
+    
+  </a>
+  <div class="functionHeader">
+    consuming_calls =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Set[str]</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixer_util.attr_chain">
+    
+  </a>
+  <a name="attr_chain">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    attr_chain(obj, attr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Follow an attribute chain.
+
+If you have a chain of objects where a.foo -&gt; b, b.foo-&gt; c, etc,
+use this to iterate over all objects in the chain. Iteration is
+terminated by getattr(x, attr) is None.
+
+Args:
+    obj: the starting object
+    attr: the name of the chaining attribute
+
+Yields:
+    Each successive object in the chain.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.fixer_util.p0">
+    
+  </a>
+  <a name="p0">
+    
+  </a>
+  <div class="functionHeader">
+    p0 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.fixer_util.p1">
+    
+  </a>
+  <a name="p1">
+    
+  </a>
+  <div class="functionHeader">
+    p1 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.fixer_util.p2">
+    
+  </a>
+  <a name="p2">
+    
+  </a>
+  <div class="functionHeader">
+    p2 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.fixer_util.pats_built">
+    
+  </a>
+  <a name="pats_built">
+    
+  </a>
+  <div class="functionHeader">
+    pats_built =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixer_util.in_special_context">
+    
+  </a>
+  <a name="in_special_context">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    in_special_context(node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns true if node is in an environment where all that is required
+of it is being iterable (ie, it doesn't matter if it returns a list
+or an iterator).
+See test_map_nochange in test_fixers.py for some examples and tests.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixer_util.is_probably_builtin">
+    
+  </a>
+  <a name="is_probably_builtin">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_probably_builtin(node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Check that something isn't an attribute or function name etc.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixer_util.find_indentation">
+    
+  </a>
+  <a name="find_indentation">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    find_indentation(node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Find the indentation of *node*.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixer_util.make_suite">
+    
+  </a>
+  <a name="make_suite">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    make_suite(node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixer_util.find_root">
+    
+  </a>
+  <a name="find_root">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    find_root(node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Find the top level namespace.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixer_util.does_tree_import">
+    
+  </a>
+  <a name="does_tree_import">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    does_tree_import(package, name, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns true if name is imported from package at the
+top level of the tree which node belongs to.
+To cover the case of an import like 'import foo', use
+None for the package and 'foo' for the name. </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixer_util.is_import">
+    
+  </a>
+  <a name="is_import">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_import(node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns true if the node is an import statement.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixer_util.touch_import">
+    
+  </a>
+  <a name="touch_import">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    touch_import(package, name, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Works like `does_tree_import` but adds an import statement
+if it was not imported. </p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.lib2to3.fixer_util._def_syms">
+    
+  </a>
+  <a name="_def_syms">
+    
+  </a>
+  <div class="functionHeader">
+    _def_syms =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixer_util.find_binding">
+    
+  </a>
+  <a name="find_binding">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    find_binding(name, node, package=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns the node which binds variable name, otherwise None.
+If optional argument package is supplied, only imports will
+be returned.
+See test cases for examples.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.lib2to3.fixer_util._block_syms">
+    
+  </a>
+  <a name="_block_syms">
+    
+  </a>
+  <div class="functionHeader">
+    _block_syms =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.lib2to3.fixer_util._find">
+    
+  </a>
+  <a name="_find">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _find(name, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.lib2to3.fixer_util._is_import_binding">
+    
+  </a>
+  <a name="_is_import_binding">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _is_import_binding(node, name, package=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Will return node if node will import name, or node
+will import * from package.  None is returned otherwise.
+See test cases for examples. </p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

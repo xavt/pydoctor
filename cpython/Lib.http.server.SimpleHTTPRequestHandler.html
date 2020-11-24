@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.http.server.SimpleHTTPRequestHandler : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.http.html" class="code" data-type="Package">http</a>.<a href="Lib.http.server.html" class="code" data-type="Module">server</a>.<a href="Lib.http.server.SimpleHTTPRequestHandler.html" class="code" data-type="Class">SimpleHTTPRequestHandler</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.http.server.SimpleHTTPRequestHandler(<a href="Lib.http.server.BaseHTTPRequestHandler.html" class="code" data-type="Class">BaseHTTPRequestHandler</a>):</code></p><p>Known subclasses: <a href="Lib.http.server.CGIHTTPRequestHandler.html" class="code" data-type="Class">Lib.http.server.CGIHTTPRequestHandler</a></p>
+        <p><a href="classIndex.html#Lib.http.server.SimpleHTTPRequestHandler">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Simple HTTP request handler with GET and HEAD commands.
+
+This serves files from the current directory and any of its
+subdirectories.  The MIME type for files is determined by
+calling the .guess_type() method.
+
+The GET and HEAD requests are identical except that the HEAD
+request omits the actual contents of the file.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2027">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.http.server.SimpleHTTPRequestHandler.html#server_version" class="code" data-type="Class Variable">server_version</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.http.server.SimpleHTTPRequestHandler.html#extensions_map" class="code" data-type="Class Variable">extensions_map</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.SimpleHTTPRequestHandler.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.http.server.SimpleHTTPRequestHandler.html#directory" class="code" data-type="Instance Variable">directory</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.SimpleHTTPRequestHandler.html#do_GET" class="code" data-type="Method">do_GET</a></td>
+    <td><span>Serve a GET request.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.SimpleHTTPRequestHandler.html#do_HEAD" class="code" data-type="Method">do_HEAD</a></td>
+    <td><span>Serve a HEAD request.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.SimpleHTTPRequestHandler.html#send_head" class="code" data-type="Method">send_head</a></td>
+    <td><span>Common code for GET and HEAD commands.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.SimpleHTTPRequestHandler.html#list_directory" class="code" data-type="Method">list_directory</a></td>
+    <td><span>Helper to produce a directory listing (absent index.html).</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.SimpleHTTPRequestHandler.html#translate_path" class="code" data-type="Method">translate_path</a></td>
+    <td><span>Translate a /-separated PATH to the local filename syntax.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.SimpleHTTPRequestHandler.html#copyfile" class="code" data-type="Method">copyfile</a></td>
+    <td><span>Copy all data between two file objects.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.SimpleHTTPRequestHandler.html#guess_type" class="code" data-type="Method">guess_type</a></td>
+    <td><span>Guess the type of a file.</span></td>
+  </tr><tr class="classvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.http.server.SimpleHTTPRequestHandler.html#_encodings_map_default" class="code" data-type="Class Variable">_encodings_map_default</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.http.server.BaseHTTPRequestHandler.html" class="code" data-type="Class">BaseHTTPRequestHandler</a>:
+          </p>
+          <table class="children sortable" id="id2028">
+  
+  <tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#sys_version" class="code" data-type="Class Variable">sys_version</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#default_request_version" class="code" data-type="Class Variable">default_request_version</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#parse_request" class="code" data-type="Method">parse_request</a></td>
+    <td><span>Parse a request (internal).</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#command" class="code" data-type="Instance Variable">command</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#request_version" class="code" data-type="Instance Variable">request_version</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#close_connection" class="code" data-type="Instance Variable">close_connection</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#requestline" class="code" data-type="Instance Variable">requestline</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#path" class="code" data-type="Instance Variable">path</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#headers" class="code" data-type="Instance Variable">headers</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#handle_expect_100" class="code" data-type="Method">handle_expect_100</a></td>
+    <td><span>Decide what to do with an "Expect: 100-continue" header.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#handle_one_request" class="code" data-type="Method">handle_one_request</a></td>
+    <td><span>Handle a single HTTP request.</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#raw_requestline" class="code" data-type="Instance Variable">raw_requestline</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#handle" class="code" data-type="Method">handle</a></td>
+    <td><span>Handle multiple requests if necessary.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#send_error" class="code" data-type="Method">send_error</a></td>
+    <td><span>Send and log an error reply.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#send_response" class="code" data-type="Method">send_response</a></td>
+    <td><span>Add the response header to the headers buffer and log the response code.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#send_response_only" class="code" data-type="Method">send_response_only</a></td>
+    <td><span>Send the response header only.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#send_header" class="code" data-type="Method">send_header</a></td>
+    <td><span>Send a MIME header to the headers buffer.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#end_headers" class="code" data-type="Method">end_headers</a></td>
+    <td><span>Send the blank line ending the MIME headers.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#flush_headers" class="code" data-type="Method">flush_headers</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#log_request" class="code" data-type="Method">log_request</a></td>
+    <td><span>Log an accepted request.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#log_error" class="code" data-type="Method">log_error</a></td>
+    <td><span>Log an error.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#log_message" class="code" data-type="Method">log_message</a></td>
+    <td><span>Log an arbitrary message.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#version_string" class="code" data-type="Method">version_string</a></td>
+    <td><span>Return the server software version string.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#date_time_string" class="code" data-type="Method">date_time_string</a></td>
+    <td><span>Return the current date and time formatted for a message header.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#log_date_time_string" class="code" data-type="Method">log_date_time_string</a></td>
+    <td><span>Return the current time formatted for logging.</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#weekdayname" class="code" data-type="Class Variable">weekdayname</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#monthname" class="code" data-type="Class Variable">monthname</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#address_string" class="code" data-type="Method">address_string</a></td>
+    <td><span>Return the client address.</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#protocol_version" class="code" data-type="Class Variable">protocol_version</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#responses" class="code" data-type="Class Variable">responses</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#_headers_buffer" class="code" data-type="Instance Variable">_headers_buffer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.http.server.SimpleHTTPRequestHandler.server_version">
+    
+  </a>
+  <a name="server_version">
+    
+  </a>
+  <div class="functionHeader">
+    server_version =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.http.server.BaseHTTPRequestHandler.html#server_version" class="code" data-type="Class Variable">Lib.http.server.BaseHTTPRequestHandler.server_version</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.http.server.SimpleHTTPRequestHandler.extensions_map">
+    
+  </a>
+  <a name="extensions_map">
+    
+  </a>
+  <div class="functionHeader">
+    extensions_map =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict[str, str]</code>)
+  </div>
+</div><div class="baseclassvariable private">
+  
+  <a name="Lib.http.server.SimpleHTTPRequestHandler._encodings_map_default">
+    
+  </a>
+  <a name="_encodings_map_default">
+    
+  </a>
+  <div class="functionHeader">
+    _encodings_map_default =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict[str, str]</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.server.SimpleHTTPRequestHandler.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.http.server.SimpleHTTPRequestHandler.directory">
+    
+  </a>
+  <a name="directory">
+    
+  </a>
+  <div class="functionHeader">
+    directory =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.server.SimpleHTTPRequestHandler.do_GET">
+    
+  </a>
+  <a name="do_GET">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    do_GET(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Serve a GET request.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.server.SimpleHTTPRequestHandler.do_HEAD">
+    
+  </a>
+  <a name="do_HEAD">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    do_HEAD(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Serve a HEAD request.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.server.SimpleHTTPRequestHandler.send_head">
+    
+  </a>
+  <a name="send_head">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    send_head(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.http.server.CGIHTTPRequestHandler.html" class="code" data-type="Class">Lib.http.server.CGIHTTPRequestHandler</a></div>
+    
+    <div><p class="pre">Common code for GET and HEAD commands.
+
+This sends the response code and MIME headers.
+
+Return value is either a file object (which has to be copied
+to the outputfile by the caller unless the command was HEAD,
+and must be closed by the caller under all circumstances), or
+None, in which case the caller has nothing further to do.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.server.SimpleHTTPRequestHandler.list_directory">
+    
+  </a>
+  <a name="list_directory">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    list_directory(self, path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Helper to produce a directory listing (absent index.html).
+
+Return value is either a file object, or None (indicating an
+error).  In either case, the headers are sent, making the
+interface the same as for send_head().</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.server.SimpleHTTPRequestHandler.translate_path">
+    
+  </a>
+  <a name="translate_path">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    translate_path(self, path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Translate a /-separated PATH to the local filename syntax.
+
+Components that mean special things to the local file system
+(e.g. drive or directory names) are ignored.  (XXX They should
+probably be diagnosed.)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.server.SimpleHTTPRequestHandler.copyfile">
+    
+  </a>
+  <a name="copyfile">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    copyfile(self, source, outputfile):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Copy all data between two file objects.
+
+The SOURCE argument is a file object open for reading
+(or anything with a read() method) and the DESTINATION
+argument is a file object open for writing (or
+anything with a write() method).
+
+The only reason for overriding this would be to change
+the block size or perhaps to replace newlines by CRLF
+-- note however that this the default server uses this
+to copy binary data as well.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.server.SimpleHTTPRequestHandler.guess_type">
+    
+  </a>
+  <a name="guess_type">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    guess_type(self, path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Guess the type of a file.
+
+Argument is a PATH (a filename).
+
+Return value is a string of the form type/subtype,
+usable for a MIME Content-type header.
+
+The default implementation looks the file's extension
+up in the table self.extensions_map, using application/octet-stream
+as a default; however it would be permissible (if
+slow) to look inside the data to make a better guess.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

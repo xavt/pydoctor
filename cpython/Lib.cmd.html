@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.cmd : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.cmd.html" class="code" data-type="Module">cmd</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">A generic class to build line-oriented command interpreters.
+
+Interpreters constructed with this class obey the following conventions:
+
+1. End of file on input is processed as the command 'EOF'.
+2. A command is parsed out of each line by collecting the prefix composed
+   of characters in the identchars member.
+3. A command `foo' is dispatched to a method 'do_foo()'; the do_ method
+   is passed a single argument consisting of the remainder of the line.
+4. Typing an empty line repeats the last command.  (Actually, it calls the
+   method `emptyline', which may be overridden in a subclass.)
+5. There is a predefined `help' method.  Given an argument `topic', it
+   calls the command `help_topic'.  With no arguments, it lists all topics
+   with defined help_ functions, broken into up to three topics; documented
+   commands, miscellaneous help topics, and undocumented commands.
+6. The command '?' is a synonym for `help'.  The command '!' is a synonym
+   for `shell', if a do_shell method exists.
+7. If completion is enabled, completing commands will be done automatically,
+   and completing of commands args is done by calling complete_foo() with
+   arguments text, line, begidx, endidx.  text is string we are matching
+   against, all returned matches must begin with it.  line is the current
+   input line (lstripped), begidx and endidx are the beginning and end
+   indexes of the text being matched, which could be used to provide
+   different completion depending upon which position the argument is in.
+
+The `default' method may be overridden to intercept commands for which there
+is no do_ method.
+
+The `completedefault' method may be overridden to intercept completions for
+commands that have no complete_ method.
+
+The data member `self.ruler' sets the character used to draw separator lines
+in the help messages.  If empty, no ruler line is drawn.  It defaults to "=".
+
+If the value of `self.intro' is nonempty when the cmdloop method is called,
+it is printed out on interpreter startup.  This value may be overridden
+via an optional argument to the cmdloop() method.
+
+The data members `self.doc_header', `self.misc_header', and
+`self.undoc_header' set the headers used for the help function's
+listings of documented functions, miscellaneous topics, and undocumented
+functions respectively.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id498">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.cmd.html#PROMPT" class="code" data-type="Variable">PROMPT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.cmd.html#IDENTCHARS" class="code" data-type="Variable">IDENTCHARS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.cmd.Cmd.html" class="code" data-type="Class">Cmd</a></td>
+    <td><span>A simple framework for writing line-oriented command interpreters.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.cmd.PROMPT">
+    
+  </a>
+  <a name="PROMPT">
+    
+  </a>
+  <div class="functionHeader">
+    PROMPT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.cmd.IDENTCHARS">
+    
+  </a>
+  <a name="IDENTCHARS">
+    
+  </a>
+  <div class="functionHeader">
+    IDENTCHARS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

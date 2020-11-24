@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.asyncio.streams.StreamReaderProtocol : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.asyncio.html" class="code" data-type="Package">asyncio</a>.<a href="Lib.asyncio.streams.html" class="code" data-type="Module">streams</a>.<a href="Lib.asyncio.streams.StreamReaderProtocol.html" class="code" data-type="Class">StreamReaderProtocol</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.asyncio.streams.StreamReaderProtocol(<a href="Lib.asyncio.streams.FlowControlMixin.html" class="code" data-type="Class">FlowControlMixin</a>, <span title="protocols.Protocol">protocols.Protocol</span>):</code></p>
+        <p><a href="classIndex.html#Lib.asyncio.streams.StreamReaderProtocol">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Helper class to adapt between Protocol and StreamReader.
+
+(This is a helper class instead of making StreamReader itself a
+Protocol subclass, because the StreamReader has other potential
+uses, and to prevent the user of the StreamReader to accidentally
+call inappropriate methods of the protocol.)</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id384">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.streams.StreamReaderProtocol.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.streams.StreamReaderProtocol.html#connection_made" class="code" data-type="Method">connection_made</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.streams.StreamReaderProtocol.html#connection_lost" class="code" data-type="Method">connection_lost</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.streams.StreamReaderProtocol.html#data_received" class="code" data-type="Method">data_received</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.streams.StreamReaderProtocol.html#eof_received" class="code" data-type="Method">eof_received</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.streams.StreamReaderProtocol.html#__del__" class="code" data-type="Method">__del__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.streams.StreamReaderProtocol.html#_source_traceback" class="code" data-type="Instance Variable">_source_traceback</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.streams.StreamReaderProtocol.html#_stream_reader_wr" class="code" data-type="Instance Variable">_stream_reader_wr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.streams.StreamReaderProtocol.html#_strong_reader" class="code" data-type="Instance Variable">_strong_reader</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.streams.StreamReaderProtocol.html#_reject_connection" class="code" data-type="Instance Variable">_reject_connection</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.streams.StreamReaderProtocol.html#_stream_writer" class="code" data-type="Instance Variable">_stream_writer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.streams.StreamReaderProtocol.html#_transport" class="code" data-type="Instance Variable">_transport</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.streams.StreamReaderProtocol.html#_client_connected_cb" class="code" data-type="Instance Variable">_client_connected_cb</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.streams.StreamReaderProtocol.html#_over_ssl" class="code" data-type="Instance Variable">_over_ssl</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.streams.StreamReaderProtocol.html#_closed" class="code" data-type="Instance Variable">_closed</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.streams.StreamReaderProtocol.html#_stream_reader" class="code" data-type="Method">_stream_reader</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.streams.StreamReaderProtocol.html#_get_close_waiter" class="code" data-type="Method">_get_close_waiter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.asyncio.streams.FlowControlMixin.html" class="code" data-type="Class">FlowControlMixin</a>:
+          </p>
+          <table class="children sortable" id="id385">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.streams.FlowControlMixin.html#pause_writing" class="code" data-type="Method">pause_writing</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.streams.FlowControlMixin.html#resume_writing" class="code" data-type="Method">resume_writing</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.asyncio.streams.FlowControlMixin.html#waiter" class="code" data-type="Class Variable">waiter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.streams.FlowControlMixin.html#_loop" class="code" data-type="Instance Variable">_loop</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.streams.FlowControlMixin.html#_paused" class="code" data-type="Instance Variable">_paused</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.streams.FlowControlMixin.html#_drain_waiter" class="code" data-type="Instance Variable">_drain_waiter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.streams.FlowControlMixin.html#_connection_lost" class="code" data-type="Instance Variable">_connection_lost</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.streams.StreamReaderProtocol._source_traceback">
+    
+  </a>
+  <a name="_source_traceback">
+    
+  </a>
+  <div class="functionHeader">
+    _source_traceback =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.streams.StreamReaderProtocol.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, stream_reader, client_connected_cb=None, loop=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.asyncio.streams.FlowControlMixin.html#__init__" class="code" data-type="Method">Lib.asyncio.streams.FlowControlMixin.__init__</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.streams.StreamReaderProtocol._stream_reader_wr">
+    
+  </a>
+  <a name="_stream_reader_wr">
+    
+  </a>
+  <div class="functionHeader">
+    _stream_reader_wr =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.streams.StreamReaderProtocol._strong_reader">
+    
+  </a>
+  <a name="_strong_reader">
+    
+  </a>
+  <div class="functionHeader">
+    _strong_reader =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.streams.StreamReaderProtocol._reject_connection">
+    
+  </a>
+  <a name="_reject_connection">
+    
+  </a>
+  <div class="functionHeader">
+    _reject_connection =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.streams.StreamReaderProtocol._stream_writer">
+    
+  </a>
+  <a name="_stream_writer">
+    
+  </a>
+  <div class="functionHeader">
+    _stream_writer =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.streams.StreamReaderProtocol._transport">
+    
+  </a>
+  <a name="_transport">
+    
+  </a>
+  <div class="functionHeader">
+    _transport =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.streams.StreamReaderProtocol._client_connected_cb">
+    
+  </a>
+  <a name="_client_connected_cb">
+    
+  </a>
+  <div class="functionHeader">
+    _client_connected_cb =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.streams.StreamReaderProtocol._over_ssl">
+    
+  </a>
+  <a name="_over_ssl">
+    
+  </a>
+  <div class="functionHeader">
+    _over_ssl =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.streams.StreamReaderProtocol._closed">
+    
+  </a>
+  <a name="_closed">
+    
+  </a>
+  <div class="functionHeader">
+    _closed =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.asyncio.streams.StreamReaderProtocol._stream_reader">
+    
+  </a>
+  <a name="_stream_reader">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    _stream_reader(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.streams.StreamReaderProtocol.connection_made">
+    
+  </a>
+  <a name="connection_made">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    connection_made(self, transport):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.streams.StreamReaderProtocol.connection_lost">
+    
+  </a>
+  <a name="connection_lost">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    connection_lost(self, exc):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.asyncio.streams.FlowControlMixin.html#connection_lost" class="code" data-type="Method">Lib.asyncio.streams.FlowControlMixin.connection_lost</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.streams.StreamReaderProtocol.data_received">
+    
+  </a>
+  <a name="data_received">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    data_received(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.streams.StreamReaderProtocol.eof_received">
+    
+  </a>
+  <a name="eof_received">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    eof_received(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.asyncio.streams.StreamReaderProtocol._get_close_waiter">
+    
+  </a>
+  <a name="_get_close_waiter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_close_waiter(self, stream):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.asyncio.streams.FlowControlMixin.html#_get_close_waiter" class="code" data-type="Method">Lib.asyncio.streams.FlowControlMixin._get_close_waiter</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.streams.StreamReaderProtocol.__del__">
+    
+  </a>
+  <a name="__del__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __del__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

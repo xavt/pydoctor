@@ -1,0 +1,1292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.pathlib.PurePath : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.pathlib.html" class="code" data-type="Module">pathlib</a>.<a href="Lib.pathlib.PurePath.html" class="code" data-type="Class">PurePath</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.pathlib.PurePath(<span title="object">object</span>):</code></p><p>Known subclasses: <a href="Lib.pathlib.Path.html" class="code" data-type="Class">Lib.pathlib.Path</a>, <a href="Lib.pathlib.PurePosixPath.html" class="code" data-type="Class">Lib.pathlib.PurePosixPath</a>, <a href="Lib.pathlib.PureWindowsPath.html" class="code" data-type="Class">Lib.pathlib.PureWindowsPath</a></p>
+        <p><a href="classIndex.html#Lib.pathlib.PurePath">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Base class for manipulating paths without I/O.
+
+PurePath represents a filesystem path and offers operations which
+don't imply any actual filesystem I/O.  Depending on your system,
+instantiating a PurePath will return either a PurePosixPath or a
+PureWindowsPath object.  You can also instantiate either of these classes
+directly, regardless of your system.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3354">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.pathlib.PurePath.html#__slots__" class="code" data-type="Class Variable">__slots__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#__new__" class="code" data-type="Method">__new__</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#__reduce__" class="code" data-type="Method">__reduce__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#__str__" class="code" data-type="Method">__str__</a></td>
+    <td><span>Return the string representation of the path, suitable for passing to system calls.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#__fspath__" class="code" data-type="Method">__fspath__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#as_posix" class="code" data-type="Method">as_posix</a></td>
+    <td><span>Return the string representation of the path with forward (/) slashes.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#__bytes__" class="code" data-type="Method">__bytes__</a></td>
+    <td><span>Return the bytes representation of the path.  This is only recommended to use under Unix.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#as_uri" class="code" data-type="Method">as_uri</a></td>
+    <td><span>Return the path as a 'file' URI.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#__eq__" class="code" data-type="Method">__eq__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#__hash__" class="code" data-type="Method">__hash__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#__lt__" class="code" data-type="Method">__lt__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#__le__" class="code" data-type="Method">__le__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#__gt__" class="code" data-type="Method">__gt__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#__ge__" class="code" data-type="Method">__ge__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#__class_getitem__" class="code" data-type="Method">__class_getitem__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.pathlib.PurePath.html#drive" class="code" data-type="Class Variable">drive</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.pathlib.PurePath.html#root" class="code" data-type="Class Variable">root</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#anchor" class="code" data-type="Method">anchor</a></td>
+    <td><span>The concatenation of the drive and root, or ''.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#name" class="code" data-type="Method">name</a></td>
+    <td><span>The final path component, if any.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#suffix" class="code" data-type="Method">suffix</a></td>
+    <td><span>The final component's last suffix, if any.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#suffixes" class="code" data-type="Method">suffixes</a></td>
+    <td><span>A list of the final component's suffixes, if any.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#stem" class="code" data-type="Method">stem</a></td>
+    <td><span>The final path component, minus its last suffix.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#with_name" class="code" data-type="Method">with_name</a></td>
+    <td><span>Return a new path with the file name changed.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#with_stem" class="code" data-type="Method">with_stem</a></td>
+    <td><span>Return a new path with the stem changed.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#with_suffix" class="code" data-type="Method">with_suffix</a></td>
+    <td><span>Return a new path with the file suffix changed.  If the path has no suffix, add given suffix.  If the given suffix is an empty string, remove the suffix from the path.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#relative_to" class="code" data-type="Method">relative_to</a></td>
+    <td><span>Return the relative path to another path identified by the passed arguments.  If the operation is not possible (because this is not a subpath of the other path), raise ValueError.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#is_relative_to" class="code" data-type="Method">is_relative_to</a></td>
+    <td><span>Return True if the path is relative to another path or False.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#parts" class="code" data-type="Method">parts</a></td>
+    <td><span>An object providing sequence-like access to the components in the filesystem path.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#joinpath" class="code" data-type="Method">joinpath</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#__truediv__" class="code" data-type="Method">__truediv__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#__rtruediv__" class="code" data-type="Method">__rtruediv__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#parent" class="code" data-type="Method">parent</a></td>
+    <td><span>The logical parent of the path.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#parents" class="code" data-type="Method">parents</a></td>
+    <td><span>A sequence of this path's logical parents.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#is_absolute" class="code" data-type="Method">is_absolute</a></td>
+    <td><span>True if the path is absolute (has both a root and, if applicable, a drive).</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#is_reserved" class="code" data-type="Method">is_reserved</a></td>
+    <td><span>Return True if the path contains one of the special names reserved by the system, if any.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#match" class="code" data-type="Method">match</a></td>
+    <td><span>Return True if this path matches the given pattern.</span></td>
+  </tr><tr class="classmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#_parse_args" class="code" data-type="Class Method">_parse_args</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#_from_parts" class="code" data-type="Class Method">_from_parts</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.pathlib.PurePath.html#_drv" class="code" data-type="Instance Variable">_drv</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.pathlib.PurePath.html#_root" class="code" data-type="Instance Variable">_root</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.pathlib.PurePath.html#_parts" class="code" data-type="Instance Variable">_parts</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#_from_parsed_parts" class="code" data-type="Class Method">_from_parsed_parts</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#_format_parsed_parts" class="code" data-type="Class Method">_format_parsed_parts</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#_init" class="code" data-type="Method">_init</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#_make_child" class="code" data-type="Method">_make_child</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.pathlib.PurePath.html#_str" class="code" data-type="Instance Variable">_str</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.pathlib.PurePath.html#_cparts" class="code" data-type="Method">_cparts</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.pathlib.PurePath.html#_cached_cparts" class="code" data-type="Instance Variable">_cached_cparts</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.pathlib.PurePath.html#_hash" class="code" data-type="Instance Variable">_hash</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.pathlib.PurePath.html#_pparts" class="code" data-type="Instance Variable">_pparts</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.pathlib.PurePath.__slots__">
+    
+  </a>
+  <a name="__slots__">
+    
+  </a>
+  <div class="functionHeader">
+    __slots__ =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.pathlib.Path.html" class="code" data-type="Class">Lib.pathlib.Path</a>, <a href="Lib.pathlib.PurePosixPath.html" class="code" data-type="Class">Lib.pathlib.PurePosixPath</a>, <a href="Lib.pathlib.PureWindowsPath.html" class="code" data-type="Class">Lib.pathlib.PureWindowsPath</a></div>
+    <div class="undocumented">Undocumented</div> (type: <code>Tuple[str, ...]</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.__new__">
+    
+  </a>
+  <a name="__new__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __new__(cls, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.pathlib.Path.html" class="code" data-type="Class">Lib.pathlib.Path</a></div>
+    
+    <div><p class="pre">Construct a PurePath from one or several strings and or existing
+PurePath objects.  The strings and path objects are combined so as
+to yield a canonicalized path, which is incorporated into the
+new PurePath object.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.__reduce__">
+    
+  </a>
+  <a name="__reduce__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __reduce__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassmethod private">
+  
+  <a name="Lib.pathlib.PurePath._parse_args">
+    
+  </a>
+  <a name="_parse_args">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    _parse_args(cls, args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassmethod private">
+  
+  <a name="Lib.pathlib.PurePath._from_parts">
+    
+  </a>
+  <a name="_from_parts">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    _from_parts(cls, args, init=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.pathlib.PurePath._drv">
+    
+  </a>
+  <a name="_drv">
+    
+  </a>
+  <div class="functionHeader">
+    _drv =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.pathlib.PurePath._root">
+    
+  </a>
+  <a name="_root">
+    
+  </a>
+  <div class="functionHeader">
+    _root =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.pathlib.PurePath._parts">
+    
+  </a>
+  <a name="_parts">
+    
+  </a>
+  <div class="functionHeader">
+    _parts =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassmethod private">
+  
+  <a name="Lib.pathlib.PurePath._from_parsed_parts">
+    
+  </a>
+  <a name="_from_parsed_parts">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    _from_parsed_parts(cls, drv, root, parts, init=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassmethod private">
+  
+  <a name="Lib.pathlib.PurePath._format_parsed_parts">
+    
+  </a>
+  <a name="_format_parsed_parts">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    _format_parsed_parts(cls, drv, root, parts):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.pathlib.PurePath._init">
+    
+  </a>
+  <a name="_init">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _init(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.pathlib.Path.html" class="code" data-type="Class">Lib.pathlib.Path</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.pathlib.PurePath._make_child">
+    
+  </a>
+  <a name="_make_child">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _make_child(self, args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.__str__">
+    
+  </a>
+  <a name="__str__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __str__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the string representation of the path, suitable for
+passing to system calls.</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.pathlib.PurePath._str">
+    
+  </a>
+  <a name="_str">
+    
+  </a>
+  <div class="functionHeader">
+    _str =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.__fspath__">
+    
+  </a>
+  <a name="__fspath__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __fspath__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.as_posix">
+    
+  </a>
+  <a name="as_posix">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    as_posix(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the string representation of the path with forward (/)
+slashes.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.__bytes__">
+    
+  </a>
+  <a name="__bytes__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __bytes__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the bytes representation of the path.  This is only
+recommended to use under Unix.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __repr__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.as_uri">
+    
+  </a>
+  <a name="as_uri">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    as_uri(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the path as a 'file' URI.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.pathlib.PurePath._cparts">
+    
+  </a>
+  <a name="_cparts">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    _cparts(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.pathlib.PurePath._cached_cparts">
+    
+  </a>
+  <a name="_cached_cparts">
+    
+  </a>
+  <div class="functionHeader">
+    _cached_cparts =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.__eq__">
+    
+  </a>
+  <a name="__eq__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __eq__(self, other):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.__hash__">
+    
+  </a>
+  <a name="__hash__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __hash__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.pathlib.PurePath._hash">
+    
+  </a>
+  <a name="_hash">
+    
+  </a>
+  <div class="functionHeader">
+    _hash =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.__lt__">
+    
+  </a>
+  <a name="__lt__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __lt__(self, other):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.__le__">
+    
+  </a>
+  <a name="__le__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __le__(self, other):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.__gt__">
+    
+  </a>
+  <a name="__gt__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __gt__(self, other):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.__ge__">
+    
+  </a>
+  <a name="__ge__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __ge__(self, other):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.__class_getitem__">
+    
+  </a>
+  <a name="__class_getitem__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __class_getitem__(cls, type):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.pathlib.PurePath.drive">
+    
+  </a>
+  <a name="drive">
+    
+  </a>
+  <div class="functionHeader">
+    drive =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.pathlib.PurePath.root">
+    
+  </a>
+  <a name="root">
+    
+  </a>
+  <div class="functionHeader">
+    root =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.anchor">
+    
+  </a>
+  <a name="anchor">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    anchor(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">The concatenation of the drive and root, or ''.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.name">
+    
+  </a>
+  <a name="name">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    name(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">The final path component, if any.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.suffix">
+    
+  </a>
+  <a name="suffix">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    suffix(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">The final component's last suffix, if any.
+
+This includes the leading period. For example: '.txt'</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.suffixes">
+    
+  </a>
+  <a name="suffixes">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    suffixes(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">A list of the final component's suffixes, if any.
+
+These include the leading periods. For example: ['.tar', '.gz']</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.stem">
+    
+  </a>
+  <a name="stem">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    stem(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">The final path component, minus its last suffix.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.with_name">
+    
+  </a>
+  <a name="with_name">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    with_name(self, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a new path with the file name changed.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.with_stem">
+    
+  </a>
+  <a name="with_stem">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    with_stem(self, stem):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a new path with the stem changed.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.with_suffix">
+    
+  </a>
+  <a name="with_suffix">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    with_suffix(self, suffix):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a new path with the file suffix changed.  If the path
+has no suffix, add given suffix.  If the given suffix is an empty
+string, remove the suffix from the path.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.relative_to">
+    
+  </a>
+  <a name="relative_to">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    relative_to(self, *other):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the relative path to another path identified by the passed
+arguments.  If the operation is not possible (because this is not
+a subpath of the other path), raise ValueError.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.is_relative_to">
+    
+  </a>
+  <a name="is_relative_to">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_relative_to(self, *other):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True if the path is relative to another path or False.
+        </p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.parts">
+    
+  </a>
+  <a name="parts">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    parts(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">An object providing sequence-like access to the
+components in the filesystem path.</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.pathlib.PurePath._pparts">
+    
+  </a>
+  <a name="_pparts">
+    
+  </a>
+  <div class="functionHeader">
+    _pparts =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.joinpath">
+    
+  </a>
+  <a name="joinpath">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    joinpath(self, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Combine this path with one or several arguments, and return a
+new path representing either a subpath (if all arguments are relative
+paths) or a totally different path (if one of the arguments is
+anchored).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.__truediv__">
+    
+  </a>
+  <a name="__truediv__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __truediv__(self, key):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.__rtruediv__">
+    
+  </a>
+  <a name="__rtruediv__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __rtruediv__(self, key):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.parent">
+    
+  </a>
+  <a name="parent">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    parent(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">The logical parent of the path.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.parents">
+    
+  </a>
+  <a name="parents">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    parents(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">A sequence of this path's logical parents.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.is_absolute">
+    
+  </a>
+  <a name="is_absolute">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_absolute(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">True if the path is absolute (has both a root and, if applicable,
+a drive).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.is_reserved">
+    
+  </a>
+  <a name="is_reserved">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_reserved(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True if the path contains one of the special names reserved
+by the system, if any.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.pathlib.PurePath.match">
+    
+  </a>
+  <a name="match">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    match(self, path_pattern):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True if this path matches the given pattern.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

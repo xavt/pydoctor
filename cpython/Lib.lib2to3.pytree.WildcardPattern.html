@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.lib2to3.pytree.WildcardPattern : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.lib2to3.html" class="code" data-type="Package">lib2to3</a>.<a href="Lib.lib2to3.pytree.html" class="code" data-type="Module">pytree</a>.<a href="Lib.lib2to3.pytree.WildcardPattern.html" class="code" data-type="Class">WildcardPattern</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.lib2to3.pytree.WildcardPattern(<a href="Lib.lib2to3.pytree.BasePattern.html" class="code" data-type="Class">BasePattern</a>):</code></p>
+        <p><a href="classIndex.html#Lib.lib2to3.pytree.WildcardPattern">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">A wildcard pattern can match zero or more nodes.
+
+This has all the flexibility needed to implement patterns like:
+
+.*      .+      .?      .{m,n}
+(a b c | d e | f)
+(...)*  (...)+  (...)?  (...){m,n}
+
+except it always uses non-greedy matching.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2812">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.WildcardPattern.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Initializer.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.pytree.WildcardPattern.html#content" class="code" data-type="Instance Variable">content</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.pytree.WildcardPattern.html#min" class="code" data-type="Instance Variable">min</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.pytree.WildcardPattern.html#max" class="code" data-type="Instance Variable">max</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.pytree.WildcardPattern.html#name" class="code" data-type="Instance Variable">name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.WildcardPattern.html#optimize" class="code" data-type="Method">optimize</a></td>
+    <td><span>Optimize certain stacked wildcard patterns.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.WildcardPattern.html#match" class="code" data-type="Method">match</a></td>
+    <td><span>Does this pattern exactly match a node?</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.WildcardPattern.html#match_seq" class="code" data-type="Method">match_seq</a></td>
+    <td><span>Does this pattern exactly match a sequence of nodes?</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.WildcardPattern.html#generate_matches" class="code" data-type="Method">generate_matches</a></td>
+    <td><span>Generator yielding matches for a sequence of nodes.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.WildcardPattern.html#_iterative_matches" class="code" data-type="Method">_iterative_matches</a></td>
+    <td><span>Helper to iteratively yield the matches.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.WildcardPattern.html#_bare_name_matches" class="code" data-type="Method">_bare_name_matches</a></td>
+    <td><span>Special optimized matcher for bare_name.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.WildcardPattern.html#_recursive_matches" class="code" data-type="Method">_recursive_matches</a></td>
+    <td><span>Helper to recursively yield the matches.</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.lib2to3.pytree.BasePattern.html" class="code" data-type="Class">BasePattern</a>:
+          </p>
+          <table class="children sortable" id="id2813">
+  
+  <tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.lib2to3.pytree.BasePattern.html#type" class="code" data-type="Class Variable">type</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.BasePattern.html#__new__" class="code" data-type="Method">__new__</a></td>
+    <td><span>Constructor that prevents BasePattern from being instantiated.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.BasePattern.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.lib2to3.pytree.WildcardPattern.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, content=None, min=0, max=HUGE, name=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Initializer.
+
+Args:
+    content: optional sequence of subsequences of patterns;
+             if absent, matches one node;
+             if present, each subsequence is an alternative [*]
+    min: optional minimum number of times to match, default 0
+    max: optional maximum number of times to match, default HUGE
+    name: optional name assigned to this match
+
+[*] Thus, if content is [[a, b, c], [d, e], [f, g, h]] this is
+    equivalent to (a b c | d e | f g h); if content is None,
+    this is equivalent to '.' in regular expression terms.
+    The min and max parameters work as follows:
+        min=0, max=maxint: .*
+        min=1, max=maxint: .+
+        min=0, max=1: .?
+        min=1, max=1: .
+    If content is not None, replace the dot with the parenthesized
+    list of alternatives, e.g. (a b c | d e | f g h)*</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.lib2to3.pytree.WildcardPattern.content">
+    
+  </a>
+  <a name="content">
+    
+  </a>
+  <div class="functionHeader">
+    content =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.lib2to3.pytree.BasePattern.html#content" class="code" data-type="Class Variable">Lib.lib2to3.pytree.BasePattern.content</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.lib2to3.pytree.WildcardPattern.min">
+    
+  </a>
+  <a name="min">
+    
+  </a>
+  <div class="functionHeader">
+    min =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.lib2to3.pytree.WildcardPattern.max">
+    
+  </a>
+  <a name="max">
+    
+  </a>
+  <div class="functionHeader">
+    max =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.lib2to3.pytree.WildcardPattern.name">
+    
+  </a>
+  <a name="name">
+    
+  </a>
+  <div class="functionHeader">
+    name =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.lib2to3.pytree.BasePattern.html#name" class="code" data-type="Class Variable">Lib.lib2to3.pytree.BasePattern.name</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.lib2to3.pytree.WildcardPattern.optimize">
+    
+  </a>
+  <a name="optimize">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    optimize(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.lib2to3.pytree.BasePattern.html#optimize" class="code" data-type="Method">Lib.lib2to3.pytree.BasePattern.optimize</a></div>
+    
+    <div><p class="pre">Optimize certain stacked wildcard patterns.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.lib2to3.pytree.WildcardPattern.match">
+    
+  </a>
+  <a name="match">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    match(self, node, results=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.lib2to3.pytree.BasePattern.html#match" class="code" data-type="Method">Lib.lib2to3.pytree.BasePattern.match</a></div>
+    
+    <div><p class="pre">Does this pattern exactly match a node?</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.lib2to3.pytree.WildcardPattern.match_seq">
+    
+  </a>
+  <a name="match_seq">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    match_seq(self, nodes, results=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.lib2to3.pytree.BasePattern.html#match_seq" class="code" data-type="Method">Lib.lib2to3.pytree.BasePattern.match_seq</a></div>
+    
+    <div><p class="pre">Does this pattern exactly match a sequence of nodes?</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.lib2to3.pytree.WildcardPattern.generate_matches">
+    
+  </a>
+  <a name="generate_matches">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    generate_matches(self, nodes):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.lib2to3.pytree.BasePattern.html#generate_matches" class="code" data-type="Method">Lib.lib2to3.pytree.BasePattern.generate_matches</a></div>
+    
+    <div><p class="pre">Generator yielding matches for a sequence of nodes.
+
+Args:
+    nodes: sequence of nodes
+
+Yields:
+    (count, results) tuples where:
+    count: the match comprises nodes[:count];
+    results: dict containing named submatches.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.lib2to3.pytree.WildcardPattern._iterative_matches">
+    
+  </a>
+  <a name="_iterative_matches">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _iterative_matches(self, nodes):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Helper to iteratively yield the matches.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.lib2to3.pytree.WildcardPattern._bare_name_matches">
+    
+  </a>
+  <a name="_bare_name_matches">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _bare_name_matches(self, nodes):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Special optimized matcher for bare_name.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.lib2to3.pytree.WildcardPattern._recursive_matches">
+    
+  </a>
+  <a name="_recursive_matches">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _recursive_matches(self, nodes, count):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Helper to recursively yield the matches.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

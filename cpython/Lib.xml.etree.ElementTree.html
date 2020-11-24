@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.xml.etree.ElementTree : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.xml.html" class="code" data-type="Package">xml</a>.<a href="Lib.xml.etree.html" class="code" data-type="Package">etree</a>.<a href="Lib.xml.etree.ElementTree.html" class="code" data-type="Module">ElementTree</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Lightweight XML support for Python.
+
+XML is an inherently hierarchical data format, and the most natural way to
+represent it is with a tree.  This module has two classes for this purpose:
+
+   1. ElementTree represents the whole XML document as a tree and
+
+   2. Element represents a single node in this tree.
+
+Interactions with the whole document (reading and writing to/from files) are
+usually done on the ElementTree level.  Interactions with a single XML element
+and its sub-elements are done on the Element level.
+
+Element is a flexible container object designed to store hierarchical data
+structures in memory. It can be described as a cross between a list and a
+dictionary.  Each Element has a number of properties associated with it:
+
+   'tag' - a string containing the element's name.
+
+   'attributes' - a Python dictionary storing the element's attributes.
+
+   'text' - a string containing the element's text content.
+
+   'tail' - an optional string containing text after the element's end tag.
+
+   And a number of child elements stored in a Python sequence.
+
+To create an element instance, use the Element constructor,
+or the SubElement factory function.
+
+You can also use the ElementTree class to wrap an element structure
+and convert it to and from XML.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id12133">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.html#VERSION" class="code" data-type="Variable">VERSION</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.etree.ElementTree.ParseError.html" class="code" data-type="Class">ParseError</a></td>
+    <td><span>An error when parsing an XML document.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.etree.ElementTree.html#iselement" class="code" data-type="Function">iselement</a></td>
+    <td><span>Return True if *element* appears to be an Element.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html" class="code" data-type="Class">Element</a></td>
+    <td><span>An XML element.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.etree.ElementTree.html#SubElement" class="code" data-type="Function">SubElement</a></td>
+    <td><span>Subelement factory which creates an element instance, and appends it to an existing parent.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.etree.ElementTree.html#Comment" class="code" data-type="Function">Comment</a></td>
+    <td><span>Comment element factory.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.etree.ElementTree.html#ProcessingInstruction" class="code" data-type="Function">ProcessingInstruction</a></td>
+    <td><span>Processing Instruction element factory.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.etree.ElementTree.QName.html" class="code" data-type="Class">QName</a></td>
+    <td><span>Qualified name wrapper.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.etree.ElementTree.ElementTree.html" class="code" data-type="Class">ElementTree</a></td>
+    <td><span>An XML element hierarchy.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.html#HTML_EMPTY" class="code" data-type="Variable">HTML_EMPTY</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.etree.ElementTree.html#register_namespace" class="code" data-type="Function">register_namespace</a></td>
+    <td><span>Register a namespace prefix.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.etree.ElementTree.html#tostring" class="code" data-type="Function">tostring</a></td>
+    <td><span>Generate string representation of XML element.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.etree.ElementTree.html#tostringlist" class="code" data-type="Function">tostringlist</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.etree.ElementTree.html#dump" class="code" data-type="Function">dump</a></td>
+    <td><span>Write element tree or element structure to sys.stdout.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.etree.ElementTree.html#indent" class="code" data-type="Function">indent</a></td>
+    <td><span>Indent an XML document by inserting newlines and indentation space after elements.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.etree.ElementTree.html#parse" class="code" data-type="Function">parse</a></td>
+    <td><span>Parse XML document into element tree.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.etree.ElementTree.html#iterparse" class="code" data-type="Function">iterparse</a></td>
+    <td><span>Incrementally parse XML document into ElementTree.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.etree.ElementTree.XMLPullParser.html" class="code" data-type="Class">XMLPullParser</a></td>
+    <td><span class="undocumented">No class0/2 instance variables docstring; , 3/5 methods documented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.etree.ElementTree.html#XML" class="code" data-type="Function">XML</a></td>
+    <td><span>Parse XML document from string constant.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.etree.ElementTree.html#XMLID" class="code" data-type="Function">XMLID</a></td>
+    <td><span>Parse XML document from string constant for its IDs.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.etree.ElementTree.html#fromstringlist" class="code" data-type="Function">fromstringlist</a></td>
+    <td><span>Parse XML document from sequence of string fragments.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.etree.ElementTree.TreeBuilder.html" class="code" data-type="Class">TreeBuilder</a></td>
+    <td><span>Generic element structure builder.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.etree.ElementTree.XMLParser.html" class="code" data-type="Class">XMLParser</a></td>
+    <td><span>Element structure builder for XML source data based on the expat parser.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.etree.ElementTree.html#canonicalize" class="code" data-type="Function">canonicalize</a></td>
+    <td><span>Convert XML to its C14N 2.0 serialised form.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.etree.ElementTree.C14NWriterTarget.html" class="code" data-type="Class">C14NWriterTarget</a></td>
+    <td><span>Canonicalization writer target for the XMLParser.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.etree.ElementTree.html#_get_writer" class="code" data-type="Function">_get_writer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.etree.ElementTree.html#_namespaces" class="code" data-type="Function">_namespaces</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.etree.ElementTree.html#_serialize_xml" class="code" data-type="Function">_serialize_xml</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.etree.ElementTree.html#_serialize_html" class="code" data-type="Function">_serialize_html</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.etree.ElementTree.html#_serialize_text" class="code" data-type="Function">_serialize_text</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.html#_serialize" class="code" data-type="Variable">_serialize</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.html#_namespace_map" class="code" data-type="Variable">_namespace_map</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.etree.ElementTree.html#_raise_serialization_error" class="code" data-type="Function">_raise_serialization_error</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.etree.ElementTree.html#_escape_cdata" class="code" data-type="Function">_escape_cdata</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.etree.ElementTree.html#_escape_attrib" class="code" data-type="Function">_escape_attrib</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.etree.ElementTree.html#_escape_attrib_html" class="code" data-type="Function">_escape_attrib_html</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.etree.ElementTree._ListDataStream.html" class="code" data-type="Class">_ListDataStream</a></td>
+    <td><span>An auxiliary stream accumulating into a list reference.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.html#_looks_like_prefix_name" class="code" data-type="Variable">_looks_like_prefix_name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.etree.ElementTree.html#_escape_cdata_c14n" class="code" data-type="Function">_escape_cdata_c14n</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.etree.ElementTree.html#_escape_attrib_c14n" class="code" data-type="Function">_escape_attrib_c14n</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.xml.etree.ElementTree.VERSION">
+    
+  </a>
+  <a name="VERSION">
+    
+  </a>
+  <div class="functionHeader">
+    VERSION =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xml.etree.ElementTree.iselement">
+    
+  </a>
+  <a name="iselement">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    iselement(element):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True if *element* appears to be an Element.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xml.etree.ElementTree.SubElement">
+    
+  </a>
+  <a name="SubElement">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    SubElement(parent, tag, attrib={}, **extra):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Subelement factory which creates an element instance, and appends it
+to an existing parent.
+
+The element tag, attribute names, and attribute values can be either
+bytes or Unicode strings.
+
+*parent* is the parent element, *tag* is the subelements name, *attrib* is
+an optional directory containing element attributes, *extra* are
+additional attributes given as keyword arguments.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xml.etree.ElementTree.Comment">
+    
+  </a>
+  <a name="Comment">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    Comment(text=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Comment element factory.
+
+This function creates a special element which the standard serializer
+serializes as an XML comment.
+
+*text* is a string containing the comment string.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xml.etree.ElementTree.ProcessingInstruction">
+    
+  </a>
+  <a name="ProcessingInstruction">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ProcessingInstruction(target, text=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Processing Instruction element factory.
+
+This function creates a special element which the standard serializer
+serializes as an XML comment.
+
+*target* is a string containing the processing instruction, *text* is a
+string containing the processing instruction contents, if any.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xml.etree.ElementTree._get_writer">
+    
+  </a>
+  <a name="_get_writer">
+    
+  </a>
+  <div class="functionHeader">
+    @contextlib.contextmanager<br />
+    def
+    _get_writer(file_or_filename, encoding):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xml.etree.ElementTree._namespaces">
+    
+  </a>
+  <a name="_namespaces">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _namespaces(elem, default_namespace=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xml.etree.ElementTree._serialize_xml">
+    
+  </a>
+  <a name="_serialize_xml">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _serialize_xml(write, elem, qnames, namespaces, short_empty_elements, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.xml.etree.ElementTree.HTML_EMPTY">
+    
+  </a>
+  <a name="HTML_EMPTY">
+    
+  </a>
+  <div class="functionHeader">
+    HTML_EMPTY =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xml.etree.ElementTree._serialize_html">
+    
+  </a>
+  <a name="_serialize_html">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _serialize_html(write, elem, qnames, namespaces, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xml.etree.ElementTree._serialize_text">
+    
+  </a>
+  <a name="_serialize_text">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _serialize_text(write, elem):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.xml.etree.ElementTree._serialize">
+    
+  </a>
+  <a name="_serialize">
+    
+  </a>
+  <div class="functionHeader">
+    _serialize =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xml.etree.ElementTree.register_namespace">
+    
+  </a>
+  <a name="register_namespace">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    register_namespace(prefix, uri):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Register a namespace prefix.
+
+The registry is global, and any existing mapping for either the
+given prefix or the namespace URI will be removed.
+
+*prefix* is the namespace prefix, *uri* is a namespace uri. Tags and
+attributes in this namespace will be serialized with prefix if possible.
+
+ValueError is raised if prefix is reserved or is invalid.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.xml.etree.ElementTree._namespace_map">
+    
+  </a>
+  <a name="_namespace_map">
+    
+  </a>
+  <div class="functionHeader">
+    _namespace_map =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict[str, str]</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xml.etree.ElementTree._raise_serialization_error">
+    
+  </a>
+  <a name="_raise_serialization_error">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _raise_serialization_error(text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xml.etree.ElementTree._escape_cdata">
+    
+  </a>
+  <a name="_escape_cdata">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _escape_cdata(text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xml.etree.ElementTree._escape_attrib">
+    
+  </a>
+  <a name="_escape_attrib">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _escape_attrib(text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xml.etree.ElementTree._escape_attrib_html">
+    
+  </a>
+  <a name="_escape_attrib_html">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _escape_attrib_html(text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xml.etree.ElementTree.tostring">
+    
+  </a>
+  <a name="tostring">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tostring(element, encoding=None, method=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Generate string representation of XML element.
+
+All subelements are included.  If encoding is "unicode", a string
+is returned. Otherwise a bytestring is returned.
+
+*element* is an Element instance, *encoding* is an optional output
+encoding defaulting to US-ASCII, *method* is an optional output which can
+be one of "xml" (default), "html", "text" or "c14n", *default_namespace*
+sets the default XML namespace (for "xmlns").
+
+Returns an (optionally) encoded string containing the XML data.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xml.etree.ElementTree.tostringlist">
+    
+  </a>
+  <a name="tostringlist">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tostringlist(element, encoding=None, method=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xml.etree.ElementTree.dump">
+    
+  </a>
+  <a name="dump">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    dump(elem):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Write element tree or element structure to sys.stdout.
+
+This function should be used for debugging only.
+
+*elem* is either an ElementTree, or a single Element.  The exact output
+format is implementation dependent.  In this version, it's written as an
+ordinary XML file.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xml.etree.ElementTree.indent">
+    
+  </a>
+  <a name="indent">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    indent(tree, space="""  """, level=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Indent an XML document by inserting newlines and indentation space
+after elements.
+
+*tree* is the ElementTree or Element to modify.  The (root) element
+itself will not be changed, but the tail text of all elements in its
+subtree will be adapted.
+
+*space* is the whitespace to insert for each indentation level, two
+space characters by default.
+
+*level* is the initial indentation level. Setting this to a higher
+value than 0 can be used for indenting subtrees that are more deeply
+nested inside of a document.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xml.etree.ElementTree.parse">
+    
+  </a>
+  <a name="parse">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse(source, parser=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse XML document into element tree.
+
+*source* is a filename or file object containing XML data,
+*parser* is an optional parser instance defaulting to XMLParser.
+
+Return an ElementTree instance.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xml.etree.ElementTree.iterparse">
+    
+  </a>
+  <a name="iterparse">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    iterparse(source, events=None, parser=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Incrementally parse XML document into ElementTree.
+
+This class also reports what's going on to the user based on the
+*events* it is initialized with.  The supported events are the strings
+"start", "end", "start-ns" and "end-ns" (the "ns" events are used to get
+detailed namespace information).  If *events* is omitted, only
+"end" events are reported.
+
+*source* is a filename or file object containing XML data, *events* is
+a list of events to report back, *parser* is an optional parser instance.
+
+Returns an iterator providing (event, elem) pairs.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xml.etree.ElementTree.XML">
+    
+  </a>
+  <a name="XML">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    XML(text, parser=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse XML document from string constant.
+
+This function can be used to embed "XML Literals" in Python code.
+
+*text* is a string containing XML data, *parser* is an
+optional parser instance, defaulting to the standard XMLParser.
+
+Returns an Element instance.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xml.etree.ElementTree.XMLID">
+    
+  </a>
+  <a name="XMLID">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    XMLID(text, parser=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse XML document from string constant for its IDs.
+
+*text* is a string containing XML data, *parser* is an
+optional parser instance, defaulting to the standard XMLParser.
+
+Returns an (Element, dict) tuple, in which the
+dict maps element id:s to elements.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xml.etree.ElementTree.fromstringlist">
+    
+  </a>
+  <a name="fromstringlist">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    fromstringlist(sequence, parser=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse XML document from sequence of string fragments.
+
+*sequence* is a list of other sequence, *parser* is an optional parser
+instance, defaulting to the standard XMLParser.
+
+Returns an Element instance.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xml.etree.ElementTree.canonicalize">
+    
+  </a>
+  <a name="canonicalize">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    canonicalize(xml_data=None, **options):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convert XML to its C14N 2.0 serialised form.
+
+If *out* is provided, it must be a file or file-like object that receives
+the serialised canonical XML output (text, not bytes) through its ``.write()``
+method.  To write to a file, open it in text mode with encoding "utf-8".
+If *out* is not provided, this function returns the output as text string.
+
+Either *xml_data* (an XML string) or *from_file* (a file path or
+file-like object) must be provided as input.
+
+The configuration options are the same as for the ``C14NWriterTarget``.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.xml.etree.ElementTree._looks_like_prefix_name">
+    
+  </a>
+  <a name="_looks_like_prefix_name">
+    
+  </a>
+  <div class="functionHeader">
+    _looks_like_prefix_name =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xml.etree.ElementTree._escape_cdata_c14n">
+    
+  </a>
+  <a name="_escape_cdata_c14n">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _escape_cdata_c14n(text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xml.etree.ElementTree._escape_attrib_c14n">
+    
+  </a>
+  <a name="_escape_attrib_c14n">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _escape_attrib_c14n(text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

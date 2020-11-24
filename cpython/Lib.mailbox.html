@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.mailbox : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.mailbox.html" class="code" data-type="Module">mailbox</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Read/write support for Maildir, mbox, MH, Babyl, and MMDF mailboxes.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3065">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.mailbox.html#fcntl" class="code" data-type="Variable">fcntl</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.mailbox.html#linesep" class="code" data-type="Variable">linesep</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.mailbox.Mailbox.html" class="code" data-type="Class">Mailbox</a></td>
+    <td><span>A group of messages in a particular place.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.mailbox.Maildir.html" class="code" data-type="Class">Maildir</a></td>
+    <td><span>A qmail-style Maildir mailbox.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.mailbox.mbox.html" class="code" data-type="Class">mbox</a></td>
+    <td><span>A classic mbox mailbox.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.mailbox.MMDF.html" class="code" data-type="Class">MMDF</a></td>
+    <td><span>An MMDF mailbox.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.mailbox.MH.html" class="code" data-type="Class">MH</a></td>
+    <td><span>An MH mailbox.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.mailbox.Babyl.html" class="code" data-type="Class">Babyl</a></td>
+    <td><span>An Rmail-style Babyl mailbox.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.mailbox.Message.html" class="code" data-type="Class">Message</a></td>
+    <td><span>Message with mailbox-format-specific properties.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.mailbox.MaildirMessage.html" class="code" data-type="Class">MaildirMessage</a></td>
+    <td><span>Message with Maildir-specific properties.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.mailbox.mboxMessage.html" class="code" data-type="Class">mboxMessage</a></td>
+    <td><span>Message with mbox-specific properties.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.mailbox.MHMessage.html" class="code" data-type="Class">MHMessage</a></td>
+    <td><span>Message with MH-specific properties.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.mailbox.BabylMessage.html" class="code" data-type="Class">BabylMessage</a></td>
+    <td><span>Message with Babyl-specific properties.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.mailbox.MMDFMessage.html" class="code" data-type="Class">MMDFMessage</a></td>
+    <td><span>Message with MMDF-specific properties.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.mailbox.Error.html" class="code" data-type="Class">Error</a></td>
+    <td><span>Raised for module-specific errors.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.mailbox.NoSuchMailboxError.html" class="code" data-type="Class">NoSuchMailboxError</a></td>
+    <td><span>The specified mailbox does not exist and won't be created.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.mailbox.NotEmptyError.html" class="code" data-type="Class">NotEmptyError</a></td>
+    <td><span>The specified mailbox is not empty and deletion was requested.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.mailbox.ExternalClashError.html" class="code" data-type="Class">ExternalClashError</a></td>
+    <td><span>Another process caused an action to fail.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.mailbox.FormatError.html" class="code" data-type="Class">FormatError</a></td>
+    <td><span>A file appears to have an invalid format.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.mailbox._singlefileMailbox.html" class="code" data-type="Class">_singlefileMailbox</a></td>
+    <td><span>A single-file mailbox.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.mailbox._mboxMMDF.html" class="code" data-type="Class">_mboxMMDF</a></td>
+    <td><span>An mbox or MMDF mailbox.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.mailbox._mboxMMDFMessage.html" class="code" data-type="Class">_mboxMMDFMessage</a></td>
+    <td><span>Message with mbox- or MMDF-specific properties.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.mailbox._ProxyFile.html" class="code" data-type="Class">_ProxyFile</a></td>
+    <td><span>A read-only wrapper of a file.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.mailbox._PartialFile.html" class="code" data-type="Class">_PartialFile</a></td>
+    <td><span>A read-only wrapper of part of a file.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.mailbox.html#_lock_file" class="code" data-type="Function">_lock_file</a></td>
+    <td><span>Lock file f using lockf and dot locking.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.mailbox.html#_unlock_file" class="code" data-type="Function">_unlock_file</a></td>
+    <td><span>Unlock file f using lockf and dot locking.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.mailbox.html#_create_carefully" class="code" data-type="Function">_create_carefully</a></td>
+    <td><span>Create a file if it doesn't exist and open for reading and writing.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.mailbox.html#_create_temporary" class="code" data-type="Function">_create_temporary</a></td>
+    <td><span>Create a temp file based on path and open for reading and writing.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.mailbox.html#_sync_flush" class="code" data-type="Function">_sync_flush</a></td>
+    <td><span>Ensure changes to file f are physically on disk.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.mailbox.html#_sync_close" class="code" data-type="Function">_sync_close</a></td>
+    <td><span>Close file f, ensuring all changes are physically on disk.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.mailbox.fcntl">
+    
+  </a>
+  <a name="fcntl">
+    
+  </a>
+  <div class="functionHeader">
+    fcntl =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.mailbox.linesep">
+    
+  </a>
+  <a name="linesep">
+    
+  </a>
+  <div class="functionHeader">
+    linesep =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.mailbox._lock_file">
+    
+  </a>
+  <a name="_lock_file">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _lock_file(f, dotlock=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Lock file f using lockf and dot locking.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.mailbox._unlock_file">
+    
+  </a>
+  <a name="_unlock_file">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _unlock_file(f):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Unlock file f using lockf and dot locking.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.mailbox._create_carefully">
+    
+  </a>
+  <a name="_create_carefully">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _create_carefully(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create a file if it doesn't exist and open for reading and writing.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.mailbox._create_temporary">
+    
+  </a>
+  <a name="_create_temporary">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _create_temporary(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create a temp file based on path and open for reading and writing.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.mailbox._sync_flush">
+    
+  </a>
+  <a name="_sync_flush">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _sync_flush(f):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Ensure changes to file f are physically on disk.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.mailbox._sync_close">
+    
+  </a>
+  <a name="_sync_close">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _sync_close(f):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Close file f, ensuring all changes are physically on disk.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

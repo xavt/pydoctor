@@ -1,0 +1,1248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.tokenize : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.tokenize.html" class="code" data-type="Module">tokenize</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Tokenization help for Python programs.
+
+tokenize(readline) is a generator that breaks a stream of bytes into
+Python tokens.  It decodes the bytes according to PEP-0263 for
+determining source file encoding.
+
+It accepts a readline-like method which is called repeatedly to get the
+next line of input (or b"" for EOF).  It generates 5-tuples with these
+members:
+
+    the token type (see token.py)
+    the token (a string)
+    the starting (row, column) indices of the token (a 2-tuple of ints)
+    the ending (row, column) indices of the token (a 2-tuple of ints)
+    the original line (string)
+
+It is designed to match the working of the Python tokenizer exactly, except
+that it produces COMMENT tokens for comments and gives type OP for all
+operators.  Additionally, all token lists start with an ENCODING token
+which tells you which encoding was used to decode the bytes stream.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id11447">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#__author__" class="code" data-type="Variable">__author__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#__credits__" class="code" data-type="Variable">__credits__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#cookie_re" class="code" data-type="Variable">cookie_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#blank_re" class="code" data-type="Variable">blank_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tokenize.TokenInfo.html" class="code" data-type="Class">TokenInfo</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.tokenize.html#group" class="code" data-type="Function">group</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.tokenize.html#any" class="code" data-type="Function">any</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.tokenize.html#maybe" class="code" data-type="Function">maybe</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#Whitespace" class="code" data-type="Variable">Whitespace</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#Comment" class="code" data-type="Variable">Comment</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#Ignore" class="code" data-type="Variable">Ignore</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#Name" class="code" data-type="Variable">Name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#Hexnumber" class="code" data-type="Variable">Hexnumber</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#Binnumber" class="code" data-type="Variable">Binnumber</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#Octnumber" class="code" data-type="Variable">Octnumber</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#Decnumber" class="code" data-type="Variable">Decnumber</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#Intnumber" class="code" data-type="Variable">Intnumber</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#Exponent" class="code" data-type="Variable">Exponent</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#Pointfloat" class="code" data-type="Variable">Pointfloat</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#Expfloat" class="code" data-type="Variable">Expfloat</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#Floatnumber" class="code" data-type="Variable">Floatnumber</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#Imagnumber" class="code" data-type="Variable">Imagnumber</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#Number" class="code" data-type="Variable">Number</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#StringPrefix" class="code" data-type="Variable">StringPrefix</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#Single" class="code" data-type="Variable">Single</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#Double" class="code" data-type="Variable">Double</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#Single3" class="code" data-type="Variable">Single3</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#Double3" class="code" data-type="Variable">Double3</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#Triple" class="code" data-type="Variable">Triple</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#String" class="code" data-type="Variable">String</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#Special" class="code" data-type="Variable">Special</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#Funny" class="code" data-type="Variable">Funny</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#PlainToken" class="code" data-type="Variable">PlainToken</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#Token" class="code" data-type="Variable">Token</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#ContStr" class="code" data-type="Variable">ContStr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#PseudoExtras" class="code" data-type="Variable">PseudoExtras</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#PseudoToken" class="code" data-type="Variable">PseudoToken</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#endpats" class="code" data-type="Variable">endpats</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#single_quoted" class="code" data-type="Variable">single_quoted</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#triple_quoted" class="code" data-type="Variable">triple_quoted</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tokenize.html#tabsize" class="code" data-type="Variable">tabsize</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tokenize.TokenError.html" class="code" data-type="Class">TokenError</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tokenize.StopTokenizing.html" class="code" data-type="Class">StopTokenizing</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tokenize.Untokenizer.html" class="code" data-type="Class">Untokenizer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.tokenize.html#untokenize" class="code" data-type="Function">untokenize</a></td>
+    <td><span>Transform tokens back into Python source code. It returns a bytes object, encoded using the ENCODING token, which is the first token sequence output by tokenize.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.tokenize.html#detect_encoding" class="code" data-type="Function">detect_encoding</a></td>
+    <td><span>The detect_encoding() function is used to detect the encoding that should be used to decode a Python source file.  It requires one argument, readline, in the same way as the tokenize() generator.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.tokenize.html#open" class="code" data-type="Function">open</a></td>
+    <td><span>Open a file in read only mode using the encoding detected by detect_encoding().</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.tokenize.html#tokenize" class="code" data-type="Function">tokenize</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.tokenize.html#generate_tokens" class="code" data-type="Function">generate_tokens</a></td>
+    <td><span>Tokenize a source reading Python code as unicode strings.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.tokenize.html#main" class="code" data-type="Function">main</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.tokenize.html#_all_string_prefixes" class="code" data-type="Function">_all_string_prefixes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.tokenize.html#_compile" class="code" data-type="Function">_compile</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.tokenize.html#_get_normal_name" class="code" data-type="Function">_get_normal_name</a></td>
+    <td><span>Imitates get_normal_name in tokenizer.c.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.tokenize.html#_tokenize" class="code" data-type="Function">_tokenize</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.tokenize.__author__">
+    
+  </a>
+  <a name="__author__">
+    
+  </a>
+  <div class="functionHeader">
+    __author__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.__credits__">
+    
+  </a>
+  <a name="__credits__">
+    
+  </a>
+  <div class="functionHeader">
+    __credits__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.cookie_re">
+    
+  </a>
+  <a name="cookie_re">
+    
+  </a>
+  <div class="functionHeader">
+    cookie_re =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.blank_re">
+    
+  </a>
+  <a name="blank_re">
+    
+  </a>
+  <div class="functionHeader">
+    blank_re =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.tokenize.group">
+    
+  </a>
+  <a name="group">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    group(*choices):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.tokenize.any">
+    
+  </a>
+  <a name="any">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    any(*choices):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.tokenize.maybe">
+    
+  </a>
+  <a name="maybe">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    maybe(*choices):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.Whitespace">
+    
+  </a>
+  <a name="Whitespace">
+    
+  </a>
+  <div class="functionHeader">
+    Whitespace =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.Comment">
+    
+  </a>
+  <a name="Comment">
+    
+  </a>
+  <div class="functionHeader">
+    Comment =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.Ignore">
+    
+  </a>
+  <a name="Ignore">
+    
+  </a>
+  <div class="functionHeader">
+    Ignore =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.Name">
+    
+  </a>
+  <a name="Name">
+    
+  </a>
+  <div class="functionHeader">
+    Name =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.Hexnumber">
+    
+  </a>
+  <a name="Hexnumber">
+    
+  </a>
+  <div class="functionHeader">
+    Hexnumber =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.Binnumber">
+    
+  </a>
+  <a name="Binnumber">
+    
+  </a>
+  <div class="functionHeader">
+    Binnumber =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.Octnumber">
+    
+  </a>
+  <a name="Octnumber">
+    
+  </a>
+  <div class="functionHeader">
+    Octnumber =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.Decnumber">
+    
+  </a>
+  <a name="Decnumber">
+    
+  </a>
+  <div class="functionHeader">
+    Decnumber =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.Intnumber">
+    
+  </a>
+  <a name="Intnumber">
+    
+  </a>
+  <div class="functionHeader">
+    Intnumber =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.Exponent">
+    
+  </a>
+  <a name="Exponent">
+    
+  </a>
+  <div class="functionHeader">
+    Exponent =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.Pointfloat">
+    
+  </a>
+  <a name="Pointfloat">
+    
+  </a>
+  <div class="functionHeader">
+    Pointfloat =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.Expfloat">
+    
+  </a>
+  <a name="Expfloat">
+    
+  </a>
+  <div class="functionHeader">
+    Expfloat =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.Floatnumber">
+    
+  </a>
+  <a name="Floatnumber">
+    
+  </a>
+  <div class="functionHeader">
+    Floatnumber =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.Imagnumber">
+    
+  </a>
+  <a name="Imagnumber">
+    
+  </a>
+  <div class="functionHeader">
+    Imagnumber =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.Number">
+    
+  </a>
+  <a name="Number">
+    
+  </a>
+  <div class="functionHeader">
+    Number =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.tokenize._all_string_prefixes">
+    
+  </a>
+  <a name="_all_string_prefixes">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _all_string_prefixes():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.tokenize._compile">
+    
+  </a>
+  <a name="_compile">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _compile(expr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.StringPrefix">
+    
+  </a>
+  <a name="StringPrefix">
+    
+  </a>
+  <div class="functionHeader">
+    StringPrefix =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.Single">
+    
+  </a>
+  <a name="Single">
+    
+  </a>
+  <div class="functionHeader">
+    Single =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.Double">
+    
+  </a>
+  <a name="Double">
+    
+  </a>
+  <div class="functionHeader">
+    Double =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.Single3">
+    
+  </a>
+  <a name="Single3">
+    
+  </a>
+  <div class="functionHeader">
+    Single3 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.Double3">
+    
+  </a>
+  <a name="Double3">
+    
+  </a>
+  <div class="functionHeader">
+    Double3 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.Triple">
+    
+  </a>
+  <a name="Triple">
+    
+  </a>
+  <div class="functionHeader">
+    Triple =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.String">
+    
+  </a>
+  <a name="String">
+    
+  </a>
+  <div class="functionHeader">
+    String =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.Special">
+    
+  </a>
+  <a name="Special">
+    
+  </a>
+  <div class="functionHeader">
+    Special =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.Funny">
+    
+  </a>
+  <a name="Funny">
+    
+  </a>
+  <div class="functionHeader">
+    Funny =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.PlainToken">
+    
+  </a>
+  <a name="PlainToken">
+    
+  </a>
+  <div class="functionHeader">
+    PlainToken =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.Token">
+    
+  </a>
+  <a name="Token">
+    
+  </a>
+  <div class="functionHeader">
+    Token =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.ContStr">
+    
+  </a>
+  <a name="ContStr">
+    
+  </a>
+  <div class="functionHeader">
+    ContStr =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.PseudoExtras">
+    
+  </a>
+  <a name="PseudoExtras">
+    
+  </a>
+  <div class="functionHeader">
+    PseudoExtras =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.PseudoToken">
+    
+  </a>
+  <a name="PseudoToken">
+    
+  </a>
+  <div class="functionHeader">
+    PseudoToken =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.endpats">
+    
+  </a>
+  <a name="endpats">
+    
+  </a>
+  <div class="functionHeader">
+    endpats =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.single_quoted">
+    
+  </a>
+  <a name="single_quoted">
+    
+  </a>
+  <div class="functionHeader">
+    single_quoted =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.triple_quoted">
+    
+  </a>
+  <a name="triple_quoted">
+    
+  </a>
+  <div class="functionHeader">
+    triple_quoted =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tokenize.tabsize">
+    
+  </a>
+  <a name="tabsize">
+    
+  </a>
+  <div class="functionHeader">
+    tabsize =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.tokenize.untokenize">
+    
+  </a>
+  <a name="untokenize">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    untokenize(iterable):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Transform tokens back into Python source code.
+It returns a bytes object, encoded using the ENCODING
+token, which is the first token sequence output by tokenize.
+
+Each element returned by the iterable must be a token sequence
+with at least two elements, a token number and token value.  If
+only two tokens are passed, the resulting output is poor.
+
+Round-trip invariant for full input:
+    Untokenized source will match input source exactly
+
+Round-trip invariant for limited input:
+    # Output bytes will tokenize back to the input
+    t1 = [tok[:2] for tok in tokenize(f.readline)]
+    newcode = untokenize(t1)
+    readline = BytesIO(newcode).readline
+    t2 = [tok[:2] for tok in tokenize(readline)]
+    assert t1 == t2</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.tokenize._get_normal_name">
+    
+  </a>
+  <a name="_get_normal_name">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_normal_name(orig_enc):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Imitates get_normal_name in tokenizer.c.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.tokenize.detect_encoding">
+    
+  </a>
+  <a name="detect_encoding">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    detect_encoding(readline):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">The detect_encoding() function is used to detect the encoding that should
+be used to decode a Python source file.  It requires one argument, readline,
+in the same way as the tokenize() generator.
+
+It will call readline a maximum of twice, and return the encoding used
+(as a string) and a list of any lines (left as bytes) it has read in.
+
+It detects the encoding from the presence of a utf-8 bom or an encoding
+cookie as specified in pep-0263.  If both a bom and a cookie are present,
+but disagree, a SyntaxError will be raised.  If the encoding cookie is an
+invalid charset, raise a SyntaxError.  Note that if a utf-8 bom is found,
+'utf-8-sig' is returned.
+
+If no encoding is specified, then the default of 'utf-8' will be returned.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.tokenize.open">
+    
+  </a>
+  <a name="open">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    open(filename):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Open a file in read only mode using the encoding detected by
+detect_encoding().</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.tokenize.tokenize">
+    
+  </a>
+  <a name="tokenize">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tokenize(readline):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">The tokenize() generator requires one argument, readline, which
+must be a callable object which provides the same interface as the
+readline() method of built-in file objects.  Each call to the function
+should return one line of input as bytes.  Alternatively, readline
+can be a callable function terminating with StopIteration:
+    readline = open(myfile, 'rb').__next__  # Example of alternate readline
+
+The generator produces 5-tuples with these members: the token type; the
+token string; a 2-tuple (srow, scol) of ints specifying the row and
+column where the token begins in the source; a 2-tuple (erow, ecol) of
+ints specifying the row and column where the token ends in the source;
+and the line on which the token was found.  The line passed is the
+physical line.
+
+The first token sequence will always be an ENCODING token
+which tells you which encoding was used to decode the bytes stream.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.tokenize._tokenize">
+    
+  </a>
+  <a name="_tokenize">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _tokenize(readline, encoding):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.tokenize.generate_tokens">
+    
+  </a>
+  <a name="generate_tokens">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    generate_tokens(readline):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Tokenize a source reading Python code as unicode strings.
+
+This has the same API as tokenize(), except that it expects the *readline*
+callable to return str objects instead of bytes.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.tokenize.main">
+    
+  </a>
+  <a name="main">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    main():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.idlelib.parenmatch.ParenMatch : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.idlelib.html" class="code" data-type="Package">idlelib</a>.<a href="Lib.idlelib.parenmatch.html" class="code" data-type="Module">parenmatch</a>.<a href="Lib.idlelib.parenmatch.ParenMatch.html" class="code" data-type="Class">ParenMatch</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.idlelib.parenmatch.ParenMatch:</code></p>
+        <p><a href="classIndex.html#Lib.idlelib.parenmatch.ParenMatch">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Highlight matching openers and closers, (), [], and {}.
+
+There are three supported styles of paren matching.  When a right
+paren (opener) is typed:
+
+opener -- highlight the matching left paren (closer);
+parens -- highlight the left and right parens (opener and closer);
+expression -- highlight the entire expression from opener to closer.
+(For back compatibility, 'default' is a synonym for 'opener').
+
+Flash-delay is the maximum milliseconds the highlighting remains.
+Any cursor movement (key press or click) before that removes the
+highlight.  If flash-delay is 0, there is no maximum.
+
+TODO:
+- Augment bell() with mismatch warning in status window.
+- Highlight when cursor is moved to the right of a closer.
+  This might be too expensive to check.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2396">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.idlelib.parenmatch.ParenMatch.html#RESTORE_VIRTUAL_EVENT_NAME" class="code" data-type="Class Variable">RESTORE_VIRTUAL_EVENT_NAME</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.idlelib.parenmatch.ParenMatch.html#RESTORE_SEQUENCES" class="code" data-type="Class Variable">RESTORE_SEQUENCES</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.parenmatch.ParenMatch.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.parenmatch.ParenMatch.html#editwin" class="code" data-type="Instance Variable">editwin</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.parenmatch.ParenMatch.html#text" class="code" data-type="Instance Variable">text</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.parenmatch.ParenMatch.html#counter" class="code" data-type="Instance Variable">counter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.parenmatch.ParenMatch.html#is_restore_active" class="code" data-type="Instance Variable">is_restore_active</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classmethod">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.idlelib.parenmatch.ParenMatch.html#reload" class="code" data-type="Class Method">reload</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.parenmatch.ParenMatch.html#activate_restore" class="code" data-type="Method">activate_restore</a></td>
+    <td><span>Activate mechanism to restore text from highlighting.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.parenmatch.ParenMatch.html#deactivate_restore" class="code" data-type="Method">deactivate_restore</a></td>
+    <td><span>Remove restore event bindings.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.parenmatch.ParenMatch.html#flash_paren_event" class="code" data-type="Method">flash_paren_event</a></td>
+    <td><span>Handle editor 'show surrounding parens' event (menu or shortcut).</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.parenmatch.ParenMatch.html#paren_closed_event" class="code" data-type="Method">paren_closed_event</a></td>
+    <td><span>Handle user input of closer.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.parenmatch.ParenMatch.html#finish_paren_event" class="code" data-type="Method">finish_paren_event</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.parenmatch.ParenMatch.html#restore_event" class="code" data-type="Method">restore_event</a></td>
+    <td><span>Remove effect of doing match.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.parenmatch.ParenMatch.html#handle_restore_timer" class="code" data-type="Method">handle_restore_timer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.parenmatch.ParenMatch.html#create_tag_opener" class="code" data-type="Method">create_tag_opener</a></td>
+    <td><span>Highlight the single paren that matches</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.parenmatch.ParenMatch.html#create_tag_parens" class="code" data-type="Method">create_tag_parens</a></td>
+    <td><span>Highlight the left and right parens</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.parenmatch.ParenMatch.html#create_tag_expression" class="code" data-type="Method">create_tag_expression</a></td>
+    <td><span>Highlight the entire expression</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.idlelib.parenmatch.ParenMatch.html#tagfuncs" class="code" data-type="Class Variable">tagfuncs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.parenmatch.ParenMatch.html#set_timeout_none" class="code" data-type="Method">set_timeout_none</a></td>
+    <td><span>Highlight will remain until user input turns it off or the insert has moved</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.parenmatch.ParenMatch.html#set_timeout_last" class="code" data-type="Method">set_timeout_last</a></td>
+    <td><span>The last highlight created will be removed after FLASH_DELAY millisecs</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.idlelib.parenmatch.ParenMatch.RESTORE_VIRTUAL_EVENT_NAME">
+    
+  </a>
+  <a name="RESTORE_VIRTUAL_EVENT_NAME">
+    
+  </a>
+  <div class="functionHeader">
+    RESTORE_VIRTUAL_EVENT_NAME =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.idlelib.parenmatch.ParenMatch.RESTORE_SEQUENCES">
+    
+  </a>
+  <a name="RESTORE_SEQUENCES">
+    
+  </a>
+  <div class="functionHeader">
+    RESTORE_SEQUENCES =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Tuple[str, ...]</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.parenmatch.ParenMatch.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, editwin):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.parenmatch.ParenMatch.editwin">
+    
+  </a>
+  <a name="editwin">
+    
+  </a>
+  <div class="functionHeader">
+    editwin =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.parenmatch.ParenMatch.text">
+    
+  </a>
+  <a name="text">
+    
+  </a>
+  <div class="functionHeader">
+    text =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.parenmatch.ParenMatch.counter">
+    
+  </a>
+  <a name="counter">
+    
+  </a>
+  <div class="functionHeader">
+    counter =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.parenmatch.ParenMatch.is_restore_active">
+    
+  </a>
+  <a name="is_restore_active">
+    
+  </a>
+  <div class="functionHeader">
+    is_restore_active =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseclassmethod">
+  
+  <a name="Lib.idlelib.parenmatch.ParenMatch.reload">
+    
+  </a>
+  <a name="reload">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    reload(cls):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.parenmatch.ParenMatch.activate_restore">
+    
+  </a>
+  <a name="activate_restore">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    activate_restore(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Activate mechanism to restore text from highlighting.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.parenmatch.ParenMatch.deactivate_restore">
+    
+  </a>
+  <a name="deactivate_restore">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    deactivate_restore(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Remove restore event bindings.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.parenmatch.ParenMatch.flash_paren_event">
+    
+  </a>
+  <a name="flash_paren_event">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    flash_paren_event(self, event):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Handle editor 'show surrounding parens' event (menu or shortcut).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.parenmatch.ParenMatch.paren_closed_event">
+    
+  </a>
+  <a name="paren_closed_event">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    paren_closed_event(self, event):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Handle user input of closer.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.parenmatch.ParenMatch.finish_paren_event">
+    
+  </a>
+  <a name="finish_paren_event">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    finish_paren_event(self, indices):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.parenmatch.ParenMatch.restore_event">
+    
+  </a>
+  <a name="restore_event">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    restore_event(self, event=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Remove effect of doing match.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.parenmatch.ParenMatch.handle_restore_timer">
+    
+  </a>
+  <a name="handle_restore_timer">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    handle_restore_timer(self, timer_count):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.parenmatch.ParenMatch.create_tag_opener">
+    
+  </a>
+  <a name="create_tag_opener">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    create_tag_opener(self, indices):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Highlight the single paren that matches</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.parenmatch.ParenMatch.create_tag_parens">
+    
+  </a>
+  <a name="create_tag_parens">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    create_tag_parens(self, indices):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Highlight the left and right parens</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.parenmatch.ParenMatch.create_tag_expression">
+    
+  </a>
+  <a name="create_tag_expression">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    create_tag_expression(self, indices):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Highlight the entire expression</p></div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.idlelib.parenmatch.ParenMatch.tagfuncs">
+    
+  </a>
+  <a name="tagfuncs">
+    
+  </a>
+  <div class="functionHeader">
+    tagfuncs =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.parenmatch.ParenMatch.set_timeout_none">
+    
+  </a>
+  <a name="set_timeout_none">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_timeout_none(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Highlight will remain until user input turns it off
+or the insert has moved</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.parenmatch.ParenMatch.set_timeout_last">
+    
+  </a>
+  <a name="set_timeout_last">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_timeout_last(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">The last highlight created will be removed after FLASH_DELAY millisecs</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

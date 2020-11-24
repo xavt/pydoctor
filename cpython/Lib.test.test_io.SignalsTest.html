@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.test.test_io.SignalsTest : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.test.html" class="code" data-type="Package">test</a>.<a href="Lib.test.test_io.html" class="code" data-type="Module">test_io</a>.<a href="Lib.test.test_io.SignalsTest.html" class="code" data-type="Class">SignalsTest</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.test.test_io.SignalsTest(<span title="unittest.TestCase">unittest.TestCase</span>):</code></p><p>Known subclasses: <a href="Lib.test.test_io.CSignalsTest.html" class="code" data-type="Class">Lib.test.test_io.CSignalsTest</a>, <a href="Lib.test.test_io.PySignalsTest.html" class="code" data-type="Class">Lib.test.test_io.PySignalsTest</a></p>
+        <p><a href="classIndex.html#Lib.test.test_io.SignalsTest">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div class="undocumented">Undocumented</div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id7146">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_io.SignalsTest.html#setUp" class="code" data-type="Method">setUp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_io.SignalsTest.html#oldalrm" class="code" data-type="Instance Variable">oldalrm</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_io.SignalsTest.html#tearDown" class="code" data-type="Method">tearDown</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_io.SignalsTest.html#alarm_interrupt" class="code" data-type="Method">alarm_interrupt</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_io.SignalsTest.html#check_interrupted_write" class="code" data-type="Method">check_interrupted_write</a></td>
+    <td><span>Check that a partial write, when it gets interrupted, properly invokes the signal handler, and bubbles up the exception raised in the latter.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_io.SignalsTest.html#test_interrupted_write_unbuffered" class="code" data-type="Method">test_interrupted_write_unbuffered</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_io.SignalsTest.html#test_interrupted_write_buffered" class="code" data-type="Method">test_interrupted_write_buffered</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_io.SignalsTest.html#test_interrupted_write_text" class="code" data-type="Method">test_interrupted_write_text</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_io.SignalsTest.html#check_reentrant_write" class="code" data-type="Method">check_reentrant_write</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_io.SignalsTest.html#test_reentrant_write_buffered" class="code" data-type="Method">test_reentrant_write_buffered</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_io.SignalsTest.html#test_reentrant_write_text" class="code" data-type="Method">test_reentrant_write_text</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_io.SignalsTest.html#check_interrupted_read_retry" class="code" data-type="Method">check_interrupted_read_retry</a></td>
+    <td><span>Check that a buffered read, when it gets interrupted (either returning a partial result or EINTR), properly invokes the signal handler and retries if the latter returned successfully.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_io.SignalsTest.html#test_interrupted_read_retry_buffered" class="code" data-type="Method">test_interrupted_read_retry_buffered</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_io.SignalsTest.html#test_interrupted_read_retry_text" class="code" data-type="Method">test_interrupted_read_retry_text</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_io.SignalsTest.html#check_interrupted_write_retry" class="code" data-type="Method">check_interrupted_write_retry</a></td>
+    <td><span>Check that a buffered write, when it gets interrupted (either returning a partial result or EINTR), properly invokes the signal handler and retries if the latter returned successfully.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_io.SignalsTest.html#test_interrupted_write_retry_buffered" class="code" data-type="Method">test_interrupted_write_retry_buffered</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_io.SignalsTest.html#test_interrupted_write_retry_text" class="code" data-type="Method">test_interrupted_write_retry_text</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.test.test_io.SignalsTest.setUp">
+    
+  </a>
+  <a name="setUp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setUp(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_io.SignalsTest.oldalrm">
+    
+  </a>
+  <a name="oldalrm">
+    
+  </a>
+  <div class="functionHeader">
+    oldalrm =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_io.SignalsTest.tearDown">
+    
+  </a>
+  <a name="tearDown">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tearDown(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_io.SignalsTest.alarm_interrupt">
+    
+  </a>
+  <a name="alarm_interrupt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    alarm_interrupt(self, sig, frame):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_io.SignalsTest.check_interrupted_write">
+    
+  </a>
+  <a name="check_interrupted_write">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    check_interrupted_write(self, item, bytes, **fdopen_kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Check that a partial write, when it gets interrupted, properly
+invokes the signal handler, and bubbles up the exception raised
+in the latter.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_io.SignalsTest.test_interrupted_write_unbuffered">
+    
+  </a>
+  <a name="test_interrupted_write_unbuffered">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_interrupted_write_unbuffered(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_io.SignalsTest.test_interrupted_write_buffered">
+    
+  </a>
+  <a name="test_interrupted_write_buffered">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_interrupted_write_buffered(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_io.SignalsTest.test_interrupted_write_text">
+    
+  </a>
+  <a name="test_interrupted_write_text">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_interrupted_write_text(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_io.SignalsTest.check_reentrant_write">
+    
+  </a>
+  <a name="check_reentrant_write">
+    
+  </a>
+  <div class="functionHeader">
+    @support.no_tracing<br />
+    def
+    check_reentrant_write(self, data, **fdopen_kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_io.SignalsTest.test_reentrant_write_buffered">
+    
+  </a>
+  <a name="test_reentrant_write_buffered">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_reentrant_write_buffered(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.test.test_io.PySignalsTest.html" class="code" data-type="Class">Lib.test.test_io.PySignalsTest</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_io.SignalsTest.test_reentrant_write_text">
+    
+  </a>
+  <a name="test_reentrant_write_text">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_reentrant_write_text(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.test.test_io.PySignalsTest.html" class="code" data-type="Class">Lib.test.test_io.PySignalsTest</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_io.SignalsTest.check_interrupted_read_retry">
+    
+  </a>
+  <a name="check_interrupted_read_retry">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    check_interrupted_read_retry(self, decode, **fdopen_kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Check that a buffered read, when it gets interrupted (either
+returning a partial result or EINTR), properly invokes the signal
+handler and retries if the latter returned successfully.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_io.SignalsTest.test_interrupted_read_retry_buffered">
+    
+  </a>
+  <a name="test_interrupted_read_retry_buffered">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_interrupted_read_retry_buffered(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_io.SignalsTest.test_interrupted_read_retry_text">
+    
+  </a>
+  <a name="test_interrupted_read_retry_text">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_interrupted_read_retry_text(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_io.SignalsTest.check_interrupted_write_retry">
+    
+  </a>
+  <a name="check_interrupted_write_retry">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    check_interrupted_write_retry(self, item, **fdopen_kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Check that a buffered write, when it gets interrupted (either
+returning a partial result or EINTR), properly invokes the signal
+handler and retries if the latter returned successfully.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_io.SignalsTest.test_interrupted_write_retry_buffered">
+    
+  </a>
+  <a name="test_interrupted_write_retry_buffered">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_interrupted_write_retry_buffered(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_io.SignalsTest.test_interrupted_write_retry_text">
+    
+  </a>
+  <a name="test_interrupted_write_retry_text">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_interrupted_write_retry_text(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

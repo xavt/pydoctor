@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.logging.handlers.SMTPHandler : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.logging.html" class="code" data-type="Package">logging</a>.<a href="Lib.logging.handlers.html" class="code" data-type="Module">handlers</a>.<a href="Lib.logging.handlers.SMTPHandler.html" class="code" data-type="Class">SMTPHandler</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.logging.handlers.SMTPHandler(<span title="logging.Handler">logging.Handler</span>):</code></p>
+        <p><a href="classIndex.html#Lib.logging.handlers.SMTPHandler">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">A handler class which sends an SMTP email for each logging event.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3055">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.handlers.SMTPHandler.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Initialize the handler.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.handlers.SMTPHandler.html#mailhost" class="code" data-type="Instance Variable">mailhost</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.handlers.SMTPHandler.html#mailport" class="code" data-type="Instance Variable">mailport</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.handlers.SMTPHandler.html#username" class="code" data-type="Instance Variable">username</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.handlers.SMTPHandler.html#password" class="code" data-type="Instance Variable">password</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.handlers.SMTPHandler.html#fromaddr" class="code" data-type="Instance Variable">fromaddr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.handlers.SMTPHandler.html#toaddrs" class="code" data-type="Instance Variable">toaddrs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.handlers.SMTPHandler.html#subject" class="code" data-type="Instance Variable">subject</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.handlers.SMTPHandler.html#secure" class="code" data-type="Instance Variable">secure</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.handlers.SMTPHandler.html#timeout" class="code" data-type="Instance Variable">timeout</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.handlers.SMTPHandler.html#getSubject" class="code" data-type="Method">getSubject</a></td>
+    <td><span>Determine the subject for the email.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.handlers.SMTPHandler.html#emit" class="code" data-type="Method">emit</a></td>
+    <td><span>Emit a record.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.logging.handlers.SMTPHandler.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, mailhost, fromaddr, toaddrs, subject, credentials=None, secure=None, timeout=5.0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Initialize the handler.
+
+Initialize the instance with the from and to addresses and subject
+line of the email. To specify a non-standard SMTP port, use the
+(host, port) tuple format for the mailhost argument. To specify
+authentication credentials, supply a (username, password) tuple
+for the credentials argument. To specify the use of a secure
+protocol (TLS), pass in a tuple for the secure argument. This will
+only be used when authentication credentials are supplied. The tuple
+will be either an empty tuple, or a single-value tuple with the name
+of a keyfile, or a 2-value tuple with the names of the keyfile and
+certificate file. (This tuple is passed to the `starttls` method).
+A timeout in seconds can be specified for the SMTP connection (the
+default is one second).</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.logging.handlers.SMTPHandler.mailhost">
+    
+  </a>
+  <a name="mailhost">
+    
+  </a>
+  <div class="functionHeader">
+    mailhost =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.logging.handlers.SMTPHandler.mailport">
+    
+  </a>
+  <a name="mailport">
+    
+  </a>
+  <div class="functionHeader">
+    mailport =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.logging.handlers.SMTPHandler.username">
+    
+  </a>
+  <a name="username">
+    
+  </a>
+  <div class="functionHeader">
+    username =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.logging.handlers.SMTPHandler.password">
+    
+  </a>
+  <a name="password">
+    
+  </a>
+  <div class="functionHeader">
+    password =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.logging.handlers.SMTPHandler.fromaddr">
+    
+  </a>
+  <a name="fromaddr">
+    
+  </a>
+  <div class="functionHeader">
+    fromaddr =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.logging.handlers.SMTPHandler.toaddrs">
+    
+  </a>
+  <a name="toaddrs">
+    
+  </a>
+  <div class="functionHeader">
+    toaddrs =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.logging.handlers.SMTPHandler.subject">
+    
+  </a>
+  <a name="subject">
+    
+  </a>
+  <div class="functionHeader">
+    subject =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.logging.handlers.SMTPHandler.secure">
+    
+  </a>
+  <a name="secure">
+    
+  </a>
+  <div class="functionHeader">
+    secure =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.logging.handlers.SMTPHandler.timeout">
+    
+  </a>
+  <a name="timeout">
+    
+  </a>
+  <div class="functionHeader">
+    timeout =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.handlers.SMTPHandler.getSubject">
+    
+  </a>
+  <a name="getSubject">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getSubject(self, record):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Determine the subject for the email.
+
+If you want to specify a subject line which is record-dependent,
+override this method.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.handlers.SMTPHandler.emit">
+    
+  </a>
+  <a name="emit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    emit(self, record):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Emit a record.
+
+Format the record and send it to the specified addressees.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

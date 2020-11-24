@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.idlelib.rpc : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.idlelib.html" class="code" data-type="Package">idlelib</a>.<a href="Lib.idlelib.rpc.html" class="code" data-type="Module">rpc</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">RPC Implementation, originally written for the Python Idle IDE
+
+For security reasons, GvR requested that Idle's Python execution server process
+connect to the Idle process, which listens for the connection.  Since Idle has
+only one client per server, this was not a limitation.
+
+   +---------------------------------+ +-------------+
+   | socketserver.BaseRequestHandler | | SocketIO    |
+   +---------------------------------+ +-------------+
+                   ^                   | register()  |
+                   |                   | unregister()|
+                   |                   +-------------+
+                   |                      ^  ^
+                   |                      |  |
+                   | + -------------------+  |
+                   | |                       |
+   +-------------------------+        +-----------------+
+   | RPCHandler              |        | RPCClient       |
+   | [attribute of RPCServer]|        |                 |
+   +-------------------------+        +-----------------+
+
+The RPCServer handler class is expected to provide register/unregister methods.
+RPCHandler inherits the mix-in class SocketIO, which provides these methods.
+
+See the Idle run.main() docstring for further information on how this was
+accomplished in Idle.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2431">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.rpc.html#unpickle_code" class="code" data-type="Function">unpickle_code</a></td>
+    <td><span>Return code object from marshal string ms.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.rpc.html#pickle_code" class="code" data-type="Function">pickle_code</a></td>
+    <td><span>Return unpickle function and tuple with marshalled co code object.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.rpc.html#dumps" class="code" data-type="Function">dumps</a></td>
+    <td><span>Return pickled (or marshalled) string for obj.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.rpc.CodePickler.html" class="code" data-type="Class">CodePickler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.rpc.html#BUFSIZE" class="code" data-type="Variable">BUFSIZE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.rpc.html#LOCALHOST" class="code" data-type="Variable">LOCALHOST</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.rpc.RPCServer.html" class="code" data-type="Class">RPCServer</a></td>
+    <td><span class="undocumented">No class4/5 methods documented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.rpc.html#objecttable" class="code" data-type="Variable">objecttable</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.rpc.html#request_queue" class="code" data-type="Variable">request_queue</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.rpc.html#response_queue" class="code" data-type="Variable">response_queue</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.rpc.SocketIO.html" class="code" data-type="Class">SocketIO</a></td>
+    <td><span class="undocumented">No class0/10 instance variables docstring; , 6/27 methods documented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.rpc.RemoteObject.html" class="code" data-type="Class">RemoteObject</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.rpc.html#remoteref" class="code" data-type="Function">remoteref</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.rpc.RemoteProxy.html" class="code" data-type="Class">RemoteProxy</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.rpc.RPCHandler.html" class="code" data-type="Class">RPCHandler</a></td>
+    <td><span class="undocumented">No class0/2 class variables docstring; , 1/3 methods documented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.rpc.RPCClient.html" class="code" data-type="Class">RPCClient</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.rpc.RPCProxy.html" class="code" data-type="Class">RPCProxy</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.rpc.MethodProxy.html" class="code" data-type="Class">MethodProxy</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.rpc.html#displayhook" class="code" data-type="Function">displayhook</a></td>
+    <td><span>Override standard display hook to use non-locale encoding</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.rpc.html#_getmethods" class="code" data-type="Function">_getmethods</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.rpc.html#_getattributes" class="code" data-type="Function">_getattributes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction">
+  
+  <a name="Lib.idlelib.rpc.unpickle_code">
+    
+  </a>
+  <a name="unpickle_code">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    unpickle_code(ms):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return code object from marshal string ms.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.rpc.pickle_code">
+    
+  </a>
+  <a name="pickle_code">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    pickle_code(co):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return unpickle function and tuple with marshalled co code object.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.rpc.dumps">
+    
+  </a>
+  <a name="dumps">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    dumps(obj, protocol=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return pickled (or marshalled) string for obj.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.rpc.BUFSIZE">
+    
+  </a>
+  <a name="BUFSIZE">
+    
+  </a>
+  <div class="functionHeader">
+    BUFSIZE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.rpc.LOCALHOST">
+    
+  </a>
+  <a name="LOCALHOST">
+    
+  </a>
+  <div class="functionHeader">
+    LOCALHOST =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.rpc.objecttable">
+    
+  </a>
+  <a name="objecttable">
+    
+  </a>
+  <div class="functionHeader">
+    objecttable =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.rpc.request_queue">
+    
+  </a>
+  <a name="request_queue">
+    
+  </a>
+  <div class="functionHeader">
+    request_queue =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.rpc.response_queue">
+    
+  </a>
+  <a name="response_queue">
+    
+  </a>
+  <div class="functionHeader">
+    response_queue =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.rpc.remoteref">
+    
+  </a>
+  <a name="remoteref">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    remoteref(obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.idlelib.rpc._getmethods">
+    
+  </a>
+  <a name="_getmethods">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _getmethods(obj, methods):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.idlelib.rpc._getattributes">
+    
+  </a>
+  <a name="_getattributes">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _getattributes(obj, attributes):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.rpc.displayhook">
+    
+  </a>
+  <a name="displayhook">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    displayhook(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Override standard display hook to use non-locale encoding</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

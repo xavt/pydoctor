@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.test.sortperf : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.test.html" class="code" data-type="Package">test</a>.<a href="Lib.test.sortperf.html" class="code" data-type="Module">sortperf</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Sort performance test.
+
+See main() for command line syntax.
+See tabulate() for output format.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id4127">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.test.sortperf.html#td" class="code" data-type="Variable">td</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.sortperf.html#randfloats" class="code" data-type="Function">randfloats</a></td>
+    <td><span>Return a list of n random floats in [0, 1).</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.sortperf.html#flush" class="code" data-type="Function">flush</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.sortperf.html#doit" class="code" data-type="Function">doit</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.sortperf.html#tabulate" class="code" data-type="Function">tabulate</a></td>
+    <td><span>Tabulate sort speed for lists of various sizes.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.sortperf.html#main" class="code" data-type="Function">main</a></td>
+    <td><span>Main program when invoked as a script.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.test.sortperf.td">
+    
+  </a>
+  <a name="td">
+    
+  </a>
+  <div class="functionHeader">
+    td =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.sortperf.randfloats">
+    
+  </a>
+  <a name="randfloats">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    randfloats(n):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a list of n random floats in [0, 1).</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.sortperf.flush">
+    
+  </a>
+  <a name="flush">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    flush():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.sortperf.doit">
+    
+  </a>
+  <a name="doit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    doit(L):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.sortperf.tabulate">
+    
+  </a>
+  <a name="tabulate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tabulate(r):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Tabulate sort speed for lists of various sizes.
+
+The sizes are 2**i for i in r (the argument, a list).
+
+The output displays i, 2**i, and the time to sort arrays of 2**i
+floating point numbers with the following properties:
+
+*sort: random data
+\sort: descending data
+/sort: ascending data
+3sort: ascending, then 3 random exchanges
++sort: ascending, then 10 random at the end
+%sort: ascending, then randomly replace 1% of the elements w/ random values
+~sort: many duplicates
+=sort: all equal
+!sort: worst case scenario</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.sortperf.main">
+    
+  </a>
+  <a name="main">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    main():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Main program when invoked as a script.
+
+One argument: tabulate a single row.
+Two arguments: tabulate a range (inclusive).
+Extra arguments are used to seed the random generator.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

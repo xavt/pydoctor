@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.locale : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.locale.html" class="code" data-type="Module">locale</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Locale support module.
+
+The module provides low-level access to the C lib's locale APIs and adds high
+level number formatting APIs as well as a locale aliasing engine to complement
+these.
+
+The aliasing engine includes support for many commonly used locale names and
+maps them to values suitable for passing to the C lib's setlocale() function. It
+also includes default encodings for all supported locale names.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2996">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.locale.html#CHAR_MAX" class="code" data-type="Variable">CHAR_MAX</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.locale.html#LC_ALL" class="code" data-type="Variable">LC_ALL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.locale.html#LC_COLLATE" class="code" data-type="Variable">LC_COLLATE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.locale.html#LC_CTYPE" class="code" data-type="Variable">LC_CTYPE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.locale.html#LC_MESSAGES" class="code" data-type="Variable">LC_MESSAGES</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.locale.html#LC_MONETARY" class="code" data-type="Variable">LC_MONETARY</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.locale.html#LC_NUMERIC" class="code" data-type="Variable">LC_NUMERIC</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.locale.html#LC_TIME" class="code" data-type="Variable">LC_TIME</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.locale.html#localeconv" class="code" data-type="Function">localeconv</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.locale.html#setlocale" class="code" data-type="Function">setlocale</a></td>
+    <td><span>Set the locale for the given category.  The locale can be a string, an iterable of two strings (language code and encoding), or None.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.locale.html#format_string" class="code" data-type="Function">format_string</a></td>
+    <td><span>Formats a string in the same way that the % formatting would use, but takes the current locale into account.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.locale.html#format" class="code" data-type="Function">format</a></td>
+    <td><span>Deprecated, use format_string instead.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.locale.html#currency" class="code" data-type="Function">currency</a></td>
+    <td><span>Formats val according to the currency settings in the current locale.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.locale.html#str" class="code" data-type="Function">str</a></td>
+    <td><span>Convert float to string, taking the locale into account.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.locale.html#delocalize" class="code" data-type="Function">delocalize</a></td>
+    <td><span>Parses a string as a normalized number according to the locale settings.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.locale.html#atof" class="code" data-type="Function">atof</a></td>
+    <td><span>Parses a string as a float according to the locale settings.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.locale.html#atoi" class="code" data-type="Function">atoi</a></td>
+    <td><span>Converts a string to an integer according to the locale settings.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.locale.html#normalize" class="code" data-type="Function">normalize</a></td>
+    <td><span>Returns a normalized locale code for the given locale name.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.locale.html#getdefaultlocale" class="code" data-type="Function">getdefaultlocale</a></td>
+    <td><span>Tries to determine the default locale settings and returns them as tuple (language code, encoding).</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.locale.html#getlocale" class="code" data-type="Function">getlocale</a></td>
+    <td><span>Returns the current setting for the given locale category as tuple (language code, encoding).</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.locale.html#resetlocale" class="code" data-type="Function">resetlocale</a></td>
+    <td><span>Sets the locale for category to the default setting.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.locale.html#getpreferredencoding" class="code" data-type="Function">getpreferredencoding</a></td>
+    <td><span>Return the charset that the user is likely using, according to the system configuration.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.locale.html#locale_encoding_alias" class="code" data-type="Variable">locale_encoding_alias</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.locale.html#k" class="code" data-type="Variable">k</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.locale.html#locale_alias" class="code" data-type="Variable">locale_alias</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.locale.html#windows_locale" class="code" data-type="Variable">windows_locale</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.locale.html#_strcoll" class="code" data-type="Function">_strcoll</a></td>
+    <td><span>strcoll(string,string) -&gt; int. Compares two strings according to the locale.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.locale.html#_strxfrm" class="code" data-type="Function">_strxfrm</a></td>
+    <td><span>strxfrm(string) -&gt; string. Returns a string that behaves for cmp locale-aware.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.locale.html#_override_localeconv" class="code" data-type="Variable">_override_localeconv</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.locale.html#_grouping_intervals" class="code" data-type="Function">_grouping_intervals</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.locale.html#_group" class="code" data-type="Function">_group</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.locale.html#_strip_padding" class="code" data-type="Function">_strip_padding</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.locale.html#_percent_re" class="code" data-type="Variable">_percent_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.locale.html#_format" class="code" data-type="Function">_format</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.locale.html#_test" class="code" data-type="Function">_test</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.locale.html#_replace_encoding" class="code" data-type="Function">_replace_encoding</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.locale.html#_append_modifier" class="code" data-type="Function">_append_modifier</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.locale.html#_parse_localename" class="code" data-type="Function">_parse_localename</a></td>
+    <td><span>Parses the locale code for localename and returns the result as tuple (language code, encoding).</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.locale.html#_build_localename" class="code" data-type="Function">_build_localename</a></td>
+    <td><span>Builds a locale code from the given tuple (language code, encoding).</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.locale.html#_get_locale_encoding" class="code" data-type="Function">_get_locale_encoding</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.locale.html#_print_locale" class="code" data-type="Function">_print_locale</a></td>
+    <td><span>Test function.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction private">
+  
+  <a name="Lib.locale._strcoll">
+    
+  </a>
+  <a name="_strcoll">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _strcoll(a, b):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">strcoll(string,string) -&gt; int.
+Compares two strings according to the locale.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.locale._strxfrm">
+    
+  </a>
+  <a name="_strxfrm">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _strxfrm(s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">strxfrm(string) -&gt; string.
+Returns a string that behaves for cmp locale-aware.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.locale.CHAR_MAX">
+    
+  </a>
+  <a name="CHAR_MAX">
+    
+  </a>
+  <div class="functionHeader">
+    CHAR_MAX =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.locale.LC_ALL">
+    
+  </a>
+  <a name="LC_ALL">
+    
+  </a>
+  <div class="functionHeader">
+    LC_ALL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.locale.LC_COLLATE">
+    
+  </a>
+  <a name="LC_COLLATE">
+    
+  </a>
+  <div class="functionHeader">
+    LC_COLLATE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.locale.LC_CTYPE">
+    
+  </a>
+  <a name="LC_CTYPE">
+    
+  </a>
+  <div class="functionHeader">
+    LC_CTYPE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.locale.LC_MESSAGES">
+    
+  </a>
+  <a name="LC_MESSAGES">
+    
+  </a>
+  <div class="functionHeader">
+    LC_MESSAGES =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.locale.LC_MONETARY">
+    
+  </a>
+  <a name="LC_MONETARY">
+    
+  </a>
+  <div class="functionHeader">
+    LC_MONETARY =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.locale.LC_NUMERIC">
+    
+  </a>
+  <a name="LC_NUMERIC">
+    
+  </a>
+  <div class="functionHeader">
+    LC_NUMERIC =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.locale.LC_TIME">
+    
+  </a>
+  <a name="LC_TIME">
+    
+  </a>
+  <div class="functionHeader">
+    LC_TIME =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.locale.localeconv">
+    
+  </a>
+  <a name="localeconv">
+    
+  </a>
+  <div class="functionHeader">
+    @functools.wraps(_localeconv)<br />
+    def
+    localeconv():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.locale.setlocale">
+    
+  </a>
+  <a name="setlocale">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setlocale(category, locale=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set the locale for the given category.  The locale can be
+a string, an iterable of two strings (language code and encoding),
+or None.
+
+Iterables are converted to strings using the locale aliasing
+engine.  Locale strings are passed directly to the C lib.
+
+category may be given as one of the LC_* values.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.locale._override_localeconv">
+    
+  </a>
+  <a name="_override_localeconv">
+    
+  </a>
+  <div class="functionHeader">
+    _override_localeconv =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.locale._grouping_intervals">
+    
+  </a>
+  <a name="_grouping_intervals">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _grouping_intervals(grouping):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.locale._group">
+    
+  </a>
+  <a name="_group">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _group(s, monetary=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.locale._strip_padding">
+    
+  </a>
+  <a name="_strip_padding">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _strip_padding(s, amount):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.locale._percent_re">
+    
+  </a>
+  <a name="_percent_re">
+    
+  </a>
+  <div class="functionHeader">
+    _percent_re =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.locale._format">
+    
+  </a>
+  <a name="_format">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _format(percent, value, *additional, grouping=(False), monetary=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.locale.format_string">
+    
+  </a>
+  <a name="format_string">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    format_string(f, val, grouping=(False), monetary=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Formats a string in the same way that the % formatting would use,
+but takes the current locale into account.
+
+Grouping is applied if the third parameter is true.
+Conversion uses monetary thousands separator and grouping strings if
+forth parameter monetary is true.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.locale.format">
+    
+  </a>
+  <a name="format">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    format(percent, value, *additional, grouping=(False), monetary=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Deprecated, use format_string instead.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.locale.currency">
+    
+  </a>
+  <a name="currency">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    currency(val, symbol=(True), grouping=(False), international=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Formats val according to the currency settings
+in the current locale.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.locale.str">
+    
+  </a>
+  <a name="str">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    str(val):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convert float to string, taking the locale into account.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.locale.delocalize">
+    
+  </a>
+  <a name="delocalize">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    delocalize(string):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parses a string as a normalized number according to the locale settings.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.locale.atof">
+    
+  </a>
+  <a name="atof">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    atof(string, func=float):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parses a string as a float according to the locale settings.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.locale.atoi">
+    
+  </a>
+  <a name="atoi">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    atoi(string):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Converts a string to an integer according to the locale settings.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.locale._test">
+    
+  </a>
+  <a name="_test">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _test():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.locale._replace_encoding">
+    
+  </a>
+  <a name="_replace_encoding">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _replace_encoding(code, encoding):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.locale._append_modifier">
+    
+  </a>
+  <a name="_append_modifier">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _append_modifier(code, modifier):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.locale.normalize">
+    
+  </a>
+  <a name="normalize">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    normalize(localename):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns a normalized locale code for the given locale
+name.
+
+The returned locale code is formatted for use with
+setlocale().
+
+If normalization fails, the original name is returned
+unchanged.
+
+If the given encoding is not known, the function defaults to
+the default encoding for the locale code just like setlocale()
+does.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.locale._parse_localename">
+    
+  </a>
+  <a name="_parse_localename">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _parse_localename(localename):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parses the locale code for localename and returns the
+result as tuple (language code, encoding).
+
+The localename is normalized and passed through the locale
+alias engine. A ValueError is raised in case the locale name
+cannot be parsed.
+
+The language code corresponds to RFC 1766.  code and encoding
+can be None in case the values cannot be determined or are
+unknown to this implementation.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.locale._build_localename">
+    
+  </a>
+  <a name="_build_localename">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _build_localename(localetuple):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Builds a locale code from the given tuple (language code,
+encoding).
+
+No aliasing or normalizing takes place.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.locale.getdefaultlocale">
+    
+  </a>
+  <a name="getdefaultlocale">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getdefaultlocale(envvars=('LC_ALL', 'LC_CTYPE', 'LANG', 'LANGUAGE')):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Tries to determine the default locale settings and returns
+them as tuple (language code, encoding).
+
+According to POSIX, a program which has not called
+setlocale(LC_ALL, "") runs using the portable 'C' locale.
+Calling setlocale(LC_ALL, "") lets it use the default locale as
+defined by the LANG variable. Since we don't want to interfere
+with the current locale setting we thus emulate the behavior
+in the way described above.
+
+To maintain compatibility with other platforms, not only the
+LANG variable is tested, but a list of variables given as
+envvars parameter. The first found to be defined will be
+used. envvars defaults to the search path used in GNU gettext;
+it must always contain the variable name 'LANG'.
+
+Except for the code 'C', the language code corresponds to RFC
+1766.  code and encoding can be None in case the values cannot
+be determined.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.locale.getlocale">
+    
+  </a>
+  <a name="getlocale">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getlocale(category=LC_CTYPE):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns the current setting for the given locale category as
+tuple (language code, encoding).
+
+category may be one of the LC_* value except LC_ALL. It
+defaults to LC_CTYPE.
+
+Except for the code 'C', the language code corresponds to RFC
+1766.  code and encoding can be None in case the values cannot
+be determined.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.locale.resetlocale">
+    
+  </a>
+  <a name="resetlocale">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    resetlocale(category=LC_ALL):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Sets the locale for category to the default setting.
+
+The default setting is determined by calling
+getdefaultlocale(). category defaults to LC_ALL.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.locale._get_locale_encoding">
+    
+  </a>
+  <a name="_get_locale_encoding">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_locale_encoding():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.locale.getpreferredencoding">
+    
+  </a>
+  <a name="getpreferredencoding">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getpreferredencoding(do_setlocale=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the charset that the user is likely using,
+according to the system configuration.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.locale.locale_encoding_alias">
+    
+  </a>
+  <a name="locale_encoding_alias">
+    
+  </a>
+  <div class="functionHeader">
+    locale_encoding_alias =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict[str, str]</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.locale.k">
+    
+  </a>
+  <a name="k">
+    
+  </a>
+  <div class="functionHeader">
+    k =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.locale.locale_alias">
+    
+  </a>
+  <a name="locale_alias">
+    
+  </a>
+  <div class="functionHeader">
+    locale_alias =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict[str, str]</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.locale.windows_locale">
+    
+  </a>
+  <a name="windows_locale">
+    
+  </a>
+  <div class="functionHeader">
+    windows_locale =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict[int, str]</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.locale._print_locale">
+    
+  </a>
+  <a name="_print_locale">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _print_locale():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Test function.
+    </p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

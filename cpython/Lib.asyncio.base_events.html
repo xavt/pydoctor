@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.asyncio.base_events : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.asyncio.html" class="code" data-type="Package">asyncio</a>.<a href="Lib.asyncio.base_events.html" class="code" data-type="Module">base_events</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Base implementation of event loop.
+
+The event loop can be broken up into a multiplexer (the part
+responsible for notifying us of I/O events) and the event loop proper,
+which wraps a multiplexer with functionality for scheduling callbacks,
+immediately or at a given time in the future.
+
+Whenever a public API takes a callback, subsequent positional
+arguments will be passed to the callback if/when it is called.  This
+avoids the proliferation of trivial lambdas implementing closures.
+Keyword arguments for the callback are not supported; this is a
+conscious design decision, leaving the door open for keyword arguments
+to modify the meaning of the API call itself.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id291">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.asyncio.base_events.html#ssl" class="code" data-type="Variable">ssl</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.asyncio.base_events.html#MAXIMUM_SELECT_TIMEOUT" class="code" data-type="Variable">MAXIMUM_SELECT_TIMEOUT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.asyncio.base_events.Server.html" class="code" data-type="Class">Server</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.asyncio.base_events.BaseEventLoop.html" class="code" data-type="Class">BaseEventLoop</a></td>
+    <td><span class="undocumented">No class7/52 class variables docstring; , 0/19 instance variables docstring; , 31/50 methods documented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.asyncio.base_events.html#_MIN_SCHEDULED_TIMER_HANDLES" class="code" data-type="Variable">_MIN_SCHEDULED_TIMER_HANDLES</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.asyncio.base_events.html#_MIN_CANCELLED_TIMER_HANDLES_FRACTION" class="code" data-type="Variable">_MIN_CANCELLED_TIMER_HANDLES_FRACTION</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.asyncio.base_events.html#_HAS_IPv6" class="code" data-type="Variable">_HAS_IPv6</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.asyncio.base_events.html#_unset" class="code" data-type="Variable">_unset</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.base_events.html#_format_handle" class="code" data-type="Function">_format_handle</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.base_events.html#_format_pipe" class="code" data-type="Function">_format_pipe</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.base_events.html#_set_reuseport" class="code" data-type="Function">_set_reuseport</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.base_events.html#_ipaddr_info" class="code" data-type="Function">_ipaddr_info</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.base_events.html#_interleave_addrinfos" class="code" data-type="Function">_interleave_addrinfos</a></td>
+    <td><span>Interleave list of addrinfo tuples by family.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.base_events.html#_run_until_complete_cb" class="code" data-type="Function">_run_until_complete_cb</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.base_events.html#_set_nodelay" class="code" data-type="Function">_set_nodelay</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.asyncio.base_events._SendfileFallbackProtocol.html" class="code" data-type="Class">_SendfileFallbackProtocol</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.asyncio.base_events.ssl">
+    
+  </a>
+  <a name="ssl">
+    
+  </a>
+  <div class="functionHeader">
+    ssl =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.asyncio.base_events._MIN_SCHEDULED_TIMER_HANDLES">
+    
+  </a>
+  <a name="_MIN_SCHEDULED_TIMER_HANDLES">
+    
+  </a>
+  <div class="functionHeader">
+    _MIN_SCHEDULED_TIMER_HANDLES =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.asyncio.base_events._MIN_CANCELLED_TIMER_HANDLES_FRACTION">
+    
+  </a>
+  <a name="_MIN_CANCELLED_TIMER_HANDLES_FRACTION">
+    
+  </a>
+  <div class="functionHeader">
+    _MIN_CANCELLED_TIMER_HANDLES_FRACTION =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>float</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.asyncio.base_events._HAS_IPv6">
+    
+  </a>
+  <a name="_HAS_IPv6">
+    
+  </a>
+  <div class="functionHeader">
+    _HAS_IPv6 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.asyncio.base_events.MAXIMUM_SELECT_TIMEOUT">
+    
+  </a>
+  <a name="MAXIMUM_SELECT_TIMEOUT">
+    
+  </a>
+  <div class="functionHeader">
+    MAXIMUM_SELECT_TIMEOUT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.asyncio.base_events._unset">
+    
+  </a>
+  <a name="_unset">
+    
+  </a>
+  <div class="functionHeader">
+    _unset =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.asyncio.base_events._format_handle">
+    
+  </a>
+  <a name="_format_handle">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _format_handle(handle):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.asyncio.base_events._format_pipe">
+    
+  </a>
+  <a name="_format_pipe">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _format_pipe(fd):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.asyncio.base_events._set_reuseport">
+    
+  </a>
+  <a name="_set_reuseport">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _set_reuseport(sock):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.asyncio.base_events._ipaddr_info">
+    
+  </a>
+  <a name="_ipaddr_info">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _ipaddr_info(host, port, family, type, proto, flowinfo=0, scopeid=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.asyncio.base_events._interleave_addrinfos">
+    
+  </a>
+  <a name="_interleave_addrinfos">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _interleave_addrinfos(addrinfos, first_address_family_count=1):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Interleave list of addrinfo tuples by family.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.asyncio.base_events._run_until_complete_cb">
+    
+  </a>
+  <a name="_run_until_complete_cb">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _run_until_complete_cb(fut):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.asyncio.base_events._set_nodelay">
+    
+  </a>
+  <a name="_set_nodelay">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _set_nodelay(sock):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

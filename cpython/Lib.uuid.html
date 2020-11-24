@@ -1,0 +1,1108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.uuid : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.uuid.html" class="code" data-type="Module">uuid</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">UUID objects (universally unique identifiers) according to RFC 4122.
+
+This module provides immutable UUID objects (class UUID) and the functions
+uuid1(), uuid3(), uuid4(), uuid5() for generating version 1, 3, 4, and 5
+UUIDs as specified in RFC 4122.
+
+If all you want is a unique ID, you should probably call uuid1() or uuid4().
+Note that uuid1() may compromise privacy since it creates a UUID containing
+the computer's network address.  uuid4() creates a random UUID.
+
+Typical usage:
+
+    &gt;&gt;&gt; import uuid
+
+    # make a UUID based on the host ID and current time
+    &gt;&gt;&gt; uuid.uuid1()    # doctest: +SKIP
+    UUID('a8098c1a-f86e-11da-bd1a-00112444be1e')
+
+    # make a UUID using an MD5 hash of a namespace UUID and a name
+    &gt;&gt;&gt; uuid.uuid3(uuid.NAMESPACE_DNS, 'python.org')
+    UUID('6fa459ea-ee8a-3ca4-894e-db77e160355e')
+
+    # make a random UUID
+    &gt;&gt;&gt; uuid.uuid4()    # doctest: +SKIP
+    UUID('16fd2706-8baf-433b-82eb-8c7fada847da')
+
+    # make a UUID using a SHA-1 hash of a namespace UUID and a name
+    &gt;&gt;&gt; uuid.uuid5(uuid.NAMESPACE_DNS, 'python.org')
+    UUID('886313e1-3b8a-5372-9b90-0c9aee199e5d')
+
+    # make a UUID from a string of hex digits (braces and hyphens ignored)
+    &gt;&gt;&gt; x = uuid.UUID('{00010203-0405-0607-0809-0a0b0c0d0e0f}')
+
+    # convert a UUID to a string of hex digits in standard form
+    &gt;&gt;&gt; str(x)
+    '00010203-0405-0607-0809-0a0b0c0d0e0f'
+
+    # get the raw 16 bytes of the UUID
+    &gt;&gt;&gt; x.bytes
+    b'\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f'
+
+    # make a UUID from a 16-byte string
+    &gt;&gt;&gt; uuid.UUID(bytes=x.bytes)
+    UUID('00010203-0405-0607-0809-0a0b0c0d0e0f')</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id11927">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.uuid.html#__author__" class="code" data-type="Variable">__author__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.uuid.html#RESERVED_NCS" class="code" data-type="Variable">RESERVED_NCS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.uuid.html#RFC_4122" class="code" data-type="Variable">RFC_4122</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.uuid.html#RESERVED_MICROSOFT" class="code" data-type="Variable">RESERVED_MICROSOFT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.uuid.html#RESERVED_FUTURE" class="code" data-type="Variable">RESERVED_FUTURE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.uuid.SafeUUID.html" class="code" data-type="Class">SafeUUID</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.uuid.UUID.html" class="code" data-type="Class">UUID</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.uuid.html#getnode" class="code" data-type="Function">getnode</a></td>
+    <td><span>Get the hardware address as a 48-bit positive integer.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.uuid.html#uuid1" class="code" data-type="Function">uuid1</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.uuid.html#uuid3" class="code" data-type="Function">uuid3</a></td>
+    <td><span>Generate a UUID from the MD5 hash of a namespace UUID and a name.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.uuid.html#uuid4" class="code" data-type="Function">uuid4</a></td>
+    <td><span>Generate a random UUID.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.uuid.html#uuid5" class="code" data-type="Function">uuid5</a></td>
+    <td><span>Generate a UUID from the SHA-1 hash of a namespace UUID and a name.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.uuid.html#NAMESPACE_DNS" class="code" data-type="Variable">NAMESPACE_DNS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.uuid.html#NAMESPACE_URL" class="code" data-type="Variable">NAMESPACE_URL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.uuid.html#NAMESPACE_OID" class="code" data-type="Variable">NAMESPACE_OID</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.uuid.html#NAMESPACE_X500" class="code" data-type="Variable">NAMESPACE_X500</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.uuid.html#_AIX" class="code" data-type="Variable">_AIX</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.uuid.html#_LINUX" class="code" data-type="Variable">_LINUX</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.uuid.html#_platform_system" class="code" data-type="Variable">_platform_system</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.uuid.html#_MAC_DELIM" class="code" data-type="Variable">_MAC_DELIM</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.uuid.html#_MAC_OMITS_LEADING_ZEROES" class="code" data-type="Variable">_MAC_OMITS_LEADING_ZEROES</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.uuid.html#_get_command_stdout" class="code" data-type="Function">_get_command_stdout</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.uuid.html#_is_universal" class="code" data-type="Function">_is_universal</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.uuid.html#_find_mac_near_keyword" class="code" data-type="Function">_find_mac_near_keyword</a></td>
+    <td><span>Searches a command's output for a MAC address near a keyword.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.uuid.html#_parse_mac" class="code" data-type="Function">_parse_mac</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.uuid.html#_find_mac_under_heading" class="code" data-type="Function">_find_mac_under_heading</a></td>
+    <td><span>Looks for a MAC address under a heading in a command's output.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.uuid.html#_ifconfig_getnode" class="code" data-type="Function">_ifconfig_getnode</a></td>
+    <td><span>Get the hardware address on Unix by running ifconfig.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.uuid.html#_ip_getnode" class="code" data-type="Function">_ip_getnode</a></td>
+    <td><span>Get the hardware address on Unix by running ip.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.uuid.html#_arp_getnode" class="code" data-type="Function">_arp_getnode</a></td>
+    <td><span>Get the hardware address on Unix by running arp.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.uuid.html#_lanscan_getnode" class="code" data-type="Function">_lanscan_getnode</a></td>
+    <td><span>Get the hardware address on Unix by running lanscan.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.uuid.html#_netstat_getnode" class="code" data-type="Function">_netstat_getnode</a></td>
+    <td><span>Get the hardware address on Unix by running netstat.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.uuid.html#_ipconfig_getnode" class="code" data-type="Function">_ipconfig_getnode</a></td>
+    <td><span>[DEPRECATED] Get the hardware address on Windows.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.uuid.html#_netbios_getnode" class="code" data-type="Function">_netbios_getnode</a></td>
+    <td><span>[DEPRECATED] Get the hardware address on Windows.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.uuid.html#_generate_time_safe" class="code" data-type="Variable">_generate_time_safe</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.uuid.html#_UuidCreate" class="code" data-type="Variable">_UuidCreate</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.uuid.html#_uuid" class="code" data-type="Variable">_uuid</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.uuid.html#_has_uuid_generate_time_safe" class="code" data-type="Variable">_has_uuid_generate_time_safe</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.uuid.html#_load_system_functions" class="code" data-type="Function">_load_system_functions</a></td>
+    <td><span>[DEPRECATED] Platform-specific functions loaded at import time</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.uuid.html#_unix_getnode" class="code" data-type="Function">_unix_getnode</a></td>
+    <td><span>Get the hardware address on Unix using the _uuid extension module.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.uuid.html#_windll_getnode" class="code" data-type="Function">_windll_getnode</a></td>
+    <td><span>Get the hardware address on Windows using the _uuid extension module.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.uuid.html#_random_getnode" class="code" data-type="Function">_random_getnode</a></td>
+    <td><span>Get a random node ID.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.uuid.html#_OS_GETTERS" class="code" data-type="Variable">_OS_GETTERS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.uuid.html#_GETTERS" class="code" data-type="Variable">_GETTERS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.uuid.html#_node" class="code" data-type="Variable">_node</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.uuid.html#_last_timestamp" class="code" data-type="Variable">_last_timestamp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.uuid.__author__">
+    
+  </a>
+  <a name="__author__">
+    
+  </a>
+  <div class="functionHeader">
+    __author__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.uuid._AIX">
+    
+  </a>
+  <a name="_AIX">
+    
+  </a>
+  <div class="functionHeader">
+    _AIX =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.uuid._LINUX">
+    
+  </a>
+  <a name="_LINUX">
+    
+  </a>
+  <div class="functionHeader">
+    _LINUX =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.uuid._platform_system">
+    
+  </a>
+  <a name="_platform_system">
+    
+  </a>
+  <div class="functionHeader">
+    _platform_system =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.uuid._MAC_DELIM">
+    
+  </a>
+  <a name="_MAC_DELIM">
+    
+  </a>
+  <div class="functionHeader">
+    _MAC_DELIM =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.uuid._MAC_OMITS_LEADING_ZEROES">
+    
+  </a>
+  <a name="_MAC_OMITS_LEADING_ZEROES">
+    
+  </a>
+  <div class="functionHeader">
+    _MAC_OMITS_LEADING_ZEROES =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.uuid.RESERVED_NCS">
+    
+  </a>
+  <a name="RESERVED_NCS">
+    
+  </a>
+  <div class="functionHeader">
+    RESERVED_NCS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.uuid.RFC_4122">
+    
+  </a>
+  <a name="RFC_4122">
+    
+  </a>
+  <div class="functionHeader">
+    RFC_4122 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.uuid.RESERVED_MICROSOFT">
+    
+  </a>
+  <a name="RESERVED_MICROSOFT">
+    
+  </a>
+  <div class="functionHeader">
+    RESERVED_MICROSOFT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.uuid.RESERVED_FUTURE">
+    
+  </a>
+  <a name="RESERVED_FUTURE">
+    
+  </a>
+  <div class="functionHeader">
+    RESERVED_FUTURE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.uuid._get_command_stdout">
+    
+  </a>
+  <a name="_get_command_stdout">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_command_stdout(command, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.uuid._is_universal">
+    
+  </a>
+  <a name="_is_universal">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _is_universal(mac):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.uuid._find_mac_near_keyword">
+    
+  </a>
+  <a name="_find_mac_near_keyword">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _find_mac_near_keyword(command, args, keywords, get_word_index):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Searches a command's output for a MAC address near a keyword.
+
+Each line of words in the output is case-insensitively searched for
+any of the given keywords.  Upon a match, get_word_index is invoked
+to pick a word from the line, given the index of the match.  For
+example, lambda i: 0 would get the first word on the line, while
+lambda i: i - 1 would get the word preceding the keyword.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.uuid._parse_mac">
+    
+  </a>
+  <a name="_parse_mac">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _parse_mac(word):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.uuid._find_mac_under_heading">
+    
+  </a>
+  <a name="_find_mac_under_heading">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _find_mac_under_heading(command, args, heading):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Looks for a MAC address under a heading in a command's output.
+
+The first line of words in the output is searched for the given
+heading. Words at the same word index as the heading in subsequent
+lines are then examined to see if they look like MAC addresses.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.uuid._ifconfig_getnode">
+    
+  </a>
+  <a name="_ifconfig_getnode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _ifconfig_getnode():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get the hardware address on Unix by running ifconfig.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.uuid._ip_getnode">
+    
+  </a>
+  <a name="_ip_getnode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _ip_getnode():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get the hardware address on Unix by running ip.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.uuid._arp_getnode">
+    
+  </a>
+  <a name="_arp_getnode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _arp_getnode():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get the hardware address on Unix by running arp.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.uuid._lanscan_getnode">
+    
+  </a>
+  <a name="_lanscan_getnode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _lanscan_getnode():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get the hardware address on Unix by running lanscan.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.uuid._netstat_getnode">
+    
+  </a>
+  <a name="_netstat_getnode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _netstat_getnode():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get the hardware address on Unix by running netstat.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.uuid._ipconfig_getnode">
+    
+  </a>
+  <a name="_ipconfig_getnode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _ipconfig_getnode():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">[DEPRECATED] Get the hardware address on Windows.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.uuid._netbios_getnode">
+    
+  </a>
+  <a name="_netbios_getnode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _netbios_getnode():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">[DEPRECATED] Get the hardware address on Windows.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.uuid._generate_time_safe">
+    
+  </a>
+  <a name="_generate_time_safe">
+    
+  </a>
+  <div class="functionHeader">
+    _generate_time_safe =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.uuid._UuidCreate">
+    
+  </a>
+  <a name="_UuidCreate">
+    
+  </a>
+  <div class="functionHeader">
+    _UuidCreate =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.uuid._uuid">
+    
+  </a>
+  <a name="_uuid">
+    
+  </a>
+  <div class="functionHeader">
+    _uuid =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.uuid._has_uuid_generate_time_safe">
+    
+  </a>
+  <a name="_has_uuid_generate_time_safe">
+    
+  </a>
+  <div class="functionHeader">
+    _has_uuid_generate_time_safe =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.uuid._load_system_functions">
+    
+  </a>
+  <a name="_load_system_functions">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _load_system_functions():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">[DEPRECATED] Platform-specific functions loaded at import time</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.uuid._unix_getnode">
+    
+  </a>
+  <a name="_unix_getnode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _unix_getnode():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get the hardware address on Unix using the _uuid extension module.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.uuid._windll_getnode">
+    
+  </a>
+  <a name="_windll_getnode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _windll_getnode():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get the hardware address on Windows using the _uuid extension module.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.uuid._random_getnode">
+    
+  </a>
+  <a name="_random_getnode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _random_getnode():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get a random node ID.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.uuid._OS_GETTERS">
+    
+  </a>
+  <a name="_OS_GETTERS">
+    
+  </a>
+  <div class="functionHeader">
+    _OS_GETTERS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.uuid._GETTERS">
+    
+  </a>
+  <a name="_GETTERS">
+    
+  </a>
+  <div class="functionHeader">
+    _GETTERS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.uuid._node">
+    
+  </a>
+  <a name="_node">
+    
+  </a>
+  <div class="functionHeader">
+    _node =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.uuid.getnode">
+    
+  </a>
+  <a name="getnode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getnode():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get the hardware address as a 48-bit positive integer.
+
+The first time this runs, it may launch a separate program, which could
+be quite slow.  If all attempts to obtain the hardware address fail, we
+choose a random 48-bit number with its eighth bit set to 1 as recommended
+in RFC 4122.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.uuid._last_timestamp">
+    
+  </a>
+  <a name="_last_timestamp">
+    
+  </a>
+  <div class="functionHeader">
+    _last_timestamp =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.uuid.uuid1">
+    
+  </a>
+  <a name="uuid1">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    uuid1(node=None, clock_seq=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Generate a UUID from a host ID, sequence number, and the current time.
+If 'node' is not given, getnode() is used to obtain the hardware
+address.  If 'clock_seq' is given, it is used as the sequence number;
+otherwise a random 14-bit sequence number is chosen.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.uuid.uuid3">
+    
+  </a>
+  <a name="uuid3">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    uuid3(namespace, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Generate a UUID from the MD5 hash of a namespace UUID and a name.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.uuid.uuid4">
+    
+  </a>
+  <a name="uuid4">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    uuid4():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Generate a random UUID.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.uuid.uuid5">
+    
+  </a>
+  <a name="uuid5">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    uuid5(namespace, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Generate a UUID from the SHA-1 hash of a namespace UUID and a name.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.uuid.NAMESPACE_DNS">
+    
+  </a>
+  <a name="NAMESPACE_DNS">
+    
+  </a>
+  <div class="functionHeader">
+    NAMESPACE_DNS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.uuid.NAMESPACE_URL">
+    
+  </a>
+  <a name="NAMESPACE_URL">
+    
+  </a>
+  <div class="functionHeader">
+    NAMESPACE_URL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.uuid.NAMESPACE_OID">
+    
+  </a>
+  <a name="NAMESPACE_OID">
+    
+  </a>
+  <div class="functionHeader">
+    NAMESPACE_OID =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.uuid.NAMESPACE_X500">
+    
+  </a>
+  <a name="NAMESPACE_X500">
+    
+  </a>
+  <div class="functionHeader">
+    NAMESPACE_X500 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

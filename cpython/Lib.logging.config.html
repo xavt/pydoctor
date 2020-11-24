@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.logging.config : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.logging.html" class="code" data-type="Package">logging</a>.<a href="Lib.logging.config.html" class="code" data-type="Module">config</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Configuration functions for the logging package for Python. The core package
+is based on PEP 282 and comments thereto in comp.lang.python, and influenced
+by Apache's log4j system.
+
+Copyright (C) 2001-2019 Vinay Sajip. All Rights Reserved.
+
+To use, simply 'import logging' and log away!</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3033">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.config.html#DEFAULT_LOGGING_CONFIG_PORT" class="code" data-type="Variable">DEFAULT_LOGGING_CONFIG_PORT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.config.html#fileConfig" class="code" data-type="Function">fileConfig</a></td>
+    <td><span>Read the logging configuration from a ConfigParser-format file.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.config.html#IDENTIFIER" class="code" data-type="Variable">IDENTIFIER</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.config.html#valid_ident" class="code" data-type="Function">valid_ident</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.config.ConvertingMixin.html" class="code" data-type="Class">ConvertingMixin</a></td>
+    <td><span>For ConvertingXXX's, this mixin class provides common functions</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.config.ConvertingDict.html" class="code" data-type="Class">ConvertingDict</a></td>
+    <td><span>A converting dictionary wrapper.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.config.ConvertingList.html" class="code" data-type="Class">ConvertingList</a></td>
+    <td><span>A converting list wrapper.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.config.ConvertingTuple.html" class="code" data-type="Class">ConvertingTuple</a></td>
+    <td><span>A converting tuple wrapper.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.config.BaseConfigurator.html" class="code" data-type="Class">BaseConfigurator</a></td>
+    <td><span>The configurator base class which defines some useful defaults.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.config.DictConfigurator.html" class="code" data-type="Class">DictConfigurator</a></td>
+    <td><span>Configure logging using a dictionary-like object to describe the configuration.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.config.html#dictConfig" class="code" data-type="Function">dictConfig</a></td>
+    <td><span>Configure logging using a dictionary.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.config.html#listen" class="code" data-type="Function">listen</a></td>
+    <td><span>Start up a socket server on the specified port, and listen for new configurations.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.config.html#stopListening" class="code" data-type="Function">stopListening</a></td>
+    <td><span>Stop the listening server which was created with a call to listen().</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.config.html#_listener" class="code" data-type="Variable">_listener</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.config.html#_resolve" class="code" data-type="Function">_resolve</a></td>
+    <td><span>Resolve a dotted name to a global object.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.config.html#_strip_spaces" class="code" data-type="Function">_strip_spaces</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.config.html#_create_formatters" class="code" data-type="Function">_create_formatters</a></td>
+    <td><span>Create and return formatters</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.config.html#_install_handlers" class="code" data-type="Function">_install_handlers</a></td>
+    <td><span>Install and return handlers</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.config.html#_handle_existing_loggers" class="code" data-type="Function">_handle_existing_loggers</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.config.html#_install_loggers" class="code" data-type="Function">_install_loggers</a></td>
+    <td><span>Create and install loggers</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.config.html#_clearExistingHandlers" class="code" data-type="Function">_clearExistingHandlers</a></td>
+    <td><span>Clear and close existing handlers</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.logging.config.DEFAULT_LOGGING_CONFIG_PORT">
+    
+  </a>
+  <a name="DEFAULT_LOGGING_CONFIG_PORT">
+    
+  </a>
+  <div class="functionHeader">
+    DEFAULT_LOGGING_CONFIG_PORT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.logging.config._listener">
+    
+  </a>
+  <a name="_listener">
+    
+  </a>
+  <div class="functionHeader">
+    _listener =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.logging.config.fileConfig">
+    
+  </a>
+  <a name="fileConfig">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    fileConfig(fname, defaults=None, disable_existing_loggers=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Read the logging configuration from a ConfigParser-format file.
+
+This can be called several times from an application, allowing an end user
+the ability to select from various pre-canned configurations (if the
+developer provides a mechanism to present the choices and load the chosen
+configuration).</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.logging.config._resolve">
+    
+  </a>
+  <a name="_resolve">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _resolve(name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Resolve a dotted name to a global object.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.logging.config._strip_spaces">
+    
+  </a>
+  <a name="_strip_spaces">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _strip_spaces(alist):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.logging.config._create_formatters">
+    
+  </a>
+  <a name="_create_formatters">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _create_formatters(cp):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create and return formatters</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.logging.config._install_handlers">
+    
+  </a>
+  <a name="_install_handlers">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _install_handlers(cp, formatters):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Install and return handlers</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.logging.config._handle_existing_loggers">
+    
+  </a>
+  <a name="_handle_existing_loggers">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _handle_existing_loggers(existing, child_loggers, disable_existing):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">When (re)configuring logging, handle loggers which were in the previous
+configuration but are not in the new configuration. There's no point
+deleting them as other threads may continue to hold references to them;
+and by disabling them, you stop them doing any logging.
+
+However, don't disable children of named loggers, as that's probably not
+what was intended by the user. Also, allow existing loggers to NOT be
+disabled if disable_existing is false.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.logging.config._install_loggers">
+    
+  </a>
+  <a name="_install_loggers">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _install_loggers(cp, handlers, disable_existing):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create and install loggers</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.logging.config._clearExistingHandlers">
+    
+  </a>
+  <a name="_clearExistingHandlers">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _clearExistingHandlers():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Clear and close existing handlers</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.logging.config.IDENTIFIER">
+    
+  </a>
+  <a name="IDENTIFIER">
+    
+  </a>
+  <div class="functionHeader">
+    IDENTIFIER =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.logging.config.valid_ident">
+    
+  </a>
+  <a name="valid_ident">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    valid_ident(s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.logging.config.dictConfig">
+    
+  </a>
+  <a name="dictConfig">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    dictConfig(config):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Configure logging using a dictionary.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.logging.config.listen">
+    
+  </a>
+  <a name="listen">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    listen(port=DEFAULT_LOGGING_CONFIG_PORT, verify=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Start up a socket server on the specified port, and listen for new
+configurations.
+
+These will be sent as a file suitable for processing by fileConfig().
+Returns a Thread object on which you can call start() to start the server,
+and which you can join() when appropriate. To stop the server, call
+stopListening().
+
+Use the ``verify`` argument to verify any bytes received across the wire
+from a client. If specified, it should be a callable which receives a
+single argument - the bytes of configuration data received across the
+network - and it should return either ``None``, to indicate that the
+passed in bytes could not be verified and should be discarded, or a
+byte string which is then passed to the configuration machinery as
+normal. Note that you can return transformed bytes, e.g. by decrypting
+the bytes passed in.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.logging.config.stopListening">
+    
+  </a>
+  <a name="stopListening">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    stopListening():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Stop the listening server which was created with a call to listen().</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

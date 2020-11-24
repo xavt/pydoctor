@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.multiprocessing.shared_memory.SharedMemory : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.multiprocessing.html" class="code" data-type="Package">multiprocessing</a>.<a href="Lib.multiprocessing.shared_memory.html" class="code" data-type="Module">shared_memory</a>.<a href="Lib.multiprocessing.shared_memory.SharedMemory.html" class="code" data-type="Class">SharedMemory</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.multiprocessing.shared_memory.SharedMemory:</code></p>
+        <p><a href="classIndex.html#Lib.multiprocessing.shared_memory.SharedMemory">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Creates a new shared memory block or attaches to an existing
+shared memory block.
+
+Every shared memory block is assigned a unique name.  This enables
+one process to create a shared memory block with a particular name
+so that a different process can attach to that same shared memory
+block using that same name.
+
+As a resource for sharing data across processes, shared memory blocks
+may outlive the original process that created them.  When one process
+no longer needs access to a shared memory block that might still be
+needed by other processes, the close() method should be called.
+When a shared memory block is no longer needed by any process, the
+unlink() method should be called to ensure proper cleanup.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3246">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.shared_memory.SharedMemory.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.shared_memory.SharedMemory.html#__del__" class="code" data-type="Method">__del__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.shared_memory.SharedMemory.html#__reduce__" class="code" data-type="Method">__reduce__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.shared_memory.SharedMemory.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.shared_memory.SharedMemory.html#buf" class="code" data-type="Method">buf</a></td>
+    <td><span>A memoryview of contents of the shared memory block.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.shared_memory.SharedMemory.html#name" class="code" data-type="Method">name</a></td>
+    <td><span>Unique name that identifies the shared memory block.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.shared_memory.SharedMemory.html#size" class="code" data-type="Method">size</a></td>
+    <td><span>Size in bytes.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.shared_memory.SharedMemory.html#close" class="code" data-type="Method">close</a></td>
+    <td><span>Closes access to the shared memory from this instance but does not destroy the shared memory block.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.shared_memory.SharedMemory.html#unlink" class="code" data-type="Method">unlink</a></td>
+    <td><span>Requests that the underlying shared memory block be destroyed.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.shared_memory.SharedMemory.html#_name" class="code" data-type="Instance Variable">_name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.shared_memory.SharedMemory.html#_fd" class="code" data-type="Instance Variable">_fd</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.shared_memory.SharedMemory.html#_mmap" class="code" data-type="Instance Variable">_mmap</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.shared_memory.SharedMemory.html#_buf" class="code" data-type="Instance Variable">_buf</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.multiprocessing.shared_memory.SharedMemory.html#_mode" class="code" data-type="Class Variable">_mode</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.multiprocessing.shared_memory.SharedMemory.html#_prepend_leading_slash" class="code" data-type="Class Variable">_prepend_leading_slash</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.shared_memory.SharedMemory.html#_flags" class="code" data-type="Instance Variable">_flags</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.shared_memory.SharedMemory.html#_size" class="code" data-type="Instance Variable">_size</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseinstancevariable private">
+  
+  <a name="Lib.multiprocessing.shared_memory.SharedMemory._name">
+    
+  </a>
+  <a name="_name">
+    
+  </a>
+  <div class="functionHeader">
+    _name =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.multiprocessing.shared_memory.SharedMemory._fd">
+    
+  </a>
+  <a name="_fd">
+    
+  </a>
+  <div class="functionHeader">
+    _fd =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.multiprocessing.shared_memory.SharedMemory._mmap">
+    
+  </a>
+  <a name="_mmap">
+    
+  </a>
+  <div class="functionHeader">
+    _mmap =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.multiprocessing.shared_memory.SharedMemory._buf">
+    
+  </a>
+  <a name="_buf">
+    
+  </a>
+  <div class="functionHeader">
+    _buf =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable private">
+  
+  <a name="Lib.multiprocessing.shared_memory.SharedMemory._mode">
+    
+  </a>
+  <a name="_mode">
+    
+  </a>
+  <div class="functionHeader">
+    _mode =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable private">
+  
+  <a name="Lib.multiprocessing.shared_memory.SharedMemory._prepend_leading_slash">
+    
+  </a>
+  <a name="_prepend_leading_slash">
+    
+  </a>
+  <div class="functionHeader">
+    _prepend_leading_slash =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.shared_memory.SharedMemory.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, name=None, create=(False), size=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.multiprocessing.shared_memory.SharedMemory._flags">
+    
+  </a>
+  <a name="_flags">
+    
+  </a>
+  <div class="functionHeader">
+    _flags =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.multiprocessing.shared_memory.SharedMemory._size">
+    
+  </a>
+  <a name="_size">
+    
+  </a>
+  <div class="functionHeader">
+    _size =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.shared_memory.SharedMemory.__del__">
+    
+  </a>
+  <a name="__del__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __del__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.shared_memory.SharedMemory.__reduce__">
+    
+  </a>
+  <a name="__reduce__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __reduce__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.shared_memory.SharedMemory.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __repr__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.shared_memory.SharedMemory.buf">
+    
+  </a>
+  <a name="buf">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    buf(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">A memoryview of contents of the shared memory block.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.shared_memory.SharedMemory.name">
+    
+  </a>
+  <a name="name">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    name(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Unique name that identifies the shared memory block.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.shared_memory.SharedMemory.size">
+    
+  </a>
+  <a name="size">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    size(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Size in bytes.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.shared_memory.SharedMemory.close">
+    
+  </a>
+  <a name="close">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    close(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Closes access to the shared memory from this instance but does
+not destroy the shared memory block.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.shared_memory.SharedMemory.unlink">
+    
+  </a>
+  <a name="unlink">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    unlink(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Requests that the underlying shared memory block be destroyed.
+
+In order to ensure proper cleanup of resources, unlink should be
+called once (and only once) across all processes which have access
+to the shared memory block.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.linecache : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.linecache.html" class="code" data-type="Module">linecache</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Cache lines from Python source files.
+
+This is intended to read lines from modules imported -- hence if a filename
+is not found, it will look down the module search path for a file by
+that name.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2995">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.linecache.html#cache" class="code" data-type="Variable">cache</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.linecache.html#clearcache" class="code" data-type="Function">clearcache</a></td>
+    <td><span>Clear the cache entirely.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.linecache.html#getline" class="code" data-type="Function">getline</a></td>
+    <td><span>Get a line for a Python source file from the cache. Update the cache if it doesn't contain an entry for this file already.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.linecache.html#getlines" class="code" data-type="Function">getlines</a></td>
+    <td><span>Get the lines for a Python source file from the cache. Update the cache if it doesn't contain an entry for this file already.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.linecache.html#checkcache" class="code" data-type="Function">checkcache</a></td>
+    <td><span>Discard cache entries that are out of date. (This is not checked upon each call!)</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.linecache.html#updatecache" class="code" data-type="Function">updatecache</a></td>
+    <td><span>Update a cache entry and return its list of lines. If something's wrong, print a message, discard the cache entry, and return an empty list.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.linecache.html#lazycache" class="code" data-type="Function">lazycache</a></td>
+    <td><span>Seed the cache for filename with module_globals.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.linecache.cache">
+    
+  </a>
+  <a name="cache">
+    
+  </a>
+  <div class="functionHeader">
+    cache =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.linecache.clearcache">
+    
+  </a>
+  <a name="clearcache">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    clearcache():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Clear the cache entirely.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.linecache.getline">
+    
+  </a>
+  <a name="getline">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getline(filename, lineno, module_globals=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get a line for a Python source file from the cache.
+Update the cache if it doesn't contain an entry for this file already.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.linecache.getlines">
+    
+  </a>
+  <a name="getlines">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getlines(filename, module_globals=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get the lines for a Python source file from the cache.
+Update the cache if it doesn't contain an entry for this file already.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.linecache.checkcache">
+    
+  </a>
+  <a name="checkcache">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    checkcache(filename=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Discard cache entries that are out of date.
+(This is not checked upon each call!)</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.linecache.updatecache">
+    
+  </a>
+  <a name="updatecache">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    updatecache(filename, module_globals=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Update a cache entry and return its list of lines.
+If something's wrong, print a message, discard the cache entry,
+and return an empty list.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.linecache.lazycache">
+    
+  </a>
+  <a name="lazycache">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    lazycache(filename, module_globals):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Seed the cache for filename with module_globals.
+
+The module loader will be asked for the source only when getlines is
+called, not immediately.
+
+If there is an entry in the cache already, it is not altered.
+
+:return: True if a lazy load is registered in the cache,
+    otherwise False. To register such a load a module loader with a
+    get_source method must be found, the filename must be a cachable
+    filename, and the filename must not be already cached.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

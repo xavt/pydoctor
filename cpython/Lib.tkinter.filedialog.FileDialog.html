@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.tkinter.filedialog.FileDialog : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.tkinter.html" class="code" data-type="Package">tkinter</a>.<a href="Lib.tkinter.filedialog.html" class="code" data-type="Module">filedialog</a>.<a href="Lib.tkinter.filedialog.FileDialog.html" class="code" data-type="Class">FileDialog</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.tkinter.filedialog.FileDialog:</code></p><p>Known subclasses: <a href="Lib.tkinter.filedialog.LoadFileDialog.html" class="code" data-type="Class">Lib.tkinter.filedialog.LoadFileDialog</a>, <a href="Lib.tkinter.filedialog.SaveFileDialog.html" class="code" data-type="Class">Lib.tkinter.filedialog.SaveFileDialog</a></p>
+        <p><a href="classIndex.html#Lib.tkinter.filedialog.FileDialog">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Standard file selection dialog -- no checks on selected file.
+
+Usage:
+
+    d = FileDialog(master)
+    fname = d.go(dir_or_file, pattern, default, key)
+    if fname is None: ...canceled...
+    else: ...open file...
+
+All arguments to go() are optional.
+
+The 'key' argument specifies a key in the global dictionary
+'dialogstates', which keeps track of the values for the directory
+and pattern arguments, overriding the values passed in (it does
+not keep track of the default argument!).  If no key is specified,
+the dialog keeps no memory of previous state.  Note that memory is
+kept even when the dialog is canceled.  (All this emulates the
+behavior of the Macintosh file selection dialogs.)</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id11078">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.tkinter.filedialog.FileDialog.html#title" class="code" data-type="Class Variable">title</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.filedialog.FileDialog.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tkinter.filedialog.FileDialog.html#master" class="code" data-type="Instance Variable">master</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tkinter.filedialog.FileDialog.html#directory" class="code" data-type="Instance Variable">directory</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tkinter.filedialog.FileDialog.html#top" class="code" data-type="Instance Variable">top</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tkinter.filedialog.FileDialog.html#botframe" class="code" data-type="Instance Variable">botframe</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tkinter.filedialog.FileDialog.html#selection" class="code" data-type="Instance Variable">selection</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tkinter.filedialog.FileDialog.html#filter" class="code" data-type="Instance Variable">filter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tkinter.filedialog.FileDialog.html#midframe" class="code" data-type="Instance Variable">midframe</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tkinter.filedialog.FileDialog.html#filesbar" class="code" data-type="Instance Variable">filesbar</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tkinter.filedialog.FileDialog.html#files" class="code" data-type="Instance Variable">files</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tkinter.filedialog.FileDialog.html#dirsbar" class="code" data-type="Instance Variable">dirsbar</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tkinter.filedialog.FileDialog.html#dirs" class="code" data-type="Instance Variable">dirs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tkinter.filedialog.FileDialog.html#ok_button" class="code" data-type="Instance Variable">ok_button</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tkinter.filedialog.FileDialog.html#filter_button" class="code" data-type="Instance Variable">filter_button</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tkinter.filedialog.FileDialog.html#cancel_button" class="code" data-type="Instance Variable">cancel_button</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.filedialog.FileDialog.html#go" class="code" data-type="Method">go</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tkinter.filedialog.FileDialog.html#how" class="code" data-type="Instance Variable">how</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.filedialog.FileDialog.html#quit" class="code" data-type="Method">quit</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.filedialog.FileDialog.html#dirs_double_event" class="code" data-type="Method">dirs_double_event</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.filedialog.FileDialog.html#dirs_select_event" class="code" data-type="Method">dirs_select_event</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.filedialog.FileDialog.html#files_double_event" class="code" data-type="Method">files_double_event</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.filedialog.FileDialog.html#files_select_event" class="code" data-type="Method">files_select_event</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.filedialog.FileDialog.html#ok_event" class="code" data-type="Method">ok_event</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.filedialog.FileDialog.html#ok_command" class="code" data-type="Method">ok_command</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.filedialog.FileDialog.html#filter_command" class="code" data-type="Method">filter_command</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.filedialog.FileDialog.html#get_filter" class="code" data-type="Method">get_filter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.filedialog.FileDialog.html#get_selection" class="code" data-type="Method">get_selection</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.filedialog.FileDialog.html#cancel_command" class="code" data-type="Method">cancel_command</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.filedialog.FileDialog.html#set_filter" class="code" data-type="Method">set_filter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.filedialog.FileDialog.html#set_selection" class="code" data-type="Method">set_selection</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.tkinter.filedialog.FileDialog.title">
+    
+  </a>
+  <a name="title">
+    
+  </a>
+  <div class="functionHeader">
+    title =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.tkinter.filedialog.LoadFileDialog.html" class="code" data-type="Class">Lib.tkinter.filedialog.LoadFileDialog</a>, <a href="Lib.tkinter.filedialog.SaveFileDialog.html" class="code" data-type="Class">Lib.tkinter.filedialog.SaveFileDialog</a></div>
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.filedialog.FileDialog.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, master, title=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.tkinter.filedialog.FileDialog.master">
+    
+  </a>
+  <a name="master">
+    
+  </a>
+  <div class="functionHeader">
+    master =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.tkinter.filedialog.FileDialog.directory">
+    
+  </a>
+  <a name="directory">
+    
+  </a>
+  <div class="functionHeader">
+    directory =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.tkinter.filedialog.FileDialog.top">
+    
+  </a>
+  <a name="top">
+    
+  </a>
+  <div class="functionHeader">
+    top =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.tkinter.filedialog.FileDialog.botframe">
+    
+  </a>
+  <a name="botframe">
+    
+  </a>
+  <div class="functionHeader">
+    botframe =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.tkinter.filedialog.FileDialog.selection">
+    
+  </a>
+  <a name="selection">
+    
+  </a>
+  <div class="functionHeader">
+    selection =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.tkinter.filedialog.FileDialog.filter">
+    
+  </a>
+  <a name="filter">
+    
+  </a>
+  <div class="functionHeader">
+    filter =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.tkinter.filedialog.FileDialog.midframe">
+    
+  </a>
+  <a name="midframe">
+    
+  </a>
+  <div class="functionHeader">
+    midframe =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.tkinter.filedialog.FileDialog.filesbar">
+    
+  </a>
+  <a name="filesbar">
+    
+  </a>
+  <div class="functionHeader">
+    filesbar =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.tkinter.filedialog.FileDialog.files">
+    
+  </a>
+  <a name="files">
+    
+  </a>
+  <div class="functionHeader">
+    files =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.tkinter.filedialog.FileDialog.dirsbar">
+    
+  </a>
+  <a name="dirsbar">
+    
+  </a>
+  <div class="functionHeader">
+    dirsbar =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.tkinter.filedialog.FileDialog.dirs">
+    
+  </a>
+  <a name="dirs">
+    
+  </a>
+  <div class="functionHeader">
+    dirs =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.tkinter.filedialog.FileDialog.ok_button">
+    
+  </a>
+  <a name="ok_button">
+    
+  </a>
+  <div class="functionHeader">
+    ok_button =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.tkinter.filedialog.FileDialog.filter_button">
+    
+  </a>
+  <a name="filter_button">
+    
+  </a>
+  <div class="functionHeader">
+    filter_button =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.tkinter.filedialog.FileDialog.cancel_button">
+    
+  </a>
+  <a name="cancel_button">
+    
+  </a>
+  <div class="functionHeader">
+    cancel_button =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.filedialog.FileDialog.go">
+    
+  </a>
+  <a name="go">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    go(self, dir_or_file=os.curdir, pattern="""*""", default="""""", key=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.tkinter.filedialog.FileDialog.how">
+    
+  </a>
+  <a name="how">
+    
+  </a>
+  <div class="functionHeader">
+    how =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.filedialog.FileDialog.quit">
+    
+  </a>
+  <a name="quit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    quit(self, how=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.filedialog.FileDialog.dirs_double_event">
+    
+  </a>
+  <a name="dirs_double_event">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    dirs_double_event(self, event):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.filedialog.FileDialog.dirs_select_event">
+    
+  </a>
+  <a name="dirs_select_event">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    dirs_select_event(self, event):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.filedialog.FileDialog.files_double_event">
+    
+  </a>
+  <a name="files_double_event">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    files_double_event(self, event):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.filedialog.FileDialog.files_select_event">
+    
+  </a>
+  <a name="files_select_event">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    files_select_event(self, event):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.filedialog.FileDialog.ok_event">
+    
+  </a>
+  <a name="ok_event">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ok_event(self, event):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.filedialog.FileDialog.ok_command">
+    
+  </a>
+  <a name="ok_command">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ok_command(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.tkinter.filedialog.LoadFileDialog.html" class="code" data-type="Class">Lib.tkinter.filedialog.LoadFileDialog</a>, <a href="Lib.tkinter.filedialog.SaveFileDialog.html" class="code" data-type="Class">Lib.tkinter.filedialog.SaveFileDialog</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.filedialog.FileDialog.filter_command">
+    
+  </a>
+  <a name="filter_command">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    filter_command(self, event=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.filedialog.FileDialog.get_filter">
+    
+  </a>
+  <a name="get_filter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_filter(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.filedialog.FileDialog.get_selection">
+    
+  </a>
+  <a name="get_selection">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_selection(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.filedialog.FileDialog.cancel_command">
+    
+  </a>
+  <a name="cancel_command">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    cancel_command(self, event=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.filedialog.FileDialog.set_filter">
+    
+  </a>
+  <a name="set_filter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_filter(self, dir, pat):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.filedialog.FileDialog.set_selection">
+    
+  </a>
+  <a name="set_selection">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_selection(self, file):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

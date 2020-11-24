@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.idlelib.idle_test.htest : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.idlelib.html" class="code" data-type="Package">idlelib</a>.<a href="Lib.idlelib.idle_test.html" class="code" data-type="Package">idle_test</a>.<a href="Lib.idlelib.idle_test.htest.html" class="code" data-type="Module">htest</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Run human tests of Idle's window, dialog, and popup widgets.
+
+run(*tests)
+Create a master Tk window.  Within that, run each callable in tests
+after finding the matching test spec in this file.  If tests is empty,
+run an htest for each spec dict in this file after finding the matching
+callable in the module named in the spec.  Close the window to skip or
+end the test.
+
+In a tested module, let X be a global name bound to a callable (class
+or function) whose .__name__ attribute is also X (the usual situation).
+The first parameter of X must be 'parent'.  When called, the parent
+argument will be the root window.  X must create a child Toplevel
+window (or subclass thereof).  The Toplevel may be a test widget or
+dialog, in which case the callable is the corresponding class.  Or the
+Toplevel may contain the widget to be tested or set up a context in
+which a test widget is invoked.  In this latter case, the callable is a
+wrapper function that sets up the Toplevel and other objects.  Wrapper
+function names, such as _editor_window', should start with '_'.
+
+
+End the module with
+
+if __name__ == '__main__':
+    &lt;unittest, if there is one&gt;
+    from idlelib.idle_test.htest import run
+    run(X)
+
+To have wrapper functions and test invocation code ignored by coveragepy
+reports, put '# htest #' on the def statement header line.
+
+def _wrapper(parent):  # htest #
+
+Also make sure that the 'if __name__' line matches the above.  Then have
+make sure that .coveragerc includes the following.
+
+[report]
+exclude_lines =
+    .*# htest #
+    if __name__ == .__main__.:
+
+(The "." instead of "'" is intentional and necessary.)
+
+
+To run any X, this file must contain a matching instance of the
+following template, with X.__name__ prepended to '_spec'.
+When all tests are run, the prefix is use to get X.
+
+_spec = {
+    'file': '',
+    'kwds': {'title': ''},
+    'msg': ""
+    }
+
+file (no .py): run() imports file.py.
+kwds: augmented with {'parent':root} and passed to X as **kwds.
+title: an example kwd; some widgets need this, delete if not.
+msg: master window hints about testing the widget.
+
+
+Modules and classes not being tested at the moment:
+pyshell.PyShellEditorWindow
+debugger.Debugger
+autocomplete_w.AutoCompleteWindow
+outwin.OutputWindow (indirectly being tested with grep test)</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2128">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.idle_test.htest.html#AboutDialog_spec" class="code" data-type="Variable">AboutDialog_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.idle_test.htest.html#CustomRun_spec" class="code" data-type="Variable">CustomRun_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.idle_test.htest.html#ConfigDialog_spec" class="code" data-type="Variable">ConfigDialog_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.idle_test.htest.html#GetKeysDialog_spec" class="code" data-type="Variable">GetKeysDialog_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.idle_test.htest.html#HelpSource_spec" class="code" data-type="Variable">HelpSource_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.idle_test.htest.html#Query_spec" class="code" data-type="Variable">Query_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.idle_test.htest.html#show_idlehelp_spec" class="code" data-type="Variable">show_idlehelp_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.idle_test.htest.html#ViewWindow_spec" class="code" data-type="Variable">ViewWindow_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.idle_test.htest.html#run" class="code" data-type="Function">run</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.idle_test.htest.html#_calltip_window_spec" class="code" data-type="Variable">_calltip_window_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.idle_test.htest.html#_module_browser_spec" class="code" data-type="Variable">_module_browser_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.idle_test.htest.html#_color_delegator_spec" class="code" data-type="Variable">_color_delegator_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.idle_test.htest.html#_dyn_option_menu_spec" class="code" data-type="Variable">_dyn_option_menu_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.idle_test.htest.html#_editor_window_spec" class="code" data-type="Variable">_editor_window_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.idle_test.htest.html#_grep_dialog_spec" class="code" data-type="Variable">_grep_dialog_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.idle_test.htest.html#_io_binding_spec" class="code" data-type="Variable">_io_binding_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.idle_test.htest.html#_linenumbers_drag_scrolling_spec" class="code" data-type="Variable">_linenumbers_drag_scrolling_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.idle_test.htest.html#_multi_call_spec" class="code" data-type="Variable">_multi_call_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.idle_test.htest.html#_multistatus_bar_spec" class="code" data-type="Variable">_multistatus_bar_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.idle_test.htest.html#_object_browser_spec" class="code" data-type="Variable">_object_browser_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.idle_test.htest.html#_path_browser_spec" class="code" data-type="Variable">_path_browser_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.idle_test.htest.html#_percolator_spec" class="code" data-type="Variable">_percolator_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.idle_test.htest.html#_replace_dialog_spec" class="code" data-type="Variable">_replace_dialog_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.idle_test.htest.html#_search_dialog_spec" class="code" data-type="Variable">_search_dialog_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.idle_test.htest.html#_searchbase_spec" class="code" data-type="Variable">_searchbase_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.idle_test.htest.html#_scrolled_list_spec" class="code" data-type="Variable">_scrolled_list_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.idle_test.htest.html#_stack_viewer_spec" class="code" data-type="Variable">_stack_viewer_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.idle_test.htest.html#_tooltip_spec" class="code" data-type="Variable">_tooltip_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.idle_test.htest.html#_tree_widget_spec" class="code" data-type="Variable">_tree_widget_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.idle_test.htest.html#_undo_delegator_spec" class="code" data-type="Variable">_undo_delegator_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.idle_test.htest.html#_widget_redirector_spec" class="code" data-type="Variable">_widget_redirector_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.idlelib.idle_test.htest.AboutDialog_spec">
+    
+  </a>
+  <a name="AboutDialog_spec">
+    
+  </a>
+  <div class="functionHeader">
+    AboutDialog_spec =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.idle_test.htest._calltip_window_spec">
+    
+  </a>
+  <a name="_calltip_window_spec">
+    
+  </a>
+  <div class="functionHeader">
+    _calltip_window_spec =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.idle_test.htest._module_browser_spec">
+    
+  </a>
+  <a name="_module_browser_spec">
+    
+  </a>
+  <div class="functionHeader">
+    _module_browser_spec =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.idle_test.htest._color_delegator_spec">
+    
+  </a>
+  <a name="_color_delegator_spec">
+    
+  </a>
+  <div class="functionHeader">
+    _color_delegator_spec =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.idle_test.htest.CustomRun_spec">
+    
+  </a>
+  <a name="CustomRun_spec">
+    
+  </a>
+  <div class="functionHeader">
+    CustomRun_spec =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.idle_test.htest.ConfigDialog_spec">
+    
+  </a>
+  <a name="ConfigDialog_spec">
+    
+  </a>
+  <div class="functionHeader">
+    ConfigDialog_spec =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.idle_test.htest._dyn_option_menu_spec">
+    
+  </a>
+  <a name="_dyn_option_menu_spec">
+    
+  </a>
+  <div class="functionHeader">
+    _dyn_option_menu_spec =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.idle_test.htest._editor_window_spec">
+    
+  </a>
+  <a name="_editor_window_spec">
+    
+  </a>
+  <div class="functionHeader">
+    _editor_window_spec =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.idle_test.htest.GetKeysDialog_spec">
+    
+  </a>
+  <a name="GetKeysDialog_spec">
+    
+  </a>
+  <div class="functionHeader">
+    GetKeysDialog_spec =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.idle_test.htest._grep_dialog_spec">
+    
+  </a>
+  <a name="_grep_dialog_spec">
+    
+  </a>
+  <div class="functionHeader">
+    _grep_dialog_spec =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.idle_test.htest.HelpSource_spec">
+    
+  </a>
+  <a name="HelpSource_spec">
+    
+  </a>
+  <div class="functionHeader">
+    HelpSource_spec =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.idle_test.htest._io_binding_spec">
+    
+  </a>
+  <a name="_io_binding_spec">
+    
+  </a>
+  <div class="functionHeader">
+    _io_binding_spec =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.idle_test.htest._linenumbers_drag_scrolling_spec">
+    
+  </a>
+  <a name="_linenumbers_drag_scrolling_spec">
+    
+  </a>
+  <div class="functionHeader">
+    _linenumbers_drag_scrolling_spec =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.idle_test.htest._multi_call_spec">
+    
+  </a>
+  <a name="_multi_call_spec">
+    
+  </a>
+  <div class="functionHeader">
+    _multi_call_spec =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.idle_test.htest._multistatus_bar_spec">
+    
+  </a>
+  <a name="_multistatus_bar_spec">
+    
+  </a>
+  <div class="functionHeader">
+    _multistatus_bar_spec =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.idle_test.htest._object_browser_spec">
+    
+  </a>
+  <a name="_object_browser_spec">
+    
+  </a>
+  <div class="functionHeader">
+    _object_browser_spec =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.idle_test.htest._path_browser_spec">
+    
+  </a>
+  <a name="_path_browser_spec">
+    
+  </a>
+  <div class="functionHeader">
+    _path_browser_spec =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.idle_test.htest._percolator_spec">
+    
+  </a>
+  <a name="_percolator_spec">
+    
+  </a>
+  <div class="functionHeader">
+    _percolator_spec =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.idle_test.htest.Query_spec">
+    
+  </a>
+  <a name="Query_spec">
+    
+  </a>
+  <div class="functionHeader">
+    Query_spec =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.idle_test.htest._replace_dialog_spec">
+    
+  </a>
+  <a name="_replace_dialog_spec">
+    
+  </a>
+  <div class="functionHeader">
+    _replace_dialog_spec =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.idle_test.htest._search_dialog_spec">
+    
+  </a>
+  <a name="_search_dialog_spec">
+    
+  </a>
+  <div class="functionHeader">
+    _search_dialog_spec =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.idle_test.htest._searchbase_spec">
+    
+  </a>
+  <a name="_searchbase_spec">
+    
+  </a>
+  <div class="functionHeader">
+    _searchbase_spec =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.idle_test.htest._scrolled_list_spec">
+    
+  </a>
+  <a name="_scrolled_list_spec">
+    
+  </a>
+  <div class="functionHeader">
+    _scrolled_list_spec =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.idle_test.htest.show_idlehelp_spec">
+    
+  </a>
+  <a name="show_idlehelp_spec">
+    
+  </a>
+  <div class="functionHeader">
+    show_idlehelp_spec =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.idle_test.htest._stack_viewer_spec">
+    
+  </a>
+  <a name="_stack_viewer_spec">
+    
+  </a>
+  <div class="functionHeader">
+    _stack_viewer_spec =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.idle_test.htest._tooltip_spec">
+    
+  </a>
+  <a name="_tooltip_spec">
+    
+  </a>
+  <div class="functionHeader">
+    _tooltip_spec =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.idle_test.htest._tree_widget_spec">
+    
+  </a>
+  <a name="_tree_widget_spec">
+    
+  </a>
+  <div class="functionHeader">
+    _tree_widget_spec =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.idle_test.htest._undo_delegator_spec">
+    
+  </a>
+  <a name="_undo_delegator_spec">
+    
+  </a>
+  <div class="functionHeader">
+    _undo_delegator_spec =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.idle_test.htest.ViewWindow_spec">
+    
+  </a>
+  <a name="ViewWindow_spec">
+    
+  </a>
+  <div class="functionHeader">
+    ViewWindow_spec =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.idle_test.htest._widget_redirector_spec">
+    
+  </a>
+  <a name="_widget_redirector_spec">
+    
+  </a>
+  <div class="functionHeader">
+    _widget_redirector_spec =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.idle_test.htest.run">
+    
+  </a>
+  <a name="run">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    run(*tests):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

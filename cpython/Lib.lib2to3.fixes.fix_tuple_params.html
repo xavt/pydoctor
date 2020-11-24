@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.lib2to3.fixes.fix_tuple_params : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.lib2to3.html" class="code" data-type="Package">lib2to3</a>.<a href="Lib.lib2to3.fixes.html" class="code" data-type="Package">fixes</a>.<a href="Lib.lib2to3.fixes.fix_tuple_params.html" class="code" data-type="Module">fix_tuple_params</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Fixer for function definitions with tuple parameters.
+
+def func(((a, b), c), d):
+    ...
+
+    -&gt;
+
+def func(x, d):
+    ((a, b), c) = x
+    ...
+
+It will also support lambdas:
+
+    lambda (x, y): x + y -&gt; lambda t: t[0] + t[1]
+
+    # The parens are a syntax error in Python 3
+    lambda (x): x + y -&gt; lambda x: x + y</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2761">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixes.fix_tuple_params.html#is_docstring" class="code" data-type="Function">is_docstring</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.lib2to3.fixes.fix_tuple_params.FixTupleParams.html" class="code" data-type="Class">FixTupleParams</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixes.fix_tuple_params.html#simplify_args" class="code" data-type="Function">simplify_args</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixes.fix_tuple_params.html#find_params" class="code" data-type="Function">find_params</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixes.fix_tuple_params.html#map_to_index" class="code" data-type="Function">map_to_index</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixes.fix_tuple_params.html#tuple_name" class="code" data-type="Function">tuple_name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixes.fix_tuple_params.is_docstring">
+    
+  </a>
+  <a name="is_docstring">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_docstring(stmt):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixes.fix_tuple_params.simplify_args">
+    
+  </a>
+  <a name="simplify_args">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    simplify_args(node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixes.fix_tuple_params.find_params">
+    
+  </a>
+  <a name="find_params">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    find_params(node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixes.fix_tuple_params.map_to_index">
+    
+  </a>
+  <a name="map_to_index">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    map_to_index(param_list, prefix=[], d=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixes.fix_tuple_params.tuple_name">
+    
+  </a>
+  <a name="tuple_name">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tuple_name(param_list):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

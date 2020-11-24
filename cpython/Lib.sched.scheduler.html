@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.sched.scheduler : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.sched.html" class="code" data-type="Module">sched</a>.<a href="Lib.sched.scheduler.html" class="code" data-type="Class">scheduler</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.sched.scheduler:</code></p>
+        <p><a href="classIndex.html#Lib.sched.scheduler">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div class="undocumented">Undocumented</div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3470">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.sched.scheduler.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Initialize a new instance, passing the time and delay functions</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.sched.scheduler.html#timefunc" class="code" data-type="Instance Variable">timefunc</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.sched.scheduler.html#delayfunc" class="code" data-type="Instance Variable">delayfunc</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.sched.scheduler.html#enterabs" class="code" data-type="Method">enterabs</a></td>
+    <td><span>Enter a new event in the queue at an absolute time.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.sched.scheduler.html#enter" class="code" data-type="Method">enter</a></td>
+    <td><span>A variant that specifies the time as a relative time.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.sched.scheduler.html#cancel" class="code" data-type="Method">cancel</a></td>
+    <td><span>Remove an event from the queue.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.sched.scheduler.html#empty" class="code" data-type="Method">empty</a></td>
+    <td><span>Check whether the queue is empty.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.sched.scheduler.html#run" class="code" data-type="Method">run</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.sched.scheduler.html#queue" class="code" data-type="Method">queue</a></td>
+    <td><span>An ordered list of upcoming events.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.sched.scheduler.html#_queue" class="code" data-type="Instance Variable">_queue</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.sched.scheduler.html#_lock" class="code" data-type="Instance Variable">_lock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.sched.scheduler.html#_sequence_generator" class="code" data-type="Instance Variable">_sequence_generator</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.sched.scheduler.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, timefunc=_time, delayfunc=time.sleep):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Initialize a new instance, passing the time and delay
+functions</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.sched.scheduler._queue">
+    
+  </a>
+  <a name="_queue">
+    
+  </a>
+  <div class="functionHeader">
+    _queue =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.sched.scheduler._lock">
+    
+  </a>
+  <a name="_lock">
+    
+  </a>
+  <div class="functionHeader">
+    _lock =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.sched.scheduler.timefunc">
+    
+  </a>
+  <a name="timefunc">
+    
+  </a>
+  <div class="functionHeader">
+    timefunc =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.sched.scheduler.delayfunc">
+    
+  </a>
+  <a name="delayfunc">
+    
+  </a>
+  <div class="functionHeader">
+    delayfunc =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.sched.scheduler._sequence_generator">
+    
+  </a>
+  <a name="_sequence_generator">
+    
+  </a>
+  <div class="functionHeader">
+    _sequence_generator =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.sched.scheduler.enterabs">
+    
+  </a>
+  <a name="enterabs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    enterabs(self, time, priority, action, argument=(), kwargs=_sentinel):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Enter a new event in the queue at an absolute time.
+
+Returns an ID for the event which can be used to remove it,
+if necessary.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.sched.scheduler.enter">
+    
+  </a>
+  <a name="enter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    enter(self, delay, priority, action, argument=(), kwargs=_sentinel):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">A variant that specifies the time as a relative time.
+
+This is actually the more commonly used interface.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.sched.scheduler.cancel">
+    
+  </a>
+  <a name="cancel">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    cancel(self, event):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Remove an event from the queue.
+
+This must be presented the ID as returned by enter().
+If the event is not in the queue, this raises ValueError.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.sched.scheduler.empty">
+    
+  </a>
+  <a name="empty">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    empty(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Check whether the queue is empty.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.sched.scheduler.run">
+    
+  </a>
+  <a name="run">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    run(self, blocking=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Execute events until the queue is empty.
+If blocking is False executes the scheduled events due to
+expire soonest (if any) and then return the deadline of the
+next scheduled call in the scheduler.
+
+When there is a positive delay until the first event, the
+delay function is called and the event is left in the queue;
+otherwise, the event is removed from the queue and executed
+(its action function is called, passing it the argument).  If
+the delay function returns prematurely, it is simply
+restarted.
+
+It is legal for both the delay function and the action
+function to modify the queue or to raise an exception;
+exceptions are not caught but the scheduler's state remains
+well-defined so run() may be called again.
+
+A questionable hack is added to allow other threads to run:
+just after an event is executed, a delay of 0 is executed, to
+avoid monopolizing the CPU when other threads are also
+runnable.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.sched.scheduler.queue">
+    
+  </a>
+  <a name="queue">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    queue(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">An ordered list of upcoming events.
+
+Events are named tuples with fields for:
+    time, priority, action, arguments, kwargs</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

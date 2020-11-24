@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.lib2to3.refactor.MultiprocessRefactoringTool : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.lib2to3.html" class="code" data-type="Package">lib2to3</a>.<a href="Lib.lib2to3.refactor.html" class="code" data-type="Module">refactor</a>.<a href="Lib.lib2to3.refactor.MultiprocessRefactoringTool.html" class="code" data-type="Class">MultiprocessRefactoringTool</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.lib2to3.refactor.MultiprocessRefactoringTool(<a href="Lib.lib2to3.refactor.RefactoringTool.html" class="code" data-type="Class">RefactoringTool</a>):</code></p>
+        <p><a href="classIndex.html#Lib.lib2to3.refactor.MultiprocessRefactoringTool">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div class="undocumented">Undocumented</div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2818">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.refactor.MultiprocessRefactoringTool.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Initializer.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.refactor.MultiprocessRefactoringTool.html#queue" class="code" data-type="Instance Variable">queue</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.refactor.MultiprocessRefactoringTool.html#output_lock" class="code" data-type="Instance Variable">output_lock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.refactor.MultiprocessRefactoringTool.html#refactor" class="code" data-type="Method">refactor</a></td>
+    <td><span>Refactor a list of files and directories.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.refactor.MultiprocessRefactoringTool.html#refactor_file" class="code" data-type="Method">refactor_file</a></td>
+    <td><span>Refactors a file.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.refactor.MultiprocessRefactoringTool.html#_child" class="code" data-type="Method">_child</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.lib2to3.refactor.RefactoringTool.html" class="code" data-type="Class">RefactoringTool</a>:
+          </p>
+          <table class="children sortable" id="id2819">
+  
+  <tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#CLASS_PREFIX" class="code" data-type="Class Variable">CLASS_PREFIX</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#FILE_PREFIX" class="code" data-type="Class Variable">FILE_PREFIX</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#fixers" class="code" data-type="Instance Variable">fixers</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#explicit" class="code" data-type="Instance Variable">explicit</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#options" class="code" data-type="Instance Variable">options</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#grammar" class="code" data-type="Instance Variable">grammar</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#write_unchanged_files" class="code" data-type="Instance Variable">write_unchanged_files</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#errors" class="code" data-type="Instance Variable">errors</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#logger" class="code" data-type="Instance Variable">logger</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#fixer_log" class="code" data-type="Instance Variable">fixer_log</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#wrote" class="code" data-type="Instance Variable">wrote</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#driver" class="code" data-type="Instance Variable">driver</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#pre_order" class="code" data-type="Instance Variable">pre_order</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#post_order" class="code" data-type="Instance Variable">post_order</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#files" class="code" data-type="Instance Variable">files</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#BM" class="code" data-type="Instance Variable">BM</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#bmi_pre_order" class="code" data-type="Instance Variable">bmi_pre_order</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#bmi_post_order" class="code" data-type="Instance Variable">bmi_post_order</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#bmi_pre_order_heads" class="code" data-type="Instance Variable">bmi_pre_order_heads</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#bmi_post_order_heads" class="code" data-type="Instance Variable">bmi_post_order_heads</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#get_fixers" class="code" data-type="Method">get_fixers</a></td>
+    <td><span>Inspects the options to load the requested patterns and handlers.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#log_error" class="code" data-type="Method">log_error</a></td>
+    <td><span>Called when an error occurs.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#log_message" class="code" data-type="Method">log_message</a></td>
+    <td><span>Hook to log a message.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#log_debug" class="code" data-type="Method">log_debug</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#print_output" class="code" data-type="Method">print_output</a></td>
+    <td><span>Called with the old version, new version, and filename of a refactored file.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#refactor_dir" class="code" data-type="Method">refactor_dir</a></td>
+    <td><span>Descends down a directory and refactor every Python file found.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#refactor_string" class="code" data-type="Method">refactor_string</a></td>
+    <td><span>Refactor a given input string.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#refactor_stdin" class="code" data-type="Method">refactor_stdin</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#refactor_tree" class="code" data-type="Method">refactor_tree</a></td>
+    <td><span>Refactors a parse tree (modifying the tree in place).</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#traverse_by" class="code" data-type="Method">traverse_by</a></td>
+    <td><span>Traverse an AST, applying a set of fixers to each node.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#processed_file" class="code" data-type="Method">processed_file</a></td>
+    <td><span>Called when a file has been refactored and there may be changes.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#write_file" class="code" data-type="Method">write_file</a></td>
+    <td><span>Writes a string to a file.</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#PS1" class="code" data-type="Class Variable">PS1</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#PS2" class="code" data-type="Class Variable">PS2</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#refactor_docstring" class="code" data-type="Method">refactor_docstring</a></td>
+    <td><span>Refactors a docstring, looking for doctests.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#refactor_doctest" class="code" data-type="Method">refactor_doctest</a></td>
+    <td><span>Refactors one doctest.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#summarize" class="code" data-type="Method">summarize</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#parse_block" class="code" data-type="Method">parse_block</a></td>
+    <td><span>Parses a block into a tree.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#wrap_toks" class="code" data-type="Method">wrap_toks</a></td>
+    <td><span>Wraps a tokenize stream to systematically modify start/end.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#gen_lines" class="code" data-type="Method">gen_lines</a></td>
+    <td><span>Generates lines as expected by tokenize from a list of lines.</span></td>
+  </tr><tr class="baseclassvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#_default_options" class="code" data-type="Class Variable">_default_options</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.refactor.RefactoringTool.html#_read_python_source" class="code" data-type="Method">_read_python_source</a></td>
+    <td><span>Do our best to decode a Python source file correctly.</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.lib2to3.refactor.MultiprocessRefactoringTool.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.lib2to3.refactor.RefactoringTool.html#__init__" class="code" data-type="Method">Lib.lib2to3.refactor.RefactoringTool.__init__</a></div>
+    
+    <div><p class="pre">Initializer.
+
+Args:
+    fixer_names: a list of fixers to import
+    options: a dict with configuration.
+    explicit: a list of fixers to run even if they are explicit.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.lib2to3.refactor.MultiprocessRefactoringTool.queue">
+    
+  </a>
+  <a name="queue">
+    
+  </a>
+  <div class="functionHeader">
+    queue =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.lib2to3.refactor.MultiprocessRefactoringTool.output_lock">
+    
+  </a>
+  <a name="output_lock">
+    
+  </a>
+  <div class="functionHeader">
+    output_lock =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.lib2to3.refactor.MultiprocessRefactoringTool.refactor">
+    
+  </a>
+  <a name="refactor">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    refactor(self, items, write=(False), doctests_only=(False), num_processes=1):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.lib2to3.refactor.RefactoringTool.html#refactor" class="code" data-type="Method">Lib.lib2to3.refactor.RefactoringTool.refactor</a></div>
+    
+    <div><p class="pre">Refactor a list of files and directories.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.lib2to3.refactor.MultiprocessRefactoringTool._child">
+    
+  </a>
+  <a name="_child">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _child(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.lib2to3.refactor.MultiprocessRefactoringTool.refactor_file">
+    
+  </a>
+  <a name="refactor_file">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    refactor_file(self, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.lib2to3.refactor.RefactoringTool.html#refactor_file" class="code" data-type="Method">Lib.lib2to3.refactor.RefactoringTool.refactor_file</a></div>
+    
+    <div><p class="pre">Refactors a file.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

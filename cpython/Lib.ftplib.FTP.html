@@ -1,0 +1,1412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.ftplib.FTP : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.ftplib.html" class="code" data-type="Module">ftplib</a>.<a href="Lib.ftplib.FTP.html" class="code" data-type="Class">FTP</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.ftplib.FTP:</code></p><p>Known subclasses: <a href="Lib.ftplib.FTP_TLS.html" class="code" data-type="Class">Lib.ftplib.FTP_TLS</a></p>
+        <p><a href="classIndex.html#Lib.ftplib.FTP">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">An FTP client class.
+
+To create a connection, call the class using these arguments:
+        host, user, passwd, acct, timeout, source_address, encoding
+
+The first four arguments are all strings, and have default value ''.
+The parameter ´timeout´ must be numeric and defaults to None if not
+passed, meaning that no timeout will be set on any ftp socket(s).
+If a timeout is passed, then this is now the default timeout for all ftp
+socket operations for this instance.
+The last parameter is the encoding of filenames, which defaults to utf-8.
+
+Then use self.connect() with optional host and port argument.
+
+To download a file, use ftp.retrlines('RETR ' + filename),
+or ftp.retrbinary() with slightly different arguments.
+To upload a file, use ftp.storlines() or ftp.storbinary(),
+which have an open file as argument (see their definitions
+below for details).
+The download/upload functions first issue appropriate TYPE
+and PORT or PASV commands.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id1955">
+  
+  <tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.ftplib.FTP.html#debugging" class="code" data-type="Instance Variable">debugging</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.ftplib.FTP.html#host" class="code" data-type="Instance Variable">host</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.ftplib.FTP.html#sock" class="code" data-type="Instance Variable">sock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.ftplib.FTP.html#file" class="code" data-type="Instance Variable">file</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.ftplib.FTP.html#welcome" class="code" data-type="Instance Variable">welcome</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.ftplib.FTP.html#passiveserver" class="code" data-type="Instance Variable">passiveserver</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.ftplib.FTP.html#encoding" class="code" data-type="Instance Variable">encoding</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.ftplib.FTP.html#source_address" class="code" data-type="Instance Variable">source_address</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.ftplib.FTP.html#timeout" class="code" data-type="Instance Variable">timeout</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#__enter__" class="code" data-type="Method">__enter__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#__exit__" class="code" data-type="Method">__exit__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#connect" class="code" data-type="Method">connect</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.ftplib.FTP.html#port" class="code" data-type="Instance Variable">port</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.ftplib.FTP.html#af" class="code" data-type="Instance Variable">af</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#getwelcome" class="code" data-type="Method">getwelcome</a></td>
+    <td><span>Get the welcome message from the server. (this is read and squirreled away by connect())</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#set_debuglevel" class="code" data-type="Method">set_debuglevel</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#set_pasv" class="code" data-type="Method">set_pasv</a></td>
+    <td><span>Use passive or active mode for data transfers. With a false argument, use the normal PORT mode, With a true argument, use the PASV command.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#sanitize" class="code" data-type="Method">sanitize</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#putline" class="code" data-type="Method">putline</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#putcmd" class="code" data-type="Method">putcmd</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#getline" class="code" data-type="Method">getline</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#getmultiline" class="code" data-type="Method">getmultiline</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#getresp" class="code" data-type="Method">getresp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.ftplib.FTP.html#lastresp" class="code" data-type="Instance Variable">lastresp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#voidresp" class="code" data-type="Method">voidresp</a></td>
+    <td><span>Expect a response beginning with '2'.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#abort" class="code" data-type="Method">abort</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#sendcmd" class="code" data-type="Method">sendcmd</a></td>
+    <td><span>Send a command and return the response.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#voidcmd" class="code" data-type="Method">voidcmd</a></td>
+    <td><span>Send a command and expect a response beginning with '2'.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#sendport" class="code" data-type="Method">sendport</a></td>
+    <td><span>Send a PORT command with the current host and the given port number.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#sendeprt" class="code" data-type="Method">sendeprt</a></td>
+    <td><span>Send an EPRT command with the current host and the given port number.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#makeport" class="code" data-type="Method">makeport</a></td>
+    <td><span>Create a new socket and send a PORT command for it.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#makepasv" class="code" data-type="Method">makepasv</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#ntransfercmd" class="code" data-type="Method">ntransfercmd</a></td>
+    <td><span>Initiate a transfer over the data connection.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#transfercmd" class="code" data-type="Method">transfercmd</a></td>
+    <td><span>Like ntransfercmd() but returns only the socket.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#login" class="code" data-type="Method">login</a></td>
+    <td><span>Login, default anonymous.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#retrbinary" class="code" data-type="Method">retrbinary</a></td>
+    <td><span>Retrieve data in binary mode.  A new port is created for you.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#retrlines" class="code" data-type="Method">retrlines</a></td>
+    <td><span>Retrieve data in line mode.  A new port is created for you.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#storbinary" class="code" data-type="Method">storbinary</a></td>
+    <td><span>Store a file in binary mode.  A new port is created for you.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#storlines" class="code" data-type="Method">storlines</a></td>
+    <td><span>Store a file in line mode.  A new port is created for you.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#acct" class="code" data-type="Method">acct</a></td>
+    <td><span>Send new account name.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#nlst" class="code" data-type="Method">nlst</a></td>
+    <td><span>Return a list of files in a given directory (default the current).</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#dir" class="code" data-type="Method">dir</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#mlsd" class="code" data-type="Method">mlsd</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#rename" class="code" data-type="Method">rename</a></td>
+    <td><span>Rename a file.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#delete" class="code" data-type="Method">delete</a></td>
+    <td><span>Delete a file.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#cwd" class="code" data-type="Method">cwd</a></td>
+    <td><span>Change to a directory.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#size" class="code" data-type="Method">size</a></td>
+    <td><span>Retrieve the size of a file.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#mkd" class="code" data-type="Method">mkd</a></td>
+    <td><span>Make a directory, return its full pathname.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#rmd" class="code" data-type="Method">rmd</a></td>
+    <td><span>Remove a directory.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#pwd" class="code" data-type="Method">pwd</a></td>
+    <td><span>Return current working directory.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#quit" class="code" data-type="Method">quit</a></td>
+    <td><span>Quit, and close the connection.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ftplib.FTP.html#close" class="code" data-type="Method">close</a></td>
+    <td><span>Close the connection without assuming anything about it.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseinstancevariable">
+  
+  <a name="Lib.ftplib.FTP.debugging">
+    
+  </a>
+  <a name="debugging">
+    
+  </a>
+  <div class="functionHeader">
+    debugging =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.ftplib.FTP.host">
+    
+  </a>
+  <a name="host">
+    
+  </a>
+  <div class="functionHeader">
+    host =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.ftplib.FTP.sock">
+    
+  </a>
+  <a name="sock">
+    
+  </a>
+  <div class="functionHeader">
+    sock =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.ftplib.FTP_TLS.html" class="code" data-type="Class">Lib.ftplib.FTP_TLS</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.ftplib.FTP.file">
+    
+  </a>
+  <a name="file">
+    
+  </a>
+  <div class="functionHeader">
+    file =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.ftplib.FTP_TLS.html" class="code" data-type="Class">Lib.ftplib.FTP_TLS</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.ftplib.FTP.welcome">
+    
+  </a>
+  <a name="welcome">
+    
+  </a>
+  <div class="functionHeader">
+    welcome =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.ftplib.FTP.passiveserver">
+    
+  </a>
+  <a name="passiveserver">
+    
+  </a>
+  <div class="functionHeader">
+    passiveserver =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, host="""""", user="""""", passwd="""""", acct="""""", timeout=_GLOBAL_DEFAULT_TIMEOUT, source_address=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.ftplib.FTP_TLS.html" class="code" data-type="Class">Lib.ftplib.FTP_TLS</a></div>
+    
+    <div><p class="pre">Initialization method (called by class instantiation).
+Initialize host to localhost, port to standard ftp port.
+Optional arguments are host (for connect()),
+and user, passwd, acct (for login()).</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.ftplib.FTP.encoding">
+    
+  </a>
+  <a name="encoding">
+    
+  </a>
+  <div class="functionHeader">
+    encoding =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.ftplib.FTP.source_address">
+    
+  </a>
+  <a name="source_address">
+    
+  </a>
+  <div class="functionHeader">
+    source_address =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.ftplib.FTP.timeout">
+    
+  </a>
+  <a name="timeout">
+    
+  </a>
+  <div class="functionHeader">
+    timeout =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.__enter__">
+    
+  </a>
+  <a name="__enter__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __enter__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.__exit__">
+    
+  </a>
+  <a name="__exit__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __exit__(self, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.connect">
+    
+  </a>
+  <a name="connect">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    connect(self, host="""""", port=0, timeout=(-999), source_address=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Connect to host.  Arguments are:
+- host: hostname to connect to (string, default previous host)
+- port: port to connect to (integer, default previous port)
+- timeout: the timeout to set against the ftp socket(s)
+- source_address: a 2-tuple (host, port) for the socket to bind
+  to as its source address before connecting.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.ftplib.FTP.port">
+    
+  </a>
+  <a name="port">
+    
+  </a>
+  <div class="functionHeader">
+    port =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.ftplib.FTP.af">
+    
+  </a>
+  <a name="af">
+    
+  </a>
+  <div class="functionHeader">
+    af =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.getwelcome">
+    
+  </a>
+  <a name="getwelcome">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getwelcome(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get the welcome message from the server.
+(this is read and squirreled away by connect())</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.set_debuglevel">
+    
+  </a>
+  <a name="set_debuglevel">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_debuglevel(self, level):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set the debugging level.
+The required argument level means:
+0: no debugging output (default)
+1: print commands and responses but not body text etc.
+2: also print raw lines read and sent before stripping CR/LF</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.set_pasv">
+    
+  </a>
+  <a name="set_pasv">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_pasv(self, val):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Use passive or active mode for data transfers.
+With a false argument, use the normal PORT mode,
+With a true argument, use the PASV command.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.sanitize">
+    
+  </a>
+  <a name="sanitize">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    sanitize(self, s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.putline">
+    
+  </a>
+  <a name="putline">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    putline(self, line):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.putcmd">
+    
+  </a>
+  <a name="putcmd">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    putcmd(self, line):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.getline">
+    
+  </a>
+  <a name="getline">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getline(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.getmultiline">
+    
+  </a>
+  <a name="getmultiline">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getmultiline(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.getresp">
+    
+  </a>
+  <a name="getresp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getresp(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.ftplib.FTP.lastresp">
+    
+  </a>
+  <a name="lastresp">
+    
+  </a>
+  <div class="functionHeader">
+    lastresp =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.voidresp">
+    
+  </a>
+  <a name="voidresp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    voidresp(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Expect a response beginning with '2'.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.abort">
+    
+  </a>
+  <a name="abort">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    abort(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.ftplib.FTP_TLS.html" class="code" data-type="Class">Lib.ftplib.FTP_TLS</a></div>
+    
+    <div><p class="pre">Abort a file transfer.  Uses out-of-band data.
+This does not follow the procedure from the RFC to send Telnet
+IP and Synch; that doesn't seem to work with the servers I've
+tried.  Instead, just send the ABOR command as OOB data.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.sendcmd">
+    
+  </a>
+  <a name="sendcmd">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    sendcmd(self, cmd):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Send a command and return the response.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.voidcmd">
+    
+  </a>
+  <a name="voidcmd">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    voidcmd(self, cmd):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Send a command and expect a response beginning with '2'.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.sendport">
+    
+  </a>
+  <a name="sendport">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    sendport(self, host, port):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Send a PORT command with the current host and the given
+port number.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.sendeprt">
+    
+  </a>
+  <a name="sendeprt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    sendeprt(self, host, port):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Send an EPRT command with the current host and the given port number.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.makeport">
+    
+  </a>
+  <a name="makeport">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    makeport(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create a new socket and send a PORT command for it.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.makepasv">
+    
+  </a>
+  <a name="makepasv">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    makepasv(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.ntransfercmd">
+    
+  </a>
+  <a name="ntransfercmd">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ntransfercmd(self, cmd, rest=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.ftplib.FTP_TLS.html" class="code" data-type="Class">Lib.ftplib.FTP_TLS</a></div>
+    
+    <div><p class="pre">Initiate a transfer over the data connection.
+
+If the transfer is active, send a port command and the
+transfer command, and accept the connection.  If the server is
+passive, send a pasv command, connect to it, and start the
+transfer command.  Either way, return the socket for the
+connection and the expected size of the transfer.  The
+expected size may be None if it could not be determined.
+
+Optional `rest' argument can be a string that is sent as the
+argument to a REST command.  This is essentially a server
+marker used to tell the server to skip over any data up to the
+given marker.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.transfercmd">
+    
+  </a>
+  <a name="transfercmd">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    transfercmd(self, cmd, rest=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Like ntransfercmd() but returns only the socket.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.login">
+    
+  </a>
+  <a name="login">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    login(self, user="""""", passwd="""""", acct=""""""):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.ftplib.FTP_TLS.html" class="code" data-type="Class">Lib.ftplib.FTP_TLS</a></div>
+    
+    <div><p class="pre">Login, default anonymous.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.retrbinary">
+    
+  </a>
+  <a name="retrbinary">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    retrbinary(self, cmd, callback, blocksize=8192, rest=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Retrieve data in binary mode.  A new port is created for you.
+
+Args:
+  cmd: A RETR command.
+  callback: A single parameter callable to be called on each
+            block of data read.
+  blocksize: The maximum number of bytes to read from the
+             socket at one time.  [default: 8192]
+  rest: Passed to transfercmd().  [default: None]
+
+Returns:
+  The response code.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.retrlines">
+    
+  </a>
+  <a name="retrlines">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    retrlines(self, cmd, callback=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Retrieve data in line mode.  A new port is created for you.
+
+Args:
+  cmd: A RETR, LIST, or NLST command.
+  callback: An optional single parameter callable that is called
+            for each line with the trailing CRLF stripped.
+            [default: print_line()]
+
+Returns:
+  The response code.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.storbinary">
+    
+  </a>
+  <a name="storbinary">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    storbinary(self, cmd, fp, blocksize=8192, callback=None, rest=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Store a file in binary mode.  A new port is created for you.
+
+Args:
+  cmd: A STOR command.
+  fp: A file-like object with a read(num_bytes) method.
+  blocksize: The maximum data size to read from fp and send over
+             the connection at once.  [default: 8192]
+  callback: An optional single parameter callable that is called on
+            each block of data after it is sent.  [default: None]
+  rest: Passed to transfercmd().  [default: None]
+
+Returns:
+  The response code.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.storlines">
+    
+  </a>
+  <a name="storlines">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    storlines(self, cmd, fp, callback=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Store a file in line mode.  A new port is created for you.
+
+Args:
+  cmd: A STOR command.
+  fp: A file-like object with a readline() method.
+  callback: An optional single parameter callable that is called on
+            each line after it is sent.  [default: None]
+
+Returns:
+  The response code.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.acct">
+    
+  </a>
+  <a name="acct">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    acct(self, password):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Send new account name.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.nlst">
+    
+  </a>
+  <a name="nlst">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    nlst(self, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a list of files in a given directory (default the current).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.dir">
+    
+  </a>
+  <a name="dir">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    dir(self, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">List a directory in long form.
+By default list current directory to stdout.
+Optional last argument is callback function; all
+non-empty arguments before it are concatenated to the
+LIST command.  (This *should* only be used for a pathname.)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.mlsd">
+    
+  </a>
+  <a name="mlsd">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    mlsd(self, path="""""", facts=[]):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">List a directory in a standardized format by using MLSD
+command (RFC-3659). If path is omitted the current directory
+is assumed. "facts" is a list of strings representing the type
+of information desired (e.g. ["type", "size", "perm"]).
+
+Return a generator object yielding a tuple of two elements
+for every file found in path.
+First element is the file name, the second one is a dictionary
+including a variable number of "facts" depending on the server
+and whether "facts" argument has been provided.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.rename">
+    
+  </a>
+  <a name="rename">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    rename(self, fromname, toname):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Rename a file.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.delete">
+    
+  </a>
+  <a name="delete">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    delete(self, filename):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Delete a file.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.cwd">
+    
+  </a>
+  <a name="cwd">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    cwd(self, dirname):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Change to a directory.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.size">
+    
+  </a>
+  <a name="size">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    size(self, filename):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Retrieve the size of a file.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.mkd">
+    
+  </a>
+  <a name="mkd">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    mkd(self, dirname):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Make a directory, return its full pathname.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.rmd">
+    
+  </a>
+  <a name="rmd">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    rmd(self, dirname):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Remove a directory.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.pwd">
+    
+  </a>
+  <a name="pwd">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    pwd(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return current working directory.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.quit">
+    
+  </a>
+  <a name="quit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    quit(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Quit, and close the connection.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ftplib.FTP.close">
+    
+  </a>
+  <a name="close">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    close(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Close the connection without assuming anything about it.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

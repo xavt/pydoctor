@@ -1,0 +1,972 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.xmlrpc.client : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.xmlrpc.html" class="code" data-type="Package">xmlrpc</a>.<a href="Lib.xmlrpc.client.html" class="code" data-type="Module">client</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">An XML-RPC client interface for Python.
+
+The marshalling and response parser code can also be used to
+implement XML-RPC servers.
+
+Exported exceptions:
+
+  Error          Base class for client errors
+  ProtocolError  Indicates an HTTP protocol error
+  ResponseError  Indicates a broken response package
+  Fault          Indicates an XML-RPC fault package
+
+Exported classes:
+
+  ServerProxy    Represents a logical connection to an XML-RPC server
+
+  MultiCall      Executor of boxcared xmlrpc requests
+  DateTime       dateTime wrapper for an ISO 8601 string or time tuple or
+                 localtime integer value to generate a "dateTime.iso8601"
+                 XML-RPC value
+  Binary         binary data wrapper
+
+  Marshaller     Generate an XML-RPC params chunk from a Python data structure
+  Unmarshaller   Unmarshal an XML-RPC response from incoming XML event message
+  Transport      Handles an HTTP transaction to an XML-RPC server
+  SafeTransport  Handles an HTTPS transaction to an XML-RPC server
+
+Exported constants:
+
+  (none)
+
+Exported functions:
+
+  getparser      Create instance of the fastest available parser &amp; attach
+                 to an unmarshalling object
+  dumps          Convert an argument tuple or a Fault instance to an XML-RPC
+                 request (or response, if the methodresponse option is used).
+  loads          Convert an XML-RPC packet to unmarshalled data plus a method
+                 name (None if not present).</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id12174">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xmlrpc.client.html#gzip" class="code" data-type="Variable">gzip</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xmlrpc.client.html#escape" class="code" data-type="Function">escape</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xmlrpc.client.html#__version__" class="code" data-type="Variable">__version__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xmlrpc.client.html#MAXINT" class="code" data-type="Variable">MAXINT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xmlrpc.client.html#MININT" class="code" data-type="Variable">MININT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xmlrpc.client.html#PARSE_ERROR" class="code" data-type="Variable">PARSE_ERROR</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xmlrpc.client.html#SERVER_ERROR" class="code" data-type="Variable">SERVER_ERROR</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xmlrpc.client.html#APPLICATION_ERROR" class="code" data-type="Variable">APPLICATION_ERROR</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xmlrpc.client.html#SYSTEM_ERROR" class="code" data-type="Variable">SYSTEM_ERROR</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xmlrpc.client.html#TRANSPORT_ERROR" class="code" data-type="Variable">TRANSPORT_ERROR</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xmlrpc.client.html#NOT_WELLFORMED_ERROR" class="code" data-type="Variable">NOT_WELLFORMED_ERROR</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xmlrpc.client.html#UNSUPPORTED_ENCODING" class="code" data-type="Variable">UNSUPPORTED_ENCODING</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xmlrpc.client.html#INVALID_ENCODING_CHAR" class="code" data-type="Variable">INVALID_ENCODING_CHAR</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xmlrpc.client.html#INVALID_XMLRPC" class="code" data-type="Variable">INVALID_XMLRPC</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xmlrpc.client.html#METHOD_NOT_FOUND" class="code" data-type="Variable">METHOD_NOT_FOUND</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xmlrpc.client.html#INVALID_METHOD_PARAMS" class="code" data-type="Variable">INVALID_METHOD_PARAMS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xmlrpc.client.html#INTERNAL_ERROR" class="code" data-type="Variable">INTERNAL_ERROR</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xmlrpc.client.Error.html" class="code" data-type="Class">Error</a></td>
+    <td><span>Base class for client errors.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xmlrpc.client.ProtocolError.html" class="code" data-type="Class">ProtocolError</a></td>
+    <td><span>Indicates an HTTP protocol error.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xmlrpc.client.ResponseError.html" class="code" data-type="Class">ResponseError</a></td>
+    <td><span>Indicates a broken response package.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xmlrpc.client.Fault.html" class="code" data-type="Class">Fault</a></td>
+    <td><span>Indicates an XML-RPC fault package.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xmlrpc.client.DateTime.html" class="code" data-type="Class">DateTime</a></td>
+    <td><span>DateTime wrapper for an ISO 8601 string or time tuple or localtime integer value to generate 'dateTime.iso8601' XML-RPC value.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xmlrpc.client.Binary.html" class="code" data-type="Class">Binary</a></td>
+    <td><span>Wrapper for binary data.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xmlrpc.client.html#WRAPPERS" class="code" data-type="Variable">WRAPPERS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xmlrpc.client.ExpatParser.html" class="code" data-type="Class">ExpatParser</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xmlrpc.client.Marshaller.html" class="code" data-type="Class">Marshaller</a></td>
+    <td><span>Generate an XML-RPC params chunk from a Python data structure.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html" class="code" data-type="Class">Unmarshaller</a></td>
+    <td><span>Unmarshal an XML-RPC response, based on incoming XML event messages (start, data, end).  Call close() to get the resulting data structure.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xmlrpc.client.MultiCallIterator.html" class="code" data-type="Class">MultiCallIterator</a></td>
+    <td><span>Iterates over the results of a multicall. Exceptions are raised in response to xmlrpc faults.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xmlrpc.client.MultiCall.html" class="code" data-type="Class">MultiCall</a></td>
+    <td><span>server -&gt; an object used to boxcar method calls</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xmlrpc.client.html#FastMarshaller" class="code" data-type="Variable">FastMarshaller</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xmlrpc.client.html#FastParser" class="code" data-type="Variable">FastParser</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xmlrpc.client.html#FastUnmarshaller" class="code" data-type="Variable">FastUnmarshaller</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xmlrpc.client.html#getparser" class="code" data-type="Function">getparser</a></td>
+    <td><span>getparser() -&gt; parser, unmarshaller</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xmlrpc.client.html#dumps" class="code" data-type="Function">dumps</a></td>
+    <td><span>data [,options] -&gt; marshalled data</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xmlrpc.client.html#loads" class="code" data-type="Function">loads</a></td>
+    <td><span>data -&gt; unmarshalled data, method name</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xmlrpc.client.html#gzip_encode" class="code" data-type="Function">gzip_encode</a></td>
+    <td><span>data -&gt; gzip encoded data</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xmlrpc.client.html#gzip_decode" class="code" data-type="Function">gzip_decode</a></td>
+    <td><span>gzip encoded data -&gt; unencoded data</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xmlrpc.client.GzipDecodedResponse.html" class="code" data-type="Class">GzipDecodedResponse</a></td>
+    <td><span>a file-like object to decode a response encoded with the gzip method, as described in RFC 1952.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xmlrpc.client.Transport.html" class="code" data-type="Class">Transport</a></td>
+    <td><span>Handles an HTTP transaction to an XML-RPC server.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xmlrpc.client.SafeTransport.html" class="code" data-type="Class">SafeTransport</a></td>
+    <td><span>Handles an HTTPS transaction to an XML-RPC server.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xmlrpc.client.ServerProxy.html" class="code" data-type="Class">ServerProxy</a></td>
+    <td><span>uri [,options] -&gt; a logical connection to an XML-RPC server</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xmlrpc.client.html#server" class="code" data-type="Variable">server</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xmlrpc.client.html#multi" class="code" data-type="Variable">multi</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xmlrpc.client.html#_day0" class="code" data-type="Variable">_day0</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xmlrpc.client.html#_iso8601_format" class="code" data-type="Function">_iso8601_format</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xmlrpc.client.html#_strftime" class="code" data-type="Function">_strftime</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xmlrpc.client.html#_datetime" class="code" data-type="Function">_datetime</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xmlrpc.client.html#_datetime_type" class="code" data-type="Function">_datetime_type</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xmlrpc.client.html#_binary" class="code" data-type="Function">_binary</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.xmlrpc.client._MultiCallMethod.html" class="code" data-type="Class">_MultiCallMethod</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.xmlrpc.client._Method.html" class="code" data-type="Class">_Method</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.xmlrpc.client.gzip">
+    
+  </a>
+  <a name="gzip">
+    
+  </a>
+  <div class="functionHeader">
+    gzip =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xmlrpc.client.escape">
+    
+  </a>
+  <a name="escape">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    escape(s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.xmlrpc.client.__version__">
+    
+  </a>
+  <a name="__version__">
+    
+  </a>
+  <div class="functionHeader">
+    __version__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.xmlrpc.client.MAXINT">
+    
+  </a>
+  <a name="MAXINT">
+    
+  </a>
+  <div class="functionHeader">
+    MAXINT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.xmlrpc.client.MININT">
+    
+  </a>
+  <a name="MININT">
+    
+  </a>
+  <div class="functionHeader">
+    MININT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.xmlrpc.client.PARSE_ERROR">
+    
+  </a>
+  <a name="PARSE_ERROR">
+    
+  </a>
+  <div class="functionHeader">
+    PARSE_ERROR =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.xmlrpc.client.SERVER_ERROR">
+    
+  </a>
+  <a name="SERVER_ERROR">
+    
+  </a>
+  <div class="functionHeader">
+    SERVER_ERROR =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.xmlrpc.client.APPLICATION_ERROR">
+    
+  </a>
+  <a name="APPLICATION_ERROR">
+    
+  </a>
+  <div class="functionHeader">
+    APPLICATION_ERROR =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.xmlrpc.client.SYSTEM_ERROR">
+    
+  </a>
+  <a name="SYSTEM_ERROR">
+    
+  </a>
+  <div class="functionHeader">
+    SYSTEM_ERROR =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.xmlrpc.client.TRANSPORT_ERROR">
+    
+  </a>
+  <a name="TRANSPORT_ERROR">
+    
+  </a>
+  <div class="functionHeader">
+    TRANSPORT_ERROR =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.xmlrpc.client.NOT_WELLFORMED_ERROR">
+    
+  </a>
+  <a name="NOT_WELLFORMED_ERROR">
+    
+  </a>
+  <div class="functionHeader">
+    NOT_WELLFORMED_ERROR =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.xmlrpc.client.UNSUPPORTED_ENCODING">
+    
+  </a>
+  <a name="UNSUPPORTED_ENCODING">
+    
+  </a>
+  <div class="functionHeader">
+    UNSUPPORTED_ENCODING =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.xmlrpc.client.INVALID_ENCODING_CHAR">
+    
+  </a>
+  <a name="INVALID_ENCODING_CHAR">
+    
+  </a>
+  <div class="functionHeader">
+    INVALID_ENCODING_CHAR =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.xmlrpc.client.INVALID_XMLRPC">
+    
+  </a>
+  <a name="INVALID_XMLRPC">
+    
+  </a>
+  <div class="functionHeader">
+    INVALID_XMLRPC =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.xmlrpc.client.METHOD_NOT_FOUND">
+    
+  </a>
+  <a name="METHOD_NOT_FOUND">
+    
+  </a>
+  <div class="functionHeader">
+    METHOD_NOT_FOUND =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.xmlrpc.client.INVALID_METHOD_PARAMS">
+    
+  </a>
+  <a name="INVALID_METHOD_PARAMS">
+    
+  </a>
+  <div class="functionHeader">
+    INVALID_METHOD_PARAMS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.xmlrpc.client.INTERNAL_ERROR">
+    
+  </a>
+  <a name="INTERNAL_ERROR">
+    
+  </a>
+  <div class="functionHeader">
+    INTERNAL_ERROR =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.xmlrpc.client._day0">
+    
+  </a>
+  <a name="_day0">
+    
+  </a>
+  <div class="functionHeader">
+    _day0 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xmlrpc.client._iso8601_format">
+    
+  </a>
+  <a name="_iso8601_format">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _iso8601_format(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xmlrpc.client._strftime">
+    
+  </a>
+  <a name="_strftime">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _strftime(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xmlrpc.client._datetime">
+    
+  </a>
+  <a name="_datetime">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _datetime(data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xmlrpc.client._datetime_type">
+    
+  </a>
+  <a name="_datetime_type">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _datetime_type(data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xmlrpc.client._binary">
+    
+  </a>
+  <a name="_binary">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _binary(data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.xmlrpc.client.WRAPPERS">
+    
+  </a>
+  <a name="WRAPPERS">
+    
+  </a>
+  <div class="functionHeader">
+    WRAPPERS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.xmlrpc.client.FastMarshaller">
+    
+  </a>
+  <a name="FastMarshaller">
+    
+  </a>
+  <div class="functionHeader">
+    FastMarshaller =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.xmlrpc.client.FastParser">
+    
+  </a>
+  <a name="FastParser">
+    
+  </a>
+  <div class="functionHeader">
+    FastParser =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.xmlrpc.client.FastUnmarshaller">
+    
+  </a>
+  <a name="FastUnmarshaller">
+    
+  </a>
+  <div class="functionHeader">
+    FastUnmarshaller =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xmlrpc.client.getparser">
+    
+  </a>
+  <a name="getparser">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getparser(use_datetime=(False), use_builtin_types=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">getparser() -&gt; parser, unmarshaller
+
+Create an instance of the fastest available parser, and attach it
+to an unmarshalling object.  Return both objects.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xmlrpc.client.dumps">
+    
+  </a>
+  <a name="dumps">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    dumps(params, methodname=None, methodresponse=None, encoding=None, allow_none=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">data [,options] -&gt; marshalled data
+
+Convert an argument tuple or a Fault instance to an XML-RPC
+request (or response, if the methodresponse option is used).
+
+In addition to the data object, the following options can be given
+as keyword arguments:
+
+    methodname: the method name for a methodCall packet
+
+    methodresponse: true to create a methodResponse packet.
+    If this option is used with a tuple, the tuple must be
+    a singleton (i.e. it can contain only one element).
+
+    encoding: the packet encoding (default is UTF-8)
+
+All byte strings in the data structure are assumed to use the
+packet encoding.  Unicode strings are automatically converted,
+where necessary.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xmlrpc.client.loads">
+    
+  </a>
+  <a name="loads">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    loads(data, use_datetime=(False), use_builtin_types=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">data -&gt; unmarshalled data, method name
+
+Convert an XML-RPC packet to unmarshalled data plus a method
+name (None if not present).
+
+If the XML-RPC packet represents a fault condition, this function
+raises a Fault exception.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xmlrpc.client.gzip_encode">
+    
+  </a>
+  <a name="gzip_encode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    gzip_encode(data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">data -&gt; gzip encoded data
+
+Encode data using the gzip content encoding as described in RFC 1952</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xmlrpc.client.gzip_decode">
+    
+  </a>
+  <a name="gzip_decode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    gzip_decode(data, max_decode=20971520):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">gzip encoded data -&gt; unencoded data
+
+Decode data using the gzip content encoding as described in RFC 1952</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.xmlrpc.client.server">
+    
+  </a>
+  <a name="server">
+    
+  </a>
+  <div class="functionHeader">
+    server =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.xmlrpc.client.multi">
+    
+  </a>
+  <a name="multi">
+    
+  </a>
+  <div class="functionHeader">
+    multi =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

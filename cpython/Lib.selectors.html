@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.selectors : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.selectors.html" class="code" data-type="Module">selectors</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Selectors module.
+
+This module allows high-level and efficient I/O multiplexing, built upon the
+`select` module primitives.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3472">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.selectors.html#EVENT_READ" class="code" data-type="Variable">EVENT_READ</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.selectors.html#EVENT_WRITE" class="code" data-type="Variable">EVENT_WRITE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.selectors.html#SelectorKey" class="code" data-type="Variable">SelectorKey</a></td>
+    <td><span>SelectorKey(fileobj, fd, events, data)</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.selectors.BaseSelector.html" class="code" data-type="Class">BaseSelector</a></td>
+    <td><span>Selector abstract base class.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.selectors.SelectSelector.html" class="code" data-type="Class">SelectSelector</a></td>
+    <td><span>Select-based selector.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.selectors.PollSelector.html" class="code" data-type="Class">PollSelector</a></td>
+    <td><span>Poll-based selector.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.selectors.EpollSelector.html" class="code" data-type="Class">EpollSelector</a></td>
+    <td><span>Epoll-based selector.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.selectors.DevpollSelector.html" class="code" data-type="Class">DevpollSelector</a></td>
+    <td><span>Solaris /dev/poll selector.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.selectors.KqueueSelector.html" class="code" data-type="Class">KqueueSelector</a></td>
+    <td><span>Kqueue-based selector.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.selectors.html#_fileobj_to_fd" class="code" data-type="Function">_fileobj_to_fd</a></td>
+    <td><span>Return a file descriptor from a file object.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.selectors._SelectorMapping.html" class="code" data-type="Class">_SelectorMapping</a></td>
+    <td><span>Mapping of file objects to selector keys.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.selectors._BaseSelectorImpl.html" class="code" data-type="Class">_BaseSelectorImpl</a></td>
+    <td><span>Base selector implementation.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.selectors._PollLikeSelector.html" class="code" data-type="Class">_PollLikeSelector</a></td>
+    <td><span>Base class shared between poll, epoll and devpoll selectors.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.selectors.html#_can_use" class="code" data-type="Function">_can_use</a></td>
+    <td><span>Check if we can use the selector depending upon the operating system.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.selectors.EVENT_READ">
+    
+  </a>
+  <a name="EVENT_READ">
+    
+  </a>
+  <div class="functionHeader">
+    EVENT_READ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.selectors.EVENT_WRITE">
+    
+  </a>
+  <a name="EVENT_WRITE">
+    
+  </a>
+  <div class="functionHeader">
+    EVENT_WRITE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.selectors._fileobj_to_fd">
+    
+  </a>
+  <a name="_fileobj_to_fd">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _fileobj_to_fd(fileobj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a file descriptor from a file object.
+
+Parameters:
+fileobj -- file object or file descriptor
+
+Returns:
+corresponding file descriptor
+
+Raises:
+ValueError if the object is invalid</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.selectors.SelectorKey">
+    
+  </a>
+  <a name="SelectorKey">
+    
+  </a>
+  <div class="functionHeader">
+    SelectorKey =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="pre">SelectorKey(fileobj, fd, events, data)
+
+    Object used to associate a file object to its backing
+    file descriptor, selected event mask, and attached data.
+</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.selectors._can_use">
+    
+  </a>
+  <a name="_can_use">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _can_use(method):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Check if we can use the selector depending upon the
+operating system. </p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

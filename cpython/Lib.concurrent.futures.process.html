@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.concurrent.futures.process : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.concurrent.html" class="code" data-type="Package">concurrent</a>.<a href="Lib.concurrent.futures.html" class="code" data-type="Package">futures</a>.<a href="Lib.concurrent.futures.process.html" class="code" data-type="Module">process</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Implements ProcessPoolExecutor.
+
+The following diagram and text describe the data-flow through the system:
+
+|======================= In-process =====================|== Out-of-process ==|
+
++----------+     +----------+       +--------+     +-----------+    +---------+
+|          |  =&gt; | Work Ids |       |        |     | Call Q    |    | Process |
+|          |     +----------+       |        |     +-----------+    |  Pool   |
+|          |     | ...      |       |        |     | ...       |    +---------+
+|          |     | 6        |    =&gt; |        |  =&gt; | 5, call() | =&gt; |         |
+|          |     | 7        |       |        |     | ...       |    |         |
+| Process  |     | ...      |       | Local  |     +-----------+    | Process |
+|  Pool    |     +----------+       | Worker |                      |  #1..n  |
+| Executor |                        | Thread |                      |         |
+|          |     +----------- +     |        |     +-----------+    |         |
+|          | &lt;=&gt; | Work Items | &lt;=&gt; |        | &lt;=  | Result Q  | &lt;= |         |
+|          |     +------------+     |        |     +-----------+    |         |
+|          |     | 6: call()  |     |        |     | ...       |    |         |
+|          |     |    future  |     |        |     | 4, result |    |         |
+|          |     | ...        |     |        |     | 3, except |    |         |
++----------+     +------------+     +--------+     +-----------+    +---------+
+
+Executor.submit() called:
+- creates a uniquely numbered _WorkItem and adds it to the "Work Items" dict
+- adds the id of the _WorkItem to the "Work Ids" queue
+
+Local worker thread:
+- reads work ids from the "Work Ids" queue and looks up the corresponding
+  WorkItem from the "Work Items" dict: if the work item has been cancelled then
+  it is simply removed from the dict, otherwise it is repackaged as a
+  _CallItem and put in the "Call Q". New _CallItems are put in the "Call Q"
+  until "Call Q" is full. NOTE: the size of the "Call Q" is kept small because
+  calls placed in the "Call Q" can no longer be cancelled with Future.cancel().
+- reads _ResultItems from "Result Q", updates the future stored in the
+  "Work Items" dict and deletes the dict entry
+
+Process #1..n:
+- reads _CallItems from "Call Q", executes the calls, and puts the resulting
+  _ResultItems in "Result Q"</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id550">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.concurrent.futures.process.html#__author__" class="code" data-type="Variable">__author__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.concurrent.futures.process.html#EXTRA_QUEUED_CALLS" class="code" data-type="Variable">EXTRA_QUEUED_CALLS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.concurrent.futures.process.BrokenProcessPool.html" class="code" data-type="Class">BrokenProcessPool</a></td>
+    <td><span>Raised when a process in a ProcessPoolExecutor terminated abruptly while a future was in the running state.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.concurrent.futures.process.ProcessPoolExecutor.html" class="code" data-type="Class">ProcessPoolExecutor</a></td>
+    <td><span class="undocumented">No class0/17 instance variables docstring; , 2/6 methods documented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.concurrent.futures.process.html#_threads_wakeups" class="code" data-type="Variable">_threads_wakeups</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.concurrent.futures.process.html#_global_shutdown" class="code" data-type="Variable">_global_shutdown</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.concurrent.futures.process._ThreadWakeup.html" class="code" data-type="Class">_ThreadWakeup</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.concurrent.futures.process.html#_python_exit" class="code" data-type="Function">_python_exit</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.concurrent.futures.process.html#_MAX_WINDOWS_WORKERS" class="code" data-type="Variable">_MAX_WINDOWS_WORKERS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.concurrent.futures.process._RemoteTraceback.html" class="code" data-type="Class">_RemoteTraceback</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.concurrent.futures.process._ExceptionWithTraceback.html" class="code" data-type="Class">_ExceptionWithTraceback</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.concurrent.futures.process.html#_rebuild_exc" class="code" data-type="Function">_rebuild_exc</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.concurrent.futures.process._WorkItem.html" class="code" data-type="Class">_WorkItem</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.concurrent.futures.process._ResultItem.html" class="code" data-type="Class">_ResultItem</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.concurrent.futures.process._CallItem.html" class="code" data-type="Class">_CallItem</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.concurrent.futures.process._SafeQueue.html" class="code" data-type="Class">_SafeQueue</a></td>
+    <td><span>Safe Queue set exception to the future object linked to a job</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.concurrent.futures.process.html#_get_chunks" class="code" data-type="Function">_get_chunks</a></td>
+    <td><span>Iterates over zip()ed iterables in chunks.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.concurrent.futures.process.html#_process_chunk" class="code" data-type="Function">_process_chunk</a></td>
+    <td><span>Processes a chunk of an iterable passed to map.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.concurrent.futures.process.html#_sendback_result" class="code" data-type="Function">_sendback_result</a></td>
+    <td><span>Safely send back the given result or exception</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.concurrent.futures.process.html#_process_worker" class="code" data-type="Function">_process_worker</a></td>
+    <td><span>Evaluates calls from call_queue and places the results in result_queue.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.concurrent.futures.process._ExecutorManagerThread.html" class="code" data-type="Class">_ExecutorManagerThread</a></td>
+    <td><span>Manages the communication between this process and the worker processes.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.concurrent.futures.process.html#_system_limits_checked" class="code" data-type="Variable">_system_limits_checked</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.concurrent.futures.process.html#_system_limited" class="code" data-type="Variable">_system_limited</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.concurrent.futures.process.html#_check_system_limits" class="code" data-type="Function">_check_system_limits</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.concurrent.futures.process.html#_chain_from_iterable_of_lists" class="code" data-type="Function">_chain_from_iterable_of_lists</a></td>
+    <td><span>Specialized implementation of itertools.chain.from_iterable. Each item in *iterable* should be a list.  This function is careful not to keep references to yielded objects.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.concurrent.futures.process.__author__">
+    
+  </a>
+  <a name="__author__">
+    
+  </a>
+  <div class="functionHeader">
+    __author__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.concurrent.futures.process._threads_wakeups">
+    
+  </a>
+  <a name="_threads_wakeups">
+    
+  </a>
+  <div class="functionHeader">
+    _threads_wakeups =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.concurrent.futures.process._global_shutdown">
+    
+  </a>
+  <a name="_global_shutdown">
+    
+  </a>
+  <div class="functionHeader">
+    _global_shutdown =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.concurrent.futures.process._python_exit">
+    
+  </a>
+  <a name="_python_exit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _python_exit():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.concurrent.futures.process.EXTRA_QUEUED_CALLS">
+    
+  </a>
+  <a name="EXTRA_QUEUED_CALLS">
+    
+  </a>
+  <div class="functionHeader">
+    EXTRA_QUEUED_CALLS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.concurrent.futures.process._MAX_WINDOWS_WORKERS">
+    
+  </a>
+  <a name="_MAX_WINDOWS_WORKERS">
+    
+  </a>
+  <div class="functionHeader">
+    _MAX_WINDOWS_WORKERS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.concurrent.futures.process._rebuild_exc">
+    
+  </a>
+  <a name="_rebuild_exc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _rebuild_exc(exc, tb):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.concurrent.futures.process._get_chunks">
+    
+  </a>
+  <a name="_get_chunks">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_chunks(*iterables):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Iterates over zip()ed iterables in chunks. </p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.concurrent.futures.process._process_chunk">
+    
+  </a>
+  <a name="_process_chunk">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _process_chunk(fn, chunk):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Processes a chunk of an iterable passed to map.
+
+Runs the function passed to map() on a chunk of the
+iterable passed to map.
+
+This function is run in a separate process.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.concurrent.futures.process._sendback_result">
+    
+  </a>
+  <a name="_sendback_result">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _sendback_result(result_queue, work_id, result=None, exception=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Safely send back the given result or exception</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.concurrent.futures.process._process_worker">
+    
+  </a>
+  <a name="_process_worker">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _process_worker(call_queue, result_queue, initializer, initargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Evaluates calls from call_queue and places the results in result_queue.
+
+This worker is run in a separate process.
+
+Args:
+    call_queue: A ctx.Queue of _CallItems that will be read and
+        evaluated by the worker.
+    result_queue: A ctx.Queue of _ResultItems that will written
+        to by the worker.
+    initializer: A callable initializer, or None
+    initargs: A tuple of args for the initializer</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.concurrent.futures.process._system_limits_checked">
+    
+  </a>
+  <a name="_system_limits_checked">
+    
+  </a>
+  <div class="functionHeader">
+    _system_limits_checked =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.concurrent.futures.process._system_limited">
+    
+  </a>
+  <a name="_system_limited">
+    
+  </a>
+  <div class="functionHeader">
+    _system_limited =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.concurrent.futures.process._check_system_limits">
+    
+  </a>
+  <a name="_check_system_limits">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _check_system_limits():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.concurrent.futures.process._chain_from_iterable_of_lists">
+    
+  </a>
+  <a name="_chain_from_iterable_of_lists">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _chain_from_iterable_of_lists(iterable):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Specialized implementation of itertools.chain.from_iterable.
+Each item in *iterable* should be a list.  This function is
+careful not to keep references to yielded objects.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

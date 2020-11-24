@@ -1,0 +1,1619 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.logging : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="package"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.logging.html" class="code" data-type="Package">logging</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        package documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Logging package for Python. Based on PEP 282 and comments thereto in
+comp.lang.python.
+
+Copyright (C) 2001-2019 Vinay Sajip. All Rights Reserved.
+
+To use, simply 'import logging' and log away!</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2997">
+  
+  <tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.logging.config.html" class="code" data-type="Module">config</a></td>
+    <td><span>Configuration functions for the logging package for Python. The core package is based on PEP 282 and comments thereto in comp.lang.python, and influenced by Apache's log4j system.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.logging.handlers.html" class="code" data-type="Module">handlers</a></td>
+    <td><span>Additional handlers for the logging package for Python. The core package is based on PEP 282 and comments thereto in comp.lang.python.</span></td>
+  </tr>
+</table>
+        
+
+          <p class="fromInitPy">From the <code>__init__.py</code> module:</p><table class="children sortable" id="id2998">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.html#BASIC_FORMAT" class="code" data-type="Variable">BASIC_FORMAT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.BufferingFormatter.html" class="code" data-type="Class">BufferingFormatter</a></td>
+    <td><span>A formatter suitable for formatting a number of records.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.html#CRITICAL" class="code" data-type="Variable">CRITICAL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.html#DEBUG" class="code" data-type="Variable">DEBUG</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.html#ERROR" class="code" data-type="Variable">ERROR</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.FileHandler.html" class="code" data-type="Class">FileHandler</a></td>
+    <td><span>A handler class which writes formatted logging records to disk files.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.Filter.html" class="code" data-type="Class">Filter</a></td>
+    <td><span>Filter instances are used to perform arbitrary filtering of LogRecords.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.Filterer.html" class="code" data-type="Class">Filterer</a></td>
+    <td><span>A base class for loggers and handlers which allows them to share common code.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.Formatter.html" class="code" data-type="Class">Formatter</a></td>
+    <td><span>Formatter instances are used to convert a LogRecord to text.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.Handler.html" class="code" data-type="Class">Handler</a></td>
+    <td><span>Handler instances dispatch logging events to specific destinations.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.html#INFO" class="code" data-type="Variable">INFO</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.LogRecord.html" class="code" data-type="Class">LogRecord</a></td>
+    <td><span>A LogRecord instance represents an event being logged.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.Logger.html" class="code" data-type="Class">Logger</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.LoggerAdapter.html" class="code" data-type="Class">LoggerAdapter</a></td>
+    <td><span>An adapter for loggers which makes it easier to specify contextual information in logging output.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.Manager.html" class="code" data-type="Class">Manager</a></td>
+    <td><span>There is [under normal circumstances] just one Manager instance, which holds the hierarchy of loggers.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.html#NOTSET" class="code" data-type="Variable">NOTSET</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.NullHandler.html" class="code" data-type="Class">NullHandler</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.PercentStyle.html" class="code" data-type="Class">PercentStyle</a></td>
+    <td><span class="undocumented">No class0/4 class variables docstring; , 0/2 instance variables docstring; , 1/5 methods documented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.PlaceHolder.html" class="code" data-type="Class">PlaceHolder</a></td>
+    <td><span>PlaceHolder instances are used in the Manager logger hierarchy to take the place of nodes for which no loggers have been defined. This class is intended for internal use only and not as part of the public API.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.RootLogger.html" class="code" data-type="Class">RootLogger</a></td>
+    <td><span>A root logger is not that different to any other logger, except that it must have a logging level and there is only one instance of it in the hierarchy.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.StrFormatStyle.html" class="code" data-type="Class">StrFormatStyle</a></td>
+    <td><span class="undocumented">No class0/5 class variables docstring; , 1/2 methods documented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.StreamHandler.html" class="code" data-type="Class">StreamHandler</a></td>
+    <td><span>A handler class which writes logging records, appropriately formatted, to a stream. Note that this class does not close the stream, as sys.stdout or sys.stderr may be used.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging.StringTemplateStyle.html" class="code" data-type="Class">StringTemplateStyle</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.html#WARNING" class="code" data-type="Variable">WARNING</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.html#__author__" class="code" data-type="Variable">__author__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.html#__date__" class="code" data-type="Variable">__date__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.html#__status__" class="code" data-type="Variable">__status__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.html#__version__" class="code" data-type="Variable">__version__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.html#addLevelName" class="code" data-type="Function">addLevelName</a></td>
+    <td><span>Associate 'levelName' with 'level'.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.html#basicConfig" class="code" data-type="Function">basicConfig</a></td>
+    <td><span>Do basic configuration for the logging system.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.html#captureWarnings" class="code" data-type="Function">captureWarnings</a></td>
+    <td><span>If capture is true, redirect all warnings to the logging package. If capture is False, ensure that warnings are not redirected to logging but to their original destinations.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.html#critical" class="code" data-type="Function">critical</a></td>
+    <td><span>Log a message with severity 'CRITICAL' on the root logger. If the logger has no handlers, call basicConfig() to add a console handler with a pre-defined format.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.html#currentframe" class="code" data-type="Function">currentframe</a></td>
+    <td><span>Return the frame object for the caller's stack frame.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.html#debug" class="code" data-type="Function">debug</a></td>
+    <td><span>Log a message with severity 'DEBUG' on the root logger. If the logger has no handlers, call basicConfig() to add a console handler with a pre-defined format.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.html#disable" class="code" data-type="Function">disable</a></td>
+    <td><span>Disable all logging calls of severity 'level' and below.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.html#error" class="code" data-type="Function">error</a></td>
+    <td><span>Log a message with severity 'ERROR' on the root logger. If the logger has no handlers, call basicConfig() to add a console handler with a pre-defined format.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.html#exception" class="code" data-type="Function">exception</a></td>
+    <td><span>Log a message with severity 'ERROR' on the root logger, with exception information. If the logger has no handlers, basicConfig() is called to add a console handler with a pre-defined format.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.html#fatal" class="code" data-type="Function">fatal</a></td>
+    <td><span>Don't use this function, use critical() instead.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.html#getLevelName" class="code" data-type="Function">getLevelName</a></td>
+    <td><span>Return the textual representation of logging level 'level'.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.html#getLogRecordFactory" class="code" data-type="Function">getLogRecordFactory</a></td>
+    <td><span>Return the factory to be used when instantiating a log record.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.html#getLogger" class="code" data-type="Function">getLogger</a></td>
+    <td><span>Return a logger with the specified name, creating it if necessary.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.html#getLoggerClass" class="code" data-type="Function">getLoggerClass</a></td>
+    <td><span>Return the class to be used when instantiating a logger.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.html#info" class="code" data-type="Function">info</a></td>
+    <td><span>Log a message with severity 'INFO' on the root logger. If the logger has no handlers, call basicConfig() to add a console handler with a pre-defined format.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.html#log" class="code" data-type="Function">log</a></td>
+    <td><span>Log 'msg % args' with the integer severity 'level' on the root logger. If the logger has no handlers, call basicConfig() to add a console handler with a pre-defined format.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.html#logMultiprocessing" class="code" data-type="Variable">logMultiprocessing</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.html#logProcesses" class="code" data-type="Variable">logProcesses</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.html#logThreads" class="code" data-type="Variable">logThreads</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.html#makeLogRecord" class="code" data-type="Function">makeLogRecord</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.html#raiseExceptions" class="code" data-type="Variable">raiseExceptions</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.html#root" class="code" data-type="Variable">root</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.html#setLogRecordFactory" class="code" data-type="Function">setLogRecordFactory</a></td>
+    <td><span>Set the factory to be used when instantiating a log record.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.html#setLoggerClass" class="code" data-type="Function">setLoggerClass</a></td>
+    <td><span>Set the class to be used when instantiating a logger. The class should define __init__() such that only a name argument is required, and the __init__() should call Logger.__init__()</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.html#shutdown" class="code" data-type="Function">shutdown</a></td>
+    <td><span>Perform any cleanup actions in the logging system (e.g. flushing buffers).</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.html#warn" class="code" data-type="Function">warn</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.html#warning" class="code" data-type="Function">warning</a></td>
+    <td><span>Log a message with severity 'WARNING' on the root logger. If the logger has no handlers, call basicConfig() to add a console handler with a pre-defined format.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.html#_STYLES" class="code" data-type="Variable">_STYLES</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.logging._StderrHandler.html" class="code" data-type="Class">_StderrHandler</a></td>
+    <td><span>This class is like a StreamHandler using sys.stderr, but always uses whatever sys.stderr is currently set to rather than the value of sys.stderr at handler construction time.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.html#_acquireLock" class="code" data-type="Function">_acquireLock</a></td>
+    <td><span>Acquire the module-level lock for serializing access to shared data.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.html#_addHandlerRef" class="code" data-type="Function">_addHandlerRef</a></td>
+    <td><span>Add a handler to the internal cleanup list using a weak reference.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.html#_after_at_fork_child_reinit_locks" class="code" data-type="Function">_after_at_fork_child_reinit_locks</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.html#_at_fork_reinit_lock_weakset" class="code" data-type="Variable">_at_fork_reinit_lock_weakset</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.html#_checkLevel" class="code" data-type="Function">_checkLevel</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.html#_defaultFormatter" class="code" data-type="Variable">_defaultFormatter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.html#_defaultLastResort" class="code" data-type="Variable">_defaultLastResort</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.html#_handlerList" class="code" data-type="Variable">_handlerList</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.html#_handlers" class="code" data-type="Variable">_handlers</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.html#_levelToName" class="code" data-type="Variable">_levelToName</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.html#_lock" class="code" data-type="Variable">_lock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.html#_nameToLevel" class="code" data-type="Variable">_nameToLevel</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.html#_register_at_fork_reinit_lock" class="code" data-type="Function">_register_at_fork_reinit_lock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.html#_releaseLock" class="code" data-type="Function">_releaseLock</a></td>
+    <td><span>Release the module-level lock acquired by calling _acquireLock().</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.html#_removeHandlerRef" class="code" data-type="Function">_removeHandlerRef</a></td>
+    <td><span>Remove a handler reference from the internal cleanup list.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.logging.html#_showwarning" class="code" data-type="Function">_showwarning</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.html#_srcfile" class="code" data-type="Variable">_srcfile</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.html#_startTime" class="code" data-type="Variable">_startTime</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.html#_str_formatter" class="code" data-type="Variable">_str_formatter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.logging.html#_warnings_showwarning" class="code" data-type="Variable">_warnings_showwarning</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.logging.__author__">
+    
+  </a>
+  <a name="__author__">
+    
+  </a>
+  <div class="functionHeader">
+    __author__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.logging.__status__">
+    
+  </a>
+  <a name="__status__">
+    
+  </a>
+  <div class="functionHeader">
+    __status__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.logging.__version__">
+    
+  </a>
+  <a name="__version__">
+    
+  </a>
+  <div class="functionHeader">
+    __version__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.logging.__date__">
+    
+  </a>
+  <a name="__date__">
+    
+  </a>
+  <div class="functionHeader">
+    __date__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.logging._startTime">
+    
+  </a>
+  <a name="_startTime">
+    
+  </a>
+  <div class="functionHeader">
+    _startTime =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.logging.raiseExceptions">
+    
+  </a>
+  <a name="raiseExceptions">
+    
+  </a>
+  <div class="functionHeader">
+    raiseExceptions =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.logging.logThreads">
+    
+  </a>
+  <a name="logThreads">
+    
+  </a>
+  <div class="functionHeader">
+    logThreads =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.logging.logMultiprocessing">
+    
+  </a>
+  <a name="logMultiprocessing">
+    
+  </a>
+  <div class="functionHeader">
+    logMultiprocessing =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.logging.logProcesses">
+    
+  </a>
+  <a name="logProcesses">
+    
+  </a>
+  <div class="functionHeader">
+    logProcesses =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.logging.CRITICAL">
+    
+  </a>
+  <a name="CRITICAL">
+    
+  </a>
+  <div class="functionHeader">
+    CRITICAL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.logging.ERROR">
+    
+  </a>
+  <a name="ERROR">
+    
+  </a>
+  <div class="functionHeader">
+    ERROR =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.logging.WARNING">
+    
+  </a>
+  <a name="WARNING">
+    
+  </a>
+  <div class="functionHeader">
+    WARNING =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.logging.INFO">
+    
+  </a>
+  <a name="INFO">
+    
+  </a>
+  <div class="functionHeader">
+    INFO =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.logging.DEBUG">
+    
+  </a>
+  <a name="DEBUG">
+    
+  </a>
+  <div class="functionHeader">
+    DEBUG =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.logging.NOTSET">
+    
+  </a>
+  <a name="NOTSET">
+    
+  </a>
+  <div class="functionHeader">
+    NOTSET =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.logging._levelToName">
+    
+  </a>
+  <a name="_levelToName">
+    
+  </a>
+  <div class="functionHeader">
+    _levelToName =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.logging._nameToLevel">
+    
+  </a>
+  <a name="_nameToLevel">
+    
+  </a>
+  <div class="functionHeader">
+    _nameToLevel =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.logging.getLevelName">
+    
+  </a>
+  <a name="getLevelName">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getLevelName(level):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the textual representation of logging level 'level'.
+
+If the level is one of the predefined levels (CRITICAL, ERROR, WARNING,
+INFO, DEBUG) then you get the corresponding string. If you have
+associated levels with names using addLevelName then the name you have
+associated with 'level' is returned.
+
+If a numeric value corresponding to one of the defined levels is passed
+in, the corresponding string representation is returned.
+
+Otherwise, the string "Level %s" % level is returned.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.logging.addLevelName">
+    
+  </a>
+  <a name="addLevelName">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    addLevelName(level, levelName):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Associate 'levelName' with 'level'.
+
+This is used when converting levels to text during message formatting.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.logging.currentframe">
+    
+  </a>
+  <a name="currentframe">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    currentframe():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the frame object for the caller's stack frame.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.logging._srcfile">
+    
+  </a>
+  <a name="_srcfile">
+    
+  </a>
+  <div class="functionHeader">
+    _srcfile =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.logging._checkLevel">
+    
+  </a>
+  <a name="_checkLevel">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _checkLevel(level):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.logging._lock">
+    
+  </a>
+  <a name="_lock">
+    
+  </a>
+  <div class="functionHeader">
+    _lock =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.logging._acquireLock">
+    
+  </a>
+  <a name="_acquireLock">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _acquireLock():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Acquire the module-level lock for serializing access to shared data.
+
+This should be released with _releaseLock().</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.logging._releaseLock">
+    
+  </a>
+  <a name="_releaseLock">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _releaseLock():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Release the module-level lock acquired by calling _acquireLock().</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.logging._register_at_fork_reinit_lock">
+    
+  </a>
+  <a name="_register_at_fork_reinit_lock">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _register_at_fork_reinit_lock(instance):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.logging._at_fork_reinit_lock_weakset">
+    
+  </a>
+  <a name="_at_fork_reinit_lock_weakset">
+    
+  </a>
+  <div class="functionHeader">
+    _at_fork_reinit_lock_weakset =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.logging._after_at_fork_child_reinit_locks">
+    
+  </a>
+  <a name="_after_at_fork_child_reinit_locks">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _after_at_fork_child_reinit_locks():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.logging.setLogRecordFactory">
+    
+  </a>
+  <a name="setLogRecordFactory">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setLogRecordFactory(factory):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set the factory to be used when instantiating a log record.
+
+:param factory: A callable which will be called to instantiate
+a log record.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.logging.getLogRecordFactory">
+    
+  </a>
+  <a name="getLogRecordFactory">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getLogRecordFactory():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the factory to be used when instantiating a log record.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.logging.makeLogRecord">
+    
+  </a>
+  <a name="makeLogRecord">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    makeLogRecord(dict):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Make a LogRecord whose attributes are defined by the specified dictionary,
+This function is useful for converting a logging event received over
+a socket connection (which is sent as a dictionary) into a LogRecord
+instance.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.logging._str_formatter">
+    
+  </a>
+  <a name="_str_formatter">
+    
+  </a>
+  <div class="functionHeader">
+    _str_formatter =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.logging.BASIC_FORMAT">
+    
+  </a>
+  <a name="BASIC_FORMAT">
+    
+  </a>
+  <div class="functionHeader">
+    BASIC_FORMAT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.logging._STYLES">
+    
+  </a>
+  <a name="_STYLES">
+    
+  </a>
+  <div class="functionHeader">
+    _STYLES =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.logging._defaultFormatter">
+    
+  </a>
+  <a name="_defaultFormatter">
+    
+  </a>
+  <div class="functionHeader">
+    _defaultFormatter =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.logging._handlers">
+    
+  </a>
+  <a name="_handlers">
+    
+  </a>
+  <div class="functionHeader">
+    _handlers =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.logging._handlerList">
+    
+  </a>
+  <a name="_handlerList">
+    
+  </a>
+  <div class="functionHeader">
+    _handlerList =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.logging._removeHandlerRef">
+    
+  </a>
+  <a name="_removeHandlerRef">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _removeHandlerRef(wr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Remove a handler reference from the internal cleanup list.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.logging._addHandlerRef">
+    
+  </a>
+  <a name="_addHandlerRef">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _addHandlerRef(handler):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Add a handler to the internal cleanup list using a weak reference.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.logging._defaultLastResort">
+    
+  </a>
+  <a name="_defaultLastResort">
+    
+  </a>
+  <div class="functionHeader">
+    _defaultLastResort =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.logging.setLoggerClass">
+    
+  </a>
+  <a name="setLoggerClass">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setLoggerClass(klass):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set the class to be used when instantiating a logger. The class should
+define __init__() such that only a name argument is required, and the
+__init__() should call Logger.__init__()</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.logging.getLoggerClass">
+    
+  </a>
+  <a name="getLoggerClass">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getLoggerClass():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the class to be used when instantiating a logger.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.logging.root">
+    
+  </a>
+  <a name="root">
+    
+  </a>
+  <div class="functionHeader">
+    root =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.logging.basicConfig">
+    
+  </a>
+  <a name="basicConfig">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    basicConfig(**kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Do basic configuration for the logging system.
+
+This function does nothing if the root logger already has handlers
+configured, unless the keyword argument *force* is set to ``True``.
+It is a convenience method intended for use by simple scripts
+to do one-shot configuration of the logging package.
+
+The default behaviour is to create a StreamHandler which writes to
+sys.stderr, set a formatter using the BASIC_FORMAT format string, and
+add the handler to the root logger.
+
+A number of optional keyword arguments may be specified, which can alter
+the default behaviour.
+
+filename  Specifies that a FileHandler be created, using the specified
+          filename, rather than a StreamHandler.
+filemode  Specifies the mode to open the file, if filename is specified
+          (if filemode is unspecified, it defaults to 'a').
+format    Use the specified format string for the handler.
+datefmt   Use the specified date/time format.
+style     If a format string is specified, use this to specify the
+          type of format string (possible values '%', '{', '$', for
+          %-formatting, :meth:`str.format` and :class:`string.Template`
+          - defaults to '%').
+level     Set the root logger level to the specified level.
+stream    Use the specified stream to initialize the StreamHandler. Note
+          that this argument is incompatible with 'filename' - if both
+          are present, 'stream' is ignored.
+handlers  If specified, this should be an iterable of already created
+          handlers, which will be added to the root handler. Any handler
+          in the list which does not have a formatter assigned will be
+          assigned the formatter created in this function.
+force     If this keyword  is specified as true, any existing handlers
+          attached to the root logger are removed and closed, before
+          carrying out the configuration as specified by the other
+          arguments.
+encoding  If specified together with a filename, this encoding is passed to
+          the created FileHandler, causing it to be used when the file is
+          opened.
+errors    If specified together with a filename, this value is passed to the
+          created FileHandler, causing it to be used when the file is
+          opened in text mode. If not specified, the default value is
+          `backslashreplace`.
+
+Note that you could specify a stream created using open(filename, mode)
+rather than passing the filename and mode in. However, it should be
+remembered that StreamHandler does not close its stream (since it may be
+using sys.stdout or sys.stderr), whereas FileHandler closes its stream
+when the handler is closed.
+
+.. versionchanged:: 3.2
+   Added the ``style`` parameter.
+
+.. versionchanged:: 3.3
+   Added the ``handlers`` parameter. A ``ValueError`` is now thrown for
+   incompatible arguments (e.g. ``handlers`` specified together with
+   ``filename``/``filemode``, or ``filename``/``filemode`` specified
+   together with ``stream``, or ``handlers`` specified together with
+   ``stream``.
+
+.. versionchanged:: 3.8
+   Added the ``force`` parameter.
+
+.. versionchanged:: 3.9
+   Added the ``encoding`` and ``errors`` parameters.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.logging.getLogger">
+    
+  </a>
+  <a name="getLogger">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getLogger(name=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a logger with the specified name, creating it if necessary.
+
+If no name is specified, return the root logger.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.logging.critical">
+    
+  </a>
+  <a name="critical">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    critical(msg, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Log a message with severity 'CRITICAL' on the root logger. If the logger
+has no handlers, call basicConfig() to add a console handler with a
+pre-defined format.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.logging.fatal">
+    
+  </a>
+  <a name="fatal">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    fatal(msg, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Don't use this function, use critical() instead.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.logging.error">
+    
+  </a>
+  <a name="error">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    error(msg, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Log a message with severity 'ERROR' on the root logger. If the logger has
+no handlers, call basicConfig() to add a console handler with a pre-defined
+format.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.logging.exception">
+    
+  </a>
+  <a name="exception">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    exception(msg, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Log a message with severity 'ERROR' on the root logger, with exception
+information. If the logger has no handlers, basicConfig() is called to add
+a console handler with a pre-defined format.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.logging.warning">
+    
+  </a>
+  <a name="warning">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    warning(msg, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Log a message with severity 'WARNING' on the root logger. If the logger has
+no handlers, call basicConfig() to add a console handler with a pre-defined
+format.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.logging.warn">
+    
+  </a>
+  <a name="warn">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    warn(msg, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.logging.info">
+    
+  </a>
+  <a name="info">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    info(msg, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Log a message with severity 'INFO' on the root logger. If the logger has
+no handlers, call basicConfig() to add a console handler with a pre-defined
+format.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.logging.debug">
+    
+  </a>
+  <a name="debug">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    debug(msg, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Log a message with severity 'DEBUG' on the root logger. If the logger has
+no handlers, call basicConfig() to add a console handler with a pre-defined
+format.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.logging.log">
+    
+  </a>
+  <a name="log">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    log(level, msg, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Log 'msg % args' with the integer severity 'level' on the root logger. If
+the logger has no handlers, call basicConfig() to add a console handler
+with a pre-defined format.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.logging.disable">
+    
+  </a>
+  <a name="disable">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    disable(level=CRITICAL):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Disable all logging calls of severity 'level' and below.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.logging.shutdown">
+    
+  </a>
+  <a name="shutdown">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    shutdown(handlerList=_handlerList):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Perform any cleanup actions in the logging system (e.g. flushing
+buffers).
+
+Should be called at application exit.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.logging._warnings_showwarning">
+    
+  </a>
+  <a name="_warnings_showwarning">
+    
+  </a>
+  <div class="functionHeader">
+    _warnings_showwarning =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.logging._showwarning">
+    
+  </a>
+  <a name="_showwarning">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _showwarning(message, category, filename, lineno, file=None, line=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Implementation of showwarnings which redirects to logging, which will first
+check to see if the file parameter is None. If a file is specified, it will
+delegate to the original warnings implementation of showwarning. Otherwise,
+it will call warnings.formatwarning and will log the resulting string to a
+warnings logger named "py.warnings" with level logging.WARNING.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.logging.captureWarnings">
+    
+  </a>
+  <a name="captureWarnings">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    captureWarnings(capture):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">If capture is true, redirect all warnings to the logging package.
+If capture is False, ensure that warnings are not redirected to logging
+but to their original destinations.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

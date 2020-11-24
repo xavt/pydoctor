@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.xml.dom.minidom : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.xml.html" class="code" data-type="Package">xml</a>.<a href="Lib.xml.dom.html" class="code" data-type="Package">dom</a>.<a href="Lib.xml.dom.minidom.html" class="code" data-type="Module">minidom</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Simple implementation of the Level 1 DOM.
+
+Namespaces and other minor Level 2 features are also supported.
+
+parse("foo.xml")
+
+parseString("&lt;foo&gt;&lt;bar/&gt;&lt;/foo&gt;")
+
+Todo:
+=====
+ * convenience methods for getting elements and text.
+ * more testing
+ * bring some of the writer and linearizer code into conformance with this
+        interface
+ * SAX 2 namespaces</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id12068">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.minidom.Node.html" class="code" data-type="Class">Node</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.minidom.DocumentFragment.html" class="code" data-type="Class">DocumentFragment</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.minidom.Attr.html" class="code" data-type="Class">Attr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.minidom.NamedNodeMap.html" class="code" data-type="Class">NamedNodeMap</a></td>
+    <td><span>The attribute list is a transient interface to the underlying dictionaries.  Mutations here will change the underlying element's dictionary.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.minidom.TypeInfo.html" class="code" data-type="Class">TypeInfo</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.minidom.Element.html" class="code" data-type="Class">Element</a></td>
+    <td><span class="undocumented">No class0/4 class variables docstring; , 0/10 instance variables docstring; , 4/26 methods documented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.minidom.Childless.html" class="code" data-type="Class">Childless</a></td>
+    <td><span>Mixin that makes childless-ness easy to implement and avoids the complexity of the Node methods that deal with children.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.minidom.ProcessingInstruction.html" class="code" data-type="Class">ProcessingInstruction</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.minidom.CharacterData.html" class="code" data-type="Class">CharacterData</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.minidom.Text.html" class="code" data-type="Class">Text</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.minidom.Comment.html" class="code" data-type="Class">Comment</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.minidom.CDATASection.html" class="code" data-type="Class">CDATASection</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.minidom.ReadOnlySequentialNamedNodeMap.html" class="code" data-type="Class">ReadOnlySequentialNamedNodeMap</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.minidom.Identified.html" class="code" data-type="Class">Identified</a></td>
+    <td><span>Mix-in class that supports the publicId and systemId attributes.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.minidom.DocumentType.html" class="code" data-type="Class">DocumentType</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.minidom.Entity.html" class="code" data-type="Class">Entity</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.minidom.Notation.html" class="code" data-type="Class">Notation</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.minidom.DOMImplementation.html" class="code" data-type="Class">DOMImplementation</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.minidom.ElementInfo.html" class="code" data-type="Class">ElementInfo</a></td>
+    <td><span>Object that represents content-model information for an element.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.minidom.Document.html" class="code" data-type="Class">Document</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.dom.minidom.html#parse" class="code" data-type="Function">parse</a></td>
+    <td><span>Parse a file into a DOM by filename or file object.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.dom.minidom.html#parseString" class="code" data-type="Function">parseString</a></td>
+    <td><span>Parse a file into a DOM from a string.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.dom.minidom.html#getDOMImplementation" class="code" data-type="Function">getDOMImplementation</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xml.dom.minidom.html#_nodeTypes_with_children" class="code" data-type="Variable">_nodeTypes_with_children</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.dom.minidom.html#_append_child" class="code" data-type="Function">_append_child</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.dom.minidom.html#_in_document" class="code" data-type="Function">_in_document</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.dom.minidom.html#_write_data" class="code" data-type="Function">_write_data</a></td>
+    <td><span>Writes datachars to writer.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.dom.minidom.html#_get_elements_by_tagName_helper" class="code" data-type="Function">_get_elements_by_tagName_helper</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.dom.minidom.html#_get_elements_by_tagName_ns_helper" class="code" data-type="Function">_get_elements_by_tagName_ns_helper</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xml.dom.minidom.html#_no_type" class="code" data-type="Variable">_no_type</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.dom.minidom.html#_set_attribute_node" class="code" data-type="Function">_set_attribute_node</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.dom.minidom.html#_get_containing_element" class="code" data-type="Function">_get_containing_element</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.dom.minidom.html#_get_containing_entref" class="code" data-type="Function">_get_containing_entref</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.dom.minidom.html#_clear_id_cache" class="code" data-type="Function">_clear_id_cache</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.dom.minidom.html#_clone_node" class="code" data-type="Function">_clone_node</a></td>
+    <td><span>Clone a node and give it the new owner document. Called by Node.cloneNode and Document.importNode</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.dom.minidom.html#_nssplit" class="code" data-type="Function">_nssplit</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.dom.minidom.html#_do_pulldom_parse" class="code" data-type="Function">_do_pulldom_parse</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable private">
+  
+  <a name="Lib.xml.dom.minidom._nodeTypes_with_children">
+    
+  </a>
+  <a name="_nodeTypes_with_children">
+    
+  </a>
+  <div class="functionHeader">
+    _nodeTypes_with_children =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xml.dom.minidom._append_child">
+    
+  </a>
+  <a name="_append_child">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _append_child(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xml.dom.minidom._in_document">
+    
+  </a>
+  <a name="_in_document">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _in_document(node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xml.dom.minidom._write_data">
+    
+  </a>
+  <a name="_write_data">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _write_data(writer, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Writes datachars to writer.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xml.dom.minidom._get_elements_by_tagName_helper">
+    
+  </a>
+  <a name="_get_elements_by_tagName_helper">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_elements_by_tagName_helper(parent, name, rc):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xml.dom.minidom._get_elements_by_tagName_ns_helper">
+    
+  </a>
+  <a name="_get_elements_by_tagName_ns_helper">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_elements_by_tagName_ns_helper(parent, nsURI, localName, rc):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.xml.dom.minidom._no_type">
+    
+  </a>
+  <a name="_no_type">
+    
+  </a>
+  <div class="functionHeader">
+    _no_type =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xml.dom.minidom._set_attribute_node">
+    
+  </a>
+  <a name="_set_attribute_node">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _set_attribute_node(element, attr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xml.dom.minidom._get_containing_element">
+    
+  </a>
+  <a name="_get_containing_element">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_containing_element(node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xml.dom.minidom._get_containing_entref">
+    
+  </a>
+  <a name="_get_containing_entref">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_containing_entref(node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xml.dom.minidom._clear_id_cache">
+    
+  </a>
+  <a name="_clear_id_cache">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _clear_id_cache(node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xml.dom.minidom._clone_node">
+    
+  </a>
+  <a name="_clone_node">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _clone_node(node, deep, newOwnerDocument):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Clone a node and give it the new owner document.
+Called by Node.cloneNode and Document.importNode</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xml.dom.minidom._nssplit">
+    
+  </a>
+  <a name="_nssplit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _nssplit(qualifiedName):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xml.dom.minidom._do_pulldom_parse">
+    
+  </a>
+  <a name="_do_pulldom_parse">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _do_pulldom_parse(func, args, kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xml.dom.minidom.parse">
+    
+  </a>
+  <a name="parse">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse(file, parser=None, bufsize=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse a file into a DOM by filename or file object.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xml.dom.minidom.parseString">
+    
+  </a>
+  <a name="parseString">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parseString(string, parser=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse a file into a DOM from a string.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xml.dom.minidom.getDOMImplementation">
+    
+  </a>
+  <a name="getDOMImplementation">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getDOMImplementation(features=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

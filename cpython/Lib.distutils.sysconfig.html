@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.distutils.sysconfig : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.distutils.html" class="code" data-type="Package">distutils</a>.<a href="Lib.distutils.sysconfig.html" class="code" data-type="Module">sysconfig</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Provide access to Python's configuration information.  The specific
+configuration variables available depend heavily on the platform and
+configuration.  The values may be retrieved using
+get_config_var(name), and the list of variables is available via
+get_config_vars().keys().  Additional convenience functions are also
+available.
+
+Written by:   Fred L. Drake, Jr.
+Email:        &lt;fdrake@acm.org&gt;</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id994">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.distutils.sysconfig.html#PREFIX" class="code" data-type="Variable">PREFIX</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.distutils.sysconfig.html#EXEC_PREFIX" class="code" data-type="Variable">EXEC_PREFIX</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.distutils.sysconfig.html#BASE_PREFIX" class="code" data-type="Variable">BASE_PREFIX</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.distutils.sysconfig.html#BASE_EXEC_PREFIX" class="code" data-type="Variable">BASE_EXEC_PREFIX</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.distutils.sysconfig.html#project_base" class="code" data-type="Variable">project_base</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.distutils.sysconfig.html#python_build" class="code" data-type="Variable">python_build</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.distutils.sysconfig.html#build_flags" class="code" data-type="Variable">build_flags</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.sysconfig.html#get_python_version" class="code" data-type="Function">get_python_version</a></td>
+    <td><span>Return a string containing the major and minor Python version, leaving off the patchlevel.  Sample return values could be '1.5' or '2.2'.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.sysconfig.html#get_python_inc" class="code" data-type="Function">get_python_inc</a></td>
+    <td><span>Return the directory containing installed Python header files.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.sysconfig.html#get_python_lib" class="code" data-type="Function">get_python_lib</a></td>
+    <td><span>Return the directory containing the Python library (standard or site additions).</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.sysconfig.html#customize_compiler" class="code" data-type="Function">customize_compiler</a></td>
+    <td><span>Do any platform-specific customization of a CCompiler instance.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.sysconfig.html#get_config_h_filename" class="code" data-type="Function">get_config_h_filename</a></td>
+    <td><span>Return full pathname of installed pyconfig.h file.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.sysconfig.html#get_makefile_filename" class="code" data-type="Function">get_makefile_filename</a></td>
+    <td><span>Return full pathname of installed Makefile from the Python build.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.sysconfig.html#parse_config_h" class="code" data-type="Function">parse_config_h</a></td>
+    <td><span>Parse a config.h-style file.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.sysconfig.html#parse_makefile" class="code" data-type="Function">parse_makefile</a></td>
+    <td><span>Parse a Makefile-style file.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.sysconfig.html#expand_makefile_vars" class="code" data-type="Function">expand_makefile_vars</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.sysconfig.html#get_config_vars" class="code" data-type="Function">get_config_vars</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.sysconfig.html#get_config_var" class="code" data-type="Function">get_config_var</a></td>
+    <td><span>Return the value of a single variable using the dictionary returned by 'get_config_vars()'.  Equivalent to get_config_vars().get(name)</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.sysconfig.html#_is_python_source_dir" class="code" data-type="Function">_is_python_source_dir</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.distutils.sysconfig.html#_sys_home" class="code" data-type="Variable">_sys_home</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.sysconfig.html#_fix_pcbuild" class="code" data-type="Function">_fix_pcbuild</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.sysconfig.html#_python_build" class="code" data-type="Function">_python_build</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.distutils.sysconfig.html#_variable_rx" class="code" data-type="Variable">_variable_rx</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.distutils.sysconfig.html#_findvar1_rx" class="code" data-type="Variable">_findvar1_rx</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.distutils.sysconfig.html#_findvar2_rx" class="code" data-type="Variable">_findvar2_rx</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.distutils.sysconfig.html#_config_vars" class="code" data-type="Variable">_config_vars</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.sysconfig.html#_init_posix" class="code" data-type="Function">_init_posix</a></td>
+    <td><span>Initialize the module as appropriate for POSIX systems.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.sysconfig.html#_init_nt" class="code" data-type="Function">_init_nt</a></td>
+    <td><span>Initialize the module as appropriate for NT</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.distutils.sysconfig.PREFIX">
+    
+  </a>
+  <a name="PREFIX">
+    
+  </a>
+  <div class="functionHeader">
+    PREFIX =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.distutils.sysconfig.EXEC_PREFIX">
+    
+  </a>
+  <a name="EXEC_PREFIX">
+    
+  </a>
+  <div class="functionHeader">
+    EXEC_PREFIX =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.distutils.sysconfig.BASE_PREFIX">
+    
+  </a>
+  <a name="BASE_PREFIX">
+    
+  </a>
+  <div class="functionHeader">
+    BASE_PREFIX =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.distutils.sysconfig.BASE_EXEC_PREFIX">
+    
+  </a>
+  <a name="BASE_EXEC_PREFIX">
+    
+  </a>
+  <div class="functionHeader">
+    BASE_EXEC_PREFIX =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.distutils.sysconfig.project_base">
+    
+  </a>
+  <a name="project_base">
+    
+  </a>
+  <div class="functionHeader">
+    project_base =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.distutils.sysconfig._is_python_source_dir">
+    
+  </a>
+  <a name="_is_python_source_dir">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _is_python_source_dir(d):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.distutils.sysconfig._sys_home">
+    
+  </a>
+  <a name="_sys_home">
+    
+  </a>
+  <div class="functionHeader">
+    _sys_home =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.distutils.sysconfig._fix_pcbuild">
+    
+  </a>
+  <a name="_fix_pcbuild">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _fix_pcbuild(d):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.distutils.sysconfig._python_build">
+    
+  </a>
+  <a name="_python_build">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _python_build():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.distutils.sysconfig.python_build">
+    
+  </a>
+  <a name="python_build">
+    
+  </a>
+  <div class="functionHeader">
+    python_build =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.distutils.sysconfig.build_flags">
+    
+  </a>
+  <a name="build_flags">
+    
+  </a>
+  <div class="functionHeader">
+    build_flags =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.distutils.sysconfig.get_python_version">
+    
+  </a>
+  <a name="get_python_version">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_python_version():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a string containing the major and minor Python version,
+leaving off the patchlevel.  Sample return values could be '1.5'
+or '2.2'.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.distutils.sysconfig.get_python_inc">
+    
+  </a>
+  <a name="get_python_inc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_python_inc(plat_specific=0, prefix=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the directory containing installed Python header files.
+
+If 'plat_specific' is false (the default), this is the path to the
+non-platform-specific header files, i.e. Python.h and so on;
+otherwise, this is the path to platform-specific header files
+(namely pyconfig.h).
+
+If 'prefix' is supplied, use it instead of sys.base_prefix or
+sys.base_exec_prefix -- i.e., ignore 'plat_specific'.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.distutils.sysconfig.get_python_lib">
+    
+  </a>
+  <a name="get_python_lib">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_python_lib(plat_specific=0, standard_lib=0, prefix=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the directory containing the Python library (standard or
+site additions).
+
+If 'plat_specific' is true, return the directory containing
+platform-specific modules, i.e. any module from a non-pure-Python
+module distribution; otherwise, return the platform-shared library
+directory.  If 'standard_lib' is true, return the directory
+containing standard Python library modules; otherwise, return the
+directory for site-specific modules.
+
+If 'prefix' is supplied, use it instead of sys.base_prefix or
+sys.base_exec_prefix -- i.e., ignore 'plat_specific'.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.distutils.sysconfig.customize_compiler">
+    
+  </a>
+  <a name="customize_compiler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    customize_compiler(compiler):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Do any platform-specific customization of a CCompiler instance.
+
+Mainly needed on Unix, so we can plug in the information that
+varies across Unices and is stored in Python's Makefile.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.distutils.sysconfig.get_config_h_filename">
+    
+  </a>
+  <a name="get_config_h_filename">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_config_h_filename():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return full pathname of installed pyconfig.h file.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.distutils.sysconfig.get_makefile_filename">
+    
+  </a>
+  <a name="get_makefile_filename">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_makefile_filename():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return full pathname of installed Makefile from the Python build.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.distutils.sysconfig.parse_config_h">
+    
+  </a>
+  <a name="parse_config_h">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse_config_h(fp, g=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse a config.h-style file.
+
+A dictionary containing name/value pairs is returned.  If an
+optional dictionary is passed in as the second argument, it is
+used instead of a new dictionary.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.distutils.sysconfig._variable_rx">
+    
+  </a>
+  <a name="_variable_rx">
+    
+  </a>
+  <div class="functionHeader">
+    _variable_rx =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.distutils.sysconfig._findvar1_rx">
+    
+  </a>
+  <a name="_findvar1_rx">
+    
+  </a>
+  <div class="functionHeader">
+    _findvar1_rx =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.distutils.sysconfig._findvar2_rx">
+    
+  </a>
+  <a name="_findvar2_rx">
+    
+  </a>
+  <div class="functionHeader">
+    _findvar2_rx =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.distutils.sysconfig.parse_makefile">
+    
+  </a>
+  <a name="parse_makefile">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse_makefile(fn, g=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse a Makefile-style file.
+
+A dictionary containing name/value pairs is returned.  If an
+optional dictionary is passed in as the second argument, it is
+used instead of a new dictionary.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.distutils.sysconfig.expand_makefile_vars">
+    
+  </a>
+  <a name="expand_makefile_vars">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    expand_makefile_vars(s, vars):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Expand Makefile-style variables -- "${foo}" or "$(foo)" -- in
+'string' according to 'vars' (a dictionary mapping variable names to
+values).  Variables not present in 'vars' are silently expanded to the
+empty string.  The variable values in 'vars' should not contain further
+variable expansions; if 'vars' is the output of 'parse_makefile()',
+you're fine.  Returns a variable-expanded version of 's'.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.distutils.sysconfig._config_vars">
+    
+  </a>
+  <a name="_config_vars">
+    
+  </a>
+  <div class="functionHeader">
+    _config_vars =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.distutils.sysconfig._init_posix">
+    
+  </a>
+  <a name="_init_posix">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _init_posix():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Initialize the module as appropriate for POSIX systems.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.distutils.sysconfig._init_nt">
+    
+  </a>
+  <a name="_init_nt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _init_nt():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Initialize the module as appropriate for NT</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.distutils.sysconfig.get_config_vars">
+    
+  </a>
+  <a name="get_config_vars">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_config_vars(*args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">With no arguments, return a dictionary of all configuration
+variables relevant for the current platform.  Generally this includes
+everything needed to build extensions and install both pure modules and
+extensions.  On Unix, this means every variable defined in Python's
+installed Makefile; on Windows it's a much smaller set.
+
+With arguments, return a list of values that result from looking up
+each argument in the configuration variable dictionary.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.distutils.sysconfig.get_config_var">
+    
+  </a>
+  <a name="get_config_var">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_config_var(name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the value of a single variable using the dictionary
+returned by 'get_config_vars()'.  Equivalent to
+get_config_vars().get(name)</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

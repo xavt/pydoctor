@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.typing.IO : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.typing.html" class="code" data-type="Module">typing</a>.<a href="Lib.typing.IO.html" class="code" data-type="Class">IO</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.typing.IO(<span title="Generic[AnyStr]">Generic[AnyStr]</span>):</code></p>
+        <p><a href="classIndex.html#Lib.typing.IO">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Generic base class for TextIO and BinaryIO.
+
+This is an abstract, generic version of the return of open().
+
+NOTE: This does not distinguish between the different possible
+classes (text vs. binary, read vs. write vs. read/write,
+append-only, unbuffered).  The TextIO and BinaryIO subclasses
+below capture the distinctions between text vs. binary, which is
+pervasive in the interface; however we currently do not offer a
+way to track the other distinctions in the type system.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id11602">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.typing.IO.html#__slots__" class="code" data-type="Class Variable">__slots__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.typing.IO.html#mode" class="code" data-type="Method">mode</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.typing.IO.html#name" class="code" data-type="Method">name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.typing.IO.html#close" class="code" data-type="Method">close</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.typing.IO.html#closed" class="code" data-type="Method">closed</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.typing.IO.html#fileno" class="code" data-type="Method">fileno</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.typing.IO.html#flush" class="code" data-type="Method">flush</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.typing.IO.html#isatty" class="code" data-type="Method">isatty</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.typing.IO.html#read" class="code" data-type="Method">read</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.typing.IO.html#readable" class="code" data-type="Method">readable</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.typing.IO.html#readline" class="code" data-type="Method">readline</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.typing.IO.html#readlines" class="code" data-type="Method">readlines</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.typing.IO.html#seek" class="code" data-type="Method">seek</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.typing.IO.html#seekable" class="code" data-type="Method">seekable</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.typing.IO.html#tell" class="code" data-type="Method">tell</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.typing.IO.html#truncate" class="code" data-type="Method">truncate</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.typing.IO.html#writable" class="code" data-type="Method">writable</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.typing.IO.html#write" class="code" data-type="Method">write</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.typing.IO.html#writelines" class="code" data-type="Method">writelines</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.typing.IO.html#__enter__" class="code" data-type="Method">__enter__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.typing.IO.html#__exit__" class="code" data-type="Method">__exit__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.typing.IO.__slots__">
+    
+  </a>
+  <a name="__slots__">
+    
+  </a>
+  <div class="functionHeader">
+    __slots__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Tuple</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.typing.IO.mode">
+    
+  </a>
+  <a name="mode">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />@abstractmethod<br />
+    def
+    mode(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.typing.IO.name">
+    
+  </a>
+  <a name="name">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />@abstractmethod<br />
+    def
+    name(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.typing.IO.close">
+    
+  </a>
+  <a name="close">
+    
+  </a>
+  <div class="functionHeader">
+    @abstractmethod<br />
+    def
+    close(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.typing.IO.closed">
+    
+  </a>
+  <a name="closed">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />@abstractmethod<br />
+    def
+    closed(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.typing.IO.fileno">
+    
+  </a>
+  <a name="fileno">
+    
+  </a>
+  <div class="functionHeader">
+    @abstractmethod<br />
+    def
+    fileno(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.typing.IO.flush">
+    
+  </a>
+  <a name="flush">
+    
+  </a>
+  <div class="functionHeader">
+    @abstractmethod<br />
+    def
+    flush(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.typing.IO.isatty">
+    
+  </a>
+  <a name="isatty">
+    
+  </a>
+  <div class="functionHeader">
+    @abstractmethod<br />
+    def
+    isatty(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.typing.IO.read">
+    
+  </a>
+  <a name="read">
+    
+  </a>
+  <div class="functionHeader">
+    @abstractmethod<br />
+    def
+    read(self, n=(-1)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.typing.IO.readable">
+    
+  </a>
+  <a name="readable">
+    
+  </a>
+  <div class="functionHeader">
+    @abstractmethod<br />
+    def
+    readable(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.typing.IO.readline">
+    
+  </a>
+  <a name="readline">
+    
+  </a>
+  <div class="functionHeader">
+    @abstractmethod<br />
+    def
+    readline(self, limit=(-1)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.typing.IO.readlines">
+    
+  </a>
+  <a name="readlines">
+    
+  </a>
+  <div class="functionHeader">
+    @abstractmethod<br />
+    def
+    readlines(self, hint=(-1)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.typing.IO.seek">
+    
+  </a>
+  <a name="seek">
+    
+  </a>
+  <div class="functionHeader">
+    @abstractmethod<br />
+    def
+    seek(self, offset, whence=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.typing.IO.seekable">
+    
+  </a>
+  <a name="seekable">
+    
+  </a>
+  <div class="functionHeader">
+    @abstractmethod<br />
+    def
+    seekable(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.typing.IO.tell">
+    
+  </a>
+  <a name="tell">
+    
+  </a>
+  <div class="functionHeader">
+    @abstractmethod<br />
+    def
+    tell(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.typing.IO.truncate">
+    
+  </a>
+  <a name="truncate">
+    
+  </a>
+  <div class="functionHeader">
+    @abstractmethod<br />
+    def
+    truncate(self, size=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.typing.IO.writable">
+    
+  </a>
+  <a name="writable">
+    
+  </a>
+  <div class="functionHeader">
+    @abstractmethod<br />
+    def
+    writable(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.typing.IO.write">
+    
+  </a>
+  <a name="write">
+    
+  </a>
+  <div class="functionHeader">
+    @abstractmethod<br />
+    def
+    write(self, s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.typing.IO.writelines">
+    
+  </a>
+  <a name="writelines">
+    
+  </a>
+  <div class="functionHeader">
+    @abstractmethod<br />
+    def
+    writelines(self, lines):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.typing.IO.__enter__">
+    
+  </a>
+  <a name="__enter__">
+    
+  </a>
+  <div class="functionHeader">
+    @abstractmethod<br />
+    def
+    __enter__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.typing.IO.__exit__">
+    
+  </a>
+  <a name="__exit__">
+    
+  </a>
+  <div class="functionHeader">
+    @abstractmethod<br />
+    def
+    __exit__(self, type, value, traceback):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

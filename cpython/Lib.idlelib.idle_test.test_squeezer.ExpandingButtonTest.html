@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.idlelib.idle_test.test_squeezer.ExpandingButtonTest : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.idlelib.html" class="code" data-type="Package">idlelib</a>.<a href="Lib.idlelib.idle_test.html" class="code" data-type="Package">idle_test</a>.<a href="Lib.idlelib.idle_test.test_squeezer.html" class="code" data-type="Module">test_squeezer</a>.<a href="Lib.idlelib.idle_test.test_squeezer.ExpandingButtonTest.html" class="code" data-type="Class">ExpandingButtonTest</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.idlelib.idle_test.test_squeezer.ExpandingButtonTest(<span title="unittest.TestCase">unittest.TestCase</span>):</code></p>
+        <p><a href="classIndex.html#Lib.idlelib.idle_test.test_squeezer.ExpandingButtonTest">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Tests for the ExpandingButton class.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2350">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.idle_test.test_squeezer.ExpandingButtonTest.html#make_mock_squeezer" class="code" data-type="Method">make_mock_squeezer</a></td>
+    <td><span>Helper for tests: Create a mock Squeezer object.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.idle_test.test_squeezer.ExpandingButtonTest.html#test_init" class="code" data-type="Method">test_init</a></td>
+    <td><span>Test the simplest creation of an ExpandingButton.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.idle_test.test_squeezer.ExpandingButtonTest.html#test_expand" class="code" data-type="Method">test_expand</a></td>
+    <td><span>Test the expand event.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.idle_test.test_squeezer.ExpandingButtonTest.html#test_expand_dangerous_oupput" class="code" data-type="Method">test_expand_dangerous_oupput</a></td>
+    <td><span>Test that expanding very long output asks user for confirmation.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.idle_test.test_squeezer.ExpandingButtonTest.html#test_copy" class="code" data-type="Method">test_copy</a></td>
+    <td><span>Test the copy event.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.idle_test.test_squeezer.ExpandingButtonTest.html#test_view" class="code" data-type="Method">test_view</a></td>
+    <td><span>Test the view event.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.idle_test.test_squeezer.ExpandingButtonTest.html#test_rmenu" class="code" data-type="Method">test_rmenu</a></td>
+    <td><span>Test the context menu.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.idlelib.idle_test.test_squeezer.ExpandingButtonTest.make_mock_squeezer">
+    
+  </a>
+  <a name="make_mock_squeezer">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    make_mock_squeezer(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Helper for tests: Create a mock Squeezer object.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.idle_test.test_squeezer.ExpandingButtonTest.test_init">
+    
+  </a>
+  <a name="test_init">
+    
+  </a>
+  <div class="functionHeader">
+    @patch('idlelib.squeezer.Hovertip', autospec=Hovertip)<br />
+    def
+    test_init(self, MockHovertip):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Test the simplest creation of an ExpandingButton.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.idle_test.test_squeezer.ExpandingButtonTest.test_expand">
+    
+  </a>
+  <a name="test_expand">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_expand(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Test the expand event.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.idle_test.test_squeezer.ExpandingButtonTest.test_expand_dangerous_oupput">
+    
+  </a>
+  <a name="test_expand_dangerous_oupput">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_expand_dangerous_oupput(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Test that expanding very long output asks user for confirmation.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.idle_test.test_squeezer.ExpandingButtonTest.test_copy">
+    
+  </a>
+  <a name="test_copy">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_copy(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Test the copy event.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.idle_test.test_squeezer.ExpandingButtonTest.test_view">
+    
+  </a>
+  <a name="test_view">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_view(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Test the view event.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.idle_test.test_squeezer.ExpandingButtonTest.test_rmenu">
+    
+  </a>
+  <a name="test_rmenu">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_rmenu(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Test the context menu.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

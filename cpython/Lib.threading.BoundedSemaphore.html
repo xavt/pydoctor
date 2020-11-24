@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.threading.BoundedSemaphore : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.threading.html" class="code" data-type="Module">threading</a>.<a href="Lib.threading.BoundedSemaphore.html" class="code" data-type="Class">BoundedSemaphore</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.threading.BoundedSemaphore(<a href="Lib.threading.Semaphore.html" class="code" data-type="Class">Semaphore</a>):</code></p>
+        <p><a href="classIndex.html#Lib.threading.BoundedSemaphore">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Implements a bounded semaphore.
+
+A bounded semaphore checks to make sure its current value doesn't exceed its
+initial value. If it does, ValueError is raised. In most situations
+semaphores are used to guard resources with limited capacity.
+
+If the semaphore is released too many times it's a sign of a bug. If not
+given, value defaults to 1.
+
+Like regular semaphores, bounded semaphores manage a counter representing
+the number of release() calls minus the number of acquire() calls, plus an
+initial value. The acquire() method blocks if necessary until it can return
+without making the counter negative. If not given, value defaults to 1.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id10896">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.BoundedSemaphore.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.BoundedSemaphore.html#release" class="code" data-type="Method">release</a></td>
+    <td><span>Release a semaphore, incrementing the internal counter by one or more.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.threading.BoundedSemaphore.html#_initial_value" class="code" data-type="Instance Variable">_initial_value</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.threading.Semaphore.html" class="code" data-type="Class">Semaphore</a>:
+          </p>
+          <table class="children sortable" id="id10897">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.Semaphore.html#acquire" class="code" data-type="Method">acquire</a></td>
+    <td><span>Acquire a semaphore, decrementing the internal counter by one.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.Semaphore.html#__exit__" class="code" data-type="Method">__exit__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.threading.Semaphore.html#_cond" class="code" data-type="Instance Variable">_cond</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.threading.Semaphore.html#_value" class="code" data-type="Instance Variable">_value</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.threading.BoundedSemaphore.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, value=1):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.threading.Semaphore.html#__init__" class="code" data-type="Method">Lib.threading.Semaphore.__init__</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.threading.BoundedSemaphore._initial_value">
+    
+  </a>
+  <a name="_initial_value">
+    
+  </a>
+  <div class="functionHeader">
+    _initial_value =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.threading.BoundedSemaphore.release">
+    
+  </a>
+  <a name="release">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    release(self, n=1):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.threading.Semaphore.html#release" class="code" data-type="Method">Lib.threading.Semaphore.release</a></div>
+    
+    <div><p class="pre">Release a semaphore, incrementing the internal counter by one or more.
+
+When the counter is zero on entry and another thread is waiting for it
+to become larger than zero again, wake up that thread.
+
+If the number of releases exceeds the number of acquires,
+raise a ValueError.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

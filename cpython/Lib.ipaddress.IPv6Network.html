@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.ipaddress.IPv6Network : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.ipaddress.html" class="code" data-type="Module">ipaddress</a>.<a href="Lib.ipaddress.IPv6Network.html" class="code" data-type="Class">IPv6Network</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.ipaddress.IPv6Network(<a href="Lib.ipaddress._BaseV6.html" class="code" data-type="Class">_BaseV6</a>, <a href="Lib.ipaddress._BaseNetwork.html" class="code" data-type="Class">_BaseNetwork</a>):</code></p>
+        <p><a href="classIndex.html#Lib.ipaddress.IPv6Network">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">This class represents and manipulates 128-bit IPv6 networks.
+
+Attributes: [examples for IPv6('2001:db8::1000/124')]
+    .network_address: IPv6Address('2001:db8::1000')
+    .hostmask: IPv6Address('::f')
+    .broadcast_address: IPv6Address('2001:db8::100f')
+    .netmask: IPv6Address('ffff:ffff:ffff:ffff:ffff:ffff:ffff:fff0')
+    .prefixlen: 124</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2645">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress.IPv6Network.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Instantiate a new IPv6 Network object.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.ipaddress.IPv6Network.html#network_address" class="code" data-type="Instance Variable">network_address</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.ipaddress.IPv6Network.html#netmask" class="code" data-type="Instance Variable">netmask</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress.IPv6Network.html#hosts" class="code" data-type="Method">hosts</a></td>
+    <td><span>Generate Iterator over usable hosts in a network.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress.IPv6Network.html#is_site_local" class="code" data-type="Method">is_site_local</a></td>
+    <td><span>Test if the address is reserved for site-local.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.ipaddress.IPv6Network.html#_prefixlen" class="code" data-type="Instance Variable">_prefixlen</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.ipaddress._BaseV6.html" class="code" data-type="Class">_BaseV6</a>:
+          </p>
+          <table class="children sortable" id="id2646">
+  
+  <tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ipaddress._BaseV6.html#__slots__" class="code" data-type="Class Variable">__slots__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseV6.html#max_prefixlen" class="code" data-type="Method">max_prefixlen</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseV6.html#version" class="code" data-type="Method">version</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ipaddress._BaseV6.html#_version" class="code" data-type="Class Variable">_version</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ipaddress._BaseV6.html#_ALL_ONES" class="code" data-type="Class Variable">_ALL_ONES</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ipaddress._BaseV6.html#_HEXTET_COUNT" class="code" data-type="Class Variable">_HEXTET_COUNT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ipaddress._BaseV6.html#_HEX_DIGITS" class="code" data-type="Class Variable">_HEX_DIGITS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ipaddress._BaseV6.html#_netmask_cache" class="code" data-type="Class Variable">_netmask_cache</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.ipaddress._BaseV6.html#_make_netmask" class="code" data-type="Class Method">_make_netmask</a></td>
+    <td><span>Make a (netmask, prefix_len) tuple from the given argument.</span></td>
+  </tr><tr class="baseclassmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.ipaddress._BaseV6.html#_ip_int_from_string" class="code" data-type="Class Method">_ip_int_from_string</a></td>
+    <td><span>Turn an IPv6 ip_str into an integer.</span></td>
+  </tr><tr class="baseclassmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.ipaddress._BaseV6.html#_parse_hextet" class="code" data-type="Class Method">_parse_hextet</a></td>
+    <td><span>Convert an IPv6 hextet string into an integer.</span></td>
+  </tr><tr class="baseclassmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.ipaddress._BaseV6.html#_compress_hextets" class="code" data-type="Class Method">_compress_hextets</a></td>
+    <td><span>Compresses a list of hextets.</span></td>
+  </tr><tr class="baseclassmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.ipaddress._BaseV6.html#_string_from_ip_int" class="code" data-type="Class Method">_string_from_ip_int</a></td>
+    <td><span>Turns a 128-bit integer into hexadecimal notation.</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseV6.html#_explode_shorthand_ip_string" class="code" data-type="Method">_explode_shorthand_ip_string</a></td>
+    <td><span>Expand a shortened IPv6 address.</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseV6.html#_reverse_pointer" class="code" data-type="Method">_reverse_pointer</a></td>
+    <td><span>Return the reverse DNS pointer name for the IPv6 address.</span></td>
+  </tr><tr class="basestaticmethod private">
+    
+    <td>Static Method</td>
+    <td><a href="Lib.ipaddress._BaseV6.html#_split_scope_id" class="code" data-type="Static Method">_split_scope_id</a></td>
+    <td><span>Helper function to parse IPv6 string address with scope id.</span></td>
+  </tr>
+</table>
+          
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.ipaddress._BaseNetwork.html" class="code" data-type="Class">_BaseNetwork</a>:
+          </p>
+          <table class="children sortable" id="id2647">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#__str__" class="code" data-type="Method">__str__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#__iter__" class="code" data-type="Method">__iter__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#__getitem__" class="code" data-type="Method">__getitem__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#__lt__" class="code" data-type="Method">__lt__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#__eq__" class="code" data-type="Method">__eq__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#__hash__" class="code" data-type="Method">__hash__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#__contains__" class="code" data-type="Method">__contains__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#overlaps" class="code" data-type="Method">overlaps</a></td>
+    <td><span>Tell if self is partly contained in other.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#broadcast_address" class="code" data-type="Method">broadcast_address</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#hostmask" class="code" data-type="Method">hostmask</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#with_prefixlen" class="code" data-type="Method">with_prefixlen</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#with_netmask" class="code" data-type="Method">with_netmask</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#with_hostmask" class="code" data-type="Method">with_hostmask</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#num_addresses" class="code" data-type="Method">num_addresses</a></td>
+    <td><span>Number of hosts in the current subnet.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#prefixlen" class="code" data-type="Method">prefixlen</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#address_exclude" class="code" data-type="Method">address_exclude</a></td>
+    <td><span>Remove an address from a larger block.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#compare_networks" class="code" data-type="Method">compare_networks</a></td>
+    <td><span>Compare two IP objects.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#subnets" class="code" data-type="Method">subnets</a></td>
+    <td><span>The subnets which join to make the current subnet.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#supernet" class="code" data-type="Method">supernet</a></td>
+    <td><span>The supernet containing the current network.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#is_multicast" class="code" data-type="Method">is_multicast</a></td>
+    <td><span>Test if the address is reserved for multicast use.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#subnet_of" class="code" data-type="Method">subnet_of</a></td>
+    <td><span>Return True if this network is a subnet of other.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#supernet_of" class="code" data-type="Method">supernet_of</a></td>
+    <td><span>Return True if this network is a supernet of other.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#is_reserved" class="code" data-type="Method">is_reserved</a></td>
+    <td><span>Test if the address is otherwise IETF reserved.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#is_link_local" class="code" data-type="Method">is_link_local</a></td>
+    <td><span>Test if the address is reserved for link-local.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#is_private" class="code" data-type="Method">is_private</a></td>
+    <td><span>Test if this address is allocated for private networks.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#is_global" class="code" data-type="Method">is_global</a></td>
+    <td><span>Test if this address is allocated for public networks.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#is_unspecified" class="code" data-type="Method">is_unspecified</a></td>
+    <td><span>Test if the address is unspecified.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#is_loopback" class="code" data-type="Method">is_loopback</a></td>
+    <td><span>Test if the address is a loopback address.</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#_address_class" class="code" data-type="Method">_address_class</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#_get_networks_key" class="code" data-type="Method">_get_networks_key</a></td>
+    <td><span>Network-only key function.</span></td>
+  </tr><tr class="basestaticmethod private">
+    
+    <td>Static Method</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html#_is_subnet_of" class="code" data-type="Static Method">_is_subnet_of</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.ipaddress._IPAddressBase.html" class="code" data-type="Class">_IPAddressBase</a> (via <a href="Lib.ipaddress._BaseNetwork.html" class="code" data-type="Class">_BaseNetwork</a>):
+          </p>
+          <table class="children sortable" id="id2648">
+  
+  <tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ipaddress._IPAddressBase.html#__slots__" class="code" data-type="Class Variable">__slots__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._IPAddressBase.html#exploded" class="code" data-type="Method">exploded</a></td>
+    <td><span>Return the longhand version of the IP address as a string.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._IPAddressBase.html#compressed" class="code" data-type="Method">compressed</a></td>
+    <td><span>Return the shorthand version of the IP address as a string.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._IPAddressBase.html#reverse_pointer" class="code" data-type="Method">reverse_pointer</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._IPAddressBase.html#version" class="code" data-type="Method">version</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._IPAddressBase.html#__reduce__" class="code" data-type="Method">__reduce__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._IPAddressBase.html#_check_int_address" class="code" data-type="Method">_check_int_address</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.ipaddress._IPAddressBase.html#_check_packed_address" class="code" data-type="Method">_check_packed_address</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.ipaddress._IPAddressBase.html#_ip_int_from_prefix" class="code" data-type="Class Method">_ip_int_from_prefix</a></td>
+    <td><span>Turn the prefix length into a bitwise netmask</span></td>
+  </tr><tr class="baseclassmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.ipaddress._IPAddressBase.html#_prefix_from_ip_int" class="code" data-type="Class Method">_prefix_from_ip_int</a></td>
+    <td><span>Return prefix length from the bitwise netmask.</span></td>
+  </tr><tr class="baseclassmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.ipaddress._IPAddressBase.html#_report_invalid_netmask" class="code" data-type="Class Method">_report_invalid_netmask</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.ipaddress._IPAddressBase.html#_prefix_from_prefix_string" class="code" data-type="Class Method">_prefix_from_prefix_string</a></td>
+    <td><span>Return prefix length from a numeric string</span></td>
+  </tr><tr class="baseclassmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.ipaddress._IPAddressBase.html#_prefix_from_ip_string" class="code" data-type="Class Method">_prefix_from_ip_string</a></td>
+    <td><span>Turn a netmask/hostmask string into a prefix length</span></td>
+  </tr><tr class="baseclassmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.ipaddress._IPAddressBase.html#_split_addr_prefix" class="code" data-type="Class Method">_split_addr_prefix</a></td>
+    <td><span>Helper function to parse address of Network/Interface.</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.ipaddress.IPv6Network.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, address, strict=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Instantiate a new IPv6 Network object.
+
+Args:
+    address: A string or integer representing the IPv6 network or the
+      IP and prefix/netmask.
+      '2001:db8::/128'
+      '2001:db8:0000:0000:0000:0000:0000:0000/128'
+      '2001:db8::'
+      are all functionally the same in IPv6.  That is to say,
+      failing to provide a subnetmask will create an object with
+      a mask of /128.
+
+      Additionally, an integer can be passed, so
+      IPv6Network('2001:db8::') ==
+        IPv6Network(42540766411282592856903984951653826560)
+      or, more generally
+      IPv6Network(int(IPv6Network('2001:db8::'))) ==
+        IPv6Network('2001:db8::')
+
+    strict: A boolean. If true, ensure that we have been passed
+      A true network address, eg, 2001:db8::1000/124 and not an
+      IP address on a network, eg, 2001:db8::1/124.
+
+Raises:
+    AddressValueError: If address isn't a valid IPv6 address.
+    NetmaskValueError: If the netmask isn't valid for
+      an IPv6 address.
+    ValueError: If strict was True and a network address was not
+      supplied.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.ipaddress.IPv6Network.network_address">
+    
+  </a>
+  <a name="network_address">
+    
+  </a>
+  <div class="functionHeader">
+    network_address =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.ipaddress.IPv6Network.netmask">
+    
+  </a>
+  <a name="netmask">
+    
+  </a>
+  <div class="functionHeader">
+    netmask =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.ipaddress.IPv6Network._prefixlen">
+    
+  </a>
+  <a name="_prefixlen">
+    
+  </a>
+  <div class="functionHeader">
+    _prefixlen =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ipaddress.IPv6Network.hosts">
+    
+  </a>
+  <a name="hosts">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    hosts(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.ipaddress._BaseNetwork.html#hosts" class="code" data-type="Method">Lib.ipaddress._BaseNetwork.hosts</a></div>
+    
+    <div><p class="pre">Generate Iterator over usable hosts in a network.
+
+This is like __iter__ except it doesn't return the
+Subnet-Router anycast address.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ipaddress.IPv6Network.is_site_local">
+    
+  </a>
+  <a name="is_site_local">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    is_site_local(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Test if the address is reserved for site-local.
+
+Note that the site-local address space has been deprecated by RFC 3879.
+Use is_private to test if this address is in the space of unique local
+addresses as defined by RFC 4193.
+
+Returns:
+    A boolean, True if the address is reserved per RFC 3513 2.5.6.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

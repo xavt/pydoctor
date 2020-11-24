@@ -1,0 +1,1214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.urllib.request : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.urllib.html" class="code" data-type="Package">urllib</a>.<a href="Lib.urllib.request.html" class="code" data-type="Module">request</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">An extensible library for opening URLs using a variety of protocols
+
+The simplest way to use this module is to call the urlopen function,
+which accepts a string containing a URL or a Request object (described
+below).  It opens the URL and returns the results as file-like
+object; the returned object has some extra methods described below.
+
+The OpenerDirector manages a collection of Handler objects that do
+all the actual work.  Each Handler implements a particular protocol or
+option.  The OpenerDirector is a composite object that invokes the
+Handlers needed to open the requested URL.  For example, the
+HTTPHandler performs HTTP GET and POST requests and deals with
+non-error returns.  The HTTPRedirectHandler automatically deals with
+HTTP 301, 302, 303 and 307 redirect errors, and the HTTPDigestAuthHandler
+deals with digest authentication.
+
+urlopen(url, data=None) -- Basic usage is the same as original
+urllib.  pass the url and optionally data to post to an HTTP URL, and
+get a file-like object back.  One difference is that you can also pass
+a Request instance instead of URL.  Raises a URLError (subclass of
+OSError); for HTTP errors, raises an HTTPError, which can also be
+treated as a valid response.
+
+build_opener -- Function that creates a new OpenerDirector instance.
+Will install the default handlers.  Accepts one or more Handlers as
+arguments, either instances or Handler classes that it will
+instantiate.  If one of the argument is a subclass of the default
+handler, the argument will be installed instead of the default.
+
+install_opener -- Installs a new opener as the default opener.
+
+objects of interest:
+
+OpenerDirector -- Sets up the User Agent as the Python-urllib client and manages
+the Handler classes, while dealing with requests and responses.
+
+Request -- An object that encapsulates the state of a request.  The
+state can be as simple as the URL.  It can also include extra HTTP
+headers, e.g. a User-Agent.
+
+BaseHandler --
+
+internals:
+BaseHandler and parent
+_call_chain conventions
+
+Example usage:
+
+import urllib.request
+
+# set up authentication info
+authinfo = urllib.request.HTTPBasicAuthHandler()
+authinfo.add_password(realm='PDQ Application',
+                      uri='https://mahler:8092/site-updates.py',
+                      user='klem',
+                      passwd='geheim$parole')
+
+proxy_support = urllib.request.ProxyHandler({"http" : "http://ahad-haam:3128"})
+
+# build a new opener that adds authentication and caching FTP handlers
+opener = urllib.request.build_opener(proxy_support, authinfo,
+                                     urllib.request.CacheFTPHandler)
+
+# install it
+urllib.request.install_opener(opener)
+
+f = urllib.request.urlopen('http://www.python.org/')</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id11856">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.request.html#__version__" class="code" data-type="Variable">__version__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.request.html#urlopen" class="code" data-type="Function">urlopen</a></td>
+    <td><span>Open the URL url, which can be either a string or a Request object.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.request.html#install_opener" class="code" data-type="Function">install_opener</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.request.html#urlretrieve" class="code" data-type="Function">urlretrieve</a></td>
+    <td><span>Retrieve a URL into a temporary location on disk.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.request.html#urlcleanup" class="code" data-type="Function">urlcleanup</a></td>
+    <td><span>Clean up temporary files from urlretrieve calls.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.request.html#request_host" class="code" data-type="Function">request_host</a></td>
+    <td><span>Return request-host, as defined by RFC 2965.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.request.Request.html" class="code" data-type="Class">Request</a></td>
+    <td><span class="undocumented">No class0/12 instance variables docstring; , 1/14 methods documented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.request.OpenerDirector.html" class="code" data-type="Class">OpenerDirector</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.request.html#build_opener" class="code" data-type="Function">build_opener</a></td>
+    <td><span>Create an opener object from a list of handlers.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.request.BaseHandler.html" class="code" data-type="Class">BaseHandler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.request.HTTPErrorProcessor.html" class="code" data-type="Class">HTTPErrorProcessor</a></td>
+    <td><span>Process HTTP error responses.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.request.HTTPDefaultErrorHandler.html" class="code" data-type="Class">HTTPDefaultErrorHandler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.request.HTTPRedirectHandler.html" class="code" data-type="Class">HTTPRedirectHandler</a></td>
+    <td><span class="undocumented">No class0/3 class variables docstring; , 1/2 methods documented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.request.ProxyHandler.html" class="code" data-type="Class">ProxyHandler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.request.HTTPPasswordMgr.html" class="code" data-type="Class">HTTPPasswordMgr</a></td>
+    <td><span class="undocumented">No class0/1 instance variables docstring; , 2/5 methods documented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.request.HTTPPasswordMgrWithDefaultRealm.html" class="code" data-type="Class">HTTPPasswordMgrWithDefaultRealm</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.request.HTTPPasswordMgrWithPriorAuth.html" class="code" data-type="Class">HTTPPasswordMgrWithPriorAuth</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.request.AbstractBasicAuthHandler.html" class="code" data-type="Class">AbstractBasicAuthHandler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.request.HTTPBasicAuthHandler.html" class="code" data-type="Class">HTTPBasicAuthHandler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.request.ProxyBasicAuthHandler.html" class="code" data-type="Class">ProxyBasicAuthHandler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.request.AbstractDigestAuthHandler.html" class="code" data-type="Class">AbstractDigestAuthHandler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.request.HTTPDigestAuthHandler.html" class="code" data-type="Class">HTTPDigestAuthHandler</a></td>
+    <td><span>An authentication protocol defined by RFC 2069</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.request.ProxyDigestAuthHandler.html" class="code" data-type="Class">ProxyDigestAuthHandler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.request.AbstractHTTPHandler.html" class="code" data-type="Class">AbstractHTTPHandler</a></td>
+    <td><span class="undocumented">No class0/1 instance variables docstring; , 1/5 methods documented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.request.HTTPHandler.html" class="code" data-type="Class">HTTPHandler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.request.HTTPSHandler.html" class="code" data-type="Class">HTTPSHandler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.request.HTTPCookieProcessor.html" class="code" data-type="Class">HTTPCookieProcessor</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.request.UnknownHandler.html" class="code" data-type="Class">UnknownHandler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.request.html#parse_keqv_list" class="code" data-type="Function">parse_keqv_list</a></td>
+    <td><span>Parse list of key=value strings where keys are not duplicated.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.request.html#parse_http_list" class="code" data-type="Function">parse_http_list</a></td>
+    <td><span>Parse lists as described by RFC 2068 Section 2.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.request.FileHandler.html" class="code" data-type="Class">FileHandler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.request.FTPHandler.html" class="code" data-type="Class">FTPHandler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.request.CacheFTPHandler.html" class="code" data-type="Class">CacheFTPHandler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.request.DataHandler.html" class="code" data-type="Class">DataHandler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.request.html#MAXFTPCACHE" class="code" data-type="Variable">MAXFTPCACHE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.request.html#url2pathname" class="code" data-type="Function">url2pathname</a></td>
+    <td><span>OS-specific conversion from a relative URL of the 'file' scheme to a file system path; not recommended for general use.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.request.html#pathname2url" class="code" data-type="Function">pathname2url</a></td>
+    <td><span>OS-specific conversion from a file system path to a relative URL of the 'file' scheme; not recommended for general use.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.request.html#ftpcache" class="code" data-type="Variable">ftpcache</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.request.URLopener.html" class="code" data-type="Class">URLopener</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.request.FancyURLopener.html" class="code" data-type="Class">FancyURLopener</a></td>
+    <td><span>Derived class with handlers for errors we can handle (perhaps).</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.request.html#localhost" class="code" data-type="Function">localhost</a></td>
+    <td><span>Return the IP address of the magic hostname 'localhost'.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.request.html#thishost" class="code" data-type="Function">thishost</a></td>
+    <td><span>Return the IP addresses of the current host.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.request.html#ftperrors" class="code" data-type="Function">ftperrors</a></td>
+    <td><span>Return the set of errors raised by the FTP class.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.request.html#noheaders" class="code" data-type="Function">noheaders</a></td>
+    <td><span>Return an empty email Message object.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.request.ftpwrapper.html" class="code" data-type="Class">ftpwrapper</a></td>
+    <td><span>Class used by open_ftp() for cache of open FTP connections.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.request.html#getproxies_environment" class="code" data-type="Function">getproxies_environment</a></td>
+    <td><span>Return a dictionary of scheme -&gt; proxy server URL mappings.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.request.html#proxy_bypass_environment" class="code" data-type="Function">proxy_bypass_environment</a></td>
+    <td><span>Test if proxies should not be used for a particular host.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.request.html#proxy_bypass_macosx_sysconf" class="code" data-type="Function">proxy_bypass_macosx_sysconf</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.request.html#getproxies_macosx_sysconf" class="code" data-type="Function">getproxies_macosx_sysconf</a></td>
+    <td><span>Return a dictionary of scheme -&gt; proxy server URL mappings.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.request.html#proxy_bypass" class="code" data-type="Function">proxy_bypass</a></td>
+    <td><span>Return True, if host should be bypassed.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.request.html#getproxies" class="code" data-type="Function">getproxies</a></td>
+    <td><span>Return a dictionary of scheme -&gt; proxy server URL mappings.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.request.html#getproxies_registry" class="code" data-type="Function">getproxies_registry</a></td>
+    <td><span>Return a dictionary of scheme -&gt; proxy server URL mappings.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.request.html#proxy_bypass_registry" class="code" data-type="Function">proxy_bypass_registry</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.request.html#_have_ssl" class="code" data-type="Variable">_have_ssl</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.request.html#_opener" class="code" data-type="Variable">_opener</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.request.html#_url_tempfiles" class="code" data-type="Variable">_url_tempfiles</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.request.html#_cut_port_re" class="code" data-type="Variable">_cut_port_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.request.html#_parse_proxy" class="code" data-type="Function">_parse_proxy</a></td>
+    <td><span>Return (scheme, user, password, host/port) given a URL or an authority.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.request.html#_safe_gethostbyname" class="code" data-type="Function">_safe_gethostbyname</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.request.html#_localhost" class="code" data-type="Variable">_localhost</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.request.html#_thishost" class="code" data-type="Variable">_thishost</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.request.html#_ftperrors" class="code" data-type="Variable">_ftperrors</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.request.html#_noheaders" class="code" data-type="Variable">_noheaders</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.request.html#_proxy_bypass_macosx_sysconf" class="code" data-type="Function">_proxy_bypass_macosx_sysconf</a></td>
+    <td><span>Return True iff this host shouldn't be accessed using a proxy</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable private">
+  
+  <a name="Lib.urllib.request._have_ssl">
+    
+  </a>
+  <a name="_have_ssl">
+    
+  </a>
+  <div class="functionHeader">
+    _have_ssl =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.urllib.request.__version__">
+    
+  </a>
+  <a name="__version__">
+    
+  </a>
+  <div class="functionHeader">
+    __version__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.urllib.request._opener">
+    
+  </a>
+  <a name="_opener">
+    
+  </a>
+  <div class="functionHeader">
+    _opener =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.request.urlopen">
+    
+  </a>
+  <a name="urlopen">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    urlopen(url, data=None, timeout=socket._GLOBAL_DEFAULT_TIMEOUT):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Open the URL url, which can be either a string or a Request object.
+
+*data* must be an object specifying additional data to be sent to
+the server, or None if no such data is needed.  See Request for
+details.
+
+urllib.request module uses HTTP/1.1 and includes a "Connection:close"
+header in its HTTP requests.
+
+The optional *timeout* parameter specifies a timeout in seconds for
+blocking operations like the connection attempt (if not specified, the
+global default timeout setting will be used). This only works for HTTP,
+HTTPS and FTP connections.
+
+If *context* is specified, it must be a ssl.SSLContext instance describing
+the various SSL options. See HTTPSConnection for more details.
+
+The optional *cafile* and *capath* parameters specify a set of trusted CA
+certificates for HTTPS requests. cafile should point to a single file
+containing a bundle of CA certificates, whereas capath should point to a
+directory of hashed certificate files. More information can be found in
+ssl.SSLContext.load_verify_locations().
+
+The *cadefault* parameter is ignored.
+
+
+This function always returns an object which can work as a
+context manager and has the properties url, headers, and status.
+See urllib.response.addinfourl for more detail on these properties.
+
+For HTTP and HTTPS URLs, this function returns a http.client.HTTPResponse
+object slightly modified. In addition to the three new methods above, the
+msg attribute contains the same information as the reason attribute ---
+the reason phrase returned by the server --- instead of the response
+headers as it is specified in the documentation for HTTPResponse.
+
+For FTP, file, and data URLs and requests explicitly handled by legacy
+URLopener and FancyURLopener classes, this function returns a
+urllib.response.addinfourl object.
+
+Note that None may be returned if no handler handles the request (though
+the default installed global OpenerDirector uses UnknownHandler to ensure
+this never happens).
+
+In addition, if proxy settings are detected (for example, when a *_proxy
+environment variable like http_proxy is set), ProxyHandler is default
+installed and makes sure the requests are handled through the proxy.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.request.install_opener">
+    
+  </a>
+  <a name="install_opener">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    install_opener(opener):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.urllib.request._url_tempfiles">
+    
+  </a>
+  <a name="_url_tempfiles">
+    
+  </a>
+  <div class="functionHeader">
+    _url_tempfiles =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.request.urlretrieve">
+    
+  </a>
+  <a name="urlretrieve">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    urlretrieve(url, filename=None, reporthook=None, data=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Retrieve a URL into a temporary location on disk.
+
+Requires a URL argument. If a filename is passed, it is used as
+the temporary file location. The reporthook argument should be
+a callable that accepts a block number, a read size, and the
+total file size of the URL target. The data argument should be
+valid URL encoded data.
+
+If a filename is passed and the URL points to a local resource,
+the result is a copy from local file to new file.
+
+Returns a tuple containing the path to the newly created
+data file as well as the resulting HTTPMessage object.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.request.urlcleanup">
+    
+  </a>
+  <a name="urlcleanup">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    urlcleanup():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Clean up temporary files from urlretrieve calls.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.urllib.request._cut_port_re">
+    
+  </a>
+  <a name="_cut_port_re">
+    
+  </a>
+  <div class="functionHeader">
+    _cut_port_re =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.request.request_host">
+    
+  </a>
+  <a name="request_host">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    request_host(request):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return request-host, as defined by RFC 2965.
+
+Variation from RFC: returned value is lowercased, for convenient
+comparison.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.request.build_opener">
+    
+  </a>
+  <a name="build_opener">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    build_opener(*handlers):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create an opener object from a list of handlers.
+
+The opener will use several default handlers, including support
+for HTTP, FTP and when applicable HTTPS.
+
+If any of the handlers passed as arguments are subclasses of the
+default handlers, the default handlers will not be used.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.urllib.request._parse_proxy">
+    
+  </a>
+  <a name="_parse_proxy">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _parse_proxy(proxy):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return (scheme, user, password, host/port) given a URL or an authority.
+
+If a URL is supplied, it must have an authority (host:port) component.
+According to RFC 3986, having an authority component means the URL must
+have two slashes after the scheme.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.request.parse_keqv_list">
+    
+  </a>
+  <a name="parse_keqv_list">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse_keqv_list(l):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse list of key=value strings where keys are not duplicated.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.request.parse_http_list">
+    
+  </a>
+  <a name="parse_http_list">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse_http_list(s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse lists as described by RFC 2068 Section 2.
+
+In particular, parse comma-separated lists where the elements of
+the list may include quoted-strings.  A quoted-string could
+contain a comma.  A non-quoted string could have quotes in the
+middle.  Neither commas nor quotes count if they are escaped.
+Only double-quotes count, not single-quotes.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.urllib.request._safe_gethostbyname">
+    
+  </a>
+  <a name="_safe_gethostbyname">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _safe_gethostbyname(host):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.urllib.request.MAXFTPCACHE">
+    
+  </a>
+  <a name="MAXFTPCACHE">
+    
+  </a>
+  <div class="functionHeader">
+    MAXFTPCACHE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.request.url2pathname">
+    
+  </a>
+  <a name="url2pathname">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    url2pathname(pathname):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">OS-specific conversion from a relative URL of the 'file' scheme
+to a file system path; not recommended for general use.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.request.pathname2url">
+    
+  </a>
+  <a name="pathname2url">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    pathname2url(pathname):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">OS-specific conversion from a file system path to a relative URL
+of the 'file' scheme; not recommended for general use.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.urllib.request.ftpcache">
+    
+  </a>
+  <a name="ftpcache">
+    
+  </a>
+  <div class="functionHeader">
+    ftpcache =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.urllib.request._localhost">
+    
+  </a>
+  <a name="_localhost">
+    
+  </a>
+  <div class="functionHeader">
+    _localhost =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.request.localhost">
+    
+  </a>
+  <a name="localhost">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    localhost():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the IP address of the magic hostname 'localhost'.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.urllib.request._thishost">
+    
+  </a>
+  <a name="_thishost">
+    
+  </a>
+  <div class="functionHeader">
+    _thishost =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.request.thishost">
+    
+  </a>
+  <a name="thishost">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    thishost():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the IP addresses of the current host.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.urllib.request._ftperrors">
+    
+  </a>
+  <a name="_ftperrors">
+    
+  </a>
+  <div class="functionHeader">
+    _ftperrors =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.request.ftperrors">
+    
+  </a>
+  <a name="ftperrors">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ftperrors():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the set of errors raised by the FTP class.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.urllib.request._noheaders">
+    
+  </a>
+  <a name="_noheaders">
+    
+  </a>
+  <div class="functionHeader">
+    _noheaders =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.request.noheaders">
+    
+  </a>
+  <a name="noheaders">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    noheaders():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return an empty email Message object.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.request.getproxies_environment">
+    
+  </a>
+  <a name="getproxies_environment">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getproxies_environment():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a dictionary of scheme -&gt; proxy server URL mappings.
+
+Scan the environment for variables named &lt;scheme&gt;_proxy;
+this seems to be the standard convention.  If you need a
+different way, you can pass a proxies dictionary to the
+[Fancy]URLopener constructor.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.request.proxy_bypass_environment">
+    
+  </a>
+  <a name="proxy_bypass_environment">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    proxy_bypass_environment(host, proxies=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Test if proxies should not be used for a particular host.
+
+Checks the proxy dict for the value of no_proxy, which should
+be a list of comma separated DNS suffixes, or '*' for all hosts.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.urllib.request._proxy_bypass_macosx_sysconf">
+    
+  </a>
+  <a name="_proxy_bypass_macosx_sysconf">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _proxy_bypass_macosx_sysconf(host, proxy_settings):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True iff this host shouldn't be accessed using a proxy
+
+This function uses the MacOSX framework SystemConfiguration
+to fetch the proxy information.
+
+proxy_settings come from _scproxy._get_proxy_settings or get mocked ie:
+{ 'exclude_simple': bool,
+  'exceptions': ['foo.bar', '*.bar.com', '127.0.0.1', '10.1', '10.0/16']
+}</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.request.proxy_bypass_macosx_sysconf">
+    
+  </a>
+  <a name="proxy_bypass_macosx_sysconf">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    proxy_bypass_macosx_sysconf(host):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.request.getproxies_macosx_sysconf">
+    
+  </a>
+  <a name="getproxies_macosx_sysconf">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getproxies_macosx_sysconf():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a dictionary of scheme -&gt; proxy server URL mappings.
+
+This function uses the MacOSX framework SystemConfiguration
+to fetch the proxy information.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.request.proxy_bypass">
+    
+  </a>
+  <a name="proxy_bypass">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    proxy_bypass(host):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True, if host should be bypassed.
+
+Checks proxy settings gathered from the environment, if specified,
+or the registry.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.request.getproxies">
+    
+  </a>
+  <a name="getproxies">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getproxies():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a dictionary of scheme -&gt; proxy server URL mappings.
+
+Returns settings gathered from the environment, if specified,
+or the registry.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.request.getproxies_registry">
+    
+  </a>
+  <a name="getproxies_registry">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getproxies_registry():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a dictionary of scheme -&gt; proxy server URL mappings.
+
+Win32 uses the registry to store proxies.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.request.proxy_bypass_registry">
+    
+  </a>
+  <a name="proxy_bypass_registry">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    proxy_bypass_registry(host):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

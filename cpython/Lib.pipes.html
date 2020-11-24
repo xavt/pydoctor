@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.pipes : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.pipes.html" class="code" data-type="Module">pipes</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Conversion pipeline templates.
+
+The problem:
+------------
+
+Suppose you have some data that you want to convert to another format,
+such as from GIF image format to PPM image format.  Maybe the
+conversion involves several steps (e.g. piping it through compress or
+uuencode).  Some of the conversion steps may require that their input
+is a disk file, others may be able to read standard input; similar for
+their output.  The input to the entire conversion may also be read
+from a disk file or from an open file, and similar for its output.
+
+The module lets you construct a pipeline template by sticking one or
+more conversion steps together.  It will take care of creating and
+removing temporary files if they are necessary to hold intermediate
+data.  You can then use the template to do conversions from many
+different sources to many different destinations.  The temporary
+file names used are different each time the template is used.
+
+The templates are objects so you can create templates for many
+different conversion steps and store them in a dictionary, for
+instance.
+
+
+Directions:
+-----------
+
+To create a template:
+    t = Template()
+
+To add a conversion step to a template:
+   t.append(command, kind)
+where kind is a string of two characters: the first is '-' if the
+command reads its standard input or 'f' if it requires a file; the
+second likewise for the output. The command must be valid /bin/sh
+syntax.  If input or output files are required, they are passed as
+$IN and $OUT; otherwise, it must be  possible to use the command in
+a pipeline.
+
+To add a conversion step at the beginning:
+   t.prepend(command, kind)
+
+To convert a file to another file using a template:
+  sts = t.copy(infile, outfile)
+If infile or outfile are the empty string, standard input is read or
+standard output is written, respectively.  The return value is the
+exit status of the conversion pipeline.
+
+To open a file for reading or writing through a conversion pipeline:
+   fp = t.open(file, mode)
+where mode is 'r' to read the file, or 'w' to write it -- just like
+for the built-in function open() or for os.popen().
+
+To create a new template object initialized to a given one:
+   t2 = t.clone()</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3383">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pipes.html#FILEIN_FILEOUT" class="code" data-type="Variable">FILEIN_FILEOUT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pipes.html#STDIN_FILEOUT" class="code" data-type="Variable">STDIN_FILEOUT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pipes.html#FILEIN_STDOUT" class="code" data-type="Variable">FILEIN_STDOUT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pipes.html#STDIN_STDOUT" class="code" data-type="Variable">STDIN_STDOUT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pipes.html#SOURCE" class="code" data-type="Variable">SOURCE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pipes.html#SINK" class="code" data-type="Variable">SINK</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pipes.html#stepkinds" class="code" data-type="Variable">stepkinds</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.pipes.Template.html" class="code" data-type="Class">Template</a></td>
+    <td><span>Class representing a pipeline template.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pipes.html#makepipeline" class="code" data-type="Function">makepipeline</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.pipes.FILEIN_FILEOUT">
+    
+  </a>
+  <a name="FILEIN_FILEOUT">
+    
+  </a>
+  <div class="functionHeader">
+    FILEIN_FILEOUT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pipes.STDIN_FILEOUT">
+    
+  </a>
+  <a name="STDIN_FILEOUT">
+    
+  </a>
+  <div class="functionHeader">
+    STDIN_FILEOUT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pipes.FILEIN_STDOUT">
+    
+  </a>
+  <a name="FILEIN_STDOUT">
+    
+  </a>
+  <div class="functionHeader">
+    FILEIN_STDOUT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pipes.STDIN_STDOUT">
+    
+  </a>
+  <a name="STDIN_STDOUT">
+    
+  </a>
+  <div class="functionHeader">
+    STDIN_STDOUT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pipes.SOURCE">
+    
+  </a>
+  <a name="SOURCE">
+    
+  </a>
+  <div class="functionHeader">
+    SOURCE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pipes.SINK">
+    
+  </a>
+  <a name="SINK">
+    
+  </a>
+  <div class="functionHeader">
+    SINK =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pipes.stepkinds">
+    
+  </a>
+  <a name="stepkinds">
+    
+  </a>
+  <div class="functionHeader">
+    stepkinds =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pipes.makepipeline">
+    
+  </a>
+  <a name="makepipeline">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    makepipeline(infile, steps, outfile):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

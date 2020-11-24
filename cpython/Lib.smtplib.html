@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.smtplib : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.smtplib.html" class="code" data-type="Module">smtplib</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">SMTP/ESMTP client class.
+
+This should follow RFC 821 (SMTP), RFC 1869 (ESMTP), RFC 2554 (SMTP
+Authentication) and RFC 2487 (Secure SMTP over TLS).
+
+Notes:
+
+Please remember, when doing ESMTP, that the names of the SMTP service
+extensions are NOT the same thing as the option keywords for the RCPT
+and MAIL commands!
+
+Example:
+
+  &gt;&gt;&gt; import smtplib
+  &gt;&gt;&gt; s=smtplib.SMTP("localhost")
+  &gt;&gt;&gt; print(s.help())
+  This is Sendmail version 8.8.4
+  Topics:
+      HELO    EHLO    MAIL    RCPT    DATA
+      RSET    NOOP    QUIT    HELP    VRFY
+      EXPN    VERB    ETRN    DSN
+  For more info use "HELP &lt;topic&gt;".
+  To report bugs in the implementation send email to
+      sendmail-bugs@sendmail.org.
+  For local information send email to Postmaster at your site.
+  End of HELP info
+  &gt;&gt;&gt; s.putcmd("vrfy","someone@here")
+  &gt;&gt;&gt; s.getreply()
+  (250, "Somebody OverHere &lt;somebody@here.my.org&gt;")
+  &gt;&gt;&gt; s.quit()</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3521">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.smtplib.html#SMTP_PORT" class="code" data-type="Variable">SMTP_PORT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.smtplib.html#SMTP_SSL_PORT" class="code" data-type="Variable">SMTP_SSL_PORT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.smtplib.html#CRLF" class="code" data-type="Variable">CRLF</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.smtplib.html#bCRLF" class="code" data-type="Variable">bCRLF</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.smtplib.html#OLDSTYLE_AUTH" class="code" data-type="Variable">OLDSTYLE_AUTH</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.smtplib.SMTPException.html" class="code" data-type="Class">SMTPException</a></td>
+    <td><span>Base class for all exceptions raised by this module.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.smtplib.SMTPNotSupportedError.html" class="code" data-type="Class">SMTPNotSupportedError</a></td>
+    <td><span>The command or option is not supported by the SMTP server.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.smtplib.SMTPServerDisconnected.html" class="code" data-type="Class">SMTPServerDisconnected</a></td>
+    <td><span>Not connected to any SMTP server.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.smtplib.SMTPResponseException.html" class="code" data-type="Class">SMTPResponseException</a></td>
+    <td><span>Base class for all exceptions that include an SMTP error code.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.smtplib.SMTPSenderRefused.html" class="code" data-type="Class">SMTPSenderRefused</a></td>
+    <td><span>Sender address refused.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.smtplib.SMTPRecipientsRefused.html" class="code" data-type="Class">SMTPRecipientsRefused</a></td>
+    <td><span>All recipient addresses refused.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.smtplib.SMTPDataError.html" class="code" data-type="Class">SMTPDataError</a></td>
+    <td><span>The SMTP server didn't accept the data.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.smtplib.SMTPConnectError.html" class="code" data-type="Class">SMTPConnectError</a></td>
+    <td><span>Error during connection establishment.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.smtplib.SMTPHeloError.html" class="code" data-type="Class">SMTPHeloError</a></td>
+    <td><span>The server refused our HELO reply.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.smtplib.SMTPAuthenticationError.html" class="code" data-type="Class">SMTPAuthenticationError</a></td>
+    <td><span>Authentication error.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.smtplib.html#quoteaddr" class="code" data-type="Function">quoteaddr</a></td>
+    <td><span>Quote a subset of the email addresses defined by RFC 821.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.smtplib.html#quotedata" class="code" data-type="Function">quotedata</a></td>
+    <td><span>Quote data for email.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.smtplib.SMTP.html" class="code" data-type="Class">SMTP</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.smtplib.SMTP_SSL.html" class="code" data-type="Class">SMTP_SSL</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.smtplib.html#LMTP_PORT" class="code" data-type="Variable">LMTP_PORT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.smtplib.LMTP.html" class="code" data-type="Class">LMTP</a></td>
+    <td><span>LMTP - Local Mail Transfer Protocol</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.smtplib.html#prompt" class="code" data-type="Function">prompt</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.smtplib.html#fromaddr" class="code" data-type="Variable">fromaddr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.smtplib.html#toaddrs" class="code" data-type="Variable">toaddrs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.smtplib.html#msg" class="code" data-type="Variable">msg</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.smtplib.html#line" class="code" data-type="Variable">line</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.smtplib.html#server" class="code" data-type="Variable">server</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.smtplib.html#_MAXLINE" class="code" data-type="Variable">_MAXLINE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.smtplib.html#_addr_only" class="code" data-type="Function">_addr_only</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.smtplib.html#_quote_periods" class="code" data-type="Function">_quote_periods</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.smtplib.html#_fix_eols" class="code" data-type="Function">_fix_eols</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.smtplib.html#_have_ssl" class="code" data-type="Variable">_have_ssl</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.smtplib.SMTP_PORT">
+    
+  </a>
+  <a name="SMTP_PORT">
+    
+  </a>
+  <div class="functionHeader">
+    SMTP_PORT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.smtplib.SMTP_SSL_PORT">
+    
+  </a>
+  <a name="SMTP_SSL_PORT">
+    
+  </a>
+  <div class="functionHeader">
+    SMTP_SSL_PORT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.smtplib.CRLF">
+    
+  </a>
+  <a name="CRLF">
+    
+  </a>
+  <div class="functionHeader">
+    CRLF =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.smtplib.bCRLF">
+    
+  </a>
+  <a name="bCRLF">
+    
+  </a>
+  <div class="functionHeader">
+    bCRLF =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.smtplib._MAXLINE">
+    
+  </a>
+  <a name="_MAXLINE">
+    
+  </a>
+  <div class="functionHeader">
+    _MAXLINE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.smtplib.OLDSTYLE_AUTH">
+    
+  </a>
+  <a name="OLDSTYLE_AUTH">
+    
+  </a>
+  <div class="functionHeader">
+    OLDSTYLE_AUTH =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.smtplib.quoteaddr">
+    
+  </a>
+  <a name="quoteaddr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    quoteaddr(addrstring):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Quote a subset of the email addresses defined by RFC 821.
+
+Should be able to handle anything email.utils.parseaddr can handle.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.smtplib._addr_only">
+    
+  </a>
+  <a name="_addr_only">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _addr_only(addrstring):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.smtplib.quotedata">
+    
+  </a>
+  <a name="quotedata">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    quotedata(data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Quote data for email.
+
+Double leading '.', and change Unix newline '\n', or Mac '\r' into
+Internet CRLF end-of-line.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.smtplib._quote_periods">
+    
+  </a>
+  <a name="_quote_periods">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _quote_periods(bindata):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.smtplib._fix_eols">
+    
+  </a>
+  <a name="_fix_eols">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _fix_eols(data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.smtplib._have_ssl">
+    
+  </a>
+  <a name="_have_ssl">
+    
+  </a>
+  <div class="functionHeader">
+    _have_ssl =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.smtplib.LMTP_PORT">
+    
+  </a>
+  <a name="LMTP_PORT">
+    
+  </a>
+  <div class="functionHeader">
+    LMTP_PORT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.smtplib.prompt">
+    
+  </a>
+  <a name="prompt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    prompt(prompt):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.smtplib.fromaddr">
+    
+  </a>
+  <a name="fromaddr">
+    
+  </a>
+  <div class="functionHeader">
+    fromaddr =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.smtplib.toaddrs">
+    
+  </a>
+  <a name="toaddrs">
+    
+  </a>
+  <div class="functionHeader">
+    toaddrs =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.smtplib.msg">
+    
+  </a>
+  <a name="msg">
+    
+  </a>
+  <div class="functionHeader">
+    msg =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.smtplib.line">
+    
+  </a>
+  <a name="line">
+    
+  </a>
+  <div class="functionHeader">
+    line =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.smtplib.server">
+    
+  </a>
+  <a name="server">
+    
+  </a>
+  <div class="functionHeader">
+    server =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

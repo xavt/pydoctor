@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.dbm : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="package"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.dbm.html" class="code" data-type="Package">dbm</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        package documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Generic interface to all dbm clones.
+
+Use
+
+        import dbm
+        d = dbm.open(file, 'w', 0o666)
+
+The returned object is a dbm.gnu, dbm.ndbm or dbm.dumb object, dependent on the
+type of database being opened (determined by the whichdb function) in the case
+of an existing dbm. If the dbm does not exist and the create or new flag ('c'
+or 'n') was specified, the dbm type will be determined by the availability of
+the modules (tested in the above order).
+
+It has the following interface (key and data are strings):
+
+        d[key] = data   # store data at key (may override data at
+                        # existing key)
+        data = d[key]   # retrieve data at key (raise KeyError if no
+                        # such key)
+        del d[key]      # delete data stored at key (raises KeyError
+                        # if no such key)
+        flag = key in d # true if the key exists
+        list = d.keys() # return a list of all existing keys (slow!)
+
+Future versions may change the order in which implementations are
+tested for existence, and add interfaces to other dbm-like
+implementations.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id892">
+  
+  <tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.dbm.dumb.html" class="code" data-type="Module">dumb</a></td>
+    <td><span>A dumb and slow but simple dbm clone.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.dbm.gnu.html" class="code" data-type="Module">gnu</a></td>
+    <td><span>Provide the _gdbm module as a dbm submodule.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.dbm.ndbm%200.html" class="code" data-type="Module">ndbm 0</a></td>
+    <td><span>Provide the _dbm module as a dbm submodule.</span></td>
+  </tr>
+</table>
+        
+
+          <p class="fromInitPy">From the <code>__init__.py</code> module:</p><table class="children sortable" id="id893">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.dbm.error.html" class="code" data-type="Class">error</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.dbm.html#ndbm" class="code" data-type="Variable">ndbm</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.dbm.html#open" class="code" data-type="Function">open</a></td>
+    <td><span>Open or create database at path given by *file*.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.dbm.html#whichdb" class="code" data-type="Function">whichdb</a></td>
+    <td><span>Guess which db package to use to open a db file.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.dbm.html#_defaultmod" class="code" data-type="Variable">_defaultmod</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.dbm.html#_modules" class="code" data-type="Variable">_modules</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.dbm.html#_names" class="code" data-type="Variable">_names</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable private">
+  
+  <a name="Lib.dbm._names">
+    
+  </a>
+  <a name="_names">
+    
+  </a>
+  <div class="functionHeader">
+    _names =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[str]</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.dbm._defaultmod">
+    
+  </a>
+  <a name="_defaultmod">
+    
+  </a>
+  <div class="functionHeader">
+    _defaultmod =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.dbm._modules">
+    
+  </a>
+  <a name="_modules">
+    
+  </a>
+  <div class="functionHeader">
+    _modules =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.dbm.ndbm">
+    
+  </a>
+  <a name="ndbm">
+    
+  </a>
+  <div class="functionHeader">
+    ndbm =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.dbm.open">
+    
+  </a>
+  <a name="open">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    open(file, flag="""r""", mode=438):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Open or create database at path given by *file*.
+
+Optional argument *flag* can be 'r' (default) for read-only access, 'w'
+for read-write access of an existing database, 'c' for read-write access
+to a new or existing database, and 'n' for read-write access to a new
+database.
+
+Note: 'r' and 'w' fail if the database doesn't exist; 'c' creates it
+only if it doesn't exist; and 'n' always creates a new database.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.dbm.whichdb">
+    
+  </a>
+  <a name="whichdb">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    whichdb(filename):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Guess which db package to use to open a db file.
+
+Return values:
+
+- None if the database file can't be read;
+- empty string if the file can be read but can't be recognized
+- the name of the dbm submodule (e.g. "ndbm" or "gnu") if recognized.
+
+Importing the given module may still fail, and opening the
+database using that module may still fail.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

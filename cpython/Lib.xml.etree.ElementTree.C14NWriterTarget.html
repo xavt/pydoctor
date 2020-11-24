@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.xml.etree.ElementTree.C14NWriterTarget : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.xml.html" class="code" data-type="Package">xml</a>.<a href="Lib.xml.etree.html" class="code" data-type="Package">etree</a>.<a href="Lib.xml.etree.ElementTree.html" class="code" data-type="Module">ElementTree</a>.<a href="Lib.xml.etree.ElementTree.C14NWriterTarget.html" class="code" data-type="Class">C14NWriterTarget</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.xml.etree.ElementTree.C14NWriterTarget:</code></p>
+        <p><a href="classIndex.html#Lib.xml.etree.ElementTree.C14NWriterTarget">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Canonicalization writer target for the XMLParser.
+
+Serialises parse events to XML C14N 2.0.
+
+The *write* function is used for writing out the resulting data stream
+as text (not bytes).  To write to a file, open it in text mode with encoding
+"utf-8" and pass its ``.write`` method.
+
+Configuration options:
+
+- *with_comments*: set to true to include comments
+- *strip_text*: set to true to strip whitespace before and after text content
+- *rewrite_prefixes*: set to true to replace namespace prefixes by "n{number}"
+- *qname_aware_tags*: a set of qname aware tag names in which prefixes
+                      should be replaced in text content
+- *qname_aware_attrs*: a set of qname aware attribute names in which prefixes
+                       should be replaced in text content
+- *exclude_attrs*: a set of attribute names that should not be serialised
+- *exclude_tags*: a set of tag names that should not be serialised</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id12141">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.C14NWriterTarget.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.C14NWriterTarget.html#data" class="code" data-type="Method">data</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.C14NWriterTarget.html#start_ns" class="code" data-type="Method">start_ns</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.C14NWriterTarget.html#start" class="code" data-type="Method">start</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.C14NWriterTarget.html#end" class="code" data-type="Method">end</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.C14NWriterTarget.html#comment" class="code" data-type="Method">comment</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.C14NWriterTarget.html#pi" class="code" data-type="Method">pi</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.C14NWriterTarget.html#_write" class="code" data-type="Instance Variable">_write</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.C14NWriterTarget.html#_data" class="code" data-type="Instance Variable">_data</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.C14NWriterTarget.html#_with_comments" class="code" data-type="Instance Variable">_with_comments</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.C14NWriterTarget.html#_strip_text" class="code" data-type="Instance Variable">_strip_text</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.C14NWriterTarget.html#_exclude_attrs" class="code" data-type="Instance Variable">_exclude_attrs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.C14NWriterTarget.html#_exclude_tags" class="code" data-type="Instance Variable">_exclude_tags</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.C14NWriterTarget.html#_rewrite_prefixes" class="code" data-type="Instance Variable">_rewrite_prefixes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.C14NWriterTarget.html#_qname_aware_tags" class="code" data-type="Instance Variable">_qname_aware_tags</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.C14NWriterTarget.html#_find_qname_aware_attrs" class="code" data-type="Instance Variable">_find_qname_aware_attrs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.C14NWriterTarget.html#_declared_ns_stack" class="code" data-type="Instance Variable">_declared_ns_stack</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.C14NWriterTarget.html#_ns_stack" class="code" data-type="Instance Variable">_ns_stack</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.C14NWriterTarget.html#_prefix_map" class="code" data-type="Instance Variable">_prefix_map</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.C14NWriterTarget.html#_preserve_space" class="code" data-type="Instance Variable">_preserve_space</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.C14NWriterTarget.html#_pending_start" class="code" data-type="Instance Variable">_pending_start</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.C14NWriterTarget.html#_root_seen" class="code" data-type="Instance Variable">_root_seen</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.C14NWriterTarget.html#_root_done" class="code" data-type="Instance Variable">_root_done</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.C14NWriterTarget.html#_ignored_depth" class="code" data-type="Instance Variable">_ignored_depth</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.C14NWriterTarget.html#_iter_namespaces" class="code" data-type="Method">_iter_namespaces</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.C14NWriterTarget.html#_resolve_prefix_name" class="code" data-type="Method">_resolve_prefix_name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.C14NWriterTarget.html#_qname" class="code" data-type="Method">_qname</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.C14NWriterTarget.html#_flush" class="code" data-type="Method">_flush</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.C14NWriterTarget.html#_start" class="code" data-type="Method">_start</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.C14NWriterTarget.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, write):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.etree.ElementTree.C14NWriterTarget._write">
+    
+  </a>
+  <a name="_write">
+    
+  </a>
+  <div class="functionHeader">
+    _write =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.etree.ElementTree.C14NWriterTarget._data">
+    
+  </a>
+  <a name="_data">
+    
+  </a>
+  <div class="functionHeader">
+    _data =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.etree.ElementTree.C14NWriterTarget._with_comments">
+    
+  </a>
+  <a name="_with_comments">
+    
+  </a>
+  <div class="functionHeader">
+    _with_comments =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.etree.ElementTree.C14NWriterTarget._strip_text">
+    
+  </a>
+  <a name="_strip_text">
+    
+  </a>
+  <div class="functionHeader">
+    _strip_text =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.etree.ElementTree.C14NWriterTarget._exclude_attrs">
+    
+  </a>
+  <a name="_exclude_attrs">
+    
+  </a>
+  <div class="functionHeader">
+    _exclude_attrs =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.etree.ElementTree.C14NWriterTarget._exclude_tags">
+    
+  </a>
+  <a name="_exclude_tags">
+    
+  </a>
+  <div class="functionHeader">
+    _exclude_tags =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.etree.ElementTree.C14NWriterTarget._rewrite_prefixes">
+    
+  </a>
+  <a name="_rewrite_prefixes">
+    
+  </a>
+  <div class="functionHeader">
+    _rewrite_prefixes =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.etree.ElementTree.C14NWriterTarget._qname_aware_tags">
+    
+  </a>
+  <a name="_qname_aware_tags">
+    
+  </a>
+  <div class="functionHeader">
+    _qname_aware_tags =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.etree.ElementTree.C14NWriterTarget._find_qname_aware_attrs">
+    
+  </a>
+  <a name="_find_qname_aware_attrs">
+    
+  </a>
+  <div class="functionHeader">
+    _find_qname_aware_attrs =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.etree.ElementTree.C14NWriterTarget._declared_ns_stack">
+    
+  </a>
+  <a name="_declared_ns_stack">
+    
+  </a>
+  <div class="functionHeader">
+    _declared_ns_stack =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[List]</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.etree.ElementTree.C14NWriterTarget._ns_stack">
+    
+  </a>
+  <a name="_ns_stack">
+    
+  </a>
+  <div class="functionHeader">
+    _ns_stack =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.etree.ElementTree.C14NWriterTarget._prefix_map">
+    
+  </a>
+  <a name="_prefix_map">
+    
+  </a>
+  <div class="functionHeader">
+    _prefix_map =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.etree.ElementTree.C14NWriterTarget._preserve_space">
+    
+  </a>
+  <a name="_preserve_space">
+    
+  </a>
+  <div class="functionHeader">
+    _preserve_space =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[bool]</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.etree.ElementTree.C14NWriterTarget._pending_start">
+    
+  </a>
+  <a name="_pending_start">
+    
+  </a>
+  <div class="functionHeader">
+    _pending_start =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.etree.ElementTree.C14NWriterTarget._root_seen">
+    
+  </a>
+  <a name="_root_seen">
+    
+  </a>
+  <div class="functionHeader">
+    _root_seen =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.etree.ElementTree.C14NWriterTarget._root_done">
+    
+  </a>
+  <a name="_root_done">
+    
+  </a>
+  <div class="functionHeader">
+    _root_done =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.etree.ElementTree.C14NWriterTarget._ignored_depth">
+    
+  </a>
+  <a name="_ignored_depth">
+    
+  </a>
+  <div class="functionHeader">
+    _ignored_depth =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.xml.etree.ElementTree.C14NWriterTarget._iter_namespaces">
+    
+  </a>
+  <a name="_iter_namespaces">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _iter_namespaces(self, ns_stack, _reversed=reversed):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.xml.etree.ElementTree.C14NWriterTarget._resolve_prefix_name">
+    
+  </a>
+  <a name="_resolve_prefix_name">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _resolve_prefix_name(self, prefixed_name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.xml.etree.ElementTree.C14NWriterTarget._qname">
+    
+  </a>
+  <a name="_qname">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _qname(self, qname, uri=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.C14NWriterTarget.data">
+    
+  </a>
+  <a name="data">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    data(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.xml.etree.ElementTree.C14NWriterTarget._flush">
+    
+  </a>
+  <a name="_flush">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _flush(self, _join_text="""""".join):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.C14NWriterTarget.start_ns">
+    
+  </a>
+  <a name="start_ns">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    start_ns(self, prefix, uri):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.C14NWriterTarget.start">
+    
+  </a>
+  <a name="start">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    start(self, tag, attrs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.xml.etree.ElementTree.C14NWriterTarget._start">
+    
+  </a>
+  <a name="_start">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _start(self, tag, attrs, new_namespaces, qname_text=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.C14NWriterTarget.end">
+    
+  </a>
+  <a name="end">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    end(self, tag):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.C14NWriterTarget.comment">
+    
+  </a>
+  <a name="comment">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    comment(self, text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.C14NWriterTarget.pi">
+    
+  </a>
+  <a name="pi">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    pi(self, target, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

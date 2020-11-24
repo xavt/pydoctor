@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.cmd.Cmd : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.cmd.html" class="code" data-type="Module">cmd</a>.<a href="Lib.cmd.Cmd.html" class="code" data-type="Class">Cmd</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.cmd.Cmd:</code></p>
+        <p><a href="classIndex.html#Lib.cmd.Cmd">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">A simple framework for writing line-oriented command interpreters.
+
+These are often useful for test harnesses, administrative tools, and
+prototypes that will later be wrapped in a more sophisticated interface.
+
+A Cmd instance or subclass instance is a line-oriented interpreter
+framework.  There is no good reason to instantiate Cmd itself; rather,
+it's useful as a superclass of an interpreter class you define yourself
+in order to inherit Cmd's methods and encapsulate action methods.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id499">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.cmd.Cmd.html#ruler" class="code" data-type="Class Variable">ruler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cmd.Cmd.html#lastcmd" class="code" data-type="Instance Variable">lastcmd</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cmd.Cmd.html#intro" class="code" data-type="Instance Variable">intro</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.cmd.Cmd.html#doc_leader" class="code" data-type="Class Variable">doc_leader</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.cmd.Cmd.html#doc_header" class="code" data-type="Class Variable">doc_header</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.cmd.Cmd.html#misc_header" class="code" data-type="Class Variable">misc_header</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.cmd.Cmd.html#undoc_header" class="code" data-type="Class Variable">undoc_header</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.cmd.Cmd.html#nohelp" class="code" data-type="Class Variable">nohelp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.cmd.Cmd.html#use_rawinput" class="code" data-type="Class Variable">use_rawinput</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cmd.Cmd.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Instantiate a line-oriented interpreter framework.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cmd.Cmd.html#stdin" class="code" data-type="Instance Variable">stdin</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cmd.Cmd.html#stdout" class="code" data-type="Instance Variable">stdout</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cmd.Cmd.html#cmdqueue" class="code" data-type="Instance Variable">cmdqueue</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cmd.Cmd.html#completekey" class="code" data-type="Instance Variable">completekey</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cmd.Cmd.html#cmdloop" class="code" data-type="Method">cmdloop</a></td>
+    <td><span>Repeatedly issue a prompt, accept input, parse an initial prefix off the received input, and dispatch to action methods, passing them the remainder of the line as argument.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cmd.Cmd.html#old_completer" class="code" data-type="Instance Variable">old_completer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cmd.Cmd.html#precmd" class="code" data-type="Method">precmd</a></td>
+    <td><span>Hook method executed just before the command line is interpreted, but after the input prompt is generated and issued.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cmd.Cmd.html#postcmd" class="code" data-type="Method">postcmd</a></td>
+    <td><span>Hook method executed just after a command dispatch is finished.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cmd.Cmd.html#preloop" class="code" data-type="Method">preloop</a></td>
+    <td><span>Hook method executed once when the cmdloop() method is called.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cmd.Cmd.html#postloop" class="code" data-type="Method">postloop</a></td>
+    <td><span>Hook method executed once when the cmdloop() method is about to return.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cmd.Cmd.html#parseline" class="code" data-type="Method">parseline</a></td>
+    <td><span>Parse the line into a command name and a string containing the arguments.  Returns a tuple containing (command, args, line). 'command' and 'args' may be None if the line couldn't be parsed.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cmd.Cmd.html#onecmd" class="code" data-type="Method">onecmd</a></td>
+    <td><span>Interpret the argument as though it had been typed in response to the prompt.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cmd.Cmd.html#emptyline" class="code" data-type="Method">emptyline</a></td>
+    <td><span>Called when an empty line is entered in response to the prompt.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cmd.Cmd.html#default" class="code" data-type="Method">default</a></td>
+    <td><span>Called on an input line when the command prefix is not recognized.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cmd.Cmd.html#completedefault" class="code" data-type="Method">completedefault</a></td>
+    <td><span>Method called to complete an input line when no command-specific complete_*() method is available.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cmd.Cmd.html#completenames" class="code" data-type="Method">completenames</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cmd.Cmd.html#complete" class="code" data-type="Method">complete</a></td>
+    <td><span>Return the next possible completion for 'text'.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cmd.Cmd.html#completion_matches" class="code" data-type="Instance Variable">completion_matches</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cmd.Cmd.html#get_names" class="code" data-type="Method">get_names</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cmd.Cmd.html#complete_help" class="code" data-type="Method">complete_help</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cmd.Cmd.html#do_help" class="code" data-type="Method">do_help</a></td>
+    <td><span>List available commands with "help" or detailed help with "help cmd".</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cmd.Cmd.html#print_topics" class="code" data-type="Method">print_topics</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cmd.Cmd.html#columnize" class="code" data-type="Method">columnize</a></td>
+    <td><span>Display a list of strings as a compact set of columns.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.cmd.Cmd.ruler">
+    
+  </a>
+  <a name="ruler">
+    
+  </a>
+  <div class="functionHeader">
+    ruler =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.cmd.Cmd.lastcmd">
+    
+  </a>
+  <a name="lastcmd">
+    
+  </a>
+  <div class="functionHeader">
+    lastcmd =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.cmd.Cmd.intro">
+    
+  </a>
+  <a name="intro">
+    
+  </a>
+  <div class="functionHeader">
+    intro =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.cmd.Cmd.doc_leader">
+    
+  </a>
+  <a name="doc_leader">
+    
+  </a>
+  <div class="functionHeader">
+    doc_leader =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.cmd.Cmd.doc_header">
+    
+  </a>
+  <a name="doc_header">
+    
+  </a>
+  <div class="functionHeader">
+    doc_header =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.cmd.Cmd.misc_header">
+    
+  </a>
+  <a name="misc_header">
+    
+  </a>
+  <div class="functionHeader">
+    misc_header =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.cmd.Cmd.undoc_header">
+    
+  </a>
+  <a name="undoc_header">
+    
+  </a>
+  <div class="functionHeader">
+    undoc_header =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.cmd.Cmd.nohelp">
+    
+  </a>
+  <a name="nohelp">
+    
+  </a>
+  <div class="functionHeader">
+    nohelp =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.cmd.Cmd.use_rawinput">
+    
+  </a>
+  <a name="use_rawinput">
+    
+  </a>
+  <div class="functionHeader">
+    use_rawinput =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cmd.Cmd.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, completekey="""tab""", stdin=None, stdout=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Instantiate a line-oriented interpreter framework.
+
+The optional argument 'completekey' is the readline name of a
+completion key; it defaults to the Tab key. If completekey is
+not None and the readline module is available, command completion
+is done automatically. The optional arguments stdin and stdout
+specify alternate input and output file objects; if not specified,
+sys.stdin and sys.stdout are used.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.cmd.Cmd.stdin">
+    
+  </a>
+  <a name="stdin">
+    
+  </a>
+  <div class="functionHeader">
+    stdin =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.cmd.Cmd.stdout">
+    
+  </a>
+  <a name="stdout">
+    
+  </a>
+  <div class="functionHeader">
+    stdout =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.cmd.Cmd.cmdqueue">
+    
+  </a>
+  <a name="cmdqueue">
+    
+  </a>
+  <div class="functionHeader">
+    cmdqueue =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.cmd.Cmd.completekey">
+    
+  </a>
+  <a name="completekey">
+    
+  </a>
+  <div class="functionHeader">
+    completekey =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cmd.Cmd.cmdloop">
+    
+  </a>
+  <a name="cmdloop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    cmdloop(self, intro=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Repeatedly issue a prompt, accept input, parse an initial prefix
+off the received input, and dispatch to action methods, passing them
+the remainder of the line as argument.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.cmd.Cmd.old_completer">
+    
+  </a>
+  <a name="old_completer">
+    
+  </a>
+  <div class="functionHeader">
+    old_completer =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cmd.Cmd.precmd">
+    
+  </a>
+  <a name="precmd">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    precmd(self, line):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Hook method executed just before the command line is
+interpreted, but after the input prompt is generated and issued.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cmd.Cmd.postcmd">
+    
+  </a>
+  <a name="postcmd">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    postcmd(self, stop, line):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Hook method executed just after a command dispatch is finished.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cmd.Cmd.preloop">
+    
+  </a>
+  <a name="preloop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    preloop(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Hook method executed once when the cmdloop() method is called.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cmd.Cmd.postloop">
+    
+  </a>
+  <a name="postloop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    postloop(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Hook method executed once when the cmdloop() method is about to
+return.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cmd.Cmd.parseline">
+    
+  </a>
+  <a name="parseline">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parseline(self, line):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse the line into a command name and a string containing
+the arguments.  Returns a tuple containing (command, args, line).
+'command' and 'args' may be None if the line couldn't be parsed.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cmd.Cmd.onecmd">
+    
+  </a>
+  <a name="onecmd">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    onecmd(self, line):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Interpret the argument as though it had been typed in response
+to the prompt.
+
+This may be overridden, but should not normally need to be;
+see the precmd() and postcmd() methods for useful execution hooks.
+The return value is a flag indicating whether interpretation of
+commands by the interpreter should stop.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cmd.Cmd.emptyline">
+    
+  </a>
+  <a name="emptyline">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    emptyline(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Called when an empty line is entered in response to the prompt.
+
+If this method is not overridden, it repeats the last nonempty
+command entered.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cmd.Cmd.default">
+    
+  </a>
+  <a name="default">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    default(self, line):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Called on an input line when the command prefix is not recognized.
+
+If this method is not overridden, it prints an error message and
+returns.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cmd.Cmd.completedefault">
+    
+  </a>
+  <a name="completedefault">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    completedefault(self, *ignored):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Method called to complete an input line when no command-specific
+complete_*() method is available.
+
+By default, it returns an empty list.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cmd.Cmd.completenames">
+    
+  </a>
+  <a name="completenames">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    completenames(self, text, *ignored):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cmd.Cmd.complete">
+    
+  </a>
+  <a name="complete">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    complete(self, text, state):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the next possible completion for 'text'.
+
+If a command has not been entered, then complete against command list.
+Otherwise try to call complete_&lt;command&gt; to get list of completions.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.cmd.Cmd.completion_matches">
+    
+  </a>
+  <a name="completion_matches">
+    
+  </a>
+  <div class="functionHeader">
+    completion_matches =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cmd.Cmd.get_names">
+    
+  </a>
+  <a name="get_names">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_names(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cmd.Cmd.complete_help">
+    
+  </a>
+  <a name="complete_help">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    complete_help(self, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cmd.Cmd.do_help">
+    
+  </a>
+  <a name="do_help">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    do_help(self, arg):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">List available commands with "help" or detailed help with "help cmd".</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cmd.Cmd.print_topics">
+    
+  </a>
+  <a name="print_topics">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    print_topics(self, header, cmds, cmdlen, maxcol):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cmd.Cmd.columnize">
+    
+  </a>
+  <a name="columnize">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    columnize(self, list, displaywidth=80):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Display a list of strings as a compact set of columns.
+
+Each column is only as wide as necessary.
+Columns are separated by two spaces (one was not legible enough).</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

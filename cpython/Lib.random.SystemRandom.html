@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.random.SystemRandom : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.random.html" class="code" data-type="Module">random</a>.<a href="Lib.random.SystemRandom.html" class="code" data-type="Class">SystemRandom</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.random.SystemRandom(<a href="Lib.random.Random.html" class="code" data-type="Class">Random</a>):</code></p>
+        <p><a href="classIndex.html#Lib.random.SystemRandom">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Alternate random number generator using sources provided
+by the operating system (such as /dev/urandom on Unix or
+CryptGenRandom on Windows).
+
+ Not available on all systems (see os.urandom() for details).</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3457">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.SystemRandom.html#random" class="code" data-type="Method">random</a></td>
+    <td><span>Get the next random number in the range [0.0, 1.0).</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.SystemRandom.html#getrandbits" class="code" data-type="Method">getrandbits</a></td>
+    <td><span>getrandbits(k) -&gt; x.  Generates an int with k random bits.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.SystemRandom.html#randbytes" class="code" data-type="Method">randbytes</a></td>
+    <td><span>Generate n random bytes.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.SystemRandom.html#seed" class="code" data-type="Method">seed</a></td>
+    <td><span>Stub method.  Not used for a system random number generator.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.SystemRandom.html#_notimplemented" class="code" data-type="Method">_notimplemented</a></td>
+    <td><span>Method should not be called for a system random number generator.</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.random.Random.html" class="code" data-type="Class">Random</a>:
+          </p>
+          <table class="children sortable" id="id3458">
+  
+  <tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.random.Random.html#VERSION" class="code" data-type="Class Variable">VERSION</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Initialize an instance.</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.random.Random.html#gauss_next" class="code" data-type="Instance Variable">gauss_next</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#getstate" class="code" data-type="Method">getstate</a></td>
+    <td><span>Return internal state; can be passed to setstate() later.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#setstate" class="code" data-type="Method">setstate</a></td>
+    <td><span>Restore internal state from object returned by getstate().</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#__getstate__" class="code" data-type="Method">__getstate__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#__setstate__" class="code" data-type="Method">__setstate__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#__reduce__" class="code" data-type="Method">__reduce__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#__init_subclass__" class="code" data-type="Method">__init_subclass__</a></td>
+    <td><span>Control how subclasses generate random integers.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#randrange" class="code" data-type="Method">randrange</a></td>
+    <td><span>Choose a random item from range(start, stop[, step]).</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#randint" class="code" data-type="Method">randint</a></td>
+    <td><span>Return random integer in range [a, b], including both end points.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#choice" class="code" data-type="Method">choice</a></td>
+    <td><span>Choose a random element from a non-empty sequence.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#shuffle" class="code" data-type="Method">shuffle</a></td>
+    <td><span>Shuffle list x in place, and return None.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#sample" class="code" data-type="Method">sample</a></td>
+    <td><span>Chooses k unique random elements from a population sequence or set.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#choices" class="code" data-type="Method">choices</a></td>
+    <td><span>Return a k sized list of population elements chosen with replacement.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#uniform" class="code" data-type="Method">uniform</a></td>
+    <td><span>Get a random number in the range [a, b) or [a, b] depending on rounding.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#triangular" class="code" data-type="Method">triangular</a></td>
+    <td><span>Triangular distribution.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#normalvariate" class="code" data-type="Method">normalvariate</a></td>
+    <td><span>Normal distribution.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#gauss" class="code" data-type="Method">gauss</a></td>
+    <td><span>Gaussian distribution.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#lognormvariate" class="code" data-type="Method">lognormvariate</a></td>
+    <td><span>Log normal distribution.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#expovariate" class="code" data-type="Method">expovariate</a></td>
+    <td><span>Exponential distribution.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#vonmisesvariate" class="code" data-type="Method">vonmisesvariate</a></td>
+    <td><span>Circular data distribution.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#gammavariate" class="code" data-type="Method">gammavariate</a></td>
+    <td><span>Gamma distribution.  Not the gamma function!</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#betavariate" class="code" data-type="Method">betavariate</a></td>
+    <td><span>Beta distribution.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#paretovariate" class="code" data-type="Method">paretovariate</a></td>
+    <td><span>Pareto distribution.  alpha is the shape parameter.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#weibullvariate" class="code" data-type="Method">weibullvariate</a></td>
+    <td><span>Weibull distribution.</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#_randbelow_with_getrandbits" class="code" data-type="Method">_randbelow_with_getrandbits</a></td>
+    <td><span>Return a random int in the range [0,n).  Returns 0 if n==0.</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#_randbelow_without_getrandbits" class="code" data-type="Method">_randbelow_without_getrandbits</a></td>
+    <td><span>Return a random int in the range [0,n).  Returns 0 if n==0.</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.random.SystemRandom.random">
+    
+  </a>
+  <a name="random">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    random(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get the next random number in the range [0.0, 1.0).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.random.SystemRandom.getrandbits">
+    
+  </a>
+  <a name="getrandbits">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getrandbits(self, k):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">getrandbits(k) -&gt; x.  Generates an int with k random bits.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.random.SystemRandom.randbytes">
+    
+  </a>
+  <a name="randbytes">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    randbytes(self, n):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.random.Random.html#randbytes" class="code" data-type="Method">Lib.random.Random.randbytes</a></div>
+    
+    <div><p class="pre">Generate n random bytes.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.random.SystemRandom.seed">
+    
+  </a>
+  <a name="seed">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    seed(self, *args, **kwds):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.random.Random.html#seed" class="code" data-type="Method">Lib.random.Random.seed</a></div>
+    
+    <div><p class="pre">Stub method.  Not used for a system random number generator.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.random.SystemRandom._notimplemented">
+    
+  </a>
+  <a name="_notimplemented">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _notimplemented(self, *args, **kwds):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Method should not be called for a system random number generator.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

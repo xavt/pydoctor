@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.turtledemo.__main__ : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.turtledemo.html" class="code" data-type="Package">turtledemo</a>.<a href="Lib.turtledemo.__main__.html" class="code" data-type="Module">__main__</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">----------------------------------------------
+    turtleDemo - Help
+----------------------------------------------
+
+This document has two sections:
+
+(1) How to use the demo viewer
+(2) How to add your own demos to the demo repository
+
+
+(1) How to use the demo viewer.
+
+Select a demoscript from the example menu.
+The (syntax colored) source code appears in the left
+source code window. IT CANNOT BE EDITED, but ONLY VIEWED!
+
+The demo viewer windows can be resized. The divider between text
+and canvas can be moved by grabbing it with the mouse. The text font
+size can be changed from the menu and with Control/Command '-'/'+'.
+It can also be changed on most systems with Control-mousewheel
+when the mouse is over the text.
+
+Press START button to start the demo.
+Stop execution by pressing the STOP button.
+Clear screen by pressing the CLEAR button.
+Restart by pressing the START button again.
+
+SPECIAL demos, such as clock.py are those which run EVENTDRIVEN.
+
+    Press START button to start the demo.
+
+    - Until the EVENTLOOP is entered everything works
+    as in an ordinary demo script.
+
+    - When the EVENTLOOP is entered, you control the
+    application by using the mouse and/or keys (or it's
+    controlled by some timer events)
+    To stop it you can and must press the STOP button.
+
+    While the EVENTLOOP is running, the examples menu is disabled.
+
+    - Only after having pressed the STOP button, you may
+    restart it or choose another example script.
+
+ * * * * * * * *
+ In some rare situations there may occur interferences/conflicts
+ between events concerning the demo script and those concerning the
+ demo-viewer. (They run in the same process.) Strange behaviour may be
+ the consequence and in the worst case you must close and restart the
+ viewer.
+ * * * * * * * *
+
+
+ (2) How to add your own demos to the demo repository
+
+ - Place the file in the same directory as turtledemo/__main__.py
+   IMPORTANT! When imported, the demo should not modify the system
+   by calling functions in other modules, such as sys, tkinter, or
+   turtle. Global variables should be initialized in main().
+
+ - The code must contain a main() function which will
+   be executed by the viewer (see provided example scripts).
+   It may return a string which will be displayed in the Label below
+   the source code window (when execution has finished.)
+
+ - In order to run mydemo.py by itself, such as during development,
+   add the following at the end of the file:
+
+  if __name__ == '__main__':
+      main()
+      mainloop()  # keep window open
+
+  python -m turtledemo.mydemo  # will then run it
+
+ - If the demo is EVENT DRIVEN, main must return the string
+   "EVENTLOOP". This informs the demo viewer that the script is
+   still running and must be stopped by the user!
+
+   If an "EVENTLOOP" demo runs by itself, as with clock, which uses
+   ontimer, or minimal_hanoi, which loops by recursion, then the
+   code should catch the turtle.Terminator exception that will be
+   raised when the user presses the STOP button.  (Paint is not such
+   a demo; it only acts in response to mouse clicks and movements.)</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id11494">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.turtledemo.__main__.html#demo_dir" class="code" data-type="Variable">demo_dir</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.turtledemo.__main__.html#darwin" class="code" data-type="Variable">darwin</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.turtledemo.__main__.html#STARTUP" class="code" data-type="Variable">STARTUP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.turtledemo.__main__.html#READY" class="code" data-type="Variable">READY</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.turtledemo.__main__.html#RUNNING" class="code" data-type="Variable">RUNNING</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.turtledemo.__main__.html#DONE" class="code" data-type="Variable">DONE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.turtledemo.__main__.html#EVENTDRIVEN" class="code" data-type="Variable">EVENTDRIVEN</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.turtledemo.__main__.html#menufont" class="code" data-type="Variable">menufont</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.turtledemo.__main__.html#btnfont" class="code" data-type="Variable">btnfont</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.turtledemo.__main__.html#txtfont" class="code" data-type="Variable">txtfont</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.turtledemo.__main__.html#MINIMUM_FONT_SIZE" class="code" data-type="Variable">MINIMUM_FONT_SIZE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.turtledemo.__main__.html#MAXIMUM_FONT_SIZE" class="code" data-type="Variable">MAXIMUM_FONT_SIZE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.turtledemo.__main__.html#font_sizes" class="code" data-type="Variable">font_sizes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.turtledemo.__main__.html#getExampleEntries" class="code" data-type="Function">getExampleEntries</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.turtledemo.__main__.html#help_entries" class="code" data-type="Variable">help_entries</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.turtledemo.__main__.DemoWindow.html" class="code" data-type="Class">DemoWindow</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.turtledemo.__main__.html#main" class="code" data-type="Function">main</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.turtledemo.__main__.demo_dir">
+    
+  </a>
+  <a name="demo_dir">
+    
+  </a>
+  <div class="functionHeader">
+    demo_dir =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.turtledemo.__main__.darwin">
+    
+  </a>
+  <a name="darwin">
+    
+  </a>
+  <div class="functionHeader">
+    darwin =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.turtledemo.__main__.STARTUP">
+    
+  </a>
+  <a name="STARTUP">
+    
+  </a>
+  <div class="functionHeader">
+    STARTUP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.turtledemo.__main__.READY">
+    
+  </a>
+  <a name="READY">
+    
+  </a>
+  <div class="functionHeader">
+    READY =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.turtledemo.__main__.RUNNING">
+    
+  </a>
+  <a name="RUNNING">
+    
+  </a>
+  <div class="functionHeader">
+    RUNNING =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.turtledemo.__main__.DONE">
+    
+  </a>
+  <a name="DONE">
+    
+  </a>
+  <div class="functionHeader">
+    DONE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.turtledemo.__main__.EVENTDRIVEN">
+    
+  </a>
+  <a name="EVENTDRIVEN">
+    
+  </a>
+  <div class="functionHeader">
+    EVENTDRIVEN =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.turtledemo.__main__.menufont">
+    
+  </a>
+  <a name="menufont">
+    
+  </a>
+  <div class="functionHeader">
+    menufont =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.turtledemo.__main__.btnfont">
+    
+  </a>
+  <a name="btnfont">
+    
+  </a>
+  <div class="functionHeader">
+    btnfont =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Tuple</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.turtledemo.__main__.txtfont">
+    
+  </a>
+  <a name="txtfont">
+    
+  </a>
+  <div class="functionHeader">
+    txtfont =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.turtledemo.__main__.MINIMUM_FONT_SIZE">
+    
+  </a>
+  <a name="MINIMUM_FONT_SIZE">
+    
+  </a>
+  <div class="functionHeader">
+    MINIMUM_FONT_SIZE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.turtledemo.__main__.MAXIMUM_FONT_SIZE">
+    
+  </a>
+  <a name="MAXIMUM_FONT_SIZE">
+    
+  </a>
+  <div class="functionHeader">
+    MAXIMUM_FONT_SIZE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.turtledemo.__main__.font_sizes">
+    
+  </a>
+  <a name="font_sizes">
+    
+  </a>
+  <div class="functionHeader">
+    font_sizes =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[int]</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.turtledemo.__main__.getExampleEntries">
+    
+  </a>
+  <a name="getExampleEntries">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getExampleEntries():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.turtledemo.__main__.help_entries">
+    
+  </a>
+  <a name="help_entries">
+    
+  </a>
+  <div class="functionHeader">
+    help_entries =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.turtledemo.__main__.main">
+    
+  </a>
+  <a name="main">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    main():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

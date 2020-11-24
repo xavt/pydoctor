@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.pty : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.pty.html" class="code" data-type="Module">pty</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Pseudo terminal utilities.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3420">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pty.html#STDIN_FILENO" class="code" data-type="Variable">STDIN_FILENO</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pty.html#STDOUT_FILENO" class="code" data-type="Variable">STDOUT_FILENO</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pty.html#STDERR_FILENO" class="code" data-type="Variable">STDERR_FILENO</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pty.html#CHILD" class="code" data-type="Variable">CHILD</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pty.html#openpty" class="code" data-type="Function">openpty</a></td>
+    <td><span>openpty() -&gt; (master_fd, slave_fd) Open a pty master/slave pair, using os.openpty() if possible.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pty.html#master_open" class="code" data-type="Function">master_open</a></td>
+    <td><span>master_open() -&gt; (master_fd, slave_name) Open a pty master and return the fd, and the filename of the slave end. Deprecated, use openpty() instead.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pty.html#slave_open" class="code" data-type="Function">slave_open</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pty.html#fork" class="code" data-type="Function">fork</a></td>
+    <td><span>fork() -&gt; (pid, master_fd) Fork and make the child a session leader with a controlling terminal.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pty.html#spawn" class="code" data-type="Function">spawn</a></td>
+    <td><span>Create a spawned process.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pty.html#_open_terminal" class="code" data-type="Function">_open_terminal</a></td>
+    <td><span>Open pty master and return (master_fd, tty_name).</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pty.html#_writen" class="code" data-type="Function">_writen</a></td>
+    <td><span>Write all the data to a descriptor.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pty.html#_read" class="code" data-type="Function">_read</a></td>
+    <td><span>Default read function.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pty.html#_copy" class="code" data-type="Function">_copy</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.pty.STDIN_FILENO">
+    
+  </a>
+  <a name="STDIN_FILENO">
+    
+  </a>
+  <div class="functionHeader">
+    STDIN_FILENO =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pty.STDOUT_FILENO">
+    
+  </a>
+  <a name="STDOUT_FILENO">
+    
+  </a>
+  <div class="functionHeader">
+    STDOUT_FILENO =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pty.STDERR_FILENO">
+    
+  </a>
+  <a name="STDERR_FILENO">
+    
+  </a>
+  <div class="functionHeader">
+    STDERR_FILENO =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pty.CHILD">
+    
+  </a>
+  <a name="CHILD">
+    
+  </a>
+  <div class="functionHeader">
+    CHILD =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pty.openpty">
+    
+  </a>
+  <a name="openpty">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    openpty():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">openpty() -&gt; (master_fd, slave_fd)
+Open a pty master/slave pair, using os.openpty() if possible.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pty.master_open">
+    
+  </a>
+  <a name="master_open">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    master_open():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">master_open() -&gt; (master_fd, slave_name)
+Open a pty master and return the fd, and the filename of the slave end.
+Deprecated, use openpty() instead.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pty._open_terminal">
+    
+  </a>
+  <a name="_open_terminal">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _open_terminal():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Open pty master and return (master_fd, tty_name).</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pty.slave_open">
+    
+  </a>
+  <a name="slave_open">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    slave_open(tty_name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">slave_open(tty_name) -&gt; slave_fd
+Open the pty slave and acquire the controlling terminal, returning
+opened filedescriptor.
+Deprecated, use openpty() instead.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pty.fork">
+    
+  </a>
+  <a name="fork">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    fork():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">fork() -&gt; (pid, master_fd)
+Fork and make the child a session leader with a controlling terminal.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pty._writen">
+    
+  </a>
+  <a name="_writen">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _writen(fd, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Write all the data to a descriptor.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pty._read">
+    
+  </a>
+  <a name="_read">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _read(fd):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Default read function.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pty._copy">
+    
+  </a>
+  <a name="_copy">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _copy(master_fd, master_read=_read, stdin_read=_read):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parent copy loop.
+Copies
+        pty master -&gt; standard output   (master_read)
+        standard input -&gt; pty master    (stdin_read)</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pty.spawn">
+    
+  </a>
+  <a name="spawn">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    spawn(argv, master_read=_read, stdin_read=_read):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create a spawned process.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

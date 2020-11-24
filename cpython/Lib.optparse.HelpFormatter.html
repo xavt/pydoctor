@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.optparse.HelpFormatter : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.optparse.html" class="code" data-type="Module">optparse</a>.<a href="Lib.optparse.HelpFormatter.html" class="code" data-type="Class">HelpFormatter</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.optparse.HelpFormatter:</code></p><p>Known subclasses: <a href="Lib.optparse.IndentedHelpFormatter.html" class="code" data-type="Class">Lib.optparse.IndentedHelpFormatter</a>, <a href="Lib.optparse.TitledHelpFormatter.html" class="code" data-type="Class">Lib.optparse.TitledHelpFormatter</a></p>
+        <p><a href="classIndex.html#Lib.optparse.HelpFormatter">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Abstract base class for formatting option help.  OptionParser
+instances should use one of the HelpFormatter subclasses for
+formatting help; by default IndentedHelpFormatter is used.
+
+Instance attributes:
+  parser : OptionParser
+    the controlling OptionParser instance
+  indent_increment : int
+    the number of columns to indent per nesting level
+  max_help_position : int
+    the maximum starting column for option help text
+  help_position : int
+    the calculated starting column for option help text;
+    initially the same as the maximum
+  width : int
+    total number of columns for output (pass None to constructor for
+    this value to be taken from the $COLUMNS environment variable)
+  level : int
+    current indentation level
+  current_indent : int
+    current indentation level (in columns)
+  help_width : int
+    number of columns available for option help text (calculated)
+  default_tag : str
+    text to replace with each option's default value, "%default"
+    by default.  Set to false value to disable default value expansion.
+  option_strings : { Option : str }
+    maps Option instances to the snippet of help text explaining
+    the syntax of that option, e.g. "-h, --help" or
+    "-fFILE, --file=FILE"
+  _short_opt_fmt : str
+    format string controlling how short options with values are
+    printed in help text.  Must be either "%s%s" ("-fFILE") or
+    "%s %s" ("-f FILE"), because those are the two syntaxes that
+    Optik supports.
+  _long_opt_fmt : str
+    similar but for long options; must be either "%s %s" ("--file FILE")
+    or "%s=%s" ("--file=FILE").</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3321">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.optparse.HelpFormatter.html#NO_DEFAULT_VALUE" class="code" data-type="Class Variable">NO_DEFAULT_VALUE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.HelpFormatter.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.HelpFormatter.html#parser" class="code" data-type="Instance Variable">parser</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.HelpFormatter.html#indent_increment" class="code" data-type="Instance Variable">indent_increment</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.HelpFormatter.html#width" class="code" data-type="Instance Variable">width</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.HelpFormatter.html#help_position" class="code" data-type="Instance Variable">help_position</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.HelpFormatter.html#max_help_position" class="code" data-type="Instance Variable">max_help_position</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.HelpFormatter.html#current_indent" class="code" data-type="Instance Variable">current_indent</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.HelpFormatter.html#level" class="code" data-type="Instance Variable">level</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.HelpFormatter.html#help_width" class="code" data-type="Instance Variable">help_width</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.HelpFormatter.html#short_first" class="code" data-type="Instance Variable">short_first</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.HelpFormatter.html#default_tag" class="code" data-type="Instance Variable">default_tag</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.HelpFormatter.html#option_strings" class="code" data-type="Instance Variable">option_strings</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.HelpFormatter.html#set_parser" class="code" data-type="Method">set_parser</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.HelpFormatter.html#set_short_opt_delimiter" class="code" data-type="Method">set_short_opt_delimiter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.HelpFormatter.html#set_long_opt_delimiter" class="code" data-type="Method">set_long_opt_delimiter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.HelpFormatter.html#indent" class="code" data-type="Method">indent</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.HelpFormatter.html#dedent" class="code" data-type="Method">dedent</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.HelpFormatter.html#format_usage" class="code" data-type="Method">format_usage</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.HelpFormatter.html#format_heading" class="code" data-type="Method">format_heading</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.HelpFormatter.html#format_description" class="code" data-type="Method">format_description</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.HelpFormatter.html#format_epilog" class="code" data-type="Method">format_epilog</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.HelpFormatter.html#expand_default" class="code" data-type="Method">expand_default</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.HelpFormatter.html#format_option" class="code" data-type="Method">format_option</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.HelpFormatter.html#store_option_strings" class="code" data-type="Method">store_option_strings</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.HelpFormatter.html#format_option_strings" class="code" data-type="Method">format_option_strings</a></td>
+    <td><span>Return a comma-separated list of option strings &amp; metavariables.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.HelpFormatter.html#_short_opt_fmt" class="code" data-type="Instance Variable">_short_opt_fmt</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.HelpFormatter.html#_long_opt_fmt" class="code" data-type="Instance Variable">_long_opt_fmt</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.HelpFormatter.html#_format_text" class="code" data-type="Method">_format_text</a></td>
+    <td><span>Format a paragraph of free-form text for inclusion in the help output at the current indentation level.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.optparse.HelpFormatter.NO_DEFAULT_VALUE">
+    
+  </a>
+  <a name="NO_DEFAULT_VALUE">
+    
+  </a>
+  <div class="functionHeader">
+    NO_DEFAULT_VALUE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.HelpFormatter.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, indent_increment, max_help_position, width, short_first):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.optparse.IndentedHelpFormatter.html" class="code" data-type="Class">Lib.optparse.IndentedHelpFormatter</a>, <a href="Lib.optparse.TitledHelpFormatter.html" class="code" data-type="Class">Lib.optparse.TitledHelpFormatter</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.optparse.HelpFormatter.parser">
+    
+  </a>
+  <a name="parser">
+    
+  </a>
+  <div class="functionHeader">
+    parser =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.optparse.HelpFormatter.indent_increment">
+    
+  </a>
+  <a name="indent_increment">
+    
+  </a>
+  <div class="functionHeader">
+    indent_increment =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.optparse.HelpFormatter.width">
+    
+  </a>
+  <a name="width">
+    
+  </a>
+  <div class="functionHeader">
+    width =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.optparse.HelpFormatter.help_position">
+    
+  </a>
+  <a name="help_position">
+    
+  </a>
+  <div class="functionHeader">
+    help_position =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.optparse.HelpFormatter.max_help_position">
+    
+  </a>
+  <a name="max_help_position">
+    
+  </a>
+  <div class="functionHeader">
+    max_help_position =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.optparse.HelpFormatter.current_indent">
+    
+  </a>
+  <a name="current_indent">
+    
+  </a>
+  <div class="functionHeader">
+    current_indent =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.optparse.HelpFormatter.level">
+    
+  </a>
+  <a name="level">
+    
+  </a>
+  <div class="functionHeader">
+    level =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.optparse.HelpFormatter.help_width">
+    
+  </a>
+  <a name="help_width">
+    
+  </a>
+  <div class="functionHeader">
+    help_width =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.optparse.HelpFormatter.short_first">
+    
+  </a>
+  <a name="short_first">
+    
+  </a>
+  <div class="functionHeader">
+    short_first =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.optparse.HelpFormatter.default_tag">
+    
+  </a>
+  <a name="default_tag">
+    
+  </a>
+  <div class="functionHeader">
+    default_tag =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.optparse.HelpFormatter.option_strings">
+    
+  </a>
+  <a name="option_strings">
+    
+  </a>
+  <div class="functionHeader">
+    option_strings =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.optparse.HelpFormatter._short_opt_fmt">
+    
+  </a>
+  <a name="_short_opt_fmt">
+    
+  </a>
+  <div class="functionHeader">
+    _short_opt_fmt =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.optparse.HelpFormatter._long_opt_fmt">
+    
+  </a>
+  <a name="_long_opt_fmt">
+    
+  </a>
+  <div class="functionHeader">
+    _long_opt_fmt =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.HelpFormatter.set_parser">
+    
+  </a>
+  <a name="set_parser">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_parser(self, parser):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.HelpFormatter.set_short_opt_delimiter">
+    
+  </a>
+  <a name="set_short_opt_delimiter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_short_opt_delimiter(self, delim):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.HelpFormatter.set_long_opt_delimiter">
+    
+  </a>
+  <a name="set_long_opt_delimiter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_long_opt_delimiter(self, delim):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.HelpFormatter.indent">
+    
+  </a>
+  <a name="indent">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    indent(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.HelpFormatter.dedent">
+    
+  </a>
+  <a name="dedent">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    dedent(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.HelpFormatter.format_usage">
+    
+  </a>
+  <a name="format_usage">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    format_usage(self, usage):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.optparse.IndentedHelpFormatter.html" class="code" data-type="Class">Lib.optparse.IndentedHelpFormatter</a>, <a href="Lib.optparse.TitledHelpFormatter.html" class="code" data-type="Class">Lib.optparse.TitledHelpFormatter</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.HelpFormatter.format_heading">
+    
+  </a>
+  <a name="format_heading">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    format_heading(self, heading):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.optparse.IndentedHelpFormatter.html" class="code" data-type="Class">Lib.optparse.IndentedHelpFormatter</a>, <a href="Lib.optparse.TitledHelpFormatter.html" class="code" data-type="Class">Lib.optparse.TitledHelpFormatter</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.optparse.HelpFormatter._format_text">
+    
+  </a>
+  <a name="_format_text">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _format_text(self, text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Format a paragraph of free-form text for inclusion in the
+help output at the current indentation level.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.HelpFormatter.format_description">
+    
+  </a>
+  <a name="format_description">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    format_description(self, description):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.HelpFormatter.format_epilog">
+    
+  </a>
+  <a name="format_epilog">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    format_epilog(self, epilog):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.HelpFormatter.expand_default">
+    
+  </a>
+  <a name="expand_default">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    expand_default(self, option):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.HelpFormatter.format_option">
+    
+  </a>
+  <a name="format_option">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    format_option(self, option):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.HelpFormatter.store_option_strings">
+    
+  </a>
+  <a name="store_option_strings">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    store_option_strings(self, parser):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.HelpFormatter.format_option_strings">
+    
+  </a>
+  <a name="format_option_strings">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    format_option_strings(self, option):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a comma-separated list of option strings &amp; metavariables.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.selectors.BaseSelector : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.selectors.html" class="code" data-type="Module">selectors</a>.<a href="Lib.selectors.BaseSelector.html" class="code" data-type="Class">BaseSelector</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.selectors.BaseSelector:</code></p><p>Known subclasses: <a href="Lib.selectors._BaseSelectorImpl.html" class="code" data-type="Class">Lib.selectors._BaseSelectorImpl</a></p>
+        <p><a href="classIndex.html#Lib.selectors.BaseSelector">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Selector abstract base class.
+
+A selector supports registering file objects to be monitored for specific
+I/O events.
+
+A file object is a file descriptor or any object with a `fileno()` method.
+An arbitrary object can be attached to the file object, which can be used
+for example to store context information, a callback, etc.
+
+A selector can use various implementations (select(), poll(), epoll()...)
+depending on the platform. The default `Selector` class uses the most
+efficient implementation on the current platform.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3474">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.selectors.BaseSelector.html#register" class="code" data-type="Method">register</a></td>
+    <td><span>Register a file object.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.selectors.BaseSelector.html#unregister" class="code" data-type="Method">unregister</a></td>
+    <td><span>Unregister a file object.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.selectors.BaseSelector.html#modify" class="code" data-type="Method">modify</a></td>
+    <td><span>Change a registered file object monitored events or attached data.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.selectors.BaseSelector.html#select" class="code" data-type="Method">select</a></td>
+    <td><span>Perform the actual selection, until some monitored file objects are ready or a timeout expires.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.selectors.BaseSelector.html#close" class="code" data-type="Method">close</a></td>
+    <td><span>Close the selector.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.selectors.BaseSelector.html#get_key" class="code" data-type="Method">get_key</a></td>
+    <td><span>Return the key associated to a registered file object.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.selectors.BaseSelector.html#get_map" class="code" data-type="Method">get_map</a></td>
+    <td><span>Return a mapping of file objects to selector keys.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.selectors.BaseSelector.html#__enter__" class="code" data-type="Method">__enter__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.selectors.BaseSelector.html#__exit__" class="code" data-type="Method">__exit__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.selectors.BaseSelector.register">
+    
+  </a>
+  <a name="register">
+    
+  </a>
+  <div class="functionHeader">
+    @abstractmethod<br />
+    def
+    register(self, fileobj, events, data=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.selectors._BaseSelectorImpl.html" class="code" data-type="Class">Lib.selectors._BaseSelectorImpl</a></div>
+    
+    <div><p class="pre">Register a file object.
+
+Parameters:
+fileobj -- file object or file descriptor
+events  -- events to monitor (bitwise mask of EVENT_READ|EVENT_WRITE)
+data    -- attached data
+
+Returns:
+SelectorKey instance
+
+Raises:
+ValueError if events is invalid
+KeyError if fileobj is already registered
+OSError if fileobj is closed or otherwise is unacceptable to
+        the underlying system call (if a system call is made)
+
+Note:
+OSError may or may not be raised</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.selectors.BaseSelector.unregister">
+    
+  </a>
+  <a name="unregister">
+    
+  </a>
+  <div class="functionHeader">
+    @abstractmethod<br />
+    def
+    unregister(self, fileobj):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.selectors._BaseSelectorImpl.html" class="code" data-type="Class">Lib.selectors._BaseSelectorImpl</a></div>
+    
+    <div><p class="pre">Unregister a file object.
+
+Parameters:
+fileobj -- file object or file descriptor
+
+Returns:
+SelectorKey instance
+
+Raises:
+KeyError if fileobj is not registered
+
+Note:
+If fileobj is registered but has since been closed this does
+*not* raise OSError (even if the wrapped syscall does)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.selectors.BaseSelector.modify">
+    
+  </a>
+  <a name="modify">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    modify(self, fileobj, events, data=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.selectors._BaseSelectorImpl.html" class="code" data-type="Class">Lib.selectors._BaseSelectorImpl</a></div>
+    
+    <div><p class="pre">Change a registered file object monitored events or attached data.
+
+Parameters:
+fileobj -- file object or file descriptor
+events  -- events to monitor (bitwise mask of EVENT_READ|EVENT_WRITE)
+data    -- attached data
+
+Returns:
+SelectorKey instance
+
+Raises:
+Anything that unregister() or register() raises</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.selectors.BaseSelector.select">
+    
+  </a>
+  <a name="select">
+    
+  </a>
+  <div class="functionHeader">
+    @abstractmethod<br />
+    def
+    select(self, timeout=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.selectors._PollLikeSelector.html" class="code" data-type="Class">Lib.selectors._PollLikeSelector</a>, <a href="Lib.selectors.KqueueSelector.html" class="code" data-type="Class">Lib.selectors.KqueueSelector</a>, <a href="Lib.selectors.SelectSelector.html" class="code" data-type="Class">Lib.selectors.SelectSelector</a></div>
+    
+    <div><p class="pre">Perform the actual selection, until some monitored file objects are
+ready or a timeout expires.
+
+Parameters:
+timeout -- if timeout &gt; 0, this specifies the maximum wait time, in
+           seconds
+           if timeout &lt;= 0, the select() call won't block, and will
+           report the currently ready file objects
+           if timeout is None, select() will block until a monitored
+           file object becomes ready
+
+Returns:
+list of (key, events) for ready file objects
+`events` is a bitwise mask of EVENT_READ|EVENT_WRITE</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.selectors.BaseSelector.close">
+    
+  </a>
+  <a name="close">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    close(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.selectors._BaseSelectorImpl.html" class="code" data-type="Class">Lib.selectors._BaseSelectorImpl</a></div>
+    
+    <div><p class="pre">Close the selector.
+
+This must be called to make sure that any underlying resource is freed.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.selectors.BaseSelector.get_key">
+    
+  </a>
+  <a name="get_key">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_key(self, fileobj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the key associated to a registered file object.
+
+Returns:
+SelectorKey for this file object</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.selectors.BaseSelector.get_map">
+    
+  </a>
+  <a name="get_map">
+    
+  </a>
+  <div class="functionHeader">
+    @abstractmethod<br />
+    def
+    get_map(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.selectors._BaseSelectorImpl.html" class="code" data-type="Class">Lib.selectors._BaseSelectorImpl</a></div>
+    
+    <div><p class="pre">Return a mapping of file objects to selector keys.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.selectors.BaseSelector.__enter__">
+    
+  </a>
+  <a name="__enter__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __enter__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.selectors.BaseSelector.__exit__">
+    
+  </a>
+  <a name="__exit__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __exit__(self, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

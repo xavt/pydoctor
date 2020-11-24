@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.difflib.Differ : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.difflib.html" class="code" data-type="Module">difflib</a>.<a href="Lib.difflib.Differ.html" class="code" data-type="Class">Differ</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.difflib.Differ:</code></p>
+        <p><a href="classIndex.html#Lib.difflib.Differ">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Differ is a class for comparing sequences of lines of text, and
+producing human-readable differences or deltas.  Differ uses
+SequenceMatcher both to compare sequences of lines, and to compare
+sequences of characters within similar (near-matching) lines.
+
+Each line of a Differ delta begins with a two-letter code:
+
+    '- '    line unique to sequence 1
+    '+ '    line unique to sequence 2
+    '  '    line common to both sequences
+    '? '    line not present in either input sequence
+
+Lines beginning with '? ' attempt to guide the eye to intraline
+differences, and were not present in either input sequence.  These lines
+can be confusing if the sequences contain tab characters.
+
+Note that Differ makes no claim to produce a *minimal* diff.  To the
+contrary, minimal diffs are often counter-intuitive, because they synch
+up anywhere possible, sometimes accidental matches 100 pages apart.
+Restricting synch points to contiguous matches preserves some notion of
+locality, at the occasional cost of producing a longer diff.
+
+Example: Comparing two texts.
+
+First we set up the texts, sequences of individual single-line strings
+ending with newlines (such sequences can also be obtained from the
+`readlines()` method of file-like objects):
+
+&gt;&gt;&gt; text1 = '''  1. Beautiful is better than ugly.
+...   2. Explicit is better than implicit.
+...   3. Simple is better than complex.
+...   4. Complex is better than complicated.
+... '''.splitlines(keepends=True)
+&gt;&gt;&gt; len(text1)
+4
+&gt;&gt;&gt; text1[0][-1]
+'\n'
+&gt;&gt;&gt; text2 = '''  1. Beautiful is better than ugly.
+...   3.   Simple is better than complex.
+...   4. Complicated is better than complex.
+...   5. Flat is better than nested.
+... '''.splitlines(keepends=True)
+
+Next we instantiate a Differ object:
+
+&gt;&gt;&gt; d = Differ()
+
+Note that when instantiating a Differ object we may pass functions to
+filter out line and character 'junk'.  See Differ.__init__ for details.
+
+Finally, we compare the two:
+
+&gt;&gt;&gt; result = list(d.compare(text1, text2))
+
+'result' is a list of strings, so let's pretty-print it:
+
+&gt;&gt;&gt; from pprint import pprint as _pprint
+&gt;&gt;&gt; _pprint(result)
+['    1. Beautiful is better than ugly.\n',
+ '-   2. Explicit is better than implicit.\n',
+ '-   3. Simple is better than complex.\n',
+ '+   3.   Simple is better than complex.\n',
+ '?     ++\n',
+ '-   4. Complex is better than complicated.\n',
+ '?            ^                     ---- ^\n',
+ '+   4. Complicated is better than complex.\n',
+ '?           ++++ ^                      ^\n',
+ '+   5. Flat is better than nested.\n']
+
+As a single multi-line string it looks like this:
+
+&gt;&gt;&gt; print(''.join(result), end="")
+    1. Beautiful is better than ugly.
+-   2. Explicit is better than implicit.
+-   3. Simple is better than complex.
++   3.   Simple is better than complex.
+?     ++
+-   4. Complex is better than complicated.
+?            ^                     ---- ^
++   4. Complicated is better than complex.
+?           ++++ ^                      ^
++   5. Flat is better than nested.
+
+Methods:
+
+__init__(linejunk=None, charjunk=None)
+    Construct a text differencer, with optional filters.
+
+compare(a, b)
+    Compare two sequences of lines; generate the resulting delta.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id898">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.difflib.Differ.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Construct a text differencer, with optional filters.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.difflib.Differ.html#linejunk" class="code" data-type="Instance Variable">linejunk</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.difflib.Differ.html#charjunk" class="code" data-type="Instance Variable">charjunk</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.difflib.Differ.html#compare" class="code" data-type="Method">compare</a></td>
+    <td><span>Compare two sequences of lines; generate the resulting delta.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.difflib.Differ.html#_dump" class="code" data-type="Method">_dump</a></td>
+    <td><span>Generate comparison results for a same-tagged range.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.difflib.Differ.html#_plain_replace" class="code" data-type="Method">_plain_replace</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.difflib.Differ.html#_fancy_replace" class="code" data-type="Method">_fancy_replace</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.difflib.Differ.html#_fancy_helper" class="code" data-type="Method">_fancy_helper</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.difflib.Differ.html#_qformat" class="code" data-type="Method">_qformat</a></td>
+    <td><span>Format "?" output and deal with tabs.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.difflib.Differ.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, linejunk=None, charjunk=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Construct a text differencer, with optional filters.
+
+The two optional keyword parameters are for filter functions:
+
+- `linejunk`: A function that should accept a single string argument,
+  and return true iff the string is junk. The module-level function
+  `IS_LINE_JUNK` may be used to filter out lines without visible
+  characters, except for at most one splat ('#').  It is recommended
+  to leave linejunk None; the underlying SequenceMatcher class has
+  an adaptive notion of "noise" lines that's better than any static
+  definition the author has ever been able to craft.
+
+- `charjunk`: A function that should accept a string of length 1. The
+  module-level function `IS_CHARACTER_JUNK` may be used to filter out
+  whitespace characters (a blank or tab; **note**: bad idea to include
+  newline in this!).  Use of IS_CHARACTER_JUNK is recommended.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.difflib.Differ.linejunk">
+    
+  </a>
+  <a name="linejunk">
+    
+  </a>
+  <div class="functionHeader">
+    linejunk =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.difflib.Differ.charjunk">
+    
+  </a>
+  <a name="charjunk">
+    
+  </a>
+  <div class="functionHeader">
+    charjunk =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.difflib.Differ.compare">
+    
+  </a>
+  <a name="compare">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    compare(self, a, b):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Compare two sequences of lines; generate the resulting delta.
+
+Each sequence must contain individual single-line strings ending with
+newlines. Such sequences can be obtained from the `readlines()` method
+of file-like objects.  The delta generated also consists of newline-
+terminated strings, ready to be printed as-is via the writeline()
+method of a file-like object.
+
+Example:
+
+&gt;&gt;&gt; print(''.join(Differ().compare('one\ntwo\nthree\n'.splitlines(True),
+...                                'ore\ntree\nemu\n'.splitlines(True))),
+...       end="")
+- one
+?  ^
++ ore
+?  ^
+- two
+- three
+?  -
++ tree
++ emu</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.difflib.Differ._dump">
+    
+  </a>
+  <a name="_dump">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _dump(self, tag, x, lo, hi):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Generate comparison results for a same-tagged range.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.difflib.Differ._plain_replace">
+    
+  </a>
+  <a name="_plain_replace">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _plain_replace(self, a, alo, ahi, b, blo, bhi):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.difflib.Differ._fancy_replace">
+    
+  </a>
+  <a name="_fancy_replace">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _fancy_replace(self, a, alo, ahi, b, blo, bhi):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">When replacing one block of lines with another, search the blocks
+for *similar* lines; the best-matching pair (if any) is used as a
+synch point, and intraline difference marking is done on the
+similar pair. Lots of work, but often worth it.
+
+Example:
+
+&gt;&gt;&gt; d = Differ()
+&gt;&gt;&gt; results = d._fancy_replace(['abcDefghiJkl\n'], 0, 1,
+...                            ['abcdefGhijkl\n'], 0, 1)
+&gt;&gt;&gt; print(''.join(results), end="")
+- abcDefghiJkl
+?    ^  ^  ^
++ abcdefGhijkl
+?    ^  ^  ^</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.difflib.Differ._fancy_helper">
+    
+  </a>
+  <a name="_fancy_helper">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _fancy_helper(self, a, alo, ahi, b, blo, bhi):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.difflib.Differ._qformat">
+    
+  </a>
+  <a name="_qformat">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _qformat(self, aline, bline, atags, btags):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Format "?" output and deal with tabs.
+
+Example:
+
+&gt;&gt;&gt; d = Differ()
+&gt;&gt;&gt; results = d._qformat('\tabcDefghiJkl\n', '\tabcdefGhijkl\n',
+...                      '  ^ ^  ^      ', '  ^ ^  ^      ')
+&gt;&gt;&gt; for line in results: print(repr(line))
+...
+'- \tabcDefghiJkl\n'
+'? \t ^ ^  ^\n'
+'+ \tabcdefGhijkl\n'
+'? \t ^ ^  ^\n'</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

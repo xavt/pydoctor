@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.warnings : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.warnings.html" class="code" data-type="Module">warnings</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Python part of the warnings subsystem.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id11934">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.warnings.html#showwarning" class="code" data-type="Function">showwarning</a></td>
+    <td><span>Hook to write a warning to a file; replace if you like.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.warnings.html#formatwarning" class="code" data-type="Function">formatwarning</a></td>
+    <td><span>Function to format a warning the standard way.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.warnings.html#filterwarnings" class="code" data-type="Function">filterwarnings</a></td>
+    <td><span>Insert an entry into the list of warnings filters (at the front).</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.warnings.html#simplefilter" class="code" data-type="Function">simplefilter</a></td>
+    <td><span>Insert a simple entry into the list of warnings filters (at the front).</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.warnings.html#resetwarnings" class="code" data-type="Function">resetwarnings</a></td>
+    <td><span>Clear the list of warning filters, so that no filters are active.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.warnings.html#warn" class="code" data-type="Function">warn</a></td>
+    <td><span>Issue a warning, or maybe ignore it or raise an exception.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.warnings.html#warn_explicit" class="code" data-type="Function">warn_explicit</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.warnings.WarningMessage.html" class="code" data-type="Class">WarningMessage</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.warnings.catch_warnings.html" class="code" data-type="Class">catch_warnings</a></td>
+    <td><span>A context manager that copies and restores the warnings filter upon exiting the context.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.warnings.html#filters" class="code" data-type="Variable">filters</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.warnings.html#defaultaction" class="code" data-type="Variable">defaultaction</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.warnings.html#onceregistry" class="code" data-type="Variable">onceregistry</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.warnings.html#_showwarnmsg_impl" class="code" data-type="Function">_showwarnmsg_impl</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.warnings.html#_formatwarnmsg_impl" class="code" data-type="Function">_formatwarnmsg_impl</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.warnings.html#_showwarnmsg" class="code" data-type="Function">_showwarnmsg</a></td>
+    <td><span>Hook to write a warning to a file; replace if you like.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.warnings.html#_formatwarnmsg" class="code" data-type="Function">_formatwarnmsg</a></td>
+    <td><span>Function to format a warning the standard way.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.warnings.html#_add_filter" class="code" data-type="Function">_add_filter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.warnings._OptionError.html" class="code" data-type="Class">_OptionError</a></td>
+    <td><span>Exception used by option processing helpers.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.warnings.html#_processoptions" class="code" data-type="Function">_processoptions</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.warnings.html#_setoption" class="code" data-type="Function">_setoption</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.warnings.html#_getaction" class="code" data-type="Function">_getaction</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.warnings.html#_getcategory" class="code" data-type="Function">_getcategory</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.warnings.html#_is_internal_frame" class="code" data-type="Function">_is_internal_frame</a></td>
+    <td><span>Signal whether the frame is an internal CPython implementation detail.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.warnings.html#_next_external_frame" class="code" data-type="Function">_next_external_frame</a></td>
+    <td><span>Find the next frame that doesn't involve CPython internals.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.warnings.html#_warn_unawaited_coroutine" class="code" data-type="Function">_warn_unawaited_coroutine</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.warnings.html#_warnings_defaults" class="code" data-type="Variable">_warnings_defaults</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.warnings.html#_filters_version" class="code" data-type="Variable">_filters_version</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.warnings.html#_filters_mutated" class="code" data-type="Function">_filters_mutated</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction">
+  
+  <a name="Lib.warnings.showwarning">
+    
+  </a>
+  <a name="showwarning">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    showwarning(message, category, filename, lineno, file=None, line=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Hook to write a warning to a file; replace if you like.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.warnings.formatwarning">
+    
+  </a>
+  <a name="formatwarning">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    formatwarning(message, category, filename, lineno, line=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Function to format a warning the standard way.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.warnings._showwarnmsg_impl">
+    
+  </a>
+  <a name="_showwarnmsg_impl">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _showwarnmsg_impl(msg):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.warnings._formatwarnmsg_impl">
+    
+  </a>
+  <a name="_formatwarnmsg_impl">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _formatwarnmsg_impl(msg):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.warnings._showwarnmsg">
+    
+  </a>
+  <a name="_showwarnmsg">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _showwarnmsg(msg):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Hook to write a warning to a file; replace if you like.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.warnings._formatwarnmsg">
+    
+  </a>
+  <a name="_formatwarnmsg">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _formatwarnmsg(msg):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Function to format a warning the standard way.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.warnings.filterwarnings">
+    
+  </a>
+  <a name="filterwarnings">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    filterwarnings(action, message="""""", category=Warning, module="""""", lineno=0, append=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Insert an entry into the list of warnings filters (at the front).
+
+'action' -- one of "error", "ignore", "always", "default", "module",
+            or "once"
+'message' -- a regex that the warning message must match
+'category' -- a class that the warning must be a subclass of
+'module' -- a regex that the module name must match
+'lineno' -- an integer line number, 0 matches all warnings
+'append' -- if true, append to the list of filters</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.warnings.simplefilter">
+    
+  </a>
+  <a name="simplefilter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    simplefilter(action, category=Warning, lineno=0, append=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Insert a simple entry into the list of warnings filters (at the front).
+
+A simple filter matches all modules and messages.
+'action' -- one of "error", "ignore", "always", "default", "module",
+            or "once"
+'category' -- a class that the warning must be a subclass of
+'lineno' -- an integer line number, 0 matches all warnings
+'append' -- if true, append to the list of filters</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.warnings._add_filter">
+    
+  </a>
+  <a name="_add_filter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _add_filter(*item):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.warnings.resetwarnings">
+    
+  </a>
+  <a name="resetwarnings">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    resetwarnings():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Clear the list of warning filters, so that no filters are active.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.warnings._processoptions">
+    
+  </a>
+  <a name="_processoptions">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _processoptions(args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.warnings._setoption">
+    
+  </a>
+  <a name="_setoption">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _setoption(arg):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.warnings._getaction">
+    
+  </a>
+  <a name="_getaction">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _getaction(action):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.warnings._getcategory">
+    
+  </a>
+  <a name="_getcategory">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _getcategory(category):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.warnings._is_internal_frame">
+    
+  </a>
+  <a name="_is_internal_frame">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _is_internal_frame(frame):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Signal whether the frame is an internal CPython implementation detail.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.warnings._next_external_frame">
+    
+  </a>
+  <a name="_next_external_frame">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _next_external_frame(frame):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Find the next frame that doesn't involve CPython internals.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.warnings.warn">
+    
+  </a>
+  <a name="warn">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    warn(message, category=None, stacklevel=1, source=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Issue a warning, or maybe ignore it or raise an exception.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.warnings.warn_explicit">
+    
+  </a>
+  <a name="warn_explicit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    warn_explicit(message, category, filename, lineno, module=None, registry=None, module_globals=None, source=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.warnings._warn_unawaited_coroutine">
+    
+  </a>
+  <a name="_warn_unawaited_coroutine">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _warn_unawaited_coroutine(coro):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.warnings._warnings_defaults">
+    
+  </a>
+  <a name="_warnings_defaults">
+    
+  </a>
+  <div class="functionHeader">
+    _warnings_defaults =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.warnings.filters">
+    
+  </a>
+  <a name="filters">
+    
+  </a>
+  <div class="functionHeader">
+    filters =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.warnings.defaultaction">
+    
+  </a>
+  <a name="defaultaction">
+    
+  </a>
+  <div class="functionHeader">
+    defaultaction =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.warnings.onceregistry">
+    
+  </a>
+  <a name="onceregistry">
+    
+  </a>
+  <div class="functionHeader">
+    onceregistry =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.warnings._filters_version">
+    
+  </a>
+  <a name="_filters_version">
+    
+  </a>
+  <div class="functionHeader">
+    _filters_version =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.warnings._filters_mutated">
+    
+  </a>
+  <a name="_filters_mutated">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _filters_mutated():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

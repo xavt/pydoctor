@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.pkgutil : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.pkgutil.html" class="code" data-type="Module">pkgutil</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Utilities to support packages.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3385">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pkgutil.html#ModuleInfo" class="code" data-type="Variable">ModuleInfo</a></td>
+    <td><span>A namedtuple with minimal info about a module.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pkgutil.html#read_code" class="code" data-type="Function">read_code</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pkgutil.html#walk_packages" class="code" data-type="Function">walk_packages</a></td>
+    <td><span>Yields ModuleInfo for all modules recursively on path, or, if path is None, all accessible modules.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pkgutil.html#iter_modules" class="code" data-type="Function">iter_modules</a></td>
+    <td><span>Yields ModuleInfo for all submodules on path, or, if path is None, all top-level modules on sys.path.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pkgutil.html#iter_importer_modules" class="code" data-type="Function">iter_importer_modules</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.pkgutil.ImpImporter.html" class="code" data-type="Class">ImpImporter</a></td>
+    <td><span>PEP 302 Finder that wraps Python's "classic" import algorithm</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.pkgutil.ImpLoader.html" class="code" data-type="Class">ImpLoader</a></td>
+    <td><span>PEP 302 Loader that wraps Python's "classic" import algorithm</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pkgutil.html#iter_zipimport_modules" class="code" data-type="Function">iter_zipimport_modules</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pkgutil.html#get_importer" class="code" data-type="Function">get_importer</a></td>
+    <td><span>Retrieve a finder for the given path item</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pkgutil.html#iter_importers" class="code" data-type="Function">iter_importers</a></td>
+    <td><span>Yield finders for the given module name</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pkgutil.html#get_loader" class="code" data-type="Function">get_loader</a></td>
+    <td><span>Get a "loader" object for module_or_name</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pkgutil.html#find_loader" class="code" data-type="Function">find_loader</a></td>
+    <td><span>Find a "loader" object for fullname</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pkgutil.html#extend_path" class="code" data-type="Function">extend_path</a></td>
+    <td><span>Extend a package's path.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pkgutil.html#get_data" class="code" data-type="Function">get_data</a></td>
+    <td><span>Get a resource from a package.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pkgutil.html#resolve_name" class="code" data-type="Function">resolve_name</a></td>
+    <td><span>Resolve a name to an object.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pkgutil.html#_get_spec" class="code" data-type="Function">_get_spec</a></td>
+    <td><span>Return the finder-specific module spec.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pkgutil.html#_iter_file_finder_modules" class="code" data-type="Function">_iter_file_finder_modules</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pkgutil.html#_import_imp" class="code" data-type="Function">_import_imp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pkgutil.html#_NAME_PATTERN" class="code" data-type="Variable">_NAME_PATTERN</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.pkgutil.ModuleInfo">
+    
+  </a>
+  <a name="ModuleInfo">
+    
+  </a>
+  <div class="functionHeader">
+    ModuleInfo =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="pre">A namedtuple with minimal info about a module.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pkgutil._get_spec">
+    
+  </a>
+  <a name="_get_spec">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_spec(finder, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the finder-specific module spec.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pkgutil.read_code">
+    
+  </a>
+  <a name="read_code">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    read_code(stream):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pkgutil.walk_packages">
+    
+  </a>
+  <a name="walk_packages">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    walk_packages(path=None, prefix="""""", onerror=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Yields ModuleInfo for all modules recursively
+on path, or, if path is None, all accessible modules.
+
+'path' should be either None or a list of paths to look for
+modules in.
+
+'prefix' is a string to output on the front of every module name
+on output.
+
+Note that this function must import all *packages* (NOT all
+modules!) on the given path, in order to access the __path__
+attribute to find submodules.
+
+'onerror' is a function which gets called with one argument (the
+name of the package which was being imported) if any exception
+occurs while trying to import a package.  If no onerror function is
+supplied, ImportErrors are caught and ignored, while all other
+exceptions are propagated, terminating the search.
+
+Examples:
+
+# list all modules python can access
+walk_packages()
+
+# list all submodules of ctypes
+walk_packages(ctypes.__path__, ctypes.__name__+'.')</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pkgutil.iter_modules">
+    
+  </a>
+  <a name="iter_modules">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    iter_modules(path=None, prefix=""""""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Yields ModuleInfo for all submodules on path,
+or, if path is None, all top-level modules on sys.path.
+
+'path' should be either None or a list of paths to look for
+modules in.
+
+'prefix' is a string to output on the front of every module name
+on output.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pkgutil.iter_importer_modules">
+    
+  </a>
+  <a name="iter_importer_modules">
+    
+  </a>
+  <div class="functionHeader">
+    @simplegeneric<br />
+    def
+    iter_importer_modules(importer, prefix=""""""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pkgutil._iter_file_finder_modules">
+    
+  </a>
+  <a name="_iter_file_finder_modules">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _iter_file_finder_modules(importer, prefix=""""""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pkgutil._import_imp">
+    
+  </a>
+  <a name="_import_imp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _import_imp():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pkgutil.iter_zipimport_modules">
+    
+  </a>
+  <a name="iter_zipimport_modules">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    iter_zipimport_modules(importer, prefix=""""""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pkgutil.get_importer">
+    
+  </a>
+  <a name="get_importer">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_importer(path_item):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Retrieve a finder for the given path item
+
+The returned finder is cached in sys.path_importer_cache
+if it was newly created by a path hook.
+
+The cache (or part of it) can be cleared manually if a
+rescan of sys.path_hooks is necessary.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pkgutil.iter_importers">
+    
+  </a>
+  <a name="iter_importers">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    iter_importers(fullname=""""""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Yield finders for the given module name
+
+If fullname contains a '.', the finders will be for the package
+containing fullname, otherwise they will be all registered top level
+finders (i.e. those on both sys.meta_path and sys.path_hooks).
+
+If the named module is in a package, that package is imported as a side
+effect of invoking this function.
+
+If no module name is specified, all top level finders are produced.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pkgutil.get_loader">
+    
+  </a>
+  <a name="get_loader">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_loader(module_or_name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get a "loader" object for module_or_name
+
+Returns None if the module cannot be found or imported.
+If the named module is not already imported, its containing package
+(if any) is imported, in order to establish the package __path__.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pkgutil.find_loader">
+    
+  </a>
+  <a name="find_loader">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    find_loader(fullname):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Find a "loader" object for fullname
+
+This is a backwards compatibility wrapper around
+importlib.util.find_spec that converts most failures to ImportError
+and only returns the loader rather than the full spec</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pkgutil.extend_path">
+    
+  </a>
+  <a name="extend_path">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    extend_path(path, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Extend a package's path.
+
+Intended use is to place the following code in a package's __init__.py:
+
+    from pkgutil import extend_path
+    __path__ = extend_path(__path__, __name__)
+
+This will add to the package's __path__ all subdirectories of
+directories on sys.path named after the package.  This is useful
+if one wants to distribute different parts of a single logical
+package as multiple directories.
+
+It also looks for *.pkg files beginning where * matches the name
+argument.  This feature is similar to *.pth files (see site.py),
+except that it doesn't special-case lines starting with 'import'.
+A *.pkg file is trusted at face value: apart from checking for
+duplicates, all entries found in a *.pkg file are added to the
+path, regardless of whether they are exist the filesystem.  (This
+is a feature.)
+
+If the input path is not a list (as is the case for frozen
+packages) it is returned unchanged.  The input path is not
+modified; an extended copy is returned.  Items are only appended
+to the copy at the end.
+
+It is assumed that sys.path is a sequence.  Items of sys.path that
+are not (unicode or 8-bit) strings referring to existing
+directories are ignored.  Unicode items of sys.path that cause
+errors when used as filenames may cause this function to raise an
+exception (in line with os.path.isdir() behavior).</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pkgutil.get_data">
+    
+  </a>
+  <a name="get_data">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_data(package, resource):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get a resource from a package.
+
+This is a wrapper round the PEP 302 loader get_data API. The package
+argument should be the name of a package, in standard module format
+(foo.bar). The resource argument should be in the form of a relative
+filename, using '/' as the path separator. The parent directory name '..'
+is not allowed, and nor is a rooted name (starting with a '/').
+
+The function returns a binary string, which is the contents of the
+specified resource.
+
+For packages located in the filesystem, which have already been imported,
+this is the rough equivalent of
+
+    d = os.path.dirname(sys.modules[package].__file__)
+    data = open(os.path.join(d, resource), 'rb').read()
+
+If the package cannot be located or loaded, or it uses a PEP 302 loader
+which does not support get_data(), then None is returned.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.pkgutil._NAME_PATTERN">
+    
+  </a>
+  <a name="_NAME_PATTERN">
+    
+  </a>
+  <div class="functionHeader">
+    _NAME_PATTERN =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pkgutil.resolve_name">
+    
+  </a>
+  <a name="resolve_name">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    resolve_name(name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Resolve a name to an object.
+
+It is expected that `name` will be a string in one of the following
+formats, where W is shorthand for a valid Python identifier and dot stands
+for a literal period in these pseudo-regexes:
+
+W(.W)*
+W(.W)*:(W(.W)*)?
+
+The first form is intended for backward compatibility only. It assumes that
+some part of the dotted name is a package, and the rest is an object
+somewhere within that package, possibly nested inside other objects.
+Because the place where the package stops and the object hierarchy starts
+can't be inferred by inspection, repeated attempts to import must be done
+with this form.
+
+In the second form, the caller makes the division point clear through the
+provision of a single colon: the dotted name to the left of the colon is a
+package to be imported, and the dotted name to the right is the object
+hierarchy within that package. Only one import is needed in this form. If
+it ends with the colon, then a module object is returned.
+
+The function will return an object (which might be a module), or raise one
+of the following exceptions:
+
+ValueError - if `name` isn't in a recognised format
+ImportError - if an import failed when it shouldn't have
+AttributeError - if a failure occurred when traversing the object hierarchy
+                 within the imported package to get to the desired object)</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

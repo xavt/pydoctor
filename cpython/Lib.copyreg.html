@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.copyreg : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.copyreg.html" class="code" data-type="Module">copyreg</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Helper to provide extensibility for pickle.
+
+This is only useful to add pickle support for extension types defined in
+C, not for instances of user-defined classes.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id642">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.copyreg.html#dispatch_table" class="code" data-type="Variable">dispatch_table</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.copyreg.html#pickle" class="code" data-type="Function">pickle</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.copyreg.html#constructor" class="code" data-type="Function">constructor</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.copyreg.html#pickle_complex" class="code" data-type="Function">pickle_complex</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.copyreg.html#__newobj__" class="code" data-type="Function">__newobj__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.copyreg.html#__newobj_ex__" class="code" data-type="Function">__newobj_ex__</a></td>
+    <td><span>Used by pickle protocol 4, instead of __newobj__ to allow classes with keyword-only arguments to be pickled correctly.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.copyreg.html#add_extension" class="code" data-type="Function">add_extension</a></td>
+    <td><span>Register an extension code.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.copyreg.html#remove_extension" class="code" data-type="Function">remove_extension</a></td>
+    <td><span>Unregister an extension code.  For testing only.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.copyreg.html#clear_extension_cache" class="code" data-type="Function">clear_extension_cache</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.copyreg.html#_reconstructor" class="code" data-type="Function">_reconstructor</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.copyreg.html#_HEAPTYPE" class="code" data-type="Variable">_HEAPTYPE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.copyreg.html#_new_type" class="code" data-type="Variable">_new_type</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.copyreg.html#_reduce_ex" class="code" data-type="Function">_reduce_ex</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.copyreg.html#_slotnames" class="code" data-type="Function">_slotnames</a></td>
+    <td><span>Return a list of slot names for a given class.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.copyreg.html#_extension_registry" class="code" data-type="Variable">_extension_registry</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.copyreg.html#_inverted_registry" class="code" data-type="Variable">_inverted_registry</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.copyreg.html#_extension_cache" class="code" data-type="Variable">_extension_cache</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.copyreg.dispatch_table">
+    
+  </a>
+  <a name="dispatch_table">
+    
+  </a>
+  <div class="functionHeader">
+    dispatch_table =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.copyreg.pickle">
+    
+  </a>
+  <a name="pickle">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    pickle(ob_type, pickle_function, constructor_ob=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.copyreg.constructor">
+    
+  </a>
+  <a name="constructor">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    constructor(object):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.copyreg.pickle_complex">
+    
+  </a>
+  <a name="pickle_complex">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    pickle_complex(c):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.copyreg._reconstructor">
+    
+  </a>
+  <a name="_reconstructor">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _reconstructor(cls, base, state):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.copyreg._HEAPTYPE">
+    
+  </a>
+  <a name="_HEAPTYPE">
+    
+  </a>
+  <div class="functionHeader">
+    _HEAPTYPE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.copyreg._new_type">
+    
+  </a>
+  <a name="_new_type">
+    
+  </a>
+  <div class="functionHeader">
+    _new_type =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.copyreg._reduce_ex">
+    
+  </a>
+  <a name="_reduce_ex">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _reduce_ex(self, proto):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.copyreg.__newobj__">
+    
+  </a>
+  <a name="__newobj__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __newobj__(cls, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.copyreg.__newobj_ex__">
+    
+  </a>
+  <a name="__newobj_ex__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __newobj_ex__(cls, args, kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Used by pickle protocol 4, instead of __newobj__ to allow classes with
+keyword-only arguments to be pickled correctly.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.copyreg._slotnames">
+    
+  </a>
+  <a name="_slotnames">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _slotnames(cls):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a list of slot names for a given class.
+
+This needs to find slots defined by the class and its bases, so we
+can't simply return the __slots__ attribute.  We must walk down
+the Method Resolution Order and concatenate the __slots__ of each
+class found there.  (This assumes classes don't modify their
+__slots__ attribute to misrepresent their slots after the class is
+defined.)</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.copyreg._extension_registry">
+    
+  </a>
+  <a name="_extension_registry">
+    
+  </a>
+  <div class="functionHeader">
+    _extension_registry =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.copyreg._inverted_registry">
+    
+  </a>
+  <a name="_inverted_registry">
+    
+  </a>
+  <div class="functionHeader">
+    _inverted_registry =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.copyreg._extension_cache">
+    
+  </a>
+  <a name="_extension_cache">
+    
+  </a>
+  <div class="functionHeader">
+    _extension_cache =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.copyreg.add_extension">
+    
+  </a>
+  <a name="add_extension">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    add_extension(module, name, code):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Register an extension code.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.copyreg.remove_extension">
+    
+  </a>
+  <a name="remove_extension">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    remove_extension(module, name, code):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Unregister an extension code.  For testing only.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.copyreg.clear_extension_cache">
+    
+  </a>
+  <a name="clear_extension_cache">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    clear_extension_cache():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

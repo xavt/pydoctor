@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.contextlib._BaseExitStack : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class private"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.contextlib.html" class="code" data-type="Module">contextlib</a>.<a href="Lib.contextlib._BaseExitStack.html" class="code" data-type="Class">_BaseExitStack</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.contextlib._BaseExitStack:</code></p><p>Known subclasses: <a href="Lib.contextlib.AsyncExitStack.html" class="code" data-type="Class">Lib.contextlib.AsyncExitStack</a>, <a href="Lib.contextlib.ExitStack.html" class="code" data-type="Class">Lib.contextlib.ExitStack</a></p>
+        <p><a href="classIndex.html#Lib.contextlib._BaseExitStack">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">A base class for ExitStack and AsyncExitStack.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id631">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.contextlib._BaseExitStack.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.contextlib._BaseExitStack.html#pop_all" class="code" data-type="Method">pop_all</a></td>
+    <td><span>Preserve the context stack by transferring it to a new instance.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.contextlib._BaseExitStack.html#push" class="code" data-type="Method">push</a></td>
+    <td><span>Registers a callback with the standard __exit__ method signature.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.contextlib._BaseExitStack.html#enter_context" class="code" data-type="Method">enter_context</a></td>
+    <td><span>Enters the supplied context manager.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.contextlib._BaseExitStack.html#callback" class="code" data-type="Method">callback</a></td>
+    <td><span>Registers an arbitrary callback and arguments.</span></td>
+  </tr><tr class="staticmethod private">
+    
+    <td>Static Method</td>
+    <td><a href="Lib.contextlib._BaseExitStack.html#_create_exit_wrapper" class="code" data-type="Static Method">_create_exit_wrapper</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="staticmethod private">
+    
+    <td>Static Method</td>
+    <td><a href="Lib.contextlib._BaseExitStack.html#_create_cb_wrapper" class="code" data-type="Static Method">_create_cb_wrapper</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.contextlib._BaseExitStack.html#_exit_callbacks" class="code" data-type="Instance Variable">_exit_callbacks</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.contextlib._BaseExitStack.html#_push_cm_exit" class="code" data-type="Method">_push_cm_exit</a></td>
+    <td><span>Helper to correctly register callbacks to __exit__ methods.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.contextlib._BaseExitStack.html#_push_exit_callback" class="code" data-type="Method">_push_exit_callback</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basestaticmethod private">
+  
+  <a name="Lib.contextlib._BaseExitStack._create_exit_wrapper">
+    
+  </a>
+  <a name="_create_exit_wrapper">
+    
+  </a>
+  <div class="functionHeader">
+    @staticmethod<br />
+    def
+    _create_exit_wrapper(cm, cm_exit):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basestaticmethod private">
+  
+  <a name="Lib.contextlib._BaseExitStack._create_cb_wrapper">
+    
+  </a>
+  <a name="_create_cb_wrapper">
+    
+  </a>
+  <div class="functionHeader">
+    @staticmethod<br />
+    def
+    _create_cb_wrapper(*args, **kwds):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.contextlib._BaseExitStack.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.contextlib._BaseExitStack._exit_callbacks">
+    
+  </a>
+  <a name="_exit_callbacks">
+    
+  </a>
+  <div class="functionHeader">
+    _exit_callbacks =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.contextlib._BaseExitStack.pop_all">
+    
+  </a>
+  <a name="pop_all">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    pop_all(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Preserve the context stack by transferring it to a new instance.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.contextlib._BaseExitStack.push">
+    
+  </a>
+  <a name="push">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    push(self, exit):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Registers a callback with the standard __exit__ method signature.
+
+Can suppress exceptions the same way __exit__ method can.
+Also accepts any object with an __exit__ method (registering a call
+to the method instead of the object itself).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.contextlib._BaseExitStack.enter_context">
+    
+  </a>
+  <a name="enter_context">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    enter_context(self, cm):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Enters the supplied context manager.
+
+If successful, also pushes its __exit__ method as a callback and
+returns the result of the __enter__ method.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.contextlib._BaseExitStack.callback">
+    
+  </a>
+  <a name="callback">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    callback(*args, **kwds):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Registers an arbitrary callback and arguments.
+
+Cannot suppress exceptions.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.contextlib._BaseExitStack._push_cm_exit">
+    
+  </a>
+  <a name="_push_cm_exit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _push_cm_exit(self, cm, cm_exit):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Helper to correctly register callbacks to __exit__ methods.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.contextlib._BaseExitStack._push_exit_callback">
+    
+  </a>
+  <a name="_push_exit_callback">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _push_exit_callback(self, callback, is_sync=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

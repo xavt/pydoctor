@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.concurrent.futures.process._ExecutorManagerThread : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class private"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.concurrent.html" class="code" data-type="Package">concurrent</a>.<a href="Lib.concurrent.futures.html" class="code" data-type="Package">futures</a>.<a href="Lib.concurrent.futures.process.html" class="code" data-type="Module">process</a>.<a href="Lib.concurrent.futures.process._ExecutorManagerThread.html" class="code" data-type="Class">_ExecutorManagerThread</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.concurrent.futures.process._ExecutorManagerThread(<span title="threading.Thread">threading.Thread</span>):</code></p>
+        <p><a href="classIndex.html#Lib.concurrent.futures.process._ExecutorManagerThread">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Manages the communication between this process and the worker processes.
+
+The manager is run in a local thread.
+
+Args:
+    executor: A reference to the ProcessPoolExecutor that owns
+        this thread. A weakref will be own by the manager as well as
+        references to internal objects used to introspect the state of
+        the executor.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id558">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.concurrent.futures.process._ExecutorManagerThread.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.concurrent.futures.process._ExecutorManagerThread.html#thread_wakeup" class="code" data-type="Instance Variable">thread_wakeup</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.concurrent.futures.process._ExecutorManagerThread.html#shutdown_lock" class="code" data-type="Instance Variable">shutdown_lock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.concurrent.futures.process._ExecutorManagerThread.html#executor_reference" class="code" data-type="Instance Variable">executor_reference</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.concurrent.futures.process._ExecutorManagerThread.html#processes" class="code" data-type="Instance Variable">processes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.concurrent.futures.process._ExecutorManagerThread.html#call_queue" class="code" data-type="Instance Variable">call_queue</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.concurrent.futures.process._ExecutorManagerThread.html#result_queue" class="code" data-type="Instance Variable">result_queue</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.concurrent.futures.process._ExecutorManagerThread.html#work_ids_queue" class="code" data-type="Instance Variable">work_ids_queue</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.concurrent.futures.process._ExecutorManagerThread.html#pending_work_items" class="code" data-type="Instance Variable">pending_work_items</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.concurrent.futures.process._ExecutorManagerThread.html#run" class="code" data-type="Method">run</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.concurrent.futures.process._ExecutorManagerThread.html#add_call_item_to_queue" class="code" data-type="Method">add_call_item_to_queue</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.concurrent.futures.process._ExecutorManagerThread.html#wait_result_broken_or_wakeup" class="code" data-type="Method">wait_result_broken_or_wakeup</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.concurrent.futures.process._ExecutorManagerThread.html#process_result_item" class="code" data-type="Method">process_result_item</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.concurrent.futures.process._ExecutorManagerThread.html#is_shutting_down" class="code" data-type="Method">is_shutting_down</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.concurrent.futures.process._ExecutorManagerThread.html#terminate_broken" class="code" data-type="Method">terminate_broken</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.concurrent.futures.process._ExecutorManagerThread.html#flag_executor_shutting_down" class="code" data-type="Method">flag_executor_shutting_down</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.concurrent.futures.process._ExecutorManagerThread.html#shutdown_workers" class="code" data-type="Method">shutdown_workers</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.concurrent.futures.process._ExecutorManagerThread.html#join_executor_internals" class="code" data-type="Method">join_executor_internals</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.concurrent.futures.process._ExecutorManagerThread.html#get_n_children_alive" class="code" data-type="Method">get_n_children_alive</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.concurrent.futures.process._ExecutorManagerThread.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, executor):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.concurrent.futures.process._ExecutorManagerThread.thread_wakeup">
+    
+  </a>
+  <a name="thread_wakeup">
+    
+  </a>
+  <div class="functionHeader">
+    thread_wakeup =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.concurrent.futures.process._ExecutorManagerThread.shutdown_lock">
+    
+  </a>
+  <a name="shutdown_lock">
+    
+  </a>
+  <div class="functionHeader">
+    shutdown_lock =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.concurrent.futures.process._ExecutorManagerThread.executor_reference">
+    
+  </a>
+  <a name="executor_reference">
+    
+  </a>
+  <div class="functionHeader">
+    executor_reference =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.concurrent.futures.process._ExecutorManagerThread.processes">
+    
+  </a>
+  <a name="processes">
+    
+  </a>
+  <div class="functionHeader">
+    processes =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.concurrent.futures.process._ExecutorManagerThread.call_queue">
+    
+  </a>
+  <a name="call_queue">
+    
+  </a>
+  <div class="functionHeader">
+    call_queue =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.concurrent.futures.process._ExecutorManagerThread.result_queue">
+    
+  </a>
+  <a name="result_queue">
+    
+  </a>
+  <div class="functionHeader">
+    result_queue =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.concurrent.futures.process._ExecutorManagerThread.work_ids_queue">
+    
+  </a>
+  <a name="work_ids_queue">
+    
+  </a>
+  <div class="functionHeader">
+    work_ids_queue =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.concurrent.futures.process._ExecutorManagerThread.pending_work_items">
+    
+  </a>
+  <a name="pending_work_items">
+    
+  </a>
+  <div class="functionHeader">
+    pending_work_items =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.concurrent.futures.process._ExecutorManagerThread.run">
+    
+  </a>
+  <a name="run">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    run(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.concurrent.futures.process._ExecutorManagerThread.add_call_item_to_queue">
+    
+  </a>
+  <a name="add_call_item_to_queue">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    add_call_item_to_queue(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.concurrent.futures.process._ExecutorManagerThread.wait_result_broken_or_wakeup">
+    
+  </a>
+  <a name="wait_result_broken_or_wakeup">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    wait_result_broken_or_wakeup(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.concurrent.futures.process._ExecutorManagerThread.process_result_item">
+    
+  </a>
+  <a name="process_result_item">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    process_result_item(self, result_item):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.concurrent.futures.process._ExecutorManagerThread.is_shutting_down">
+    
+  </a>
+  <a name="is_shutting_down">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_shutting_down(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.concurrent.futures.process._ExecutorManagerThread.terminate_broken">
+    
+  </a>
+  <a name="terminate_broken">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    terminate_broken(self, cause):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.concurrent.futures.process._ExecutorManagerThread.flag_executor_shutting_down">
+    
+  </a>
+  <a name="flag_executor_shutting_down">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    flag_executor_shutting_down(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.concurrent.futures.process._ExecutorManagerThread.shutdown_workers">
+    
+  </a>
+  <a name="shutdown_workers">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    shutdown_workers(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.concurrent.futures.process._ExecutorManagerThread.join_executor_internals">
+    
+  </a>
+  <a name="join_executor_internals">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    join_executor_internals(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.concurrent.futures.process._ExecutorManagerThread.get_n_children_alive">
+    
+  </a>
+  <a name="get_n_children_alive">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_n_children_alive(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

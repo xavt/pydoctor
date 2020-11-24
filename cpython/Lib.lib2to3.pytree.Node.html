@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.lib2to3.pytree.Node : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.lib2to3.html" class="code" data-type="Package">lib2to3</a>.<a href="Lib.lib2to3.pytree.html" class="code" data-type="Module">pytree</a>.<a href="Lib.lib2to3.pytree.Node.html" class="code" data-type="Class">Node</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.lib2to3.pytree.Node(<a href="Lib.lib2to3.pytree.Base.html" class="code" data-type="Class">Base</a>):</code></p>
+        <p><a href="classIndex.html#Lib.lib2to3.pytree.Node">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Concrete implementation for interior nodes.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2803">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.Node.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Initializer.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.pytree.Node.html#type" class="code" data-type="Instance Variable">type</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.pytree.Node.html#children" class="code" data-type="Instance Variable">children</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.Node.html#prefix" class="code" data-type="Method">prefix</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.pytree.Node.html#fixers_applied" class="code" data-type="Instance Variable">fixers_applied</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.Node.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span>Return a canonical string representation.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.Node.html#__unicode__" class="code" data-type="Method">__unicode__</a></td>
+    <td><span>Return a pretty string representation.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.Node.html#clone" class="code" data-type="Method">clone</a></td>
+    <td><span>Return a cloned (deep) copy of self.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.Node.html#post_order" class="code" data-type="Method">post_order</a></td>
+    <td><span>Return a post-order iterator for the tree.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.Node.html#pre_order" class="code" data-type="Method">pre_order</a></td>
+    <td><span>Return a pre-order iterator for the tree.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.Node.html#set_child" class="code" data-type="Method">set_child</a></td>
+    <td><span>Equivalent to 'node.children[i] = child'. This method also sets the child's parent attribute appropriately.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.Node.html#insert_child" class="code" data-type="Method">insert_child</a></td>
+    <td><span>Equivalent to 'node.children.insert(i, child)'. This method also sets the child's parent attribute appropriately.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.Node.html#append_child" class="code" data-type="Method">append_child</a></td>
+    <td><span>Equivalent to 'node.children.append(child)'. This method also sets the child's parent attribute appropriately.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.Node.html#_eq" class="code" data-type="Method">_eq</a></td>
+    <td><span>Compare two nodes for equality.</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.lib2to3.pytree.Base.html" class="code" data-type="Class">Base</a>:
+          </p>
+          <table class="children sortable" id="id2804">
+  
+  <tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.pytree.Base.html#parent" class="code" data-type="Instance Variable">parent</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.pytree.Base.html#was_changed" class="code" data-type="Instance Variable">was_changed</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.lib2to3.pytree.Base.html#was_checked" class="code" data-type="Class Variable">was_checked</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.Base.html#__new__" class="code" data-type="Method">__new__</a></td>
+    <td><span>Constructor that prevents Base from being instantiated.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.Base.html#__eq__" class="code" data-type="Method">__eq__</a></td>
+    <td><span>Compare two nodes for equality.</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.lib2to3.pytree.Base.html#__hash__" class="code" data-type="Class Variable">__hash__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.Base.html#replace" class="code" data-type="Method">replace</a></td>
+    <td><span>Replace this node with a new one in the parent.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.Base.html#get_lineno" class="code" data-type="Method">get_lineno</a></td>
+    <td><span>Return the line number which generated the invocant node.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.Base.html#changed" class="code" data-type="Method">changed</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.Base.html#remove" class="code" data-type="Method">remove</a></td>
+    <td><span>Remove the node from the tree. Returns the position of the node in its parent's children before it was removed.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.Base.html#next_sibling" class="code" data-type="Method">next_sibling</a></td>
+    <td><span>The node immediately following the invocant in their parent's children list. If the invocant does not have a next sibling, it is None</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.Base.html#prev_sibling" class="code" data-type="Method">prev_sibling</a></td>
+    <td><span>The node immediately preceding the invocant in their parent's children list. If the invocant does not have a previous sibling, it is None.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.Base.html#leaves" class="code" data-type="Method">leaves</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.Base.html#depth" class="code" data-type="Method">depth</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.Base.html#get_suffix" class="code" data-type="Method">get_suffix</a></td>
+    <td><span>Return the string immediately following the invocant node. This is effectively equivalent to node.next_sibling.prefix</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.pytree.Base.html#__str__" class="code" data-type="Method">__str__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.lib2to3.pytree.Node.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, type, children, context=None, prefix=None, fixers_applied=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Initializer.
+
+Takes a type constant (a symbol number &gt;= 256), a sequence of
+child nodes, and an optional context keyword argument.
+
+As a side effect, the parent pointers of the children are updated.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.lib2to3.pytree.Node.type">
+    
+  </a>
+  <a name="type">
+    
+  </a>
+  <div class="functionHeader">
+    type =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.lib2to3.pytree.Base.html#type" class="code" data-type="Class Variable">Lib.lib2to3.pytree.Base.type</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.lib2to3.pytree.Node.children">
+    
+  </a>
+  <a name="children">
+    
+  </a>
+  <div class="functionHeader">
+    children =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.lib2to3.pytree.Base.html#children" class="code" data-type="Class Variable">Lib.lib2to3.pytree.Base.children</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.lib2to3.pytree.Node.prefix">
+    
+  </a>
+  <a name="prefix">
+    
+  </a>
+  <div class="functionHeader">
+    @prefix.setter<br />
+    def
+    prefix(self, prefix):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.lib2to3.pytree.Node.fixers_applied">
+    
+  </a>
+  <a name="fixers_applied">
+    
+  </a>
+  <div class="functionHeader">
+    fixers_applied =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.lib2to3.pytree.Node.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __repr__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a canonical string representation.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.lib2to3.pytree.Node.__unicode__">
+    
+  </a>
+  <a name="__unicode__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __unicode__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a pretty string representation.
+
+This reproduces the input source exactly.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.lib2to3.pytree.Node._eq">
+    
+  </a>
+  <a name="_eq">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _eq(self, other):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.lib2to3.pytree.Base.html#_eq" class="code" data-type="Method">Lib.lib2to3.pytree.Base._eq</a></div>
+    
+    <div><p class="pre">Compare two nodes for equality.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.lib2to3.pytree.Node.clone">
+    
+  </a>
+  <a name="clone">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    clone(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.lib2to3.pytree.Base.html#clone" class="code" data-type="Method">Lib.lib2to3.pytree.Base.clone</a></div>
+    
+    <div><p class="pre">Return a cloned (deep) copy of self.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.lib2to3.pytree.Node.post_order">
+    
+  </a>
+  <a name="post_order">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    post_order(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.lib2to3.pytree.Base.html#post_order" class="code" data-type="Method">Lib.lib2to3.pytree.Base.post_order</a></div>
+    
+    <div><p class="pre">Return a post-order iterator for the tree.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.lib2to3.pytree.Node.pre_order">
+    
+  </a>
+  <a name="pre_order">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    pre_order(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.lib2to3.pytree.Base.html#pre_order" class="code" data-type="Method">Lib.lib2to3.pytree.Base.pre_order</a></div>
+    
+    <div><p class="pre">Return a pre-order iterator for the tree.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.lib2to3.pytree.Node.set_child">
+    
+  </a>
+  <a name="set_child">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_child(self, i, child):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Equivalent to 'node.children[i] = child'. This method also sets the
+child's parent attribute appropriately.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.lib2to3.pytree.Node.insert_child">
+    
+  </a>
+  <a name="insert_child">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    insert_child(self, i, child):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Equivalent to 'node.children.insert(i, child)'. This method also sets
+the child's parent attribute appropriately.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.lib2to3.pytree.Node.append_child">
+    
+  </a>
+  <a name="append_child">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    append_child(self, child):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Equivalent to 'node.children.append(child)'. This method also sets the
+child's parent attribute appropriately.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,2868 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.typing : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.typing.html" class="code" data-type="Module">typing</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">The typing module: Support for gradual typing as defined by PEP 484.
+
+At large scale, the structure of the module is following:
+* Imports and exports, all public names should be explicitly added to __all__.
+* Internal helper functions: these should never be used in code outside this module.
+* _SpecialForm and its instances (special forms): Any, NoReturn, ClassVar, Union, Optional
+* Two classes whose instances can be type arguments in addition to types: ForwardRef and TypeVar
+* The core of internal generics API: _GenericAlias and _VariadicGenericAlias, the latter is
+  currently only used by Tuple and Callable. All subscripted types like X[int], Union[int, str],
+  etc., are instances of either of these classes.
+* The public counterpart of the generics API consists of two classes: Generic and Protocol.
+* Public helper functions: get_type_hints, overload, cast, no_type_check,
+  no_type_check_decorator.
+* Generic aliases for collections.abc ABCs and few additional protocols.
+* Special types: NewType, NamedTuple, TypedDict.
+* Wrapper submodules for re and io related types.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id11533">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#Any" class="code" data-type="Function">Any</a></td>
+    <td><span>Special type indicating an unconstrained type.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#NoReturn" class="code" data-type="Function">NoReturn</a></td>
+    <td><span>Special type indicating functions that never return. Example::</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#ClassVar" class="code" data-type="Function">ClassVar</a></td>
+    <td><span>Special type construct to mark class variables.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#Final" class="code" data-type="Function">Final</a></td>
+    <td><span>Special typing construct to indicate final names to type checkers.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#Union" class="code" data-type="Function">Union</a></td>
+    <td><span>Union type; Union[X, Y] means either X or Y.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#Optional" class="code" data-type="Function">Optional</a></td>
+    <td><span>Optional type.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#Literal" class="code" data-type="Function">Literal</a></td>
+    <td><span>Special typing form to define literal types (a.k.a. value types).</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#TypeAlias" class="code" data-type="Function">TypeAlias</a></td>
+    <td><span>Special marker indicating that an assignment should be recognized as a proper type alias definition by type checkers.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing.ForwardRef.html" class="code" data-type="Class">ForwardRef</a></td>
+    <td><span>Internal wrapper to hold a forward reference.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing.TypeVar.html" class="code" data-type="Class">TypeVar</a></td>
+    <td><span>Type variable.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing.Generic.html" class="code" data-type="Class">Generic</a></td>
+    <td><span>Abstract base class for generic types.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#EXCLUDED_ATTRIBUTES" class="code" data-type="Variable">EXCLUDED_ATTRIBUTES</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing.Protocol.html" class="code" data-type="Class">Protocol</a></td>
+    <td><span>Base class for protocol classes.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing.Annotated.html" class="code" data-type="Class">Annotated</a></td>
+    <td><span>Add context specific metadata to a type.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#runtime_checkable" class="code" data-type="Function">runtime_checkable</a></td>
+    <td><span>Mark a protocol class as a runtime protocol.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#cast" class="code" data-type="Function">cast</a></td>
+    <td><span>Cast a value to a type.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#get_type_hints" class="code" data-type="Function">get_type_hints</a></td>
+    <td><span>Return type hints for an object.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#get_origin" class="code" data-type="Function">get_origin</a></td>
+    <td><span>Get the unsubscripted version of a type.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#get_args" class="code" data-type="Function">get_args</a></td>
+    <td><span>Get type arguments with all substitutions performed.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#is_typeddict" class="code" data-type="Function">is_typeddict</a></td>
+    <td><span>Check if an annotation is a TypedDict class</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#no_type_check" class="code" data-type="Function">no_type_check</a></td>
+    <td><span>Decorator to indicate that annotations are not type hints.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#no_type_check_decorator" class="code" data-type="Function">no_type_check_decorator</a></td>
+    <td><span>Decorator to give another decorator the @no_type_check effect.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#overload" class="code" data-type="Function">overload</a></td>
+    <td><span>Decorator for overloaded functions/methods.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#final" class="code" data-type="Function">final</a></td>
+    <td><span>A decorator to indicate final methods and final classes.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#T" class="code" data-type="Variable">T</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#KT" class="code" data-type="Variable">KT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#VT" class="code" data-type="Variable">VT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#T_co" class="code" data-type="Variable">T_co</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#V_co" class="code" data-type="Variable">V_co</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#VT_co" class="code" data-type="Variable">VT_co</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#T_contra" class="code" data-type="Variable">T_contra</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#CT_co" class="code" data-type="Variable">CT_co</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#AnyStr" class="code" data-type="Variable">AnyStr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#Hashable" class="code" data-type="Variable">Hashable</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#Awaitable" class="code" data-type="Variable">Awaitable</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#Coroutine" class="code" data-type="Variable">Coroutine</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#AsyncIterable" class="code" data-type="Variable">AsyncIterable</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#AsyncIterator" class="code" data-type="Variable">AsyncIterator</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#Iterable" class="code" data-type="Variable">Iterable</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#Iterator" class="code" data-type="Variable">Iterator</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#Reversible" class="code" data-type="Variable">Reversible</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#Sized" class="code" data-type="Variable">Sized</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#Container" class="code" data-type="Variable">Container</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#Collection" class="code" data-type="Variable">Collection</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#Callable" class="code" data-type="Variable">Callable</a></td>
+    <td><span>Callable type; Callable[[int], str] is a function of (int) -&gt; str.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#AbstractSet" class="code" data-type="Variable">AbstractSet</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#MutableSet" class="code" data-type="Variable">MutableSet</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#Mapping" class="code" data-type="Variable">Mapping</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#MutableMapping" class="code" data-type="Variable">MutableMapping</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#Sequence" class="code" data-type="Variable">Sequence</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#MutableSequence" class="code" data-type="Variable">MutableSequence</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#ByteString" class="code" data-type="Variable">ByteString</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#Tuple" class="code" data-type="Variable">Tuple</a></td>
+    <td><span>Tuple type; Tuple[X, Y] is the cross-product type of X and Y.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#List" class="code" data-type="Variable">List</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#Deque" class="code" data-type="Variable">Deque</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#Set" class="code" data-type="Variable">Set</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#FrozenSet" class="code" data-type="Variable">FrozenSet</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#MappingView" class="code" data-type="Variable">MappingView</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#KeysView" class="code" data-type="Variable">KeysView</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#ItemsView" class="code" data-type="Variable">ItemsView</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#ValuesView" class="code" data-type="Variable">ValuesView</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#ContextManager" class="code" data-type="Variable">ContextManager</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#AsyncContextManager" class="code" data-type="Variable">AsyncContextManager</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#Dict" class="code" data-type="Variable">Dict</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#DefaultDict" class="code" data-type="Variable">DefaultDict</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#OrderedDict" class="code" data-type="Variable">OrderedDict</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#Counter" class="code" data-type="Variable">Counter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#ChainMap" class="code" data-type="Variable">ChainMap</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#Generator" class="code" data-type="Variable">Generator</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#AsyncGenerator" class="code" data-type="Variable">AsyncGenerator</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#Type" class="code" data-type="Variable">Type</a></td>
+    <td><span>A special construct usable to annotate class objects.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing.SupportsInt.html" class="code" data-type="Class">SupportsInt</a></td>
+    <td><span>An ABC with one abstract method __int__.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing.SupportsFloat.html" class="code" data-type="Class">SupportsFloat</a></td>
+    <td><span>An ABC with one abstract method __float__.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing.SupportsComplex.html" class="code" data-type="Class">SupportsComplex</a></td>
+    <td><span>An ABC with one abstract method __complex__.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing.SupportsBytes.html" class="code" data-type="Class">SupportsBytes</a></td>
+    <td><span>An ABC with one abstract method __bytes__.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing.SupportsIndex.html" class="code" data-type="Class">SupportsIndex</a></td>
+    <td><span>An ABC with one abstract method __index__.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing.SupportsAbs.html" class="code" data-type="Class">SupportsAbs</a></td>
+    <td><span>An ABC with one abstract method __abs__ that is covariant in its return type.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing.SupportsRound.html" class="code" data-type="Class">SupportsRound</a></td>
+    <td><span>An ABC with one abstract method __round__ that is covariant in its return type.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing.NamedTupleMeta.html" class="code" data-type="Class">NamedTupleMeta</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#NamedTuple" class="code" data-type="Function">NamedTuple</a></td>
+    <td><span>Typed version of namedtuple.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#TypedDict" class="code" data-type="Function">TypedDict</a></td>
+    <td><span>A simple typed namespace. At runtime it is equivalent to a plain dict.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#NewType" class="code" data-type="Function">NewType</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#TYPE_CHECKING" class="code" data-type="Variable">TYPE_CHECKING</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing.IO.html" class="code" data-type="Class">IO</a></td>
+    <td><span>Generic base class for TextIO and BinaryIO.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing.BinaryIO.html" class="code" data-type="Class">BinaryIO</a></td>
+    <td><span>Typed version of the return of open() in binary mode.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing.TextIO.html" class="code" data-type="Class">TextIO</a></td>
+    <td><span>Typed version of the return of open() in text mode.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing.io.html" class="code" data-type="Class">io</a></td>
+    <td><span>Wrapper namespace for IO generic classes.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#Pattern" class="code" data-type="Variable">Pattern</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#Match" class="code" data-type="Variable">Match</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing.re.html" class="code" data-type="Class">re</a></td>
+    <td><span>Wrapper namespace for re type aliases.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#_type_check" class="code" data-type="Function">_type_check</a></td>
+    <td><span>Check that the argument is a type, and return it (internal helper).</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#_type_repr" class="code" data-type="Function">_type_repr</a></td>
+    <td><span>Return the repr() of an object, special-casing types (internal helper).</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#_collect_type_vars" class="code" data-type="Function">_collect_type_vars</a></td>
+    <td><span>Collect all type variable contained in types in order of first appearance (lexicographic order). For example::</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#_check_generic" class="code" data-type="Function">_check_generic</a></td>
+    <td><span>Check correct count for parameters of a generic cls (internal helper). This gives a nice error message in case of count mismatch.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#_deduplicate" class="code" data-type="Function">_deduplicate</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#_remove_dups_flatten" class="code" data-type="Function">_remove_dups_flatten</a></td>
+    <td><span>An internal helper for Union creation and substitution: flatten Unions among parameters, then remove duplicates.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#_flatten_literal_params" class="code" data-type="Function">_flatten_literal_params</a></td>
+    <td><span>An internal helper for Literal creation: flatten Literals among parameters</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#_cleanups" class="code" data-type="Variable">_cleanups</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#_tp_cache" class="code" data-type="Function">_tp_cache</a></td>
+    <td><span>Internal wrapper caching __getitem__ of generic types with a fallback to original function for non-hashable arguments.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#_eval_type" class="code" data-type="Function">_eval_type</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing._Final.html" class="code" data-type="Class">_Final</a></td>
+    <td><span>Mixin to prohibit subclassing</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing._Immutable.html" class="code" data-type="Class">_Immutable</a></td>
+    <td><span>Mixin to indicate that object should not be copied.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing._SpecialForm.html" class="code" data-type="Class">_SpecialForm</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing._LiteralSpecialForm.html" class="code" data-type="Class">_LiteralSpecialForm</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#_is_dunder" class="code" data-type="Function">_is_dunder</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing._BaseGenericAlias.html" class="code" data-type="Class">_BaseGenericAlias</a></td>
+    <td><span>The central part of internal API.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing._GenericAlias.html" class="code" data-type="Class">_GenericAlias</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing._SpecialGenericAlias.html" class="code" data-type="Class">_SpecialGenericAlias</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing._CallableGenericAlias.html" class="code" data-type="Class">_CallableGenericAlias</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing._CallableType.html" class="code" data-type="Class">_CallableType</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing._TupleType.html" class="code" data-type="Class">_TupleType</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing._UnionGenericAlias.html" class="code" data-type="Class">_UnionGenericAlias</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#_value_and_type_iter" class="code" data-type="Function">_value_and_type_iter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing._LiteralGenericAlias.html" class="code" data-type="Class">_LiteralGenericAlias</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing._TypingEmpty.html" class="code" data-type="Class">_TypingEmpty</a></td>
+    <td><span>Internal placeholder for () or []. Used by TupleMeta and CallableMeta to allow empty list/tuple in specific places, without allowing them to sneak in where prohibited.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing._TypingEllipsis.html" class="code" data-type="Class">_TypingEllipsis</a></td>
+    <td><span>Internal placeholder for ... (ellipsis).</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#_TYPING_INTERNALS" class="code" data-type="Variable">_TYPING_INTERNALS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#_SPECIAL_NAMES" class="code" data-type="Variable">_SPECIAL_NAMES</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#_get_protocol_attrs" class="code" data-type="Function">_get_protocol_attrs</a></td>
+    <td><span>Collect protocol members from a protocol class objects.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#_is_callable_members_only" class="code" data-type="Function">_is_callable_members_only</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#_no_init" class="code" data-type="Function">_no_init</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#_allow_reckless_class_cheks" class="code" data-type="Function">_allow_reckless_class_cheks</a></td>
+    <td><span>Allow instance and class checks for special stdlib modules.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#_PROTO_ALLOWLIST" class="code" data-type="Variable">_PROTO_ALLOWLIST</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing._ProtocolMeta.html" class="code" data-type="Class">_ProtocolMeta</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing._AnnotatedAlias.html" class="code" data-type="Class">_AnnotatedAlias</a></td>
+    <td><span>Runtime representation of an annotated type.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#_get_defaults" class="code" data-type="Function">_get_defaults</a></td>
+    <td><span>Internal helper to extract the default arguments, by name.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#_allowed_types" class="code" data-type="Variable">_allowed_types</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#_strip_annotations" class="code" data-type="Function">_strip_annotations</a></td>
+    <td><span>Strips the annotations from a given type.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#_overload_dummy" class="code" data-type="Function">_overload_dummy</a></td>
+    <td><span>Helper for @overload to raise when called.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#_make_nmtuple" class="code" data-type="Function">_make_nmtuple</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#_prohibited" class="code" data-type="Variable">_prohibited</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#_special" class="code" data-type="Variable">_special</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#_NamedTuple" class="code" data-type="Variable">_NamedTuple</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.typing.html#_namedtuple_mro_entries" class="code" data-type="Function">_namedtuple_mro_entries</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.typing._TypedDictMeta.html" class="code" data-type="Class">_TypedDictMeta</a></td>
+    <td><span class="undocumented">No class1/2 methods documented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.typing.html#_TypedDict" class="code" data-type="Variable">_TypedDict</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction private">
+  
+  <a name="Lib.typing._type_check">
+    
+  </a>
+  <a name="_type_check">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _type_check(arg, msg, is_argument=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Check that the argument is a type, and return it (internal helper).
+
+As a special case, accept None and return type(None) instead. Also wrap strings
+into ForwardRef instances. Consider several corner cases, for example plain
+special forms like Union are not valid, while Union[int, str] is OK, etc.
+The msg argument is a human-readable error message, e.g::
+
+    "Union[arg, ...]: arg should be a type."
+
+We append the repr() of the actual value (truncated to 100 chars).</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.typing._type_repr">
+    
+  </a>
+  <a name="_type_repr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _type_repr(obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the repr() of an object, special-casing types (internal helper).
+
+If obj is a type, we return a shorter version than the default
+type.__repr__, based on the module and qualified name, which is
+typically enough to uniquely identify a type.  For everything
+else, we fall back on repr(obj).</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.typing._collect_type_vars">
+    
+  </a>
+  <a name="_collect_type_vars">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _collect_type_vars(types):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Collect all type variable contained in types in order of
+first appearance (lexicographic order). For example::
+
+    _collect_type_vars((T, List[S, T])) == (T, S)</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.typing._check_generic">
+    
+  </a>
+  <a name="_check_generic">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _check_generic(cls, parameters, elen):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Check correct count for parameters of a generic cls (internal helper).
+This gives a nice error message in case of count mismatch.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.typing._deduplicate">
+    
+  </a>
+  <a name="_deduplicate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _deduplicate(params):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.typing._remove_dups_flatten">
+    
+  </a>
+  <a name="_remove_dups_flatten">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _remove_dups_flatten(parameters):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">An internal helper for Union creation and substitution: flatten Unions
+among parameters, then remove duplicates.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.typing._flatten_literal_params">
+    
+  </a>
+  <a name="_flatten_literal_params">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _flatten_literal_params(parameters):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">An internal helper for Literal creation: flatten Literals among parameters</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.typing._cleanups">
+    
+  </a>
+  <a name="_cleanups">
+    
+  </a>
+  <div class="functionHeader">
+    _cleanups =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.typing._tp_cache">
+    
+  </a>
+  <a name="_tp_cache">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _tp_cache():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Internal wrapper caching __getitem__ of generic types with a fallback to
+original function for non-hashable arguments.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.typing._eval_type">
+    
+  </a>
+  <a name="_eval_type">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _eval_type(t, globalns, localns, recursive_guard=frozenset()):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Evaluate all forward references in the given type t.
+For use of globalns and localns see the docstring for get_type_hints().
+recursive_guard is used to prevent prevent infinite recursion
+with recursive ForwardRef.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.typing.Any">
+    
+  </a>
+  <a name="Any">
+    
+  </a>
+  <div class="functionHeader">
+    @_SpecialForm<br />
+    def
+    Any(self, parameters):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Special type indicating an unconstrained type.
+
+- Any is compatible with every type.
+- Any assumed to have all methods.
+- All values assumed to be instances of Any.
+
+Note that all the above statements are true from the point of view of
+static type checkers. At runtime, Any should not be used with instance
+or class checks.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.typing.NoReturn">
+    
+  </a>
+  <a name="NoReturn">
+    
+  </a>
+  <div class="functionHeader">
+    @_SpecialForm<br />
+    def
+    NoReturn(self, parameters):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Special type indicating functions that never return.
+Example::
+
+  from typing import NoReturn
+
+  def stop() -&gt; NoReturn:
+      raise Exception('no way')
+
+This type is invalid in other positions, e.g., ``List[NoReturn]``
+will fail in static type checkers.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.typing.ClassVar">
+    
+  </a>
+  <a name="ClassVar">
+    
+  </a>
+  <div class="functionHeader">
+    @_SpecialForm<br />
+    def
+    ClassVar(self, parameters):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Special type construct to mark class variables.
+
+An annotation wrapped in ClassVar indicates that a given
+attribute is intended to be used as a class variable and
+should not be set on instances of that class. Usage::
+
+  class Starship:
+      stats: ClassVar[Dict[str, int]] = {} # class variable
+      damage: int = 10                     # instance variable
+
+ClassVar accepts only types and cannot be further subscribed.
+
+Note that ClassVar is not a class itself, and should not
+be used with isinstance() or issubclass().</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.typing.Final">
+    
+  </a>
+  <a name="Final">
+    
+  </a>
+  <div class="functionHeader">
+    @_SpecialForm<br />
+    def
+    Final(self, parameters):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Special typing construct to indicate final names to type checkers.
+
+A final name cannot be re-assigned or overridden in a subclass.
+For example:
+
+  MAX_SIZE: Final = 9000
+  MAX_SIZE += 1  # Error reported by type checker
+
+  class Connection:
+      TIMEOUT: Final[int] = 10
+
+  class FastConnector(Connection):
+      TIMEOUT = 1  # Error reported by type checker
+
+There is no runtime checking of these properties.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.typing.Union">
+    
+  </a>
+  <a name="Union">
+    
+  </a>
+  <div class="functionHeader">
+    @_SpecialForm<br />
+    def
+    Union(self, parameters):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Union type; Union[X, Y] means either X or Y.
+
+To define a union, use e.g. Union[int, str].  Details:
+- The arguments must be types and there must be at least one.
+- None as an argument is a special case and is replaced by
+  type(None).
+- Unions of unions are flattened, e.g.::
+
+    Union[Union[int, str], float] == Union[int, str, float]
+
+- Unions of a single argument vanish, e.g.::
+
+    Union[int] == int  # The constructor actually returns int
+
+- Redundant arguments are skipped, e.g.::
+
+    Union[int, str, int] == Union[int, str]
+
+- When comparing unions, the argument order is ignored, e.g.::
+
+    Union[int, str] == Union[str, int]
+
+- You cannot subclass or instantiate a union.
+- You can use Optional[X] as a shorthand for Union[X, None].</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.typing.Optional">
+    
+  </a>
+  <a name="Optional">
+    
+  </a>
+  <div class="functionHeader">
+    @_SpecialForm<br />
+    def
+    Optional(self, parameters):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Optional type.
+
+Optional[X] is equivalent to Union[X, None].</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.typing.Literal">
+    
+  </a>
+  <a name="Literal">
+    
+  </a>
+  <div class="functionHeader">
+    @_LiteralSpecialForm<br />
+    def
+    Literal(self, parameters):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Special typing form to define literal types (a.k.a. value types).
+
+This form can be used to indicate to type checkers that the corresponding
+variable or function parameter has a value equivalent to the provided
+literal (or one of several literals):
+
+  def validate_simple(data: Any) -&gt; Literal[True]:  # always returns True
+      ...
+
+  MODE = Literal['r', 'rb', 'w', 'wb']
+  def open_helper(file: str, mode: MODE) -&gt; str:
+      ...
+
+  open_helper('/some/path', 'r')  # Passes type check
+  open_helper('/other/path', 'typo')  # Error in type checker
+
+Literal[...] cannot be subclassed. At runtime, an arbitrary value
+is allowed as type argument to Literal[...], but type checkers may
+impose restrictions.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.typing.TypeAlias">
+    
+  </a>
+  <a name="TypeAlias">
+    
+  </a>
+  <div class="functionHeader">
+    @_SpecialForm<br />
+    def
+    TypeAlias(self, parameters):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Special marker indicating that an assignment should
+be recognized as a proper type alias definition by type
+checkers.
+
+For example::
+
+    Predicate: TypeAlias = Callable[..., bool]
+
+It's invalid when used anywhere except as in the example above.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.typing._is_dunder">
+    
+  </a>
+  <a name="_is_dunder">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _is_dunder(attr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.typing._value_and_type_iter">
+    
+  </a>
+  <a name="_value_and_type_iter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _value_and_type_iter(parameters):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.typing._TYPING_INTERNALS">
+    
+  </a>
+  <a name="_TYPING_INTERNALS">
+    
+  </a>
+  <div class="functionHeader">
+    _TYPING_INTERNALS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[str]</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.typing._SPECIAL_NAMES">
+    
+  </a>
+  <a name="_SPECIAL_NAMES">
+    
+  </a>
+  <div class="functionHeader">
+    _SPECIAL_NAMES =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[str]</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.EXCLUDED_ATTRIBUTES">
+    
+  </a>
+  <a name="EXCLUDED_ATTRIBUTES">
+    
+  </a>
+  <div class="functionHeader">
+    EXCLUDED_ATTRIBUTES =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.typing._get_protocol_attrs">
+    
+  </a>
+  <a name="_get_protocol_attrs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_protocol_attrs(cls):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Collect protocol members from a protocol class objects.
+
+This includes names actually defined in the class dictionary, as well
+as names that appear in annotations. Special names (above) are skipped.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.typing._is_callable_members_only">
+    
+  </a>
+  <a name="_is_callable_members_only">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _is_callable_members_only(cls):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.typing._no_init">
+    
+  </a>
+  <a name="_no_init">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _no_init(self, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.typing._allow_reckless_class_cheks">
+    
+  </a>
+  <a name="_allow_reckless_class_cheks">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _allow_reckless_class_cheks():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Allow instance and class checks for special stdlib modules.
+
+The abc and functools modules indiscriminately call isinstance() and
+issubclass() on the whole MRO of a user class, which may contain protocols.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.typing._PROTO_ALLOWLIST">
+    
+  </a>
+  <a name="_PROTO_ALLOWLIST">
+    
+  </a>
+  <div class="functionHeader">
+    _PROTO_ALLOWLIST =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.typing.runtime_checkable">
+    
+  </a>
+  <a name="runtime_checkable">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    runtime_checkable(cls):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Mark a protocol class as a runtime protocol.
+
+Such protocol can be used with isinstance() and issubclass().
+Raise TypeError if applied to a non-protocol class.
+This allows a simple-minded structural check very similar to
+one trick ponies in collections.abc such as Iterable.
+For example::
+
+    @runtime_checkable
+    class Closable(Protocol):
+        def close(self): ...
+
+    assert isinstance(open('/some/file'), Closable)
+
+Warning: this will check only the presence of the required methods,
+not their type signatures!</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.typing.cast">
+    
+  </a>
+  <a name="cast">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    cast(typ, val):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Cast a value to a type.
+
+This returns the value unchanged.  To the type checker this
+signals that the return value has the designated type, but at
+runtime we intentionally don't check anything (we want this
+to be as fast as possible).</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.typing._get_defaults">
+    
+  </a>
+  <a name="_get_defaults">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_defaults(func):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Internal helper to extract the default arguments, by name.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.typing._allowed_types">
+    
+  </a>
+  <a name="_allowed_types">
+    
+  </a>
+  <div class="functionHeader">
+    _allowed_types =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.typing.get_type_hints">
+    
+  </a>
+  <a name="get_type_hints">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_type_hints(obj, globalns=None, localns=None, include_extras=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return type hints for an object.
+
+This is often the same as obj.__annotations__, but it handles
+forward references encoded as string literals, adds Optional[t] if a
+default value equal to None is set and recursively replaces all
+'Annotated[T, ...]' with 'T' (unless 'include_extras=True').
+
+The argument may be a module, class, method, or function. The annotations
+are returned as a dictionary. For classes, annotations include also
+inherited members.
+
+TypeError is raised if the argument is not of a type that can contain
+annotations, and an empty dictionary is returned if no annotations are
+present.
+
+BEWARE -- the behavior of globalns and localns is counterintuitive
+(unless you are familiar with how eval() and exec() work).  The
+search order is locals first, then globals.
+
+- If no dict arguments are passed, an attempt is made to use the
+  globals from obj (or the respective module's globals for classes),
+  and these are also used as the locals.  If the object does not appear
+  to have globals, an empty dictionary is used.
+
+- If one dict argument is passed, it is used for both globals and
+  locals.
+
+- If two dict arguments are passed, they specify globals and
+  locals, respectively.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.typing._strip_annotations">
+    
+  </a>
+  <a name="_strip_annotations">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _strip_annotations(t):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Strips the annotations from a given type.
+    </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.typing.get_origin">
+    
+  </a>
+  <a name="get_origin">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_origin(tp):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get the unsubscripted version of a type.
+
+This supports generic types, Callable, Tuple, Union, Literal, Final, ClassVar
+and Annotated. Return None for unsupported types. Examples::
+
+    get_origin(Literal[42]) is Literal
+    get_origin(int) is None
+    get_origin(ClassVar[int]) is ClassVar
+    get_origin(Generic) is Generic
+    get_origin(Generic[T]) is Generic
+    get_origin(Union[T, int]) is Union
+    get_origin(List[Tuple[T, T]][int]) == list</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.typing.get_args">
+    
+  </a>
+  <a name="get_args">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_args(tp):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get type arguments with all substitutions performed.
+
+For unions, basic simplifications used by Union constructor are performed.
+Examples::
+    get_args(Dict[str, int]) == (str, int)
+    get_args(int) == ()
+    get_args(Union[int, Union[T, int], str][int]) == (int, str)
+    get_args(Union[int, Tuple[T, int]][str]) == (int, Tuple[str, int])
+    get_args(Callable[[], T][int]) == ([], int)</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.typing.is_typeddict">
+    
+  </a>
+  <a name="is_typeddict">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_typeddict(tp):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Check if an annotation is a TypedDict class
+
+For example::
+    class Film(TypedDict):
+        title: str
+        year: int
+
+    is_typeddict(Film)  # =&gt; True
+    is_typeddict(Union[list, str])  # =&gt; False</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.typing.no_type_check">
+    
+  </a>
+  <a name="no_type_check">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    no_type_check(arg):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Decorator to indicate that annotations are not type hints.
+
+The argument must be a class or function; if it is a class, it
+applies recursively to all methods and classes defined in that class
+(but not to methods defined in its superclasses or subclasses).
+
+This mutates the function(s) or class(es) in place.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.typing.no_type_check_decorator">
+    
+  </a>
+  <a name="no_type_check_decorator">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    no_type_check_decorator(decorator):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Decorator to give another decorator the @no_type_check effect.
+
+This wraps the decorator with something that wraps the decorated
+function in @no_type_check.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.typing._overload_dummy">
+    
+  </a>
+  <a name="_overload_dummy">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _overload_dummy(*args, **kwds):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Helper for @overload to raise when called.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.typing.overload">
+    
+  </a>
+  <a name="overload">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    overload(func):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Decorator for overloaded functions/methods.
+
+In a stub file, place two or more stub definitions for the same
+function in a row, each decorated with @overload.  For example:
+
+  @overload
+  def utf8(value: None) -&gt; None: ...
+  @overload
+  def utf8(value: bytes) -&gt; bytes: ...
+  @overload
+  def utf8(value: str) -&gt; bytes: ...
+
+In a non-stub file (i.e. a regular .py file), do the same but
+follow it with an implementation.  The implementation should *not*
+be decorated with @overload.  For example:
+
+  @overload
+  def utf8(value: None) -&gt; None: ...
+  @overload
+  def utf8(value: bytes) -&gt; bytes: ...
+  @overload
+  def utf8(value: str) -&gt; bytes: ...
+  def utf8(value):
+      # implementation goes here</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.typing.final">
+    
+  </a>
+  <a name="final">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    final(f):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">A decorator to indicate final methods and final classes.
+
+Use this decorator to indicate to type checkers that the decorated
+method cannot be overridden, and decorated class cannot be subclassed.
+For example:
+
+  class Base:
+      @final
+      def done(self) -&gt; None:
+          ...
+  class Sub(Base):
+      def done(self) -&gt; None:  # Error reported by type checker
+            ...
+
+  @final
+  class Leaf:
+      ...
+  class Other(Leaf):  # Error reported by type checker
+      ...
+
+There is no runtime checking of these properties.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.T">
+    
+  </a>
+  <a name="T">
+    
+  </a>
+  <div class="functionHeader">
+    T =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.KT">
+    
+  </a>
+  <a name="KT">
+    
+  </a>
+  <div class="functionHeader">
+    KT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.VT">
+    
+  </a>
+  <a name="VT">
+    
+  </a>
+  <div class="functionHeader">
+    VT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.T_co">
+    
+  </a>
+  <a name="T_co">
+    
+  </a>
+  <div class="functionHeader">
+    T_co =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.V_co">
+    
+  </a>
+  <a name="V_co">
+    
+  </a>
+  <div class="functionHeader">
+    V_co =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.VT_co">
+    
+  </a>
+  <a name="VT_co">
+    
+  </a>
+  <div class="functionHeader">
+    VT_co =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.T_contra">
+    
+  </a>
+  <a name="T_contra">
+    
+  </a>
+  <div class="functionHeader">
+    T_contra =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.CT_co">
+    
+  </a>
+  <a name="CT_co">
+    
+  </a>
+  <div class="functionHeader">
+    CT_co =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.AnyStr">
+    
+  </a>
+  <a name="AnyStr">
+    
+  </a>
+  <div class="functionHeader">
+    AnyStr =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.Hashable">
+    
+  </a>
+  <a name="Hashable">
+    
+  </a>
+  <div class="functionHeader">
+    Hashable =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.Awaitable">
+    
+  </a>
+  <a name="Awaitable">
+    
+  </a>
+  <div class="functionHeader">
+    Awaitable =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.Coroutine">
+    
+  </a>
+  <a name="Coroutine">
+    
+  </a>
+  <div class="functionHeader">
+    Coroutine =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.AsyncIterable">
+    
+  </a>
+  <a name="AsyncIterable">
+    
+  </a>
+  <div class="functionHeader">
+    AsyncIterable =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.AsyncIterator">
+    
+  </a>
+  <a name="AsyncIterator">
+    
+  </a>
+  <div class="functionHeader">
+    AsyncIterator =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.Iterable">
+    
+  </a>
+  <a name="Iterable">
+    
+  </a>
+  <div class="functionHeader">
+    Iterable =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.Iterator">
+    
+  </a>
+  <a name="Iterator">
+    
+  </a>
+  <div class="functionHeader">
+    Iterator =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.Reversible">
+    
+  </a>
+  <a name="Reversible">
+    
+  </a>
+  <div class="functionHeader">
+    Reversible =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.Sized">
+    
+  </a>
+  <a name="Sized">
+    
+  </a>
+  <div class="functionHeader">
+    Sized =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.Container">
+    
+  </a>
+  <a name="Container">
+    
+  </a>
+  <div class="functionHeader">
+    Container =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.Collection">
+    
+  </a>
+  <a name="Collection">
+    
+  </a>
+  <div class="functionHeader">
+    Collection =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.Callable">
+    
+  </a>
+  <a name="Callable">
+    
+  </a>
+  <div class="functionHeader">
+    Callable =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="pre">Callable type; Callable[[int], str] is a function of (int) -&gt; str.
+
+    The subscription syntax must always be used with exactly two
+    values: the argument list and the return type.  The argument list
+    must be a list of types or ellipsis; the return type must be a single type.
+
+    There is no syntax to indicate optional or keyword arguments,
+    such function types are rarely used as callback types.
+    </p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.AbstractSet">
+    
+  </a>
+  <a name="AbstractSet">
+    
+  </a>
+  <div class="functionHeader">
+    AbstractSet =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.MutableSet">
+    
+  </a>
+  <a name="MutableSet">
+    
+  </a>
+  <div class="functionHeader">
+    MutableSet =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.Mapping">
+    
+  </a>
+  <a name="Mapping">
+    
+  </a>
+  <div class="functionHeader">
+    Mapping =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.MutableMapping">
+    
+  </a>
+  <a name="MutableMapping">
+    
+  </a>
+  <div class="functionHeader">
+    MutableMapping =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.Sequence">
+    
+  </a>
+  <a name="Sequence">
+    
+  </a>
+  <div class="functionHeader">
+    Sequence =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.MutableSequence">
+    
+  </a>
+  <a name="MutableSequence">
+    
+  </a>
+  <div class="functionHeader">
+    MutableSequence =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.ByteString">
+    
+  </a>
+  <a name="ByteString">
+    
+  </a>
+  <div class="functionHeader">
+    ByteString =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.Tuple">
+    
+  </a>
+  <a name="Tuple">
+    
+  </a>
+  <div class="functionHeader">
+    Tuple =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="pre">Tuple type; Tuple[X, Y] is the cross-product type of X and Y.
+
+    Example: Tuple[T1, T2] is a tuple of two elements corresponding
+    to type variables T1 and T2.  Tuple[int, float, str] is a tuple
+    of an int, a float and a string.
+
+    To specify a variable-length tuple of homogeneous type, use Tuple[T, ...].
+    </p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.List">
+    
+  </a>
+  <a name="List">
+    
+  </a>
+  <div class="functionHeader">
+    List =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.Deque">
+    
+  </a>
+  <a name="Deque">
+    
+  </a>
+  <div class="functionHeader">
+    Deque =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.Set">
+    
+  </a>
+  <a name="Set">
+    
+  </a>
+  <div class="functionHeader">
+    Set =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.FrozenSet">
+    
+  </a>
+  <a name="FrozenSet">
+    
+  </a>
+  <div class="functionHeader">
+    FrozenSet =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.MappingView">
+    
+  </a>
+  <a name="MappingView">
+    
+  </a>
+  <div class="functionHeader">
+    MappingView =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.KeysView">
+    
+  </a>
+  <a name="KeysView">
+    
+  </a>
+  <div class="functionHeader">
+    KeysView =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.ItemsView">
+    
+  </a>
+  <a name="ItemsView">
+    
+  </a>
+  <div class="functionHeader">
+    ItemsView =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.ValuesView">
+    
+  </a>
+  <a name="ValuesView">
+    
+  </a>
+  <div class="functionHeader">
+    ValuesView =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.ContextManager">
+    
+  </a>
+  <a name="ContextManager">
+    
+  </a>
+  <div class="functionHeader">
+    ContextManager =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.AsyncContextManager">
+    
+  </a>
+  <a name="AsyncContextManager">
+    
+  </a>
+  <div class="functionHeader">
+    AsyncContextManager =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.Dict">
+    
+  </a>
+  <a name="Dict">
+    
+  </a>
+  <div class="functionHeader">
+    Dict =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.DefaultDict">
+    
+  </a>
+  <a name="DefaultDict">
+    
+  </a>
+  <div class="functionHeader">
+    DefaultDict =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.OrderedDict">
+    
+  </a>
+  <a name="OrderedDict">
+    
+  </a>
+  <div class="functionHeader">
+    OrderedDict =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.Counter">
+    
+  </a>
+  <a name="Counter">
+    
+  </a>
+  <div class="functionHeader">
+    Counter =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.ChainMap">
+    
+  </a>
+  <a name="ChainMap">
+    
+  </a>
+  <div class="functionHeader">
+    ChainMap =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.Generator">
+    
+  </a>
+  <a name="Generator">
+    
+  </a>
+  <div class="functionHeader">
+    Generator =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.AsyncGenerator">
+    
+  </a>
+  <a name="AsyncGenerator">
+    
+  </a>
+  <div class="functionHeader">
+    AsyncGenerator =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.Type">
+    
+  </a>
+  <a name="Type">
+    
+  </a>
+  <div class="functionHeader">
+    Type =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="pre">A special construct usable to annotate class objects.
+
+    For example, suppose we have the following classes::
+
+      class User: ...  # Abstract base for User classes
+      class BasicUser(User): ...
+      class ProUser(User): ...
+      class TeamUser(User): ...
+
+    And a function that takes a class argument that's a subclass of
+    User and returns an instance of the corresponding class::
+
+      U = TypeVar('U', bound=User)
+      def new_user(user_class: Type[U]) -&gt; U:
+          user = user_class()
+          # (Here we could write the user object to a database)
+          return user
+
+      joe = new_user(BasicUser)
+
+    At this point the type checker knows that joe has type BasicUser.
+    </p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.typing._make_nmtuple">
+    
+  </a>
+  <a name="_make_nmtuple">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _make_nmtuple(name, types, module, defaults=()):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.typing._prohibited">
+    
+  </a>
+  <a name="_prohibited">
+    
+  </a>
+  <div class="functionHeader">
+    _prohibited =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.typing._special">
+    
+  </a>
+  <a name="_special">
+    
+  </a>
+  <div class="functionHeader">
+    _special =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.typing.NamedTuple">
+    
+  </a>
+  <a name="NamedTuple">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    NamedTuple(**kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Typed version of namedtuple.
+
+Usage in Python versions &gt;= 3.6::
+
+    class Employee(NamedTuple):
+        name: str
+        id: int
+
+This is equivalent to::
+
+    Employee = collections.namedtuple('Employee', ['name', 'id'])
+
+The resulting class has an extra __annotations__ attribute, giving a
+dict that maps field names to types.  (The field names are also in
+the _fields attribute, which is part of the namedtuple API.)
+Alternative equivalent keyword syntax is also accepted::
+
+    Employee = NamedTuple('Employee', name=str, id=int)
+
+In Python versions &lt;= 3.5 use::
+
+    Employee = NamedTuple('Employee', [('name', str), ('id', int)])</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.typing._NamedTuple">
+    
+  </a>
+  <a name="_NamedTuple">
+    
+  </a>
+  <div class="functionHeader">
+    _NamedTuple =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.typing._namedtuple_mro_entries">
+    
+  </a>
+  <a name="_namedtuple_mro_entries">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _namedtuple_mro_entries(bases):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.typing.TypedDict">
+    
+  </a>
+  <a name="TypedDict">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    TypedDict(**kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">A simple typed namespace. At runtime it is equivalent to a plain dict.
+
+TypedDict creates a dictionary type that expects all of its
+instances to have a certain set of keys, where each key is
+associated with a value of a consistent type. This expectation
+is not checked at runtime but is only enforced by type checkers.
+Usage::
+
+    class Point2D(TypedDict):
+        x: int
+        y: int
+        label: str
+
+    a: Point2D = {'x': 1, 'y': 2, 'label': 'good'}  # OK
+    b: Point2D = {'z': 3, 'label': 'bad'}           # Fails type check
+
+    assert Point2D(x=1, y=2, label='first') == dict(x=1, y=2, label='first')
+
+The type info can be accessed via the Point2D.__annotations__ dict, and
+the Point2D.__required_keys__ and Point2D.__optional_keys__ frozensets.
+TypedDict supports two additional equivalent forms::
+
+    Point2D = TypedDict('Point2D', x=int, y=int, label=str)
+    Point2D = TypedDict('Point2D', {'x': int, 'y': int, 'label': str})
+
+By default, all keys must be present in a TypedDict. It is possible
+to override this by specifying totality.
+Usage::
+
+    class point2D(TypedDict, total=False):
+        x: int
+        y: int
+
+This means that a point2D TypedDict can have any of the keys omitted.A type
+checker is only expected to support a literal False or True as the value of
+the total argument. True is the default, and makes all items defined in the
+class body be required.
+
+The class syntax is only supported in Python 3.6+, while two other
+syntax forms work for Python 2.7 and 3.2+</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.typing._TypedDict">
+    
+  </a>
+  <a name="_TypedDict">
+    
+  </a>
+  <div class="functionHeader">
+    _TypedDict =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.typing.NewType">
+    
+  </a>
+  <a name="NewType">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    NewType(name, tp):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">NewType creates simple unique types with almost zero
+runtime overhead. NewType(name, tp) is considered a subtype of tp
+by static type checkers. At runtime, NewType(name, tp) returns
+a dummy function that simply returns its argument. Usage::
+
+    UserId = NewType('UserId', int)
+
+    def name_by_id(user_id: UserId) -&gt; str:
+        ...
+
+    UserId('user')          # Fails type check
+
+    name_by_id(42)          # Fails type check
+    name_by_id(UserId(42))  # OK
+
+    num = UserId(5) + 1     # type: int</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.TYPE_CHECKING">
+    
+  </a>
+  <a name="TYPE_CHECKING">
+    
+  </a>
+  <div class="functionHeader">
+    TYPE_CHECKING =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.Pattern">
+    
+  </a>
+  <a name="Pattern">
+    
+  </a>
+  <div class="functionHeader">
+    Pattern =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.typing.Match">
+    
+  </a>
+  <a name="Match">
+    
+  </a>
+  <div class="functionHeader">
+    Match =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

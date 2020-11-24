@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.pprint : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.pprint.html" class="code" data-type="Module">pprint</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Support to pretty-print lists, tuples, &amp; dictionaries recursively.
+
+Very simple, but useful, especially in debugging data structures.
+
+Classes
+-------
+
+PrettyPrinter()
+    Handle pretty-printing operations onto a stream using a configured
+    set of formatting parameters.
+
+Functions
+---------
+
+pformat()
+    Format a Python object into a pretty-printed representation.
+
+pprint()
+    Pretty-print a Python object to a stream [default is sys.stdout].
+
+saferepr()
+    Generate a 'standard' repr()-like value, but protect against recursive
+    data structures.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3405">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pprint.html#pprint" class="code" data-type="Function">pprint</a></td>
+    <td><span>Pretty-print a Python object to a stream [default is sys.stdout].</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pprint.html#pformat" class="code" data-type="Function">pformat</a></td>
+    <td><span>Format a Python object into a pretty-printed representation.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pprint.html#pp" class="code" data-type="Function">pp</a></td>
+    <td><span>Pretty-print a Python object</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pprint.html#saferepr" class="code" data-type="Function">saferepr</a></td>
+    <td><span>Version of repr() which can handle recursive data structures.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pprint.html#isreadable" class="code" data-type="Function">isreadable</a></td>
+    <td><span>Determine if saferepr(object) is readable by eval().</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pprint.html#isrecursive" class="code" data-type="Function">isrecursive</a></td>
+    <td><span>Determine if object requires a recursive representation.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.pprint.PrettyPrinter.html" class="code" data-type="Class">PrettyPrinter</a></td>
+    <td><span class="undocumented">No class0/1 class variables docstring; , 0/8 instance variables docstring; , 2/28 methods documented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.pprint._safe_key.html" class="code" data-type="Class">_safe_key</a></td>
+    <td><span>Helper function for key functions when sorting unorderable objects.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pprint.html#_safe_tuple" class="code" data-type="Function">_safe_tuple</a></td>
+    <td><span>Helper function for comparing 2-tuples</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pprint.html#_builtin_scalars" class="code" data-type="Variable">_builtin_scalars</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pprint.html#_recursion" class="code" data-type="Function">_recursion</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pprint.html#_perfcheck" class="code" data-type="Function">_perfcheck</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pprint.html#_wrap_bytes_repr" class="code" data-type="Function">_wrap_bytes_repr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction">
+  
+  <a name="Lib.pprint.pprint">
+    
+  </a>
+  <a name="pprint">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    pprint(object, stream=None, indent=1, width=80, depth=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Pretty-print a Python object to a stream [default is sys.stdout].</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pprint.pformat">
+    
+  </a>
+  <a name="pformat">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    pformat(object, indent=1, width=80, depth=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Format a Python object into a pretty-printed representation.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pprint.pp">
+    
+  </a>
+  <a name="pp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    pp(object, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Pretty-print a Python object</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pprint.saferepr">
+    
+  </a>
+  <a name="saferepr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    saferepr(object):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Version of repr() which can handle recursive data structures.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pprint.isreadable">
+    
+  </a>
+  <a name="isreadable">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    isreadable(object):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Determine if saferepr(object) is readable by eval().</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pprint.isrecursive">
+    
+  </a>
+  <a name="isrecursive">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    isrecursive(object):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Determine if object requires a recursive representation.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pprint._safe_tuple">
+    
+  </a>
+  <a name="_safe_tuple">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _safe_tuple(t):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Helper function for comparing 2-tuples</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.pprint._builtin_scalars">
+    
+  </a>
+  <a name="_builtin_scalars">
+    
+  </a>
+  <div class="functionHeader">
+    _builtin_scalars =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pprint._recursion">
+    
+  </a>
+  <a name="_recursion">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _recursion(object):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pprint._perfcheck">
+    
+  </a>
+  <a name="_perfcheck">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _perfcheck(object=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pprint._wrap_bytes_repr">
+    
+  </a>
+  <a name="_wrap_bytes_repr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _wrap_bytes_repr(object, width, allowance):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

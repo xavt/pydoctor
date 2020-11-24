@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.getpass : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.getpass.html" class="code" data-type="Module">getpass</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Utilities to get a password and/or the current user name.
+
+getpass(prompt[, stream]) - Prompt for a password, with echo turned off.
+getuser() - Get the user name from the environment or password database.
+
+GetPassWarning - This UserWarning is issued when getpass() cannot prevent
+                 echoing of the password contents while reading.
+
+On Windows, the msvcrt module will be used.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id1967">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.getpass.GetPassWarning.html" class="code" data-type="Class">GetPassWarning</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.getpass.html#unix_getpass" class="code" data-type="Function">unix_getpass</a></td>
+    <td><span>Prompt for a password, with echo turned off.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.getpass.html#win_getpass" class="code" data-type="Function">win_getpass</a></td>
+    <td><span>Prompt for password with echo off, using Windows getch().</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.getpass.html#fallback_getpass" class="code" data-type="Function">fallback_getpass</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.getpass.html#getuser" class="code" data-type="Function">getuser</a></td>
+    <td><span>Get the username from the environment or password database.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.getpass.html#_raw_input" class="code" data-type="Function">_raw_input</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction">
+  
+  <a name="Lib.getpass.unix_getpass">
+    
+  </a>
+  <a name="unix_getpass">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    unix_getpass(prompt="""Password: """, stream=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Prompt for a password, with echo turned off.
+
+Args:
+  prompt: Written on stream to ask for the input.  Default: 'Password: '
+  stream: A writable file object to display the prompt.  Defaults to
+          the tty.  If no tty is available defaults to sys.stderr.
+Returns:
+  The seKr3t input.
+Raises:
+  EOFError: If our input tty or stdin was closed.
+  GetPassWarning: When we were unable to turn echo off on the input.
+
+Always restores terminal settings before returning.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.getpass.win_getpass">
+    
+  </a>
+  <a name="win_getpass">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    win_getpass(prompt="""Password: """, stream=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Prompt for password with echo off, using Windows getch().</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.getpass.fallback_getpass">
+    
+  </a>
+  <a name="fallback_getpass">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    fallback_getpass(prompt="""Password: """, stream=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.getpass._raw_input">
+    
+  </a>
+  <a name="_raw_input">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _raw_input(prompt="""""", stream=None, input=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.getpass.getuser">
+    
+  </a>
+  <a name="getuser">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getuser():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get the username from the environment or password database.
+
+First try various environment variables, then the password
+database.  This works on Windows as long as USERNAME is set.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

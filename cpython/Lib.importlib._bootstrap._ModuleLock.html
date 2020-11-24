@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.importlib._bootstrap._ModuleLock : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class private"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.importlib.html" class="code" data-type="Package">importlib</a>.<a href="Lib.importlib._bootstrap.html" class="code" data-type="Module">_bootstrap</a>.<a href="Lib.importlib._bootstrap._ModuleLock.html" class="code" data-type="Class">_ModuleLock</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.importlib._bootstrap._ModuleLock:</code></p>
+        <p><a href="classIndex.html#Lib.importlib._bootstrap._ModuleLock">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">A recursive lock implementation which is able to detect deadlocks
+(e.g. thread 1 trying to take locks A then B, and thread 2 trying to
+take locks B then A).</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2529">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib._bootstrap._ModuleLock.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.importlib._bootstrap._ModuleLock.html#lock" class="code" data-type="Instance Variable">lock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.importlib._bootstrap._ModuleLock.html#wakeup" class="code" data-type="Instance Variable">wakeup</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.importlib._bootstrap._ModuleLock.html#name" class="code" data-type="Instance Variable">name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.importlib._bootstrap._ModuleLock.html#owner" class="code" data-type="Instance Variable">owner</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.importlib._bootstrap._ModuleLock.html#count" class="code" data-type="Instance Variable">count</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.importlib._bootstrap._ModuleLock.html#waiters" class="code" data-type="Instance Variable">waiters</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib._bootstrap._ModuleLock.html#has_deadlock" class="code" data-type="Method">has_deadlock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib._bootstrap._ModuleLock.html#acquire" class="code" data-type="Method">acquire</a></td>
+    <td><span>Acquire the module lock.  If a potential deadlock is detected, a _DeadlockError is raised. Otherwise, the lock is always acquired and True is returned.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib._bootstrap._ModuleLock.html#release" class="code" data-type="Method">release</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib._bootstrap._ModuleLock.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.importlib._bootstrap._ModuleLock.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.importlib._bootstrap._ModuleLock.lock">
+    
+  </a>
+  <a name="lock">
+    
+  </a>
+  <div class="functionHeader">
+    lock =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.importlib._bootstrap._ModuleLock.wakeup">
+    
+  </a>
+  <a name="wakeup">
+    
+  </a>
+  <div class="functionHeader">
+    wakeup =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.importlib._bootstrap._ModuleLock.name">
+    
+  </a>
+  <a name="name">
+    
+  </a>
+  <div class="functionHeader">
+    name =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.importlib._bootstrap._ModuleLock.owner">
+    
+  </a>
+  <a name="owner">
+    
+  </a>
+  <div class="functionHeader">
+    owner =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.importlib._bootstrap._ModuleLock.count">
+    
+  </a>
+  <a name="count">
+    
+  </a>
+  <div class="functionHeader">
+    count =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.importlib._bootstrap._ModuleLock.waiters">
+    
+  </a>
+  <a name="waiters">
+    
+  </a>
+  <div class="functionHeader">
+    waiters =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.importlib._bootstrap._ModuleLock.has_deadlock">
+    
+  </a>
+  <a name="has_deadlock">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    has_deadlock(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.importlib._bootstrap._ModuleLock.acquire">
+    
+  </a>
+  <a name="acquire">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    acquire(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Acquire the module lock.  If a potential deadlock is detected,
+a _DeadlockError is raised.
+Otherwise, the lock is always acquired and True is returned.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.importlib._bootstrap._ModuleLock.release">
+    
+  </a>
+  <a name="release">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    release(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.importlib._bootstrap._ModuleLock.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __repr__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

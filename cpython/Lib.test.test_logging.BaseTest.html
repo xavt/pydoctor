@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.test.test_logging.BaseTest : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.test.html" class="code" data-type="Package">test</a>.<a href="Lib.test.test_logging.html" class="code" data-type="Module">test_logging</a>.<a href="Lib.test.test_logging.BaseTest.html" class="code" data-type="Class">BaseTest</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.test.test_logging.BaseTest(<span title="unittest.TestCase">unittest.TestCase</span>):</code></p><p>Known subclasses: <a href="Lib.test.test_logging.BaseFileTest.html" class="code" data-type="Class">Lib.test.test_logging.BaseFileTest</a>, <a href="Lib.test.test_logging.BasicFilterTest.html" class="code" data-type="Class">Lib.test.test_logging.BasicFilterTest</a>, <a href="Lib.test.test_logging.BuiltinLevelsTest.html" class="code" data-type="Class">Lib.test.test_logging.BuiltinLevelsTest</a>, <a href="Lib.test.test_logging.ChildLoggerTest.html" class="code" data-type="Class">Lib.test.test_logging.ChildLoggerTest</a>, <a href="Lib.test.test_logging.ConfigDictTest.html" class="code" data-type="Class">Lib.test.test_logging.ConfigDictTest</a>, <a href="Lib.test.test_logging.ConfigFileTest.html" class="code" data-type="Class">Lib.test.test_logging.ConfigFileTest</a>, <a href="Lib.test.test_logging.CustomLevelsAndFiltersTest.html" class="code" data-type="Class">Lib.test.test_logging.CustomLevelsAndFiltersTest</a>, <a href="Lib.test.test_logging.DatagramHandlerTest.html" class="code" data-type="Class">Lib.test.test_logging.DatagramHandlerTest</a>, <a href="Lib.test.test_logging.EncodingTest.html" class="code" data-type="Class">Lib.test.test_logging.EncodingTest</a>, <a href="Lib.test.test_logging.ExceptionTest.html" class="code" data-type="Class">Lib.test.test_logging.ExceptionTest</a>, <a href="Lib.test.test_logging.HandlerTest.html" class="code" data-type="Class">Lib.test.test_logging.HandlerTest</a>, <a href="Lib.test.test_logging.HTTPHandlerTest.html" class="code" data-type="Class">Lib.test.test_logging.HTTPHandlerTest</a>, <a href="Lib.test.test_logging.LastResortTest.html" class="code" data-type="Class">Lib.test.test_logging.LastResortTest</a>, <a href="Lib.test.test_logging.LoggerTest.html" class="code" data-type="Class">Lib.test.test_logging.LoggerTest</a>, <a href="Lib.test.test_logging.LogRecordFactoryTest.html" class="code" data-type="Class">Lib.test.test_logging.LogRecordFactoryTest</a>, <a href="Lib.test.test_logging.LogRecordTest.html" class="code" data-type="Class">Lib.test.test_logging.LogRecordTest</a>, <a href="Lib.test.test_logging.ManagerTest.html" class="code" data-type="Class">Lib.test.test_logging.ManagerTest</a>, <a href="Lib.test.test_logging.MemoryHandlerTest.html" class="code" data-type="Class">Lib.test.test_logging.MemoryHandlerTest</a>, <a href="Lib.test.test_logging.MemoryTest.html" class="code" data-type="Class">Lib.test.test_logging.MemoryTest</a>, <a href="Lib.test.test_logging.ModuleLevelMiscTest.html" class="code" data-type="Class">Lib.test.test_logging.ModuleLevelMiscTest</a>, <a href="Lib.test.test_logging.NTEventLogHandlerTest.html" class="code" data-type="Class">Lib.test.test_logging.NTEventLogHandlerTest</a>, <a href="Lib.test.test_logging.QueueHandlerTest.html" class="code" data-type="Class">Lib.test.test_logging.QueueHandlerTest</a>, <a href="Lib.test.test_logging.QueueListenerTest.html" class="code" data-type="Class">Lib.test.test_logging.QueueListenerTest</a>, <a href="Lib.test.test_logging.ShutdownTest.html" class="code" data-type="Class">Lib.test.test_logging.ShutdownTest</a>, <a href="Lib.test.test_logging.SMTPHandlerTest.html" class="code" data-type="Class">Lib.test.test_logging.SMTPHandlerTest</a>, <a href="Lib.test.test_logging.SocketHandlerTest.html" class="code" data-type="Class">Lib.test.test_logging.SocketHandlerTest</a>, <a href="Lib.test.test_logging.StreamHandlerTest.html" class="code" data-type="Class">Lib.test.test_logging.StreamHandlerTest</a>, <a href="Lib.test.test_logging.SysLogHandlerTest.html" class="code" data-type="Class">Lib.test.test_logging.SysLogHandlerTest</a>, <a href="Lib.test.test_logging.WarningsTest.html" class="code" data-type="Class">Lib.test.test_logging.WarningsTest</a></p>
+        <p><a href="classIndex.html#Lib.test.test_logging.BaseTest">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Base class for logging tests.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id7445">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.test.test_logging.BaseTest.html#log_format" class="code" data-type="Class Variable">log_format</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.test.test_logging.BaseTest.html#expected_log_pat" class="code" data-type="Class Variable">expected_log_pat</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.test.test_logging.BaseTest.html#message_num" class="code" data-type="Class Variable">message_num</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_logging.BaseTest.html#setUp" class="code" data-type="Method">setUp</a></td>
+    <td><span>Setup the default logging stream to an internal StringIO instance, so that we can examine log output as we want.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_logging.BaseTest.html#saved_handlers" class="code" data-type="Instance Variable">saved_handlers</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_logging.BaseTest.html#saved_handler_list" class="code" data-type="Instance Variable">saved_handler_list</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_logging.BaseTest.html#saved_loggers" class="code" data-type="Instance Variable">saved_loggers</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_logging.BaseTest.html#saved_name_to_level" class="code" data-type="Instance Variable">saved_name_to_level</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_logging.BaseTest.html#saved_level_to_name" class="code" data-type="Instance Variable">saved_level_to_name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_logging.BaseTest.html#logger_states" class="code" data-type="Instance Variable">logger_states</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_logging.BaseTest.html#logger1" class="code" data-type="Instance Variable">logger1</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_logging.BaseTest.html#logger2" class="code" data-type="Instance Variable">logger2</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_logging.BaseTest.html#root_logger" class="code" data-type="Instance Variable">root_logger</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_logging.BaseTest.html#original_logging_level" class="code" data-type="Instance Variable">original_logging_level</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_logging.BaseTest.html#stream" class="code" data-type="Instance Variable">stream</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_logging.BaseTest.html#root_hdlr" class="code" data-type="Instance Variable">root_hdlr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_logging.BaseTest.html#root_formatter" class="code" data-type="Instance Variable">root_formatter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_logging.BaseTest.html#tearDown" class="code" data-type="Method">tearDown</a></td>
+    <td><span>Remove our logging stream, and restore the original logging level.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_logging.BaseTest.html#assert_log_lines" class="code" data-type="Method">assert_log_lines</a></td>
+    <td><span>Match the collected log lines against the regular expression self.expected_log_pat, and compare the extracted group values to the expected_values list of tuples.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_logging.BaseTest.html#next_message" class="code" data-type="Method">next_message</a></td>
+    <td><span>Generate a message consisting solely of an auto-incrementing integer.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_logging.BaseTest.html#_threading_key" class="code" data-type="Instance Variable">_threading_key</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.test.test_logging.BaseTest.log_format">
+    
+  </a>
+  <a name="log_format">
+    
+  </a>
+  <div class="functionHeader">
+    log_format =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.test.test_logging.BaseTest.expected_log_pat">
+    
+  </a>
+  <a name="expected_log_pat">
+    
+  </a>
+  <div class="functionHeader">
+    expected_log_pat =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.test.test_logging.ConfigDictTest.html" class="code" data-type="Class">Lib.test.test_logging.ConfigDictTest</a>, <a href="Lib.test.test_logging.ConfigFileTest.html" class="code" data-type="Class">Lib.test.test_logging.ConfigFileTest</a>, <a href="Lib.test.test_logging.CustomLevelsAndFiltersTest.html" class="code" data-type="Class">Lib.test.test_logging.CustomLevelsAndFiltersTest</a>, <a href="Lib.test.test_logging.MemoryHandlerTest.html" class="code" data-type="Class">Lib.test.test_logging.MemoryHandlerTest</a>, <a href="Lib.test.test_logging.QueueHandlerTest.html" class="code" data-type="Class">Lib.test.test_logging.QueueHandlerTest</a></div>
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.test.test_logging.BaseTest.message_num">
+    
+  </a>
+  <a name="message_num">
+    
+  </a>
+  <div class="functionHeader">
+    message_num =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_logging.BaseTest.setUp">
+    
+  </a>
+  <a name="setUp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setUp(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.test.test_logging.BaseFileTest.html" class="code" data-type="Class">Lib.test.test_logging.BaseFileTest</a>, <a href="Lib.test.test_logging.CustomLevelsAndFiltersTest.html" class="code" data-type="Class">Lib.test.test_logging.CustomLevelsAndFiltersTest</a>, <a href="Lib.test.test_logging.DatagramHandlerTest.html" class="code" data-type="Class">Lib.test.test_logging.DatagramHandlerTest</a>, <a href="Lib.test.test_logging.HTTPHandlerTest.html" class="code" data-type="Class">Lib.test.test_logging.HTTPHandlerTest</a>, <a href="Lib.test.test_logging.LoggerTest.html" class="code" data-type="Class">Lib.test.test_logging.LoggerTest</a>, <a href="Lib.test.test_logging.LogRecordFactoryTest.html" class="code" data-type="Class">Lib.test.test_logging.LogRecordFactoryTest</a>, <a href="Lib.test.test_logging.MemoryHandlerTest.html" class="code" data-type="Class">Lib.test.test_logging.MemoryHandlerTest</a>, <a href="Lib.test.test_logging.MemoryTest.html" class="code" data-type="Class">Lib.test.test_logging.MemoryTest</a>, <a href="Lib.test.test_logging.QueueHandlerTest.html" class="code" data-type="Class">Lib.test.test_logging.QueueHandlerTest</a>, <a href="Lib.test.test_logging.ShutdownTest.html" class="code" data-type="Class">Lib.test.test_logging.ShutdownTest</a>, <a href="Lib.test.test_logging.SocketHandlerTest.html" class="code" data-type="Class">Lib.test.test_logging.SocketHandlerTest</a>, <a href="Lib.test.test_logging.SysLogHandlerTest.html" class="code" data-type="Class">Lib.test.test_logging.SysLogHandlerTest</a></div>
+    
+    <div><p class="pre">Setup the default logging stream to an internal StringIO instance,
+so that we can examine log output as we want.</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.test.test_logging.BaseTest._threading_key">
+    
+  </a>
+  <a name="_threading_key">
+    
+  </a>
+  <div class="functionHeader">
+    _threading_key =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_logging.BaseTest.saved_handlers">
+    
+  </a>
+  <a name="saved_handlers">
+    
+  </a>
+  <div class="functionHeader">
+    saved_handlers =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_logging.BaseTest.saved_handler_list">
+    
+  </a>
+  <a name="saved_handler_list">
+    
+  </a>
+  <div class="functionHeader">
+    saved_handler_list =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_logging.BaseTest.saved_loggers">
+    
+  </a>
+  <a name="saved_loggers">
+    
+  </a>
+  <div class="functionHeader">
+    saved_loggers =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_logging.BaseTest.saved_name_to_level">
+    
+  </a>
+  <a name="saved_name_to_level">
+    
+  </a>
+  <div class="functionHeader">
+    saved_name_to_level =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_logging.BaseTest.saved_level_to_name">
+    
+  </a>
+  <a name="saved_level_to_name">
+    
+  </a>
+  <div class="functionHeader">
+    saved_level_to_name =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_logging.BaseTest.logger_states">
+    
+  </a>
+  <a name="logger_states">
+    
+  </a>
+  <div class="functionHeader">
+    logger_states =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_logging.BaseTest.logger1">
+    
+  </a>
+  <a name="logger1">
+    
+  </a>
+  <div class="functionHeader">
+    logger1 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_logging.BaseTest.logger2">
+    
+  </a>
+  <a name="logger2">
+    
+  </a>
+  <div class="functionHeader">
+    logger2 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_logging.BaseTest.root_logger">
+    
+  </a>
+  <a name="root_logger">
+    
+  </a>
+  <div class="functionHeader">
+    root_logger =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_logging.BaseTest.original_logging_level">
+    
+  </a>
+  <a name="original_logging_level">
+    
+  </a>
+  <div class="functionHeader">
+    original_logging_level =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_logging.BaseTest.stream">
+    
+  </a>
+  <a name="stream">
+    
+  </a>
+  <div class="functionHeader">
+    stream =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_logging.BaseTest.root_hdlr">
+    
+  </a>
+  <a name="root_hdlr">
+    
+  </a>
+  <div class="functionHeader">
+    root_hdlr =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_logging.BaseTest.root_formatter">
+    
+  </a>
+  <a name="root_formatter">
+    
+  </a>
+  <div class="functionHeader">
+    root_formatter =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_logging.BaseTest.tearDown">
+    
+  </a>
+  <a name="tearDown">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tearDown(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.test.test_logging.BaseFileTest.html" class="code" data-type="Class">Lib.test.test_logging.BaseFileTest</a>, <a href="Lib.test.test_logging.DatagramHandlerTest.html" class="code" data-type="Class">Lib.test.test_logging.DatagramHandlerTest</a>, <a href="Lib.test.test_logging.LogRecordFactoryTest.html" class="code" data-type="Class">Lib.test.test_logging.LogRecordFactoryTest</a>, <a href="Lib.test.test_logging.MemoryHandlerTest.html" class="code" data-type="Class">Lib.test.test_logging.MemoryHandlerTest</a>, <a href="Lib.test.test_logging.QueueHandlerTest.html" class="code" data-type="Class">Lib.test.test_logging.QueueHandlerTest</a>, <a href="Lib.test.test_logging.SocketHandlerTest.html" class="code" data-type="Class">Lib.test.test_logging.SocketHandlerTest</a>, <a href="Lib.test.test_logging.SysLogHandlerTest.html" class="code" data-type="Class">Lib.test.test_logging.SysLogHandlerTest</a></div>
+    
+    <div><p class="pre">Remove our logging stream, and restore the original logging
+level.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_logging.BaseTest.assert_log_lines">
+    
+  </a>
+  <a name="assert_log_lines">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assert_log_lines(self, expected_values, stream=None, pat=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Match the collected log lines against the regular expression
+self.expected_log_pat, and compare the extracted group values to
+the expected_values list of tuples.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_logging.BaseTest.next_message">
+    
+  </a>
+  <a name="next_message">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    next_message(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Generate a message consisting solely of an auto-incrementing
+integer.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

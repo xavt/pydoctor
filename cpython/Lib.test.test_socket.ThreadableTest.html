@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.test.test_socket.ThreadableTest : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.test.html" class="code" data-type="Package">test</a>.<a href="Lib.test.test_socket.html" class="code" data-type="Module">test_socket</a>.<a href="Lib.test.test_socket.ThreadableTest.html" class="code" data-type="Class">ThreadableTest</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.test.test_socket.ThreadableTest:</code></p><p>Known subclasses: <a href="Lib.test.test_socket.NetworkConnectionAttributesTest.html" class="code" data-type="Class">Lib.test.test_socket.NetworkConnectionAttributesTest</a>, <a href="Lib.test.test_socket.NetworkConnectionBehaviourTest.html" class="code" data-type="Class">Lib.test.test_socket.NetworkConnectionBehaviourTest</a>, <a href="Lib.test.test_socket.SocketPairTest.html" class="code" data-type="Class">Lib.test.test_socket.SocketPairTest</a>, <a href="Lib.test.test_socket.ThreadedCANSocketTest.html" class="code" data-type="Class">Lib.test.test_socket.ThreadedCANSocketTest</a>, <a href="Lib.test.test_socket.ThreadedRDSSocketTest.html" class="code" data-type="Class">Lib.test.test_socket.ThreadedRDSSocketTest</a>, <a href="Lib.test.test_socket.ThreadedSocketTestMixin.html" class="code" data-type="Class">Lib.test.test_socket.ThreadedSocketTestMixin</a>, <a href="Lib.test.test_socket.ThreadedTCPSocketTest.html" class="code" data-type="Class">Lib.test.test_socket.ThreadedTCPSocketTest</a>, <a href="Lib.test.test_socket.ThreadedUDPLITESocketTest.html" class="code" data-type="Class">Lib.test.test_socket.ThreadedUDPLITESocketTest</a>, <a href="Lib.test.test_socket.ThreadedUDPSocketTest.html" class="code" data-type="Class">Lib.test.test_socket.ThreadedUDPSocketTest</a>, <a href="Lib.test.test_socket.ThreadedVSOCKSocketStreamTest.html" class="code" data-type="Class">Lib.test.test_socket.ThreadedVSOCKSocketStreamTest</a>, <a href="Lib.test.test_socket.TIPCThreadableTest.html" class="code" data-type="Class">Lib.test.test_socket.TIPCThreadableTest</a></p>
+        <p><a href="classIndex.html#Lib.test.test_socket.ThreadableTest">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Threadable Test class
+
+The ThreadableTest class makes it easy to create a threaded
+client/server pair from an existing unit test. To create a
+new threaded class from an existing unit test, use multiple
+inheritance:
+
+    class NewClass (OldClass, ThreadableTest):
+        pass
+
+This class defines two new fixture functions with obvious
+purposes for overriding:
+
+    clientSetUp ()
+    clientTearDown ()
+
+Any new test functions within the class must then define
+tests in pairs, where the test name is preceded with a
+'_' to indicate the client portion of the test. Ex:
+
+    def testFoo(self):
+        # Server portion
+
+    def _testFoo(self):
+        # Client portion
+
+Any exceptions raised by the clients during their tests
+are caught and transferred to the main thread to alert
+the testing framework.
+
+Note, the server setup function cannot call any blocking
+functions that rely on the client thread during setup,
+unless serverExplicitReady() is called just before
+the blocking call (such as in setting up a client/server
+connection and performing the accept() in setUp().</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id8632">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.ThreadableTest.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.ThreadableTest.html#setUp" class="code" data-type="Instance Variable">setUp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.ThreadableTest.html#tearDown" class="code" data-type="Instance Variable">tearDown</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.ThreadableTest.html#serverExplicitReady" class="code" data-type="Method">serverExplicitReady</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.ThreadableTest.html#wait_threads" class="code" data-type="Instance Variable">wait_threads</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.ThreadableTest.html#server_ready" class="code" data-type="Instance Variable">server_ready</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.ThreadableTest.html#client_ready" class="code" data-type="Instance Variable">client_ready</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.ThreadableTest.html#done" class="code" data-type="Instance Variable">done</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.ThreadableTest.html#queue" class="code" data-type="Instance Variable">queue</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.ThreadableTest.html#server_crashed" class="code" data-type="Instance Variable">server_crashed</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.ThreadableTest.html#client_thread" class="code" data-type="Instance Variable">client_thread</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.ThreadableTest.html#clientRun" class="code" data-type="Method">clientRun</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.ThreadableTest.html#clientSetUp" class="code" data-type="Method">clientSetUp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.ThreadableTest.html#clientTearDown" class="code" data-type="Method">clientTearDown</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.ThreadableTest.html#__setUp" class="code" data-type="Instance Variable">__setUp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.ThreadableTest.html#__tearDown" class="code" data-type="Instance Variable">__tearDown</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.ThreadableTest.html#_setUp" class="code" data-type="Method">_setUp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.ThreadableTest.html#_tearDown" class="code" data-type="Method">_tearDown</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.test.test_socket.ThreadableTest.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.test.test_socket.NetworkConnectionAttributesTest.html" class="code" data-type="Class">Lib.test.test_socket.NetworkConnectionAttributesTest</a>, <a href="Lib.test.test_socket.NetworkConnectionBehaviourTest.html" class="code" data-type="Class">Lib.test.test_socket.NetworkConnectionBehaviourTest</a>, <a href="Lib.test.test_socket.SocketPairTest.html" class="code" data-type="Class">Lib.test.test_socket.SocketPairTest</a>, <a href="Lib.test.test_socket.ThreadedCANSocketTest.html" class="code" data-type="Class">Lib.test.test_socket.ThreadedCANSocketTest</a>, <a href="Lib.test.test_socket.ThreadedRDSSocketTest.html" class="code" data-type="Class">Lib.test.test_socket.ThreadedRDSSocketTest</a>, <a href="Lib.test.test_socket.ThreadedSocketTestMixin.html" class="code" data-type="Class">Lib.test.test_socket.ThreadedSocketTestMixin</a>, <a href="Lib.test.test_socket.ThreadedTCPSocketTest.html" class="code" data-type="Class">Lib.test.test_socket.ThreadedTCPSocketTest</a>, <a href="Lib.test.test_socket.ThreadedUDPLITESocketTest.html" class="code" data-type="Class">Lib.test.test_socket.ThreadedUDPLITESocketTest</a>, <a href="Lib.test.test_socket.ThreadedUDPSocketTest.html" class="code" data-type="Class">Lib.test.test_socket.ThreadedUDPSocketTest</a>, <a href="Lib.test.test_socket.ThreadedVSOCKSocketStreamTest.html" class="code" data-type="Class">Lib.test.test_socket.ThreadedVSOCKSocketStreamTest</a>, <a href="Lib.test.test_socket.TIPCThreadableTest.html" class="code" data-type="Class">Lib.test.test_socket.TIPCThreadableTest</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.test.test_socket.ThreadableTest.__setUp">
+    
+  </a>
+  <a name="__setUp">
+    
+  </a>
+  <div class="functionHeader">
+    __setUp =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.test.test_socket.ThreadableTest.__tearDown">
+    
+  </a>
+  <a name="__tearDown">
+    
+  </a>
+  <div class="functionHeader">
+    __tearDown =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_socket.ThreadableTest.setUp">
+    
+  </a>
+  <a name="setUp">
+    
+  </a>
+  <div class="functionHeader">
+    setUp =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.test.test_socket.ConnectedStreamTestMixin.html" class="code" data-type="Class">Lib.test.test_socket.ConnectedStreamTestMixin</a>, <a href="Lib.test.test_socket.RDSTest.html" class="code" data-type="Class">Lib.test.test_socket.RDSTest</a>, <a href="Lib.test.test_socket.SocketConnectedTest.html" class="code" data-type="Class">Lib.test.test_socket.SocketConnectedTest</a>, <a href="Lib.test.test_socket.SocketPairTest.html" class="code" data-type="Class">Lib.test.test_socket.SocketPairTest</a>, <a href="Lib.test.test_socket.ThreadedVSOCKSocketStreamTest.html" class="code" data-type="Class">Lib.test.test_socket.ThreadedVSOCKSocketStreamTest</a>, <a href="Lib.test.test_socket.TIPCThreadableTest.html" class="code" data-type="Class">Lib.test.test_socket.TIPCThreadableTest</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_socket.ThreadableTest.tearDown">
+    
+  </a>
+  <a name="tearDown">
+    
+  </a>
+  <div class="functionHeader">
+    tearDown =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.test.test_socket.ConnectedStreamTestMixin.html" class="code" data-type="Class">Lib.test.test_socket.ConnectedStreamTestMixin</a>, <a href="Lib.test.test_socket.SocketConnectedTest.html" class="code" data-type="Class">Lib.test.test_socket.SocketConnectedTest</a>, <a href="Lib.test.test_socket.SocketPairTest.html" class="code" data-type="Class">Lib.test.test_socket.SocketPairTest</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_socket.ThreadableTest.serverExplicitReady">
+    
+  </a>
+  <a name="serverExplicitReady">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    serverExplicitReady(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">This method allows the server to explicitly indicate that
+it wants the client thread to proceed. This is useful if the
+server is about to execute a blocking routine that is
+dependent upon the client thread during its setup routine.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.test.test_socket.ThreadableTest._setUp">
+    
+  </a>
+  <a name="_setUp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _setUp(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_socket.ThreadableTest.wait_threads">
+    
+  </a>
+  <a name="wait_threads">
+    
+  </a>
+  <div class="functionHeader">
+    wait_threads =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_socket.ThreadableTest.server_ready">
+    
+  </a>
+  <a name="server_ready">
+    
+  </a>
+  <div class="functionHeader">
+    server_ready =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_socket.ThreadableTest.client_ready">
+    
+  </a>
+  <a name="client_ready">
+    
+  </a>
+  <div class="functionHeader">
+    client_ready =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_socket.ThreadableTest.done">
+    
+  </a>
+  <a name="done">
+    
+  </a>
+  <div class="functionHeader">
+    done =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_socket.ThreadableTest.queue">
+    
+  </a>
+  <a name="queue">
+    
+  </a>
+  <div class="functionHeader">
+    queue =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_socket.ThreadableTest.server_crashed">
+    
+  </a>
+  <a name="server_crashed">
+    
+  </a>
+  <div class="functionHeader">
+    server_crashed =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_socket.ThreadableTest.client_thread">
+    
+  </a>
+  <a name="client_thread">
+    
+  </a>
+  <div class="functionHeader">
+    client_thread =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.test.test_socket.ThreadableTest._tearDown">
+    
+  </a>
+  <a name="_tearDown">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _tearDown(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_socket.ThreadableTest.clientRun">
+    
+  </a>
+  <a name="clientRun">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    clientRun(self, test_func):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_socket.ThreadableTest.clientSetUp">
+    
+  </a>
+  <a name="clientSetUp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    clientSetUp(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.test.test_socket.NetworkConnectionAttributesTest.html" class="code" data-type="Class">Lib.test.test_socket.NetworkConnectionAttributesTest</a>, <a href="Lib.test.test_socket.NetworkConnectionBehaviourTest.html" class="code" data-type="Class">Lib.test.test_socket.NetworkConnectionBehaviourTest</a>, <a href="Lib.test.test_socket.SocketPairTest.html" class="code" data-type="Class">Lib.test.test_socket.SocketPairTest</a>, <a href="Lib.test.test_socket.ThreadedCANSocketTest.html" class="code" data-type="Class">Lib.test.test_socket.ThreadedCANSocketTest</a>, <a href="Lib.test.test_socket.ThreadedRDSSocketTest.html" class="code" data-type="Class">Lib.test.test_socket.ThreadedRDSSocketTest</a>, <a href="Lib.test.test_socket.ThreadedSocketTestMixin.html" class="code" data-type="Class">Lib.test.test_socket.ThreadedSocketTestMixin</a>, <a href="Lib.test.test_socket.ThreadedTCPSocketTest.html" class="code" data-type="Class">Lib.test.test_socket.ThreadedTCPSocketTest</a>, <a href="Lib.test.test_socket.ThreadedUDPLITESocketTest.html" class="code" data-type="Class">Lib.test.test_socket.ThreadedUDPLITESocketTest</a>, <a href="Lib.test.test_socket.ThreadedUDPSocketTest.html" class="code" data-type="Class">Lib.test.test_socket.ThreadedUDPSocketTest</a>, <a href="Lib.test.test_socket.ThreadedVSOCKSocketStreamTest.html" class="code" data-type="Class">Lib.test.test_socket.ThreadedVSOCKSocketStreamTest</a>, <a href="Lib.test.test_socket.TIPCThreadableTest.html" class="code" data-type="Class">Lib.test.test_socket.TIPCThreadableTest</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_socket.ThreadableTest.clientTearDown">
+    
+  </a>
+  <a name="clientTearDown">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    clientTearDown(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.test.test_socket.NetworkConnectionAttributesTest.html" class="code" data-type="Class">Lib.test.test_socket.NetworkConnectionAttributesTest</a>, <a href="Lib.test.test_socket.NetworkConnectionBehaviourTest.html" class="code" data-type="Class">Lib.test.test_socket.NetworkConnectionBehaviourTest</a>, <a href="Lib.test.test_socket.SocketPairTest.html" class="code" data-type="Class">Lib.test.test_socket.SocketPairTest</a>, <a href="Lib.test.test_socket.ThreadedCANSocketTest.html" class="code" data-type="Class">Lib.test.test_socket.ThreadedCANSocketTest</a>, <a href="Lib.test.test_socket.ThreadedRDSSocketTest.html" class="code" data-type="Class">Lib.test.test_socket.ThreadedRDSSocketTest</a>, <a href="Lib.test.test_socket.ThreadedSocketTestMixin.html" class="code" data-type="Class">Lib.test.test_socket.ThreadedSocketTestMixin</a>, <a href="Lib.test.test_socket.ThreadedTCPSocketTest.html" class="code" data-type="Class">Lib.test.test_socket.ThreadedTCPSocketTest</a>, <a href="Lib.test.test_socket.ThreadedUDPLITESocketTest.html" class="code" data-type="Class">Lib.test.test_socket.ThreadedUDPLITESocketTest</a>, <a href="Lib.test.test_socket.ThreadedUDPSocketTest.html" class="code" data-type="Class">Lib.test.test_socket.ThreadedUDPSocketTest</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

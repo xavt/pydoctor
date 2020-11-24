@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.json : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="package"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.json.html" class="code" data-type="Package">json</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        package documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">JSON (JavaScript Object Notation) &lt;http://json.org&gt; is a subset of
+JavaScript syntax (ECMA-262 3rd edition) used as a lightweight data
+interchange format.
+
+:mod:`json` exposes an API familiar to users of the standard library
+:mod:`marshal` and :mod:`pickle` modules.  It is derived from a
+version of the externally maintained simplejson library.
+
+Encoding basic Python object hierarchies::
+
+    &gt;&gt;&gt; import json
+    &gt;&gt;&gt; json.dumps(['foo', {'bar': ('baz', None, 1.0, 2)}])
+    '["foo", {"bar": ["baz", null, 1.0, 2]}]'
+    &gt;&gt;&gt; print(json.dumps("\"foo\bar"))
+    "\"foo\bar"
+    &gt;&gt;&gt; print(json.dumps('\u1234'))
+    "\u1234"
+    &gt;&gt;&gt; print(json.dumps('\\'))
+    "\\"
+    &gt;&gt;&gt; print(json.dumps({"c": 0, "b": 0, "a": 0}, sort_keys=True))
+    {"a": 0, "b": 0, "c": 0}
+    &gt;&gt;&gt; from io import StringIO
+    &gt;&gt;&gt; io = StringIO()
+    &gt;&gt;&gt; json.dump(['streaming API'], io)
+    &gt;&gt;&gt; io.getvalue()
+    '["streaming API"]'
+
+Compact encoding::
+
+    &gt;&gt;&gt; import json
+    &gt;&gt;&gt; mydict = {'4': 5, '6': 7}
+    &gt;&gt;&gt; json.dumps([1,2,3,mydict], separators=(',', ':'))
+    '[1,2,3,{"4":5,"6":7}]'
+
+Pretty printing::
+
+    &gt;&gt;&gt; import json
+    &gt;&gt;&gt; print(json.dumps({'4': 5, '6': 7}, sort_keys=True, indent=4))
+    {
+        "4": 5,
+        "6": 7
+    }
+
+Decoding JSON::
+
+    &gt;&gt;&gt; import json
+    &gt;&gt;&gt; obj = ['foo', {'bar': ['baz', None, 1.0, 2]}]
+    &gt;&gt;&gt; json.loads('["foo", {"bar":["baz", null, 1.0, 2]}]') == obj
+    True
+    &gt;&gt;&gt; json.loads('"\\"foo\\bar"') == '"foo\x08ar'
+    True
+    &gt;&gt;&gt; from io import StringIO
+    &gt;&gt;&gt; io = StringIO('["streaming API"]')
+    &gt;&gt;&gt; json.load(io)[0] == 'streaming API'
+    True
+
+Specializing JSON object decoding::
+
+    &gt;&gt;&gt; import json
+    &gt;&gt;&gt; def as_complex(dct):
+    ...     if '__complex__' in dct:
+    ...         return complex(dct['real'], dct['imag'])
+    ...     return dct
+    ...
+    &gt;&gt;&gt; json.loads('{"__complex__": true, "real": 1, "imag": 2}',
+    ...     object_hook=as_complex)
+    (1+2j)
+    &gt;&gt;&gt; from decimal import Decimal
+    &gt;&gt;&gt; json.loads('1.1', parse_float=Decimal) == Decimal('1.1')
+    True
+
+Specializing JSON object encoding::
+
+    &gt;&gt;&gt; import json
+    &gt;&gt;&gt; def encode_complex(obj):
+    ...     if isinstance(obj, complex):
+    ...         return [obj.real, obj.imag]
+    ...     raise TypeError(f'Object of type {obj.__class__.__name__} '
+    ...                     f'is not JSON serializable')
+    ...
+    &gt;&gt;&gt; json.dumps(2 + 1j, default=encode_complex)
+    '[2.0, 1.0]'
+    &gt;&gt;&gt; json.JSONEncoder(default=encode_complex).encode(2 + 1j)
+    '[2.0, 1.0]'
+    &gt;&gt;&gt; ''.join(json.JSONEncoder(default=encode_complex).iterencode(2 + 1j))
+    '[2.0, 1.0]'
+
+
+Using json.tool from the shell to validate and pretty-print::
+
+    $ echo '{"json":"obj"}' | python -m json.tool
+    {
+        "json": "obj"
+    }
+    $ echo '{ 1.2:3.4}' | python -m json.tool
+    Expecting property name enclosed in double quotes: line 1 column 3 (char 2)</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2650">
+  
+  <tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.json.decoder.html" class="code" data-type="Module">decoder</a></td>
+    <td><span>Implementation of JSONDecoder</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.json.encoder.html" class="code" data-type="Module">encoder</a></td>
+    <td><span>Implementation of JSONEncoder</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.json.scanner.html" class="code" data-type="Module">scanner</a></td>
+    <td><span>JSON token scanner</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.json.tool.html" class="code" data-type="Module">tool</a></td>
+    <td><span>Command-line tool to validate and pretty-print JSON</span></td>
+  </tr>
+</table>
+        
+
+          <p class="fromInitPy">From the <code>__init__.py</code> module:</p><table class="children sortable" id="id2651">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.json.JSONEncoder.html" class="code" data-type="Class">JSONEncoder</a></td>
+    <td><span>Extensible JSON &lt;http://json.org&gt; encoder for Python data structures.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.json.html#__author__" class="code" data-type="Variable">__author__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.json.html#__version__" class="code" data-type="Variable">__version__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.json.html#detect_encoding" class="code" data-type="Function">detect_encoding</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.json.html#dump" class="code" data-type="Function">dump</a></td>
+    <td><span>Serialize ``obj`` as a JSON formatted stream to ``fp`` (a ``.write()``-supporting file-like object).</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.json.html#dumps" class="code" data-type="Function">dumps</a></td>
+    <td><span>Serialize ``obj`` to a JSON formatted ``str``.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.json.html#load" class="code" data-type="Function">load</a></td>
+    <td><span>Deserialize ``fp`` (a ``.read()``-supporting file-like object containing a JSON document) to a Python object.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.json.html#loads" class="code" data-type="Function">loads</a></td>
+    <td><span>Deserialize ``s`` (a ``str``, ``bytes`` or ``bytearray`` instance containing a JSON document) to a Python object.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.json.html#_default_decoder" class="code" data-type="Variable">_default_decoder</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.json.html#_default_encoder" class="code" data-type="Variable">_default_encoder</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.json.__version__">
+    
+  </a>
+  <a name="__version__">
+    
+  </a>
+  <div class="functionHeader">
+    __version__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.json.__author__">
+    
+  </a>
+  <a name="__author__">
+    
+  </a>
+  <div class="functionHeader">
+    __author__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.json._default_encoder">
+    
+  </a>
+  <a name="_default_encoder">
+    
+  </a>
+  <div class="functionHeader">
+    _default_encoder =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.json.dump">
+    
+  </a>
+  <a name="dump">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    dump(obj, fp, **kw):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Serialize ``obj`` as a JSON formatted stream to ``fp`` (a
+``.write()``-supporting file-like object).
+
+If ``skipkeys`` is true then ``dict`` keys that are not basic types
+(``str``, ``int``, ``float``, ``bool``, ``None``) will be skipped
+instead of raising a ``TypeError``.
+
+If ``ensure_ascii`` is false, then the strings written to ``fp`` can
+contain non-ASCII characters if they appear in strings contained in
+``obj``. Otherwise, all such characters are escaped in JSON strings.
+
+If ``check_circular`` is false, then the circular reference check
+for container types will be skipped and a circular reference will
+result in an ``OverflowError`` (or worse).
+
+If ``allow_nan`` is false, then it will be a ``ValueError`` to
+serialize out of range ``float`` values (``nan``, ``inf``, ``-inf``)
+in strict compliance of the JSON specification, instead of using the
+JavaScript equivalents (``NaN``, ``Infinity``, ``-Infinity``).
+
+If ``indent`` is a non-negative integer, then JSON array elements and
+object members will be pretty-printed with that indent level. An indent
+level of 0 will only insert newlines. ``None`` is the most compact
+representation.
+
+If specified, ``separators`` should be an ``(item_separator, key_separator)``
+tuple.  The default is ``(', ', ': ')`` if *indent* is ``None`` and
+``(',', ': ')`` otherwise.  To get the most compact JSON representation,
+you should specify ``(',', ':')`` to eliminate whitespace.
+
+``default(obj)`` is a function that should return a serializable version
+of obj or raise TypeError. The default simply raises TypeError.
+
+If *sort_keys* is true (default: ``False``), then the output of
+dictionaries will be sorted by key.
+
+To use a custom ``JSONEncoder`` subclass (e.g. one that overrides the
+``.default()`` method to serialize additional types), specify it with
+the ``cls`` kwarg; otherwise ``JSONEncoder`` is used.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.json.dumps">
+    
+  </a>
+  <a name="dumps">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    dumps(obj, **kw):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Serialize ``obj`` to a JSON formatted ``str``.
+
+If ``skipkeys`` is true then ``dict`` keys that are not basic types
+(``str``, ``int``, ``float``, ``bool``, ``None``) will be skipped
+instead of raising a ``TypeError``.
+
+If ``ensure_ascii`` is false, then the return value can contain non-ASCII
+characters if they appear in strings contained in ``obj``. Otherwise, all
+such characters are escaped in JSON strings.
+
+If ``check_circular`` is false, then the circular reference check
+for container types will be skipped and a circular reference will
+result in an ``OverflowError`` (or worse).
+
+If ``allow_nan`` is false, then it will be a ``ValueError`` to
+serialize out of range ``float`` values (``nan``, ``inf``, ``-inf``) in
+strict compliance of the JSON specification, instead of using the
+JavaScript equivalents (``NaN``, ``Infinity``, ``-Infinity``).
+
+If ``indent`` is a non-negative integer, then JSON array elements and
+object members will be pretty-printed with that indent level. An indent
+level of 0 will only insert newlines. ``None`` is the most compact
+representation.
+
+If specified, ``separators`` should be an ``(item_separator, key_separator)``
+tuple.  The default is ``(', ', ': ')`` if *indent* is ``None`` and
+``(',', ': ')`` otherwise.  To get the most compact JSON representation,
+you should specify ``(',', ':')`` to eliminate whitespace.
+
+``default(obj)`` is a function that should return a serializable version
+of obj or raise TypeError. The default simply raises TypeError.
+
+If *sort_keys* is true (default: ``False``), then the output of
+dictionaries will be sorted by key.
+
+To use a custom ``JSONEncoder`` subclass (e.g. one that overrides the
+``.default()`` method to serialize additional types), specify it with
+the ``cls`` kwarg; otherwise ``JSONEncoder`` is used.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.json._default_decoder">
+    
+  </a>
+  <a name="_default_decoder">
+    
+  </a>
+  <div class="functionHeader">
+    _default_decoder =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.json.detect_encoding">
+    
+  </a>
+  <a name="detect_encoding">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    detect_encoding(b):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.json.load">
+    
+  </a>
+  <a name="load">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    load(fp, **kw):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Deserialize ``fp`` (a ``.read()``-supporting file-like object containing
+a JSON document) to a Python object.
+
+``object_hook`` is an optional function that will be called with the
+result of any object literal decode (a ``dict``). The return value of
+``object_hook`` will be used instead of the ``dict``. This feature
+can be used to implement custom decoders (e.g. JSON-RPC class hinting).
+
+``object_pairs_hook`` is an optional function that will be called with the
+result of any object literal decoded with an ordered list of pairs.  The
+return value of ``object_pairs_hook`` will be used instead of the ``dict``.
+This feature can be used to implement custom decoders.  If ``object_hook``
+is also defined, the ``object_pairs_hook`` takes priority.
+
+To use a custom ``JSONDecoder`` subclass, specify it with the ``cls``
+kwarg; otherwise ``JSONDecoder`` is used.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.json.loads">
+    
+  </a>
+  <a name="loads">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    loads(s, **kw):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Deserialize ``s`` (a ``str``, ``bytes`` or ``bytearray`` instance
+containing a JSON document) to a Python object.
+
+``object_hook`` is an optional function that will be called with the
+result of any object literal decode (a ``dict``). The return value of
+``object_hook`` will be used instead of the ``dict``. This feature
+can be used to implement custom decoders (e.g. JSON-RPC class hinting).
+
+``object_pairs_hook`` is an optional function that will be called with the
+result of any object literal decoded with an ordered list of pairs.  The
+return value of ``object_pairs_hook`` will be used instead of the ``dict``.
+This feature can be used to implement custom decoders.  If ``object_hook``
+is also defined, the ``object_pairs_hook`` takes priority.
+
+``parse_float``, if specified, will be called with the string
+of every JSON float to be decoded. By default this is equivalent to
+float(num_str). This can be used to use another datatype or parser
+for JSON floats (e.g. decimal.Decimal).
+
+``parse_int``, if specified, will be called with the string
+of every JSON int to be decoded. By default this is equivalent to
+int(num_str). This can be used to use another datatype or parser
+for JSON integers (e.g. float).
+
+``parse_constant``, if specified, will be called with one of the
+following strings: -Infinity, Infinity, NaN.
+This can be used to raise an exception if invalid JSON numbers
+are encountered.
+
+To use a custom ``JSONDecoder`` subclass, specify it with the ``cls``
+kwarg; otherwise ``JSONDecoder`` is used.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

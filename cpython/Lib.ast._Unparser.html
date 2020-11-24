@@ -1,0 +1,2552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.ast._Unparser : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class private"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.ast.html" class="code" data-type="Module">ast</a>.<a href="Lib.ast._Unparser.html" class="code" data-type="Class">_Unparser</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.ast._Unparser(<a href="Lib.ast.NodeVisitor.html" class="code" data-type="Class">NodeVisitor</a>):</code></p>
+        <p><a href="classIndex.html#Lib.ast._Unparser">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Methods in this class recursively traverse an AST and
+output source code for the abstract syntax; original formatting
+is disregarded.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id282">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#interleave" class="code" data-type="Method">interleave</a></td>
+    <td><span>Call f on each item in seq, calling inter() in between.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#items_view" class="code" data-type="Method">items_view</a></td>
+    <td><span>Traverse and separate the given *items* with a comma and append it to the buffer. If *items* is a single item sequence, a trailing comma will be added.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#maybe_newline" class="code" data-type="Method">maybe_newline</a></td>
+    <td><span>Adds a newline if it isn't the start of generated source</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#fill" class="code" data-type="Method">fill</a></td>
+    <td><span>Indent a piece of text and append it, according to the current indentation level</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#write" class="code" data-type="Method">write</a></td>
+    <td><span>Append a piece of text</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#buffer_writer" class="code" data-type="Method">buffer_writer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#buffer" class="code" data-type="Method">buffer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#block" class="code" data-type="Method">block</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#delimit" class="code" data-type="Method">delimit</a></td>
+    <td><span>A context manager for preparing the source for expressions. It adds *start* to the buffer and enters, after exit it adds *end*.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#delimit_if" class="code" data-type="Method">delimit_if</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#require_parens" class="code" data-type="Method">require_parens</a></td>
+    <td><span>Shortcut to adding precedence related parens</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#get_precedence" class="code" data-type="Method">get_precedence</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#set_precedence" class="code" data-type="Method">set_precedence</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#get_raw_docstring" class="code" data-type="Method">get_raw_docstring</a></td>
+    <td><span>If a docstring node is found in the body of the *node* parameter, return that docstring node, None otherwise.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#get_type_comment" class="code" data-type="Method">get_type_comment</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#traverse" class="code" data-type="Method">traverse</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit" class="code" data-type="Method">visit</a></td>
+    <td><span>Outputs a source code string that, if converted back to an ast (using ast.parse) will generate an AST equivalent to *node*</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_Module" class="code" data-type="Method">visit_Module</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_FunctionType" class="code" data-type="Method">visit_FunctionType</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_Expr" class="code" data-type="Method">visit_Expr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_NamedExpr" class="code" data-type="Method">visit_NamedExpr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_Import" class="code" data-type="Method">visit_Import</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_ImportFrom" class="code" data-type="Method">visit_ImportFrom</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_Assign" class="code" data-type="Method">visit_Assign</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_AugAssign" class="code" data-type="Method">visit_AugAssign</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_AnnAssign" class="code" data-type="Method">visit_AnnAssign</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_Return" class="code" data-type="Method">visit_Return</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_Pass" class="code" data-type="Method">visit_Pass</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_Break" class="code" data-type="Method">visit_Break</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_Continue" class="code" data-type="Method">visit_Continue</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_Delete" class="code" data-type="Method">visit_Delete</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_Assert" class="code" data-type="Method">visit_Assert</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_Global" class="code" data-type="Method">visit_Global</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_Nonlocal" class="code" data-type="Method">visit_Nonlocal</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_Await" class="code" data-type="Method">visit_Await</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_Yield" class="code" data-type="Method">visit_Yield</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_YieldFrom" class="code" data-type="Method">visit_YieldFrom</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_Raise" class="code" data-type="Method">visit_Raise</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_Try" class="code" data-type="Method">visit_Try</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_ExceptHandler" class="code" data-type="Method">visit_ExceptHandler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_ClassDef" class="code" data-type="Method">visit_ClassDef</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_FunctionDef" class="code" data-type="Method">visit_FunctionDef</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_AsyncFunctionDef" class="code" data-type="Method">visit_AsyncFunctionDef</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_For" class="code" data-type="Method">visit_For</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_AsyncFor" class="code" data-type="Method">visit_AsyncFor</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_If" class="code" data-type="Method">visit_If</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_While" class="code" data-type="Method">visit_While</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_With" class="code" data-type="Method">visit_With</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_AsyncWith" class="code" data-type="Method">visit_AsyncWith</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_JoinedStr" class="code" data-type="Method">visit_JoinedStr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_FormattedValue" class="code" data-type="Method">visit_FormattedValue</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_Name" class="code" data-type="Method">visit_Name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_Constant" class="code" data-type="Method">visit_Constant</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_List" class="code" data-type="Method">visit_List</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_ListComp" class="code" data-type="Method">visit_ListComp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_GeneratorExp" class="code" data-type="Method">visit_GeneratorExp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_SetComp" class="code" data-type="Method">visit_SetComp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_DictComp" class="code" data-type="Method">visit_DictComp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_comprehension" class="code" data-type="Method">visit_comprehension</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_IfExp" class="code" data-type="Method">visit_IfExp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_Set" class="code" data-type="Method">visit_Set</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_Dict" class="code" data-type="Method">visit_Dict</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_Tuple" class="code" data-type="Method">visit_Tuple</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ast._Unparser.html#unop" class="code" data-type="Class Variable">unop</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ast._Unparser.html#unop_precedence" class="code" data-type="Class Variable">unop_precedence</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_UnaryOp" class="code" data-type="Method">visit_UnaryOp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ast._Unparser.html#binop" class="code" data-type="Class Variable">binop</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ast._Unparser.html#binop_precedence" class="code" data-type="Class Variable">binop_precedence</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ast._Unparser.html#binop_rassoc" class="code" data-type="Class Variable">binop_rassoc</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_BinOp" class="code" data-type="Method">visit_BinOp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ast._Unparser.html#cmpops" class="code" data-type="Class Variable">cmpops</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_Compare" class="code" data-type="Method">visit_Compare</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ast._Unparser.html#boolops" class="code" data-type="Class Variable">boolops</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ast._Unparser.html#boolop_precedence" class="code" data-type="Class Variable">boolop_precedence</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_BoolOp" class="code" data-type="Method">visit_BoolOp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_Attribute" class="code" data-type="Method">visit_Attribute</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_Call" class="code" data-type="Method">visit_Call</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_Subscript" class="code" data-type="Method">visit_Subscript</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_Starred" class="code" data-type="Method">visit_Starred</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_Ellipsis" class="code" data-type="Method">visit_Ellipsis</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_Slice" class="code" data-type="Method">visit_Slice</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_arg" class="code" data-type="Method">visit_arg</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_arguments" class="code" data-type="Method">visit_arguments</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_keyword" class="code" data-type="Method">visit_keyword</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_Lambda" class="code" data-type="Method">visit_Lambda</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_alias" class="code" data-type="Method">visit_alias</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#visit_withitem" class="code" data-type="Method">visit_withitem</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.ast._Unparser.html#_source" class="code" data-type="Instance Variable">_source</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.ast._Unparser.html#_buffer" class="code" data-type="Instance Variable">_buffer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.ast._Unparser.html#_precedences" class="code" data-type="Instance Variable">_precedences</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.ast._Unparser.html#_type_ignores" class="code" data-type="Instance Variable">_type_ignores</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.ast._Unparser.html#_indent" class="code" data-type="Instance Variable">_indent</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.ast._Unparser.html#_avoid_backslashes" class="code" data-type="Instance Variable">_avoid_backslashes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#_write_docstring_and_traverse_body" class="code" data-type="Method">_write_docstring_and_traverse_body</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#_function_helper" class="code" data-type="Method">_function_helper</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#_for_helper" class="code" data-type="Method">_for_helper</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#_str_literal_helper" class="code" data-type="Method">_str_literal_helper</a></td>
+    <td><span>Helper for writing string literals, minimizing escapes. Returns the tuple (string literal to write, possible quote types).</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#_write_str_avoiding_backslashes" class="code" data-type="Method">_write_str_avoiding_backslashes</a></td>
+    <td><span>Write string literal value with a best effort attempt to avoid backslashes.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#_fstring_JoinedStr" class="code" data-type="Method">_fstring_JoinedStr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#_fstring_Constant" class="code" data-type="Method">_fstring_Constant</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#_fstring_FormattedValue" class="code" data-type="Method">_fstring_FormattedValue</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#_write_docstring" class="code" data-type="Method">_write_docstring</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast._Unparser.html#_write_constant" class="code" data-type="Method">_write_constant</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.ast.NodeVisitor.html" class="code" data-type="Class">NodeVisitor</a>:
+          </p>
+          <table class="children sortable" id="id283">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.ast.NodeVisitor.html#generic_visit" class="code" data-type="Method">generic_visit</a></td>
+    <td><span>Called if no explicit visitor function exists for a node.</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.ast._Unparser._source">
+    
+  </a>
+  <a name="_source">
+    
+  </a>
+  <div class="functionHeader">
+    _source =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.ast._Unparser._buffer">
+    
+  </a>
+  <a name="_buffer">
+    
+  </a>
+  <div class="functionHeader">
+    _buffer =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.ast._Unparser._precedences">
+    
+  </a>
+  <a name="_precedences">
+    
+  </a>
+  <div class="functionHeader">
+    _precedences =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.ast._Unparser._type_ignores">
+    
+  </a>
+  <a name="_type_ignores">
+    
+  </a>
+  <div class="functionHeader">
+    _type_ignores =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.ast._Unparser._indent">
+    
+  </a>
+  <a name="_indent">
+    
+  </a>
+  <div class="functionHeader">
+    _indent =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.ast._Unparser._avoid_backslashes">
+    
+  </a>
+  <a name="_avoid_backslashes">
+    
+  </a>
+  <div class="functionHeader">
+    _avoid_backslashes =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.interleave">
+    
+  </a>
+  <a name="interleave">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    interleave(self, inter, f, seq):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Call f on each item in seq, calling inter() in between.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.items_view">
+    
+  </a>
+  <a name="items_view">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    items_view(self, traverser, items):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Traverse and separate the given *items* with a comma and append it to
+the buffer. If *items* is a single item sequence, a trailing comma
+will be added.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.maybe_newline">
+    
+  </a>
+  <a name="maybe_newline">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    maybe_newline(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Adds a newline if it isn't the start of generated source</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.fill">
+    
+  </a>
+  <a name="fill">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    fill(self, text=""""""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Indent a piece of text and append it, according to the current
+indentation level</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.write">
+    
+  </a>
+  <a name="write">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    write(self, text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Append a piece of text</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.buffer_writer">
+    
+  </a>
+  <a name="buffer_writer">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    buffer_writer(self, text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.buffer">
+    
+  </a>
+  <a name="buffer">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    buffer(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.block">
+    
+  </a>
+  <a name="block">
+    
+  </a>
+  <div class="functionHeader">
+    @contextmanager<br />
+    def
+    block(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">A context manager for preparing the source for blocks. It adds
+the character':', increases the indentation on enter and decreases
+the indentation on exit. If *extra* is given, it will be directly
+appended after the colon character.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.delimit">
+    
+  </a>
+  <a name="delimit">
+    
+  </a>
+  <div class="functionHeader">
+    @contextmanager<br />
+    def
+    delimit(self, start, end):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">A context manager for preparing the source for expressions. It adds
+*start* to the buffer and enters, after exit it adds *end*.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.delimit_if">
+    
+  </a>
+  <a name="delimit_if">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    delimit_if(self, start, end, condition):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.require_parens">
+    
+  </a>
+  <a name="require_parens">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    require_parens(self, precedence, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Shortcut to adding precedence related parens</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.get_precedence">
+    
+  </a>
+  <a name="get_precedence">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_precedence(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.set_precedence">
+    
+  </a>
+  <a name="set_precedence">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_precedence(self, precedence, *nodes):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.get_raw_docstring">
+    
+  </a>
+  <a name="get_raw_docstring">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_raw_docstring(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">If a docstring node is found in the body of the *node* parameter,
+return that docstring node, None otherwise.
+
+Logic mirrored from ``_PyAST_GetDocString``.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.get_type_comment">
+    
+  </a>
+  <a name="get_type_comment">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_type_comment(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.traverse">
+    
+  </a>
+  <a name="traverse">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    traverse(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit">
+    
+  </a>
+  <a name="visit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.ast.NodeVisitor.html#visit" class="code" data-type="Method">Lib.ast.NodeVisitor.visit</a></div>
+    
+    <div><p class="pre">Outputs a source code string that, if converted back to an ast
+(using ast.parse) will generate an AST equivalent to *node*</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.ast._Unparser._write_docstring_and_traverse_body">
+    
+  </a>
+  <a name="_write_docstring_and_traverse_body">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _write_docstring_and_traverse_body(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_Module">
+    
+  </a>
+  <a name="visit_Module">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_Module(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_FunctionType">
+    
+  </a>
+  <a name="visit_FunctionType">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_FunctionType(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_Expr">
+    
+  </a>
+  <a name="visit_Expr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_Expr(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_NamedExpr">
+    
+  </a>
+  <a name="visit_NamedExpr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_NamedExpr(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_Import">
+    
+  </a>
+  <a name="visit_Import">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_Import(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_ImportFrom">
+    
+  </a>
+  <a name="visit_ImportFrom">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_ImportFrom(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_Assign">
+    
+  </a>
+  <a name="visit_Assign">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_Assign(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_AugAssign">
+    
+  </a>
+  <a name="visit_AugAssign">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_AugAssign(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_AnnAssign">
+    
+  </a>
+  <a name="visit_AnnAssign">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_AnnAssign(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_Return">
+    
+  </a>
+  <a name="visit_Return">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_Return(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_Pass">
+    
+  </a>
+  <a name="visit_Pass">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_Pass(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_Break">
+    
+  </a>
+  <a name="visit_Break">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_Break(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_Continue">
+    
+  </a>
+  <a name="visit_Continue">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_Continue(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_Delete">
+    
+  </a>
+  <a name="visit_Delete">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_Delete(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_Assert">
+    
+  </a>
+  <a name="visit_Assert">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_Assert(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_Global">
+    
+  </a>
+  <a name="visit_Global">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_Global(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_Nonlocal">
+    
+  </a>
+  <a name="visit_Nonlocal">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_Nonlocal(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_Await">
+    
+  </a>
+  <a name="visit_Await">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_Await(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_Yield">
+    
+  </a>
+  <a name="visit_Yield">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_Yield(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_YieldFrom">
+    
+  </a>
+  <a name="visit_YieldFrom">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_YieldFrom(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_Raise">
+    
+  </a>
+  <a name="visit_Raise">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_Raise(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_Try">
+    
+  </a>
+  <a name="visit_Try">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_Try(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_ExceptHandler">
+    
+  </a>
+  <a name="visit_ExceptHandler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_ExceptHandler(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_ClassDef">
+    
+  </a>
+  <a name="visit_ClassDef">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_ClassDef(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_FunctionDef">
+    
+  </a>
+  <a name="visit_FunctionDef">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_FunctionDef(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_AsyncFunctionDef">
+    
+  </a>
+  <a name="visit_AsyncFunctionDef">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_AsyncFunctionDef(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.ast._Unparser._function_helper">
+    
+  </a>
+  <a name="_function_helper">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _function_helper(self, node, fill_suffix):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_For">
+    
+  </a>
+  <a name="visit_For">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_For(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_AsyncFor">
+    
+  </a>
+  <a name="visit_AsyncFor">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_AsyncFor(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.ast._Unparser._for_helper">
+    
+  </a>
+  <a name="_for_helper">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _for_helper(self, fill, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_If">
+    
+  </a>
+  <a name="visit_If">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_If(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_While">
+    
+  </a>
+  <a name="visit_While">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_While(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_With">
+    
+  </a>
+  <a name="visit_With">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_With(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_AsyncWith">
+    
+  </a>
+  <a name="visit_AsyncWith">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_AsyncWith(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.ast._Unparser._str_literal_helper">
+    
+  </a>
+  <a name="_str_literal_helper">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _str_literal_helper(self, string):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Helper for writing string literals, minimizing escapes.
+Returns the tuple (string literal to write, possible quote types).</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.ast._Unparser._write_str_avoiding_backslashes">
+    
+  </a>
+  <a name="_write_str_avoiding_backslashes">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _write_str_avoiding_backslashes(self, string):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Write string literal value with a best effort attempt to avoid backslashes.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_JoinedStr">
+    
+  </a>
+  <a name="visit_JoinedStr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_JoinedStr(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_FormattedValue">
+    
+  </a>
+  <a name="visit_FormattedValue">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_FormattedValue(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.ast._Unparser._fstring_JoinedStr">
+    
+  </a>
+  <a name="_fstring_JoinedStr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _fstring_JoinedStr(self, node, write):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.ast._Unparser._fstring_Constant">
+    
+  </a>
+  <a name="_fstring_Constant">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _fstring_Constant(self, node, write):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.ast._Unparser._fstring_FormattedValue">
+    
+  </a>
+  <a name="_fstring_FormattedValue">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _fstring_FormattedValue(self, node, write):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_Name">
+    
+  </a>
+  <a name="visit_Name">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_Name(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.ast._Unparser._write_docstring">
+    
+  </a>
+  <a name="_write_docstring">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _write_docstring(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.ast._Unparser._write_constant">
+    
+  </a>
+  <a name="_write_constant">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _write_constant(self, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_Constant">
+    
+  </a>
+  <a name="visit_Constant">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_Constant(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.ast.NodeVisitor.html#visit_Constant" class="code" data-type="Method">Lib.ast.NodeVisitor.visit_Constant</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_List">
+    
+  </a>
+  <a name="visit_List">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_List(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_ListComp">
+    
+  </a>
+  <a name="visit_ListComp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_ListComp(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_GeneratorExp">
+    
+  </a>
+  <a name="visit_GeneratorExp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_GeneratorExp(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_SetComp">
+    
+  </a>
+  <a name="visit_SetComp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_SetComp(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_DictComp">
+    
+  </a>
+  <a name="visit_DictComp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_DictComp(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_comprehension">
+    
+  </a>
+  <a name="visit_comprehension">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_comprehension(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_IfExp">
+    
+  </a>
+  <a name="visit_IfExp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_IfExp(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_Set">
+    
+  </a>
+  <a name="visit_Set">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_Set(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_Dict">
+    
+  </a>
+  <a name="visit_Dict">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_Dict(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_Tuple">
+    
+  </a>
+  <a name="visit_Tuple">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_Tuple(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.ast._Unparser.unop">
+    
+  </a>
+  <a name="unop">
+    
+  </a>
+  <div class="functionHeader">
+    unop =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict[str, str]</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.ast._Unparser.unop_precedence">
+    
+  </a>
+  <a name="unop_precedence">
+    
+  </a>
+  <div class="functionHeader">
+    unop_precedence =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_UnaryOp">
+    
+  </a>
+  <a name="visit_UnaryOp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_UnaryOp(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.ast._Unparser.binop">
+    
+  </a>
+  <a name="binop">
+    
+  </a>
+  <div class="functionHeader">
+    binop =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict[str, str]</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.ast._Unparser.binop_precedence">
+    
+  </a>
+  <a name="binop_precedence">
+    
+  </a>
+  <div class="functionHeader">
+    binop_precedence =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.ast._Unparser.binop_rassoc">
+    
+  </a>
+  <a name="binop_rassoc">
+    
+  </a>
+  <div class="functionHeader">
+    binop_rassoc =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_BinOp">
+    
+  </a>
+  <a name="visit_BinOp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_BinOp(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.ast._Unparser.cmpops">
+    
+  </a>
+  <a name="cmpops">
+    
+  </a>
+  <div class="functionHeader">
+    cmpops =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict[str, str]</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_Compare">
+    
+  </a>
+  <a name="visit_Compare">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_Compare(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.ast._Unparser.boolops">
+    
+  </a>
+  <a name="boolops">
+    
+  </a>
+  <div class="functionHeader">
+    boolops =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict[str, str]</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.ast._Unparser.boolop_precedence">
+    
+  </a>
+  <a name="boolop_precedence">
+    
+  </a>
+  <div class="functionHeader">
+    boolop_precedence =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_BoolOp">
+    
+  </a>
+  <a name="visit_BoolOp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_BoolOp(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_Attribute">
+    
+  </a>
+  <a name="visit_Attribute">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_Attribute(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_Call">
+    
+  </a>
+  <a name="visit_Call">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_Call(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_Subscript">
+    
+  </a>
+  <a name="visit_Subscript">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_Subscript(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_Starred">
+    
+  </a>
+  <a name="visit_Starred">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_Starred(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_Ellipsis">
+    
+  </a>
+  <a name="visit_Ellipsis">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_Ellipsis(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_Slice">
+    
+  </a>
+  <a name="visit_Slice">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_Slice(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_arg">
+    
+  </a>
+  <a name="visit_arg">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_arg(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_arguments">
+    
+  </a>
+  <a name="visit_arguments">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_arguments(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_keyword">
+    
+  </a>
+  <a name="visit_keyword">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_keyword(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_Lambda">
+    
+  </a>
+  <a name="visit_Lambda">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_Lambda(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_alias">
+    
+  </a>
+  <a name="visit_alias">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_alias(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.ast._Unparser.visit_withitem">
+    
+  </a>
+  <a name="visit_withitem">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    visit_withitem(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

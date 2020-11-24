@@ -1,0 +1,1599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.configparser.RawConfigParser : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.configparser.html" class="code" data-type="Module">configparser</a>.<a href="Lib.configparser.RawConfigParser.html" class="code" data-type="Class">RawConfigParser</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.configparser.RawConfigParser(<span title="collections.abc.MutableMapping">MutableMapping</span>):</code></p><p>Known subclasses: <a href="Lib.configparser.ConfigParser.html" class="code" data-type="Class">Lib.configparser.ConfigParser</a></p>
+        <p><a href="classIndex.html#Lib.configparser.RawConfigParser">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">ConfigParser that does not do interpolation.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id595">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#SECTCRE" class="code" data-type="Class Variable">SECTCRE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#OPTCRE" class="code" data-type="Class Variable">OPTCRE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#OPTCRE_NV" class="code" data-type="Class Variable">OPTCRE_NV</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#NONSPACECRE" class="code" data-type="Class Variable">NONSPACECRE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#BOOLEAN_STATES" class="code" data-type="Class Variable">BOOLEAN_STATES</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#default_section" class="code" data-type="Instance Variable">default_section</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#defaults" class="code" data-type="Method">defaults</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#sections" class="code" data-type="Method">sections</a></td>
+    <td><span>Return a list of section names, excluding [DEFAULT]</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#add_section" class="code" data-type="Method">add_section</a></td>
+    <td><span>Create a new section in the configuration.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#has_section" class="code" data-type="Method">has_section</a></td>
+    <td><span>Indicate whether the named section is present in the configuration.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#options" class="code" data-type="Method">options</a></td>
+    <td><span>Return a list of option names for the given section name.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#read" class="code" data-type="Method">read</a></td>
+    <td><span>Read and parse a filename or an iterable of filenames.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#read_file" class="code" data-type="Method">read_file</a></td>
+    <td><span>Like read() but the argument must be a file-like object.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#read_string" class="code" data-type="Method">read_string</a></td>
+    <td><span>Read configuration from a given string.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#read_dict" class="code" data-type="Method">read_dict</a></td>
+    <td><span>Read configuration from a dictionary.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#readfp" class="code" data-type="Method">readfp</a></td>
+    <td><span>Deprecated, use read_file instead.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#get" class="code" data-type="Method">get</a></td>
+    <td><span>Get an option value for a given section.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#getint" class="code" data-type="Method">getint</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#getfloat" class="code" data-type="Method">getfloat</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#getboolean" class="code" data-type="Method">getboolean</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#items" class="code" data-type="Method">items</a></td>
+    <td><span>Return a list of (name, value) tuples for each option in a section.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#popitem" class="code" data-type="Method">popitem</a></td>
+    <td><span>Remove a section from the parser and return it as a (section_name, section_proxy) tuple. If no section is present, raise KeyError.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#optionxform" class="code" data-type="Method">optionxform</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#has_option" class="code" data-type="Method">has_option</a></td>
+    <td><span>Check for the existence of a given option in a given section. If the specified `section' is None or an empty string, DEFAULT is assumed. If the specified `section' does not exist, returns False.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#set" class="code" data-type="Method">set</a></td>
+    <td><span>Set an option.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#write" class="code" data-type="Method">write</a></td>
+    <td><span>Write an .ini-format representation of the configuration state.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#remove_option" class="code" data-type="Method">remove_option</a></td>
+    <td><span>Remove an option.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#remove_section" class="code" data-type="Method">remove_section</a></td>
+    <td><span>Remove a file section.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#__getitem__" class="code" data-type="Method">__getitem__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#__setitem__" class="code" data-type="Method">__setitem__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#__delitem__" class="code" data-type="Method">__delitem__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#__contains__" class="code" data-type="Method">__contains__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#__len__" class="code" data-type="Method">__len__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#__iter__" class="code" data-type="Method">__iter__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#converters" class="code" data-type="Method">converters</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#_SECT_TMPL" class="code" data-type="Class Variable">_SECT_TMPL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#_OPT_TMPL" class="code" data-type="Class Variable">_OPT_TMPL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#_OPT_NV_TMPL" class="code" data-type="Class Variable">_OPT_NV_TMPL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#_DEFAULT_INTERPOLATION" class="code" data-type="Class Variable">_DEFAULT_INTERPOLATION</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#_dict" class="code" data-type="Instance Variable">_dict</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#_sections" class="code" data-type="Instance Variable">_sections</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#_defaults" class="code" data-type="Instance Variable">_defaults</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#_converters" class="code" data-type="Instance Variable">_converters</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#_proxies" class="code" data-type="Instance Variable">_proxies</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#_delimiters" class="code" data-type="Instance Variable">_delimiters</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#_optcre" class="code" data-type="Instance Variable">_optcre</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#_comment_prefixes" class="code" data-type="Instance Variable">_comment_prefixes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#_inline_comment_prefixes" class="code" data-type="Instance Variable">_inline_comment_prefixes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#_strict" class="code" data-type="Instance Variable">_strict</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#_allow_no_value" class="code" data-type="Instance Variable">_allow_no_value</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#_empty_lines_in_values" class="code" data-type="Instance Variable">_empty_lines_in_values</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#_interpolation" class="code" data-type="Instance Variable">_interpolation</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#_get" class="code" data-type="Method">_get</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#_get_conv" class="code" data-type="Method">_get_conv</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#_write_section" class="code" data-type="Method">_write_section</a></td>
+    <td><span>Write a single section to the specified `fp'.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#_read" class="code" data-type="Method">_read</a></td>
+    <td><span>Parse a sectioned configuration file.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#_join_multiline_values" class="code" data-type="Method">_join_multiline_values</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#_read_defaults" class="code" data-type="Method">_read_defaults</a></td>
+    <td><span>Read the defaults passed in the initializer. Note: values can be non-string.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#_handle_error" class="code" data-type="Method">_handle_error</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#_unify_values" class="code" data-type="Method">_unify_values</a></td>
+    <td><span>Create a sequence of lookups with 'vars' taking priority over the 'section' which takes priority over the DEFAULTSECT.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#_convert_to_boolean" class="code" data-type="Method">_convert_to_boolean</a></td>
+    <td><span>Return a boolean value translating from other types if necessary.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.configparser.RawConfigParser.html#_validate_value_types" class="code" data-type="Method">_validate_value_types</a></td>
+    <td><span>Raises a TypeError for non-string values.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable private">
+  
+  <a name="Lib.configparser.RawConfigParser._SECT_TMPL">
+    
+  </a>
+  <a name="_SECT_TMPL">
+    
+  </a>
+  <div class="functionHeader">
+    _SECT_TMPL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseclassvariable private">
+  
+  <a name="Lib.configparser.RawConfigParser._OPT_TMPL">
+    
+  </a>
+  <a name="_OPT_TMPL">
+    
+  </a>
+  <div class="functionHeader">
+    _OPT_TMPL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseclassvariable private">
+  
+  <a name="Lib.configparser.RawConfigParser._OPT_NV_TMPL">
+    
+  </a>
+  <a name="_OPT_NV_TMPL">
+    
+  </a>
+  <div class="functionHeader">
+    _OPT_NV_TMPL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseclassvariable private">
+  
+  <a name="Lib.configparser.RawConfigParser._DEFAULT_INTERPOLATION">
+    
+  </a>
+  <a name="_DEFAULT_INTERPOLATION">
+    
+  </a>
+  <div class="functionHeader">
+    _DEFAULT_INTERPOLATION =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.configparser.ConfigParser.html" class="code" data-type="Class">Lib.configparser.ConfigParser</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.configparser.RawConfigParser.SECTCRE">
+    
+  </a>
+  <a name="SECTCRE">
+    
+  </a>
+  <div class="functionHeader">
+    SECTCRE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.configparser.RawConfigParser.OPTCRE">
+    
+  </a>
+  <a name="OPTCRE">
+    
+  </a>
+  <div class="functionHeader">
+    OPTCRE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.configparser.RawConfigParser.OPTCRE_NV">
+    
+  </a>
+  <a name="OPTCRE_NV">
+    
+  </a>
+  <div class="functionHeader">
+    OPTCRE_NV =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.configparser.RawConfigParser.NONSPACECRE">
+    
+  </a>
+  <a name="NONSPACECRE">
+    
+  </a>
+  <div class="functionHeader">
+    NONSPACECRE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.configparser.RawConfigParser.BOOLEAN_STATES">
+    
+  </a>
+  <a name="BOOLEAN_STATES">
+    
+  </a>
+  <div class="functionHeader">
+    BOOLEAN_STATES =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict[str, bool]</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.configparser.RawConfigParser.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, defaults=None, dict_type=_default_dict, allow_no_value=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.configparser.SafeConfigParser.html" class="code" data-type="Class">Lib.configparser.SafeConfigParser</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.configparser.RawConfigParser._dict">
+    
+  </a>
+  <a name="_dict">
+    
+  </a>
+  <div class="functionHeader">
+    _dict =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.configparser.RawConfigParser._sections">
+    
+  </a>
+  <a name="_sections">
+    
+  </a>
+  <div class="functionHeader">
+    _sections =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.configparser.RawConfigParser._defaults">
+    
+  </a>
+  <a name="_defaults">
+    
+  </a>
+  <div class="functionHeader">
+    _defaults =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.configparser.RawConfigParser._converters">
+    
+  </a>
+  <a name="_converters">
+    
+  </a>
+  <div class="functionHeader">
+    _converters =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.configparser.RawConfigParser._proxies">
+    
+  </a>
+  <a name="_proxies">
+    
+  </a>
+  <div class="functionHeader">
+    _proxies =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.configparser.RawConfigParser._delimiters">
+    
+  </a>
+  <a name="_delimiters">
+    
+  </a>
+  <div class="functionHeader">
+    _delimiters =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.configparser.RawConfigParser._optcre">
+    
+  </a>
+  <a name="_optcre">
+    
+  </a>
+  <div class="functionHeader">
+    _optcre =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.configparser.RawConfigParser._comment_prefixes">
+    
+  </a>
+  <a name="_comment_prefixes">
+    
+  </a>
+  <div class="functionHeader">
+    _comment_prefixes =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.configparser.RawConfigParser._inline_comment_prefixes">
+    
+  </a>
+  <a name="_inline_comment_prefixes">
+    
+  </a>
+  <div class="functionHeader">
+    _inline_comment_prefixes =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.configparser.RawConfigParser._strict">
+    
+  </a>
+  <a name="_strict">
+    
+  </a>
+  <div class="functionHeader">
+    _strict =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.configparser.RawConfigParser._allow_no_value">
+    
+  </a>
+  <a name="_allow_no_value">
+    
+  </a>
+  <div class="functionHeader">
+    _allow_no_value =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.configparser.RawConfigParser._empty_lines_in_values">
+    
+  </a>
+  <a name="_empty_lines_in_values">
+    
+  </a>
+  <div class="functionHeader">
+    _empty_lines_in_values =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.configparser.RawConfigParser.default_section">
+    
+  </a>
+  <a name="default_section">
+    
+  </a>
+  <div class="functionHeader">
+    default_section =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.configparser.RawConfigParser._interpolation">
+    
+  </a>
+  <a name="_interpolation">
+    
+  </a>
+  <div class="functionHeader">
+    _interpolation =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.configparser.ConfigParser.html" class="code" data-type="Class">Lib.configparser.ConfigParser</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.configparser.RawConfigParser.defaults">
+    
+  </a>
+  <a name="defaults">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    defaults(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.configparser.RawConfigParser.sections">
+    
+  </a>
+  <a name="sections">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    sections(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a list of section names, excluding [DEFAULT]</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.configparser.RawConfigParser.add_section">
+    
+  </a>
+  <a name="add_section">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    add_section(self, section):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.configparser.ConfigParser.html" class="code" data-type="Class">Lib.configparser.ConfigParser</a></div>
+    
+    <div><p class="pre">Create a new section in the configuration.
+
+Raise DuplicateSectionError if a section by the specified name
+already exists. Raise ValueError if name is DEFAULT.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.configparser.RawConfigParser.has_section">
+    
+  </a>
+  <a name="has_section">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    has_section(self, section):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Indicate whether the named section is present in the configuration.
+
+The DEFAULT section is not acknowledged.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.configparser.RawConfigParser.options">
+    
+  </a>
+  <a name="options">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    options(self, section):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a list of option names for the given section name.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.configparser.RawConfigParser.read">
+    
+  </a>
+  <a name="read">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    read(self, filenames, encoding=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Read and parse a filename or an iterable of filenames.
+
+Files that cannot be opened are silently ignored; this is
+designed so that you can specify an iterable of potential
+configuration file locations (e.g. current directory, user's
+home directory, systemwide directory), and all existing
+configuration files in the iterable will be read.  A single
+filename may also be given.
+
+Return list of successfully read files.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.configparser.RawConfigParser.read_file">
+    
+  </a>
+  <a name="read_file">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    read_file(self, f, source=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Like read() but the argument must be a file-like object.
+
+The `f' argument must be iterable, returning one line at a time.
+Optional second argument is the `source' specifying the name of the
+file being read. If not given, it is taken from f.name. If `f' has no
+`name' attribute, `&lt;???&gt;' is used.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.configparser.RawConfigParser.read_string">
+    
+  </a>
+  <a name="read_string">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    read_string(self, string, source="""&lt;string&gt;"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Read configuration from a given string.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.configparser.RawConfigParser.read_dict">
+    
+  </a>
+  <a name="read_dict">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    read_dict(self, dictionary, source="""&lt;dict&gt;"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Read configuration from a dictionary.
+
+Keys are section names, values are dictionaries with keys and values
+that should be present in the section. If the used dictionary type
+preserves order, sections and their keys will be added in order.
+
+All types held in the dictionary are converted to strings during
+reading, including section names, option names and keys.
+
+Optional second argument is the `source' specifying the name of the
+dictionary being read.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.configparser.RawConfigParser.readfp">
+    
+  </a>
+  <a name="readfp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    readfp(self, fp, filename=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Deprecated, use read_file instead.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.configparser.RawConfigParser.get">
+    
+  </a>
+  <a name="get">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get(self, section, option):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get an option value for a given section.
+
+If `vars' is provided, it must be a dictionary. The option is looked up
+in `vars' (if provided), `section', and in `DEFAULTSECT' in that order.
+If the key is not found and `fallback' is provided, it is used as
+a fallback value. `None' can be provided as a `fallback' value.
+
+If interpolation is enabled and the optional argument `raw' is False,
+all interpolations are expanded in the return values.
+
+Arguments `raw', `vars', and `fallback' are keyword only.
+
+The section DEFAULT is special.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.configparser.RawConfigParser._get">
+    
+  </a>
+  <a name="_get">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get(self, section, conv, option, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.configparser.RawConfigParser._get_conv">
+    
+  </a>
+  <a name="_get_conv">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_conv(self, section, option, conv, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.configparser.RawConfigParser.getint">
+    
+  </a>
+  <a name="getint">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getint(self, section, option, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.configparser.RawConfigParser.getfloat">
+    
+  </a>
+  <a name="getfloat">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getfloat(self, section, option, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.configparser.RawConfigParser.getboolean">
+    
+  </a>
+  <a name="getboolean">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getboolean(self, section, option, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.configparser.RawConfigParser.items">
+    
+  </a>
+  <a name="items">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    items(self, section=_UNSET, raw=(False), vars=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a list of (name, value) tuples for each option in a section.
+
+All % interpolations are expanded in the return values, based on the
+defaults passed into the constructor, unless the optional argument
+`raw' is true.  Additional substitutions may be provided using the
+`vars' argument, which must be a dictionary whose contents overrides
+any pre-existing defaults.
+
+The section DEFAULT is special.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.configparser.RawConfigParser.popitem">
+    
+  </a>
+  <a name="popitem">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    popitem(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Remove a section from the parser and return it as
+a (section_name, section_proxy) tuple. If no section is present, raise
+KeyError.
+
+The section DEFAULT is never returned because it cannot be removed.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.configparser.RawConfigParser.optionxform">
+    
+  </a>
+  <a name="optionxform">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    optionxform(self, optionstr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.configparser.RawConfigParser.has_option">
+    
+  </a>
+  <a name="has_option">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    has_option(self, section, option):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Check for the existence of a given option in a given section.
+If the specified `section' is None or an empty string, DEFAULT is
+assumed. If the specified `section' does not exist, returns False.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.configparser.RawConfigParser.set">
+    
+  </a>
+  <a name="set">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set(self, section, option, value=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.configparser.ConfigParser.html" class="code" data-type="Class">Lib.configparser.ConfigParser</a></div>
+    
+    <div><p class="pre">Set an option.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.configparser.RawConfigParser.write">
+    
+  </a>
+  <a name="write">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    write(self, fp, space_around_delimiters=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Write an .ini-format representation of the configuration state.
+
+If `space_around_delimiters' is True (the default), delimiters
+between keys and values are surrounded by spaces.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.configparser.RawConfigParser._write_section">
+    
+  </a>
+  <a name="_write_section">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _write_section(self, fp, section_name, section_items, delimiter):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Write a single section to the specified `fp'.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.configparser.RawConfigParser.remove_option">
+    
+  </a>
+  <a name="remove_option">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    remove_option(self, section, option):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Remove an option.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.configparser.RawConfigParser.remove_section">
+    
+  </a>
+  <a name="remove_section">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    remove_section(self, section):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Remove a file section.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.configparser.RawConfigParser.__getitem__">
+    
+  </a>
+  <a name="__getitem__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __getitem__(self, key):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.configparser.RawConfigParser.__setitem__">
+    
+  </a>
+  <a name="__setitem__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __setitem__(self, key, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.configparser.RawConfigParser.__delitem__">
+    
+  </a>
+  <a name="__delitem__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __delitem__(self, key):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.configparser.RawConfigParser.__contains__">
+    
+  </a>
+  <a name="__contains__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __contains__(self, key):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.configparser.RawConfigParser.__len__">
+    
+  </a>
+  <a name="__len__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __len__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.configparser.RawConfigParser.__iter__">
+    
+  </a>
+  <a name="__iter__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __iter__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.configparser.RawConfigParser._read">
+    
+  </a>
+  <a name="_read">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _read(self, fp, fpname):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse a sectioned configuration file.
+
+Each section in a configuration file contains a header, indicated by
+a name in square brackets (`[]'), plus key/value options, indicated by
+`name' and `value' delimited with a specific substring (`=' or `:' by
+default).
+
+Values can span multiple lines, as long as they are indented deeper
+than the first line of the value. Depending on the parser's mode, blank
+lines may be treated as parts of multiline values or ignored.
+
+Configuration files may include comments, prefixed by specific
+characters (`#' and `;' by default). Comments may appear on their own
+in an otherwise empty line or may be entered in lines holding values or
+section names.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.configparser.RawConfigParser._join_multiline_values">
+    
+  </a>
+  <a name="_join_multiline_values">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _join_multiline_values(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.configparser.RawConfigParser._read_defaults">
+    
+  </a>
+  <a name="_read_defaults">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _read_defaults(self, defaults):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.configparser.ConfigParser.html" class="code" data-type="Class">Lib.configparser.ConfigParser</a></div>
+    
+    <div><p class="pre">Read the defaults passed in the initializer.
+Note: values can be non-string.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.configparser.RawConfigParser._handle_error">
+    
+  </a>
+  <a name="_handle_error">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _handle_error(self, exc, fpname, lineno, line):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.configparser.RawConfigParser._unify_values">
+    
+  </a>
+  <a name="_unify_values">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _unify_values(self, section, vars):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create a sequence of lookups with 'vars' taking priority over
+the 'section' which takes priority over the DEFAULTSECT.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.configparser.RawConfigParser._convert_to_boolean">
+    
+  </a>
+  <a name="_convert_to_boolean">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _convert_to_boolean(self, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a boolean value translating from other types if necessary.
+        </p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.configparser.RawConfigParser._validate_value_types">
+    
+  </a>
+  <a name="_validate_value_types">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _validate_value_types(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Raises a TypeError for non-string values.
+
+The only legal non-string value if we allow valueless
+options is None, so we need to check if the value is a
+string if:
+- we do not allow valueless options, or
+- we allow valueless options but the value is not None
+
+For compatibility reasons this method is not used in classic set()
+for RawConfigParsers. It is invoked in every case for mapping protocol
+access and in ConfigParser.set().</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.configparser.RawConfigParser.converters">
+    
+  </a>
+  <a name="converters">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    converters(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

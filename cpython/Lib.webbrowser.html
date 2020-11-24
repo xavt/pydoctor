@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.webbrowser : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.webbrowser.html" class="code" data-type="Module">webbrowser</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Interfaces for launching and remotely controlling Web browsers.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id11947">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.webbrowser.Error.html" class="code" data-type="Class">Error</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.webbrowser.html#register" class="code" data-type="Function">register</a></td>
+    <td><span>Register a browser connector.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.webbrowser.html#get" class="code" data-type="Function">get</a></td>
+    <td><span>Return a browser launcher instance appropriate for the environment.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.webbrowser.html#open" class="code" data-type="Function">open</a></td>
+    <td><span>Display url using the default browser.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.webbrowser.html#open_new" class="code" data-type="Function">open_new</a></td>
+    <td><span>Open url in a new window of the default browser.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.webbrowser.html#open_new_tab" class="code" data-type="Function">open_new_tab</a></td>
+    <td><span>Open url in a new page ("tab") of the default browser.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.webbrowser.BaseBrowser.html" class="code" data-type="Class">BaseBrowser</a></td>
+    <td><span>Parent class for all browsers. Do not use directly.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.webbrowser.GenericBrowser.html" class="code" data-type="Class">GenericBrowser</a></td>
+    <td><span>Class for all browsers started with a command and without remote functionality.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.webbrowser.BackgroundBrowser.html" class="code" data-type="Class">BackgroundBrowser</a></td>
+    <td><span>Class for all browsers which are to be started in the background.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.webbrowser.UnixBrowser.html" class="code" data-type="Class">UnixBrowser</a></td>
+    <td><span>Parent class for all Unix browsers with remote functionality.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.webbrowser.Mozilla.html" class="code" data-type="Class">Mozilla</a></td>
+    <td><span>Launcher class for Mozilla browsers.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.webbrowser.Netscape.html" class="code" data-type="Class">Netscape</a></td>
+    <td><span>Launcher class for Netscape browser.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.webbrowser.Galeon.html" class="code" data-type="Class">Galeon</a></td>
+    <td><span>Launcher class for Galeon/Epiphany browsers.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.webbrowser.Chrome.html" class="code" data-type="Class">Chrome</a></td>
+    <td><span>Launcher class for Google Chrome browser.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.webbrowser.Opera.html" class="code" data-type="Class">Opera</a></td>
+    <td><span>Launcher class for Opera browser.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.webbrowser.Elinks.html" class="code" data-type="Class">Elinks</a></td>
+    <td><span>Launcher class for Elinks browsers.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.webbrowser.Konqueror.html" class="code" data-type="Class">Konqueror</a></td>
+    <td><span>Controller for the KDE File Manager (kfm, or Konqueror).</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.webbrowser.Grail.html" class="code" data-type="Class">Grail</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.webbrowser.html#register_X_browsers" class="code" data-type="Function">register_X_browsers</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.webbrowser.html#register_standard_browsers" class="code" data-type="Function">register_standard_browsers</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.webbrowser.WindowsDefault.html" class="code" data-type="Class">WindowsDefault</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.webbrowser.MacOSX.html" class="code" data-type="Class">MacOSX</a></td>
+    <td><span>Launcher class for Aqua browsers on Mac OS X</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.webbrowser.MacOSXOSAScript.html" class="code" data-type="Class">MacOSXOSAScript</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.webbrowser.html#main" class="code" data-type="Function">main</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.webbrowser.html#_lock" class="code" data-type="Variable">_lock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.webbrowser.html#_browsers" class="code" data-type="Variable">_browsers</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.webbrowser.html#_tryorder" class="code" data-type="Variable">_tryorder</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.webbrowser.html#_os_preferred_browser" class="code" data-type="Variable">_os_preferred_browser</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.webbrowser.html#_synthesize" class="code" data-type="Function">_synthesize</a></td>
+    <td><span>Attempt to synthesize a controller based on existing controllers.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable private">
+  
+  <a name="Lib.webbrowser._lock">
+    
+  </a>
+  <a name="_lock">
+    
+  </a>
+  <div class="functionHeader">
+    _lock =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.webbrowser._browsers">
+    
+  </a>
+  <a name="_browsers">
+    
+  </a>
+  <div class="functionHeader">
+    _browsers =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.webbrowser._tryorder">
+    
+  </a>
+  <a name="_tryorder">
+    
+  </a>
+  <div class="functionHeader">
+    _tryorder =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.webbrowser._os_preferred_browser">
+    
+  </a>
+  <a name="_os_preferred_browser">
+    
+  </a>
+  <div class="functionHeader">
+    _os_preferred_browser =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.webbrowser.register">
+    
+  </a>
+  <a name="register">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    register(name, klass, instance=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Register a browser connector.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.webbrowser.get">
+    
+  </a>
+  <a name="get">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get(using=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a browser launcher instance appropriate for the environment.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.webbrowser.open">
+    
+  </a>
+  <a name="open">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    open(url, new=0, autoraise=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Display url using the default browser.
+
+If possible, open url in a location determined by new.
+- 0: the same browser window (the default).
+- 1: a new browser window.
+- 2: a new browser page ("tab").
+If possible, autoraise raises the window (the default) or not.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.webbrowser.open_new">
+    
+  </a>
+  <a name="open_new">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    open_new(url):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Open url in a new window of the default browser.
+
+If not possible, then open url in the only browser window.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.webbrowser.open_new_tab">
+    
+  </a>
+  <a name="open_new_tab">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    open_new_tab(url):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Open url in a new page ("tab") of the default browser.
+
+If not possible, then the behavior becomes equivalent to open_new().</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.webbrowser._synthesize">
+    
+  </a>
+  <a name="_synthesize">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _synthesize(browser):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Attempt to synthesize a controller based on existing controllers.
+
+This is useful to create a controller when a user specifies a path to
+an entry in the BROWSER environment variable -- we can copy a general
+controller to operate using a specific installation of the desired
+browser in this way.
+
+If we can't create a controller in this way, or if there is no
+executable for the requested browser, return [None, None].</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.webbrowser.register_X_browsers">
+    
+  </a>
+  <a name="register_X_browsers">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    register_X_browsers():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.webbrowser.register_standard_browsers">
+    
+  </a>
+  <a name="register_standard_browsers">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    register_standard_browsers():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.webbrowser.main">
+    
+  </a>
+  <a name="main">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    main():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.gzip.GzipFile : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.gzip.html" class="code" data-type="Module">gzip</a>.<a href="Lib.gzip.GzipFile.html" class="code" data-type="Class">GzipFile</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.gzip.GzipFile(<span title="_compression.BaseStream">_compression.BaseStream</span>):</code></p>
+        <p><a href="classIndex.html#Lib.gzip.GzipFile">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">The GzipFile class simulates most of the methods of a file object with
+the exception of the truncate() method.
+
+This class only supports opening files in binary mode. If you need to open a
+compressed file in text mode, use the gzip.open() function.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id1978">
+  
+  <tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.gzip.GzipFile.html#myfileobj" class="code" data-type="Instance Variable">myfileobj</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.gzip.GzipFile.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Constructor for the GzipFile class.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.gzip.GzipFile.html#mode" class="code" data-type="Instance Variable">mode</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.gzip.GzipFile.html#name" class="code" data-type="Instance Variable">name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.gzip.GzipFile.html#compress" class="code" data-type="Instance Variable">compress</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.gzip.GzipFile.html#fileobj" class="code" data-type="Instance Variable">fileobj</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.gzip.GzipFile.html#filename" class="code" data-type="Method">filename</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.gzip.GzipFile.html#mtime" class="code" data-type="Method">mtime</a></td>
+    <td><span>Last modification time read from stream, or None</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.gzip.GzipFile.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.gzip.GzipFile.html#crc" class="code" data-type="Instance Variable">crc</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.gzip.GzipFile.html#size" class="code" data-type="Instance Variable">size</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.gzip.GzipFile.html#writebuf" class="code" data-type="Instance Variable">writebuf</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.gzip.GzipFile.html#bufsize" class="code" data-type="Instance Variable">bufsize</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.gzip.GzipFile.html#offset" class="code" data-type="Instance Variable">offset</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.gzip.GzipFile.html#write" class="code" data-type="Method">write</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.gzip.GzipFile.html#read" class="code" data-type="Method">read</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.gzip.GzipFile.html#read1" class="code" data-type="Method">read1</a></td>
+    <td><span>Implements BufferedIOBase.read1()</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.gzip.GzipFile.html#peek" class="code" data-type="Method">peek</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.gzip.GzipFile.html#closed" class="code" data-type="Method">closed</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.gzip.GzipFile.html#close" class="code" data-type="Method">close</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.gzip.GzipFile.html#flush" class="code" data-type="Method">flush</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.gzip.GzipFile.html#fileno" class="code" data-type="Method">fileno</a></td>
+    <td><span>Invoke the underlying file object's fileno() method.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.gzip.GzipFile.html#rewind" class="code" data-type="Method">rewind</a></td>
+    <td><span>Return the uncompressed stream file position indicator to the beginning of the file</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.gzip.GzipFile.html#readable" class="code" data-type="Method">readable</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.gzip.GzipFile.html#writable" class="code" data-type="Method">writable</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.gzip.GzipFile.html#seekable" class="code" data-type="Method">seekable</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.gzip.GzipFile.html#seek" class="code" data-type="Method">seek</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.gzip.GzipFile.html#readline" class="code" data-type="Method">readline</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.gzip.GzipFile.html#_buffer" class="code" data-type="Instance Variable">_buffer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.gzip.GzipFile.html#_write_mtime" class="code" data-type="Instance Variable">_write_mtime</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.gzip.GzipFile.html#_init_write" class="code" data-type="Method">_init_write</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.gzip.GzipFile.html#_write_gzip_header" class="code" data-type="Method">_write_gzip_header</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseinstancevariable">
+  
+  <a name="Lib.gzip.GzipFile.myfileobj">
+    
+  </a>
+  <a name="myfileobj">
+    
+  </a>
+  <div class="functionHeader">
+    myfileobj =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.gzip.GzipFile.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, filename=None, mode=None, compresslevel=_COMPRESS_LEVEL_BEST, fileobj=None, mtime=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Constructor for the GzipFile class.
+
+At least one of fileobj and filename must be given a
+non-trivial value.
+
+The new class instance is based on fileobj, which can be a regular
+file, an io.BytesIO object, or any other object which simulates a file.
+It defaults to None, in which case filename is opened to provide
+a file object.
+
+When fileobj is not None, the filename argument is only used to be
+included in the gzip file header, which may include the original
+filename of the uncompressed file.  It defaults to the filename of
+fileobj, if discernible; otherwise, it defaults to the empty string,
+and in this case the original filename is not included in the header.
+
+The mode argument can be any of 'r', 'rb', 'a', 'ab', 'w', 'wb', 'x', or
+'xb' depending on whether the file will be read or written.  The default
+is the mode of fileobj if discernible; otherwise, the default is 'rb'.
+A mode of 'r' is equivalent to one of 'rb', and similarly for 'w' and
+'wb', 'a' and 'ab', and 'x' and 'xb'.
+
+The compresslevel argument is an integer from 0 to 9 controlling the
+level of compression; 1 is fastest and produces the least compression,
+and 9 is slowest and produces the most compression. 0 is no compression
+at all. The default is 9.
+
+The mtime argument is an optional numeric timestamp to be written
+to the last modification time field in the stream when compressing.
+If omitted or None, the current time is used.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.gzip.GzipFile.mode">
+    
+  </a>
+  <a name="mode">
+    
+  </a>
+  <div class="functionHeader">
+    mode =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.gzip.GzipFile._buffer">
+    
+  </a>
+  <a name="_buffer">
+    
+  </a>
+  <div class="functionHeader">
+    _buffer =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.gzip.GzipFile.name">
+    
+  </a>
+  <a name="name">
+    
+  </a>
+  <div class="functionHeader">
+    name =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.gzip.GzipFile.compress">
+    
+  </a>
+  <a name="compress">
+    
+  </a>
+  <div class="functionHeader">
+    compress =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.gzip.GzipFile._write_mtime">
+    
+  </a>
+  <a name="_write_mtime">
+    
+  </a>
+  <div class="functionHeader">
+    _write_mtime =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.gzip.GzipFile.fileobj">
+    
+  </a>
+  <a name="fileobj">
+    
+  </a>
+  <div class="functionHeader">
+    fileobj =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.gzip.GzipFile.filename">
+    
+  </a>
+  <a name="filename">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    filename(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.gzip.GzipFile.mtime">
+    
+  </a>
+  <a name="mtime">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    mtime(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Last modification time read from stream, or None</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.gzip.GzipFile.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __repr__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.gzip.GzipFile._init_write">
+    
+  </a>
+  <a name="_init_write">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _init_write(self, filename):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.gzip.GzipFile.crc">
+    
+  </a>
+  <a name="crc">
+    
+  </a>
+  <div class="functionHeader">
+    crc =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.gzip.GzipFile.size">
+    
+  </a>
+  <a name="size">
+    
+  </a>
+  <div class="functionHeader">
+    size =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.gzip.GzipFile.writebuf">
+    
+  </a>
+  <a name="writebuf">
+    
+  </a>
+  <div class="functionHeader">
+    writebuf =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.gzip.GzipFile.bufsize">
+    
+  </a>
+  <a name="bufsize">
+    
+  </a>
+  <div class="functionHeader">
+    bufsize =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.gzip.GzipFile.offset">
+    
+  </a>
+  <a name="offset">
+    
+  </a>
+  <div class="functionHeader">
+    offset =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.gzip.GzipFile._write_gzip_header">
+    
+  </a>
+  <a name="_write_gzip_header">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _write_gzip_header(self, compresslevel):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.gzip.GzipFile.write">
+    
+  </a>
+  <a name="write">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    write(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.gzip.GzipFile.read">
+    
+  </a>
+  <a name="read">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    read(self, size=(-1)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.gzip.GzipFile.read1">
+    
+  </a>
+  <a name="read1">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    read1(self, size=(-1)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Implements BufferedIOBase.read1()
+
+Reads up to a buffer's worth of data if size is negative.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.gzip.GzipFile.peek">
+    
+  </a>
+  <a name="peek">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    peek(self, n):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.gzip.GzipFile.closed">
+    
+  </a>
+  <a name="closed">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    closed(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.gzip.GzipFile.close">
+    
+  </a>
+  <a name="close">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    close(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.gzip.GzipFile.flush">
+    
+  </a>
+  <a name="flush">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    flush(self, zlib_mode=zlib.Z_SYNC_FLUSH):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.gzip.GzipFile.fileno">
+    
+  </a>
+  <a name="fileno">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    fileno(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Invoke the underlying file object's fileno() method.
+
+This will raise AttributeError if the underlying file object
+doesn't support fileno().</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.gzip.GzipFile.rewind">
+    
+  </a>
+  <a name="rewind">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    rewind(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the uncompressed stream file position indicator to the
+beginning of the file</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.gzip.GzipFile.readable">
+    
+  </a>
+  <a name="readable">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    readable(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.gzip.GzipFile.writable">
+    
+  </a>
+  <a name="writable">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    writable(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.gzip.GzipFile.seekable">
+    
+  </a>
+  <a name="seekable">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    seekable(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.gzip.GzipFile.seek">
+    
+  </a>
+  <a name="seek">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    seek(self, offset, whence=io.SEEK_SET):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.gzip.GzipFile.readline">
+    
+  </a>
+  <a name="readline">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    readline(self, size=(-1)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

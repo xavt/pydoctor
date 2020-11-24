@@ -1,0 +1,1119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.logging.handlers.SysLogHandler : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.logging.html" class="code" data-type="Package">logging</a>.<a href="Lib.logging.handlers.html" class="code" data-type="Module">handlers</a>.<a href="Lib.logging.handlers.SysLogHandler.html" class="code" data-type="Class">SysLogHandler</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.logging.handlers.SysLogHandler(<span title="logging.Handler">logging.Handler</span>):</code></p>
+        <p><a href="classIndex.html#Lib.logging.handlers.SysLogHandler">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">A handler class which sends formatted logging records to a syslog
+server. Based on Sam Rushing's syslog module:
+http://www.nightmare.com/squirl/python-ext/misc/syslog.py
+Contributed by Nicolas Untz (after which minor refactoring changes
+have been made).</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3054">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_EMERG" class="code" data-type="Class Variable">LOG_EMERG</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_ALERT" class="code" data-type="Class Variable">LOG_ALERT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_CRIT" class="code" data-type="Class Variable">LOG_CRIT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_ERR" class="code" data-type="Class Variable">LOG_ERR</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_WARNING" class="code" data-type="Class Variable">LOG_WARNING</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_NOTICE" class="code" data-type="Class Variable">LOG_NOTICE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_INFO" class="code" data-type="Class Variable">LOG_INFO</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_DEBUG" class="code" data-type="Class Variable">LOG_DEBUG</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_KERN" class="code" data-type="Class Variable">LOG_KERN</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_USER" class="code" data-type="Class Variable">LOG_USER</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_MAIL" class="code" data-type="Class Variable">LOG_MAIL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_DAEMON" class="code" data-type="Class Variable">LOG_DAEMON</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_AUTH" class="code" data-type="Class Variable">LOG_AUTH</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_SYSLOG" class="code" data-type="Class Variable">LOG_SYSLOG</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_LPR" class="code" data-type="Class Variable">LOG_LPR</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_NEWS" class="code" data-type="Class Variable">LOG_NEWS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_UUCP" class="code" data-type="Class Variable">LOG_UUCP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_CRON" class="code" data-type="Class Variable">LOG_CRON</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_AUTHPRIV" class="code" data-type="Class Variable">LOG_AUTHPRIV</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_FTP" class="code" data-type="Class Variable">LOG_FTP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_NTP" class="code" data-type="Class Variable">LOG_NTP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_SECURITY" class="code" data-type="Class Variable">LOG_SECURITY</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_CONSOLE" class="code" data-type="Class Variable">LOG_CONSOLE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_SOLCRON" class="code" data-type="Class Variable">LOG_SOLCRON</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_LOCAL0" class="code" data-type="Class Variable">LOG_LOCAL0</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_LOCAL1" class="code" data-type="Class Variable">LOG_LOCAL1</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_LOCAL2" class="code" data-type="Class Variable">LOG_LOCAL2</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_LOCAL3" class="code" data-type="Class Variable">LOG_LOCAL3</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_LOCAL4" class="code" data-type="Class Variable">LOG_LOCAL4</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_LOCAL5" class="code" data-type="Class Variable">LOG_LOCAL5</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_LOCAL6" class="code" data-type="Class Variable">LOG_LOCAL6</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#LOG_LOCAL7" class="code" data-type="Class Variable">LOG_LOCAL7</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#priority_names" class="code" data-type="Class Variable">priority_names</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#facility_names" class="code" data-type="Class Variable">facility_names</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#priority_map" class="code" data-type="Class Variable">priority_map</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Initialize a handler.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#address" class="code" data-type="Instance Variable">address</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#facility" class="code" data-type="Instance Variable">facility</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#socktype" class="code" data-type="Instance Variable">socktype</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#unixsocket" class="code" data-type="Instance Variable">unixsocket</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#socket" class="code" data-type="Instance Variable">socket</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#encodePriority" class="code" data-type="Method">encodePriority</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#close" class="code" data-type="Method">close</a></td>
+    <td><span>Closes the socket.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#mapPriority" class="code" data-type="Method">mapPriority</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#ident" class="code" data-type="Class Variable">ident</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#append_nul" class="code" data-type="Class Variable">append_nul</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#emit" class="code" data-type="Method">emit</a></td>
+    <td><span>Emit a record.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.handlers.SysLogHandler.html#_connect_unixsocket" class="code" data-type="Method">_connect_unixsocket</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_EMERG">
+    
+  </a>
+  <a name="LOG_EMERG">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_EMERG =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_ALERT">
+    
+  </a>
+  <a name="LOG_ALERT">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_ALERT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_CRIT">
+    
+  </a>
+  <a name="LOG_CRIT">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_CRIT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_ERR">
+    
+  </a>
+  <a name="LOG_ERR">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_ERR =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_WARNING">
+    
+  </a>
+  <a name="LOG_WARNING">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_WARNING =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_NOTICE">
+    
+  </a>
+  <a name="LOG_NOTICE">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_NOTICE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_INFO">
+    
+  </a>
+  <a name="LOG_INFO">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_INFO =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_DEBUG">
+    
+  </a>
+  <a name="LOG_DEBUG">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_DEBUG =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_KERN">
+    
+  </a>
+  <a name="LOG_KERN">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_KERN =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_USER">
+    
+  </a>
+  <a name="LOG_USER">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_USER =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_MAIL">
+    
+  </a>
+  <a name="LOG_MAIL">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_MAIL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_DAEMON">
+    
+  </a>
+  <a name="LOG_DAEMON">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_DAEMON =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_AUTH">
+    
+  </a>
+  <a name="LOG_AUTH">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_AUTH =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_SYSLOG">
+    
+  </a>
+  <a name="LOG_SYSLOG">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_SYSLOG =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_LPR">
+    
+  </a>
+  <a name="LOG_LPR">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_LPR =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_NEWS">
+    
+  </a>
+  <a name="LOG_NEWS">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_NEWS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_UUCP">
+    
+  </a>
+  <a name="LOG_UUCP">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_UUCP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_CRON">
+    
+  </a>
+  <a name="LOG_CRON">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_CRON =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_AUTHPRIV">
+    
+  </a>
+  <a name="LOG_AUTHPRIV">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_AUTHPRIV =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_FTP">
+    
+  </a>
+  <a name="LOG_FTP">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_FTP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_NTP">
+    
+  </a>
+  <a name="LOG_NTP">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_NTP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_SECURITY">
+    
+  </a>
+  <a name="LOG_SECURITY">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_SECURITY =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_CONSOLE">
+    
+  </a>
+  <a name="LOG_CONSOLE">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_CONSOLE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_SOLCRON">
+    
+  </a>
+  <a name="LOG_SOLCRON">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_SOLCRON =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_LOCAL0">
+    
+  </a>
+  <a name="LOG_LOCAL0">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_LOCAL0 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_LOCAL1">
+    
+  </a>
+  <a name="LOG_LOCAL1">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_LOCAL1 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_LOCAL2">
+    
+  </a>
+  <a name="LOG_LOCAL2">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_LOCAL2 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_LOCAL3">
+    
+  </a>
+  <a name="LOG_LOCAL3">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_LOCAL3 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_LOCAL4">
+    
+  </a>
+  <a name="LOG_LOCAL4">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_LOCAL4 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_LOCAL5">
+    
+  </a>
+  <a name="LOG_LOCAL5">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_LOCAL5 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_LOCAL6">
+    
+  </a>
+  <a name="LOG_LOCAL6">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_LOCAL6 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.LOG_LOCAL7">
+    
+  </a>
+  <a name="LOG_LOCAL7">
+    
+  </a>
+  <div class="functionHeader">
+    LOG_LOCAL7 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.priority_names">
+    
+  </a>
+  <a name="priority_names">
+    
+  </a>
+  <div class="functionHeader">
+    priority_names =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.facility_names">
+    
+  </a>
+  <a name="facility_names">
+    
+  </a>
+  <div class="functionHeader">
+    facility_names =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.priority_map">
+    
+  </a>
+  <a name="priority_map">
+    
+  </a>
+  <div class="functionHeader">
+    priority_map =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict[str, str]</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, address=('localhost', SYSLOG_UDP_PORT), facility=LOG_USER, socktype=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Initialize a handler.
+
+If address is specified as a string, a UNIX socket is used. To log to a
+local syslogd, "SysLogHandler(address="/dev/log")" can be used.
+If facility is not specified, LOG_USER is used. If socktype is
+specified as socket.SOCK_DGRAM or socket.SOCK_STREAM, that specific
+socket type will be used. For Unix sockets, you can also specify a
+socktype of None, in which case socket.SOCK_DGRAM will be used, falling
+back to socket.SOCK_STREAM.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.address">
+    
+  </a>
+  <a name="address">
+    
+  </a>
+  <div class="functionHeader">
+    address =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.facility">
+    
+  </a>
+  <a name="facility">
+    
+  </a>
+  <div class="functionHeader">
+    facility =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.socktype">
+    
+  </a>
+  <a name="socktype">
+    
+  </a>
+  <div class="functionHeader">
+    socktype =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.unixsocket">
+    
+  </a>
+  <a name="unixsocket">
+    
+  </a>
+  <div class="functionHeader">
+    unixsocket =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.socket">
+    
+  </a>
+  <a name="socket">
+    
+  </a>
+  <div class="functionHeader">
+    socket =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.logging.handlers.SysLogHandler._connect_unixsocket">
+    
+  </a>
+  <a name="_connect_unixsocket">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _connect_unixsocket(self, address):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.encodePriority">
+    
+  </a>
+  <a name="encodePriority">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    encodePriority(self, facility, priority):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Encode the facility and priority. You can pass in strings or
+integers - if strings are passed, the facility_names and
+priority_names mapping dictionaries are used to convert them to
+integers.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.close">
+    
+  </a>
+  <a name="close">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    close(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Closes the socket.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.mapPriority">
+    
+  </a>
+  <a name="mapPriority">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    mapPriority(self, levelName):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Map a logging level name to a key in the priority_names map.
+This is useful in two scenarios: when custom levels are being
+used, and in the case where you can't do a straightforward
+mapping by lowercasing the logging level name because of locale-
+specific issues (see SF #1524081).</p></div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.ident">
+    
+  </a>
+  <a name="ident">
+    
+  </a>
+  <div class="functionHeader">
+    ident =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.append_nul">
+    
+  </a>
+  <a name="append_nul">
+    
+  </a>
+  <div class="functionHeader">
+    append_nul =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.handlers.SysLogHandler.emit">
+    
+  </a>
+  <a name="emit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    emit(self, record):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Emit a record.
+
+The record is formatted, and then sent to the syslog server. If
+exception information is present, it is NOT sent to the server.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

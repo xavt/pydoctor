@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.copy : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.copy.html" class="code" data-type="Module">copy</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Generic (shallow and deep) copying operations.
+
+Interface summary:
+
+        import copy
+
+        x = copy.copy(y)        # make a shallow copy of y
+        x = copy.deepcopy(y)    # make a deep copy of y
+
+For module specific errors, copy.Error is raised.
+
+The difference between shallow and deep copying is only relevant for
+compound objects (objects that contain other objects, like lists or
+class instances).
+
+- A shallow copy constructs a new compound object and then (to the
+  extent possible) inserts *the same objects* into it that the
+  original contains.
+
+- A deep copy constructs a new compound object and then, recursively,
+  inserts *copies* into it of the objects found in the original.
+
+Two problems often exist with deep copy operations that don't exist
+with shallow copy operations:
+
+ a) recursive objects (compound objects that, directly or indirectly,
+    contain a reference to themselves) may cause a recursive loop
+
+ b) because deep copy copies *everything* it may copy too much, e.g.
+    administrative data structures that should be shared even between
+    copies
+
+Python's deep copy operation avoids these problems by:
+
+ a) keeping a table of objects already copied during the current
+    copying pass
+
+ b) letting user-defined classes override the copying operation or the
+    set of components copied
+
+This version does not copy types like module, class, function, method,
+nor stack trace, stack frame, nor file, socket, window, nor array, nor
+any similar types.
+
+Classes can use the same interfaces to control copying that they use
+to control pickling: they can define methods called __getinitargs__(),
+__getstate__() and __setstate__().  See the documentation for module
+"pickle" for information on these methods.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id641">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.copy.Error.html" class="code" data-type="Class">Error</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.copy.html#PyStringMap" class="code" data-type="Variable">PyStringMap</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.copy.html#copy" class="code" data-type="Function">copy</a></td>
+    <td><span>Shallow copy operation on arbitrary Python objects.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.copy.html#d" class="code" data-type="Variable">d</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.copy.html#t" class="code" data-type="Variable">t</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.copy.html#deepcopy" class="code" data-type="Function">deepcopy</a></td>
+    <td><span>Deep copy operation on arbitrary Python objects.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.copy.html#_copy_dispatch" class="code" data-type="Variable">_copy_dispatch</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.copy.html#_copy_immutable" class="code" data-type="Function">_copy_immutable</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.copy.html#_deepcopy_dispatch" class="code" data-type="Variable">_deepcopy_dispatch</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.copy.html#_deepcopy_atomic" class="code" data-type="Function">_deepcopy_atomic</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.copy.html#_deepcopy_list" class="code" data-type="Function">_deepcopy_list</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.copy.html#_deepcopy_tuple" class="code" data-type="Function">_deepcopy_tuple</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.copy.html#_deepcopy_dict" class="code" data-type="Function">_deepcopy_dict</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.copy.html#_deepcopy_method" class="code" data-type="Function">_deepcopy_method</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.copy.html#_keep_alive" class="code" data-type="Function">_keep_alive</a></td>
+    <td><span>Keeps a reference to the object x in the memo.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.copy.html#_reconstruct" class="code" data-type="Function">_reconstruct</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.copy.PyStringMap">
+    
+  </a>
+  <a name="PyStringMap">
+    
+  </a>
+  <div class="functionHeader">
+    PyStringMap =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.copy.copy">
+    
+  </a>
+  <a name="copy">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    copy(x):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Shallow copy operation on arbitrary Python objects.
+
+See the module's __doc__ string for more info.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.copy._copy_dispatch">
+    
+  </a>
+  <a name="_copy_dispatch">
+    
+  </a>
+  <div class="functionHeader">
+    _copy_dispatch =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.copy.d">
+    
+  </a>
+  <a name="d">
+    
+  </a>
+  <div class="functionHeader">
+    d =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.copy._copy_immutable">
+    
+  </a>
+  <a name="_copy_immutable">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _copy_immutable(x):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.copy.t">
+    
+  </a>
+  <a name="t">
+    
+  </a>
+  <div class="functionHeader">
+    t =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.copy.deepcopy">
+    
+  </a>
+  <a name="deepcopy">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    deepcopy(x, memo=None, _nil=[]):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Deep copy operation on arbitrary Python objects.
+
+See the module's __doc__ string for more info.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.copy._deepcopy_dispatch">
+    
+  </a>
+  <a name="_deepcopy_dispatch">
+    
+  </a>
+  <div class="functionHeader">
+    _deepcopy_dispatch =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.copy._deepcopy_atomic">
+    
+  </a>
+  <a name="_deepcopy_atomic">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _deepcopy_atomic(x, memo):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.copy._deepcopy_list">
+    
+  </a>
+  <a name="_deepcopy_list">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _deepcopy_list(x, memo, deepcopy=deepcopy):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.copy._deepcopy_tuple">
+    
+  </a>
+  <a name="_deepcopy_tuple">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _deepcopy_tuple(x, memo, deepcopy=deepcopy):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.copy._deepcopy_dict">
+    
+  </a>
+  <a name="_deepcopy_dict">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _deepcopy_dict(x, memo, deepcopy=deepcopy):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.copy._deepcopy_method">
+    
+  </a>
+  <a name="_deepcopy_method">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _deepcopy_method(x, memo):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.copy._keep_alive">
+    
+  </a>
+  <a name="_keep_alive">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _keep_alive(x, memo):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Keeps a reference to the object x in the memo.
+
+Because we remember objects by their id, we have
+to assure that possibly temporary objects are kept
+alive by referencing them.
+We store a reference at the id of the memo, which should
+normally not be used unless someone tries to deepcopy
+the memo itself...</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.copy._reconstruct">
+    
+  </a>
+  <a name="_reconstruct">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _reconstruct(x, memo, func, args, state=None, listiter=None, dictiter=None, deepcopy=deepcopy):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

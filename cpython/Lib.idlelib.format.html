@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.idlelib.format : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.idlelib.html" class="code" data-type="Package">idlelib</a>.<a href="Lib.idlelib.format.html" class="code" data-type="Module">format</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Format all or a selected region (line slice) of text.
+
+Region formatting options: paragraph, comment block, indent, deindent,
+comment, uncomment, tabify, and untabify.
+
+File renamed from paragraph.py with functions added from editor.py.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2107">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.format.FormatParagraph.html" class="code" data-type="Class">FormatParagraph</a></td>
+    <td><span>Format a paragraph, comment block, or selection to a max width.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.format.html#find_paragraph" class="code" data-type="Function">find_paragraph</a></td>
+    <td><span>Returns the start/stop indices enclosing the paragraph that mark is in.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.format.html#reformat_paragraph" class="code" data-type="Function">reformat_paragraph</a></td>
+    <td><span>Return data reformatted to specified width (limit).</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.format.html#reformat_comment" class="code" data-type="Function">reformat_comment</a></td>
+    <td><span>Return data reformatted to specified width with comment header.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.format.html#is_all_white" class="code" data-type="Function">is_all_white</a></td>
+    <td><span>Return True if line is empty or all whitespace.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.format.html#get_indent" class="code" data-type="Function">get_indent</a></td>
+    <td><span>Return the initial space or tab indent of line.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.format.html#get_comment_header" class="code" data-type="Function">get_comment_header</a></td>
+    <td><span>Return string with leading whitespace and '#' from line or ''.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.format.html#get_line_indent" class="code" data-type="Function">get_line_indent</a></td>
+    <td><span>Return a line's indentation as (# chars, effective # of spaces).</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.format.FormatRegion.html" class="code" data-type="Class">FormatRegion</a></td>
+    <td><span>Format selected text (region).</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.format.Indents.html" class="code" data-type="Class">Indents</a></td>
+    <td><span>Change future indents.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.format.Rstrip.html" class="code" data-type="Class">Rstrip</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.format.html#_line_indent_re" class="code" data-type="Variable">_line_indent_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction">
+  
+  <a name="Lib.idlelib.format.find_paragraph">
+    
+  </a>
+  <a name="find_paragraph">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    find_paragraph(text, mark):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns the start/stop indices enclosing the paragraph that mark is in.
+
+Also returns the comment format string, if any, and paragraph of text
+between the start/stop indices.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.format.reformat_paragraph">
+    
+  </a>
+  <a name="reformat_paragraph">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    reformat_paragraph(data, limit):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return data reformatted to specified width (limit).</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.format.reformat_comment">
+    
+  </a>
+  <a name="reformat_comment">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    reformat_comment(data, limit, comment_header):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return data reformatted to specified width with comment header.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.format.is_all_white">
+    
+  </a>
+  <a name="is_all_white">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_all_white(line):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True if line is empty or all whitespace.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.format.get_indent">
+    
+  </a>
+  <a name="get_indent">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_indent(line):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the initial space or tab indent of line.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.format.get_comment_header">
+    
+  </a>
+  <a name="get_comment_header">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_comment_header(line):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return string with leading whitespace and '#' from line or ''.
+
+A null return indicates that the line is not a comment line. A non-
+null return, such as '    #', will be used to find the other lines of
+a comment block with the same  indent.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.format._line_indent_re">
+    
+  </a>
+  <a name="_line_indent_re">
+    
+  </a>
+  <div class="functionHeader">
+    _line_indent_re =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.format.get_line_indent">
+    
+  </a>
+  <a name="get_line_indent">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_line_indent(line, tabwidth):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a line's indentation as (# chars, effective # of spaces).
+
+The effective # of spaces is the length after properly "expanding"
+the tabs into spaces, as done by str.expandtabs(tabwidth).</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

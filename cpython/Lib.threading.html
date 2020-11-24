@@ -1,0 +1,880 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.threading : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.threading.html" class="code" data-type="Module">threading</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Thread module emulating a subset of Java's threading model.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id10892">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.threading.html#setprofile" class="code" data-type="Function">setprofile</a></td>
+    <td><span>Set a profile function for all threads started from the threading module.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.threading.html#getprofile" class="code" data-type="Function">getprofile</a></td>
+    <td><span>Get the profiler function as set by threading.setprofile().</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.threading.html#settrace" class="code" data-type="Function">settrace</a></td>
+    <td><span>Set a trace function for all threads started from the threading module.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.threading.html#gettrace" class="code" data-type="Function">gettrace</a></td>
+    <td><span>Get the trace function as set by threading.settrace().</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.threading.html#RLock" class="code" data-type="Function">RLock</a></td>
+    <td><span>Factory function that returns a new reentrant lock.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.threading.Condition.html" class="code" data-type="Class">Condition</a></td>
+    <td><span>Class that implements a condition variable.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.threading.Semaphore.html" class="code" data-type="Class">Semaphore</a></td>
+    <td><span>This class implements semaphore objects.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.threading.BoundedSemaphore.html" class="code" data-type="Class">BoundedSemaphore</a></td>
+    <td><span>Implements a bounded semaphore.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.threading.Event.html" class="code" data-type="Class">Event</a></td>
+    <td><span>Class implementing event objects.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.threading.Barrier.html" class="code" data-type="Class">Barrier</a></td>
+    <td><span>Implements a Barrier.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.threading.BrokenBarrierError.html" class="code" data-type="Class">BrokenBarrierError</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.threading.Thread.html" class="code" data-type="Class">Thread</a></td>
+    <td><span>A class that represents a thread of control.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.threading.html#ExceptHookArgs" class="code" data-type="Function">ExceptHookArgs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.threading.html#excepthook" class="code" data-type="Function">excepthook</a></td>
+    <td><span>Handle uncaught Thread.run() exception.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.threading.Timer.html" class="code" data-type="Class">Timer</a></td>
+    <td><span>Call a function after a specified number of seconds:</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.threading.html#current_thread" class="code" data-type="Function">current_thread</a></td>
+    <td><span>Return the current Thread object, corresponding to the caller's thread of control.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.threading.html#active_count" class="code" data-type="Function">active_count</a></td>
+    <td><span>Return the number of Thread objects currently alive.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.threading.html#enumerate" class="code" data-type="Function">enumerate</a></td>
+    <td><span>Return a list of all Thread objects currently alive.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.threading.html#main_thread" class="code" data-type="Function">main_thread</a></td>
+    <td><span>Return the main thread object.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.threading.html#_HAVE_THREAD_NATIVE_ID" class="code" data-type="Variable">_HAVE_THREAD_NATIVE_ID</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.threading.html#_CRLock" class="code" data-type="Variable">_CRLock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.threading.html#_profile_hook" class="code" data-type="Variable">_profile_hook</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.threading.html#_trace_hook" class="code" data-type="Variable">_trace_hook</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.threading._RLock.html" class="code" data-type="Class">_RLock</a></td>
+    <td><span>This class implements reentrant lock objects.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.threading.html#_counter" class="code" data-type="Variable">_counter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.threading.html#_newname" class="code" data-type="Function">_newname</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.threading.html#_active_limbo_lock" class="code" data-type="Variable">_active_limbo_lock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.threading.html#_active" class="code" data-type="Variable">_active</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.threading.html#_limbo" class="code" data-type="Variable">_limbo</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.threading.html#_dangling" class="code" data-type="Variable">_dangling</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.threading.html#_shutdown_locks_lock" class="code" data-type="Variable">_shutdown_locks_lock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.threading.html#_shutdown_locks" class="code" data-type="Variable">_shutdown_locks</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.threading.html#_ExceptHookArgs" class="code" data-type="Variable">_ExceptHookArgs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.threading.html#_make_invoke_excepthook" class="code" data-type="Function">_make_invoke_excepthook</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.threading._MainThread.html" class="code" data-type="Class">_MainThread</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.threading._DummyThread.html" class="code" data-type="Class">_DummyThread</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.threading.html#_enumerate" class="code" data-type="Function">_enumerate</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.threading.html#_threading_atexits" class="code" data-type="Variable">_threading_atexits</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.threading.html#_SHUTTING_DOWN" class="code" data-type="Variable">_SHUTTING_DOWN</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.threading.html#_register_atexit" class="code" data-type="Function">_register_atexit</a></td>
+    <td><span>CPython internal: register *func* to be called before joining threads.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.threading.html#_main_thread" class="code" data-type="Variable">_main_thread</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.threading.html#_shutdown" class="code" data-type="Function">_shutdown</a></td>
+    <td><span>Wait until the Python thread state of all non-daemon threads get deleted.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.threading.html#_after_fork" class="code" data-type="Function">_after_fork</a></td>
+    <td><span>Cleanup threading module state that should not exist after a fork.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable private">
+  
+  <a name="Lib.threading._HAVE_THREAD_NATIVE_ID">
+    
+  </a>
+  <a name="_HAVE_THREAD_NATIVE_ID">
+    
+  </a>
+  <div class="functionHeader">
+    _HAVE_THREAD_NATIVE_ID =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.threading._CRLock">
+    
+  </a>
+  <a name="_CRLock">
+    
+  </a>
+  <div class="functionHeader">
+    _CRLock =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.threading._profile_hook">
+    
+  </a>
+  <a name="_profile_hook">
+    
+  </a>
+  <div class="functionHeader">
+    _profile_hook =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.threading._trace_hook">
+    
+  </a>
+  <a name="_trace_hook">
+    
+  </a>
+  <div class="functionHeader">
+    _trace_hook =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.threading.setprofile">
+    
+  </a>
+  <a name="setprofile">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setprofile(func):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set a profile function for all threads started from the threading module.
+
+The func will be passed to sys.setprofile() for each thread, before its
+run() method is called.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.threading.getprofile">
+    
+  </a>
+  <a name="getprofile">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getprofile():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get the profiler function as set by threading.setprofile().</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.threading.settrace">
+    
+  </a>
+  <a name="settrace">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    settrace(func):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set a trace function for all threads started from the threading module.
+
+The func will be passed to sys.settrace() for each thread, before its run()
+method is called.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.threading.gettrace">
+    
+  </a>
+  <a name="gettrace">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    gettrace():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get the trace function as set by threading.settrace().</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.threading.RLock">
+    
+  </a>
+  <a name="RLock">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    RLock(*args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Factory function that returns a new reentrant lock.
+
+A reentrant lock must be released by the thread that acquired it. Once a
+thread has acquired a reentrant lock, the same thread may acquire it again
+without blocking; the thread must release it once for each time it has
+acquired it.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.threading._counter">
+    
+  </a>
+  <a name="_counter">
+    
+  </a>
+  <div class="functionHeader">
+    _counter =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.threading._newname">
+    
+  </a>
+  <a name="_newname">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _newname(name_template):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.threading._active_limbo_lock">
+    
+  </a>
+  <a name="_active_limbo_lock">
+    
+  </a>
+  <div class="functionHeader">
+    _active_limbo_lock =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.threading._active">
+    
+  </a>
+  <a name="_active">
+    
+  </a>
+  <div class="functionHeader">
+    _active =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.threading._limbo">
+    
+  </a>
+  <a name="_limbo">
+    
+  </a>
+  <div class="functionHeader">
+    _limbo =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.threading._dangling">
+    
+  </a>
+  <a name="_dangling">
+    
+  </a>
+  <div class="functionHeader">
+    _dangling =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.threading._shutdown_locks_lock">
+    
+  </a>
+  <a name="_shutdown_locks_lock">
+    
+  </a>
+  <div class="functionHeader">
+    _shutdown_locks_lock =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.threading._shutdown_locks">
+    
+  </a>
+  <a name="_shutdown_locks">
+    
+  </a>
+  <div class="functionHeader">
+    _shutdown_locks =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.threading._ExceptHookArgs">
+    
+  </a>
+  <a name="_ExceptHookArgs">
+    
+  </a>
+  <div class="functionHeader">
+    _ExceptHookArgs =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.threading.ExceptHookArgs">
+    
+  </a>
+  <a name="ExceptHookArgs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ExceptHookArgs(args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.threading.excepthook">
+    
+  </a>
+  <a name="excepthook">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    excepthook():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Handle uncaught Thread.run() exception.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.threading._make_invoke_excepthook">
+    
+  </a>
+  <a name="_make_invoke_excepthook">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _make_invoke_excepthook():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.threading.current_thread">
+    
+  </a>
+  <a name="current_thread">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    current_thread():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the current Thread object, corresponding to the caller's thread of control.
+
+If the caller's thread of control was not created through the threading
+module, a dummy thread object with limited functionality is returned.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.threading.active_count">
+    
+  </a>
+  <a name="active_count">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    active_count():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the number of Thread objects currently alive.
+
+The returned count is equal to the length of the list returned by
+enumerate().</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.threading._enumerate">
+    
+  </a>
+  <a name="_enumerate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _enumerate():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.threading.enumerate">
+    
+  </a>
+  <a name="enumerate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    enumerate():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a list of all Thread objects currently alive.
+
+The list includes daemonic threads, dummy thread objects created by
+current_thread(), and the main thread. It excludes terminated threads and
+threads that have not yet been started.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.threading._threading_atexits">
+    
+  </a>
+  <a name="_threading_atexits">
+    
+  </a>
+  <div class="functionHeader">
+    _threading_atexits =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.threading._SHUTTING_DOWN">
+    
+  </a>
+  <a name="_SHUTTING_DOWN">
+    
+  </a>
+  <div class="functionHeader">
+    _SHUTTING_DOWN =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.threading._register_atexit">
+    
+  </a>
+  <a name="_register_atexit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _register_atexit(func, *arg, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">CPython internal: register *func* to be called before joining threads.
+
+The registered *func* is called with its arguments just before all
+non-daemon threads are joined in `_shutdown()`. It provides a similar
+purpose to `atexit.register()`, but its functions are called prior to
+threading shutdown instead of interpreter shutdown.
+
+For similarity to atexit, the registered functions are called in reverse.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.threading._main_thread">
+    
+  </a>
+  <a name="_main_thread">
+    
+  </a>
+  <div class="functionHeader">
+    _main_thread =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.threading._shutdown">
+    
+  </a>
+  <a name="_shutdown">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _shutdown():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Wait until the Python thread state of all non-daemon threads get deleted.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.threading.main_thread">
+    
+  </a>
+  <a name="main_thread">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    main_thread():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the main thread object.
+
+In normal conditions, the main thread is the thread from which the
+Python interpreter was started.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.threading._after_fork">
+    
+  </a>
+  <a name="_after_fork">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _after_fork():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Cleanup threading module state that should not exist after a fork.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

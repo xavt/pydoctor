@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.lib2to3.fixer_base.BaseFix : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.lib2to3.html" class="code" data-type="Package">lib2to3</a>.<a href="Lib.lib2to3.fixer_base.html" class="code" data-type="Module">fixer_base</a>.<a href="Lib.lib2to3.fixer_base.BaseFix.html" class="code" data-type="Class">BaseFix</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.lib2to3.fixer_base.BaseFix(<span title="object">object</span>):</code></p><p>Known subclasses: <a href="Lib.lib2to3.fixer_base.ConditionalFix.html" class="code" data-type="Class">Lib.lib2to3.fixer_base.ConditionalFix</a>, <a href="Lib.lib2to3.fixes.fix_asserts.FixAsserts.html" class="code" data-type="Class">Lib.lib2to3.fixes.fix_asserts.FixAsserts</a></p>
+        <p><a href="classIndex.html#Lib.lib2to3.fixer_base.BaseFix">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Optional base class for fixers.
+
+The subclass name must be FixFooBar where FooBar is the result of
+removing underscores and capitalizing the words of the fix name.
+For example, the class name for a fixer named 'has_key' should be
+FixHasKey.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2667">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.lib2to3.fixer_base.BaseFix.html#PATTERN" class="code" data-type="Class Variable">PATTERN</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.fixer_base.BaseFix.html#pattern" class="code" data-type="Instance Variable">pattern</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.fixer_base.BaseFix.html#pattern_tree" class="code" data-type="Instance Variable">pattern_tree</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.fixer_base.BaseFix.html#options" class="code" data-type="Instance Variable">options</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.fixer_base.BaseFix.html#filename" class="code" data-type="Instance Variable">filename</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.fixer_base.BaseFix.html#numbers" class="code" data-type="Instance Variable">numbers</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.fixer_base.BaseFix.html#used_names" class="code" data-type="Instance Variable">used_names</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.lib2to3.fixer_base.BaseFix.html#order" class="code" data-type="Class Variable">order</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.lib2to3.fixer_base.BaseFix.html#explicit" class="code" data-type="Class Variable">explicit</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.lib2to3.fixer_base.BaseFix.html#run_order" class="code" data-type="Class Variable">run_order</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.lib2to3.fixer_base.BaseFix.html#keep_line_order" class="code" data-type="Class Variable">keep_line_order</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.lib2to3.fixer_base.BaseFix.html#BM_compatible" class="code" data-type="Class Variable">BM_compatible</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.fixer_base.BaseFix.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Initializer.  Subclass may override.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.fixer_base.BaseFix.html#log" class="code" data-type="Instance Variable">log</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.fixer_base.BaseFix.html#compile_pattern" class="code" data-type="Method">compile_pattern</a></td>
+    <td><span>Compiles self.PATTERN into self.pattern.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.fixer_base.BaseFix.html#set_filename" class="code" data-type="Method">set_filename</a></td>
+    <td><span>Set the filename.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.fixer_base.BaseFix.html#match" class="code" data-type="Method">match</a></td>
+    <td><span>Returns match for a given parse tree node.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.fixer_base.BaseFix.html#transform" class="code" data-type="Method">transform</a></td>
+    <td><span>Returns the transformation for a given parse tree node.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.fixer_base.BaseFix.html#new_name" class="code" data-type="Method">new_name</a></td>
+    <td><span>Return a string suitable for use as an identifier</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.fixer_base.BaseFix.html#log_message" class="code" data-type="Method">log_message</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.lib2to3.fixer_base.BaseFix.html#first_log" class="code" data-type="Instance Variable">first_log</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.fixer_base.BaseFix.html#cannot_convert" class="code" data-type="Method">cannot_convert</a></td>
+    <td><span>Warn the user that a given chunk of code is not valid Python 3, but that it cannot be converted automatically.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.fixer_base.BaseFix.html#warning" class="code" data-type="Method">warning</a></td>
+    <td><span>Used for warning the user about possible uncertainty in the translation.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.fixer_base.BaseFix.html#start_tree" class="code" data-type="Method">start_tree</a></td>
+    <td><span>Some fixers need to maintain tree-wide state. This method is called once, at the start of tree fix-up.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.lib2to3.fixer_base.BaseFix.html#finish_tree" class="code" data-type="Method">finish_tree</a></td>
+    <td><span>Some fixers need to maintain tree-wide state. This method is called once, at the conclusion of tree fix-up.</span></td>
+  </tr><tr class="classvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.lib2to3.fixer_base.BaseFix.html#_accept_type" class="code" data-type="Class Variable">_accept_type</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.lib2to3.fixer_base.BaseFix.PATTERN">
+    
+  </a>
+  <a name="PATTERN">
+    
+  </a>
+  <div class="functionHeader">
+    PATTERN =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.lib2to3.fixes.fix_asserts.FixAsserts.html" class="code" data-type="Class">Lib.lib2to3.fixes.fix_asserts.FixAsserts</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.lib2to3.fixer_base.BaseFix.pattern">
+    
+  </a>
+  <a name="pattern">
+    
+  </a>
+  <div class="functionHeader">
+    pattern =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.lib2to3.fixer_base.BaseFix.pattern_tree">
+    
+  </a>
+  <a name="pattern_tree">
+    
+  </a>
+  <div class="functionHeader">
+    pattern_tree =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.lib2to3.fixer_base.BaseFix.options">
+    
+  </a>
+  <a name="options">
+    
+  </a>
+  <div class="functionHeader">
+    options =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.lib2to3.fixer_base.BaseFix.filename">
+    
+  </a>
+  <a name="filename">
+    
+  </a>
+  <div class="functionHeader">
+    filename =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.lib2to3.fixer_base.BaseFix.numbers">
+    
+  </a>
+  <a name="numbers">
+    
+  </a>
+  <div class="functionHeader">
+    numbers =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.lib2to3.fixer_base.BaseFix.used_names">
+    
+  </a>
+  <a name="used_names">
+    
+  </a>
+  <div class="functionHeader">
+    used_names =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.lib2to3.fixer_base.BaseFix.order">
+    
+  </a>
+  <a name="order">
+    
+  </a>
+  <div class="functionHeader">
+    order =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.lib2to3.fixer_base.BaseFix.explicit">
+    
+  </a>
+  <a name="explicit">
+    
+  </a>
+  <div class="functionHeader">
+    explicit =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.lib2to3.fixer_base.BaseFix.run_order">
+    
+  </a>
+  <a name="run_order">
+    
+  </a>
+  <div class="functionHeader">
+    run_order =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable private">
+  
+  <a name="Lib.lib2to3.fixer_base.BaseFix._accept_type">
+    
+  </a>
+  <a name="_accept_type">
+    
+  </a>
+  <div class="functionHeader">
+    _accept_type =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.lib2to3.fixer_base.BaseFix.keep_line_order">
+    
+  </a>
+  <a name="keep_line_order">
+    
+  </a>
+  <div class="functionHeader">
+    keep_line_order =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.lib2to3.fixer_base.BaseFix.BM_compatible">
+    
+  </a>
+  <a name="BM_compatible">
+    
+  </a>
+  <div class="functionHeader">
+    BM_compatible =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.lib2to3.fixer_base.BaseFix.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, options, log):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Initializer.  Subclass may override.
+
+Args:
+    options: a dict containing the options passed to RefactoringTool
+    that could be used to customize the fixer through the command line.
+    log: a list to append warnings and other messages to.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.lib2to3.fixer_base.BaseFix.log">
+    
+  </a>
+  <a name="log">
+    
+  </a>
+  <div class="functionHeader">
+    log =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.lib2to3.fixer_base.BaseFix.compile_pattern">
+    
+  </a>
+  <a name="compile_pattern">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    compile_pattern(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Compiles self.PATTERN into self.pattern.
+
+Subclass may override if it doesn't want to use
+self.{pattern,PATTERN} in .match().</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.lib2to3.fixer_base.BaseFix.set_filename">
+    
+  </a>
+  <a name="set_filename">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_filename(self, filename):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set the filename.
+
+The main refactoring tool should call this.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.lib2to3.fixer_base.BaseFix.match">
+    
+  </a>
+  <a name="match">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    match(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns match for a given parse tree node.
+
+Should return a true or false object (not necessarily a bool).
+It may return a non-empty dict of matching sub-nodes as
+returned by a matching pattern.
+
+Subclass may override.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.lib2to3.fixer_base.BaseFix.transform">
+    
+  </a>
+  <a name="transform">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    transform(self, node, results):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.lib2to3.fixes.fix_asserts.FixAsserts.html" class="code" data-type="Class">Lib.lib2to3.fixes.fix_asserts.FixAsserts</a></div>
+    
+    <div><p class="pre">Returns the transformation for a given parse tree node.
+
+Args:
+  node: the root of the parse tree that matched the fixer.
+  results: a dict mapping symbolic names to part of the match.
+
+Returns:
+  None, or a node that is a modified copy of the
+  argument node.  The node argument may also be modified in-place to
+  effect the same change.
+
+Subclass *must* override.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.lib2to3.fixer_base.BaseFix.new_name">
+    
+  </a>
+  <a name="new_name">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    new_name(self, template="""xxx_todo_changeme"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a string suitable for use as an identifier
+
+The new name is guaranteed not to conflict with other identifiers.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.lib2to3.fixer_base.BaseFix.log_message">
+    
+  </a>
+  <a name="log_message">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    log_message(self, message):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.lib2to3.fixer_base.BaseFix.first_log">
+    
+  </a>
+  <a name="first_log">
+    
+  </a>
+  <div class="functionHeader">
+    first_log =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.lib2to3.fixer_base.BaseFix.cannot_convert">
+    
+  </a>
+  <a name="cannot_convert">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    cannot_convert(self, node, reason=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Warn the user that a given chunk of code is not valid Python 3,
+but that it cannot be converted automatically.
+
+First argument is the top-level node for the code in question.
+Optional second argument is why it can't be converted.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.lib2to3.fixer_base.BaseFix.warning">
+    
+  </a>
+  <a name="warning">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    warning(self, node, reason):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Used for warning the user about possible uncertainty in the
+translation.
+
+First argument is the top-level node for the code in question.
+Optional second argument is why it can't be converted.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.lib2to3.fixer_base.BaseFix.start_tree">
+    
+  </a>
+  <a name="start_tree">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    start_tree(self, tree, filename):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.lib2to3.fixer_base.ConditionalFix.html" class="code" data-type="Class">Lib.lib2to3.fixer_base.ConditionalFix</a></div>
+    
+    <div><p class="pre">Some fixers need to maintain tree-wide state.
+This method is called once, at the start of tree fix-up.
+
+tree - the root node of the tree to be processed.
+filename - the name of the file the tree came from.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.lib2to3.fixer_base.BaseFix.finish_tree">
+    
+  </a>
+  <a name="finish_tree">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    finish_tree(self, tree, filename):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Some fixers need to maintain tree-wide state.
+This method is called once, at the conclusion of tree fix-up.
+
+tree - the root node of the tree to be processed.
+filename - the name of the file the tree came from.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

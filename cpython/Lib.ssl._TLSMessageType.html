@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.ssl._TLSMessageType : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class private"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.ssl.html" class="code" data-type="Module">ssl</a>.<a href="Lib.ssl._TLSMessageType.html" class="code" data-type="Class">_TLSMessageType</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.ssl._TLSMessageType(<span title="enum.IntEnum">_IntEnum</span>):</code></p>
+        <p><a href="classIndex.html#Lib.ssl._TLSMessageType">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Message types (handshake protocol)
+
+See RFC 8446, section B.3</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3656">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ssl._TLSMessageType.html#HELLO_REQUEST" class="code" data-type="Class Variable">HELLO_REQUEST</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ssl._TLSMessageType.html#CLIENT_HELLO" class="code" data-type="Class Variable">CLIENT_HELLO</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ssl._TLSMessageType.html#SERVER_HELLO" class="code" data-type="Class Variable">SERVER_HELLO</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ssl._TLSMessageType.html#HELLO_VERIFY_REQUEST" class="code" data-type="Class Variable">HELLO_VERIFY_REQUEST</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ssl._TLSMessageType.html#NEWSESSION_TICKET" class="code" data-type="Class Variable">NEWSESSION_TICKET</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ssl._TLSMessageType.html#END_OF_EARLY_DATA" class="code" data-type="Class Variable">END_OF_EARLY_DATA</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ssl._TLSMessageType.html#HELLO_RETRY_REQUEST" class="code" data-type="Class Variable">HELLO_RETRY_REQUEST</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ssl._TLSMessageType.html#ENCRYPTED_EXTENSIONS" class="code" data-type="Class Variable">ENCRYPTED_EXTENSIONS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ssl._TLSMessageType.html#CERTIFICATE" class="code" data-type="Class Variable">CERTIFICATE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ssl._TLSMessageType.html#SERVER_KEY_EXCHANGE" class="code" data-type="Class Variable">SERVER_KEY_EXCHANGE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ssl._TLSMessageType.html#CERTIFICATE_REQUEST" class="code" data-type="Class Variable">CERTIFICATE_REQUEST</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ssl._TLSMessageType.html#SERVER_DONE" class="code" data-type="Class Variable">SERVER_DONE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ssl._TLSMessageType.html#CERTIFICATE_VERIFY" class="code" data-type="Class Variable">CERTIFICATE_VERIFY</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ssl._TLSMessageType.html#CLIENT_KEY_EXCHANGE" class="code" data-type="Class Variable">CLIENT_KEY_EXCHANGE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ssl._TLSMessageType.html#FINISHED" class="code" data-type="Class Variable">FINISHED</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ssl._TLSMessageType.html#CERTIFICATE_URL" class="code" data-type="Class Variable">CERTIFICATE_URL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ssl._TLSMessageType.html#CERTIFICATE_STATUS" class="code" data-type="Class Variable">CERTIFICATE_STATUS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ssl._TLSMessageType.html#SUPPLEMENTAL_DATA" class="code" data-type="Class Variable">SUPPLEMENTAL_DATA</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ssl._TLSMessageType.html#KEY_UPDATE" class="code" data-type="Class Variable">KEY_UPDATE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ssl._TLSMessageType.html#NEXT_PROTO" class="code" data-type="Class Variable">NEXT_PROTO</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ssl._TLSMessageType.html#MESSAGE_HASH" class="code" data-type="Class Variable">MESSAGE_HASH</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.ssl._TLSMessageType.html#CHANGE_CIPHER_SPEC" class="code" data-type="Class Variable">CHANGE_CIPHER_SPEC</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.ssl._TLSMessageType.HELLO_REQUEST">
+    
+  </a>
+  <a name="HELLO_REQUEST">
+    
+  </a>
+  <div class="functionHeader">
+    HELLO_REQUEST =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.ssl._TLSMessageType.CLIENT_HELLO">
+    
+  </a>
+  <a name="CLIENT_HELLO">
+    
+  </a>
+  <div class="functionHeader">
+    CLIENT_HELLO =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.ssl._TLSMessageType.SERVER_HELLO">
+    
+  </a>
+  <a name="SERVER_HELLO">
+    
+  </a>
+  <div class="functionHeader">
+    SERVER_HELLO =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.ssl._TLSMessageType.HELLO_VERIFY_REQUEST">
+    
+  </a>
+  <a name="HELLO_VERIFY_REQUEST">
+    
+  </a>
+  <div class="functionHeader">
+    HELLO_VERIFY_REQUEST =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.ssl._TLSMessageType.NEWSESSION_TICKET">
+    
+  </a>
+  <a name="NEWSESSION_TICKET">
+    
+  </a>
+  <div class="functionHeader">
+    NEWSESSION_TICKET =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.ssl._TLSMessageType.END_OF_EARLY_DATA">
+    
+  </a>
+  <a name="END_OF_EARLY_DATA">
+    
+  </a>
+  <div class="functionHeader">
+    END_OF_EARLY_DATA =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.ssl._TLSMessageType.HELLO_RETRY_REQUEST">
+    
+  </a>
+  <a name="HELLO_RETRY_REQUEST">
+    
+  </a>
+  <div class="functionHeader">
+    HELLO_RETRY_REQUEST =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.ssl._TLSMessageType.ENCRYPTED_EXTENSIONS">
+    
+  </a>
+  <a name="ENCRYPTED_EXTENSIONS">
+    
+  </a>
+  <div class="functionHeader">
+    ENCRYPTED_EXTENSIONS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.ssl._TLSMessageType.CERTIFICATE">
+    
+  </a>
+  <a name="CERTIFICATE">
+    
+  </a>
+  <div class="functionHeader">
+    CERTIFICATE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.ssl._TLSMessageType.SERVER_KEY_EXCHANGE">
+    
+  </a>
+  <a name="SERVER_KEY_EXCHANGE">
+    
+  </a>
+  <div class="functionHeader">
+    SERVER_KEY_EXCHANGE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.ssl._TLSMessageType.CERTIFICATE_REQUEST">
+    
+  </a>
+  <a name="CERTIFICATE_REQUEST">
+    
+  </a>
+  <div class="functionHeader">
+    CERTIFICATE_REQUEST =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.ssl._TLSMessageType.SERVER_DONE">
+    
+  </a>
+  <a name="SERVER_DONE">
+    
+  </a>
+  <div class="functionHeader">
+    SERVER_DONE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.ssl._TLSMessageType.CERTIFICATE_VERIFY">
+    
+  </a>
+  <a name="CERTIFICATE_VERIFY">
+    
+  </a>
+  <div class="functionHeader">
+    CERTIFICATE_VERIFY =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.ssl._TLSMessageType.CLIENT_KEY_EXCHANGE">
+    
+  </a>
+  <a name="CLIENT_KEY_EXCHANGE">
+    
+  </a>
+  <div class="functionHeader">
+    CLIENT_KEY_EXCHANGE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.ssl._TLSMessageType.FINISHED">
+    
+  </a>
+  <a name="FINISHED">
+    
+  </a>
+  <div class="functionHeader">
+    FINISHED =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.ssl._TLSMessageType.CERTIFICATE_URL">
+    
+  </a>
+  <a name="CERTIFICATE_URL">
+    
+  </a>
+  <div class="functionHeader">
+    CERTIFICATE_URL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.ssl._TLSMessageType.CERTIFICATE_STATUS">
+    
+  </a>
+  <a name="CERTIFICATE_STATUS">
+    
+  </a>
+  <div class="functionHeader">
+    CERTIFICATE_STATUS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.ssl._TLSMessageType.SUPPLEMENTAL_DATA">
+    
+  </a>
+  <a name="SUPPLEMENTAL_DATA">
+    
+  </a>
+  <div class="functionHeader">
+    SUPPLEMENTAL_DATA =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.ssl._TLSMessageType.KEY_UPDATE">
+    
+  </a>
+  <a name="KEY_UPDATE">
+    
+  </a>
+  <div class="functionHeader">
+    KEY_UPDATE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.ssl._TLSMessageType.NEXT_PROTO">
+    
+  </a>
+  <a name="NEXT_PROTO">
+    
+  </a>
+  <div class="functionHeader">
+    NEXT_PROTO =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.ssl._TLSMessageType.MESSAGE_HASH">
+    
+  </a>
+  <a name="MESSAGE_HASH">
+    
+  </a>
+  <div class="functionHeader">
+    MESSAGE_HASH =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.ssl._TLSMessageType.CHANGE_CIPHER_SPEC">
+    
+  </a>
+  <a name="CHANGE_CIPHER_SPEC">
+    
+  </a>
+  <div class="functionHeader">
+    CHANGE_CIPHER_SPEC =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

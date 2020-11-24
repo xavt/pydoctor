@@ -1,0 +1,965 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.asyncio.sslproto.SSLProtocol : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.asyncio.html" class="code" data-type="Package">asyncio</a>.<a href="Lib.asyncio.sslproto.html" class="code" data-type="Module">sslproto</a>.<a href="Lib.asyncio.sslproto.SSLProtocol.html" class="code" data-type="Class">SSLProtocol</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.asyncio.sslproto.SSLProtocol(<span title="protocols.Protocol">protocols.Protocol</span>):</code></p>
+        <p><a href="classIndex.html#Lib.asyncio.sslproto.SSLProtocol">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">SSL protocol.
+
+Implementation of SSL on top of a socket using incoming and outgoing
+buffers which are ssl.MemoryBIO objects.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id380">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#connection_made" class="code" data-type="Method">connection_made</a></td>
+    <td><span>Called when the low-level connection is made.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#connection_lost" class="code" data-type="Method">connection_lost</a></td>
+    <td><span>Called when the low-level connection is lost or closed.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#pause_writing" class="code" data-type="Method">pause_writing</a></td>
+    <td><span>Called when the low-level transport's buffer goes over the high-water mark.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#resume_writing" class="code" data-type="Method">resume_writing</a></td>
+    <td><span>Called when the low-level transport's buffer drains below the low-water mark.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#data_received" class="code" data-type="Method">data_received</a></td>
+    <td><span>Called when some SSL data is received.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#eof_received" class="code" data-type="Method">eof_received</a></td>
+    <td><span>Called when the other end of the low-level stream is half-closed.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_server_side" class="code" data-type="Instance Variable">_server_side</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_server_hostname" class="code" data-type="Instance Variable">_server_hostname</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_sslcontext" class="code" data-type="Instance Variable">_sslcontext</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_extra" class="code" data-type="Instance Variable">_extra</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_write_backlog" class="code" data-type="Instance Variable">_write_backlog</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_write_buffer_size" class="code" data-type="Instance Variable">_write_buffer_size</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_waiter" class="code" data-type="Instance Variable">_waiter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_loop" class="code" data-type="Instance Variable">_loop</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_app_transport" class="code" data-type="Instance Variable">_app_transport</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_sslpipe" class="code" data-type="Instance Variable">_sslpipe</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_session_established" class="code" data-type="Instance Variable">_session_established</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_in_handshake" class="code" data-type="Instance Variable">_in_handshake</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_in_shutdown" class="code" data-type="Instance Variable">_in_shutdown</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_transport" class="code" data-type="Instance Variable">_transport</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_call_connection_made" class="code" data-type="Instance Variable">_call_connection_made</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_ssl_handshake_timeout" class="code" data-type="Instance Variable">_ssl_handshake_timeout</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_set_app_protocol" class="code" data-type="Method">_set_app_protocol</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_app_protocol" class="code" data-type="Instance Variable">_app_protocol</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_app_protocol_is_buffer" class="code" data-type="Instance Variable">_app_protocol_is_buffer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_wakeup_waiter" class="code" data-type="Method">_wakeup_waiter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_get_extra_info" class="code" data-type="Method">_get_extra_info</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_start_shutdown" class="code" data-type="Method">_start_shutdown</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_write_appdata" class="code" data-type="Method">_write_appdata</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_start_handshake" class="code" data-type="Method">_start_handshake</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_handshake_start_time" class="code" data-type="Instance Variable">_handshake_start_time</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_handshake_timeout_handle" class="code" data-type="Instance Variable">_handshake_timeout_handle</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_check_handshake_timeout" class="code" data-type="Method">_check_handshake_timeout</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_on_handshake_complete" class="code" data-type="Method">_on_handshake_complete</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_process_write_backlog" class="code" data-type="Method">_process_write_backlog</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_fatal_error" class="code" data-type="Method">_fatal_error</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_finalize" class="code" data-type="Method">_finalize</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.sslproto.SSLProtocol.html#_abort" class="code" data-type="Method">_abort</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, loop, app_protocol, sslcontext, waiter, server_side=(False), server_hostname=None, call_connection_made=(True), ssl_handshake_timeout=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._server_side">
+    
+  </a>
+  <a name="_server_side">
+    
+  </a>
+  <div class="functionHeader">
+    _server_side =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._server_hostname">
+    
+  </a>
+  <a name="_server_hostname">
+    
+  </a>
+  <div class="functionHeader">
+    _server_hostname =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._sslcontext">
+    
+  </a>
+  <a name="_sslcontext">
+    
+  </a>
+  <div class="functionHeader">
+    _sslcontext =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._extra">
+    
+  </a>
+  <a name="_extra">
+    
+  </a>
+  <div class="functionHeader">
+    _extra =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._write_backlog">
+    
+  </a>
+  <a name="_write_backlog">
+    
+  </a>
+  <div class="functionHeader">
+    _write_backlog =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._write_buffer_size">
+    
+  </a>
+  <a name="_write_buffer_size">
+    
+  </a>
+  <div class="functionHeader">
+    _write_buffer_size =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._waiter">
+    
+  </a>
+  <a name="_waiter">
+    
+  </a>
+  <div class="functionHeader">
+    _waiter =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._loop">
+    
+  </a>
+  <a name="_loop">
+    
+  </a>
+  <div class="functionHeader">
+    _loop =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._app_transport">
+    
+  </a>
+  <a name="_app_transport">
+    
+  </a>
+  <div class="functionHeader">
+    _app_transport =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._sslpipe">
+    
+  </a>
+  <a name="_sslpipe">
+    
+  </a>
+  <div class="functionHeader">
+    _sslpipe =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._session_established">
+    
+  </a>
+  <a name="_session_established">
+    
+  </a>
+  <div class="functionHeader">
+    _session_established =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._in_handshake">
+    
+  </a>
+  <a name="_in_handshake">
+    
+  </a>
+  <div class="functionHeader">
+    _in_handshake =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._in_shutdown">
+    
+  </a>
+  <a name="_in_shutdown">
+    
+  </a>
+  <div class="functionHeader">
+    _in_shutdown =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._transport">
+    
+  </a>
+  <a name="_transport">
+    
+  </a>
+  <div class="functionHeader">
+    _transport =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._call_connection_made">
+    
+  </a>
+  <a name="_call_connection_made">
+    
+  </a>
+  <div class="functionHeader">
+    _call_connection_made =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._ssl_handshake_timeout">
+    
+  </a>
+  <a name="_ssl_handshake_timeout">
+    
+  </a>
+  <div class="functionHeader">
+    _ssl_handshake_timeout =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._set_app_protocol">
+    
+  </a>
+  <a name="_set_app_protocol">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _set_app_protocol(self, app_protocol):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._app_protocol">
+    
+  </a>
+  <a name="_app_protocol">
+    
+  </a>
+  <div class="functionHeader">
+    _app_protocol =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._app_protocol_is_buffer">
+    
+  </a>
+  <a name="_app_protocol_is_buffer">
+    
+  </a>
+  <div class="functionHeader">
+    _app_protocol_is_buffer =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._wakeup_waiter">
+    
+  </a>
+  <a name="_wakeup_waiter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _wakeup_waiter(self, exc=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol.connection_made">
+    
+  </a>
+  <a name="connection_made">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    connection_made(self, transport):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Called when the low-level connection is made.
+
+Start the SSL handshake.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol.connection_lost">
+    
+  </a>
+  <a name="connection_lost">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    connection_lost(self, exc):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Called when the low-level connection is lost or closed.
+
+The argument is an exception object or None (the latter
+meaning a regular EOF is received or the connection was
+aborted or closed).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol.pause_writing">
+    
+  </a>
+  <a name="pause_writing">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    pause_writing(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Called when the low-level transport's buffer goes over
+the high-water mark.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol.resume_writing">
+    
+  </a>
+  <a name="resume_writing">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    resume_writing(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Called when the low-level transport's buffer drains below
+the low-water mark.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol.data_received">
+    
+  </a>
+  <a name="data_received">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    data_received(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Called when some SSL data is received.
+
+The argument is a bytes object.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol.eof_received">
+    
+  </a>
+  <a name="eof_received">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    eof_received(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Called when the other end of the low-level stream
+is half-closed.
+
+If this returns a false value (including None), the transport
+will close itself.  If it returns a true value, closing the
+transport is up to the protocol.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._get_extra_info">
+    
+  </a>
+  <a name="_get_extra_info">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_extra_info(self, name, default=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._start_shutdown">
+    
+  </a>
+  <a name="_start_shutdown">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _start_shutdown(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._write_appdata">
+    
+  </a>
+  <a name="_write_appdata">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _write_appdata(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._start_handshake">
+    
+  </a>
+  <a name="_start_handshake">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _start_handshake(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._handshake_start_time">
+    
+  </a>
+  <a name="_handshake_start_time">
+    
+  </a>
+  <div class="functionHeader">
+    _handshake_start_time =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._handshake_timeout_handle">
+    
+  </a>
+  <a name="_handshake_timeout_handle">
+    
+  </a>
+  <div class="functionHeader">
+    _handshake_timeout_handle =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._check_handshake_timeout">
+    
+  </a>
+  <a name="_check_handshake_timeout">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _check_handshake_timeout(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._on_handshake_complete">
+    
+  </a>
+  <a name="_on_handshake_complete">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _on_handshake_complete(self, handshake_exc):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._process_write_backlog">
+    
+  </a>
+  <a name="_process_write_backlog">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _process_write_backlog(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._fatal_error">
+    
+  </a>
+  <a name="_fatal_error">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _fatal_error(self, exc, message="""Fatal error on transport"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._finalize">
+    
+  </a>
+  <a name="_finalize">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _finalize(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.asyncio.sslproto.SSLProtocol._abort">
+    
+  </a>
+  <a name="_abort">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _abort(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

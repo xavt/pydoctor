@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.email._parseaddr : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module private"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.email.html" class="code" data-type="Package">email</a>.<a href="Lib.email._parseaddr.html" class="code" data-type="Module">_parseaddr</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Email address parsing code.
+
+Lifted directly from rfc822.py.  This should eventually be rewritten.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id1246">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email._parseaddr.html#SPACE" class="code" data-type="Variable">SPACE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email._parseaddr.html#EMPTYSTRING" class="code" data-type="Variable">EMPTYSTRING</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email._parseaddr.html#COMMASPACE" class="code" data-type="Variable">COMMASPACE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._parseaddr.html#parsedate_tz" class="code" data-type="Function">parsedate_tz</a></td>
+    <td><span>Convert a date string to a time tuple.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._parseaddr.html#parsedate" class="code" data-type="Function">parsedate</a></td>
+    <td><span>Convert a time string to a time tuple.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._parseaddr.html#mktime_tz" class="code" data-type="Function">mktime_tz</a></td>
+    <td><span>Turn a 10-tuple as returned by parsedate_tz() into a POSIX timestamp.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._parseaddr.html#quote" class="code" data-type="Function">quote</a></td>
+    <td><span>Prepare string to be used in a quoted string.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._parseaddr.AddrlistClass.html" class="code" data-type="Class">AddrlistClass</a></td>
+    <td><span>Address parser class by Ben Escoto.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._parseaddr.AddressList.html" class="code" data-type="Class">AddressList</a></td>
+    <td><span>An AddressList encapsulates a list of parsed RFC 2822 addresses.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email._parseaddr.html#_monthnames" class="code" data-type="Variable">_monthnames</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email._parseaddr.html#_daynames" class="code" data-type="Variable">_daynames</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email._parseaddr.html#_timezones" class="code" data-type="Variable">_timezones</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._parseaddr.html#_parsedate_tz" class="code" data-type="Function">_parsedate_tz</a></td>
+    <td><span>Convert date to extended time tuple.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.email._parseaddr.SPACE">
+    
+  </a>
+  <a name="SPACE">
+    
+  </a>
+  <div class="functionHeader">
+    SPACE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.email._parseaddr.EMPTYSTRING">
+    
+  </a>
+  <a name="EMPTYSTRING">
+    
+  </a>
+  <div class="functionHeader">
+    EMPTYSTRING =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.email._parseaddr.COMMASPACE">
+    
+  </a>
+  <a name="COMMASPACE">
+    
+  </a>
+  <div class="functionHeader">
+    COMMASPACE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.email._parseaddr._monthnames">
+    
+  </a>
+  <a name="_monthnames">
+    
+  </a>
+  <div class="functionHeader">
+    _monthnames =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[str]</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.email._parseaddr._daynames">
+    
+  </a>
+  <a name="_daynames">
+    
+  </a>
+  <div class="functionHeader">
+    _daynames =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[str]</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.email._parseaddr._timezones">
+    
+  </a>
+  <a name="_timezones">
+    
+  </a>
+  <div class="functionHeader">
+    _timezones =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict[str, int]</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._parseaddr.parsedate_tz">
+    
+  </a>
+  <a name="parsedate_tz">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parsedate_tz(data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convert a date string to a time tuple.
+
+Accounts for military timezones.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.email._parseaddr._parsedate_tz">
+    
+  </a>
+  <a name="_parsedate_tz">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _parsedate_tz(data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convert date to extended time tuple.
+
+The last (additional) element is the time zone offset in seconds, except if
+the timezone was specified as -0000.  In that case the last element is
+None.  This indicates a UTC timestamp that explicitly declaims knowledge of
+the source timezone, as opposed to a +0000 timestamp that indicates the
+source timezone really was UTC.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._parseaddr.parsedate">
+    
+  </a>
+  <a name="parsedate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parsedate(data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convert a time string to a time tuple.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._parseaddr.mktime_tz">
+    
+  </a>
+  <a name="mktime_tz">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    mktime_tz(data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Turn a 10-tuple as returned by parsedate_tz() into a POSIX timestamp.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._parseaddr.quote">
+    
+  </a>
+  <a name="quote">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    quote(str):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Prepare string to be used in a quoted string.
+
+Turns backslash and double quote characters into quoted pairs.  These
+are the only characters that need to be quoted inside a quoted string.
+Does not add the surrounding double quotes.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

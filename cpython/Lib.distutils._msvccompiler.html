@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.distutils._msvccompiler : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module private"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.distutils.html" class="code" data-type="Package">distutils</a>.<a href="Lib.distutils._msvccompiler.html" class="code" data-type="Module">_msvccompiler</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">distutils._msvccompiler
+
+Contains MSVCCompiler, an implementation of the abstract CCompiler class
+for Microsoft Visual Studio 2015.
+
+The module is compatible with VS 2015 and later. You can find legacy support
+for older versions in distutils.msvc9compiler and distutils.msvccompiler.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id905">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.distutils._msvccompiler.html#PLAT_SPEC_TO_RUNTIME" class="code" data-type="Variable">PLAT_SPEC_TO_RUNTIME</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.distutils._msvccompiler.html#PLAT_TO_VCVARS" class="code" data-type="Variable">PLAT_TO_VCVARS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.distutils._msvccompiler.MSVCCompiler.html" class="code" data-type="Class">MSVCCompiler</a></td>
+    <td><span>Concrete class that implements an interface to Microsoft Visual C++, as defined by the CCompiler abstract class.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils._msvccompiler.html#_find_vc2015" class="code" data-type="Function">_find_vc2015</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils._msvccompiler.html#_find_vc2017" class="code" data-type="Function">_find_vc2017</a></td>
+    <td><span>Returns "15, path" based on the result of invoking vswhere.exe If no install is found, returns "None, None"</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils._msvccompiler.html#_find_vcvarsall" class="code" data-type="Function">_find_vcvarsall</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils._msvccompiler.html#_get_vc_env" class="code" data-type="Function">_get_vc_env</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils._msvccompiler.html#_find_exe" class="code" data-type="Function">_find_exe</a></td>
+    <td><span>Return path to an MSVC executable program.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction private">
+  
+  <a name="Lib.distutils._msvccompiler._find_vc2015">
+    
+  </a>
+  <a name="_find_vc2015">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _find_vc2015():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.distutils._msvccompiler._find_vc2017">
+    
+  </a>
+  <a name="_find_vc2017">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _find_vc2017():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns "15, path" based on the result of invoking vswhere.exe
+If no install is found, returns "None, None"
+
+The version is returned to avoid unnecessarily changing the function
+result. It may be ignored when the path is not None.
+
+If vswhere.exe is not available, by definition, VS 2017 is not
+installed.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.distutils._msvccompiler.PLAT_SPEC_TO_RUNTIME">
+    
+  </a>
+  <a name="PLAT_SPEC_TO_RUNTIME">
+    
+  </a>
+  <div class="functionHeader">
+    PLAT_SPEC_TO_RUNTIME =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict[str, str]</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.distutils._msvccompiler._find_vcvarsall">
+    
+  </a>
+  <a name="_find_vcvarsall">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _find_vcvarsall(plat_spec):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.distutils._msvccompiler._get_vc_env">
+    
+  </a>
+  <a name="_get_vc_env">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_vc_env(plat_spec):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.distutils._msvccompiler._find_exe">
+    
+  </a>
+  <a name="_find_exe">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _find_exe(exe, paths=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return path to an MSVC executable program.
+
+Tries to find the program in several places: first, one of the
+MSVC program search paths from the registry; next, the directories
+in the PATH environment variable.  If any of those work, return an
+absolute path that is known to exist.  If none of them work, just
+return the original program name, 'exe'.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.distutils._msvccompiler.PLAT_TO_VCVARS">
+    
+  </a>
+  <a name="PLAT_TO_VCVARS">
+    
+  </a>
+  <div class="functionHeader">
+    PLAT_TO_VCVARS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict[str, str]</code>)
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

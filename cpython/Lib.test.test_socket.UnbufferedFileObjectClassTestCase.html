@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.test.test_socket.UnbufferedFileObjectClassTestCase : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.test.html" class="code" data-type="Package">test</a>.<a href="Lib.test.test_socket.html" class="code" data-type="Module">test_socket</a>.<a href="Lib.test.test_socket.UnbufferedFileObjectClassTestCase.html" class="code" data-type="Class">UnbufferedFileObjectClassTestCase</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.test.test_socket.UnbufferedFileObjectClassTestCase(<a href="Lib.test.test_socket.FileObjectClassTestCase.html" class="code" data-type="Class">FileObjectClassTestCase</a>):</code></p>
+        <p><a href="classIndex.html#Lib.test.test_socket.UnbufferedFileObjectClassTestCase">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Repeat the tests from FileObjectClassTestCase with bufsize==0.
+
+In this case (and in this case only), it should be possible to
+create a file object, read a line from it, create another file
+object, read another line from it, without loss of data in the
+first file object's buffer.  Note that http.client relies on this
+when reading multiple requests from the same socket.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id9440">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.test.test_socket.UnbufferedFileObjectClassTestCase.html#bufsize" class="code" data-type="Class Variable">bufsize</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.UnbufferedFileObjectClassTestCase.html#testUnbufferedReadline" class="code" data-type="Method">testUnbufferedReadline</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.UnbufferedFileObjectClassTestCase.html#read_file" class="code" data-type="Instance Variable">read_file</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.UnbufferedFileObjectClassTestCase.html#testMakefileClose" class="code" data-type="Method">testMakefileClose</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.UnbufferedFileObjectClassTestCase.html#testMakefileCloseSocketDestroy" class="code" data-type="Method">testMakefileCloseSocketDestroy</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.UnbufferedFileObjectClassTestCase.html#testSmallReadNonBlocking" class="code" data-type="Method">testSmallReadNonBlocking</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.UnbufferedFileObjectClassTestCase.html#testWriteNonBlocking" class="code" data-type="Method">testWriteNonBlocking</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.UnbufferedFileObjectClassTestCase.html#serv_skipped" class="code" data-type="Instance Variable">serv_skipped</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.UnbufferedFileObjectClassTestCase.html#_testUnbufferedReadline" class="code" data-type="Method">_testUnbufferedReadline</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.UnbufferedFileObjectClassTestCase.html#_testMakefileClose" class="code" data-type="Method">_testMakefileClose</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.UnbufferedFileObjectClassTestCase.html#_testMakefileCloseSocketDestroy" class="code" data-type="Method">_testMakefileCloseSocketDestroy</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.UnbufferedFileObjectClassTestCase.html#_testSmallReadNonBlocking" class="code" data-type="Method">_testSmallReadNonBlocking</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.UnbufferedFileObjectClassTestCase.html#_testWriteNonBlocking" class="code" data-type="Method">_testWriteNonBlocking</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.test.test_socket.FileObjectClassTestCase.html" class="code" data-type="Class">FileObjectClassTestCase</a>:
+          </p>
+          <table class="children sortable" id="id9441">
+  
+  <tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#encoding" class="code" data-type="Class Variable">encoding</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#errors" class="code" data-type="Class Variable">errors</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#newline" class="code" data-type="Class Variable">newline</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#read_mode" class="code" data-type="Class Variable">read_mode</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#write_mode" class="code" data-type="Class Variable">write_mode</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#setUp" class="code" data-type="Method">setUp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#evt1" class="code" data-type="Instance Variable">evt1</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#evt2" class="code" data-type="Instance Variable">evt2</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#serv_finished" class="code" data-type="Instance Variable">serv_finished</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#cli_finished" class="code" data-type="Instance Variable">cli_finished</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#tearDown" class="code" data-type="Method">tearDown</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#clientSetUp" class="code" data-type="Method">clientSetUp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#write_file" class="code" data-type="Instance Variable">write_file</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#clientTearDown" class="code" data-type="Method">clientTearDown</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#testReadAfterTimeout" class="code" data-type="Method">testReadAfterTimeout</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#testSmallRead" class="code" data-type="Method">testSmallRead</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#testFullRead" class="code" data-type="Method">testFullRead</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#testUnbufferedRead" class="code" data-type="Method">testUnbufferedRead</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#testReadline" class="code" data-type="Method">testReadline</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#testCloseAfterMakefile" class="code" data-type="Method">testCloseAfterMakefile</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#testMakefileAfterMakefileClose" class="code" data-type="Method">testMakefileAfterMakefileClose</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#testClosedAttr" class="code" data-type="Method">testClosedAttr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#testAttributes" class="code" data-type="Method">testAttributes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#testRealClose" class="code" data-type="Method">testRealClose</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#_testReadAfterTimeout" class="code" data-type="Method">_testReadAfterTimeout</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#_testSmallRead" class="code" data-type="Method">_testSmallRead</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#_testFullRead" class="code" data-type="Method">_testFullRead</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#_testUnbufferedRead" class="code" data-type="Method">_testUnbufferedRead</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#_testReadline" class="code" data-type="Method">_testReadline</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#_testCloseAfterMakefile" class="code" data-type="Method">_testCloseAfterMakefile</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#_testMakefileAfterMakefileClose" class="code" data-type="Method">_testMakefileAfterMakefileClose</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#_testClosedAttr" class="code" data-type="Method">_testClosedAttr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#_testAttributes" class="code" data-type="Method">_testAttributes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.FileObjectClassTestCase.html#_testRealClose" class="code" data-type="Method">_testRealClose</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.test.test_socket.SocketConnectedTest.html" class="code" data-type="Class">SocketConnectedTest</a> (via <a href="Lib.test.test_socket.FileObjectClassTestCase.html" class="code" data-type="Class">FileObjectClassTestCase</a>):
+          </p>
+          <table class="children sortable" id="id9442">
+  
+  <tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.SocketConnectedTest.html#cli_conn" class="code" data-type="Instance Variable">cli_conn</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.SocketConnectedTest.html#serv_conn" class="code" data-type="Instance Variable">serv_conn</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.test.test_socket.ThreadedTCPSocketTest.html" class="code" data-type="Class">ThreadedTCPSocketTest</a> (via <a href="Lib.test.test_socket.FileObjectClassTestCase.html" class="code" data-type="Class">FileObjectClassTestCase</a>, <a href="Lib.test.test_socket.SocketConnectedTest.html" class="code" data-type="Class">SocketConnectedTest</a>):
+          </p>
+          <table class="children sortable" id="id9443">
+  
+  <tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.ThreadedTCPSocketTest.html#cli" class="code" data-type="Instance Variable">cli</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.test.test_socket.SocketTCPTest.html" class="code" data-type="Class">SocketTCPTest</a> (via <a href="Lib.test.test_socket.FileObjectClassTestCase.html" class="code" data-type="Class">FileObjectClassTestCase</a>, <a href="Lib.test.test_socket.SocketConnectedTest.html" class="code" data-type="Class">SocketConnectedTest</a>, <a href="Lib.test.test_socket.ThreadedTCPSocketTest.html" class="code" data-type="Class">ThreadedTCPSocketTest</a>):
+          </p>
+          <table class="children sortable" id="id9444">
+  
+  <tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.SocketTCPTest.html#serv" class="code" data-type="Instance Variable">serv</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.SocketTCPTest.html#port" class="code" data-type="Instance Variable">port</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.test.test_socket.ThreadableTest.html" class="code" data-type="Class">ThreadableTest</a> (via <a href="Lib.test.test_socket.FileObjectClassTestCase.html" class="code" data-type="Class">FileObjectClassTestCase</a>, <a href="Lib.test.test_socket.SocketConnectedTest.html" class="code" data-type="Class">SocketConnectedTest</a>, <a href="Lib.test.test_socket.ThreadedTCPSocketTest.html" class="code" data-type="Class">ThreadedTCPSocketTest</a>):
+          </p>
+          <table class="children sortable" id="id9445">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.ThreadableTest.html#serverExplicitReady" class="code" data-type="Method">serverExplicitReady</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.ThreadableTest.html#wait_threads" class="code" data-type="Instance Variable">wait_threads</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.ThreadableTest.html#server_ready" class="code" data-type="Instance Variable">server_ready</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.ThreadableTest.html#client_ready" class="code" data-type="Instance Variable">client_ready</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.ThreadableTest.html#done" class="code" data-type="Instance Variable">done</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.ThreadableTest.html#queue" class="code" data-type="Instance Variable">queue</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.ThreadableTest.html#server_crashed" class="code" data-type="Instance Variable">server_crashed</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.ThreadableTest.html#client_thread" class="code" data-type="Instance Variable">client_thread</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.ThreadableTest.html#clientRun" class="code" data-type="Method">clientRun</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.ThreadableTest.html#__setUp" class="code" data-type="Instance Variable">__setUp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.ThreadableTest.html#__tearDown" class="code" data-type="Instance Variable">__tearDown</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.ThreadableTest.html#_setUp" class="code" data-type="Method">_setUp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.ThreadableTest.html#_tearDown" class="code" data-type="Method">_tearDown</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.test.test_socket.UnbufferedFileObjectClassTestCase.bufsize">
+    
+  </a>
+  <a name="bufsize">
+    
+  </a>
+  <div class="functionHeader">
+    bufsize =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.test.test_socket.FileObjectClassTestCase.html#bufsize" class="code" data-type="Class Variable">Lib.test.test_socket.FileObjectClassTestCase.bufsize</a></div>
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_socket.UnbufferedFileObjectClassTestCase.testUnbufferedReadline">
+    
+  </a>
+  <a name="testUnbufferedReadline">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    testUnbufferedReadline(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_socket.UnbufferedFileObjectClassTestCase.read_file">
+    
+  </a>
+  <a name="read_file">
+    
+  </a>
+  <div class="functionHeader">
+    read_file =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.test.test_socket.FileObjectClassTestCase.html#read_file" class="code" data-type="Instance Variable">Lib.test.test_socket.FileObjectClassTestCase.read_file</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.test.test_socket.UnbufferedFileObjectClassTestCase._testUnbufferedReadline">
+    
+  </a>
+  <a name="_testUnbufferedReadline">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _testUnbufferedReadline(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_socket.UnbufferedFileObjectClassTestCase.testMakefileClose">
+    
+  </a>
+  <a name="testMakefileClose">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    testMakefileClose(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.test.test_socket.UnbufferedFileObjectClassTestCase._testMakefileClose">
+    
+  </a>
+  <a name="_testMakefileClose">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _testMakefileClose(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_socket.UnbufferedFileObjectClassTestCase.testMakefileCloseSocketDestroy">
+    
+  </a>
+  <a name="testMakefileCloseSocketDestroy">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    testMakefileCloseSocketDestroy(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.test.test_socket.UnbufferedFileObjectClassTestCase._testMakefileCloseSocketDestroy">
+    
+  </a>
+  <a name="_testMakefileCloseSocketDestroy">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _testMakefileCloseSocketDestroy(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_socket.UnbufferedFileObjectClassTestCase.testSmallReadNonBlocking">
+    
+  </a>
+  <a name="testSmallReadNonBlocking">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    testSmallReadNonBlocking(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.test.test_socket.UnbufferedFileObjectClassTestCase._testSmallReadNonBlocking">
+    
+  </a>
+  <a name="_testSmallReadNonBlocking">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _testSmallReadNonBlocking(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_socket.UnbufferedFileObjectClassTestCase.testWriteNonBlocking">
+    
+  </a>
+  <a name="testWriteNonBlocking">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    testWriteNonBlocking(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.test.test_socket.UnbufferedFileObjectClassTestCase._testWriteNonBlocking">
+    
+  </a>
+  <a name="_testWriteNonBlocking">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _testWriteNonBlocking(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_socket.UnbufferedFileObjectClassTestCase.serv_skipped">
+    
+  </a>
+  <a name="serv_skipped">
+    
+  </a>
+  <div class="functionHeader">
+    serv_skipped =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

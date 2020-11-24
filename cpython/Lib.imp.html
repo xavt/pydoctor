@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.imp : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.imp.html" class="code" data-type="Module">imp</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">This module provides the components needed to build your own __import__
+function.  Undocumented functions are obsolete.
+
+In most cases it is preferred you consider using the importlib module's
+functionality over this module.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2519">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imp.html#create_dynamic" class="code" data-type="Variable">create_dynamic</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imp.html#SEARCH_ERROR" class="code" data-type="Variable">SEARCH_ERROR</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imp.html#PY_SOURCE" class="code" data-type="Variable">PY_SOURCE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imp.html#PY_COMPILED" class="code" data-type="Variable">PY_COMPILED</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imp.html#C_EXTENSION" class="code" data-type="Variable">C_EXTENSION</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imp.html#PY_RESOURCE" class="code" data-type="Variable">PY_RESOURCE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imp.html#PKG_DIRECTORY" class="code" data-type="Variable">PKG_DIRECTORY</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imp.html#C_BUILTIN" class="code" data-type="Variable">C_BUILTIN</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imp.html#PY_FROZEN" class="code" data-type="Variable">PY_FROZEN</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imp.html#PY_CODERESOURCE" class="code" data-type="Variable">PY_CODERESOURCE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imp.html#IMP_HOOK" class="code" data-type="Variable">IMP_HOOK</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.imp.html#new_module" class="code" data-type="Function">new_module</a></td>
+    <td><span>**DEPRECATED**</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.imp.html#get_magic" class="code" data-type="Function">get_magic</a></td>
+    <td><span>**DEPRECATED**</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.imp.html#get_tag" class="code" data-type="Function">get_tag</a></td>
+    <td><span>Return the magic tag for .pyc files.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.imp.html#cache_from_source" class="code" data-type="Function">cache_from_source</a></td>
+    <td><span>**DEPRECATED**</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.imp.html#source_from_cache" class="code" data-type="Function">source_from_cache</a></td>
+    <td><span>**DEPRECATED**</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.imp.html#get_suffixes" class="code" data-type="Function">get_suffixes</a></td>
+    <td><span>**DEPRECATED**</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.imp.NullImporter.html" class="code" data-type="Class">NullImporter</a></td>
+    <td><span>**DEPRECATED**</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.imp.html#load_source" class="code" data-type="Function">load_source</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.imp.html#load_compiled" class="code" data-type="Function">load_compiled</a></td>
+    <td><span>**DEPRECATED**</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.imp.html#load_package" class="code" data-type="Function">load_package</a></td>
+    <td><span>**DEPRECATED**</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.imp.html#load_module" class="code" data-type="Function">load_module</a></td>
+    <td><span>**DEPRECATED**</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.imp.html#find_module" class="code" data-type="Function">find_module</a></td>
+    <td><span>**DEPRECATED**</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.imp.html#reload" class="code" data-type="Function">reload</a></td>
+    <td><span>**DEPRECATED**</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.imp.html#init_builtin" class="code" data-type="Function">init_builtin</a></td>
+    <td><span>**DEPRECATED**</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.imp.html#load_dynamic" class="code" data-type="Function">load_dynamic</a></td>
+    <td><span>**DEPRECATED**</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.imp._HackedGetData.html" class="code" data-type="Class">_HackedGetData</a></td>
+    <td><span>Compatibility support for 'file' arguments of various load_*() functions.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.imp._LoadSourceCompatibility.html" class="code" data-type="Class">_LoadSourceCompatibility</a></td>
+    <td><span>Compatibility support for implementing load_source().</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.imp._LoadCompiledCompatibility.html" class="code" data-type="Class">_LoadCompiledCompatibility</a></td>
+    <td><span>Compatibility support for implementing load_compiled().</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.imp.create_dynamic">
+    
+  </a>
+  <a name="create_dynamic">
+    
+  </a>
+  <div class="functionHeader">
+    create_dynamic =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imp.SEARCH_ERROR">
+    
+  </a>
+  <a name="SEARCH_ERROR">
+    
+  </a>
+  <div class="functionHeader">
+    SEARCH_ERROR =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imp.PY_SOURCE">
+    
+  </a>
+  <a name="PY_SOURCE">
+    
+  </a>
+  <div class="functionHeader">
+    PY_SOURCE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imp.PY_COMPILED">
+    
+  </a>
+  <a name="PY_COMPILED">
+    
+  </a>
+  <div class="functionHeader">
+    PY_COMPILED =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imp.C_EXTENSION">
+    
+  </a>
+  <a name="C_EXTENSION">
+    
+  </a>
+  <div class="functionHeader">
+    C_EXTENSION =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imp.PY_RESOURCE">
+    
+  </a>
+  <a name="PY_RESOURCE">
+    
+  </a>
+  <div class="functionHeader">
+    PY_RESOURCE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imp.PKG_DIRECTORY">
+    
+  </a>
+  <a name="PKG_DIRECTORY">
+    
+  </a>
+  <div class="functionHeader">
+    PKG_DIRECTORY =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imp.C_BUILTIN">
+    
+  </a>
+  <a name="C_BUILTIN">
+    
+  </a>
+  <div class="functionHeader">
+    C_BUILTIN =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imp.PY_FROZEN">
+    
+  </a>
+  <a name="PY_FROZEN">
+    
+  </a>
+  <div class="functionHeader">
+    PY_FROZEN =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imp.PY_CODERESOURCE">
+    
+  </a>
+  <a name="PY_CODERESOURCE">
+    
+  </a>
+  <div class="functionHeader">
+    PY_CODERESOURCE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imp.IMP_HOOK">
+    
+  </a>
+  <a name="IMP_HOOK">
+    
+  </a>
+  <div class="functionHeader">
+    IMP_HOOK =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.imp.new_module">
+    
+  </a>
+  <a name="new_module">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    new_module(name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">**DEPRECATED**
+
+Create a new module.
+
+The module is not entered into sys.modules.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.imp.get_magic">
+    
+  </a>
+  <a name="get_magic">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_magic():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">**DEPRECATED**
+
+Return the magic number for .pyc files.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.imp.get_tag">
+    
+  </a>
+  <a name="get_tag">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_tag():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the magic tag for .pyc files.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.imp.cache_from_source">
+    
+  </a>
+  <a name="cache_from_source">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    cache_from_source(path, debug_override=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">**DEPRECATED**
+
+Given the path to a .py file, return the path to its .pyc file.
+
+The .py file does not need to exist; this simply returns the path to the
+.pyc file calculated as if the .py file were imported.
+
+If debug_override is not None, then it must be a boolean and is used in
+place of sys.flags.optimize.
+
+If sys.implementation.cache_tag is None then NotImplementedError is raised.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.imp.source_from_cache">
+    
+  </a>
+  <a name="source_from_cache">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    source_from_cache(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">**DEPRECATED**
+
+Given the path to a .pyc. file, return the path to its .py file.
+
+The .pyc file does not need to exist; this simply returns the path to
+the .py file calculated to correspond to the .pyc file.  If path does
+not conform to PEP 3147 format, ValueError will be raised. If
+sys.implementation.cache_tag is None then NotImplementedError is raised.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.imp.get_suffixes">
+    
+  </a>
+  <a name="get_suffixes">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_suffixes():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">**DEPRECATED**</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.imp.load_source">
+    
+  </a>
+  <a name="load_source">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    load_source(name, pathname, file=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.imp.load_compiled">
+    
+  </a>
+  <a name="load_compiled">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    load_compiled(name, pathname, file=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">**DEPRECATED**</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.imp.load_package">
+    
+  </a>
+  <a name="load_package">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    load_package(name, path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">**DEPRECATED**</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.imp.load_module">
+    
+  </a>
+  <a name="load_module">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    load_module(name, file, filename, details):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">**DEPRECATED**
+
+Load a module, given information returned by find_module().
+
+The module name must include the full package name, if any.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.imp.find_module">
+    
+  </a>
+  <a name="find_module">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    find_module(name, path=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">**DEPRECATED**
+
+Search for a module.
+
+If path is omitted or None, search for a built-in, frozen or special
+module and continue search in sys.path. The module name cannot
+contain '.'; to search for a submodule of a package, pass the
+submodule name and the package's __path__.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.imp.reload">
+    
+  </a>
+  <a name="reload">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    reload(module):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">**DEPRECATED**
+
+Reload the module and return it.
+
+The module must have been successfully imported before.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.imp.init_builtin">
+    
+  </a>
+  <a name="init_builtin">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    init_builtin(name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">**DEPRECATED**
+
+Load and return a built-in module by name, or None is such module doesn't
+exist</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.imp.load_dynamic">
+    
+  </a>
+  <a name="load_dynamic">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    load_dynamic(name, path, file=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">**DEPRECATED**
+
+Load an extension module.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

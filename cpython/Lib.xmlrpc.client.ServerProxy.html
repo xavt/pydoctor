@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.xmlrpc.client.ServerProxy : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.xmlrpc.html" class="code" data-type="Package">xmlrpc</a>.<a href="Lib.xmlrpc.client.html" class="code" data-type="Module">client</a>.<a href="Lib.xmlrpc.client.ServerProxy.html" class="code" data-type="Class">ServerProxy</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.xmlrpc.client.ServerProxy:</code></p>
+        <p><a href="classIndex.html#Lib.xmlrpc.client.ServerProxy">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">uri [,options] -&gt; a logical connection to an XML-RPC server
+
+uri is the connection point on the server, given as
+scheme://host/target.
+
+The standard implementation always supports the "http" scheme.  If
+SSL socket support is available (Python 2.0), it also supports
+"https".
+
+If the target part and the slash preceding it are both omitted,
+"/RPC2" is assumed.
+
+The following options can be given as keyword arguments:
+
+    transport: a transport factory
+    encoding: the request encoding (default is UTF-8)
+
+All 8-bit strings passed to the server proxy are assumed to use
+the given encoding.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id12190">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.client.ServerProxy.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.client.ServerProxy.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.client.ServerProxy.html#__getattr__" class="code" data-type="Method">__getattr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.client.ServerProxy.html#__call__" class="code" data-type="Method">__call__</a></td>
+    <td><span>A workaround to get special attributes on the ServerProxy without interfering with the magic __getattr__</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.client.ServerProxy.html#__enter__" class="code" data-type="Method">__enter__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.client.ServerProxy.html#__exit__" class="code" data-type="Method">__exit__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xmlrpc.client.ServerProxy.html#__host" class="code" data-type="Instance Variable">__host</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xmlrpc.client.ServerProxy.html#__handler" class="code" data-type="Instance Variable">__handler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xmlrpc.client.ServerProxy.html#__transport" class="code" data-type="Instance Variable">__transport</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xmlrpc.client.ServerProxy.html#__encoding" class="code" data-type="Instance Variable">__encoding</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xmlrpc.client.ServerProxy.html#__verbose" class="code" data-type="Instance Variable">__verbose</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xmlrpc.client.ServerProxy.html#__allow_none" class="code" data-type="Instance Variable">__allow_none</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.client.ServerProxy.html#__close" class="code" data-type="Method">__close</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.client.ServerProxy.html#__request" class="code" data-type="Method">__request</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.xmlrpc.client.ServerProxy.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, uri, transport=None, encoding=None, verbose=(False), allow_none=(False), use_datetime=(False), use_builtin_types=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xmlrpc.client.ServerProxy.__host">
+    
+  </a>
+  <a name="__host">
+    
+  </a>
+  <div class="functionHeader">
+    __host =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xmlrpc.client.ServerProxy.__handler">
+    
+  </a>
+  <a name="__handler">
+    
+  </a>
+  <div class="functionHeader">
+    __handler =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xmlrpc.client.ServerProxy.__transport">
+    
+  </a>
+  <a name="__transport">
+    
+  </a>
+  <div class="functionHeader">
+    __transport =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xmlrpc.client.ServerProxy.__encoding">
+    
+  </a>
+  <a name="__encoding">
+    
+  </a>
+  <div class="functionHeader">
+    __encoding =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xmlrpc.client.ServerProxy.__verbose">
+    
+  </a>
+  <a name="__verbose">
+    
+  </a>
+  <div class="functionHeader">
+    __verbose =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xmlrpc.client.ServerProxy.__allow_none">
+    
+  </a>
+  <a name="__allow_none">
+    
+  </a>
+  <div class="functionHeader">
+    __allow_none =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.xmlrpc.client.ServerProxy.__close">
+    
+  </a>
+  <a name="__close">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __close(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.xmlrpc.client.ServerProxy.__request">
+    
+  </a>
+  <a name="__request">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __request(self, methodname, params):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xmlrpc.client.ServerProxy.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __repr__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xmlrpc.client.ServerProxy.__getattr__">
+    
+  </a>
+  <a name="__getattr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __getattr__(self, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xmlrpc.client.ServerProxy.__call__">
+    
+  </a>
+  <a name="__call__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __call__(self, attr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">A workaround to get special attributes on the ServerProxy
+without interfering with the magic __getattr__</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xmlrpc.client.ServerProxy.__enter__">
+    
+  </a>
+  <a name="__enter__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __enter__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xmlrpc.client.ServerProxy.__exit__">
+    
+  </a>
+  <a name="__exit__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __exit__(self, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

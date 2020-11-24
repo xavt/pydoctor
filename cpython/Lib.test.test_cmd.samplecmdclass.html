@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.test.test_cmd.samplecmdclass : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.test.html" class="code" data-type="Package">test</a>.<a href="Lib.test.test_cmd.html" class="code" data-type="Module">test_cmd</a>.<a href="Lib.test.test_cmd.samplecmdclass.html" class="code" data-type="Class">samplecmdclass</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.test.test_cmd.samplecmdclass(<span title="cmd.Cmd">cmd.Cmd</span>):</code></p>
+        <p><a href="classIndex.html#Lib.test.test_cmd.samplecmdclass">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Instance the sampleclass:
+&gt;&gt;&gt; mycmd = samplecmdclass()
+
+Test for the function parseline():
+&gt;&gt;&gt; mycmd.parseline("")
+(None, None, '')
+&gt;&gt;&gt; mycmd.parseline("?")
+('help', '', 'help ')
+&gt;&gt;&gt; mycmd.parseline("?help")
+('help', 'help', 'help help')
+&gt;&gt;&gt; mycmd.parseline("!")
+('shell', '', 'shell ')
+&gt;&gt;&gt; mycmd.parseline("!command")
+('shell', 'command', 'shell command')
+&gt;&gt;&gt; mycmd.parseline("func")
+('func', '', 'func')
+&gt;&gt;&gt; mycmd.parseline("func arg1")
+('func', 'arg1', 'func arg1')
+
+
+Test for the function onecmd():
+&gt;&gt;&gt; mycmd.onecmd("")
+&gt;&gt;&gt; mycmd.onecmd("add 4 5")
+9
+&gt;&gt;&gt; mycmd.onecmd("")
+9
+&gt;&gt;&gt; mycmd.onecmd("test")
+*** Unknown syntax: test
+
+Test for the function emptyline():
+&gt;&gt;&gt; mycmd.emptyline()
+*** Unknown syntax: test
+
+Test for the function default():
+&gt;&gt;&gt; mycmd.default("default")
+*** Unknown syntax: default
+
+Test for the function completedefault():
+&gt;&gt;&gt; mycmd.completedefault()
+This is the completedefault method
+&gt;&gt;&gt; mycmd.completenames("a")
+['add']
+
+Test for the function completenames():
+&gt;&gt;&gt; mycmd.completenames("12")
+[]
+&gt;&gt;&gt; mycmd.completenames("help")
+['help']
+
+Test for the function complete_help():
+&gt;&gt;&gt; mycmd.complete_help("a")
+['add']
+&gt;&gt;&gt; mycmd.complete_help("he")
+['help']
+&gt;&gt;&gt; mycmd.complete_help("12")
+[]
+&gt;&gt;&gt; sorted(mycmd.complete_help(""))
+['add', 'exit', 'help', 'shell']
+
+Test for the function do_help():
+&gt;&gt;&gt; mycmd.do_help("testet")
+*** No help on testet
+&gt;&gt;&gt; mycmd.do_help("add")
+help text for add
+&gt;&gt;&gt; mycmd.onecmd("help add")
+help text for add
+&gt;&gt;&gt; mycmd.do_help("")
+&lt;BLANKLINE&gt;
+Documented commands (type help &lt;topic&gt;):
+========================================
+add  help
+&lt;BLANKLINE&gt;
+Undocumented commands:
+======================
+exit  shell
+&lt;BLANKLINE&gt;
+
+Test for the function print_topics():
+&gt;&gt;&gt; mycmd.print_topics("header", ["command1", "command2"], 2 ,10)
+header
+======
+command1
+command2
+&lt;BLANKLINE&gt;
+
+Test for the function columnize():
+&gt;&gt;&gt; mycmd.columnize([str(i) for i in range(20)])
+0  1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19
+&gt;&gt;&gt; mycmd.columnize([str(i) for i in range(20)], 10)
+0  7   14
+1  8   15
+2  9   16
+3  10  17
+4  11  18
+5  12  19
+6  13
+
+This is an interactive test, put some commands in the cmdqueue attribute
+and let it execute
+This test includes the preloop(), postloop(), default(), emptyline(),
+parseline(), do_help() functions
+&gt;&gt;&gt; mycmd.use_rawinput=0
+&gt;&gt;&gt; mycmd.cmdqueue=["", "add", "add 4 5", "help", "help add","exit"]
+&gt;&gt;&gt; mycmd.cmdloop()
+Hello from preloop
+help text for add
+*** invalid number of arguments
+9
+&lt;BLANKLINE&gt;
+Documented commands (type help &lt;topic&gt;):
+========================================
+add  help
+&lt;BLANKLINE&gt;
+Undocumented commands:
+======================
+exit  shell
+&lt;BLANKLINE&gt;
+help text for add
+Hello from postloop</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id5221">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_cmd.samplecmdclass.html#preloop" class="code" data-type="Method">preloop</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_cmd.samplecmdclass.html#postloop" class="code" data-type="Method">postloop</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_cmd.samplecmdclass.html#completedefault" class="code" data-type="Method">completedefault</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_cmd.samplecmdclass.html#complete_command" class="code" data-type="Method">complete_command</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_cmd.samplecmdclass.html#do_shell" class="code" data-type="Method">do_shell</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_cmd.samplecmdclass.html#do_add" class="code" data-type="Method">do_add</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_cmd.samplecmdclass.html#help_add" class="code" data-type="Method">help_add</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_cmd.samplecmdclass.html#do_exit" class="code" data-type="Method">do_exit</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.test.test_cmd.samplecmdclass.preloop">
+    
+  </a>
+  <a name="preloop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    preloop(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_cmd.samplecmdclass.postloop">
+    
+  </a>
+  <a name="postloop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    postloop(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_cmd.samplecmdclass.completedefault">
+    
+  </a>
+  <a name="completedefault">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    completedefault(self, *ignored):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_cmd.samplecmdclass.complete_command">
+    
+  </a>
+  <a name="complete_command">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    complete_command(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_cmd.samplecmdclass.do_shell">
+    
+  </a>
+  <a name="do_shell">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    do_shell(self, s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_cmd.samplecmdclass.do_add">
+    
+  </a>
+  <a name="do_add">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    do_add(self, s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_cmd.samplecmdclass.help_add">
+    
+  </a>
+  <a name="help_add">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    help_add(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_cmd.samplecmdclass.do_exit">
+    
+  </a>
+  <a name="do_exit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    do_exit(self, arg):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

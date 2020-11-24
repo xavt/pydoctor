@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.asyncio.events.BaseDefaultEventLoopPolicy : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.asyncio.html" class="code" data-type="Package">asyncio</a>.<a href="Lib.asyncio.events.html" class="code" data-type="Module">events</a>.<a href="Lib.asyncio.events.BaseDefaultEventLoopPolicy.html" class="code" data-type="Class">BaseDefaultEventLoopPolicy</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.asyncio.events.BaseDefaultEventLoopPolicy(<a href="Lib.asyncio.events.AbstractEventLoopPolicy.html" class="code" data-type="Class">AbstractEventLoopPolicy</a>):</code></p>
+        <p><a href="classIndex.html#Lib.asyncio.events.BaseDefaultEventLoopPolicy">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Default policy implementation for accessing the event loop.
+
+In this policy, each thread has its own event loop.  However, we
+only automatically create an event loop by default for the main
+thread; other threads by default have no event loop.
+
+Other policies may have different rules (e.g. a single global
+event loop, or automatically creating an event loop per thread, or
+using some other notion of context to which an event loop is
+associated).</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id313">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.BaseDefaultEventLoopPolicy.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.BaseDefaultEventLoopPolicy.html#get_event_loop" class="code" data-type="Method">get_event_loop</a></td>
+    <td><span>Get the event loop for the current context.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.BaseDefaultEventLoopPolicy.html#set_event_loop" class="code" data-type="Method">set_event_loop</a></td>
+    <td><span>Set the event loop.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.BaseDefaultEventLoopPolicy.html#new_event_loop" class="code" data-type="Method">new_event_loop</a></td>
+    <td><span>Create a new event loop.</span></td>
+  </tr><tr class="classvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.asyncio.events.BaseDefaultEventLoopPolicy.html#_loop_factory" class="code" data-type="Class Variable">_loop_factory</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.asyncio.events.BaseDefaultEventLoopPolicy._Local.html" class="code" data-type="Class">_Local</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.events.BaseDefaultEventLoopPolicy.html#_local" class="code" data-type="Instance Variable">_local</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.asyncio.events.AbstractEventLoopPolicy.html" class="code" data-type="Class">AbstractEventLoopPolicy</a>:
+          </p>
+          <table class="children sortable" id="id314">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoopPolicy.html#get_child_watcher" class="code" data-type="Method">get_child_watcher</a></td>
+    <td><span>Get the watcher for child processes.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoopPolicy.html#set_child_watcher" class="code" data-type="Method">set_child_watcher</a></td>
+    <td><span>Set the watcher for child processes.</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable private">
+  
+  <a name="Lib.asyncio.events.BaseDefaultEventLoopPolicy._loop_factory">
+    
+  </a>
+  <a name="_loop_factory">
+    
+  </a>
+  <div class="functionHeader">
+    _loop_factory =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.BaseDefaultEventLoopPolicy.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.events.BaseDefaultEventLoopPolicy._local">
+    
+  </a>
+  <a name="_local">
+    
+  </a>
+  <div class="functionHeader">
+    _local =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.BaseDefaultEventLoopPolicy.get_event_loop">
+    
+  </a>
+  <a name="get_event_loop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_event_loop(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.asyncio.events.AbstractEventLoopPolicy.html#get_event_loop" class="code" data-type="Method">Lib.asyncio.events.AbstractEventLoopPolicy.get_event_loop</a></div>
+    
+    <div><p class="pre">Get the event loop for the current context.
+
+Returns an instance of EventLoop or raises an exception.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.BaseDefaultEventLoopPolicy.set_event_loop">
+    
+  </a>
+  <a name="set_event_loop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_event_loop(self, loop):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.asyncio.events.AbstractEventLoopPolicy.html#set_event_loop" class="code" data-type="Method">Lib.asyncio.events.AbstractEventLoopPolicy.set_event_loop</a></div>
+    
+    <div><p class="pre">Set the event loop.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.BaseDefaultEventLoopPolicy.new_event_loop">
+    
+  </a>
+  <a name="new_event_loop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    new_event_loop(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.asyncio.events.AbstractEventLoopPolicy.html#new_event_loop" class="code" data-type="Method">Lib.asyncio.events.AbstractEventLoopPolicy.new_event_loop</a></div>
+    
+    <div><p class="pre">Create a new event loop.
+
+You must call set_event_loop() to make this the current event
+loop.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

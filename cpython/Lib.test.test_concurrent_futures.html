@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.test.test_concurrent_futures : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.test.html" class="code" data-type="Package">test</a>.<a href="Lib.test.test_concurrent_futures.html" class="code" data-type="Module">test_concurrent_futures</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div class="undocumented">Undocumented</div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id5392">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_concurrent_futures.html#create_future" class="code" data-type="Function">create_future</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.test.test_concurrent_futures.html#PENDING_FUTURE" class="code" data-type="Variable">PENDING_FUTURE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.test.test_concurrent_futures.html#RUNNING_FUTURE" class="code" data-type="Variable">RUNNING_FUTURE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.test.test_concurrent_futures.html#CANCELLED_FUTURE" class="code" data-type="Variable">CANCELLED_FUTURE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.test.test_concurrent_futures.html#CANCELLED_AND_NOTIFIED_FUTURE" class="code" data-type="Variable">CANCELLED_AND_NOTIFIED_FUTURE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.test.test_concurrent_futures.html#EXCEPTION_FUTURE" class="code" data-type="Variable">EXCEPTION_FUTURE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.test.test_concurrent_futures.html#SUCCESSFUL_FUTURE" class="code" data-type="Variable">SUCCESSFUL_FUTURE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.test.test_concurrent_futures.html#INITIALIZER_STATUS" class="code" data-type="Variable">INITIALIZER_STATUS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_concurrent_futures.html#mul" class="code" data-type="Function">mul</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_concurrent_futures.html#capture" class="code" data-type="Function">capture</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_concurrent_futures.html#sleep_and_raise" class="code" data-type="Function">sleep_and_raise</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_concurrent_futures.html#sleep_and_print" class="code" data-type="Function">sleep_and_print</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_concurrent_futures.html#init" class="code" data-type="Function">init</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_concurrent_futures.html#get_init_status" class="code" data-type="Function">get_init_status</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_concurrent_futures.html#init_fail" class="code" data-type="Function">init_fail</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_concurrent_futures.MyObject.html" class="code" data-type="Class">MyObject</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_concurrent_futures.EventfulGCObj.html" class="code" data-type="Class">EventfulGCObj</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_concurrent_futures.html#make_dummy_object" class="code" data-type="Function">make_dummy_object</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_concurrent_futures.BaseTestCase.html" class="code" data-type="Class">BaseTestCase</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_concurrent_futures.ExecutorMixin.html" class="code" data-type="Class">ExecutorMixin</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_concurrent_futures.ThreadPoolMixin.html" class="code" data-type="Class">ThreadPoolMixin</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_concurrent_futures.ProcessPoolForkMixin.html" class="code" data-type="Class">ProcessPoolForkMixin</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_concurrent_futures.ProcessPoolSpawnMixin.html" class="code" data-type="Class">ProcessPoolSpawnMixin</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_concurrent_futures.ProcessPoolForkserverMixin.html" class="code" data-type="Class">ProcessPoolForkserverMixin</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_concurrent_futures.html#create_executor_tests" class="code" data-type="Function">create_executor_tests</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_concurrent_futures.InitializerMixin.html" class="code" data-type="Class">InitializerMixin</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_concurrent_futures.FailingInitializerMixin.html" class="code" data-type="Class">FailingInitializerMixin</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_concurrent_futures.ExecutorShutdownTest.html" class="code" data-type="Class">ExecutorShutdownTest</a></td>
+    <td><span class="undocumented">No class1/6 methods documented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_concurrent_futures.ThreadPoolShutdownTest.html" class="code" data-type="Class">ThreadPoolShutdownTest</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_concurrent_futures.ProcessPoolShutdownTest.html" class="code" data-type="Class">ProcessPoolShutdownTest</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_concurrent_futures.WaitTests.html" class="code" data-type="Class">WaitTests</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_concurrent_futures.ThreadPoolWaitTests.html" class="code" data-type="Class">ThreadPoolWaitTests</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_concurrent_futures.AsCompletedTests.html" class="code" data-type="Class">AsCompletedTests</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_concurrent_futures.ExecutorTest.html" class="code" data-type="Class">ExecutorTest</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_concurrent_futures.ThreadPoolExecutorTest.html" class="code" data-type="Class">ThreadPoolExecutorTest</a></td>
+    <td><span class="undocumented">No class1/4 methods documented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_concurrent_futures.ProcessPoolExecutorTest.html" class="code" data-type="Class">ProcessPoolExecutorTest</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_concurrent_futures.CrashAtPickle.html" class="code" data-type="Class">CrashAtPickle</a></td>
+    <td><span>Bad object that triggers a segfault at pickling time.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_concurrent_futures.CrashAtUnpickle.html" class="code" data-type="Class">CrashAtUnpickle</a></td>
+    <td><span>Bad object that triggers a segfault at unpickling time.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_concurrent_futures.ExitAtPickle.html" class="code" data-type="Class">ExitAtPickle</a></td>
+    <td><span>Bad object that triggers a process exit at pickling time.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_concurrent_futures.ExitAtUnpickle.html" class="code" data-type="Class">ExitAtUnpickle</a></td>
+    <td><span>Bad object that triggers a process exit at unpickling time.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_concurrent_futures.ErrorAtPickle.html" class="code" data-type="Class">ErrorAtPickle</a></td>
+    <td><span>Bad object that triggers an error at pickling time.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_concurrent_futures.ErrorAtUnpickle.html" class="code" data-type="Class">ErrorAtUnpickle</a></td>
+    <td><span>Bad object that triggers an error at unpickling time.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_concurrent_futures.ExecutorDeadlockTest.html" class="code" data-type="Class">ExecutorDeadlockTest</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_concurrent_futures.FutureTests.html" class="code" data-type="Class">FutureTests</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_concurrent_futures.html#setUpModule" class="code" data-type="Function">setUpModule</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_concurrent_futures.html#tearDownModule" class="code" data-type="Function">tearDownModule</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_concurrent_futures.html#_crash" class="code" data-type="Function">_crash</a></td>
+    <td><span>Induces a segfault.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_concurrent_futures.html#_exit" class="code" data-type="Function">_exit</a></td>
+    <td><span>Induces a sys exit with exitcode 1.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_concurrent_futures.html#_raise_error" class="code" data-type="Function">_raise_error</a></td>
+    <td><span>Function that raises an Exception in process.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_concurrent_futures.html#_raise_error_ignore_stderr" class="code" data-type="Function">_raise_error_ignore_stderr</a></td>
+    <td><span>Function that raises an Exception in process and ignores stderr.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_concurrent_futures.html#_return_instance" class="code" data-type="Function">_return_instance</a></td>
+    <td><span>Function that returns a instance of cls.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.test.test_concurrent_futures.html#_threads_key" class="code" data-type="Variable">_threads_key</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction">
+  
+  <a name="Lib.test.test_concurrent_futures.create_future">
+    
+  </a>
+  <a name="create_future">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    create_future(state=PENDING, exception=None, result=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.test.test_concurrent_futures.PENDING_FUTURE">
+    
+  </a>
+  <a name="PENDING_FUTURE">
+    
+  </a>
+  <div class="functionHeader">
+    PENDING_FUTURE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.test.test_concurrent_futures.RUNNING_FUTURE">
+    
+  </a>
+  <a name="RUNNING_FUTURE">
+    
+  </a>
+  <div class="functionHeader">
+    RUNNING_FUTURE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.test.test_concurrent_futures.CANCELLED_FUTURE">
+    
+  </a>
+  <a name="CANCELLED_FUTURE">
+    
+  </a>
+  <div class="functionHeader">
+    CANCELLED_FUTURE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.test.test_concurrent_futures.CANCELLED_AND_NOTIFIED_FUTURE">
+    
+  </a>
+  <a name="CANCELLED_AND_NOTIFIED_FUTURE">
+    
+  </a>
+  <div class="functionHeader">
+    CANCELLED_AND_NOTIFIED_FUTURE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.test.test_concurrent_futures.EXCEPTION_FUTURE">
+    
+  </a>
+  <a name="EXCEPTION_FUTURE">
+    
+  </a>
+  <div class="functionHeader">
+    EXCEPTION_FUTURE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.test.test_concurrent_futures.SUCCESSFUL_FUTURE">
+    
+  </a>
+  <a name="SUCCESSFUL_FUTURE">
+    
+  </a>
+  <div class="functionHeader">
+    SUCCESSFUL_FUTURE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.test.test_concurrent_futures.INITIALIZER_STATUS">
+    
+  </a>
+  <a name="INITIALIZER_STATUS">
+    
+  </a>
+  <div class="functionHeader">
+    INITIALIZER_STATUS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.test_concurrent_futures.mul">
+    
+  </a>
+  <a name="mul">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    mul(x, y):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.test_concurrent_futures.capture">
+    
+  </a>
+  <a name="capture">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    capture(*args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.test_concurrent_futures.sleep_and_raise">
+    
+  </a>
+  <a name="sleep_and_raise">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    sleep_and_raise(t):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.test_concurrent_futures.sleep_and_print">
+    
+  </a>
+  <a name="sleep_and_print">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    sleep_and_print(t, msg):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.test_concurrent_futures.init">
+    
+  </a>
+  <a name="init">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    init(x):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.test_concurrent_futures.get_init_status">
+    
+  </a>
+  <a name="get_init_status">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_init_status():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.test_concurrent_futures.init_fail">
+    
+  </a>
+  <a name="init_fail">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    init_fail(log_queue=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.test_concurrent_futures.make_dummy_object">
+    
+  </a>
+  <a name="make_dummy_object">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    make_dummy_object(_):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.test_concurrent_futures.create_executor_tests">
+    
+  </a>
+  <a name="create_executor_tests">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    create_executor_tests(mixin, bases=(BaseTestCase,), executor_mixins=(ThreadPoolMixin, ProcessPoolForkMixin, ProcessPoolForkserverMixin,
+    ProcessPoolSpawnMixin)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.test.test_concurrent_futures._crash">
+    
+  </a>
+  <a name="_crash">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _crash(delay=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Induces a segfault.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.test.test_concurrent_futures._exit">
+    
+  </a>
+  <a name="_exit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _exit():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Induces a sys exit with exitcode 1.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.test.test_concurrent_futures._raise_error">
+    
+  </a>
+  <a name="_raise_error">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _raise_error(Err):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Function that raises an Exception in process.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.test.test_concurrent_futures._raise_error_ignore_stderr">
+    
+  </a>
+  <a name="_raise_error_ignore_stderr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _raise_error_ignore_stderr(Err):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Function that raises an Exception in process and ignores stderr.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.test.test_concurrent_futures._return_instance">
+    
+  </a>
+  <a name="_return_instance">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _return_instance(cls):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Function that returns a instance of cls.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.test.test_concurrent_futures._threads_key">
+    
+  </a>
+  <a name="_threads_key">
+    
+  </a>
+  <div class="functionHeader">
+    _threads_key =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.test_concurrent_futures.setUpModule">
+    
+  </a>
+  <a name="setUpModule">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setUpModule():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.test_concurrent_futures.tearDownModule">
+    
+  </a>
+  <a name="tearDownModule">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tearDownModule():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

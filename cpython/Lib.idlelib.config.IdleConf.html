@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.idlelib.config.IdleConf : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.idlelib.html" class="code" data-type="Package">idlelib</a>.<a href="Lib.idlelib.config.html" class="code" data-type="Module">config</a>.<a href="Lib.idlelib.config.IdleConf.html" class="code" data-type="Class">IdleConf</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.idlelib.config.IdleConf:</code></p>
+        <p><a href="classIndex.html#Lib.idlelib.config.IdleConf">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Hold config parsers for all idle config files in singleton instance.
+
+Default config files, self.defaultCfg --
+    for config_type in self.config_types:
+        (idle install dir)/config-{config-type}.def
+
+User config files, self.userCfg --
+    for config_type in self.config_types:
+    (user home dir)/.idlerc/config-{config-type}.cfg</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2059">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#config_types" class="code" data-type="Instance Variable">config_types</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#defaultCfg" class="code" data-type="Instance Variable">defaultCfg</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#userCfg" class="code" data-type="Instance Variable">userCfg</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#cfg" class="code" data-type="Instance Variable">cfg</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#CreateConfigHandlers" class="code" data-type="Method">CreateConfigHandlers</a></td>
+    <td><span>Populate default and user config parser dictionaries.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#userdir" class="code" data-type="Instance Variable">userdir</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#GetUserCfgDir" class="code" data-type="Method">GetUserCfgDir</a></td>
+    <td><span>Return a filesystem directory for storing user config files.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#GetOption" class="code" data-type="Method">GetOption</a></td>
+    <td><span>Return a value for configType section option, or default.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#SetOption" class="code" data-type="Method">SetOption</a></td>
+    <td><span>Set section option to value in user config file.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#GetSectionList" class="code" data-type="Method">GetSectionList</a></td>
+    <td><span>Return sections for configSet configType configuration.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#GetHighlight" class="code" data-type="Method">GetHighlight</a></td>
+    <td><span>Return dict of theme element highlight colors.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#GetThemeDict" class="code" data-type="Method">GetThemeDict</a></td>
+    <td><span>Return {option:value} dict for elements in themeName.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#CurrentTheme" class="code" data-type="Method">CurrentTheme</a></td>
+    <td><span>Return the name of the currently active text color theme.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#CurrentKeys" class="code" data-type="Method">CurrentKeys</a></td>
+    <td><span>Return the name of the currently active key set.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#current_colors_and_keys" class="code" data-type="Method">current_colors_and_keys</a></td>
+    <td><span>Return the currently active name for Theme or Keys section.</span></td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#default_keys" class="code" data-type="Static Method">default_keys</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#GetExtensions" class="code" data-type="Method">GetExtensions</a></td>
+    <td><span>Return extensions in default and user config-extensions files.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#RemoveKeyBindNames" class="code" data-type="Method">RemoveKeyBindNames</a></td>
+    <td><span>Return extnNameList with keybinding section names removed.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#GetExtnNameForEvent" class="code" data-type="Method">GetExtnNameForEvent</a></td>
+    <td><span>Return the name of the extension binding virtualEvent, or None.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#GetExtensionKeys" class="code" data-type="Method">GetExtensionKeys</a></td>
+    <td><span>Return dict: {configurable extensionName event : active keybinding}.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#GetExtensionBindings" class="code" data-type="Method">GetExtensionBindings</a></td>
+    <td><span>Return dict {extensionName event : active or defined keybinding}.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#GetKeyBinding" class="code" data-type="Method">GetKeyBinding</a></td>
+    <td><span>Return the keybinding list for keySetName eventStr.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#GetCurrentKeySet" class="code" data-type="Method">GetCurrentKeySet</a></td>
+    <td><span>Return CurrentKeys with 'darwin' modifications.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#GetKeySet" class="code" data-type="Method">GetKeySet</a></td>
+    <td><span>Return event-key dict for keySetName core plus active extensions.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#IsCoreBinding" class="code" data-type="Method">IsCoreBinding</a></td>
+    <td><span>Return True if the virtual event is one of the core idle key events.</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#former_extension_events" class="code" data-type="Class Variable">former_extension_events</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#GetCoreKeys" class="code" data-type="Method">GetCoreKeys</a></td>
+    <td><span>Return dict of core virtual-key keybindings for keySetName.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#GetExtraHelpSourceList" class="code" data-type="Method">GetExtraHelpSourceList</a></td>
+    <td><span>Return list of extra help sources from a given configSet.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#GetAllExtraHelpSourcesList" class="code" data-type="Method">GetAllExtraHelpSourcesList</a></td>
+    <td><span>Return a list of the details of all additional help sources.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#GetFont" class="code" data-type="Method">GetFont</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#LoadCfgFiles" class="code" data-type="Method">LoadCfgFiles</a></td>
+    <td><span>Load all configuration files.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#SaveUserCfgFiles" class="code" data-type="Method">SaveUserCfgFiles</a></td>
+    <td><span>Write all loaded user configuration files to disk.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html#__GetRawExtensionKeys" class="code" data-type="Method">__GetRawExtensionKeys</a></td>
+    <td><span>Return dict {configurable extensionName event : keybinding list}.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleConf.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, _utest=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.config.IdleConf.config_types">
+    
+  </a>
+  <a name="config_types">
+    
+  </a>
+  <div class="functionHeader">
+    config_types =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Tuple[str, ...]</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.config.IdleConf.defaultCfg">
+    
+  </a>
+  <a name="defaultCfg">
+    
+  </a>
+  <div class="functionHeader">
+    defaultCfg =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.config.IdleConf.userCfg">
+    
+  </a>
+  <a name="userCfg">
+    
+  </a>
+  <div class="functionHeader">
+    userCfg =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.config.IdleConf.cfg">
+    
+  </a>
+  <a name="cfg">
+    
+  </a>
+  <div class="functionHeader">
+    cfg =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleConf.CreateConfigHandlers">
+    
+  </a>
+  <a name="CreateConfigHandlers">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    CreateConfigHandlers(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Populate default and user config parser dictionaries.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.config.IdleConf.userdir">
+    
+  </a>
+  <a name="userdir">
+    
+  </a>
+  <div class="functionHeader">
+    userdir =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleConf.GetUserCfgDir">
+    
+  </a>
+  <a name="GetUserCfgDir">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    GetUserCfgDir(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a filesystem directory for storing user config files.
+
+Creates it if required.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleConf.GetOption">
+    
+  </a>
+  <a name="GetOption">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    GetOption(self, configType, section, option, default=None, type=None, warn_on_default=(True), raw=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a value for configType section option, or default.
+
+If type is not None, return a value of that type.  Also pass raw
+to the config parser.  First try to return a valid value
+(including type) from a user configuration. If that fails, try
+the default configuration. If that fails, return default, with a
+default of None.
+
+Warn if either user or default configurations have an invalid value.
+Warn if default is returned and warn_on_default is True.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleConf.SetOption">
+    
+  </a>
+  <a name="SetOption">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    SetOption(self, configType, section, option, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set section option to value in user config file.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleConf.GetSectionList">
+    
+  </a>
+  <a name="GetSectionList">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    GetSectionList(self, configSet, configType):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return sections for configSet configType configuration.
+
+configSet must be either 'user' or 'default'
+configType must be in self.config_types.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleConf.GetHighlight">
+    
+  </a>
+  <a name="GetHighlight">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    GetHighlight(self, theme, element):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return dict of theme element highlight colors.
+
+The keys are 'foreground' and 'background'.  The values are
+tkinter color strings for configuring backgrounds and tags.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleConf.GetThemeDict">
+    
+  </a>
+  <a name="GetThemeDict">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    GetThemeDict(self, type, themeName):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return {option:value} dict for elements in themeName.
+
+type - string, 'default' or 'user' theme type
+themeName - string, theme name
+Values are loaded over ultimate fallback defaults to guarantee
+that all theme elements are present in a newly created theme.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleConf.CurrentTheme">
+    
+  </a>
+  <a name="CurrentTheme">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    CurrentTheme(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the name of the currently active text color theme.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleConf.CurrentKeys">
+    
+  </a>
+  <a name="CurrentKeys">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    CurrentKeys(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the name of the currently active key set.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleConf.current_colors_and_keys">
+    
+  </a>
+  <a name="current_colors_and_keys">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    current_colors_and_keys(self, section):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the currently active name for Theme or Keys section.
+
+idlelib.config-main.def ('default') includes these sections
+
+[Theme]
+default= 1
+name= IDLE Classic
+name2=
+
+[Keys]
+default= 1
+name=
+name2=
+
+Item 'name2', is used for built-in ('default') themes and keys
+added after 2015 Oct 1 and 2016 July 1.  This kludge is needed
+because setting 'name' to a builtin not defined in older IDLEs
+to display multiple error messages or quit.
+See https://bugs.python.org/issue25313.
+When default = True, 'name2' takes precedence over 'name',
+while older IDLEs will just use name.  When default = False,
+'name2' may still be set, but it is ignored.</p></div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  <a name="Lib.idlelib.config.IdleConf.default_keys">
+    
+  </a>
+  <a name="default_keys">
+    
+  </a>
+  <div class="functionHeader">
+    @staticmethod<br />
+    def
+    default_keys():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleConf.GetExtensions">
+    
+  </a>
+  <a name="GetExtensions">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    GetExtensions(self, active_only=(True), editor_only=(False), shell_only=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return extensions in default and user config-extensions files.
+
+If active_only True, only return active (enabled) extensions
+and optionally only editor or shell extensions.
+If active_only False, return all extensions.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleConf.RemoveKeyBindNames">
+    
+  </a>
+  <a name="RemoveKeyBindNames">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    RemoveKeyBindNames(self, extnNameList):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return extnNameList with keybinding section names removed.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleConf.GetExtnNameForEvent">
+    
+  </a>
+  <a name="GetExtnNameForEvent">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    GetExtnNameForEvent(self, virtualEvent):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the name of the extension binding virtualEvent, or None.
+
+virtualEvent - string, name of the virtual event to test for,
+               without the enclosing '&lt;&lt; &gt;&gt;'</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleConf.GetExtensionKeys">
+    
+  </a>
+  <a name="GetExtensionKeys">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    GetExtensionKeys(self, extensionName):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return dict: {configurable extensionName event : active keybinding}.
+
+Events come from default config extension_cfgBindings section.
+Keybindings come from GetCurrentKeySet() active key dict,
+where previously used bindings are disabled.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.idlelib.config.IdleConf.__GetRawExtensionKeys">
+    
+  </a>
+  <a name="__GetRawExtensionKeys">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __GetRawExtensionKeys(self, extensionName):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return dict {configurable extensionName event : keybinding list}.
+
+Events come from default config extension_cfgBindings section.
+Keybindings list come from the splitting of GetOption, which
+tries user config before default config.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleConf.GetExtensionBindings">
+    
+  </a>
+  <a name="GetExtensionBindings">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    GetExtensionBindings(self, extensionName):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return dict {extensionName event : active or defined keybinding}.
+
+Augment self.GetExtensionKeys(extensionName) with mapping of non-
+configurable events (from default config) to GetOption splits,
+as in self.__GetRawExtensionKeys.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleConf.GetKeyBinding">
+    
+  </a>
+  <a name="GetKeyBinding">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    GetKeyBinding(self, keySetName, eventStr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the keybinding list for keySetName eventStr.
+
+keySetName - name of key binding set (config-keys section).
+eventStr - virtual event, including brackets, as in '&lt;&lt;event&gt;&gt;'.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleConf.GetCurrentKeySet">
+    
+  </a>
+  <a name="GetCurrentKeySet">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    GetCurrentKeySet(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return CurrentKeys with 'darwin' modifications.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleConf.GetKeySet">
+    
+  </a>
+  <a name="GetKeySet">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    GetKeySet(self, keySetName):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return event-key dict for keySetName core plus active extensions.
+
+If a binding defined in an extension is already in use, the
+extension binding is disabled by being set to ''</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleConf.IsCoreBinding">
+    
+  </a>
+  <a name="IsCoreBinding">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    IsCoreBinding(self, virtualEvent):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True if the virtual event is one of the core idle key events.
+
+virtualEvent - string, name of the virtual event to test for,
+               without the enclosing '&lt;&lt; &gt;&gt;'</p></div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.idlelib.config.IdleConf.former_extension_events">
+    
+  </a>
+  <a name="former_extension_events">
+    
+  </a>
+  <div class="functionHeader">
+    former_extension_events =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Set[str]</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleConf.GetCoreKeys">
+    
+  </a>
+  <a name="GetCoreKeys">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    GetCoreKeys(self, keySetName=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return dict of core virtual-key keybindings for keySetName.
+
+The default keySetName None corresponds to the keyBindings base
+dict. If keySetName is not None, bindings from the config
+file(s) are loaded _over_ these defaults, so if there is a
+problem getting any core binding there will be an 'ultimate last
+resort fallback' to the CUA-ish bindings defined here.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleConf.GetExtraHelpSourceList">
+    
+  </a>
+  <a name="GetExtraHelpSourceList">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    GetExtraHelpSourceList(self, configSet):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return list of extra help sources from a given configSet.
+
+Valid configSets are 'user' or 'default'.  Return a list of tuples of
+the form (menu_item , path_to_help_file , option), or return the empty
+list.  'option' is the sequence number of the help resource.  'option'
+values determine the position of the menu items on the Help menu,
+therefore the returned list must be sorted by 'option'.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleConf.GetAllExtraHelpSourcesList">
+    
+  </a>
+  <a name="GetAllExtraHelpSourcesList">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    GetAllExtraHelpSourcesList(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a list of the details of all additional help sources.
+
+Tuples in the list are those of GetExtraHelpSourceList.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleConf.GetFont">
+    
+  </a>
+  <a name="GetFont">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    GetFont(self, root, configType, section):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Retrieve a font from configuration (font, font-size, font-bold)
+Intercept the special value 'TkFixedFont' and substitute
+the actual font, factoring in some tweaks if needed for
+appearance sakes.
+
+The 'root' parameter can normally be any valid Tkinter widget.
+
+Return a tuple (family, size, weight) suitable for passing
+to tkinter.Font</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleConf.LoadCfgFiles">
+    
+  </a>
+  <a name="LoadCfgFiles">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    LoadCfgFiles(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Load all configuration files.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.config.IdleConf.SaveUserCfgFiles">
+    
+  </a>
+  <a name="SaveUserCfgFiles">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    SaveUserCfgFiles(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Write all loaded user configuration files to disk.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

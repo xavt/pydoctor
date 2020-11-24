@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.bz2.BZ2File : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.bz2.html" class="code" data-type="Module">bz2</a>.<a href="Lib.bz2.BZ2File.html" class="code" data-type="Class">BZ2File</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.bz2.BZ2File(<span title="_compression.BaseStream">_compression.BaseStream</span>):</code></p>
+        <p><a href="classIndex.html#Lib.bz2.BZ2File">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">A file object providing transparent bzip2 (de)compression.
+
+A BZ2File can act as a wrapper for an existing file object, or refer
+directly to a named file on disk.
+
+Note that BZ2File provides a *binary* file interface - data read is
+returned as bytes, and data to be written should be given as bytes.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id471">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.bz2.BZ2File.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Open a bzip2-compressed file.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.bz2.BZ2File.html#close" class="code" data-type="Method">close</a></td>
+    <td><span>Flush and close the file.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.bz2.BZ2File.html#closed" class="code" data-type="Method">closed</a></td>
+    <td><span>True if this file is closed.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.bz2.BZ2File.html#fileno" class="code" data-type="Method">fileno</a></td>
+    <td><span>Return the file descriptor for the underlying file.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.bz2.BZ2File.html#seekable" class="code" data-type="Method">seekable</a></td>
+    <td><span>Return whether the file supports seeking.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.bz2.BZ2File.html#readable" class="code" data-type="Method">readable</a></td>
+    <td><span>Return whether the file was opened for reading.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.bz2.BZ2File.html#writable" class="code" data-type="Method">writable</a></td>
+    <td><span>Return whether the file was opened for writing.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.bz2.BZ2File.html#peek" class="code" data-type="Method">peek</a></td>
+    <td><span>Return buffered data without advancing the file position.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.bz2.BZ2File.html#read" class="code" data-type="Method">read</a></td>
+    <td><span>Read up to size uncompressed bytes from the file.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.bz2.BZ2File.html#read1" class="code" data-type="Method">read1</a></td>
+    <td><span>Read up to size uncompressed bytes, while trying to avoid making multiple reads from the underlying stream. Reads up to a buffer's worth of data if size is negative.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.bz2.BZ2File.html#readinto" class="code" data-type="Method">readinto</a></td>
+    <td><span>Read bytes into b.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.bz2.BZ2File.html#readline" class="code" data-type="Method">readline</a></td>
+    <td><span>Read a line of uncompressed bytes from the file.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.bz2.BZ2File.html#readlines" class="code" data-type="Method">readlines</a></td>
+    <td><span>Read a list of lines of uncompressed bytes from the file.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.bz2.BZ2File.html#write" class="code" data-type="Method">write</a></td>
+    <td><span>Write a byte string to the file.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.bz2.BZ2File.html#writelines" class="code" data-type="Method">writelines</a></td>
+    <td><span>Write a sequence of byte strings to the file.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.bz2.BZ2File.html#seek" class="code" data-type="Method">seek</a></td>
+    <td><span>Change the file position.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.bz2.BZ2File.html#tell" class="code" data-type="Method">tell</a></td>
+    <td><span>Return the current file position.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.bz2.BZ2File.html#_lock" class="code" data-type="Instance Variable">_lock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.bz2.BZ2File.html#_fp" class="code" data-type="Instance Variable">_fp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.bz2.BZ2File.html#_closefp" class="code" data-type="Instance Variable">_closefp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.bz2.BZ2File.html#_mode" class="code" data-type="Instance Variable">_mode</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.bz2.BZ2File.html#_compressor" class="code" data-type="Instance Variable">_compressor</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.bz2.BZ2File.html#_buffer" class="code" data-type="Instance Variable">_buffer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.bz2.BZ2File.html#_pos" class="code" data-type="Instance Variable">_pos</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.bz2.BZ2File.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, filename, mode="""r"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Open a bzip2-compressed file.
+
+If filename is a str, bytes, or PathLike object, it gives the
+name of the file to be opened. Otherwise, it should be a file
+object, which will be used to read or write the compressed data.
+
+mode can be 'r' for reading (default), 'w' for (over)writing,
+'x' for creating exclusively, or 'a' for appending. These can
+equivalently be given as 'rb', 'wb', 'xb', and 'ab'.
+
+If mode is 'w', 'x' or 'a', compresslevel can be a number between 1
+and 9 specifying the level of compression: 1 produces the least
+compression, and 9 (default) produces the most compression.
+
+If mode is 'r', the input file may be the concatenation of
+multiple compressed streams.</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.bz2.BZ2File._lock">
+    
+  </a>
+  <a name="_lock">
+    
+  </a>
+  <div class="functionHeader">
+    _lock =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.bz2.BZ2File._fp">
+    
+  </a>
+  <a name="_fp">
+    
+  </a>
+  <div class="functionHeader">
+    _fp =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.bz2.BZ2File._closefp">
+    
+  </a>
+  <a name="_closefp">
+    
+  </a>
+  <div class="functionHeader">
+    _closefp =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.bz2.BZ2File._mode">
+    
+  </a>
+  <a name="_mode">
+    
+  </a>
+  <div class="functionHeader">
+    _mode =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.bz2.BZ2File._compressor">
+    
+  </a>
+  <a name="_compressor">
+    
+  </a>
+  <div class="functionHeader">
+    _compressor =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.bz2.BZ2File._buffer">
+    
+  </a>
+  <a name="_buffer">
+    
+  </a>
+  <div class="functionHeader">
+    _buffer =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.bz2.BZ2File._pos">
+    
+  </a>
+  <a name="_pos">
+    
+  </a>
+  <div class="functionHeader">
+    _pos =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.bz2.BZ2File.close">
+    
+  </a>
+  <a name="close">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    close(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Flush and close the file.
+
+May be called more than once without error. Once the file is
+closed, any other operation on it will raise a ValueError.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.bz2.BZ2File.closed">
+    
+  </a>
+  <a name="closed">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    closed(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">True if this file is closed.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.bz2.BZ2File.fileno">
+    
+  </a>
+  <a name="fileno">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    fileno(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the file descriptor for the underlying file.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.bz2.BZ2File.seekable">
+    
+  </a>
+  <a name="seekable">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    seekable(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return whether the file supports seeking.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.bz2.BZ2File.readable">
+    
+  </a>
+  <a name="readable">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    readable(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return whether the file was opened for reading.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.bz2.BZ2File.writable">
+    
+  </a>
+  <a name="writable">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    writable(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return whether the file was opened for writing.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.bz2.BZ2File.peek">
+    
+  </a>
+  <a name="peek">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    peek(self, n=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return buffered data without advancing the file position.
+
+Always returns at least one byte of data, unless at EOF.
+The exact number of bytes returned is unspecified.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.bz2.BZ2File.read">
+    
+  </a>
+  <a name="read">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    read(self, size=(-1)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Read up to size uncompressed bytes from the file.
+
+If size is negative or omitted, read until EOF is reached.
+Returns b'' if the file is already at EOF.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.bz2.BZ2File.read1">
+    
+  </a>
+  <a name="read1">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    read1(self, size=(-1)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Read up to size uncompressed bytes, while trying to avoid
+making multiple reads from the underlying stream. Reads up to a
+buffer's worth of data if size is negative.
+
+Returns b'' if the file is at EOF.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.bz2.BZ2File.readinto">
+    
+  </a>
+  <a name="readinto">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    readinto(self, b):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Read bytes into b.
+
+Returns the number of bytes read (0 for EOF).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.bz2.BZ2File.readline">
+    
+  </a>
+  <a name="readline">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    readline(self, size=(-1)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Read a line of uncompressed bytes from the file.
+
+The terminating newline (if present) is retained. If size is
+non-negative, no more than size bytes will be read (in which
+case the line may be incomplete). Returns b'' if already at EOF.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.bz2.BZ2File.readlines">
+    
+  </a>
+  <a name="readlines">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    readlines(self, size=(-1)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Read a list of lines of uncompressed bytes from the file.
+
+size can be specified to control the number of lines read: no
+further lines will be read once the total size of the lines read
+so far equals or exceeds size.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.bz2.BZ2File.write">
+    
+  </a>
+  <a name="write">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    write(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Write a byte string to the file.
+
+Returns the number of uncompressed bytes written, which is
+always len(data). Note that due to buffering, the file on disk
+may not reflect the data written until close() is called.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.bz2.BZ2File.writelines">
+    
+  </a>
+  <a name="writelines">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    writelines(self, seq):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Write a sequence of byte strings to the file.
+
+Returns the number of uncompressed bytes written.
+seq can be any iterable yielding byte strings.
+
+Line separators are not added between the written byte strings.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.bz2.BZ2File.seek">
+    
+  </a>
+  <a name="seek">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    seek(self, offset, whence=io.SEEK_SET):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Change the file position.
+
+The new position is specified by offset, relative to the
+position indicated by whence. Values for whence are:
+
+    0: start of stream (default); offset must not be negative
+    1: current stream position
+    2: end of stream; offset must not be positive
+
+Returns the new file position.
+
+Note that seeking is emulated, so depending on the parameters,
+this operation may be extremely slow.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.bz2.BZ2File.tell">
+    
+  </a>
+  <a name="tell">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tell(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the current file position.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

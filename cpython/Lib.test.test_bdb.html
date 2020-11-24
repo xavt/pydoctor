@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.test.test_bdb : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.test.html" class="code" data-type="Package">test</a>.<a href="Lib.test.test_bdb.html" class="code" data-type="Module">test_bdb</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Test the bdb module.
+
+A test defines a list of tuples that may be seen as paired tuples, each
+pair being defined by 'expect_tuple, set_tuple' as follows:
+
+    ([event, [lineno[, co_name[, eargs]]]]), (set_type, [sargs])
+
+* 'expect_tuple' describes the expected current state of the Bdb instance.
+  It may be the empty tuple and no check is done in that case.
+* 'set_tuple' defines the set_*() method to be invoked when the Bdb
+  instance reaches this state.
+
+Example of an 'expect_tuple, set_tuple' pair:
+
+    ('line', 2, 'tfunc_main'), ('step', )
+
+Definitions of the members of the 'expect_tuple':
+    event:
+        Name of the trace event. The set methods that do not give back
+        control to the tracer [1] do not trigger a tracer event and in
+        that case the next 'event' may be 'None' by convention, its value
+        is not checked.
+        [1] Methods that trigger a trace event are set_step(), set_next(),
+        set_return(), set_until() and set_continue().
+    lineno:
+        Line number. Line numbers are relative to the start of the
+        function when tracing a function in the test_bdb module (i.e. this
+        module).
+    co_name:
+        Name of the function being currently traced.
+    eargs:
+        A tuple:
+        * On an 'exception' event the tuple holds a class object, the
+          current exception must be an instance of this class.
+        * On a 'line' event, the tuple holds a dictionary and a list. The
+          dictionary maps each breakpoint number that has been hit on this
+          line to its hits count. The list holds the list of breakpoint
+          number temporaries that are being deleted.
+
+Definitions of the members of the 'set_tuple':
+    set_type:
+        The type of the set method to be invoked. This may
+        be the type of one of the Bdb set methods: 'step', 'next',
+        'until', 'return', 'continue', 'break', 'quit', or the type of one
+        of the set methods added by test_bdb.Bdb: 'ignore', 'enable',
+        'disable', 'clear', 'up', 'down'.
+    sargs:
+        The arguments of the set method if any, packed in a tuple.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id5017">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_bdb.BdbException.html" class="code" data-type="Class">BdbException</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_bdb.BdbError.html" class="code" data-type="Class">BdbError</a></td>
+    <td><span>Error raised by the Bdb instance.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_bdb.BdbSyntaxError.html" class="code" data-type="Class">BdbSyntaxError</a></td>
+    <td><span>Syntax error in the test case.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_bdb.BdbNotExpectedError.html" class="code" data-type="Class">BdbNotExpectedError</a></td>
+    <td><span>Unexpected result.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.test.test_bdb.html#dry_run" class="code" data-type="Variable">dry_run</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_bdb.html#reset_Breakpoint" class="code" data-type="Function">reset_Breakpoint</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_bdb.html#info_breakpoints" class="code" data-type="Function">info_breakpoints</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_bdb.Bdb.html" class="code" data-type="Class">Bdb</a></td>
+    <td><span>Extend Bdb to enhance test coverage.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_bdb.Tracer.html" class="code" data-type="Class">Tracer</a></td>
+    <td><span>A tracer for testing the bdb module.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_bdb.TracerRun.html" class="code" data-type="Class">TracerRun</a></td>
+    <td><span>Provide a context for running a Tracer instance with a test case.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_bdb.html#run_test" class="code" data-type="Function">run_test</a></td>
+    <td><span>Run a test and print the dry-run results.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_bdb.html#create_modules" class="code" data-type="Function">create_modules</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_bdb.html#break_in_func" class="code" data-type="Function">break_in_func</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.test.test_bdb.html#TEST_MODULE" class="code" data-type="Variable">TEST_MODULE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.test.test_bdb.html#TEST_MODULE_FNAME" class="code" data-type="Variable">TEST_MODULE_FNAME</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_bdb.html#tfunc_import" class="code" data-type="Function">tfunc_import</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_bdb.html#tfunc_main" class="code" data-type="Function">tfunc_main</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_bdb.html#tfunc_first" class="code" data-type="Function">tfunc_first</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_bdb.html#tfunc_second" class="code" data-type="Function">tfunc_second</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_bdb.BaseTestCase.html" class="code" data-type="Class">BaseTestCase</a></td>
+    <td><span>Base class for all tests.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_bdb.StateTestCase.html" class="code" data-type="Class">StateTestCase</a></td>
+    <td><span>Test the step, next, return, until and quit 'set_' methods.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_bdb.BreakpointTestCase.html" class="code" data-type="Class">BreakpointTestCase</a></td>
+    <td><span>Test the breakpoint set method.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_bdb.RunTestCase.html" class="code" data-type="Class">RunTestCase</a></td>
+    <td><span>Test run, runeval and set_trace.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_bdb.IssuesTestCase.html" class="code" data-type="Class">IssuesTestCase</a></td>
+    <td><span>Test fixed bdb issues.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_bdb.html#test_main" class="code" data-type="Function">test_main</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.test.test_bdb.dry_run">
+    
+  </a>
+  <a name="dry_run">
+    
+  </a>
+  <div class="functionHeader">
+    dry_run =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.test_bdb.reset_Breakpoint">
+    
+  </a>
+  <a name="reset_Breakpoint">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    reset_Breakpoint():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.test_bdb.info_breakpoints">
+    
+  </a>
+  <a name="info_breakpoints">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    info_breakpoints():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.test_bdb.run_test">
+    
+  </a>
+  <a name="run_test">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    run_test(modules, set_list, skip=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Run a test and print the dry-run results.
+
+'modules':  A dictionary mapping module names to their source code as a
+            string. The dictionary MUST include one module named
+            'test_module' with a main() function.
+'set_list': A list of set_type tuples to be run on the module.
+
+For example, running the following script outputs the following results:
+
+*****************************   SCRIPT   ********************************
+
+from test.test_bdb import run_test, break_in_func
+
+code = '''
+    def func():
+        lno = 3
+
+    def main():
+        func()
+        lno = 7
+'''
+
+set_list = [
+            break_in_func('func', 'test_module.py'),
+            ('continue', ),
+            ('step', ),
+            ('step', ),
+            ('step', ),
+            ('quit', ),
+        ]
+
+modules = { 'test_module': code }
+run_test(modules, set_list)
+
+****************************   results   ********************************
+
+1: ('line', 2, 'tfunc_import'),    ('next',),
+2: ('line', 3, 'tfunc_import'),    ('step',),
+3: ('call', 5, 'main'),            ('break', ('test_module.py', None, False, None, 'func')),
+4: ('None', 5, 'main'),            ('continue',),
+5: ('line', 3, 'func', ({1: 1}, [])), ('step',),
+  BpNum Temp Enb Hits Ignore Where
+  1     no   yes 1    0      at test_module.py:2
+6: ('return', 3, 'func'),          ('step',),
+7: ('line', 7, 'main'),            ('step',),
+8: ('return', 7, 'main'),          ('quit',),
+
+*************************************************************************</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.test_bdb.create_modules">
+    
+  </a>
+  <a name="create_modules">
+    
+  </a>
+  <div class="functionHeader">
+    @contextmanager<br />
+    def
+    create_modules(modules):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.test_bdb.break_in_func">
+    
+  </a>
+  <a name="break_in_func">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    break_in_func(funcname, fname=__file__, temporary=(False), cond=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.test.test_bdb.TEST_MODULE">
+    
+  </a>
+  <a name="TEST_MODULE">
+    
+  </a>
+  <div class="functionHeader">
+    TEST_MODULE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.test.test_bdb.TEST_MODULE_FNAME">
+    
+  </a>
+  <a name="TEST_MODULE_FNAME">
+    
+  </a>
+  <div class="functionHeader">
+    TEST_MODULE_FNAME =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.test_bdb.tfunc_import">
+    
+  </a>
+  <a name="tfunc_import">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tfunc_import():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.test_bdb.tfunc_main">
+    
+  </a>
+  <a name="tfunc_main">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tfunc_main():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.test_bdb.tfunc_first">
+    
+  </a>
+  <a name="tfunc_first">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tfunc_first():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.test_bdb.tfunc_second">
+    
+  </a>
+  <a name="tfunc_second">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tfunc_second():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.test_bdb.test_main">
+    
+  </a>
+  <a name="test_main">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_main():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

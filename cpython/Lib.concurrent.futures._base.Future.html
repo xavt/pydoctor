@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.concurrent.futures._base.Future : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.concurrent.html" class="code" data-type="Package">concurrent</a>.<a href="Lib.concurrent.futures.html" class="code" data-type="Package">futures</a>.<a href="Lib.concurrent.futures._base.html" class="code" data-type="Module">_base</a>.<a href="Lib.concurrent.futures._base.Future.html" class="code" data-type="Class">Future</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.concurrent.futures._base.Future(<span title="object">object</span>):</code></p>
+        <p><a href="classIndex.html#Lib.concurrent.futures._base.Future">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Represents the result of an asynchronous computation.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id548">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.concurrent.futures._base.Future.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Initializes the future. Should not be called by clients.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.concurrent.futures._base.Future.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.concurrent.futures._base.Future.html#cancel" class="code" data-type="Method">cancel</a></td>
+    <td><span>Cancel the future if possible.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.concurrent.futures._base.Future.html#cancelled" class="code" data-type="Method">cancelled</a></td>
+    <td><span>Return True if the future was cancelled.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.concurrent.futures._base.Future.html#running" class="code" data-type="Method">running</a></td>
+    <td><span>Return True if the future is currently executing.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.concurrent.futures._base.Future.html#done" class="code" data-type="Method">done</a></td>
+    <td><span>Return True of the future was cancelled or finished executing.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.concurrent.futures._base.Future.html#add_done_callback" class="code" data-type="Method">add_done_callback</a></td>
+    <td><span>Attaches a callable that will be called when the future finishes.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.concurrent.futures._base.Future.html#result" class="code" data-type="Method">result</a></td>
+    <td><span>Return the result of the call that the future represents.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.concurrent.futures._base.Future.html#exception" class="code" data-type="Method">exception</a></td>
+    <td><span>Return the exception raised by the call that the future represents.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.concurrent.futures._base.Future.html#set_running_or_notify_cancel" class="code" data-type="Method">set_running_or_notify_cancel</a></td>
+    <td><span>Mark the future as running or process any cancel notifications.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.concurrent.futures._base.Future.html#set_result" class="code" data-type="Method">set_result</a></td>
+    <td><span>Sets the return value of work associated with the future.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.concurrent.futures._base.Future.html#set_exception" class="code" data-type="Method">set_exception</a></td>
+    <td><span>Sets the result of the future as being the given exception.</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.concurrent.futures._base.Future.html#__class_getitem__" class="code" data-type="Class Variable">__class_getitem__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.concurrent.futures._base.Future.html#_condition" class="code" data-type="Instance Variable">_condition</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.concurrent.futures._base.Future.html#_state" class="code" data-type="Instance Variable">_state</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.concurrent.futures._base.Future.html#_result" class="code" data-type="Instance Variable">_result</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.concurrent.futures._base.Future.html#_exception" class="code" data-type="Instance Variable">_exception</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.concurrent.futures._base.Future.html#_waiters" class="code" data-type="Instance Variable">_waiters</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.concurrent.futures._base.Future.html#_done_callbacks" class="code" data-type="Instance Variable">_done_callbacks</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.concurrent.futures._base.Future.html#_invoke_callbacks" class="code" data-type="Method">_invoke_callbacks</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.concurrent.futures._base.Future.html#__get_result" class="code" data-type="Method">__get_result</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.concurrent.futures._base.Future.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Initializes the future. Should not be called by clients.</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.concurrent.futures._base.Future._condition">
+    
+  </a>
+  <a name="_condition">
+    
+  </a>
+  <div class="functionHeader">
+    _condition =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.concurrent.futures._base.Future._state">
+    
+  </a>
+  <a name="_state">
+    
+  </a>
+  <div class="functionHeader">
+    _state =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.concurrent.futures._base.Future._result">
+    
+  </a>
+  <a name="_result">
+    
+  </a>
+  <div class="functionHeader">
+    _result =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.concurrent.futures._base.Future._exception">
+    
+  </a>
+  <a name="_exception">
+    
+  </a>
+  <div class="functionHeader">
+    _exception =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.concurrent.futures._base.Future._waiters">
+    
+  </a>
+  <a name="_waiters">
+    
+  </a>
+  <div class="functionHeader">
+    _waiters =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.concurrent.futures._base.Future._done_callbacks">
+    
+  </a>
+  <a name="_done_callbacks">
+    
+  </a>
+  <div class="functionHeader">
+    _done_callbacks =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.concurrent.futures._base.Future._invoke_callbacks">
+    
+  </a>
+  <a name="_invoke_callbacks">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _invoke_callbacks(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.concurrent.futures._base.Future.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __repr__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.concurrent.futures._base.Future.cancel">
+    
+  </a>
+  <a name="cancel">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    cancel(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Cancel the future if possible.
+
+Returns True if the future was cancelled, False otherwise. A future
+cannot be cancelled if it is running or has already completed.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.concurrent.futures._base.Future.cancelled">
+    
+  </a>
+  <a name="cancelled">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    cancelled(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True if the future was cancelled.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.concurrent.futures._base.Future.running">
+    
+  </a>
+  <a name="running">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    running(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True if the future is currently executing.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.concurrent.futures._base.Future.done">
+    
+  </a>
+  <a name="done">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    done(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True of the future was cancelled or finished executing.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.concurrent.futures._base.Future.__get_result">
+    
+  </a>
+  <a name="__get_result">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __get_result(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.concurrent.futures._base.Future.add_done_callback">
+    
+  </a>
+  <a name="add_done_callback">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    add_done_callback(self, fn):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Attaches a callable that will be called when the future finishes.
+
+Args:
+    fn: A callable that will be called with this future as its only
+        argument when the future completes or is cancelled. The callable
+        will always be called by a thread in the same process in which
+        it was added. If the future has already completed or been
+        cancelled then the callable will be called immediately. These
+        callables are called in the order that they were added.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.concurrent.futures._base.Future.result">
+    
+  </a>
+  <a name="result">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    result(self, timeout=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the result of the call that the future represents.
+
+Args:
+    timeout: The number of seconds to wait for the result if the future
+        isn't done. If None, then there is no limit on the wait time.
+
+Returns:
+    The result of the call that the future represents.
+
+Raises:
+    CancelledError: If the future was cancelled.
+    TimeoutError: If the future didn't finish executing before the given
+        timeout.
+    Exception: If the call raised then that exception will be raised.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.concurrent.futures._base.Future.exception">
+    
+  </a>
+  <a name="exception">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    exception(self, timeout=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the exception raised by the call that the future represents.
+
+Args:
+    timeout: The number of seconds to wait for the exception if the
+        future isn't done. If None, then there is no limit on the wait
+        time.
+
+Returns:
+    The exception raised by the call that the future represents or None
+    if the call completed without raising.
+
+Raises:
+    CancelledError: If the future was cancelled.
+    TimeoutError: If the future didn't finish executing before the given
+        timeout.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.concurrent.futures._base.Future.set_running_or_notify_cancel">
+    
+  </a>
+  <a name="set_running_or_notify_cancel">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_running_or_notify_cancel(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Mark the future as running or process any cancel notifications.
+
+Should only be used by Executor implementations and unit tests.
+
+If the future has been cancelled (cancel() was called and returned
+True) then any threads waiting on the future completing (though calls
+to as_completed() or wait()) are notified and False is returned.
+
+If the future was not cancelled then it is put in the running state
+(future calls to running() will return True) and True is returned.
+
+This method should be called by Executor implementations before
+executing the work associated with this future. If this method returns
+False then the work should not be executed.
+
+Returns:
+    False if the Future was cancelled, True otherwise.
+
+Raises:
+    RuntimeError: if this method was already called or if set_result()
+        or set_exception() was called.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.concurrent.futures._base.Future.set_result">
+    
+  </a>
+  <a name="set_result">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_result(self, result):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Sets the return value of work associated with the future.
+
+Should only be used by Executor implementations and unit tests.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.concurrent.futures._base.Future.set_exception">
+    
+  </a>
+  <a name="set_exception">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_exception(self, exception):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Sets the result of the future as being the given exception.
+
+Should only be used by Executor implementations and unit tests.</p></div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.concurrent.futures._base.Future.__class_getitem__">
+    
+  </a>
+  <a name="__class_getitem__">
+    
+  </a>
+  <div class="functionHeader">
+    __class_getitem__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

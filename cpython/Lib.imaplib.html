@@ -1,0 +1,966 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.imaplib : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.imaplib.html" class="code" data-type="Module">imaplib</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">IMAP4 client.
+
+Based on RFC 2060.
+
+Public class:           IMAP4
+Public variable:        Debug
+Public functions:       Internaldate2tuple
+                        Int2AP
+                        ParseFlags
+                        Time2Internaldate</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2511">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#__version__" class="code" data-type="Variable">__version__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#HAVE_SSL" class="code" data-type="Variable">HAVE_SSL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#CRLF" class="code" data-type="Variable">CRLF</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#Debug" class="code" data-type="Variable">Debug</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#IMAP4_PORT" class="code" data-type="Variable">IMAP4_PORT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#IMAP4_SSL_PORT" class="code" data-type="Variable">IMAP4_SSL_PORT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#AllowedVersions" class="code" data-type="Variable">AllowedVersions</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#Commands" class="code" data-type="Variable">Commands</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#Continuation" class="code" data-type="Variable">Continuation</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#Flags" class="code" data-type="Variable">Flags</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#InternalDate" class="code" data-type="Variable">InternalDate</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#Literal" class="code" data-type="Variable">Literal</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#MapCRLF" class="code" data-type="Variable">MapCRLF</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#Response_code" class="code" data-type="Variable">Response_code</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#Untagged_response" class="code" data-type="Variable">Untagged_response</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#Untagged_status" class="code" data-type="Variable">Untagged_status</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.imaplib.IMAP4.html" class="code" data-type="Class">IMAP4</a></td>
+    <td><span>IMAP4 client class.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.imaplib.IMAP4_SSL.html" class="code" data-type="Class">IMAP4_SSL</a></td>
+    <td><span>IMAP4 client class over SSL connection</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.imaplib.IMAP4_stream.html" class="code" data-type="Class">IMAP4_stream</a></td>
+    <td><span>IMAP4 client class over a stream</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#Months" class="code" data-type="Variable">Months</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#Mon2num" class="code" data-type="Variable">Mon2num</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.imaplib.html#Internaldate2tuple" class="code" data-type="Function">Internaldate2tuple</a></td>
+    <td><span>Parse an IMAP4 INTERNALDATE string.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.imaplib.html#Int2AP" class="code" data-type="Function">Int2AP</a></td>
+    <td><span>Convert integer to A-P string representation.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.imaplib.html#ParseFlags" class="code" data-type="Function">ParseFlags</a></td>
+    <td><span>Convert IMAP4 flags response to python tuple.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.imaplib.html#Time2Internaldate" class="code" data-type="Function">Time2Internaldate</a></td>
+    <td><span>Convert date_time to IMAP4 INTERNALDATE representation.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#optlist" class="code" data-type="Variable">optlist</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#args" class="code" data-type="Variable">args</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#stream_command" class="code" data-type="Variable">stream_command</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#host" class="code" data-type="Variable">host</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#USER" class="code" data-type="Variable">USER</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#PASSWD" class="code" data-type="Variable">PASSWD</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#test_mesg" class="code" data-type="Variable">test_mesg</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#test_seq1" class="code" data-type="Variable">test_seq1</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#test_seq2" class="code" data-type="Variable">test_seq2</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.imaplib.html#run" class="code" data-type="Function">run</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#M" class="code" data-type="Variable">M</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#mo" class="code" data-type="Variable">mo</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#path" class="code" data-type="Variable">path</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#dat" class="code" data-type="Variable">dat</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#uid" class="code" data-type="Variable">uid</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#_MAXLINE" class="code" data-type="Variable">_MAXLINE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#_Literal" class="code" data-type="Variable">_Literal</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.imaplib.html#_Untagged_status" class="code" data-type="Variable">_Untagged_status</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.imaplib._Authenticator.html" class="code" data-type="Class">_Authenticator</a></td>
+    <td><span>Private class to provide en/decoding for base64-based authentication conversation.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.imaplib.__version__">
+    
+  </a>
+  <a name="__version__">
+    
+  </a>
+  <div class="functionHeader">
+    __version__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imaplib.HAVE_SSL">
+    
+  </a>
+  <a name="HAVE_SSL">
+    
+  </a>
+  <div class="functionHeader">
+    HAVE_SSL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imaplib.CRLF">
+    
+  </a>
+  <a name="CRLF">
+    
+  </a>
+  <div class="functionHeader">
+    CRLF =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imaplib.Debug">
+    
+  </a>
+  <a name="Debug">
+    
+  </a>
+  <div class="functionHeader">
+    Debug =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imaplib.IMAP4_PORT">
+    
+  </a>
+  <a name="IMAP4_PORT">
+    
+  </a>
+  <div class="functionHeader">
+    IMAP4_PORT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imaplib.IMAP4_SSL_PORT">
+    
+  </a>
+  <a name="IMAP4_SSL_PORT">
+    
+  </a>
+  <div class="functionHeader">
+    IMAP4_SSL_PORT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imaplib.AllowedVersions">
+    
+  </a>
+  <a name="AllowedVersions">
+    
+  </a>
+  <div class="functionHeader">
+    AllowedVersions =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Tuple[str, ...]</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.imaplib._MAXLINE">
+    
+  </a>
+  <a name="_MAXLINE">
+    
+  </a>
+  <div class="functionHeader">
+    _MAXLINE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imaplib.Commands">
+    
+  </a>
+  <a name="Commands">
+    
+  </a>
+  <div class="functionHeader">
+    Commands =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imaplib.Continuation">
+    
+  </a>
+  <a name="Continuation">
+    
+  </a>
+  <div class="functionHeader">
+    Continuation =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imaplib.Flags">
+    
+  </a>
+  <a name="Flags">
+    
+  </a>
+  <div class="functionHeader">
+    Flags =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imaplib.InternalDate">
+    
+  </a>
+  <a name="InternalDate">
+    
+  </a>
+  <div class="functionHeader">
+    InternalDate =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imaplib.Literal">
+    
+  </a>
+  <a name="Literal">
+    
+  </a>
+  <div class="functionHeader">
+    Literal =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imaplib.MapCRLF">
+    
+  </a>
+  <a name="MapCRLF">
+    
+  </a>
+  <div class="functionHeader">
+    MapCRLF =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imaplib.Response_code">
+    
+  </a>
+  <a name="Response_code">
+    
+  </a>
+  <div class="functionHeader">
+    Response_code =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imaplib.Untagged_response">
+    
+  </a>
+  <a name="Untagged_response">
+    
+  </a>
+  <div class="functionHeader">
+    Untagged_response =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imaplib.Untagged_status">
+    
+  </a>
+  <a name="Untagged_status">
+    
+  </a>
+  <div class="functionHeader">
+    Untagged_status =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.imaplib._Literal">
+    
+  </a>
+  <a name="_Literal">
+    
+  </a>
+  <div class="functionHeader">
+    _Literal =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.imaplib._Untagged_status">
+    
+  </a>
+  <a name="_Untagged_status">
+    
+  </a>
+  <div class="functionHeader">
+    _Untagged_status =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imaplib.Months">
+    
+  </a>
+  <a name="Months">
+    
+  </a>
+  <div class="functionHeader">
+    Months =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imaplib.Mon2num">
+    
+  </a>
+  <a name="Mon2num">
+    
+  </a>
+  <div class="functionHeader">
+    Mon2num =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.imaplib.Internaldate2tuple">
+    
+  </a>
+  <a name="Internaldate2tuple">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    Internaldate2tuple(resp):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse an IMAP4 INTERNALDATE string.
+
+Return corresponding local time.  The return value is a
+time.struct_time tuple or None if the string has wrong format.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.imaplib.Int2AP">
+    
+  </a>
+  <a name="Int2AP">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    Int2AP(num):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convert integer to A-P string representation.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.imaplib.ParseFlags">
+    
+  </a>
+  <a name="ParseFlags">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ParseFlags(resp):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convert IMAP4 flags response to python tuple.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.imaplib.Time2Internaldate">
+    
+  </a>
+  <a name="Time2Internaldate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    Time2Internaldate(date_time):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convert date_time to IMAP4 INTERNALDATE representation.
+
+Return string in form: '"DD-Mmm-YYYY HH:MM:SS +HHMM"'.  The
+date_time argument can be a number (int or float) representing
+seconds since epoch (as returned by time.time()), a 9-tuple
+representing local time, an instance of time.struct_time (as
+returned by time.localtime()), an aware datetime instance or a
+double-quoted string.  In the last case, it is assumed to already
+be in the correct format.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imaplib.optlist">
+    
+  </a>
+  <a name="optlist">
+    
+  </a>
+  <div class="functionHeader">
+    optlist =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imaplib.args">
+    
+  </a>
+  <a name="args">
+    
+  </a>
+  <div class="functionHeader">
+    args =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Tuple[str, ...]</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imaplib.stream_command">
+    
+  </a>
+  <a name="stream_command">
+    
+  </a>
+  <div class="functionHeader">
+    stream_command =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imaplib.host">
+    
+  </a>
+  <a name="host">
+    
+  </a>
+  <div class="functionHeader">
+    host =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imaplib.USER">
+    
+  </a>
+  <a name="USER">
+    
+  </a>
+  <div class="functionHeader">
+    USER =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imaplib.PASSWD">
+    
+  </a>
+  <a name="PASSWD">
+    
+  </a>
+  <div class="functionHeader">
+    PASSWD =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imaplib.test_mesg">
+    
+  </a>
+  <a name="test_mesg">
+    
+  </a>
+  <div class="functionHeader">
+    test_mesg =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imaplib.test_seq1">
+    
+  </a>
+  <a name="test_seq1">
+    
+  </a>
+  <div class="functionHeader">
+    test_seq1 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imaplib.test_seq2">
+    
+  </a>
+  <a name="test_seq2">
+    
+  </a>
+  <div class="functionHeader">
+    test_seq2 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.imaplib.run">
+    
+  </a>
+  <a name="run">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    run(cmd, args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imaplib.M">
+    
+  </a>
+  <a name="M">
+    
+  </a>
+  <div class="functionHeader">
+    M =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imaplib.mo">
+    
+  </a>
+  <a name="mo">
+    
+  </a>
+  <div class="functionHeader">
+    mo =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imaplib.path">
+    
+  </a>
+  <a name="path">
+    
+  </a>
+  <div class="functionHeader">
+    path =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imaplib.dat">
+    
+  </a>
+  <a name="dat">
+    
+  </a>
+  <div class="functionHeader">
+    dat =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.imaplib.uid">
+    
+  </a>
+  <a name="uid">
+    
+  </a>
+  <div class="functionHeader">
+    uid =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.optparse : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.optparse.html" class="code" data-type="Module">optparse</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">A powerful, extensible, and easy-to-use option parser.
+
+By Greg Ward &lt;gward@python.net&gt;
+
+Originally distributed as Optik.
+
+For support, use the optik-users@lists.sourceforge.net mailing list
+(http://lists.sourceforge.net/lists/listinfo/optik-users).
+
+Simple usage example:
+
+   from optparse import OptionParser
+
+   parser = OptionParser()
+   parser.add_option("-f", "--file", dest="filename",
+                     help="write report to FILE", metavar="FILE")
+   parser.add_option("-q", "--quiet",
+                     action="store_false", dest="verbose", default=True,
+                     help="don't print status messages to stdout")
+
+   (options, args) = parser.parse_args()</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3311">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.optparse.html#__version__" class="code" data-type="Variable">__version__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.optparse.html#__copyright__" class="code" data-type="Variable">__copyright__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.optparse.html#gettext" class="code" data-type="Function">gettext</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.optparse.html#ngettext" class="code" data-type="Function">ngettext</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.optparse.OptParseError.html" class="code" data-type="Class">OptParseError</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.optparse.OptionError.html" class="code" data-type="Class">OptionError</a></td>
+    <td><span>Raised if an Option instance is created with invalid or inconsistent arguments.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.optparse.OptionConflictError.html" class="code" data-type="Class">OptionConflictError</a></td>
+    <td><span>Raised if conflicting options are added to an OptionParser.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.optparse.OptionValueError.html" class="code" data-type="Class">OptionValueError</a></td>
+    <td><span>Raised if an invalid option value is encountered on the command line.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.optparse.BadOptionError.html" class="code" data-type="Class">BadOptionError</a></td>
+    <td><span>Raised if an invalid option is seen on the command line.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.optparse.AmbiguousOptionError.html" class="code" data-type="Class">AmbiguousOptionError</a></td>
+    <td><span>Raised if an ambiguous option is seen on the command line.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.optparse.HelpFormatter.html" class="code" data-type="Class">HelpFormatter</a></td>
+    <td><span>Abstract base class for formatting option help.  OptionParser instances should use one of the HelpFormatter subclasses for formatting help; by default IndentedHelpFormatter is used.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.optparse.IndentedHelpFormatter.html" class="code" data-type="Class">IndentedHelpFormatter</a></td>
+    <td><span>Format help with indented section bodies.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.optparse.TitledHelpFormatter.html" class="code" data-type="Class">TitledHelpFormatter</a></td>
+    <td><span>Format help with underlined section headers.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.optparse.html#check_builtin" class="code" data-type="Function">check_builtin</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.optparse.html#check_choice" class="code" data-type="Function">check_choice</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.optparse.html#NO_DEFAULT" class="code" data-type="Variable">NO_DEFAULT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.optparse.Option.html" class="code" data-type="Class">Option</a></td>
+    <td><span>Instance attributes: _short_opts : [string] _long_opts : [string]</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.optparse.html#SUPPRESS_HELP" class="code" data-type="Variable">SUPPRESS_HELP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.optparse.html#SUPPRESS_USAGE" class="code" data-type="Variable">SUPPRESS_USAGE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.optparse.Values.html" class="code" data-type="Class">Values</a></td>
+    <td><span class="undocumented">No class2/9 methods documented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.optparse.OptionContainer.html" class="code" data-type="Class">OptionContainer</a></td>
+    <td><span>Abstract base class.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.optparse.OptionGroup.html" class="code" data-type="Class">OptionGroup</a></td>
+    <td><span class="undocumented">No class0/3 instance variables docstring; , 1/5 methods documented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.optparse.OptionParser.html" class="code" data-type="Class">OptionParser</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.optparse.html#_repr" class="code" data-type="Function">_repr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.optparse.html#_parse_num" class="code" data-type="Function">_parse_num</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.optparse.html#_parse_int" class="code" data-type="Function">_parse_int</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.optparse.html#_builtin_cvt" class="code" data-type="Variable">_builtin_cvt</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.optparse.html#_match_abbrev" class="code" data-type="Function">_match_abbrev</a></td>
+    <td><span>_match_abbrev(s : string, wordmap : {string : Option}) -&gt; string</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.optparse.__version__">
+    
+  </a>
+  <a name="__version__">
+    
+  </a>
+  <div class="functionHeader">
+    __version__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.optparse.__copyright__">
+    
+  </a>
+  <a name="__copyright__">
+    
+  </a>
+  <div class="functionHeader">
+    __copyright__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.optparse._repr">
+    
+  </a>
+  <a name="_repr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _repr(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.optparse.gettext">
+    
+  </a>
+  <a name="gettext">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    gettext(message):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.optparse.ngettext">
+    
+  </a>
+  <a name="ngettext">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ngettext(singular, plural, n):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.optparse._parse_num">
+    
+  </a>
+  <a name="_parse_num">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _parse_num(val, type):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.optparse._parse_int">
+    
+  </a>
+  <a name="_parse_int">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _parse_int(val):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.optparse._builtin_cvt">
+    
+  </a>
+  <a name="_builtin_cvt">
+    
+  </a>
+  <div class="functionHeader">
+    _builtin_cvt =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.optparse.check_builtin">
+    
+  </a>
+  <a name="check_builtin">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    check_builtin(option, opt, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.optparse.check_choice">
+    
+  </a>
+  <a name="check_choice">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    check_choice(option, opt, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.optparse.NO_DEFAULT">
+    
+  </a>
+  <a name="NO_DEFAULT">
+    
+  </a>
+  <div class="functionHeader">
+    NO_DEFAULT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Tuple[str, ...]</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.optparse.SUPPRESS_HELP">
+    
+  </a>
+  <a name="SUPPRESS_HELP">
+    
+  </a>
+  <div class="functionHeader">
+    SUPPRESS_HELP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.optparse.SUPPRESS_USAGE">
+    
+  </a>
+  <a name="SUPPRESS_USAGE">
+    
+  </a>
+  <div class="functionHeader">
+    SUPPRESS_USAGE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.optparse._match_abbrev">
+    
+  </a>
+  <a name="_match_abbrev">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _match_abbrev(s, wordmap):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">_match_abbrev(s : string, wordmap : {string : Option}) -&gt; string
+
+Return the string key in 'wordmap' for which 's' is an unambiguous
+abbreviation.  If 's' is found to be ambiguous or doesn't match any of
+'words', raise BadOptionError.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

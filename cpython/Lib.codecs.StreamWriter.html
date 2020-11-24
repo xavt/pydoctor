@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.codecs.StreamWriter : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.codecs.html" class="code" data-type="Module">codecs</a>.<a href="Lib.codecs.StreamWriter.html" class="code" data-type="Class">StreamWriter</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.codecs.StreamWriter(<a href="Lib.codecs.Codec.html" class="code" data-type="Class">Codec</a>):</code></p>
+        <p><a href="classIndex.html#Lib.codecs.StreamWriter">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div class="undocumented">Undocumented</div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id513">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.codecs.StreamWriter.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Creates a StreamWriter instance.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.codecs.StreamWriter.html#stream" class="code" data-type="Instance Variable">stream</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.codecs.StreamWriter.html#errors" class="code" data-type="Instance Variable">errors</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.codecs.StreamWriter.html#write" class="code" data-type="Method">write</a></td>
+    <td><span>Writes the object's contents encoded to self.stream.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.codecs.StreamWriter.html#writelines" class="code" data-type="Method">writelines</a></td>
+    <td><span>Writes the concatenated list of strings to the stream using .write().</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.codecs.StreamWriter.html#reset" class="code" data-type="Method">reset</a></td>
+    <td><span>Flushes and resets the codec buffers used for keeping state.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.codecs.StreamWriter.html#seek" class="code" data-type="Method">seek</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.codecs.StreamWriter.html#__getattr__" class="code" data-type="Method">__getattr__</a></td>
+    <td><span>Inherit all other methods from the underlying stream.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.codecs.StreamWriter.html#__enter__" class="code" data-type="Method">__enter__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.codecs.StreamWriter.html#__exit__" class="code" data-type="Method">__exit__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.codecs.Codec.html" class="code" data-type="Class">Codec</a>:
+          </p>
+          <table class="children sortable" id="id514">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.codecs.Codec.html#encode" class="code" data-type="Method">encode</a></td>
+    <td><span>Encodes the object input and returns a tuple (output object, length consumed).</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.codecs.Codec.html#decode" class="code" data-type="Method">decode</a></td>
+    <td><span>Decodes the object input and returns a tuple (output object, length consumed).</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.codecs.StreamWriter.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, stream, errors="""strict"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Creates a StreamWriter instance.
+
+stream must be a file-like object open for writing.
+
+The StreamWriter may use different error handling
+schemes by providing the errors keyword argument. These
+parameters are predefined:
+
+ 'strict' - raise a ValueError (or a subclass)
+ 'ignore' - ignore the character and continue with the next
+ 'replace'- replace with a suitable replacement character
+ 'xmlcharrefreplace' - Replace with the appropriate XML
+                       character reference.
+ 'backslashreplace'  - Replace with backslashed escape
+                       sequences.
+ 'namereplace'       - Replace with \N{...} escape sequences.
+
+The set of allowed parameter values can be extended via
+register_error.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.codecs.StreamWriter.stream">
+    
+  </a>
+  <a name="stream">
+    
+  </a>
+  <div class="functionHeader">
+    stream =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.codecs.StreamWriter.errors">
+    
+  </a>
+  <a name="errors">
+    
+  </a>
+  <div class="functionHeader">
+    errors =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.codecs.StreamWriter.write">
+    
+  </a>
+  <a name="write">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    write(self, object):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Writes the object's contents encoded to self.stream.
+        </p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.codecs.StreamWriter.writelines">
+    
+  </a>
+  <a name="writelines">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    writelines(self, list):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Writes the concatenated list of strings to the stream
+using .write().</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.codecs.StreamWriter.reset">
+    
+  </a>
+  <a name="reset">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    reset(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Flushes and resets the codec buffers used for keeping state.
+
+Calling this method should ensure that the data on the
+output is put into a clean state, that allows appending
+of new fresh data without having to rescan the whole
+stream to recover state.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.codecs.StreamWriter.seek">
+    
+  </a>
+  <a name="seek">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    seek(self, offset, whence=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.codecs.StreamWriter.__getattr__">
+    
+  </a>
+  <a name="__getattr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __getattr__(self, name, getattr=getattr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Inherit all other methods from the underlying stream.
+        </p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.codecs.StreamWriter.__enter__">
+    
+  </a>
+  <a name="__enter__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __enter__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.codecs.StreamWriter.__exit__">
+    
+  </a>
+  <a name="__exit__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __exit__(self, type, value, tb):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.email._parseaddr.AddrlistClass : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.email.html" class="code" data-type="Package">email</a>.<a href="Lib.email._parseaddr.html" class="code" data-type="Module">_parseaddr</a>.<a href="Lib.email._parseaddr.AddrlistClass.html" class="code" data-type="Class">AddrlistClass</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.email._parseaddr.AddrlistClass:</code></p><p>Known subclasses: <a href="Lib.email._parseaddr.AddressList.html" class="code" data-type="Class">Lib.email._parseaddr.AddressList</a></p>
+        <p><a href="classIndex.html#Lib.email._parseaddr.AddrlistClass">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Address parser class by Ben Escoto.
+
+To understand what this class does, it helps to have a copy of RFC 2822 in
+front of you.
+
+Note: this class interface is deprecated and may be removed in the future.
+Use email.utils.AddressList instead.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id1247">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email._parseaddr.AddrlistClass.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Initialize a new instance.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.email._parseaddr.AddrlistClass.html#specials" class="code" data-type="Instance Variable">specials</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.email._parseaddr.AddrlistClass.html#pos" class="code" data-type="Instance Variable">pos</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.email._parseaddr.AddrlistClass.html#LWS" class="code" data-type="Instance Variable">LWS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.email._parseaddr.AddrlistClass.html#CR" class="code" data-type="Instance Variable">CR</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.email._parseaddr.AddrlistClass.html#FWS" class="code" data-type="Instance Variable">FWS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.email._parseaddr.AddrlistClass.html#atomends" class="code" data-type="Instance Variable">atomends</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.email._parseaddr.AddrlistClass.html#phraseends" class="code" data-type="Instance Variable">phraseends</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.email._parseaddr.AddrlistClass.html#field" class="code" data-type="Instance Variable">field</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.email._parseaddr.AddrlistClass.html#commentlist" class="code" data-type="Instance Variable">commentlist</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email._parseaddr.AddrlistClass.html#gotonext" class="code" data-type="Method">gotonext</a></td>
+    <td><span>Skip white space and extract comments.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email._parseaddr.AddrlistClass.html#getaddrlist" class="code" data-type="Method">getaddrlist</a></td>
+    <td><span>Parse all addresses.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email._parseaddr.AddrlistClass.html#getaddress" class="code" data-type="Method">getaddress</a></td>
+    <td><span>Parse the next address.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email._parseaddr.AddrlistClass.html#getrouteaddr" class="code" data-type="Method">getrouteaddr</a></td>
+    <td><span>Parse a route address (Return-path value).</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email._parseaddr.AddrlistClass.html#getaddrspec" class="code" data-type="Method">getaddrspec</a></td>
+    <td><span>Parse an RFC 2822 addr-spec.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email._parseaddr.AddrlistClass.html#getdomain" class="code" data-type="Method">getdomain</a></td>
+    <td><span>Get the complete domain name from an address.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email._parseaddr.AddrlistClass.html#getdelimited" class="code" data-type="Method">getdelimited</a></td>
+    <td><span>Parse a header fragment delimited by special characters.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email._parseaddr.AddrlistClass.html#getquote" class="code" data-type="Method">getquote</a></td>
+    <td><span>Get a quote-delimited fragment from self's field.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email._parseaddr.AddrlistClass.html#getcomment" class="code" data-type="Method">getcomment</a></td>
+    <td><span>Get a parenthesis-delimited fragment from self's field.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email._parseaddr.AddrlistClass.html#getdomainliteral" class="code" data-type="Method">getdomainliteral</a></td>
+    <td><span>Parse an RFC 2822 domain-literal.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email._parseaddr.AddrlistClass.html#getatom" class="code" data-type="Method">getatom</a></td>
+    <td><span>Parse an RFC 2822 atom.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email._parseaddr.AddrlistClass.html#getphraselist" class="code" data-type="Method">getphraselist</a></td>
+    <td><span>Parse a sequence of RFC 2822 phrases.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.email._parseaddr.AddrlistClass.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, field):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.email._parseaddr.AddressList.html" class="code" data-type="Class">Lib.email._parseaddr.AddressList</a></div>
+    
+    <div><p class="pre">Initialize a new instance.
+
+`field' is an unparsed address header field, containing
+one or more addresses.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.email._parseaddr.AddrlistClass.specials">
+    
+  </a>
+  <a name="specials">
+    
+  </a>
+  <div class="functionHeader">
+    specials =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.email._parseaddr.AddrlistClass.pos">
+    
+  </a>
+  <a name="pos">
+    
+  </a>
+  <div class="functionHeader">
+    pos =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.email._parseaddr.AddrlistClass.LWS">
+    
+  </a>
+  <a name="LWS">
+    
+  </a>
+  <div class="functionHeader">
+    LWS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.email._parseaddr.AddrlistClass.CR">
+    
+  </a>
+  <a name="CR">
+    
+  </a>
+  <div class="functionHeader">
+    CR =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.email._parseaddr.AddrlistClass.FWS">
+    
+  </a>
+  <a name="FWS">
+    
+  </a>
+  <div class="functionHeader">
+    FWS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.email._parseaddr.AddrlistClass.atomends">
+    
+  </a>
+  <a name="atomends">
+    
+  </a>
+  <div class="functionHeader">
+    atomends =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.email._parseaddr.AddrlistClass.phraseends">
+    
+  </a>
+  <a name="phraseends">
+    
+  </a>
+  <div class="functionHeader">
+    phraseends =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.email._parseaddr.AddrlistClass.field">
+    
+  </a>
+  <a name="field">
+    
+  </a>
+  <div class="functionHeader">
+    field =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.email._parseaddr.AddrlistClass.commentlist">
+    
+  </a>
+  <a name="commentlist">
+    
+  </a>
+  <div class="functionHeader">
+    commentlist =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email._parseaddr.AddrlistClass.gotonext">
+    
+  </a>
+  <a name="gotonext">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    gotonext(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Skip white space and extract comments.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email._parseaddr.AddrlistClass.getaddrlist">
+    
+  </a>
+  <a name="getaddrlist">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getaddrlist(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse all addresses.
+
+Returns a list containing all of the addresses.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email._parseaddr.AddrlistClass.getaddress">
+    
+  </a>
+  <a name="getaddress">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getaddress(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse the next address.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email._parseaddr.AddrlistClass.getrouteaddr">
+    
+  </a>
+  <a name="getrouteaddr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getrouteaddr(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse a route address (Return-path value).
+
+This method just skips all the route stuff and returns the addrspec.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email._parseaddr.AddrlistClass.getaddrspec">
+    
+  </a>
+  <a name="getaddrspec">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getaddrspec(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse an RFC 2822 addr-spec.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email._parseaddr.AddrlistClass.getdomain">
+    
+  </a>
+  <a name="getdomain">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getdomain(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get the complete domain name from an address.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email._parseaddr.AddrlistClass.getdelimited">
+    
+  </a>
+  <a name="getdelimited">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getdelimited(self, beginchar, endchars, allowcomments=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse a header fragment delimited by special characters.
+
+`beginchar' is the start character for the fragment.
+If self is not looking at an instance of `beginchar' then
+getdelimited returns the empty string.
+
+`endchars' is a sequence of allowable end-delimiting characters.
+Parsing stops when one of these is encountered.
+
+If `allowcomments' is non-zero, embedded RFC 2822 comments are allowed
+within the parsed fragment.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email._parseaddr.AddrlistClass.getquote">
+    
+  </a>
+  <a name="getquote">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getquote(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get a quote-delimited fragment from self's field.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email._parseaddr.AddrlistClass.getcomment">
+    
+  </a>
+  <a name="getcomment">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getcomment(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get a parenthesis-delimited fragment from self's field.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email._parseaddr.AddrlistClass.getdomainliteral">
+    
+  </a>
+  <a name="getdomainliteral">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getdomainliteral(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse an RFC 2822 domain-literal.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email._parseaddr.AddrlistClass.getatom">
+    
+  </a>
+  <a name="getatom">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getatom(self, atomends=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse an RFC 2822 atom.
+
+Optional atomends specifies a different set of end token delimiters
+(the default is to use self.atomends).  This is used e.g. in
+getphraselist() since phrase endings must not include the `.' (which
+is legal in phrases).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email._parseaddr.AddrlistClass.getphraselist">
+    
+  </a>
+  <a name="getphraselist">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getphraselist(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse a sequence of RFC 2822 phrases.
+
+A phrase is a sequence of words, which are in turn either RFC 2822
+atoms or quoted-strings.  Phrases are canonicalized by squeezing all
+runs of continuous whitespace into one space.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

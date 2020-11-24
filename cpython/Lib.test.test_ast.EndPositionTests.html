@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.test.test_ast.EndPositionTests : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.test.html" class="code" data-type="Package">test</a>.<a href="Lib.test.test_ast.html" class="code" data-type="Module">test_ast</a>.<a href="Lib.test.test_ast.EndPositionTests.html" class="code" data-type="Class">EndPositionTests</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.test.test_ast.EndPositionTests(<span title="unittest.TestCase">unittest.TestCase</span>):</code></p>
+        <p><a href="classIndex.html#Lib.test.test_ast.EndPositionTests">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Tests for end position of AST nodes.
+
+Testing end positions of nodes requires a bit of extra care
+because of how LL parsers work.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id4622">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ast.EndPositionTests.html#test_lambda" class="code" data-type="Method">test_lambda</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ast.EndPositionTests.html#test_func_def" class="code" data-type="Method">test_func_def</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ast.EndPositionTests.html#test_call" class="code" data-type="Method">test_call</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ast.EndPositionTests.html#test_call_noargs" class="code" data-type="Method">test_call_noargs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ast.EndPositionTests.html#test_class_def" class="code" data-type="Method">test_class_def</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ast.EndPositionTests.html#test_class_kw" class="code" data-type="Method">test_class_kw</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ast.EndPositionTests.html#test_multi_line_str" class="code" data-type="Method">test_multi_line_str</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ast.EndPositionTests.html#test_continued_str" class="code" data-type="Method">test_continued_str</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ast.EndPositionTests.html#test_suites" class="code" data-type="Method">test_suites</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ast.EndPositionTests.html#test_fstring" class="code" data-type="Method">test_fstring</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ast.EndPositionTests.html#test_fstring_multi_line" class="code" data-type="Method">test_fstring_multi_line</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ast.EndPositionTests.html#test_import_from_multi_line" class="code" data-type="Method">test_import_from_multi_line</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ast.EndPositionTests.html#test_slices" class="code" data-type="Method">test_slices</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ast.EndPositionTests.html#test_binop" class="code" data-type="Method">test_binop</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ast.EndPositionTests.html#test_boolop" class="code" data-type="Method">test_boolop</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ast.EndPositionTests.html#test_tuples" class="code" data-type="Method">test_tuples</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ast.EndPositionTests.html#test_attribute_spaces" class="code" data-type="Method">test_attribute_spaces</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ast.EndPositionTests.html#test_redundant_parenthesis" class="code" data-type="Method">test_redundant_parenthesis</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ast.EndPositionTests.html#test_trailers_with_redundant_parenthesis" class="code" data-type="Method">test_trailers_with_redundant_parenthesis</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ast.EndPositionTests.html#test_displays" class="code" data-type="Method">test_displays</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ast.EndPositionTests.html#test_comprehensions" class="code" data-type="Method">test_comprehensions</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ast.EndPositionTests.html#test_yield_await" class="code" data-type="Method">test_yield_await</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ast.EndPositionTests.html#test_source_segment_multi" class="code" data-type="Method">test_source_segment_multi</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ast.EndPositionTests.html#test_source_segment_padded" class="code" data-type="Method">test_source_segment_padded</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ast.EndPositionTests.html#test_source_segment_endings" class="code" data-type="Method">test_source_segment_endings</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ast.EndPositionTests.html#test_source_segment_tabs" class="code" data-type="Method">test_source_segment_tabs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ast.EndPositionTests.html#test_source_segment_missing_info" class="code" data-type="Method">test_source_segment_missing_info</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ast.EndPositionTests.html#_check_end_pos" class="code" data-type="Method">_check_end_pos</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ast.EndPositionTests.html#_check_content" class="code" data-type="Method">_check_content</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ast.EndPositionTests.html#_parse_value" class="code" data-type="Method">_parse_value</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod private">
+  
+  <a name="Lib.test.test_ast.EndPositionTests._check_end_pos">
+    
+  </a>
+  <a name="_check_end_pos">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _check_end_pos(self, ast_node, end_lineno, end_col_offset):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.test.test_ast.EndPositionTests._check_content">
+    
+  </a>
+  <a name="_check_content">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _check_content(self, source, ast_node, content):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.test.test_ast.EndPositionTests._parse_value">
+    
+  </a>
+  <a name="_parse_value">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _parse_value(self, s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ast.EndPositionTests.test_lambda">
+    
+  </a>
+  <a name="test_lambda">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_lambda(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ast.EndPositionTests.test_func_def">
+    
+  </a>
+  <a name="test_func_def">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_func_def(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ast.EndPositionTests.test_call">
+    
+  </a>
+  <a name="test_call">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_call(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ast.EndPositionTests.test_call_noargs">
+    
+  </a>
+  <a name="test_call_noargs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_call_noargs(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ast.EndPositionTests.test_class_def">
+    
+  </a>
+  <a name="test_class_def">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_class_def(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ast.EndPositionTests.test_class_kw">
+    
+  </a>
+  <a name="test_class_kw">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_class_kw(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ast.EndPositionTests.test_multi_line_str">
+    
+  </a>
+  <a name="test_multi_line_str">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_multi_line_str(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ast.EndPositionTests.test_continued_str">
+    
+  </a>
+  <a name="test_continued_str">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_continued_str(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ast.EndPositionTests.test_suites">
+    
+  </a>
+  <a name="test_suites">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_suites(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ast.EndPositionTests.test_fstring">
+    
+  </a>
+  <a name="test_fstring">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_fstring(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ast.EndPositionTests.test_fstring_multi_line">
+    
+  </a>
+  <a name="test_fstring_multi_line">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_fstring_multi_line(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ast.EndPositionTests.test_import_from_multi_line">
+    
+  </a>
+  <a name="test_import_from_multi_line">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_import_from_multi_line(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ast.EndPositionTests.test_slices">
+    
+  </a>
+  <a name="test_slices">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_slices(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ast.EndPositionTests.test_binop">
+    
+  </a>
+  <a name="test_binop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_binop(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ast.EndPositionTests.test_boolop">
+    
+  </a>
+  <a name="test_boolop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_boolop(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ast.EndPositionTests.test_tuples">
+    
+  </a>
+  <a name="test_tuples">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_tuples(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ast.EndPositionTests.test_attribute_spaces">
+    
+  </a>
+  <a name="test_attribute_spaces">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_attribute_spaces(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ast.EndPositionTests.test_redundant_parenthesis">
+    
+  </a>
+  <a name="test_redundant_parenthesis">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_redundant_parenthesis(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ast.EndPositionTests.test_trailers_with_redundant_parenthesis">
+    
+  </a>
+  <a name="test_trailers_with_redundant_parenthesis">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_trailers_with_redundant_parenthesis(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ast.EndPositionTests.test_displays">
+    
+  </a>
+  <a name="test_displays">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_displays(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ast.EndPositionTests.test_comprehensions">
+    
+  </a>
+  <a name="test_comprehensions">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_comprehensions(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ast.EndPositionTests.test_yield_await">
+    
+  </a>
+  <a name="test_yield_await">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_yield_await(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ast.EndPositionTests.test_source_segment_multi">
+    
+  </a>
+  <a name="test_source_segment_multi">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_source_segment_multi(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ast.EndPositionTests.test_source_segment_padded">
+    
+  </a>
+  <a name="test_source_segment_padded">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_source_segment_padded(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ast.EndPositionTests.test_source_segment_endings">
+    
+  </a>
+  <a name="test_source_segment_endings">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_source_segment_endings(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ast.EndPositionTests.test_source_segment_tabs">
+    
+  </a>
+  <a name="test_source_segment_tabs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_source_segment_tabs(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ast.EndPositionTests.test_source_segment_missing_info">
+    
+  </a>
+  <a name="test_source_segment_missing_info">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_source_segment_missing_info(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

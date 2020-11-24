@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.distutils.msvc9compiler : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.distutils.html" class="code" data-type="Package">distutils</a>.<a href="Lib.distutils.msvc9compiler.html" class="code" data-type="Module">msvc9compiler</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">distutils.msvc9compiler
+
+Contains MSVCCompiler, an implementation of the abstract CCompiler class
+for the Microsoft Visual Studio 2008.
+
+The module is compatible with VS 2005 and VS 2008. You can find legacy support
+for older versions of VS in distutils.msvccompiler.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id986">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.distutils.msvc9compiler.html#HKEYS" class="code" data-type="Variable">HKEYS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.distutils.msvc9compiler.html#NATIVE_WIN64" class="code" data-type="Variable">NATIVE_WIN64</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.distutils.msvc9compiler.html#VS_BASE" class="code" data-type="Variable">VS_BASE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.distutils.msvc9compiler.html#WINSDK_BASE" class="code" data-type="Variable">WINSDK_BASE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.distutils.msvc9compiler.html#NET_BASE" class="code" data-type="Variable">NET_BASE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.distutils.msvc9compiler.html#PLAT_TO_VCVARS" class="code" data-type="Variable">PLAT_TO_VCVARS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.distutils.msvc9compiler.Reg.html" class="code" data-type="Class">Reg</a></td>
+    <td><span>Helper class to read values from the registry</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.distutils.msvc9compiler.MacroExpander.html" class="code" data-type="Class">MacroExpander</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.msvc9compiler.html#get_build_version" class="code" data-type="Function">get_build_version</a></td>
+    <td><span>Return the version of MSVC that was used to build Python.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.msvc9compiler.html#normalize_and_reduce_paths" class="code" data-type="Function">normalize_and_reduce_paths</a></td>
+    <td><span>Return a list of normalized paths with duplicates removed.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.msvc9compiler.html#removeDuplicates" class="code" data-type="Function">removeDuplicates</a></td>
+    <td><span>Remove duplicate values of an environment variable.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.msvc9compiler.html#find_vcvarsall" class="code" data-type="Function">find_vcvarsall</a></td>
+    <td><span>Find the vcvarsall.bat file</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.msvc9compiler.html#query_vcvarsall" class="code" data-type="Function">query_vcvarsall</a></td>
+    <td><span>Launch vcvarsall.bat and read the settings from its environment</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.distutils.msvc9compiler.html#VERSION" class="code" data-type="Variable">VERSION</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.distutils.msvc9compiler.MSVCCompiler.html" class="code" data-type="Class">MSVCCompiler</a></td>
+    <td><span>Concrete class that implements an interface to Microsoft Visual C++, as defined by the CCompiler abstract class.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.distutils.msvc9compiler.HKEYS">
+    
+  </a>
+  <a name="HKEYS">
+    
+  </a>
+  <div class="functionHeader">
+    HKEYS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.distutils.msvc9compiler.NATIVE_WIN64">
+    
+  </a>
+  <a name="NATIVE_WIN64">
+    
+  </a>
+  <div class="functionHeader">
+    NATIVE_WIN64 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.distutils.msvc9compiler.VS_BASE">
+    
+  </a>
+  <a name="VS_BASE">
+    
+  </a>
+  <div class="functionHeader">
+    VS_BASE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.distutils.msvc9compiler.WINSDK_BASE">
+    
+  </a>
+  <a name="WINSDK_BASE">
+    
+  </a>
+  <div class="functionHeader">
+    WINSDK_BASE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.distutils.msvc9compiler.NET_BASE">
+    
+  </a>
+  <a name="NET_BASE">
+    
+  </a>
+  <div class="functionHeader">
+    NET_BASE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.distutils.msvc9compiler.PLAT_TO_VCVARS">
+    
+  </a>
+  <a name="PLAT_TO_VCVARS">
+    
+  </a>
+  <div class="functionHeader">
+    PLAT_TO_VCVARS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict[str, str]</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.distutils.msvc9compiler.get_build_version">
+    
+  </a>
+  <a name="get_build_version">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_build_version():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the version of MSVC that was used to build Python.
+
+For Python 2.3 and up, the version number is included in
+sys.version.  For earlier versions, assume the compiler is MSVC 6.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.distutils.msvc9compiler.normalize_and_reduce_paths">
+    
+  </a>
+  <a name="normalize_and_reduce_paths">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    normalize_and_reduce_paths(paths):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a list of normalized paths with duplicates removed.
+
+The current order of paths is maintained.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.distutils.msvc9compiler.removeDuplicates">
+    
+  </a>
+  <a name="removeDuplicates">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    removeDuplicates(variable):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Remove duplicate values of an environment variable.
+    </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.distutils.msvc9compiler.find_vcvarsall">
+    
+  </a>
+  <a name="find_vcvarsall">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    find_vcvarsall(version):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Find the vcvarsall.bat file
+
+At first it tries to find the productdir of VS 2008 in the registry. If
+that fails it falls back to the VS90COMNTOOLS env var.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.distutils.msvc9compiler.query_vcvarsall">
+    
+  </a>
+  <a name="query_vcvarsall">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    query_vcvarsall(version, arch="""x86"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Launch vcvarsall.bat and read the settings from its environment
+    </p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.distutils.msvc9compiler.VERSION">
+    
+  </a>
+  <a name="VERSION">
+    
+  </a>
+  <div class="functionHeader">
+    VERSION =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

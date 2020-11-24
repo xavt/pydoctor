@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.runpy : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.runpy.html" class="code" data-type="Module">runpy</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">runpy.py - locating and running Python code using the module namespace
+
+Provides support for locating and running Python scripts using the Python
+module namespace instead of the native filesystem.
+
+This allows Python code to play nicely with non-filesystem based PEP 302
+importers when locating support scripts as well as when importing modules.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3466">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.runpy.html#run_module" class="code" data-type="Function">run_module</a></td>
+    <td><span>Execute a module's code without importing it</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.runpy.html#run_path" class="code" data-type="Function">run_path</a></td>
+    <td><span>Execute code located at the specified filesystem location</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.runpy._TempModule.html" class="code" data-type="Class">_TempModule</a></td>
+    <td><span>Temporarily replace a module in sys.modules with an empty namespace</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.runpy._ModifiedArgv0.html" class="code" data-type="Class">_ModifiedArgv0</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.runpy.html#_run_code" class="code" data-type="Function">_run_code</a></td>
+    <td><span>Helper to run code in nominated namespace</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.runpy.html#_run_module_code" class="code" data-type="Function">_run_module_code</a></td>
+    <td><span>Helper to run code in new namespace with sys modified</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.runpy.html#_get_module_details" class="code" data-type="Function">_get_module_details</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.runpy._Error.html" class="code" data-type="Class">_Error</a></td>
+    <td><span>Error that _run_module_as_main() should report without a traceback</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.runpy.html#_run_module_as_main" class="code" data-type="Function">_run_module_as_main</a></td>
+    <td><span>Runs the designated module in the __main__ namespace</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.runpy.html#_get_main_module_details" class="code" data-type="Function">_get_main_module_details</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.runpy.html#_get_code_from_file" class="code" data-type="Function">_get_code_from_file</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction private">
+  
+  <a name="Lib.runpy._run_code">
+    
+  </a>
+  <a name="_run_code">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _run_code(code, run_globals, init_globals=None, mod_name=None, mod_spec=None, pkg_name=None, script_name=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Helper to run code in nominated namespace</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.runpy._run_module_code">
+    
+  </a>
+  <a name="_run_module_code">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _run_module_code(code, init_globals=None, mod_name=None, mod_spec=None, pkg_name=None, script_name=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Helper to run code in new namespace with sys modified</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.runpy._get_module_details">
+    
+  </a>
+  <a name="_get_module_details">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_module_details(mod_name, error=ImportError):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.runpy._run_module_as_main">
+    
+  </a>
+  <a name="_run_module_as_main">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _run_module_as_main(mod_name, alter_argv=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Runs the designated module in the __main__ namespace
+
+Note that the executed module will have full access to the
+__main__ namespace. If this is not desirable, the run_module()
+function should be used to run the module code in a fresh namespace.
+
+At the very least, these variables in __main__ will be overwritten:
+    __name__
+    __file__
+    __cached__
+    __loader__
+    __package__</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.runpy.run_module">
+    
+  </a>
+  <a name="run_module">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    run_module(mod_name, init_globals=None, run_name=None, alter_sys=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Execute a module's code without importing it
+
+Returns the resulting top level namespace dictionary</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.runpy._get_main_module_details">
+    
+  </a>
+  <a name="_get_main_module_details">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_main_module_details(error=ImportError):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.runpy._get_code_from_file">
+    
+  </a>
+  <a name="_get_code_from_file">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_code_from_file(run_name, fname):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.runpy.run_path">
+    
+  </a>
+  <a name="run_path">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    run_path(path_name, init_globals=None, run_name=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Execute code located at the specified filesystem location
+
+Returns the resulting top level namespace dictionary
+
+The file path may refer directly to a Python script (i.e.
+one that could be directly executed with execfile) or else
+it may refer to a zipfile or directory containing a top
+level __main__.py script.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

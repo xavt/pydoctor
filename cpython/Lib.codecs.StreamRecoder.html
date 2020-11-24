@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.codecs.StreamRecoder : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.codecs.html" class="code" data-type="Module">codecs</a>.<a href="Lib.codecs.StreamRecoder.html" class="code" data-type="Class">StreamRecoder</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.codecs.StreamRecoder:</code></p>
+        <p><a href="classIndex.html#Lib.codecs.StreamRecoder">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">StreamRecoder instances translate data from one encoding to another.
+
+They use the complete set of APIs returned by the
+codecs.lookup() function to implement their task.
+
+Data written to the StreamRecoder is first decoded into an
+intermediate format (depending on the "decode" codec) and then
+written to the underlying stream using an instance of the provided
+Writer class.
+
+In the other direction, data is read from the underlying stream using
+a Reader instance and then encoded and returned to the caller.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id518">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.codecs.StreamRecoder.html#data_encoding" class="code" data-type="Class Variable">data_encoding</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.codecs.StreamRecoder.html#file_encoding" class="code" data-type="Class Variable">file_encoding</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.codecs.StreamRecoder.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.codecs.StreamRecoder.html#stream" class="code" data-type="Instance Variable">stream</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.codecs.StreamRecoder.html#encode" class="code" data-type="Instance Variable">encode</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.codecs.StreamRecoder.html#decode" class="code" data-type="Instance Variable">decode</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.codecs.StreamRecoder.html#reader" class="code" data-type="Instance Variable">reader</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.codecs.StreamRecoder.html#writer" class="code" data-type="Instance Variable">writer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.codecs.StreamRecoder.html#errors" class="code" data-type="Instance Variable">errors</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.codecs.StreamRecoder.html#read" class="code" data-type="Method">read</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.codecs.StreamRecoder.html#readline" class="code" data-type="Method">readline</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.codecs.StreamRecoder.html#readlines" class="code" data-type="Method">readlines</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.codecs.StreamRecoder.html#__next__" class="code" data-type="Method">__next__</a></td>
+    <td><span>Return the next decoded line from the input stream.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.codecs.StreamRecoder.html#__iter__" class="code" data-type="Method">__iter__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.codecs.StreamRecoder.html#write" class="code" data-type="Method">write</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.codecs.StreamRecoder.html#writelines" class="code" data-type="Method">writelines</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.codecs.StreamRecoder.html#reset" class="code" data-type="Method">reset</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.codecs.StreamRecoder.html#seek" class="code" data-type="Method">seek</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.codecs.StreamRecoder.html#__getattr__" class="code" data-type="Method">__getattr__</a></td>
+    <td><span>Inherit all other methods from the underlying stream.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.codecs.StreamRecoder.html#__enter__" class="code" data-type="Method">__enter__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.codecs.StreamRecoder.html#__exit__" class="code" data-type="Method">__exit__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.codecs.StreamRecoder.data_encoding">
+    
+  </a>
+  <a name="data_encoding">
+    
+  </a>
+  <div class="functionHeader">
+    data_encoding =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.codecs.StreamRecoder.file_encoding">
+    
+  </a>
+  <a name="file_encoding">
+    
+  </a>
+  <div class="functionHeader">
+    file_encoding =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.codecs.StreamRecoder.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, stream, encode, decode, Reader, Writer, errors="""strict"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Creates a StreamRecoder instance which implements a two-way
+conversion: encode and decode work on the frontend (the
+data visible to .read() and .write()) while Reader and Writer
+work on the backend (the data in stream).
+
+You can use these objects to do transparent
+transcodings from e.g. latin-1 to utf-8 and back.
+
+stream must be a file-like object.
+
+encode and decode must adhere to the Codec interface; Reader and
+Writer must be factory functions or classes providing the
+StreamReader and StreamWriter interfaces resp.
+
+Error handling is done in the same way as defined for the
+StreamWriter/Readers.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.codecs.StreamRecoder.stream">
+    
+  </a>
+  <a name="stream">
+    
+  </a>
+  <div class="functionHeader">
+    stream =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.codecs.StreamRecoder.encode">
+    
+  </a>
+  <a name="encode">
+    
+  </a>
+  <div class="functionHeader">
+    encode =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.codecs.StreamRecoder.decode">
+    
+  </a>
+  <a name="decode">
+    
+  </a>
+  <div class="functionHeader">
+    decode =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.codecs.StreamRecoder.reader">
+    
+  </a>
+  <a name="reader">
+    
+  </a>
+  <div class="functionHeader">
+    reader =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.codecs.StreamRecoder.writer">
+    
+  </a>
+  <a name="writer">
+    
+  </a>
+  <div class="functionHeader">
+    writer =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.codecs.StreamRecoder.errors">
+    
+  </a>
+  <a name="errors">
+    
+  </a>
+  <div class="functionHeader">
+    errors =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.codecs.StreamRecoder.read">
+    
+  </a>
+  <a name="read">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    read(self, size=(-1)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.codecs.StreamRecoder.readline">
+    
+  </a>
+  <a name="readline">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    readline(self, size=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.codecs.StreamRecoder.readlines">
+    
+  </a>
+  <a name="readlines">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    readlines(self, sizehint=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.codecs.StreamRecoder.__next__">
+    
+  </a>
+  <a name="__next__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __next__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the next decoded line from the input stream.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.codecs.StreamRecoder.__iter__">
+    
+  </a>
+  <a name="__iter__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __iter__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.codecs.StreamRecoder.write">
+    
+  </a>
+  <a name="write">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    write(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.codecs.StreamRecoder.writelines">
+    
+  </a>
+  <a name="writelines">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    writelines(self, list):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.codecs.StreamRecoder.reset">
+    
+  </a>
+  <a name="reset">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    reset(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.codecs.StreamRecoder.seek">
+    
+  </a>
+  <a name="seek">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    seek(self, offset, whence=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.codecs.StreamRecoder.__getattr__">
+    
+  </a>
+  <a name="__getattr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __getattr__(self, name, getattr=getattr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Inherit all other methods from the underlying stream.
+        </p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.codecs.StreamRecoder.__enter__">
+    
+  </a>
+  <a name="__enter__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __enter__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.codecs.StreamRecoder.__exit__">
+    
+  </a>
+  <a name="__exit__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __exit__(self, type, value, tb):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

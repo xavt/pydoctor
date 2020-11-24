@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.bisect : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.bisect.html" class="code" data-type="Module">bisect</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Bisection algorithms.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id469">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.bisect.html#insort_right" class="code" data-type="Function">insort_right</a></td>
+    <td><span>Insert item x in list a, and keep it sorted assuming a is sorted.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.bisect.html#bisect_right" class="code" data-type="Function">bisect_right</a></td>
+    <td><span>Return the index where to insert item x in list a, assuming a is sorted.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.bisect.html#insort_left" class="code" data-type="Function">insort_left</a></td>
+    <td><span>Insert item x in list a, and keep it sorted assuming a is sorted.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.bisect.html#bisect_left" class="code" data-type="Function">bisect_left</a></td>
+    <td><span>Return the index where to insert item x in list a, assuming a is sorted.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction">
+  
+  <a name="Lib.bisect.insort_right">
+    
+  </a>
+  <a name="insort_right">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    insort_right(a, x, lo=0, hi=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Insert item x in list a, and keep it sorted assuming a is sorted.
+
+If x is already in a, insert it to the right of the rightmost x.
+
+Optional args lo (default 0) and hi (default len(a)) bound the
+slice of a to be searched.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.bisect.bisect_right">
+    
+  </a>
+  <a name="bisect_right">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    bisect_right(a, x, lo=0, hi=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the index where to insert item x in list a, assuming a is sorted.
+
+The return value i is such that all e in a[:i] have e &lt;= x, and all e in
+a[i:] have e &gt; x.  So if x already appears in the list, a.insert(i, x) will
+insert just after the rightmost x already there.
+
+Optional args lo (default 0) and hi (default len(a)) bound the
+slice of a to be searched.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.bisect.insort_left">
+    
+  </a>
+  <a name="insort_left">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    insort_left(a, x, lo=0, hi=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Insert item x in list a, and keep it sorted assuming a is sorted.
+
+If x is already in a, insert it to the left of the leftmost x.
+
+Optional args lo (default 0) and hi (default len(a)) bound the
+slice of a to be searched.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.bisect.bisect_left">
+    
+  </a>
+  <a name="bisect_left">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    bisect_left(a, x, lo=0, hi=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the index where to insert item x in list a, assuming a is sorted.
+
+The return value i is such that all e in a[:i] have e &lt; x, and all e in
+a[i:] have e &gt;= x.  So if x already appears in the list, a.insert(i, x) will
+insert just before the leftmost x already there.
+
+Optional args lo (default 0) and hi (default len(a)) bound the
+slice of a to be searched.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

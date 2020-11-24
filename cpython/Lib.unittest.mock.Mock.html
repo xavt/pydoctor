@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.unittest.mock.Mock : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.unittest.html" class="code" data-type="Package">unittest</a>.<a href="Lib.unittest.mock.html" class="code" data-type="Module">mock</a>.<a href="Lib.unittest.mock.Mock.html" class="code" data-type="Class">Mock</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.unittest.mock.Mock(<a href="Lib.unittest.mock.CallableMixin.html" class="code" data-type="Class">CallableMixin</a>, <a href="Lib.unittest.mock.NonCallableMock.html" class="code" data-type="Class">NonCallableMock</a>):</code></p><p>Known subclasses: <a href="Lib.unittest.mock.AsyncMock.html" class="code" data-type="Class">Lib.unittest.mock.AsyncMock</a>, <a href="Lib.unittest.mock.MagicMock.html" class="code" data-type="Class">Lib.unittest.mock.MagicMock</a>, <a href="Lib.unittest.mock.PropertyMock.html" class="code" data-type="Class">Lib.unittest.mock.PropertyMock</a></p>
+        <p><a href="classIndex.html#Lib.unittest.mock.Mock">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Create a new `Mock` object. `Mock` takes several optional arguments
+that specify the behaviour of the Mock object:
+
+* `spec`: This can be either a list of strings or an existing object (a
+  class or instance) that acts as the specification for the mock object. If
+  you pass in an object then a list of strings is formed by calling dir on
+  the object (excluding unsupported magic attributes and methods). Accessing
+  any attribute not in this list will raise an `AttributeError`.
+
+  If `spec` is an object (rather than a list of strings) then
+  `mock.__class__` returns the class of the spec object. This allows mocks
+  to pass `isinstance` tests.
+
+* `spec_set`: A stricter variant of `spec`. If used, attempting to *set*
+  or get an attribute on the mock that isn't on the object passed as
+  `spec_set` will raise an `AttributeError`.
+
+* `side_effect`: A function to be called whenever the Mock is called. See
+  the `side_effect` attribute. Useful for raising exceptions or
+  dynamically changing return values. The function is called with the same
+  arguments as the mock, and unless it returns `DEFAULT`, the return
+  value of this function is used as the return value.
+
+  If `side_effect` is an iterable then each call to the mock will return
+  the next value from the iterable. If any of the members of the iterable
+  are exceptions they will be raised instead of returned.
+
+* `return_value`: The value returned when the mock is called. By default
+  this is a new Mock (created on first access). See the
+  `return_value` attribute.
+
+* `wraps`: Item for the mock object to wrap. If `wraps` is not None then
+  calling the Mock will pass the call through to the wrapped object
+  (returning the real result). Attribute access on the mock will return a
+  Mock object that wraps the corresponding attribute of the wrapped object
+  (so attempting to access an attribute that doesn't exist will raise an
+  `AttributeError`).
+
+  If the mock has an explicit `return_value` set then calls are not passed
+  to the wrapped object and the `return_value` is returned instead.
+
+* `name`: If the mock has a name then it will be used in the repr of the
+  mock. This can be useful for debugging. The name is propagated to child
+  mocks.
+
+Mocks can also be called with arbitrary keyword arguments. These will be
+used to set attributes on the mock after it is created.</p></div>
+      </div>
+
+      <div id="splitTables">
+        
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.unittest.mock.CallableMixin.html" class="code" data-type="Class">CallableMixin</a>:
+          </p>
+          <table class="children sortable" id="id11653">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.CallableMixin.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.unittest.mock.CallableMixin.html#side_effect" class="code" data-type="Instance Variable">side_effect</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.CallableMixin.html#__call__" class="code" data-type="Method">__call__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.unittest.mock.CallableMixin.html#called" class="code" data-type="Instance Variable">called</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.unittest.mock.CallableMixin.html#call_args" class="code" data-type="Instance Variable">call_args</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.CallableMixin.html#_mock_check_sig" class="code" data-type="Method">_mock_check_sig</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.CallableMixin.html#_mock_call" class="code" data-type="Method">_mock_call</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.CallableMixin.html#_increment_mock_call" class="code" data-type="Method">_increment_mock_call</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.CallableMixin.html#_execute_mock_call" class="code" data-type="Method">_execute_mock_call</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.unittest.mock.Base.html" class="code" data-type="Class">Base</a> (via <a href="Lib.unittest.mock.CallableMixin.html" class="code" data-type="Class">CallableMixin</a>):
+          </p>
+          <table class="children sortable" id="id11654">
+  
+  <tr class="baseclassvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.unittest.mock.Base.html#_mock_side_effect" class="code" data-type="Class Variable">_mock_side_effect</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.unittest.mock.NonCallableMock.html" class="code" data-type="Class">NonCallableMock</a>:
+          </p>
+          <table class="children sortable" id="id11655">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#__new__" class="code" data-type="Method">__new__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#attach_mock" class="code" data-type="Method">attach_mock</a></td>
+    <td><span>Attach a mock as an attribute of this one, replacing its name and parent. Calls to the attached mock will be recorded in the `method_calls` and `mock_calls` attributes of this one.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#mock_add_spec" class="code" data-type="Method">mock_add_spec</a></td>
+    <td><span>Add a spec to a mock. `spec` can either be an object or a list of strings. Only attributes on the `spec` can be fetched as attributes from the mock.</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#return_value" class="code" data-type="Instance Variable">return_value</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#__class__" class="code" data-type="Method">__class__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#called" class="code" data-type="Instance Variable">called</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#call_count" class="code" data-type="Instance Variable">call_count</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#call_args" class="code" data-type="Instance Variable">call_args</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#call_args_list" class="code" data-type="Instance Variable">call_args_list</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#mock_calls" class="code" data-type="Instance Variable">mock_calls</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#side_effect" class="code" data-type="Class Variable">side_effect</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#reset_mock" class="code" data-type="Method">reset_mock</a></td>
+    <td><span>Restore the mock object to its initial state.</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#method_calls" class="code" data-type="Instance Variable">method_calls</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#configure_mock" class="code" data-type="Method">configure_mock</a></td>
+    <td><span>Set attributes on the mock through keyword arguments.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#__getattr__" class="code" data-type="Method">__getattr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#__dir__" class="code" data-type="Method">__dir__</a></td>
+    <td><span>Filter the output of `dir(mock)` to only useful members.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#__setattr__" class="code" data-type="Method">__setattr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#__delattr__" class="code" data-type="Method">__delattr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#assert_not_called" class="code" data-type="Method">assert_not_called</a></td>
+    <td><span>assert that the mock was never called.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#assert_called" class="code" data-type="Method">assert_called</a></td>
+    <td><span>assert that the mock was called at least once</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#assert_called_once" class="code" data-type="Method">assert_called_once</a></td>
+    <td><span>assert that the mock was called only once.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#assert_called_with" class="code" data-type="Method">assert_called_with</a></td>
+    <td><span>assert that the last call was made with the specified arguments.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#assert_called_once_with" class="code" data-type="Method">assert_called_once_with</a></td>
+    <td><span>assert that the mock was called exactly once and that that call was with the specified arguments.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#assert_has_calls" class="code" data-type="Method">assert_has_calls</a></td>
+    <td><span>assert the mock has been called with the specified calls. The `mock_calls` list is checked for the calls.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#assert_any_call" class="code" data-type="Method">assert_any_call</a></td>
+    <td><span>assert the mock has been called with the specified arguments.</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#_mock_add_spec" class="code" data-type="Method">_mock_add_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#__get_return_value" class="code" data-type="Method">__get_return_value</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#__set_return_value" class="code" data-type="Method">__set_return_value</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#_mock_return_value" class="code" data-type="Instance Variable">_mock_return_value</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#__return_value_doc" class="code" data-type="Class Variable">__return_value_doc</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#__get_side_effect" class="code" data-type="Method">__get_side_effect</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#__set_side_effect" class="code" data-type="Method">__set_side_effect</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#_mock_side_effect" class="code" data-type="Instance Variable">_mock_side_effect</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#_extract_mock_name" class="code" data-type="Method">_extract_mock_name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#_spec_class" class="code" data-type="Instance Variable">_spec_class</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#_format_mock_call_signature" class="code" data-type="Method">_format_mock_call_signature</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#_format_mock_failure_message" class="code" data-type="Method">_format_mock_failure_message</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#_get_call_signature_from_name" class="code" data-type="Method">_get_call_signature_from_name</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#_call_matcher" class="code" data-type="Method">_call_matcher</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#_get_child_mock" class="code" data-type="Method">_get_child_mock</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock.NonCallableMock.html#_calls_repr" class="code" data-type="Method">_calls_repr</a></td>
+    <td><span>Renders self.mock_calls as a string.</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

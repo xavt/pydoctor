@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.test.test_importlib.import_.test_relative_imports.RelativeImports : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.test.html" class="code" data-type="Package">test</a>.<a href="Lib.test.test_importlib.html" class="code" data-type="Package">test_importlib</a>.<a href="Lib.test.test_importlib.import_.html" class="code" data-type="Package">import_</a>.<a href="Lib.test.test_importlib.import_.test_relative_imports.html" class="code" data-type="Module">test_relative_imports</a>.<a href="Lib.test.test_importlib.import_.test_relative_imports.RelativeImports.html" class="code" data-type="Class">RelativeImports</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.test.test_importlib.import_.test_relative_imports.RelativeImports:</code></p>
+        <p><a href="classIndex.html#Lib.test.test_importlib.import_.test_relative_imports.RelativeImports">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">PEP 328 introduced relative imports. This allows for imports to occur
+from within a package without having to specify the actual package name.
+
+A simple example is to import another module within the same package
+[module from module]::
+
+  # From pkg.mod1 with pkg.mod2 being a module.
+  from . import mod2
+
+This also works for getting an attribute from a module that is specified
+in a relative fashion [attr from module]::
+
+  # From pkg.mod1.
+  from .mod2 import attr
+
+But this is in no way restricted to working between modules; it works
+from [package to module],::
+
+  # From pkg, importing pkg.module which is a module.
+  from . import module
+
+[module to package],::
+
+  # Pull attr from pkg, called from pkg.module which is a module.
+  from . import attr
+
+and [package to package]::
+
+  # From pkg.subpkg1 (both pkg.subpkg[1,2] are packages).
+  from .. import subpkg2
+
+The number of dots used is in no way restricted [deep import]::
+
+  # Import pkg.attr from pkg.pkg1.pkg2.pkg3.pkg4.pkg5.
+  from ...... import attr
+
+To prevent someone from accessing code that is outside of a package, one
+cannot reach the location containing the root package itself::
+
+  # From pkg.__init__ [too high from package]
+  from .. import top_level
+
+  # From pkg.module [too high from module]
+  from .. import top_level
+
+ Relative imports are the only type of import that allow for an empty
+ module name for an import [empty name].</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id6699">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_importlib.import_.test_relative_imports.RelativeImports.html#relative_import_test" class="code" data-type="Method">relative_import_test</a></td>
+    <td><span>Abstract out boilerplace for setting up for an import test.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_importlib.import_.test_relative_imports.RelativeImports.html#test_module_from_module" class="code" data-type="Method">test_module_from_module</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_importlib.import_.test_relative_imports.RelativeImports.html#test_attr_from_module" class="code" data-type="Method">test_attr_from_module</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_importlib.import_.test_relative_imports.RelativeImports.html#test_package_to_module" class="code" data-type="Method">test_package_to_module</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_importlib.import_.test_relative_imports.RelativeImports.html#test_module_to_package" class="code" data-type="Method">test_module_to_package</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_importlib.import_.test_relative_imports.RelativeImports.html#test_package_to_package" class="code" data-type="Method">test_package_to_package</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_importlib.import_.test_relative_imports.RelativeImports.html#test_deep_import" class="code" data-type="Method">test_deep_import</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_importlib.import_.test_relative_imports.RelativeImports.html#test_too_high_from_package" class="code" data-type="Method">test_too_high_from_package</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_importlib.import_.test_relative_imports.RelativeImports.html#test_too_high_from_module" class="code" data-type="Method">test_too_high_from_module</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_importlib.import_.test_relative_imports.RelativeImports.html#test_empty_name_w_level_0" class="code" data-type="Method">test_empty_name_w_level_0</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_importlib.import_.test_relative_imports.RelativeImports.html#test_import_from_different_package" class="code" data-type="Method">test_import_from_different_package</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_importlib.import_.test_relative_imports.RelativeImports.html#test_import_relative_import_no_fromlist" class="code" data-type="Method">test_import_relative_import_no_fromlist</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_importlib.import_.test_relative_imports.RelativeImports.html#test_relative_import_no_globals" class="code" data-type="Method">test_relative_import_no_globals</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_importlib.import_.test_relative_imports.RelativeImports.html#test_relative_import_no_package" class="code" data-type="Method">test_relative_import_no_package</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_importlib.import_.test_relative_imports.RelativeImports.html#test_relative_import_no_package_exists_absolute" class="code" data-type="Method">test_relative_import_no_package_exists_absolute</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.test.test_importlib.import_.test_relative_imports.RelativeImports.relative_import_test">
+    
+  </a>
+  <a name="relative_import_test">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    relative_import_test(self, create, globals_, callback):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Abstract out boilerplace for setting up for an import test.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_importlib.import_.test_relative_imports.RelativeImports.test_module_from_module">
+    
+  </a>
+  <a name="test_module_from_module">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_module_from_module(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_importlib.import_.test_relative_imports.RelativeImports.test_attr_from_module">
+    
+  </a>
+  <a name="test_attr_from_module">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_attr_from_module(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_importlib.import_.test_relative_imports.RelativeImports.test_package_to_module">
+    
+  </a>
+  <a name="test_package_to_module">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_package_to_module(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_importlib.import_.test_relative_imports.RelativeImports.test_module_to_package">
+    
+  </a>
+  <a name="test_module_to_package">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_module_to_package(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_importlib.import_.test_relative_imports.RelativeImports.test_package_to_package">
+    
+  </a>
+  <a name="test_package_to_package">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_package_to_package(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_importlib.import_.test_relative_imports.RelativeImports.test_deep_import">
+    
+  </a>
+  <a name="test_deep_import">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_deep_import(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_importlib.import_.test_relative_imports.RelativeImports.test_too_high_from_package">
+    
+  </a>
+  <a name="test_too_high_from_package">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_too_high_from_package(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_importlib.import_.test_relative_imports.RelativeImports.test_too_high_from_module">
+    
+  </a>
+  <a name="test_too_high_from_module">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_too_high_from_module(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_importlib.import_.test_relative_imports.RelativeImports.test_empty_name_w_level_0">
+    
+  </a>
+  <a name="test_empty_name_w_level_0">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_empty_name_w_level_0(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_importlib.import_.test_relative_imports.RelativeImports.test_import_from_different_package">
+    
+  </a>
+  <a name="test_import_from_different_package">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_import_from_different_package(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_importlib.import_.test_relative_imports.RelativeImports.test_import_relative_import_no_fromlist">
+    
+  </a>
+  <a name="test_import_relative_import_no_fromlist">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_import_relative_import_no_fromlist(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_importlib.import_.test_relative_imports.RelativeImports.test_relative_import_no_globals">
+    
+  </a>
+  <a name="test_relative_import_no_globals">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_relative_import_no_globals(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_importlib.import_.test_relative_imports.RelativeImports.test_relative_import_no_package">
+    
+  </a>
+  <a name="test_relative_import_no_package">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_relative_import_no_package(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_importlib.import_.test_relative_imports.RelativeImports.test_relative_import_no_package_exists_absolute">
+    
+  </a>
+  <a name="test_relative_import_no_package_exists_absolute">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_relative_import_no_package_exists_absolute(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

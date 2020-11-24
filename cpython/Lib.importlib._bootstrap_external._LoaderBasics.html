@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.importlib._bootstrap_external._LoaderBasics : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class private"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.importlib.html" class="code" data-type="Package">importlib</a>.<a href="Lib.importlib._bootstrap_external.html" class="code" data-type="Module">_bootstrap_external</a>.<a href="Lib.importlib._bootstrap_external._LoaderBasics.html" class="code" data-type="Class">_LoaderBasics</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.importlib._bootstrap_external._LoaderBasics:</code></p><p>Known subclasses: <a href="Lib.importlib._bootstrap_external.ExtensionFileLoader.html" class="code" data-type="Class">Lib.importlib._bootstrap_external.ExtensionFileLoader</a>, <a href="Lib.importlib._bootstrap_external.SourcelessFileLoader.html" class="code" data-type="Class">Lib.importlib._bootstrap_external.SourcelessFileLoader</a>, <a href="Lib.importlib._bootstrap_external.SourceLoader.html" class="code" data-type="Class">Lib.importlib._bootstrap_external.SourceLoader</a></p>
+        <p><a href="classIndex.html#Lib.importlib._bootstrap_external._LoaderBasics">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Base class of common code needed by both SourceLoader and
+SourcelessFileLoader.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2538">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib._bootstrap_external._LoaderBasics.html#is_package" class="code" data-type="Method">is_package</a></td>
+    <td><span>Concrete implementation of InspectLoader.is_package by checking if the path returned by get_filename has a filename of '__init__.py'.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib._bootstrap_external._LoaderBasics.html#create_module" class="code" data-type="Method">create_module</a></td>
+    <td><span>Use default semantics for module creation.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib._bootstrap_external._LoaderBasics.html#exec_module" class="code" data-type="Method">exec_module</a></td>
+    <td><span>Execute the module.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib._bootstrap_external._LoaderBasics.html#load_module" class="code" data-type="Method">load_module</a></td>
+    <td><span>This module is deprecated.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.importlib._bootstrap_external._LoaderBasics.is_package">
+    
+  </a>
+  <a name="is_package">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_package(self, fullname):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.importlib._bootstrap_external.ExtensionFileLoader.html" class="code" data-type="Class">Lib.importlib._bootstrap_external.ExtensionFileLoader</a></div>
+    
+    <div><p class="pre">Concrete implementation of InspectLoader.is_package by checking if
+the path returned by get_filename has a filename of '__init__.py'.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.importlib._bootstrap_external._LoaderBasics.create_module">
+    
+  </a>
+  <a name="create_module">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    create_module(self, spec):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.importlib._bootstrap_external.ExtensionFileLoader.html" class="code" data-type="Class">Lib.importlib._bootstrap_external.ExtensionFileLoader</a></div>
+    
+    <div><p class="pre">Use default semantics for module creation.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.importlib._bootstrap_external._LoaderBasics.exec_module">
+    
+  </a>
+  <a name="exec_module">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    exec_module(self, module):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.importlib._bootstrap_external.ExtensionFileLoader.html" class="code" data-type="Class">Lib.importlib._bootstrap_external.ExtensionFileLoader</a></div>
+    
+    <div><p class="pre">Execute the module.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.importlib._bootstrap_external._LoaderBasics.load_module">
+    
+  </a>
+  <a name="load_module">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    load_module(self, fullname):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">This module is deprecated.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

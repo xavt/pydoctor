@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.asyncio.events.AbstractEventLoopPolicy : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.asyncio.html" class="code" data-type="Package">asyncio</a>.<a href="Lib.asyncio.events.html" class="code" data-type="Module">events</a>.<a href="Lib.asyncio.events.AbstractEventLoopPolicy.html" class="code" data-type="Class">AbstractEventLoopPolicy</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.asyncio.events.AbstractEventLoopPolicy:</code></p><p>Known subclasses: <a href="Lib.asyncio.events.BaseDefaultEventLoopPolicy.html" class="code" data-type="Class">Lib.asyncio.events.BaseDefaultEventLoopPolicy</a></p>
+        <p><a href="classIndex.html#Lib.asyncio.events.AbstractEventLoopPolicy">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Abstract policy for accessing the event loop.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id312">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoopPolicy.html#get_event_loop" class="code" data-type="Method">get_event_loop</a></td>
+    <td><span>Get the event loop for the current context.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoopPolicy.html#set_event_loop" class="code" data-type="Method">set_event_loop</a></td>
+    <td><span>Set the event loop for the current context to loop.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoopPolicy.html#new_event_loop" class="code" data-type="Method">new_event_loop</a></td>
+    <td><span>Create and return a new event loop object according to this policy's rules. If there's need to set this loop as the event loop for the current context, set_event_loop must be called explicitly.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoopPolicy.html#get_child_watcher" class="code" data-type="Method">get_child_watcher</a></td>
+    <td><span>Get the watcher for child processes.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoopPolicy.html#set_child_watcher" class="code" data-type="Method">set_child_watcher</a></td>
+    <td><span>Set the watcher for child processes.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoopPolicy.get_event_loop">
+    
+  </a>
+  <a name="get_event_loop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_event_loop(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.asyncio.events.BaseDefaultEventLoopPolicy.html" class="code" data-type="Class">Lib.asyncio.events.BaseDefaultEventLoopPolicy</a></div>
+    
+    <div><p class="pre">Get the event loop for the current context.
+
+Returns an event loop object implementing the BaseEventLoop interface,
+or raises an exception in case no event loop has been set for the
+current context and the current policy does not specify to create one.
+
+It should never return None.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoopPolicy.set_event_loop">
+    
+  </a>
+  <a name="set_event_loop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_event_loop(self, loop):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.asyncio.events.BaseDefaultEventLoopPolicy.html" class="code" data-type="Class">Lib.asyncio.events.BaseDefaultEventLoopPolicy</a></div>
+    
+    <div><p class="pre">Set the event loop for the current context to loop.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoopPolicy.new_event_loop">
+    
+  </a>
+  <a name="new_event_loop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    new_event_loop(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.asyncio.events.BaseDefaultEventLoopPolicy.html" class="code" data-type="Class">Lib.asyncio.events.BaseDefaultEventLoopPolicy</a></div>
+    
+    <div><p class="pre">Create and return a new event loop object according to this
+policy's rules. If there's need to set this loop as the event loop for
+the current context, set_event_loop must be called explicitly.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoopPolicy.get_child_watcher">
+    
+  </a>
+  <a name="get_child_watcher">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_child_watcher(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get the watcher for child processes.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoopPolicy.set_child_watcher">
+    
+  </a>
+  <a name="set_child_watcher">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_child_watcher(self, watcher):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set the watcher for child processes.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

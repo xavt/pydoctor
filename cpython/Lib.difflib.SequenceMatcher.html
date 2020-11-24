@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.difflib.SequenceMatcher : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.difflib.html" class="code" data-type="Module">difflib</a>.<a href="Lib.difflib.SequenceMatcher.html" class="code" data-type="Class">SequenceMatcher</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.difflib.SequenceMatcher:</code></p>
+        <p><a href="classIndex.html#Lib.difflib.SequenceMatcher">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">SequenceMatcher is a flexible class for comparing pairs of sequences of
+any type, so long as the sequence elements are hashable.  The basic
+algorithm predates, and is a little fancier than, an algorithm
+published in the late 1980's by Ratcliff and Obershelp under the
+hyperbolic name "gestalt pattern matching".  The basic idea is to find
+the longest contiguous matching subsequence that contains no "junk"
+elements (R-O doesn't address junk).  The same idea is then applied
+recursively to the pieces of the sequences to the left and to the right
+of the matching subsequence.  This does not yield minimal edit
+sequences, but does tend to yield matches that "look right" to people.
+
+SequenceMatcher tries to compute a "human-friendly diff" between two
+sequences.  Unlike e.g. UNIX(tm) diff, the fundamental notion is the
+longest *contiguous* &amp; junk-free matching subsequence.  That's what
+catches peoples' eyes.  The Windows(tm) windiff has another interesting
+notion, pairing up elements that appear uniquely in each sequence.
+That, and the method here, appear to yield more intuitive difference
+reports than does diff.  This method appears to be the least vulnerable
+to synching up on blocks of "junk lines", though (like blank lines in
+ordinary text files, or maybe "&lt;P&gt;" lines in HTML files).  That may be
+because this is the only method of the 3 that has a *concept* of
+"junk" &lt;wink&gt;.
+
+Example, comparing two strings, and considering blanks to be "junk":
+
+&gt;&gt;&gt; s = SequenceMatcher(lambda x: x == " ",
+...                     "private Thread currentThread;",
+...                     "private volatile Thread currentThread;")
+&gt;&gt;&gt;
+
+.ratio() returns a float in [0, 1], measuring the "similarity" of the
+sequences.  As a rule of thumb, a .ratio() value over 0.6 means the
+sequences are close matches:
+
+&gt;&gt;&gt; print(round(s.ratio(), 3))
+0.866
+&gt;&gt;&gt;
+
+If you're only interested in where the sequences match,
+.get_matching_blocks() is handy:
+
+&gt;&gt;&gt; for block in s.get_matching_blocks():
+...     print("a[%d] and b[%d] match for %d elements" % block)
+a[0] and b[0] match for 8 elements
+a[8] and b[17] match for 21 elements
+a[29] and b[38] match for 0 elements
+
+Note that the last tuple returned by .get_matching_blocks() is always a
+dummy, (len(a), len(b), 0), and this is the only case in which the last
+tuple element (number of elements matched) is 0.
+
+If you want to know how to change the first sequence into the second,
+use .get_opcodes():
+
+&gt;&gt;&gt; for opcode in s.get_opcodes():
+...     print("%6s a[%d:%d] b[%d:%d]" % opcode)
+ equal a[0:8] b[0:8]
+insert a[8:8] b[8:17]
+ equal a[8:29] b[17:38]
+
+See the Differ class for a fancy human-friendly file differencer, which
+uses SequenceMatcher both to compare sequences of lines, and to compare
+sequences of characters within similar (near-matching) lines.
+
+See also function get_close_matches() in this module, which shows how
+simple code building on SequenceMatcher can be used to do useful work.
+
+Timing:  Basic R-O is cubic time worst case and quadratic time expected
+case.  SequenceMatcher is quadratic time for the worst case and has
+expected-case behavior dependent in a complicated way on how many
+elements the sequences have in common; best case time is linear.
+
+Methods:
+
+__init__(isjunk=None, a='', b='')
+    Construct a SequenceMatcher.
+
+set_seqs(a, b)
+    Set the two sequences to be compared.
+
+set_seq1(a)
+    Set the first sequence to be compared.
+
+set_seq2(b)
+    Set the second sequence to be compared.
+
+find_longest_match(alo=0, ahi=None, blo=0, bhi=None)
+    Find longest matching block in a[alo:ahi] and b[blo:bhi].
+
+get_matching_blocks()
+    Return list of triples describing matching subsequences.
+
+get_opcodes()
+    Return list of 5-tuples describing how to turn a into b.
+
+ratio()
+    Return a measure of the sequences' similarity (float in [0,1]).
+
+quick_ratio()
+    Return an upper bound on .ratio() relatively quickly.
+
+real_quick_ratio()
+    Return an upper bound on ratio() very quickly.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id897">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.difflib.SequenceMatcher.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Construct a SequenceMatcher.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.difflib.SequenceMatcher.html#isjunk" class="code" data-type="Instance Variable">isjunk</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.difflib.SequenceMatcher.html#a" class="code" data-type="Instance Variable">a</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.difflib.SequenceMatcher.html#b" class="code" data-type="Instance Variable">b</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.difflib.SequenceMatcher.html#autojunk" class="code" data-type="Instance Variable">autojunk</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.difflib.SequenceMatcher.html#set_seqs" class="code" data-type="Method">set_seqs</a></td>
+    <td><span>Set the two sequences to be compared.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.difflib.SequenceMatcher.html#set_seq1" class="code" data-type="Method">set_seq1</a></td>
+    <td><span>Set the first sequence to be compared.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.difflib.SequenceMatcher.html#matching_blocks" class="code" data-type="Instance Variable">matching_blocks</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.difflib.SequenceMatcher.html#opcodes" class="code" data-type="Instance Variable">opcodes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.difflib.SequenceMatcher.html#set_seq2" class="code" data-type="Method">set_seq2</a></td>
+    <td><span>Set the second sequence to be compared.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.difflib.SequenceMatcher.html#fullbcount" class="code" data-type="Instance Variable">fullbcount</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.difflib.SequenceMatcher.html#b2j" class="code" data-type="Instance Variable">b2j</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.difflib.SequenceMatcher.html#bjunk" class="code" data-type="Instance Variable">bjunk</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.difflib.SequenceMatcher.html#bpopular" class="code" data-type="Instance Variable">bpopular</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.difflib.SequenceMatcher.html#find_longest_match" class="code" data-type="Method">find_longest_match</a></td>
+    <td><span>Find longest matching block in a[alo:ahi] and b[blo:bhi].</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.difflib.SequenceMatcher.html#get_matching_blocks" class="code" data-type="Method">get_matching_blocks</a></td>
+    <td><span>Return list of triples describing matching subsequences.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.difflib.SequenceMatcher.html#get_opcodes" class="code" data-type="Method">get_opcodes</a></td>
+    <td><span>Return list of 5-tuples describing how to turn a into b.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.difflib.SequenceMatcher.html#get_grouped_opcodes" class="code" data-type="Method">get_grouped_opcodes</a></td>
+    <td><span>Isolate change clusters by eliminating ranges with no changes.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.difflib.SequenceMatcher.html#ratio" class="code" data-type="Method">ratio</a></td>
+    <td><span>Return a measure of the sequences' similarity (float in [0,1]).</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.difflib.SequenceMatcher.html#quick_ratio" class="code" data-type="Method">quick_ratio</a></td>
+    <td><span>Return an upper bound on ratio() relatively quickly.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.difflib.SequenceMatcher.html#real_quick_ratio" class="code" data-type="Method">real_quick_ratio</a></td>
+    <td><span>Return an upper bound on ratio() very quickly.</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.difflib.SequenceMatcher.html#__class_getitem__" class="code" data-type="Class Variable">__class_getitem__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.difflib.SequenceMatcher.html#__chain_b" class="code" data-type="Method">__chain_b</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.difflib.SequenceMatcher.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, isjunk=None, a="""""", b="""""", autojunk=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Construct a SequenceMatcher.
+
+Optional arg isjunk is None (the default), or a one-argument
+function that takes a sequence element and returns true iff the
+element is junk.  None is equivalent to passing "lambda x: 0", i.e.
+no elements are considered to be junk.  For example, pass
+    lambda x: x in " \t"
+if you're comparing lines as sequences of characters, and don't
+want to synch up on blanks or hard tabs.
+
+Optional arg a is the first of two sequences to be compared.  By
+default, an empty string.  The elements of a must be hashable.  See
+also .set_seqs() and .set_seq1().
+
+Optional arg b is the second of two sequences to be compared.  By
+default, an empty string.  The elements of b must be hashable. See
+also .set_seqs() and .set_seq2().
+
+Optional arg autojunk should be set to False to disable the
+"automatic junk heuristic" that treats popular elements as junk
+(see module documentation for more information).</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.difflib.SequenceMatcher.isjunk">
+    
+  </a>
+  <a name="isjunk">
+    
+  </a>
+  <div class="functionHeader">
+    isjunk =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.difflib.SequenceMatcher.a">
+    
+  </a>
+  <a name="a">
+    
+  </a>
+  <div class="functionHeader">
+    a =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.difflib.SequenceMatcher.b">
+    
+  </a>
+  <a name="b">
+    
+  </a>
+  <div class="functionHeader">
+    b =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.difflib.SequenceMatcher.autojunk">
+    
+  </a>
+  <a name="autojunk">
+    
+  </a>
+  <div class="functionHeader">
+    autojunk =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.difflib.SequenceMatcher.set_seqs">
+    
+  </a>
+  <a name="set_seqs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_seqs(self, a, b):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set the two sequences to be compared.
+
+&gt;&gt;&gt; s = SequenceMatcher()
+&gt;&gt;&gt; s.set_seqs("abcd", "bcde")
+&gt;&gt;&gt; s.ratio()
+0.75</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.difflib.SequenceMatcher.set_seq1">
+    
+  </a>
+  <a name="set_seq1">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_seq1(self, a):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set the first sequence to be compared.
+
+The second sequence to be compared is not changed.
+
+&gt;&gt;&gt; s = SequenceMatcher(None, "abcd", "bcde")
+&gt;&gt;&gt; s.ratio()
+0.75
+&gt;&gt;&gt; s.set_seq1("bcde")
+&gt;&gt;&gt; s.ratio()
+1.0
+&gt;&gt;&gt;
+
+SequenceMatcher computes and caches detailed information about the
+second sequence, so if you want to compare one sequence S against
+many sequences, use .set_seq2(S) once and call .set_seq1(x)
+repeatedly for each of the other sequences.
+
+See also set_seqs() and set_seq2().</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.difflib.SequenceMatcher.matching_blocks">
+    
+  </a>
+  <a name="matching_blocks">
+    
+  </a>
+  <div class="functionHeader">
+    matching_blocks =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.difflib.SequenceMatcher.opcodes">
+    
+  </a>
+  <a name="opcodes">
+    
+  </a>
+  <div class="functionHeader">
+    opcodes =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.difflib.SequenceMatcher.set_seq2">
+    
+  </a>
+  <a name="set_seq2">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_seq2(self, b):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set the second sequence to be compared.
+
+The first sequence to be compared is not changed.
+
+&gt;&gt;&gt; s = SequenceMatcher(None, "abcd", "bcde")
+&gt;&gt;&gt; s.ratio()
+0.75
+&gt;&gt;&gt; s.set_seq2("abcd")
+&gt;&gt;&gt; s.ratio()
+1.0
+&gt;&gt;&gt;
+
+SequenceMatcher computes and caches detailed information about the
+second sequence, so if you want to compare one sequence S against
+many sequences, use .set_seq2(S) once and call .set_seq1(x)
+repeatedly for each of the other sequences.
+
+See also set_seqs() and set_seq1().</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.difflib.SequenceMatcher.fullbcount">
+    
+  </a>
+  <a name="fullbcount">
+    
+  </a>
+  <div class="functionHeader">
+    fullbcount =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.difflib.SequenceMatcher.__chain_b">
+    
+  </a>
+  <a name="__chain_b">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __chain_b(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.difflib.SequenceMatcher.b2j">
+    
+  </a>
+  <a name="b2j">
+    
+  </a>
+  <div class="functionHeader">
+    b2j =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.difflib.SequenceMatcher.bjunk">
+    
+  </a>
+  <a name="bjunk">
+    
+  </a>
+  <div class="functionHeader">
+    bjunk =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.difflib.SequenceMatcher.bpopular">
+    
+  </a>
+  <a name="bpopular">
+    
+  </a>
+  <div class="functionHeader">
+    bpopular =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.difflib.SequenceMatcher.find_longest_match">
+    
+  </a>
+  <a name="find_longest_match">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    find_longest_match(self, alo=0, ahi=None, blo=0, bhi=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Find longest matching block in a[alo:ahi] and b[blo:bhi].
+
+By default it will find the longest match in the entirety of a and b.
+
+If isjunk is not defined:
+
+Return (i,j,k) such that a[i:i+k] is equal to b[j:j+k], where
+    alo &lt;= i &lt;= i+k &lt;= ahi
+    blo &lt;= j &lt;= j+k &lt;= bhi
+and for all (i',j',k') meeting those conditions,
+    k &gt;= k'
+    i &lt;= i'
+    and if i == i', j &lt;= j'
+
+In other words, of all maximal matching blocks, return one that
+starts earliest in a, and of all those maximal matching blocks that
+start earliest in a, return the one that starts earliest in b.
+
+&gt;&gt;&gt; s = SequenceMatcher(None, " abcd", "abcd abcd")
+&gt;&gt;&gt; s.find_longest_match(0, 5, 0, 9)
+Match(a=0, b=4, size=5)
+
+If isjunk is defined, first the longest matching block is
+determined as above, but with the additional restriction that no
+junk element appears in the block.  Then that block is extended as
+far as possible by matching (only) junk elements on both sides.  So
+the resulting block never matches on junk except as identical junk
+happens to be adjacent to an "interesting" match.
+
+Here's the same example as before, but considering blanks to be
+junk.  That prevents " abcd" from matching the " abcd" at the tail
+end of the second sequence directly.  Instead only the "abcd" can
+match, and matches the leftmost "abcd" in the second sequence:
+
+&gt;&gt;&gt; s = SequenceMatcher(lambda x: x==" ", " abcd", "abcd abcd")
+&gt;&gt;&gt; s.find_longest_match(0, 5, 0, 9)
+Match(a=1, b=0, size=4)
+
+If no blocks match, return (alo, blo, 0).
+
+&gt;&gt;&gt; s = SequenceMatcher(None, "ab", "c")
+&gt;&gt;&gt; s.find_longest_match(0, 2, 0, 1)
+Match(a=0, b=0, size=0)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.difflib.SequenceMatcher.get_matching_blocks">
+    
+  </a>
+  <a name="get_matching_blocks">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_matching_blocks(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return list of triples describing matching subsequences.
+
+Each triple is of the form (i, j, n), and means that
+a[i:i+n] == b[j:j+n].  The triples are monotonically increasing in
+i and in j.  New in Python 2.5, it's also guaranteed that if
+(i, j, n) and (i', j', n') are adjacent triples in the list, and
+the second is not the last triple in the list, then i+n != i' or
+j+n != j'.  IOW, adjacent triples never describe adjacent equal
+blocks.
+
+The last triple is a dummy, (len(a), len(b), 0), and is the only
+triple with n==0.
+
+&gt;&gt;&gt; s = SequenceMatcher(None, "abxcd", "abcd")
+&gt;&gt;&gt; list(s.get_matching_blocks())
+[Match(a=0, b=0, size=2), Match(a=3, b=2, size=2), Match(a=5, b=4, size=0)]</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.difflib.SequenceMatcher.get_opcodes">
+    
+  </a>
+  <a name="get_opcodes">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_opcodes(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return list of 5-tuples describing how to turn a into b.
+
+Each tuple is of the form (tag, i1, i2, j1, j2).  The first tuple
+has i1 == j1 == 0, and remaining tuples have i1 == the i2 from the
+tuple preceding it, and likewise for j1 == the previous j2.
+
+The tags are strings, with these meanings:
+
+'replace':  a[i1:i2] should be replaced by b[j1:j2]
+'delete':   a[i1:i2] should be deleted.
+            Note that j1==j2 in this case.
+'insert':   b[j1:j2] should be inserted at a[i1:i1].
+            Note that i1==i2 in this case.
+'equal':    a[i1:i2] == b[j1:j2]
+
+&gt;&gt;&gt; a = "qabxcd"
+&gt;&gt;&gt; b = "abycdf"
+&gt;&gt;&gt; s = SequenceMatcher(None, a, b)
+&gt;&gt;&gt; for tag, i1, i2, j1, j2 in s.get_opcodes():
+...    print(("%7s a[%d:%d] (%s) b[%d:%d] (%s)" %
+...           (tag, i1, i2, a[i1:i2], j1, j2, b[j1:j2])))
+ delete a[0:1] (q) b[0:0] ()
+  equal a[1:3] (ab) b[0:2] (ab)
+replace a[3:4] (x) b[2:3] (y)
+  equal a[4:6] (cd) b[3:5] (cd)
+ insert a[6:6] () b[5:6] (f)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.difflib.SequenceMatcher.get_grouped_opcodes">
+    
+  </a>
+  <a name="get_grouped_opcodes">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_grouped_opcodes(self, n=3):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Isolate change clusters by eliminating ranges with no changes.
+
+Return a generator of groups with up to n lines of context.
+Each group is in the same format as returned by get_opcodes().
+
+&gt;&gt;&gt; from pprint import pprint
+&gt;&gt;&gt; a = list(map(str, range(1,40)))
+&gt;&gt;&gt; b = a[:]
+&gt;&gt;&gt; b[8:8] = ['i']     # Make an insertion
+&gt;&gt;&gt; b[20] += 'x'       # Make a replacement
+&gt;&gt;&gt; b[23:28] = []      # Make a deletion
+&gt;&gt;&gt; b[30] += 'y'       # Make another replacement
+&gt;&gt;&gt; pprint(list(SequenceMatcher(None,a,b).get_grouped_opcodes()))
+[[('equal', 5, 8, 5, 8), ('insert', 8, 8, 8, 9), ('equal', 8, 11, 9, 12)],
+ [('equal', 16, 19, 17, 20),
+  ('replace', 19, 20, 20, 21),
+  ('equal', 20, 22, 21, 23),
+  ('delete', 22, 27, 23, 23),
+  ('equal', 27, 30, 23, 26)],
+ [('equal', 31, 34, 27, 30),
+  ('replace', 34, 35, 30, 31),
+  ('equal', 35, 38, 31, 34)]]</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.difflib.SequenceMatcher.ratio">
+    
+  </a>
+  <a name="ratio">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ratio(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a measure of the sequences' similarity (float in [0,1]).
+
+Where T is the total number of elements in both sequences, and
+M is the number of matches, this is 2.0*M / T.
+Note that this is 1 if the sequences are identical, and 0 if
+they have nothing in common.
+
+.ratio() is expensive to compute if you haven't already computed
+.get_matching_blocks() or .get_opcodes(), in which case you may
+want to try .quick_ratio() or .real_quick_ratio() first to get an
+upper bound.
+
+&gt;&gt;&gt; s = SequenceMatcher(None, "abcd", "bcde")
+&gt;&gt;&gt; s.ratio()
+0.75
+&gt;&gt;&gt; s.quick_ratio()
+0.75
+&gt;&gt;&gt; s.real_quick_ratio()
+1.0</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.difflib.SequenceMatcher.quick_ratio">
+    
+  </a>
+  <a name="quick_ratio">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    quick_ratio(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return an upper bound on ratio() relatively quickly.
+
+This isn't defined beyond that it is an upper bound on .ratio(), and
+is faster to compute.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.difflib.SequenceMatcher.real_quick_ratio">
+    
+  </a>
+  <a name="real_quick_ratio">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    real_quick_ratio(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return an upper bound on ratio() very quickly.
+
+This isn't defined beyond that it is an upper bound on .ratio(), and
+is faster to compute than either .ratio() or .quick_ratio().</p></div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.difflib.SequenceMatcher.__class_getitem__">
+    
+  </a>
+  <a name="__class_getitem__">
+    
+  </a>
+  <div class="functionHeader">
+    __class_getitem__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

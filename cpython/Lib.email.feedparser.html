@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.email.feedparser : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.email.html" class="code" data-type="Package">email</a>.<a href="Lib.email.feedparser.html" class="code" data-type="Module">feedparser</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">FeedParser - An email feed parser.
+
+The feed parser implements an interface for incrementally parsing an email
+message, line by line.  This has advantages for certain applications, such as
+those reading email messages off a socket.
+
+FeedParser.feed() is the primary interface for pushing new data into the
+parser.  It returns when there's nothing more it can do with the available
+data.  When you have no more data to push into the parser, call .close().
+This completes the parsing and returns the root message object.
+
+The other advantage of this parser is that it will never raise a parsing
+exception.  Instead, when it finds something unexpected, it adds a 'defect' to
+the current message.  Defects are just instances that live on the message
+object's .defects attribute.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id1291">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email.feedparser.html#NLCRE" class="code" data-type="Variable">NLCRE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email.feedparser.html#NLCRE_bol" class="code" data-type="Variable">NLCRE_bol</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email.feedparser.html#NLCRE_eol" class="code" data-type="Variable">NLCRE_eol</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email.feedparser.html#NLCRE_crack" class="code" data-type="Variable">NLCRE_crack</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email.feedparser.html#headerRE" class="code" data-type="Variable">headerRE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email.feedparser.html#EMPTYSTRING" class="code" data-type="Variable">EMPTYSTRING</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email.feedparser.html#NL" class="code" data-type="Variable">NL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email.feedparser.html#NeedMoreData" class="code" data-type="Variable">NeedMoreData</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.feedparser.BufferedSubFile.html" class="code" data-type="Class">BufferedSubFile</a></td>
+    <td><span>A file-ish object that can have new data loaded into it.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.feedparser.FeedParser.html" class="code" data-type="Class">FeedParser</a></td>
+    <td><span>A feed-style parser of email.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.feedparser.BytesFeedParser.html" class="code" data-type="Class">BytesFeedParser</a></td>
+    <td><span>Like FeedParser, but feed accepts bytes.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.email.feedparser.NLCRE">
+    
+  </a>
+  <a name="NLCRE">
+    
+  </a>
+  <div class="functionHeader">
+    NLCRE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.email.feedparser.NLCRE_bol">
+    
+  </a>
+  <a name="NLCRE_bol">
+    
+  </a>
+  <div class="functionHeader">
+    NLCRE_bol =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.email.feedparser.NLCRE_eol">
+    
+  </a>
+  <a name="NLCRE_eol">
+    
+  </a>
+  <div class="functionHeader">
+    NLCRE_eol =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.email.feedparser.NLCRE_crack">
+    
+  </a>
+  <a name="NLCRE_crack">
+    
+  </a>
+  <div class="functionHeader">
+    NLCRE_crack =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.email.feedparser.headerRE">
+    
+  </a>
+  <a name="headerRE">
+    
+  </a>
+  <div class="functionHeader">
+    headerRE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.email.feedparser.EMPTYSTRING">
+    
+  </a>
+  <a name="EMPTYSTRING">
+    
+  </a>
+  <div class="functionHeader">
+    EMPTYSTRING =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.email.feedparser.NL">
+    
+  </a>
+  <a name="NL">
+    
+  </a>
+  <div class="functionHeader">
+    NL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.email.feedparser.NeedMoreData">
+    
+  </a>
+  <a name="NeedMoreData">
+    
+  </a>
+  <div class="functionHeader">
+    NeedMoreData =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

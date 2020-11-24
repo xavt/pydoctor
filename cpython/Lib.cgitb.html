@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.cgitb : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.cgitb.html" class="code" data-type="Module">cgitb</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">More comprehensive traceback formatting for Python scripts.
+
+To enable this module, do:
+
+    import cgitb; cgitb.enable()
+
+at the top of your script.  The optional arguments to enable() are:
+
+    display     - if true, tracebacks are displayed in the web browser
+    logdir      - if set, tracebacks are written to files in this directory
+    context     - number of lines of source code to show for each stack frame
+    format      - 'text' or 'html' controls the output format
+
+By default, tracebacks are displayed but not saved, the context is 5 lines
+and the output format is 'html' (for backwards compatibility with the
+original use of this module)
+
+Alternatively, if you have caught an exception and want cgitb to display it
+for you, call cgitb.handler().  The optional argument to handler() is a
+3-item tuple (etype, evalue, etb) just like the value of sys.exc_info().
+The default handler displays output as HTML.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id494">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.cgitb.html#reset" class="code" data-type="Function">reset</a></td>
+    <td><span>Return a string that resets the CGI and browser to a known state.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.cgitb.html#__UNDEF__" class="code" data-type="Variable">__UNDEF__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.cgitb.html#small" class="code" data-type="Function">small</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.cgitb.html#strong" class="code" data-type="Function">strong</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.cgitb.html#grey" class="code" data-type="Function">grey</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.cgitb.html#lookup" class="code" data-type="Function">lookup</a></td>
+    <td><span>Find the value for a given name in the given environment.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.cgitb.html#scanvars" class="code" data-type="Function">scanvars</a></td>
+    <td><span>Scan one logical line of Python and look up values of variables used.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.cgitb.html#html" class="code" data-type="Function">html</a></td>
+    <td><span>Return a nice HTML document describing a given traceback.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.cgitb.html#text" class="code" data-type="Function">text</a></td>
+    <td><span>Return a plain text document describing a given traceback.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.cgitb.Hook.html" class="code" data-type="Class">Hook</a></td>
+    <td><span>A hook to replace sys.excepthook that shows tracebacks in HTML.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.cgitb.html#handler" class="code" data-type="Variable">handler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.cgitb.html#enable" class="code" data-type="Function">enable</a></td>
+    <td><span>Install an exception handler that formats tracebacks as HTML.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction">
+  
+  <a name="Lib.cgitb.reset">
+    
+  </a>
+  <a name="reset">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    reset():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a string that resets the CGI and browser to a known state.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.cgitb.__UNDEF__">
+    
+  </a>
+  <a name="__UNDEF__">
+    
+  </a>
+  <div class="functionHeader">
+    __UNDEF__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.cgitb.small">
+    
+  </a>
+  <a name="small">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    small(text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.cgitb.strong">
+    
+  </a>
+  <a name="strong">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    strong(text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.cgitb.grey">
+    
+  </a>
+  <a name="grey">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    grey(text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.cgitb.lookup">
+    
+  </a>
+  <a name="lookup">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    lookup(name, frame, locals):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Find the value for a given name in the given environment.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.cgitb.scanvars">
+    
+  </a>
+  <a name="scanvars">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    scanvars(reader, frame, locals):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Scan one logical line of Python and look up values of variables used.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.cgitb.html">
+    
+  </a>
+  <a name="html">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    html(einfo, context=5):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a nice HTML document describing a given traceback.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.cgitb.text">
+    
+  </a>
+  <a name="text">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    text(einfo, context=5):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a plain text document describing a given traceback.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.cgitb.handler">
+    
+  </a>
+  <a name="handler">
+    
+  </a>
+  <div class="functionHeader">
+    handler =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.cgitb.enable">
+    
+  </a>
+  <a name="enable">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    enable(display=1, logdir=None, context=5, format="""html"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Install an exception handler that formats tracebacks as HTML.
+
+The optional argument 'display' can be set to 0 to suppress sending the
+traceback to the browser, and 'logdir' can be set to a directory to cause
+tracebacks to be written to files there.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

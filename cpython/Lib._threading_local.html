@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib._threading_local : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module private"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib._threading_local.html" class="code" data-type="Module">_threading_local</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Thread-local objects.
+
+(Note that this module provides a Python version of the threading.local
+ class.  Depending on the version of Python you're using, there may be a
+ faster one available.  You should always import the `local` class from
+ `threading`.)
+
+Thread-local objects support the management of thread-local data.
+If you have data that you want to be local to a thread, simply create
+a thread-local object and use its attributes:
+
+  &gt;&gt;&gt; mydata = local()
+  &gt;&gt;&gt; mydata.number = 42
+  &gt;&gt;&gt; mydata.number
+  42
+
+You can also access the local-object's dictionary:
+
+  &gt;&gt;&gt; mydata.__dict__
+  {'number': 42}
+  &gt;&gt;&gt; mydata.__dict__.setdefault('widgets', [])
+  []
+  &gt;&gt;&gt; mydata.widgets
+  []
+
+What's important about thread-local objects is that their data are
+local to a thread. If we access the data in a different thread:
+
+  &gt;&gt;&gt; log = []
+  &gt;&gt;&gt; def f():
+  ...     items = sorted(mydata.__dict__.items())
+  ...     log.append(items)
+  ...     mydata.number = 11
+  ...     log.append(mydata.number)
+
+  &gt;&gt;&gt; import threading
+  &gt;&gt;&gt; thread = threading.Thread(target=f)
+  &gt;&gt;&gt; thread.start()
+  &gt;&gt;&gt; thread.join()
+  &gt;&gt;&gt; log
+  [[], 11]
+
+we get different data.  Furthermore, changes made in the other thread
+don't affect data seen in this thread:
+
+  &gt;&gt;&gt; mydata.number
+  42
+
+Of course, values you get from a local object, including a __dict__
+attribute, are for whatever thread was current at the time the
+attribute was read.  For that reason, you generally don't want to save
+these values across threads, as they apply only to the thread they
+came from.
+
+You can create custom local objects by subclassing the local class:
+
+  &gt;&gt;&gt; class MyLocal(local):
+  ...     number = 2
+  ...     def __init__(self, /, **kw):
+  ...         self.__dict__.update(kw)
+  ...     def squared(self):
+  ...         return self.number ** 2
+
+This can be useful to support default values, methods and
+initialization.  Note that if you define an __init__ method, it will be
+called each time the local object is used in a separate thread.  This
+is necessary to initialize each thread's dictionary.
+
+Now if we create a local object:
+
+  &gt;&gt;&gt; mydata = MyLocal(color='red')
+
+Now we have a default number:
+
+  &gt;&gt;&gt; mydata.number
+  2
+
+an initial color:
+
+  &gt;&gt;&gt; mydata.color
+  'red'
+  &gt;&gt;&gt; del mydata.color
+
+And a method that operates on the data:
+
+  &gt;&gt;&gt; mydata.squared()
+  4
+
+As before, we can access the data in a separate thread:
+
+  &gt;&gt;&gt; log = []
+  &gt;&gt;&gt; thread = threading.Thread(target=f)
+  &gt;&gt;&gt; thread.start()
+  &gt;&gt;&gt; thread.join()
+  &gt;&gt;&gt; log
+  [[('color', 'red')], 11]
+
+without affecting this thread's data:
+
+  &gt;&gt;&gt; mydata.number
+  2
+  &gt;&gt;&gt; mydata.color
+  Traceback (most recent call last):
+  ...
+  AttributeError: 'MyLocal' object has no attribute 'color'
+
+Note that subclasses can define slots, but they are not thread
+local. They are shared across threads:
+
+  &gt;&gt;&gt; class MyLocal(local):
+  ...     __slots__ = 'number'
+
+  &gt;&gt;&gt; mydata = MyLocal()
+  &gt;&gt;&gt; mydata.number = 42
+  &gt;&gt;&gt; mydata.color = 'red'
+
+So, the separate thread:
+
+  &gt;&gt;&gt; thread = threading.Thread(target=f)
+  &gt;&gt;&gt; thread.start()
+  &gt;&gt;&gt; thread.join()
+
+affects what we see:
+
+  &gt;&gt;&gt; mydata.number
+  11
+
+&gt;&gt;&gt; del mydata</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id184">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib._threading_local.local.html" class="code" data-type="Class">local</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib._threading_local._localimpl.html" class="code" data-type="Class">_localimpl</a></td>
+    <td><span>A class managing thread-local dicts</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._threading_local.html#_patch" class="code" data-type="Function">_patch</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction private">
+  
+  <a name="Lib._threading_local._patch">
+    
+  </a>
+  <a name="_patch">
+    
+  </a>
+  <div class="functionHeader">
+    @contextmanager<br />
+    def
+    _patch(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

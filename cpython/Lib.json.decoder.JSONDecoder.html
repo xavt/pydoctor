@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.json.decoder.JSONDecoder : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.json.html" class="code" data-type="Package">json</a>.<a href="Lib.json.decoder.html" class="code" data-type="Module">decoder</a>.<a href="Lib.json.decoder.JSONDecoder.html" class="code" data-type="Class">JSONDecoder</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.json.decoder.JSONDecoder(<span title="object">object</span>):</code></p>
+        <p><a href="classIndex.html#Lib.json.decoder.JSONDecoder">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Simple JSON &lt;http://json.org&gt; decoder
+
+Performs the following translations in decoding by default:
+
++---------------+-------------------+
+| JSON          | Python            |
++===============+===================+
+| object        | dict              |
++---------------+-------------------+
+| array         | list              |
++---------------+-------------------+
+| string        | str               |
++---------------+-------------------+
+| number (int)  | int               |
++---------------+-------------------+
+| number (real) | float             |
++---------------+-------------------+
+| true          | True              |
++---------------+-------------------+
+| false         | False             |
++---------------+-------------------+
+| null          | None              |
++---------------+-------------------+
+
+It also understands ``NaN``, ``Infinity``, and ``-Infinity`` as
+their corresponding ``float`` values, which is outside the JSON spec.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2655">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.json.decoder.JSONDecoder.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.json.decoder.JSONDecoder.html#object_hook" class="code" data-type="Instance Variable">object_hook</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.json.decoder.JSONDecoder.html#parse_float" class="code" data-type="Instance Variable">parse_float</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.json.decoder.JSONDecoder.html#parse_int" class="code" data-type="Instance Variable">parse_int</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.json.decoder.JSONDecoder.html#parse_constant" class="code" data-type="Instance Variable">parse_constant</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.json.decoder.JSONDecoder.html#strict" class="code" data-type="Instance Variable">strict</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.json.decoder.JSONDecoder.html#object_pairs_hook" class="code" data-type="Instance Variable">object_pairs_hook</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.json.decoder.JSONDecoder.html#parse_object" class="code" data-type="Instance Variable">parse_object</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.json.decoder.JSONDecoder.html#parse_array" class="code" data-type="Instance Variable">parse_array</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.json.decoder.JSONDecoder.html#parse_string" class="code" data-type="Instance Variable">parse_string</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.json.decoder.JSONDecoder.html#memo" class="code" data-type="Instance Variable">memo</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.json.decoder.JSONDecoder.html#scan_once" class="code" data-type="Instance Variable">scan_once</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.json.decoder.JSONDecoder.html#decode" class="code" data-type="Method">decode</a></td>
+    <td><span>Return the Python representation of ``s`` (a ``str`` instance containing a JSON document).</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.json.decoder.JSONDecoder.html#raw_decode" class="code" data-type="Method">raw_decode</a></td>
+    <td><span>Decode a JSON document from ``s`` (a ``str`` beginning with a JSON document) and return a 2-tuple of the Python representation and the index in ``s`` where the document ended.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.json.decoder.JSONDecoder.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">``object_hook``, if specified, will be called with the result
+of every JSON object decoded and its return value will be used in
+place of the given ``dict``.  This can be used to provide custom
+deserializations (e.g. to support JSON-RPC class hinting).
+
+``object_pairs_hook``, if specified will be called with the result of
+every JSON object decoded with an ordered list of pairs.  The return
+value of ``object_pairs_hook`` will be used instead of the ``dict``.
+This feature can be used to implement custom decoders.
+If ``object_hook`` is also defined, the ``object_pairs_hook`` takes
+priority.
+
+``parse_float``, if specified, will be called with the string
+of every JSON float to be decoded. By default this is equivalent to
+float(num_str). This can be used to use another datatype or parser
+for JSON floats (e.g. decimal.Decimal).
+
+``parse_int``, if specified, will be called with the string
+of every JSON int to be decoded. By default this is equivalent to
+int(num_str). This can be used to use another datatype or parser
+for JSON integers (e.g. float).
+
+``parse_constant``, if specified, will be called with one of the
+following strings: -Infinity, Infinity, NaN.
+This can be used to raise an exception if invalid JSON numbers
+are encountered.
+
+If ``strict`` is false (true is the default), then control
+characters will be allowed inside strings.  Control characters in
+this context are those with character codes in the 0-31 range,
+including ``'\t'`` (tab), ``'\n'``, ``'\r'`` and ``'\0'``.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.json.decoder.JSONDecoder.object_hook">
+    
+  </a>
+  <a name="object_hook">
+    
+  </a>
+  <div class="functionHeader">
+    object_hook =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.json.decoder.JSONDecoder.parse_float">
+    
+  </a>
+  <a name="parse_float">
+    
+  </a>
+  <div class="functionHeader">
+    parse_float =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.json.decoder.JSONDecoder.parse_int">
+    
+  </a>
+  <a name="parse_int">
+    
+  </a>
+  <div class="functionHeader">
+    parse_int =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.json.decoder.JSONDecoder.parse_constant">
+    
+  </a>
+  <a name="parse_constant">
+    
+  </a>
+  <div class="functionHeader">
+    parse_constant =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.json.decoder.JSONDecoder.strict">
+    
+  </a>
+  <a name="strict">
+    
+  </a>
+  <div class="functionHeader">
+    strict =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.json.decoder.JSONDecoder.object_pairs_hook">
+    
+  </a>
+  <a name="object_pairs_hook">
+    
+  </a>
+  <div class="functionHeader">
+    object_pairs_hook =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.json.decoder.JSONDecoder.parse_object">
+    
+  </a>
+  <a name="parse_object">
+    
+  </a>
+  <div class="functionHeader">
+    parse_object =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.json.decoder.JSONDecoder.parse_array">
+    
+  </a>
+  <a name="parse_array">
+    
+  </a>
+  <div class="functionHeader">
+    parse_array =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.json.decoder.JSONDecoder.parse_string">
+    
+  </a>
+  <a name="parse_string">
+    
+  </a>
+  <div class="functionHeader">
+    parse_string =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.json.decoder.JSONDecoder.memo">
+    
+  </a>
+  <a name="memo">
+    
+  </a>
+  <div class="functionHeader">
+    memo =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.json.decoder.JSONDecoder.scan_once">
+    
+  </a>
+  <a name="scan_once">
+    
+  </a>
+  <div class="functionHeader">
+    scan_once =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.json.decoder.JSONDecoder.decode">
+    
+  </a>
+  <a name="decode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    decode(self, s, _w=WHITESPACE.match):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the Python representation of ``s`` (a ``str`` instance
+containing a JSON document).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.json.decoder.JSONDecoder.raw_decode">
+    
+  </a>
+  <a name="raw_decode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    raw_decode(self, s, idx=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Decode a JSON document from ``s`` (a ``str`` beginning with
+a JSON document) and return a 2-tuple of the Python
+representation and the index in ``s`` where the document ended.
+
+This can be used to decode a JSON document from a string that may
+have extraneous data at the end.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

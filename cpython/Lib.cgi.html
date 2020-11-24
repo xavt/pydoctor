@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.cgi : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.cgi.html" class="code" data-type="Module">cgi</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Support module for CGI (Common Gateway Interface) scripts.
+
+This module defines a number of utilities for use by CGI scripts
+written in Python.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id491">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.cgi.html#__version__" class="code" data-type="Variable">__version__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.cgi.html#logfile" class="code" data-type="Variable">logfile</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.cgi.html#logfp" class="code" data-type="Variable">logfp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.cgi.html#initlog" class="code" data-type="Function">initlog</a></td>
+    <td><span>Write a log message, if there is a log file.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.cgi.html#dolog" class="code" data-type="Function">dolog</a></td>
+    <td><span>Write a log message to the log file.  See initlog() for docs.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.cgi.html#nolog" class="code" data-type="Function">nolog</a></td>
+    <td><span>Dummy function, assigned to log when logging is disabled.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.cgi.html#closelog" class="code" data-type="Function">closelog</a></td>
+    <td><span>Close the log file.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.cgi.html#maxlen" class="code" data-type="Variable">maxlen</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.cgi.html#parse" class="code" data-type="Function">parse</a></td>
+    <td><span>Parse a query in the environment or from a file (default stdin)</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.cgi.html#parse_multipart" class="code" data-type="Function">parse_multipart</a></td>
+    <td><span>Parse multipart input.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.cgi.html#parse_header" class="code" data-type="Function">parse_header</a></td>
+    <td><span>Parse a Content-type like header.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.cgi.MiniFieldStorage.html" class="code" data-type="Class">MiniFieldStorage</a></td>
+    <td><span>Like FieldStorage, for use when no file uploads are possible.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.cgi.FieldStorage.html" class="code" data-type="Class">FieldStorage</a></td>
+    <td><span>Store a sequence of fields, reading multipart/form-data.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.cgi.html#test" class="code" data-type="Function">test</a></td>
+    <td><span>Robust test CGI script, usable as main program.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.cgi.html#print_exception" class="code" data-type="Function">print_exception</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.cgi.html#print_environ" class="code" data-type="Function">print_environ</a></td>
+    <td><span>Dump the shell environment as HTML.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.cgi.html#print_form" class="code" data-type="Function">print_form</a></td>
+    <td><span>Dump the contents of a form as HTML.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.cgi.html#print_directory" class="code" data-type="Function">print_directory</a></td>
+    <td><span>Dump the current directory as HTML.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.cgi.html#print_arguments" class="code" data-type="Function">print_arguments</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.cgi.html#print_environ_usage" class="code" data-type="Function">print_environ_usage</a></td>
+    <td><span>Dump a list of environment variables used by CGI as HTML.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.cgi.html#valid_boundary" class="code" data-type="Function">valid_boundary</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.cgi.html#_parseparam" class="code" data-type="Function">_parseparam</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.cgi.__version__">
+    
+  </a>
+  <a name="__version__">
+    
+  </a>
+  <div class="functionHeader">
+    __version__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.cgi.logfile">
+    
+  </a>
+  <a name="logfile">
+    
+  </a>
+  <div class="functionHeader">
+    logfile =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.cgi.logfp">
+    
+  </a>
+  <a name="logfp">
+    
+  </a>
+  <div class="functionHeader">
+    logfp =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.cgi.initlog">
+    
+  </a>
+  <a name="initlog">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    initlog(*allargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Write a log message, if there is a log file.
+
+Even though this function is called initlog(), you should always
+use log(); log is a variable that is set either to initlog
+(initially), to dolog (once the log file has been opened), or to
+nolog (when logging is disabled).
+
+The first argument is a format string; the remaining arguments (if
+any) are arguments to the % operator, so e.g.
+    log("%s: %s", "a", "b")
+will write "a: b" to the log file, followed by a newline.
+
+If the global logfp is not None, it should be a file object to
+which log data is written.
+
+If the global logfp is None, the global logfile may be a string
+giving a filename to open, in append mode.  This file should be
+world writable!!!  If the file can't be opened, logging is
+silently disabled (since there is no safe place where we could
+send an error message).</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.cgi.dolog">
+    
+  </a>
+  <a name="dolog">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    dolog(fmt, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Write a log message to the log file.  See initlog() for docs.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.cgi.nolog">
+    
+  </a>
+  <a name="nolog">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    nolog(*allargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Dummy function, assigned to log when logging is disabled.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.cgi.closelog">
+    
+  </a>
+  <a name="closelog">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    closelog():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Close the log file.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.cgi.maxlen">
+    
+  </a>
+  <a name="maxlen">
+    
+  </a>
+  <div class="functionHeader">
+    maxlen =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.cgi.parse">
+    
+  </a>
+  <a name="parse">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse(fp=None, environ=os.environ, keep_blank_values=0, strict_parsing=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse a query in the environment or from a file (default stdin)
+
+Arguments, all optional:
+
+fp              : file pointer; default: sys.stdin.buffer
+
+environ         : environment dictionary; default: os.environ
+
+keep_blank_values: flag indicating whether blank values in
+    percent-encoded forms should be treated as blank strings.
+    A true value indicates that blanks should be retained as
+    blank strings.  The default false value indicates that
+    blank values are to be ignored and treated as if they were
+    not included.
+
+strict_parsing: flag indicating what to do with parsing errors.
+    If false (the default), errors are silently ignored.
+    If true, errors raise a ValueError exception.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.cgi.parse_multipart">
+    
+  </a>
+  <a name="parse_multipart">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse_multipart(fp, pdict, encoding="""utf-8""", errors="""replace"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse multipart input.
+
+Arguments:
+fp   : input file
+pdict: dictionary containing other parameters of content-type header
+encoding, errors: request encoding and error handler, passed to
+    FieldStorage
+
+Returns a dictionary just like parse_qs(): keys are the field names, each
+value is a list of values for that field. For non-file fields, the value
+is a list of strings.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.cgi._parseparam">
+    
+  </a>
+  <a name="_parseparam">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _parseparam(s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.cgi.parse_header">
+    
+  </a>
+  <a name="parse_header">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse_header(line):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse a Content-type like header.
+
+Return the main content-type and a dictionary of options.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.cgi.test">
+    
+  </a>
+  <a name="test">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test(environ=os.environ):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Robust test CGI script, usable as main program.
+
+Write minimal HTTP headers and dump all information provided to
+the script in HTML form.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.cgi.print_exception">
+    
+  </a>
+  <a name="print_exception">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    print_exception(type=None, value=None, tb=None, limit=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.cgi.print_environ">
+    
+  </a>
+  <a name="print_environ">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    print_environ(environ=os.environ):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Dump the shell environment as HTML.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.cgi.print_form">
+    
+  </a>
+  <a name="print_form">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    print_form(form):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Dump the contents of a form as HTML.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.cgi.print_directory">
+    
+  </a>
+  <a name="print_directory">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    print_directory():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Dump the current directory as HTML.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.cgi.print_arguments">
+    
+  </a>
+  <a name="print_arguments">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    print_arguments():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.cgi.print_environ_usage">
+    
+  </a>
+  <a name="print_environ_usage">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    print_environ_usage():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Dump a list of environment variables used by CGI as HTML.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.cgi.valid_boundary">
+    
+  </a>
+  <a name="valid_boundary">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    valid_boundary(s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

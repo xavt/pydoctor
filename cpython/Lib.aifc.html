@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.aifc : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.aifc.html" class="code" data-type="Module">aifc</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Stuff to parse AIFF-C and AIFF files.
+
+Unless explicitly stated otherwise, the description below is true
+both for AIFF-C files and AIFF files.
+
+An AIFF-C file has the following structure.
+
+  +-----------------+
+  | FORM            |
+  +-----------------+
+  | &lt;size&gt;          |
+  +----+------------+
+  |    | AIFC       |
+  |    +------------+
+  |    | &lt;chunks&gt;   |
+  |    |    .       |
+  |    |    .       |
+  |    |    .       |
+  +----+------------+
+
+An AIFF file has the string "AIFF" instead of "AIFC".
+
+A chunk consists of an identifier (4 bytes) followed by a size (4 bytes,
+big endian order), followed by the data.  The size field does not include
+the size of the 8 byte header.
+
+The following chunk types are recognized.
+
+  FVER
+      &lt;version number of AIFF-C defining document&gt; (AIFF-C only).
+  MARK
+      &lt;# of markers&gt; (2 bytes)
+      list of markers:
+          &lt;marker ID&gt; (2 bytes, must be &gt; 0)
+          &lt;position&gt; (4 bytes)
+          &lt;marker name&gt; ("pstring")
+  COMM
+      &lt;# of channels&gt; (2 bytes)
+      &lt;# of sound frames&gt; (4 bytes)
+      &lt;size of the samples&gt; (2 bytes)
+      &lt;sampling frequency&gt; (10 bytes, IEEE 80-bit extended
+          floating point)
+      in AIFF-C files only:
+      &lt;compression type&gt; (4 bytes)
+      &lt;human-readable version of compression type&gt; ("pstring")
+  SSND
+      &lt;offset&gt; (4 bytes, not used by this program)
+      &lt;blocksize&gt; (4 bytes, not used by this program)
+      &lt;sound data&gt;
+
+A pstring consists of 1 byte length, a string of characters, and 0 or 1
+byte pad to make the total length even.
+
+Usage.
+
+Reading AIFF files:
+  f = aifc.open(file, 'r')
+where file is either the name of a file or an open file pointer.
+The open file pointer must have methods read(), seek(), and close().
+In some types of audio files, if the setpos() method is not used,
+the seek() method is not necessary.
+
+This returns an instance of a class with the following public methods:
+  getnchannels()  -- returns number of audio channels (1 for
+             mono, 2 for stereo)
+  getsampwidth()  -- returns sample width in bytes
+  getframerate()  -- returns sampling frequency
+  getnframes()    -- returns number of audio frames
+  getcomptype()   -- returns compression type ('NONE' for AIFF files)
+  getcompname()   -- returns human-readable version of
+             compression type ('not compressed' for AIFF files)
+  getparams() -- returns a namedtuple consisting of all of the
+             above in the above order
+  getmarkers()    -- get the list of marks in the audio file or None
+             if there are no marks
+  getmark(id) -- get mark with the specified id (raises an error
+             if the mark does not exist)
+  readframes(n)   -- returns at most n frames of audio
+  rewind()    -- rewind to the beginning of the audio stream
+  setpos(pos) -- seek to the specified position
+  tell()      -- return the current position
+  close()     -- close the instance (make it unusable)
+The position returned by tell(), the position given to setpos() and
+the position of marks are all compatible and have nothing to do with
+the actual position in the file.
+The close() method is called automatically when the class instance
+is destroyed.
+
+Writing AIFF files:
+  f = aifc.open(file, 'w')
+where file is either the name of a file or an open file pointer.
+The open file pointer must have methods write(), tell(), seek(), and
+close().
+
+This returns an instance of a class with the following public methods:
+  aiff()      -- create an AIFF file (AIFF-C default)
+  aifc()      -- create an AIFF-C file
+  setnchannels(n) -- set the number of channels
+  setsampwidth(n) -- set the sample width
+  setframerate(n) -- set the frame rate
+  setnframes(n)   -- set the number of frames
+  setcomptype(type, name)
+          -- set the compression type and the
+             human-readable compression type
+  setparams(tuple)
+          -- set all parameters at once
+  setmark(id, pos, name)
+          -- add specified mark to the list of marks
+  tell()      -- return current position in output file (useful
+             in combination with setmark())
+  writeframesraw(data)
+          -- write audio frames without pathing up the
+             file header
+  writeframes(data)
+          -- write audio frames and patch up the file header
+  close()     -- patch up the file header and close the
+             output file
+You should set the parameters before the first writeframesraw or
+writeframes.  The total number of frames does not need to be set,
+but when it is set to the correct value, the header does not have to
+be patched up.
+It is best to first set all parameters, perhaps possibly the
+compression type, and then write audio frames using writeframesraw.
+When all frames have been written, either call writeframes(b'') or
+close() to patch up the sizes in the header.
+Marks can be added anytime.  If there are any marks, you must call
+close() after all frames have been written.
+The close() method is called automatically when the class instance
+is destroyed.
+
+When a file is opened with the extension '.aiff', an AIFF file is
+written, otherwise an AIFF-C file is written.  This default can be
+changed by calling aiff() or aifc() before the first writeframes or
+writeframesraw.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id196">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.aifc.Error.html" class="code" data-type="Class">Error</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.aifc.Aifc_read.html" class="code" data-type="Class">Aifc_read</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.aifc.Aifc_write.html" class="code" data-type="Class">Aifc_write</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.aifc.html#open" class="code" data-type="Function">open</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.aifc.html#fn" class="code" data-type="Variable">fn</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.aifc.html#gn" class="code" data-type="Variable">gn</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.aifc.html#data" class="code" data-type="Variable">data</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.aifc.html#_AIFC_version" class="code" data-type="Variable">_AIFC_version</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.aifc.html#_read_long" class="code" data-type="Function">_read_long</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.aifc.html#_read_ulong" class="code" data-type="Function">_read_ulong</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.aifc.html#_read_short" class="code" data-type="Function">_read_short</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.aifc.html#_read_ushort" class="code" data-type="Function">_read_ushort</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.aifc.html#_read_string" class="code" data-type="Function">_read_string</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.aifc.html#_HUGE_VAL" class="code" data-type="Variable">_HUGE_VAL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.aifc.html#_read_float" class="code" data-type="Function">_read_float</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.aifc.html#_write_short" class="code" data-type="Function">_write_short</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.aifc.html#_write_ushort" class="code" data-type="Function">_write_ushort</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.aifc.html#_write_long" class="code" data-type="Function">_write_long</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.aifc.html#_write_ulong" class="code" data-type="Function">_write_ulong</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.aifc.html#_write_string" class="code" data-type="Function">_write_string</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.aifc.html#_write_float" class="code" data-type="Function">_write_float</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.aifc.html#_aifc_params" class="code" data-type="Variable">_aifc_params</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable private">
+  
+  <a name="Lib.aifc._AIFC_version">
+    
+  </a>
+  <a name="_AIFC_version">
+    
+  </a>
+  <div class="functionHeader">
+    _AIFC_version =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.aifc._read_long">
+    
+  </a>
+  <a name="_read_long">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _read_long(file):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.aifc._read_ulong">
+    
+  </a>
+  <a name="_read_ulong">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _read_ulong(file):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.aifc._read_short">
+    
+  </a>
+  <a name="_read_short">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _read_short(file):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.aifc._read_ushort">
+    
+  </a>
+  <a name="_read_ushort">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _read_ushort(file):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.aifc._read_string">
+    
+  </a>
+  <a name="_read_string">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _read_string(file):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.aifc._HUGE_VAL">
+    
+  </a>
+  <a name="_HUGE_VAL">
+    
+  </a>
+  <div class="functionHeader">
+    _HUGE_VAL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>float</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.aifc._read_float">
+    
+  </a>
+  <a name="_read_float">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _read_float(f):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.aifc._write_short">
+    
+  </a>
+  <a name="_write_short">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _write_short(f, x):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.aifc._write_ushort">
+    
+  </a>
+  <a name="_write_ushort">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _write_ushort(f, x):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.aifc._write_long">
+    
+  </a>
+  <a name="_write_long">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _write_long(f, x):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.aifc._write_ulong">
+    
+  </a>
+  <a name="_write_ulong">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _write_ulong(f, x):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.aifc._write_string">
+    
+  </a>
+  <a name="_write_string">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _write_string(f, s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.aifc._write_float">
+    
+  </a>
+  <a name="_write_float">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _write_float(f, x):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.aifc._aifc_params">
+    
+  </a>
+  <a name="_aifc_params">
+    
+  </a>
+  <div class="functionHeader">
+    _aifc_params =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.aifc.open">
+    
+  </a>
+  <a name="open">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    open(f, mode=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.aifc.fn">
+    
+  </a>
+  <a name="fn">
+    
+  </a>
+  <div class="functionHeader">
+    fn =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.aifc.gn">
+    
+  </a>
+  <a name="gn">
+    
+  </a>
+  <div class="functionHeader">
+    gn =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.aifc.data">
+    
+  </a>
+  <a name="data">
+    
+  </a>
+  <div class="functionHeader">
+    data =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

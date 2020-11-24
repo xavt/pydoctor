@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.idlelib.macosx : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.idlelib.html" class="code" data-type="Package">idlelib</a>.<a href="Lib.idlelib.macosx.html" class="code" data-type="Module">macosx</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">A number of functions that enhance IDLE on macOS.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2387">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.macosx.html#isAquaTk" class="code" data-type="Function">isAquaTk</a></td>
+    <td><span>Returns True if IDLE is using a native OS X Tk (Cocoa or Carbon).</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.macosx.html#isCarbonTk" class="code" data-type="Function">isCarbonTk</a></td>
+    <td><span>Returns True if IDLE is using a Carbon Aqua Tk (instead of the newer Cocoa Aqua Tk).</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.macosx.html#isCocoaTk" class="code" data-type="Function">isCocoaTk</a></td>
+    <td><span>Returns True if IDLE is using a Cocoa Aqua Tk.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.macosx.html#isXQuartz" class="code" data-type="Function">isXQuartz</a></td>
+    <td><span>Returns True if IDLE is using an OS X X11 Tk.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.macosx.html#tkVersionWarning" class="code" data-type="Function">tkVersionWarning</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.macosx.html#readSystemPreferences" class="code" data-type="Function">readSystemPreferences</a></td>
+    <td><span>Fetch the macOS system preferences.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.macosx.html#preferTabsPreferenceWarning" class="code" data-type="Function">preferTabsPreferenceWarning</a></td>
+    <td><span>Warn if "Prefer tabs when opening documents" is set to "Always".</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.macosx.html#addOpenEventSupport" class="code" data-type="Function">addOpenEventSupport</a></td>
+    <td><span>This ensures that the application will respond to open AppleEvents, which makes is feasible to use IDLE as the default application for python files.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.macosx.html#hideTkConsole" class="code" data-type="Function">hideTkConsole</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.macosx.html#overrideRootMenu" class="code" data-type="Function">overrideRootMenu</a></td>
+    <td><span>Replace the Tk root menu by something that is more appropriate for IDLE with an Aqua Tk.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.macosx.html#fixb2context" class="code" data-type="Function">fixb2context</a></td>
+    <td><span>Removed bad AquaTk Button-2 (right) and Paste bindings.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.macosx.html#setupApp" class="code" data-type="Function">setupApp</a></td>
+    <td><span>Perform initial OS X customizations if needed. Called from pyshell.main() after initial calls to Tk()</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.macosx.html#_tk_type" class="code" data-type="Variable">_tk_type</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.macosx.html#_init_tk_type" class="code" data-type="Function">_init_tk_type</a></td>
+    <td><span>Initializes OS X Tk variant values for isAquaTk(), isCarbonTk(), isCocoaTk(), and isXQuartz().</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable private">
+  
+  <a name="Lib.idlelib.macosx._tk_type">
+    
+  </a>
+  <a name="_tk_type">
+    
+  </a>
+  <div class="functionHeader">
+    _tk_type =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.idlelib.macosx._init_tk_type">
+    
+  </a>
+  <a name="_init_tk_type">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _init_tk_type():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Initializes OS X Tk variant values for
+isAquaTk(), isCarbonTk(), isCocoaTk(), and isXQuartz().</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.macosx.isAquaTk">
+    
+  </a>
+  <a name="isAquaTk">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    isAquaTk():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns True if IDLE is using a native OS X Tk (Cocoa or Carbon).</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.macosx.isCarbonTk">
+    
+  </a>
+  <a name="isCarbonTk">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    isCarbonTk():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns True if IDLE is using a Carbon Aqua Tk (instead of the
+newer Cocoa Aqua Tk).</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.macosx.isCocoaTk">
+    
+  </a>
+  <a name="isCocoaTk">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    isCocoaTk():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns True if IDLE is using a Cocoa Aqua Tk.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.macosx.isXQuartz">
+    
+  </a>
+  <a name="isXQuartz">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    isXQuartz():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns True if IDLE is using an OS X X11 Tk.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.macosx.tkVersionWarning">
+    
+  </a>
+  <a name="tkVersionWarning">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tkVersionWarning(root):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns a string warning message if the Tk version in use appears to
+be one known to cause problems with IDLE.
+1. Apple Cocoa-based Tk 8.5.7 shipped with Mac OS X 10.6 is unusable.
+2. Apple Cocoa-based Tk 8.5.9 in OS X 10.7 and 10.8 is better but
+    can still crash unexpectedly.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.macosx.readSystemPreferences">
+    
+  </a>
+  <a name="readSystemPreferences">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    readSystemPreferences():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Fetch the macOS system preferences.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.macosx.preferTabsPreferenceWarning">
+    
+  </a>
+  <a name="preferTabsPreferenceWarning">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    preferTabsPreferenceWarning():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Warn if "Prefer tabs when opening documents" is set to "Always".</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.macosx.addOpenEventSupport">
+    
+  </a>
+  <a name="addOpenEventSupport">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    addOpenEventSupport(root, flist):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">This ensures that the application will respond to open AppleEvents, which
+makes is feasible to use IDLE as the default application for python files.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.macosx.hideTkConsole">
+    
+  </a>
+  <a name="hideTkConsole">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    hideTkConsole(root):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.macosx.overrideRootMenu">
+    
+  </a>
+  <a name="overrideRootMenu">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    overrideRootMenu(root, flist):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Replace the Tk root menu by something that is more appropriate for
+IDLE with an Aqua Tk.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.macosx.fixb2context">
+    
+  </a>
+  <a name="fixb2context">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    fixb2context(root):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Removed bad AquaTk Button-2 (right) and Paste bindings.
+
+They prevent context menu access and seem to be gone in AquaTk8.6.
+See issue #24801.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.macosx.setupApp">
+    
+  </a>
+  <a name="setupApp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setupApp(root, flist):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Perform initial OS X customizations if needed.
+Called from pyshell.main() after initial calls to Tk()
+
+There are currently three major versions of Tk in use on OS X:
+    1. Aqua Cocoa Tk (native default since OS X 10.6)
+    2. Aqua Carbon Tk (original native, 32-bit only, deprecated)
+    3. X11 (supported by some third-party distributors, deprecated)
+There are various differences among the three that affect IDLE
+behavior, primarily with menus, mouse key events, and accelerators.
+Some one-time customizations are performed here.
+Others are dynamically tested throughout idlelib by calls to the
+isAquaTk(), isCarbonTk(), isCocoaTk(), isXQuartz() functions which
+are initialized here as well.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

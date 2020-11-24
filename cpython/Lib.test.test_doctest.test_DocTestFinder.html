@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.test.test_doctest.test_DocTestFinder : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.test.html" class="code" data-type="Package">test</a>.<a href="Lib.test.test_doctest.html" class="code" data-type="Module">test_doctest</a>.<a href="Lib.test.test_doctest.test_DocTestFinder.html" class="code" data-type="Class">test_DocTestFinder</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.test.test_doctest.test_DocTestFinder:</code></p>
+        <p><a href="classIndex.html#Lib.test.test_doctest.test_DocTestFinder">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div class="undocumented">Undocumented</div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id5748">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_doctest.test_DocTestFinder.html#basics" class="code" data-type="Method">basics</a></td>
+    <td><span>Unit tests for the `DocTestFinder` class.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_doctest.test_DocTestFinder.html#non_Python_modules" class="code" data-type="Method">non_Python_modules</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.test.test_doctest.test_DocTestFinder.basics">
+    
+  </a>
+  <a name="basics">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    basics():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Unit tests for the `DocTestFinder` class.
+
+DocTestFinder is used to extract DocTests from an object's docstring
+and the docstrings of its contained objects.  It can be used with
+modules, functions, classes, methods, staticmethods, classmethods, and
+properties.
+
+Finding Tests in Functions
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+For a function whose docstring contains examples, DocTestFinder.find()
+will return a single test (for that function's docstring):
+
+    &gt;&gt;&gt; finder = doctest.DocTestFinder()
+
+We'll simulate a __file__ attr that ends in pyc:
+
+    &gt;&gt;&gt; import test.test_doctest
+    &gt;&gt;&gt; old = test.test_doctest.__file__
+    &gt;&gt;&gt; test.test_doctest.__file__ = 'test_doctest.pyc'
+
+    &gt;&gt;&gt; tests = finder.find(sample_func)
+
+    &gt;&gt;&gt; print(tests)  # doctest: +ELLIPSIS
+    [&lt;DocTest sample_func from ...:27 (1 example)&gt;]
+
+The exact name depends on how test_doctest was invoked, so allow for
+leading path components.
+
+    &gt;&gt;&gt; tests[0].filename # doctest: +ELLIPSIS
+    '...test_doctest.py'
+
+    &gt;&gt;&gt; test.test_doctest.__file__ = old
+
+
+    &gt;&gt;&gt; e = tests[0].examples[0]
+    &gt;&gt;&gt; (e.source, e.want, e.lineno)
+    ('print(sample_func(22))\n', '44\n', 3)
+
+By default, tests are created for objects with no docstring:
+
+    &gt;&gt;&gt; def no_docstring(v):
+    ...     pass
+    &gt;&gt;&gt; finder.find(no_docstring)
+    []
+
+However, the optional argument `exclude_empty` to the DocTestFinder
+constructor can be used to exclude tests for objects with empty
+docstrings:
+
+    &gt;&gt;&gt; def no_docstring(v):
+    ...     pass
+    &gt;&gt;&gt; excl_empty_finder = doctest.DocTestFinder(exclude_empty=True)
+    &gt;&gt;&gt; excl_empty_finder.find(no_docstring)
+    []
+
+If the function has a docstring with no examples, then a test with no
+examples is returned.  (This lets `DocTestRunner` collect statistics
+about which functions have no tests -- but is that useful?  And should
+an empty test also be created when there's no docstring?)
+
+    &gt;&gt;&gt; def no_examples(v):
+    ...     ''' no doctest examples '''
+    &gt;&gt;&gt; finder.find(no_examples) # doctest: +ELLIPSIS
+    [&lt;DocTest no_examples from ...:1 (no examples)&gt;]
+
+Finding Tests in Classes
+~~~~~~~~~~~~~~~~~~~~~~~~
+For a class, DocTestFinder will create a test for the class's
+docstring, and will recursively explore its contents, including
+methods, classmethods, staticmethods, properties, and nested classes.
+
+    &gt;&gt;&gt; finder = doctest.DocTestFinder()
+    &gt;&gt;&gt; tests = finder.find(SampleClass)
+    &gt;&gt;&gt; for t in tests:
+    ...     print('%2s  %s' % (len(t.examples), t.name))
+     3  SampleClass
+     3  SampleClass.NestedClass
+     1  SampleClass.NestedClass.__init__
+     1  SampleClass.__init__
+     2  SampleClass.a_classmethod
+     1  SampleClass.a_property
+     1  SampleClass.a_staticmethod
+     1  SampleClass.double
+     1  SampleClass.get
+
+New-style classes are also supported:
+
+    &gt;&gt;&gt; tests = finder.find(SampleNewStyleClass)
+    &gt;&gt;&gt; for t in tests:
+    ...     print('%2s  %s' % (len(t.examples), t.name))
+     1  SampleNewStyleClass
+     1  SampleNewStyleClass.__init__
+     1  SampleNewStyleClass.double
+     1  SampleNewStyleClass.get
+
+Finding Tests in Modules
+~~~~~~~~~~~~~~~~~~~~~~~~
+For a module, DocTestFinder will create a test for the class's
+docstring, and will recursively explore its contents, including
+functions, classes, and the `__test__` dictionary, if it exists:
+
+    &gt;&gt;&gt; # A module
+    &gt;&gt;&gt; import types
+    &gt;&gt;&gt; m = types.ModuleType('some_module')
+    &gt;&gt;&gt; def triple(val):
+    ...     '''
+    ...     &gt;&gt;&gt; print(triple(11))
+    ...     33
+    ...     '''
+    ...     return val*3
+    &gt;&gt;&gt; m.__dict__.update({
+    ...     'sample_func': sample_func,
+    ...     'SampleClass': SampleClass,
+    ...     '__doc__': '''
+    ...         Module docstring.
+    ...             &gt;&gt;&gt; print('module')
+    ...             module
+    ...         ''',
+    ...     '__test__': {
+    ...         'd': '&gt;&gt;&gt; print(6)\n6\n&gt;&gt;&gt; print(7)\n7\n',
+    ...         'c': triple}})
+
+    &gt;&gt;&gt; finder = doctest.DocTestFinder()
+    &gt;&gt;&gt; # Use module=test.test_doctest, to prevent doctest from
+    &gt;&gt;&gt; # ignoring the objects since they weren't defined in m.
+    &gt;&gt;&gt; import test.test_doctest
+    &gt;&gt;&gt; tests = finder.find(m, module=test.test_doctest)
+    &gt;&gt;&gt; for t in tests:
+    ...     print('%2s  %s' % (len(t.examples), t.name))
+     1  some_module
+     3  some_module.SampleClass
+     3  some_module.SampleClass.NestedClass
+     1  some_module.SampleClass.NestedClass.__init__
+     1  some_module.SampleClass.__init__
+     2  some_module.SampleClass.a_classmethod
+     1  some_module.SampleClass.a_property
+     1  some_module.SampleClass.a_staticmethod
+     1  some_module.SampleClass.double
+     1  some_module.SampleClass.get
+     1  some_module.__test__.c
+     2  some_module.__test__.d
+     1  some_module.sample_func
+
+Duplicate Removal
+~~~~~~~~~~~~~~~~~
+If a single object is listed twice (under different names), then tests
+will only be generated for it once:
+
+    &gt;&gt;&gt; from test import doctest_aliases
+    &gt;&gt;&gt; assert doctest_aliases.TwoNames.f
+    &gt;&gt;&gt; assert doctest_aliases.TwoNames.g
+    &gt;&gt;&gt; tests = excl_empty_finder.find(doctest_aliases)
+    &gt;&gt;&gt; print(len(tests))
+    2
+    &gt;&gt;&gt; print(tests[0].name)
+    test.doctest_aliases.TwoNames
+
+    TwoNames.f and TwoNames.g are bound to the same object.
+    We can't guess which will be found in doctest's traversal of
+    TwoNames.__dict__ first, so we have to allow for either.
+
+    &gt;&gt;&gt; tests[1].name.split('.')[-1] in ['f', 'g']
+    True
+
+Empty Tests
+~~~~~~~~~~~
+By default, an object with no doctests doesn't create any tests:
+
+    &gt;&gt;&gt; tests = doctest.DocTestFinder().find(SampleClass)
+    &gt;&gt;&gt; for t in tests:
+    ...     print('%2s  %s' % (len(t.examples), t.name))
+     3  SampleClass
+     3  SampleClass.NestedClass
+     1  SampleClass.NestedClass.__init__
+     1  SampleClass.__init__
+     2  SampleClass.a_classmethod
+     1  SampleClass.a_property
+     1  SampleClass.a_staticmethod
+     1  SampleClass.double
+     1  SampleClass.get
+
+By default, that excluded objects with no doctests.  exclude_empty=False
+tells it to include (empty) tests for objects with no doctests.  This feature
+is really to support backward compatibility in what doctest.master.summarize()
+displays.
+
+    &gt;&gt;&gt; tests = doctest.DocTestFinder(exclude_empty=False).find(SampleClass)
+    &gt;&gt;&gt; for t in tests:
+    ...     print('%2s  %s' % (len(t.examples), t.name))
+     3  SampleClass
+     3  SampleClass.NestedClass
+     1  SampleClass.NestedClass.__init__
+     0  SampleClass.NestedClass.get
+     0  SampleClass.NestedClass.square
+     1  SampleClass.__init__
+     2  SampleClass.a_classmethod
+     1  SampleClass.a_property
+     1  SampleClass.a_staticmethod
+     1  SampleClass.double
+     1  SampleClass.get
+
+Turning off Recursion
+~~~~~~~~~~~~~~~~~~~~~
+DocTestFinder can be told not to look for tests in contained objects
+using the `recurse` flag:
+
+    &gt;&gt;&gt; tests = doctest.DocTestFinder(recurse=False).find(SampleClass)
+    &gt;&gt;&gt; for t in tests:
+    ...     print('%2s  %s' % (len(t.examples), t.name))
+     3  SampleClass
+
+Line numbers
+~~~~~~~~~~~~
+DocTestFinder finds the line number of each example:
+
+    &gt;&gt;&gt; def f(x):
+    ...     '''
+    ...     &gt;&gt;&gt; x = 12
+    ...
+    ...     some text
+    ...
+    ...     &gt;&gt;&gt; # examples are not created for comments &amp; bare prompts.
+    ...     &gt;&gt;&gt;
+    ...     ...
+    ...
+    ...     &gt;&gt;&gt; for x in range(10):
+    ...     ...     print(x, end=' ')
+    ...     0 1 2 3 4 5 6 7 8 9
+    ...     &gt;&gt;&gt; x//2
+    ...     6
+    ...     '''
+    &gt;&gt;&gt; test = doctest.DocTestFinder().find(f)[0]
+    &gt;&gt;&gt; [e.lineno for e in test.examples]
+    [1, 9, 12]</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_doctest.test_DocTestFinder.non_Python_modules">
+    
+  </a>
+  <a name="non_Python_modules">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    non_Python_modules():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Finding Doctests in Modules Not Written in Python
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DocTestFinder can also find doctests in most modules not written in Python.
+We'll use builtins as an example, since it almost certainly isn't written in
+plain ol' Python and is guaranteed to be available.
+
+    &gt;&gt;&gt; import builtins
+    &gt;&gt;&gt; tests = doctest.DocTestFinder().find(builtins)
+    &gt;&gt;&gt; 816 &lt; len(tests) &lt; 836 # approximate number of objects with docstrings
+    True
+    &gt;&gt;&gt; real_tests = [t for t in tests if len(t.examples) &gt; 0]
+    &gt;&gt;&gt; len(real_tests) # objects that actually have doctests
+    14
+    &gt;&gt;&gt; for t in real_tests:
+    ...     print('{}  {}'.format(len(t.examples), t.name))
+    ...
+    1  builtins.bin
+    5  builtins.bytearray.hex
+    5  builtins.bytes.hex
+    3  builtins.float.as_integer_ratio
+    2  builtins.float.fromhex
+    2  builtins.float.hex
+    1  builtins.hex
+    1  builtins.int
+    3  builtins.int.as_integer_ratio
+    2  builtins.int.bit_count
+    2  builtins.int.bit_length
+    5  builtins.memoryview.hex
+    1  builtins.oct
+    1  builtins.zip
+
+Note here that 'bin', 'oct', and 'hex' are functions; 'float.as_integer_ratio',
+'float.hex', and 'int.bit_length' are methods; 'float.fromhex' is a classmethod,
+and 'int' is a type.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

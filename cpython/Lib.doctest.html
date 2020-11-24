@@ -1,0 +1,1532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.doctest : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.doctest.html" class="code" data-type="Module">doctest</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Module doctest -- a framework for running examples in docstrings.
+
+In simplest use, end each module M to be tested with:
+
+def _test():
+    import doctest
+    doctest.testmod()
+
+if __name__ == "__main__":
+    _test()
+
+Then running the module as a script will cause the examples in the
+docstrings to get executed and verified:
+
+python M.py
+
+This won't display anything unless an example fails, in which case the
+failing example(s) and the cause(s) of the failure(s) are printed to stdout
+(why not stderr? because stderr is a lame hack &lt;0.2 wink&gt;), and the final
+line of output is "Test failed.".
+
+Run it with the -v switch instead:
+
+python M.py -v
+
+and a detailed report of all examples tried is printed to stdout, along
+with assorted summaries at the end.
+
+You can force verbose mode by passing "verbose=True" to testmod, or prohibit
+it by passing "verbose=False".  In either of those cases, sys.argv is not
+examined by testmod.
+
+There are a variety of other ways to run doctests, including integration
+with the unittest framework, and support for running non-Python text
+files containing doctests.  There are also many ways to override parts
+of doctest's default behaviors.  See the Library Reference Manual for
+details.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id1112">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.doctest.html#__docformat__" class="code" data-type="Variable">__docformat__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.doctest.html#TestResults" class="code" data-type="Variable">TestResults</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.doctest.html#OPTIONFLAGS_BY_NAME" class="code" data-type="Variable">OPTIONFLAGS_BY_NAME</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.doctest.html#register_optionflag" class="code" data-type="Function">register_optionflag</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.doctest.html#DONT_ACCEPT_TRUE_FOR_1" class="code" data-type="Variable">DONT_ACCEPT_TRUE_FOR_1</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.doctest.html#DONT_ACCEPT_BLANKLINE" class="code" data-type="Variable">DONT_ACCEPT_BLANKLINE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.doctest.html#NORMALIZE_WHITESPACE" class="code" data-type="Variable">NORMALIZE_WHITESPACE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.doctest.html#ELLIPSIS" class="code" data-type="Variable">ELLIPSIS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.doctest.html#SKIP" class="code" data-type="Variable">SKIP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.doctest.html#IGNORE_EXCEPTION_DETAIL" class="code" data-type="Variable">IGNORE_EXCEPTION_DETAIL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.doctest.html#COMPARISON_FLAGS" class="code" data-type="Variable">COMPARISON_FLAGS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.doctest.html#REPORT_UDIFF" class="code" data-type="Variable">REPORT_UDIFF</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.doctest.html#REPORT_CDIFF" class="code" data-type="Variable">REPORT_CDIFF</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.doctest.html#REPORT_NDIFF" class="code" data-type="Variable">REPORT_NDIFF</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.doctest.html#REPORT_ONLY_FIRST_FAILURE" class="code" data-type="Variable">REPORT_ONLY_FIRST_FAILURE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.doctest.html#FAIL_FAST" class="code" data-type="Variable">FAIL_FAST</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.doctest.html#REPORTING_FLAGS" class="code" data-type="Variable">REPORTING_FLAGS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.doctest.html#BLANKLINE_MARKER" class="code" data-type="Variable">BLANKLINE_MARKER</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.doctest.html#ELLIPSIS_MARKER" class="code" data-type="Variable">ELLIPSIS_MARKER</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.doctest.Example.html" class="code" data-type="Class">Example</a></td>
+    <td><span>A single doctest example, consisting of source code and expected output.  `Example` defines the following attributes:</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.doctest.DocTest.html" class="code" data-type="Class">DocTest</a></td>
+    <td><span>A collection of doctest examples that should be run in a single namespace.  Each `DocTest` defines the following attributes:</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.doctest.DocTestParser.html" class="code" data-type="Class">DocTestParser</a></td>
+    <td><span>A class used to parse strings containing doctest examples.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.doctest.DocTestFinder.html" class="code" data-type="Class">DocTestFinder</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.doctest.DocTestRunner.html" class="code" data-type="Class">DocTestRunner</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.doctest.OutputChecker.html" class="code" data-type="Class">OutputChecker</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.doctest.DocTestFailure.html" class="code" data-type="Class">DocTestFailure</a></td>
+    <td><span>A DocTest example has failed in debugging mode.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.doctest.UnexpectedException.html" class="code" data-type="Class">UnexpectedException</a></td>
+    <td><span>A DocTest example has encountered an unexpected exception</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.doctest.DebugRunner.html" class="code" data-type="Class">DebugRunner</a></td>
+    <td><span>Run doc tests but raise an exception as soon as there is a failure.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.doctest.html#master" class="code" data-type="Variable">master</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.doctest.html#testmod" class="code" data-type="Function">testmod</a></td>
+    <td><span>m=None, name=None, globs=None, verbose=None, report=True, optionflags=0, extraglobs=None, raise_on_error=False, exclude_empty=False</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.doctest.html#testfile" class="code" data-type="Function">testfile</a></td>
+    <td><span>Test examples in the given file.  Return (#failures, #tests).</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.doctest.html#run_docstring_examples" class="code" data-type="Function">run_docstring_examples</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.doctest.html#set_unittest_reportflags" class="code" data-type="Function">set_unittest_reportflags</a></td>
+    <td><span>Sets the unittest option flags.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.doctest.DocTestCase.html" class="code" data-type="Class">DocTestCase</a></td>
+    <td><span class="undocumented">No class0/5 instance variables docstring; , 1/11 methods documented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.doctest.SkipDocTestCase.html" class="code" data-type="Class">SkipDocTestCase</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.doctest.html#DocTestSuite" class="code" data-type="Function">DocTestSuite</a></td>
+    <td><span>Convert doctest tests for a module to a unittest test suite.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.doctest.DocFileCase.html" class="code" data-type="Class">DocFileCase</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.doctest.html#DocFileTest" class="code" data-type="Function">DocFileTest</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.doctest.html#DocFileSuite" class="code" data-type="Function">DocFileSuite</a></td>
+    <td><span>A unittest suite for one or more doctest files.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.doctest.html#script_from_examples" class="code" data-type="Function">script_from_examples</a></td>
+    <td><span>Extract script from text with examples.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.doctest.html#testsource" class="code" data-type="Function">testsource</a></td>
+    <td><span>Extract the test sources from a doctest docstring as a script.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.doctest.html#debug_src" class="code" data-type="Function">debug_src</a></td>
+    <td><span>Debug a single doctest docstring, in argument `src`'</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.doctest.html#debug_script" class="code" data-type="Function">debug_script</a></td>
+    <td><span>Debug a test script.  `src` is the script, as a string.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.doctest.html#debug" class="code" data-type="Function">debug</a></td>
+    <td><span>Debug a single doctest docstring.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.doctest.html#__test__" class="code" data-type="Variable">__test__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.doctest.html#_extract_future_flags" class="code" data-type="Function">_extract_future_flags</a></td>
+    <td><span>Return the compiler-flags associated with the future features that have been imported into the given namespace (globs).</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.doctest.html#_normalize_module" class="code" data-type="Function">_normalize_module</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.doctest.html#_newline_convert" class="code" data-type="Function">_newline_convert</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.doctest.html#_load_testfile" class="code" data-type="Function">_load_testfile</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.doctest.html#_indent" class="code" data-type="Function">_indent</a></td>
+    <td><span>Add the given number of space characters to the beginning of every non-blank line in `s`, and return the result.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.doctest.html#_exception_traceback" class="code" data-type="Function">_exception_traceback</a></td>
+    <td><span>Return a string containing a traceback message for the given exc_info tuple (as returned by sys.exc_info()).</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.doctest._SpoofOut.html" class="code" data-type="Class">_SpoofOut</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.doctest.html#_ellipsis_match" class="code" data-type="Function">_ellipsis_match</a></td>
+    <td><span>Essentially the only subtle case: &gt;&gt;&gt; _ellipsis_match('aa...aa', 'aaa') False</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.doctest.html#_comment_line" class="code" data-type="Function">_comment_line</a></td>
+    <td><span>Return a commented form of the given line</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.doctest.html#_strip_exception_details" class="code" data-type="Function">_strip_exception_details</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.doctest._OutputRedirectingPdb.html" class="code" data-type="Class">_OutputRedirectingPdb</a></td>
+    <td><span>A specialized version of the python debugger that redirects stdout to a given stream when interacting with the user.  Stdout is *not* redirected when traced code is executed.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.doctest.html#_module_relative_path" class="code" data-type="Function">_module_relative_path</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.doctest.html#_unittest_reportflags" class="code" data-type="Variable">_unittest_reportflags</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.doctest._DocTestSuite.html" class="code" data-type="Class">_DocTestSuite</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.doctest._TestClass.html" class="code" data-type="Class">_TestClass</a></td>
+    <td><span>A pointless class, for sanity-checking of docstring testing.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.doctest.html#_test" class="code" data-type="Function">_test</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.doctest.__docformat__">
+    
+  </a>
+  <a name="__docformat__">
+    
+  </a>
+  <div class="functionHeader">
+    __docformat__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.doctest.TestResults">
+    
+  </a>
+  <a name="TestResults">
+    
+  </a>
+  <div class="functionHeader">
+    TestResults =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.doctest.OPTIONFLAGS_BY_NAME">
+    
+  </a>
+  <a name="OPTIONFLAGS_BY_NAME">
+    
+  </a>
+  <div class="functionHeader">
+    OPTIONFLAGS_BY_NAME =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.doctest.register_optionflag">
+    
+  </a>
+  <a name="register_optionflag">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    register_optionflag(name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.doctest.DONT_ACCEPT_TRUE_FOR_1">
+    
+  </a>
+  <a name="DONT_ACCEPT_TRUE_FOR_1">
+    
+  </a>
+  <div class="functionHeader">
+    DONT_ACCEPT_TRUE_FOR_1 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.doctest.DONT_ACCEPT_BLANKLINE">
+    
+  </a>
+  <a name="DONT_ACCEPT_BLANKLINE">
+    
+  </a>
+  <div class="functionHeader">
+    DONT_ACCEPT_BLANKLINE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.doctest.NORMALIZE_WHITESPACE">
+    
+  </a>
+  <a name="NORMALIZE_WHITESPACE">
+    
+  </a>
+  <div class="functionHeader">
+    NORMALIZE_WHITESPACE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.doctest.ELLIPSIS">
+    
+  </a>
+  <a name="ELLIPSIS">
+    
+  </a>
+  <div class="functionHeader">
+    ELLIPSIS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.doctest.SKIP">
+    
+  </a>
+  <a name="SKIP">
+    
+  </a>
+  <div class="functionHeader">
+    SKIP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.doctest.IGNORE_EXCEPTION_DETAIL">
+    
+  </a>
+  <a name="IGNORE_EXCEPTION_DETAIL">
+    
+  </a>
+  <div class="functionHeader">
+    IGNORE_EXCEPTION_DETAIL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.doctest.COMPARISON_FLAGS">
+    
+  </a>
+  <a name="COMPARISON_FLAGS">
+    
+  </a>
+  <div class="functionHeader">
+    COMPARISON_FLAGS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.doctest.REPORT_UDIFF">
+    
+  </a>
+  <a name="REPORT_UDIFF">
+    
+  </a>
+  <div class="functionHeader">
+    REPORT_UDIFF =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.doctest.REPORT_CDIFF">
+    
+  </a>
+  <a name="REPORT_CDIFF">
+    
+  </a>
+  <div class="functionHeader">
+    REPORT_CDIFF =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.doctest.REPORT_NDIFF">
+    
+  </a>
+  <a name="REPORT_NDIFF">
+    
+  </a>
+  <div class="functionHeader">
+    REPORT_NDIFF =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.doctest.REPORT_ONLY_FIRST_FAILURE">
+    
+  </a>
+  <a name="REPORT_ONLY_FIRST_FAILURE">
+    
+  </a>
+  <div class="functionHeader">
+    REPORT_ONLY_FIRST_FAILURE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.doctest.FAIL_FAST">
+    
+  </a>
+  <a name="FAIL_FAST">
+    
+  </a>
+  <div class="functionHeader">
+    FAIL_FAST =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.doctest.REPORTING_FLAGS">
+    
+  </a>
+  <a name="REPORTING_FLAGS">
+    
+  </a>
+  <div class="functionHeader">
+    REPORTING_FLAGS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.doctest.BLANKLINE_MARKER">
+    
+  </a>
+  <a name="BLANKLINE_MARKER">
+    
+  </a>
+  <div class="functionHeader">
+    BLANKLINE_MARKER =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.doctest.ELLIPSIS_MARKER">
+    
+  </a>
+  <a name="ELLIPSIS_MARKER">
+    
+  </a>
+  <div class="functionHeader">
+    ELLIPSIS_MARKER =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.doctest._extract_future_flags">
+    
+  </a>
+  <a name="_extract_future_flags">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _extract_future_flags(globs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the compiler-flags associated with the future features that
+have been imported into the given namespace (globs).</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.doctest._normalize_module">
+    
+  </a>
+  <a name="_normalize_module">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _normalize_module(module, depth=2):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the module specified by `module`.  In particular:
+  - If `module` is a module, then return module.
+  - If `module` is a string, then import and return the
+    module with that name.
+  - If `module` is None, then return the calling module.
+    The calling module is assumed to be the module of
+    the stack frame at the given depth in the call stack.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.doctest._newline_convert">
+    
+  </a>
+  <a name="_newline_convert">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _newline_convert(data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.doctest._load_testfile">
+    
+  </a>
+  <a name="_load_testfile">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _load_testfile(filename, package, module_relative, encoding):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.doctest._indent">
+    
+  </a>
+  <a name="_indent">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _indent(s, indent=4):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Add the given number of space characters to the beginning of
+every non-blank line in `s`, and return the result.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.doctest._exception_traceback">
+    
+  </a>
+  <a name="_exception_traceback">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _exception_traceback(exc_info):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a string containing a traceback message for the given
+exc_info tuple (as returned by sys.exc_info()).</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.doctest._ellipsis_match">
+    
+  </a>
+  <a name="_ellipsis_match">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _ellipsis_match(want, got):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Essentially the only subtle case:
+&gt;&gt;&gt; _ellipsis_match('aa...aa', 'aaa')
+False</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.doctest._comment_line">
+    
+  </a>
+  <a name="_comment_line">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _comment_line(line):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a commented form of the given line</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.doctest._strip_exception_details">
+    
+  </a>
+  <a name="_strip_exception_details">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _strip_exception_details(msg):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.doctest._module_relative_path">
+    
+  </a>
+  <a name="_module_relative_path">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _module_relative_path(module, test_path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.doctest.master">
+    
+  </a>
+  <a name="master">
+    
+  </a>
+  <div class="functionHeader">
+    master =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.doctest.testmod">
+    
+  </a>
+  <a name="testmod">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    testmod(m=None, name=None, globs=None, verbose=None, report=(True), optionflags=0, extraglobs=None, raise_on_error=(False), exclude_empty=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">m=None, name=None, globs=None, verbose=None, report=True,
+   optionflags=0, extraglobs=None, raise_on_error=False,
+   exclude_empty=False
+
+Test examples in docstrings in functions and classes reachable
+from module m (or the current module if m is not supplied), starting
+with m.__doc__.
+
+Also test examples reachable from dict m.__test__ if it exists and is
+not None.  m.__test__ maps names to functions, classes and strings;
+function and class docstrings are tested even if the name is private;
+strings are tested directly, as if they were docstrings.
+
+Return (#failures, #tests).
+
+See help(doctest) for an overview.
+
+Optional keyword arg "name" gives the name of the module; by default
+use m.__name__.
+
+Optional keyword arg "globs" gives a dict to be used as the globals
+when executing examples; by default, use m.__dict__.  A copy of this
+dict is actually used for each docstring, so that each docstring's
+examples start with a clean slate.
+
+Optional keyword arg "extraglobs" gives a dictionary that should be
+merged into the globals that are used to execute examples.  By
+default, no extra globals are used.  This is new in 2.4.
+
+Optional keyword arg "verbose" prints lots of stuff if true, prints
+only failures if false; by default, it's true iff "-v" is in sys.argv.
+
+Optional keyword arg "report" prints a summary at the end when true,
+else prints nothing at the end.  In verbose mode, the summary is
+detailed, else very brief (in fact, empty if all tests passed).
+
+Optional keyword arg "optionflags" or's together module constants,
+and defaults to 0.  This is new in 2.3.  Possible values (see the
+docs for details):
+
+    DONT_ACCEPT_TRUE_FOR_1
+    DONT_ACCEPT_BLANKLINE
+    NORMALIZE_WHITESPACE
+    ELLIPSIS
+    SKIP
+    IGNORE_EXCEPTION_DETAIL
+    REPORT_UDIFF
+    REPORT_CDIFF
+    REPORT_NDIFF
+    REPORT_ONLY_FIRST_FAILURE
+
+Optional keyword arg "raise_on_error" raises an exception on the
+first unexpected exception or failure. This allows failures to be
+post-mortem debugged.
+
+Advanced tomfoolery:  testmod runs methods of a local instance of
+class doctest.Tester, then merges the results into (or creates)
+global Tester instance doctest.master.  Methods of doctest.master
+can be called directly too, if you want to do something unusual.
+Passing report=0 to testmod is especially useful then, to delay
+displaying a summary.  Invoke doctest.master.summarize(verbose)
+when you're done fiddling.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.doctest.testfile">
+    
+  </a>
+  <a name="testfile">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    testfile(filename, module_relative=(True), name=None, package=None, globs=None, verbose=None, report=(True), optionflags=0, extraglobs=None, raise_on_error=(False), parser=DocTestParser(), encoding=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Test examples in the given file.  Return (#failures, #tests).
+
+Optional keyword arg "module_relative" specifies how filenames
+should be interpreted:
+
+  - If "module_relative" is True (the default), then "filename"
+     specifies a module-relative path.  By default, this path is
+     relative to the calling module's directory; but if the
+     "package" argument is specified, then it is relative to that
+     package.  To ensure os-independence, "filename" should use
+     "/" characters to separate path segments, and should not
+     be an absolute path (i.e., it may not begin with "/").
+
+  - If "module_relative" is False, then "filename" specifies an
+    os-specific path.  The path may be absolute or relative (to
+    the current working directory).
+
+Optional keyword arg "name" gives the name of the test; by default
+use the file's basename.
+
+Optional keyword argument "package" is a Python package or the
+name of a Python package whose directory should be used as the
+base directory for a module relative filename.  If no package is
+specified, then the calling module's directory is used as the base
+directory for module relative filenames.  It is an error to
+specify "package" if "module_relative" is False.
+
+Optional keyword arg "globs" gives a dict to be used as the globals
+when executing examples; by default, use {}.  A copy of this dict
+is actually used for each docstring, so that each docstring's
+examples start with a clean slate.
+
+Optional keyword arg "extraglobs" gives a dictionary that should be
+merged into the globals that are used to execute examples.  By
+default, no extra globals are used.
+
+Optional keyword arg "verbose" prints lots of stuff if true, prints
+only failures if false; by default, it's true iff "-v" is in sys.argv.
+
+Optional keyword arg "report" prints a summary at the end when true,
+else prints nothing at the end.  In verbose mode, the summary is
+detailed, else very brief (in fact, empty if all tests passed).
+
+Optional keyword arg "optionflags" or's together module constants,
+and defaults to 0.  Possible values (see the docs for details):
+
+    DONT_ACCEPT_TRUE_FOR_1
+    DONT_ACCEPT_BLANKLINE
+    NORMALIZE_WHITESPACE
+    ELLIPSIS
+    SKIP
+    IGNORE_EXCEPTION_DETAIL
+    REPORT_UDIFF
+    REPORT_CDIFF
+    REPORT_NDIFF
+    REPORT_ONLY_FIRST_FAILURE
+
+Optional keyword arg "raise_on_error" raises an exception on the
+first unexpected exception or failure. This allows failures to be
+post-mortem debugged.
+
+Optional keyword arg "parser" specifies a DocTestParser (or
+subclass) that should be used to extract tests from the files.
+
+Optional keyword arg "encoding" specifies an encoding that should
+be used to convert the file to unicode.
+
+Advanced tomfoolery:  testmod runs methods of a local instance of
+class doctest.Tester, then merges the results into (or creates)
+global Tester instance doctest.master.  Methods of doctest.master
+can be called directly too, if you want to do something unusual.
+Passing report=0 to testmod is especially useful then, to delay
+displaying a summary.  Invoke doctest.master.summarize(verbose)
+when you're done fiddling.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.doctest.run_docstring_examples">
+    
+  </a>
+  <a name="run_docstring_examples">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    run_docstring_examples(f, globs, verbose=(False), name="""NoName""", compileflags=None, optionflags=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Test examples in the given object's docstring (`f`), using `globs`
+as globals.  Optional argument `name` is used in failure messages.
+If the optional argument `verbose` is true, then generate output
+even if there are no failures.
+
+`compileflags` gives the set of flags that should be used by the
+Python compiler when running the examples.  If not specified, then
+it will default to the set of future-import flags that apply to
+`globs`.
+
+Optional keyword arg `optionflags` specifies options for the
+testing and output.  See the documentation for `testmod` for more
+information.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.doctest._unittest_reportflags">
+    
+  </a>
+  <a name="_unittest_reportflags">
+    
+  </a>
+  <div class="functionHeader">
+    _unittest_reportflags =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.doctest.set_unittest_reportflags">
+    
+  </a>
+  <a name="set_unittest_reportflags">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_unittest_reportflags(flags):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Sets the unittest option flags.
+
+The old flag is returned so that a runner could restore the old
+value if it wished to:
+
+  &gt;&gt;&gt; import doctest
+  &gt;&gt;&gt; old = doctest._unittest_reportflags
+  &gt;&gt;&gt; doctest.set_unittest_reportflags(REPORT_NDIFF |
+  ...                          REPORT_ONLY_FIRST_FAILURE) == old
+  True
+
+  &gt;&gt;&gt; doctest._unittest_reportflags == (REPORT_NDIFF |
+  ...                                   REPORT_ONLY_FIRST_FAILURE)
+  True
+
+Only reporting flags can be set:
+
+  &gt;&gt;&gt; doctest.set_unittest_reportflags(ELLIPSIS)
+  Traceback (most recent call last):
+  ...
+  ValueError: ('Only reporting flags allowed', 8)
+
+  &gt;&gt;&gt; doctest.set_unittest_reportflags(old) == (REPORT_NDIFF |
+  ...                                   REPORT_ONLY_FIRST_FAILURE)
+  True</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.doctest.DocTestSuite">
+    
+  </a>
+  <a name="DocTestSuite">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    DocTestSuite(module=None, globs=None, extraglobs=None, test_finder=None, **options):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convert doctest tests for a module to a unittest test suite.
+
+This converts each documentation string in a module that
+contains doctest tests to a unittest test case.  If any of the
+tests in a doc string fail, then the test case fails.  An exception
+is raised showing the name of the file containing the test and a
+(sometimes approximate) line number.
+
+The `module` argument provides the module to be tested.  The argument
+can be either a module or a module name.
+
+If no argument is given, the calling module is used.
+
+A number of options may be provided as keyword arguments:
+
+setUp
+  A set-up function.  This is called before running the
+  tests in each file. The setUp function will be passed a DocTest
+  object.  The setUp function can access the test globals as the
+  globs attribute of the test passed.
+
+tearDown
+  A tear-down function.  This is called after running the
+  tests in each file.  The tearDown function will be passed a DocTest
+  object.  The tearDown function can access the test globals as the
+  globs attribute of the test passed.
+
+globs
+  A dictionary containing initial global variables for the tests.
+
+optionflags
+   A set of doctest option flags expressed as an integer.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.doctest.DocFileTest">
+    
+  </a>
+  <a name="DocFileTest">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    DocFileTest(path, module_relative=(True), package=None, globs=None, parser=DocTestParser(), encoding=None, **options):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.doctest.DocFileSuite">
+    
+  </a>
+  <a name="DocFileSuite">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    DocFileSuite(*paths, **kw):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">A unittest suite for one or more doctest files.
+
+The path to each doctest file is given as a string; the
+interpretation of that string depends on the keyword argument
+"module_relative".
+
+A number of options may be provided as keyword arguments:
+
+module_relative
+  If "module_relative" is True, then the given file paths are
+  interpreted as os-independent module-relative paths.  By
+  default, these paths are relative to the calling module's
+  directory; but if the "package" argument is specified, then
+  they are relative to that package.  To ensure os-independence,
+  "filename" should use "/" characters to separate path
+  segments, and may not be an absolute path (i.e., it may not
+  begin with "/").
+
+  If "module_relative" is False, then the given file paths are
+  interpreted as os-specific paths.  These paths may be absolute
+  or relative (to the current working directory).
+
+package
+  A Python package or the name of a Python package whose directory
+  should be used as the base directory for module relative paths.
+  If "package" is not specified, then the calling module's
+  directory is used as the base directory for module relative
+  filenames.  It is an error to specify "package" if
+  "module_relative" is False.
+
+setUp
+  A set-up function.  This is called before running the
+  tests in each file. The setUp function will be passed a DocTest
+  object.  The setUp function can access the test globals as the
+  globs attribute of the test passed.
+
+tearDown
+  A tear-down function.  This is called after running the
+  tests in each file.  The tearDown function will be passed a DocTest
+  object.  The tearDown function can access the test globals as the
+  globs attribute of the test passed.
+
+globs
+  A dictionary containing initial global variables for the tests.
+
+optionflags
+  A set of doctest option flags expressed as an integer.
+
+parser
+  A DocTestParser (or subclass) that should be used to extract
+  tests from the files.
+
+encoding
+  An encoding that will be used to convert the files to unicode.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.doctest.script_from_examples">
+    
+  </a>
+  <a name="script_from_examples">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    script_from_examples(s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Extract script from text with examples.
+
+Converts text with examples to a Python script.  Example input is
+converted to regular code.  Example output and all other words
+are converted to comments:
+
+&gt;&gt;&gt; text = '''
+...       Here are examples of simple math.
+...
+...           Python has super accurate integer addition
+...
+...           &gt;&gt;&gt; 2 + 2
+...           5
+...
+...           And very friendly error messages:
+...
+...           &gt;&gt;&gt; 1/0
+...           To Infinity
+...           And
+...           Beyond
+...
+...           You can use logic if you want:
+...
+...           &gt;&gt;&gt; if 0:
+...           ...    blah
+...           ...    blah
+...           ...
+...
+...           Ho hum
+...           '''
+
+&gt;&gt;&gt; print(script_from_examples(text))
+# Here are examples of simple math.
+#
+#     Python has super accurate integer addition
+#
+2 + 2
+# Expected:
+## 5
+#
+#     And very friendly error messages:
+#
+1/0
+# Expected:
+## To Infinity
+## And
+## Beyond
+#
+#     You can use logic if you want:
+#
+if 0:
+   blah
+   blah
+#
+#     Ho hum
+&lt;BLANKLINE&gt;</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.doctest.testsource">
+    
+  </a>
+  <a name="testsource">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    testsource(module, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Extract the test sources from a doctest docstring as a script.
+
+Provide the module (or dotted name of the module) containing the
+test to be debugged and the name (within the module) of the object
+with the doc string with tests to be debugged.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.doctest.debug_src">
+    
+  </a>
+  <a name="debug_src">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    debug_src(src, pm=(False), globs=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Debug a single doctest docstring, in argument `src`'</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.doctest.debug_script">
+    
+  </a>
+  <a name="debug_script">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    debug_script(src, pm=(False), globs=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Debug a test script.  `src` is the script, as a string.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.doctest.debug">
+    
+  </a>
+  <a name="debug">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    debug(module, name, pm=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Debug a single doctest docstring.
+
+Provide the module (or dotted name of the module) containing the
+test to be debugged and the name (within the module) of the object
+with the docstring with tests to be debugged.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.doctest.__test__">
+    
+  </a>
+  <a name="__test__">
+    
+  </a>
+  <div class="functionHeader">
+    __test__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.doctest._test">
+    
+  </a>
+  <a name="_test">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _test():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

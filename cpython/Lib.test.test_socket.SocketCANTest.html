@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.test.test_socket.SocketCANTest : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.test.html" class="code" data-type="Package">test</a>.<a href="Lib.test.test_socket.html" class="code" data-type="Module">test_socket</a>.<a href="Lib.test.test_socket.SocketCANTest.html" class="code" data-type="Class">SocketCANTest</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.test.test_socket.SocketCANTest(<span title="unittest.TestCase">unittest.TestCase</span>):</code></p><p>Known subclasses: <a href="Lib.test.test_socket.ThreadedCANSocketTest.html" class="code" data-type="Class">Lib.test.test_socket.ThreadedCANSocketTest</a></p>
+        <p><a href="classIndex.html#Lib.test.test_socket.SocketCANTest">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">To be able to run this test, a `vcan0` CAN interface can be created with
+the following commands:
+# modprobe vcan
+# ip link add dev vcan0 type vcan
+# ifconfig vcan0 up</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id8630">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.test.test_socket.SocketCANTest.html#interface" class="code" data-type="Class Variable">interface</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.test.test_socket.SocketCANTest.html#bufsize" class="code" data-type="Class Variable">bufsize</a></td>
+    <td><span>The CAN frame structure is defined in &lt;linux/can.h&gt;:</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.test.test_socket.SocketCANTest.html#can_frame_fmt" class="code" data-type="Class Variable">can_frame_fmt</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.test.test_socket.SocketCANTest.html#can_frame_size" class="code" data-type="Class Variable">can_frame_size</a></td>
+    <td><span>The Broadcast Management Command frame structure is defined in &lt;linux/can/bcm.h&gt;:</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.test.test_socket.SocketCANTest.html#bcm_cmd_msg_fmt" class="code" data-type="Class Variable">bcm_cmd_msg_fmt</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_socket.SocketCANTest.html#setUp" class="code" data-type="Method">setUp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_socket.SocketCANTest.html#s" class="code" data-type="Instance Variable">s</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.test.test_socket.SocketCANTest.interface">
+    
+  </a>
+  <a name="interface">
+    
+  </a>
+  <div class="functionHeader">
+    interface =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.test.test_socket.SocketCANTest.bufsize">
+    
+  </a>
+  <a name="bufsize">
+    
+  </a>
+  <div class="functionHeader">
+    bufsize =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="pre">The CAN frame structure is defined in &lt;linux/can.h&gt;:
+
+struct can_frame {
+    canid_t can_id;  /* 32 bit CAN_ID + EFF/RTR/ERR flags */
+    __u8    can_dlc; /* data length code: 0 .. 8 */
+    __u8    data[8] __attribute__((aligned(8)));
+};</p></div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.test.test_socket.SocketCANTest.can_frame_fmt">
+    
+  </a>
+  <a name="can_frame_fmt">
+    
+  </a>
+  <div class="functionHeader">
+    can_frame_fmt =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.test.test_socket.SocketCANTest.can_frame_size">
+    
+  </a>
+  <a name="can_frame_size">
+    
+  </a>
+  <div class="functionHeader">
+    can_frame_size =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="pre">The Broadcast Management Command frame structure is defined
+in &lt;linux/can/bcm.h&gt;:
+
+struct bcm_msg_head {
+    __u32 opcode;
+    __u32 flags;
+    __u32 count;
+    struct timeval ival1, ival2;
+    canid_t can_id;
+    __u32 nframes;
+    struct can_frame frames[0];
+}
+
+`bcm_msg_head` must be 8 bytes aligned because of the `frames` member (see
+`struct can_frame` definition). Must use native not standard types for packing.</p></div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.test.test_socket.SocketCANTest.bcm_cmd_msg_fmt">
+    
+  </a>
+  <a name="bcm_cmd_msg_fmt">
+    
+  </a>
+  <div class="functionHeader">
+    bcm_cmd_msg_fmt =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_socket.SocketCANTest.setUp">
+    
+  </a>
+  <a name="setUp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setUp(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_socket.SocketCANTest.s">
+    
+  </a>
+  <a name="s">
+    
+  </a>
+  <div class="functionHeader">
+    s =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.xml.etree.ElementTree.TreeBuilder : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.xml.html" class="code" data-type="Package">xml</a>.<a href="Lib.xml.etree.html" class="code" data-type="Package">etree</a>.<a href="Lib.xml.etree.ElementTree.html" class="code" data-type="Module">ElementTree</a>.<a href="Lib.xml.etree.ElementTree.TreeBuilder.html" class="code" data-type="Class">TreeBuilder</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.xml.etree.ElementTree.TreeBuilder:</code></p>
+        <p><a href="classIndex.html#Lib.xml.etree.ElementTree.TreeBuilder">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Generic element structure builder.
+
+This builder converts a sequence of start, data, and end method
+calls to a well-formed element structure.
+
+You can use this class to build an element structure using a custom XML
+parser, or a parser for some other XML-like format.
+
+*element_factory* is an optional element factory which is called
+to create new Element instances, as necessary.
+
+*comment_factory* is a factory to create comments to be used instead of
+the standard factory.  If *insert_comments* is false (the default),
+comments will not be inserted into the tree.
+
+*pi_factory* is a factory to create processing instructions to be used
+instead of the standard factory.  If *insert_pis* is false (the default),
+processing instructions will not be inserted into the tree.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id12139">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.TreeBuilder.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.TreeBuilder.html#insert_comments" class="code" data-type="Instance Variable">insert_comments</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.TreeBuilder.html#insert_pis" class="code" data-type="Instance Variable">insert_pis</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.TreeBuilder.html#close" class="code" data-type="Method">close</a></td>
+    <td><span>Flush builder buffers and return toplevel document Element.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.TreeBuilder.html#data" class="code" data-type="Method">data</a></td>
+    <td><span>Add text to current element.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.TreeBuilder.html#start" class="code" data-type="Method">start</a></td>
+    <td><span>Open new element and return it.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.TreeBuilder.html#end" class="code" data-type="Method">end</a></td>
+    <td><span>Close and return current Element.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.TreeBuilder.html#comment" class="code" data-type="Method">comment</a></td>
+    <td><span>Create a comment using the comment_factory.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.TreeBuilder.html#pi" class="code" data-type="Method">pi</a></td>
+    <td><span>Create a processing instruction using the pi_factory.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.TreeBuilder.html#_data" class="code" data-type="Instance Variable">_data</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.TreeBuilder.html#_elem" class="code" data-type="Instance Variable">_elem</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.TreeBuilder.html#_last" class="code" data-type="Instance Variable">_last</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.TreeBuilder.html#_root" class="code" data-type="Instance Variable">_root</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.TreeBuilder.html#_tail" class="code" data-type="Instance Variable">_tail</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.TreeBuilder.html#_comment_factory" class="code" data-type="Instance Variable">_comment_factory</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.TreeBuilder.html#_pi_factory" class="code" data-type="Instance Variable">_pi_factory</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.TreeBuilder.html#_factory" class="code" data-type="Instance Variable">_factory</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.TreeBuilder.html#_flush" class="code" data-type="Method">_flush</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.TreeBuilder.html#_handle_single" class="code" data-type="Method">_handle_single</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.TreeBuilder.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, element_factory=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.etree.ElementTree.TreeBuilder._data">
+    
+  </a>
+  <a name="_data">
+    
+  </a>
+  <div class="functionHeader">
+    _data =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.etree.ElementTree.TreeBuilder._elem">
+    
+  </a>
+  <a name="_elem">
+    
+  </a>
+  <div class="functionHeader">
+    _elem =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.etree.ElementTree.TreeBuilder._last">
+    
+  </a>
+  <a name="_last">
+    
+  </a>
+  <div class="functionHeader">
+    _last =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.etree.ElementTree.TreeBuilder._root">
+    
+  </a>
+  <a name="_root">
+    
+  </a>
+  <div class="functionHeader">
+    _root =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.etree.ElementTree.TreeBuilder._tail">
+    
+  </a>
+  <a name="_tail">
+    
+  </a>
+  <div class="functionHeader">
+    _tail =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.etree.ElementTree.TreeBuilder._comment_factory">
+    
+  </a>
+  <a name="_comment_factory">
+    
+  </a>
+  <div class="functionHeader">
+    _comment_factory =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.xml.etree.ElementTree.TreeBuilder.insert_comments">
+    
+  </a>
+  <a name="insert_comments">
+    
+  </a>
+  <div class="functionHeader">
+    insert_comments =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.etree.ElementTree.TreeBuilder._pi_factory">
+    
+  </a>
+  <a name="_pi_factory">
+    
+  </a>
+  <div class="functionHeader">
+    _pi_factory =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.xml.etree.ElementTree.TreeBuilder.insert_pis">
+    
+  </a>
+  <a name="insert_pis">
+    
+  </a>
+  <div class="functionHeader">
+    insert_pis =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.etree.ElementTree.TreeBuilder._factory">
+    
+  </a>
+  <a name="_factory">
+    
+  </a>
+  <div class="functionHeader">
+    _factory =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.TreeBuilder.close">
+    
+  </a>
+  <a name="close">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    close(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Flush builder buffers and return toplevel document Element.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.xml.etree.ElementTree.TreeBuilder._flush">
+    
+  </a>
+  <a name="_flush">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _flush(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.TreeBuilder.data">
+    
+  </a>
+  <a name="data">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    data(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Add text to current element.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.TreeBuilder.start">
+    
+  </a>
+  <a name="start">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    start(self, tag, attrs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Open new element and return it.
+
+*tag* is the element name, *attrs* is a dict containing element
+attributes.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.TreeBuilder.end">
+    
+  </a>
+  <a name="end">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    end(self, tag):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Close and return current Element.
+
+*tag* is the element name.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.TreeBuilder.comment">
+    
+  </a>
+  <a name="comment">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    comment(self, text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create a comment using the comment_factory.
+
+*text* is the text of the comment.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.TreeBuilder.pi">
+    
+  </a>
+  <a name="pi">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    pi(self, target, text=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create a processing instruction using the pi_factory.
+
+*target* is the target name of the processing instruction.
+*text* is the data of the processing instruction, or ''.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.xml.etree.ElementTree.TreeBuilder._handle_single">
+    
+  </a>
+  <a name="_handle_single">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _handle_single(self, factory, insert, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

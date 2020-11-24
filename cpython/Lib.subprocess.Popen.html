@@ -1,0 +1,1391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.subprocess.Popen : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.subprocess.html" class="code" data-type="Module">subprocess</a>.<a href="Lib.subprocess.Popen.html" class="code" data-type="Class">Popen</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.subprocess.Popen(<span title="object">object</span>):</code></p>
+        <p><a href="classIndex.html#Lib.subprocess.Popen">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Execute a child program in a new process.
+
+For a complete description of the arguments see the Python documentation.
+
+Arguments:
+  args: A string, or a sequence of program arguments.
+
+  bufsize: supplied as the buffering argument to the open() function when
+      creating the stdin/stdout/stderr pipe file objects
+
+  executable: A replacement program to execute.
+
+  stdin, stdout and stderr: These specify the executed programs' standard
+      input, standard output and standard error file handles, respectively.
+
+  preexec_fn: (POSIX only) An object to be called in the child process
+      just before the child is executed.
+
+  close_fds: Controls closing or inheriting of file descriptors.
+
+  shell: If true, the command will be executed through the shell.
+
+  cwd: Sets the current directory before the child is executed.
+
+  env: Defines the environment variables for the new process.
+
+  text: If true, decode stdin, stdout and stderr using the given encoding
+      (if set) or the system default otherwise.
+
+  universal_newlines: Alias of text, provided for backwards compatibility.
+
+  startupinfo and creationflags (Windows only)
+
+  restore_signals (POSIX only)
+
+  start_new_session (POSIX only)
+
+  group (POSIX only)
+
+  extra_groups (POSIX only)
+
+  user (POSIX only)
+
+  umask (POSIX only)
+
+  pass_fds (POSIX only)
+
+  encoding and errors: Text mode encoding and error handling to use for
+      file objects stdin, stdout and stderr.
+
+Attributes:
+    stdin, stdout, stderr, pid, returncode</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3676">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.subprocess.Popen.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Create new Popen instance.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.subprocess.Popen.html#args" class="code" data-type="Instance Variable">args</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.subprocess.Popen.html#stdin" class="code" data-type="Instance Variable">stdin</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.subprocess.Popen.html#stdout" class="code" data-type="Instance Variable">stdout</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.subprocess.Popen.html#stderr" class="code" data-type="Instance Variable">stderr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.subprocess.Popen.html#pid" class="code" data-type="Instance Variable">pid</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.subprocess.Popen.html#returncode" class="code" data-type="Instance Variable">returncode</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.subprocess.Popen.html#encoding" class="code" data-type="Instance Variable">encoding</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.subprocess.Popen.html#errors" class="code" data-type="Instance Variable">errors</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.subprocess.Popen.html#pipesize" class="code" data-type="Instance Variable">pipesize</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.subprocess.Popen.html#text_mode" class="code" data-type="Instance Variable">text_mode</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.subprocess.Popen.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.subprocess.Popen.html#__class_getitem__" class="code" data-type="Class Variable">__class_getitem__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.subprocess.Popen.html#universal_newlines" class="code" data-type="Method">universal_newlines</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.subprocess.Popen.html#__enter__" class="code" data-type="Method">__enter__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.subprocess.Popen.html#__exit__" class="code" data-type="Method">__exit__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.subprocess.Popen.html#__del__" class="code" data-type="Method">__del__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.subprocess.Popen.html#communicate" class="code" data-type="Method">communicate</a></td>
+    <td><span>Interact with process: Send data to stdin and close it. Read data from stdout and stderr, until end-of-file is reached.  Wait for process to terminate.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.subprocess.Popen.html#poll" class="code" data-type="Method">poll</a></td>
+    <td><span>Check if child process has terminated. Set and return returncode attribute.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.subprocess.Popen.html#wait" class="code" data-type="Method">wait</a></td>
+    <td><span>Wait for child process to terminate; returns self.returncode.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.subprocess.Popen.html#stdout_thread" class="code" data-type="Instance Variable">stdout_thread</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.subprocess.Popen.html#stderr_thread" class="code" data-type="Instance Variable">stderr_thread</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.subprocess.Popen.html#send_signal" class="code" data-type="Method">send_signal</a></td>
+    <td><span>Send a signal to the process.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.subprocess.Popen.html#terminate" class="code" data-type="Method">terminate</a></td>
+    <td><span>Terminate the process with SIGTERM</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.subprocess.Popen.html#kill" class="code" data-type="Method">kill</a></td>
+    <td><span>Kill the process with SIGKILL</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.subprocess.Popen.html#_child_created" class="code" data-type="Instance Variable">_child_created</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.subprocess.Popen.html#_waitpid_lock" class="code" data-type="Instance Variable">_waitpid_lock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.subprocess.Popen.html#_input" class="code" data-type="Instance Variable">_input</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.subprocess.Popen.html#_communication_started" class="code" data-type="Instance Variable">_communication_started</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.subprocess.Popen.html#_sigint_wait_secs" class="code" data-type="Instance Variable">_sigint_wait_secs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.subprocess.Popen.html#_closed_child_pipe_fds" class="code" data-type="Instance Variable">_closed_child_pipe_fds</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.subprocess.Popen.html#_translate_newlines" class="code" data-type="Method">_translate_newlines</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.subprocess.Popen.html#_get_devnull" class="code" data-type="Method">_get_devnull</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.subprocess.Popen.html#_devnull" class="code" data-type="Instance Variable">_devnull</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.subprocess.Popen.html#_stdin_write" class="code" data-type="Method">_stdin_write</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.subprocess.Popen.html#_remaining_time" class="code" data-type="Method">_remaining_time</a></td>
+    <td><span>Convenience for _communicate when computing timeouts.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.subprocess.Popen.html#_check_timeout" class="code" data-type="Method">_check_timeout</a></td>
+    <td><span>Convenience for checking if a timeout has expired.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.subprocess.Popen.html#_close_pipe_fds" class="code" data-type="Method">_close_pipe_fds</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.subprocess.Popen.html#_get_handles" class="code" data-type="Method">_get_handles</a></td>
+    <td><span>Construct and return tuple with IO objects: p2cread, p2cwrite, c2pread, c2pwrite, errread, errwrite</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.subprocess.Popen.html#_make_inheritable" class="code" data-type="Method">_make_inheritable</a></td>
+    <td><span>Return a duplicate of handle, which is inheritable</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.subprocess.Popen.html#_filter_handle_list" class="code" data-type="Method">_filter_handle_list</a></td>
+    <td><span>Filter out console handles that can't be used in lpAttributeList["handle_list"] and make sure the list isn't empty. This also removes duplicate handles.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.subprocess.Popen.html#_execute_child" class="code" data-type="Method">_execute_child</a></td>
+    <td><span>Execute program (POSIX version)</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.subprocess.Popen.html#_handle" class="code" data-type="Instance Variable">_handle</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.subprocess.Popen.html#_internal_poll" class="code" data-type="Method">_internal_poll</a></td>
+    <td><span>Check if child process has terminated.  Returns returncode attribute.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.subprocess.Popen.html#_wait" class="code" data-type="Method">_wait</a></td>
+    <td><span>Internal implementation of wait() on POSIX.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.subprocess.Popen.html#_readerthread" class="code" data-type="Method">_readerthread</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.subprocess.Popen.html#_communicate" class="code" data-type="Method">_communicate</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.subprocess.Popen.html#_stdout_buff" class="code" data-type="Instance Variable">_stdout_buff</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.subprocess.Popen.html#_stderr_buff" class="code" data-type="Instance Variable">_stderr_buff</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.subprocess.Popen.html#_posix_spawn" class="code" data-type="Method">_posix_spawn</a></td>
+    <td><span>Execute program using os.posix_spawn().</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.subprocess.Popen.html#_handle_exitstatus" class="code" data-type="Method">_handle_exitstatus</a></td>
+    <td><span>All callers to this function MUST hold self._waitpid_lock.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.subprocess.Popen.html#_try_wait" class="code" data-type="Method">_try_wait</a></td>
+    <td><span>All callers to this function MUST hold self._waitpid_lock.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.subprocess.Popen.html#_fileobj2output" class="code" data-type="Instance Variable">_fileobj2output</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.subprocess.Popen.html#_save_input" class="code" data-type="Method">_save_input</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.subprocess.Popen.html#_input_offset" class="code" data-type="Instance Variable">_input_offset</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseinstancevariable private">
+  
+  <a name="Lib.subprocess.Popen._child_created">
+    
+  </a>
+  <a name="_child_created">
+    
+  </a>
+  <div class="functionHeader">
+    _child_created =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.subprocess.Popen.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, args, bufsize=(-1), executable=None, stdin=None, stdout=None, stderr=None, preexec_fn=None, close_fds=(True), shell=(False), cwd=None, env=None, universal_newlines=None, startupinfo=None, creationflags=0, restore_signals=(True), start_new_session=(False), pass_fds=()):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create new Popen instance.</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.subprocess.Popen._waitpid_lock">
+    
+  </a>
+  <a name="_waitpid_lock">
+    
+  </a>
+  <div class="functionHeader">
+    _waitpid_lock =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.subprocess.Popen._input">
+    
+  </a>
+  <a name="_input">
+    
+  </a>
+  <div class="functionHeader">
+    _input =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.subprocess.Popen._communication_started">
+    
+  </a>
+  <a name="_communication_started">
+    
+  </a>
+  <div class="functionHeader">
+    _communication_started =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.subprocess.Popen.args">
+    
+  </a>
+  <a name="args">
+    
+  </a>
+  <div class="functionHeader">
+    args =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.subprocess.Popen.stdin">
+    
+  </a>
+  <a name="stdin">
+    
+  </a>
+  <div class="functionHeader">
+    stdin =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.subprocess.Popen.stdout">
+    
+  </a>
+  <a name="stdout">
+    
+  </a>
+  <div class="functionHeader">
+    stdout =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.subprocess.Popen.stderr">
+    
+  </a>
+  <a name="stderr">
+    
+  </a>
+  <div class="functionHeader">
+    stderr =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.subprocess.Popen.pid">
+    
+  </a>
+  <a name="pid">
+    
+  </a>
+  <div class="functionHeader">
+    pid =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.subprocess.Popen.returncode">
+    
+  </a>
+  <a name="returncode">
+    
+  </a>
+  <div class="functionHeader">
+    returncode =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.subprocess.Popen.encoding">
+    
+  </a>
+  <a name="encoding">
+    
+  </a>
+  <div class="functionHeader">
+    encoding =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.subprocess.Popen.errors">
+    
+  </a>
+  <a name="errors">
+    
+  </a>
+  <div class="functionHeader">
+    errors =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.subprocess.Popen.pipesize">
+    
+  </a>
+  <a name="pipesize">
+    
+  </a>
+  <div class="functionHeader">
+    pipesize =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.subprocess.Popen.text_mode">
+    
+  </a>
+  <a name="text_mode">
+    
+  </a>
+  <div class="functionHeader">
+    text_mode =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.subprocess.Popen._sigint_wait_secs">
+    
+  </a>
+  <a name="_sigint_wait_secs">
+    
+  </a>
+  <div class="functionHeader">
+    _sigint_wait_secs =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.subprocess.Popen._closed_child_pipe_fds">
+    
+  </a>
+  <a name="_closed_child_pipe_fds">
+    
+  </a>
+  <div class="functionHeader">
+    _closed_child_pipe_fds =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.subprocess.Popen.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __repr__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.subprocess.Popen.__class_getitem__">
+    
+  </a>
+  <a name="__class_getitem__">
+    
+  </a>
+  <div class="functionHeader">
+    __class_getitem__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.subprocess.Popen.universal_newlines">
+    
+  </a>
+  <a name="universal_newlines">
+    
+  </a>
+  <div class="functionHeader">
+    @universal_newlines.setter<br />
+    def
+    universal_newlines(self, universal_newlines):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.subprocess.Popen._translate_newlines">
+    
+  </a>
+  <a name="_translate_newlines">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _translate_newlines(self, data, encoding, errors):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.subprocess.Popen.__enter__">
+    
+  </a>
+  <a name="__enter__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __enter__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.subprocess.Popen.__exit__">
+    
+  </a>
+  <a name="__exit__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __exit__(self, exc_type, value, traceback):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.subprocess.Popen.__del__">
+    
+  </a>
+  <a name="__del__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __del__(self, _maxsize=sys.maxsize, _warn=warnings.warn):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.subprocess.Popen._get_devnull">
+    
+  </a>
+  <a name="_get_devnull">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_devnull(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.subprocess.Popen._devnull">
+    
+  </a>
+  <a name="_devnull">
+    
+  </a>
+  <div class="functionHeader">
+    _devnull =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.subprocess.Popen._stdin_write">
+    
+  </a>
+  <a name="_stdin_write">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _stdin_write(self, input):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.subprocess.Popen.communicate">
+    
+  </a>
+  <a name="communicate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    communicate(self, input=None, timeout=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Interact with process: Send data to stdin and close it.
+Read data from stdout and stderr, until end-of-file is
+reached.  Wait for process to terminate.
+
+The optional "input" argument should be data to be sent to the
+child process, or None, if no data should be sent to the child.
+communicate() returns a tuple (stdout, stderr).
+
+By default, all communication is in bytes, and therefore any
+"input" should be bytes, and the (stdout, stderr) will be bytes.
+If in text mode (indicated by self.text_mode), any "input" should
+be a string, and (stdout, stderr) will be strings decoded
+according to locale encoding, or by "encoding" if set. Text mode
+is triggered by setting any of text, encoding, errors or
+universal_newlines.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.subprocess.Popen.poll">
+    
+  </a>
+  <a name="poll">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    poll(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Check if child process has terminated. Set and return returncode
+attribute.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.subprocess.Popen._remaining_time">
+    
+  </a>
+  <a name="_remaining_time">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _remaining_time(self, endtime):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convenience for _communicate when computing timeouts.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.subprocess.Popen._check_timeout">
+    
+  </a>
+  <a name="_check_timeout">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _check_timeout(self, endtime, orig_timeout, stdout_seq, stderr_seq, skip_check_and_raise=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convenience for checking if a timeout has expired.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.subprocess.Popen.wait">
+    
+  </a>
+  <a name="wait">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    wait(self, timeout=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Wait for child process to terminate; returns self.returncode.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.subprocess.Popen._close_pipe_fds">
+    
+  </a>
+  <a name="_close_pipe_fds">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _close_pipe_fds(self, p2cread, p2cwrite, c2pread, c2pwrite, errread, errwrite):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.subprocess.Popen._get_handles">
+    
+  </a>
+  <a name="_get_handles">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_handles(self, stdin, stdout, stderr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Construct and return tuple with IO objects:
+p2cread, p2cwrite, c2pread, c2pwrite, errread, errwrite</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.subprocess.Popen._make_inheritable">
+    
+  </a>
+  <a name="_make_inheritable">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _make_inheritable(self, handle):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a duplicate of handle, which is inheritable</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.subprocess.Popen._filter_handle_list">
+    
+  </a>
+  <a name="_filter_handle_list">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _filter_handle_list(self, handle_list):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Filter out console handles that can't be used
+in lpAttributeList["handle_list"] and make sure the list
+isn't empty. This also removes duplicate handles.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.subprocess.Popen._execute_child">
+    
+  </a>
+  <a name="_execute_child">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _execute_child(self, args, executable, preexec_fn, close_fds, pass_fds, cwd, env, startupinfo, creationflags, shell, p2cread, p2cwrite, c2pread, c2pwrite, errread, errwrite, restore_signals, gid, gids, uid, umask, start_new_session):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Execute program (POSIX version)</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.subprocess.Popen._handle">
+    
+  </a>
+  <a name="_handle">
+    
+  </a>
+  <div class="functionHeader">
+    _handle =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.subprocess.Popen._internal_poll">
+    
+  </a>
+  <a name="_internal_poll">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _internal_poll(self, _deadstate=None, _waitpid=os.waitpid, _WNOHANG=os.WNOHANG, _ECHILD=errno.ECHILD):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Check if child process has terminated.  Returns returncode
+attribute.
+
+This method is called by __del__, so it cannot reference anything
+outside of the local scope (nor can any methods it calls).</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.subprocess.Popen._wait">
+    
+  </a>
+  <a name="_wait">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _wait(self, timeout):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Internal implementation of wait() on POSIX.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.subprocess.Popen._readerthread">
+    
+  </a>
+  <a name="_readerthread">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _readerthread(self, fh, buffer):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.subprocess.Popen._communicate">
+    
+  </a>
+  <a name="_communicate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _communicate(self, input, endtime, orig_timeout):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.subprocess.Popen._stdout_buff">
+    
+  </a>
+  <a name="_stdout_buff">
+    
+  </a>
+  <div class="functionHeader">
+    _stdout_buff =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.subprocess.Popen.stdout_thread">
+    
+  </a>
+  <a name="stdout_thread">
+    
+  </a>
+  <div class="functionHeader">
+    stdout_thread =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.subprocess.Popen._stderr_buff">
+    
+  </a>
+  <a name="_stderr_buff">
+    
+  </a>
+  <div class="functionHeader">
+    _stderr_buff =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.subprocess.Popen.stderr_thread">
+    
+  </a>
+  <a name="stderr_thread">
+    
+  </a>
+  <div class="functionHeader">
+    stderr_thread =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.subprocess.Popen.send_signal">
+    
+  </a>
+  <a name="send_signal">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    send_signal(self, sig):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Send a signal to the process.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.subprocess.Popen.terminate">
+    
+  </a>
+  <a name="terminate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    terminate(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Terminate the process with SIGTERM
+            </p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.subprocess.Popen._posix_spawn">
+    
+  </a>
+  <a name="_posix_spawn">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _posix_spawn(self, args, executable, env, restore_signals, p2cread, p2cwrite, c2pread, c2pwrite, errread, errwrite):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Execute program using os.posix_spawn().</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.subprocess.Popen._handle_exitstatus">
+    
+  </a>
+  <a name="_handle_exitstatus">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _handle_exitstatus(self, sts, waitstatus_to_exitcode=os.waitstatus_to_exitcode, _WIFSTOPPED=os.WIFSTOPPED, _WSTOPSIG=os.WSTOPSIG):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">All callers to this function MUST hold self._waitpid_lock.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.subprocess.Popen._try_wait">
+    
+  </a>
+  <a name="_try_wait">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _try_wait(self, wait_flags):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">All callers to this function MUST hold self._waitpid_lock.</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.subprocess.Popen._fileobj2output">
+    
+  </a>
+  <a name="_fileobj2output">
+    
+  </a>
+  <div class="functionHeader">
+    _fileobj2output =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.subprocess.Popen._save_input">
+    
+  </a>
+  <a name="_save_input">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _save_input(self, input):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.subprocess.Popen._input_offset">
+    
+  </a>
+  <a name="_input_offset">
+    
+  </a>
+  <div class="functionHeader">
+    _input_offset =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.subprocess.Popen.kill">
+    
+  </a>
+  <a name="kill">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    kill(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Kill the process with SIGKILL
+            </p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

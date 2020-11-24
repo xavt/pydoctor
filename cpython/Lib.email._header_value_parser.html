@@ -1,0 +1,2474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.email._header_value_parser : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module private"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.email.html" class="code" data-type="Package">email</a>.<a href="Lib.email._header_value_parser.html" class="code" data-type="Module">_header_value_parser</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Header value parser implementing various email-related RFC parsing rules.
+
+The parsing methods defined in this module implement various email related
+parsing rules.  Principal among them is RFC 5322, which is the followon
+to RFC 2822 and primarily a clarification of the former.  It also implements
+RFC 2047 encoded word decoding.
+
+RFC 5322 goes to considerable trouble to maintain backward compatibility with
+RFC 822 in the parse phase, while cleaning up the structure on the generation
+phase.  This parser supports correct RFC 5322 generation by tagging white space
+as folding white space only when folding is allowed in the non-obsolete rule
+sets.  Actually, the parser is even more generous when accepting input than RFC
+5322 mandates, following the spirit of Postel's Law, which RFC 5322 encourages.
+Where possible deviations from the standard are annotated on the 'defects'
+attribute of tokens that deviate.
+
+The general structure of the parser follows RFC 5322, and uses its terminology
+where there is a direct correspondence.  Where the implementation requires a
+somewhat different structure than that used by the formal grammar, new terms
+that mimic the closest existing terms are used.  Thus, it really helps to have
+a copy of RFC 5322 handy when studying this code.
+
+Input to the parser is a string that has already been unfolded according to
+RFC 5322 rules.  According to the RFC this unfolding is the very first step, and
+this parser leaves the unfolding step to a higher level message parser, which
+will have already detected the line breaks that need unfolding while
+determining the beginning and end of each header.
+
+The output of the parser is a TokenList object, which is a list subclass.  A
+TokenList is a recursive data structure.  The terminal nodes of the structure
+are Terminal objects, which are subclasses of str.  These do not correspond
+directly to terminal objects in the formal grammar, but are instead more
+practical higher level combinations of true terminals.
+
+All TokenList and Terminal objects have a 'value' attribute, which produces the
+semantically meaningful value of that part of the parse subtree.  The value of
+all whitespace tokens (no matter how many sub-tokens they may contain) is a
+single space, as per the RFC rules.  This includes 'CFWS', which is herein
+included in the general class of whitespace tokens.  There is one exception to
+the rule that whitespace tokens are collapsed into single spaces in values: in
+the value of a 'bare-quoted-string' (a quoted-string with no leading or
+trailing whitespace), any whitespace that appeared between the quotation marks
+is preserved in the returned value.  Note that in all Terminal strings quoted
+pairs are turned into their unquoted values.
+
+All TokenList and Terminal objects also have a string value, which attempts to
+be a "canonical" representation of the RFC-compliant form of the substring that
+produced the parsed subtree, including minimal use of quoted pair quoting.
+Whitespace runs are not collapsed.
+
+Comment tokens also have a 'content' attribute providing the string found
+between the parens (including any nested comments) with whitespace preserved.
+
+All TokenList and Terminal objects have a 'defects' attribute which is a
+possibly empty list all of the defects found while creating the token.  Defects
+may appear on any token in the tree, and a composite list of all defects in the
+subtree is available through the 'all_defects' attribute of any node.  (For
+Terminal notes x.defects == x.all_defects.)
+
+Each object in a parse tree is called a 'token', and each has a 'token_type'
+attribute that gives the name from the RFC 5322 grammar that it represents.
+Not all RFC 5322 nodes are produced, and there is one non-RFC 5322 node that
+may be produced: 'ptext'.  A 'ptext' is a string of printable ascii characters.
+It is returned in place of lists of (ctext/quoted-pair) and
+(qtext/quoted-pair).
+
+XXX: provide complete list of token types.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id1136">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email._header_value_parser.html#WSP" class="code" data-type="Variable">WSP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email._header_value_parser.html#CFWS_LEADER" class="code" data-type="Variable">CFWS_LEADER</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email._header_value_parser.html#SPECIALS" class="code" data-type="Variable">SPECIALS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email._header_value_parser.html#ATOM_ENDS" class="code" data-type="Variable">ATOM_ENDS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email._header_value_parser.html#DOT_ATOM_ENDS" class="code" data-type="Variable">DOT_ATOM_ENDS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email._header_value_parser.html#PHRASE_ENDS" class="code" data-type="Variable">PHRASE_ENDS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email._header_value_parser.html#TSPECIALS" class="code" data-type="Variable">TSPECIALS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email._header_value_parser.html#TOKEN_ENDS" class="code" data-type="Variable">TOKEN_ENDS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email._header_value_parser.html#ASPECIALS" class="code" data-type="Variable">ASPECIALS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email._header_value_parser.html#ATTRIBUTE_ENDS" class="code" data-type="Variable">ATTRIBUTE_ENDS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email._header_value_parser.html#EXTENDED_ATTRIBUTE_ENDS" class="code" data-type="Variable">EXTENDED_ATTRIBUTE_ENDS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#quote_string" class="code" data-type="Function">quote_string</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email._header_value_parser.html#rfc2047_matcher" class="code" data-type="Variable">rfc2047_matcher</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.TokenList.html" class="code" data-type="Class">TokenList</a></td>
+    <td><span class="undocumented">No class0/3 class variables docstring; , 0/1 instance variables docstring; , 1/12 methods documented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.WhiteSpaceTokenList.html" class="code" data-type="Class">WhiteSpaceTokenList</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.UnstructuredTokenList.html" class="code" data-type="Class">UnstructuredTokenList</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.Phrase.html" class="code" data-type="Class">Phrase</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.Word.html" class="code" data-type="Class">Word</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.CFWSList.html" class="code" data-type="Class">CFWSList</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.Atom.html" class="code" data-type="Class">Atom</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.Token.html" class="code" data-type="Class">Token</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.EncodedWord.html" class="code" data-type="Class">EncodedWord</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.QuotedString.html" class="code" data-type="Class">QuotedString</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.BareQuotedString.html" class="code" data-type="Class">BareQuotedString</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.Comment.html" class="code" data-type="Class">Comment</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.AddressList.html" class="code" data-type="Class">AddressList</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.Address.html" class="code" data-type="Class">Address</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.MailboxList.html" class="code" data-type="Class">MailboxList</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.GroupList.html" class="code" data-type="Class">GroupList</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.Group.html" class="code" data-type="Class">Group</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.NameAddr.html" class="code" data-type="Class">NameAddr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.AngleAddr.html" class="code" data-type="Class">AngleAddr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.ObsRoute.html" class="code" data-type="Class">ObsRoute</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.Mailbox.html" class="code" data-type="Class">Mailbox</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.InvalidMailbox.html" class="code" data-type="Class">InvalidMailbox</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.Domain.html" class="code" data-type="Class">Domain</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.DotAtom.html" class="code" data-type="Class">DotAtom</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.DotAtomText.html" class="code" data-type="Class">DotAtomText</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.NoFoldLiteral.html" class="code" data-type="Class">NoFoldLiteral</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.AddrSpec.html" class="code" data-type="Class">AddrSpec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.ObsLocalPart.html" class="code" data-type="Class">ObsLocalPart</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.DisplayName.html" class="code" data-type="Class">DisplayName</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.LocalPart.html" class="code" data-type="Class">LocalPart</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.DomainLiteral.html" class="code" data-type="Class">DomainLiteral</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.MIMEVersion.html" class="code" data-type="Class">MIMEVersion</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.Parameter.html" class="code" data-type="Class">Parameter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.InvalidParameter.html" class="code" data-type="Class">InvalidParameter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.Attribute.html" class="code" data-type="Class">Attribute</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.Section.html" class="code" data-type="Class">Section</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.Value.html" class="code" data-type="Class">Value</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.MimeParameters.html" class="code" data-type="Class">MimeParameters</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.ParameterizedHeaderValue.html" class="code" data-type="Class">ParameterizedHeaderValue</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.ContentType.html" class="code" data-type="Class">ContentType</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.ContentDisposition.html" class="code" data-type="Class">ContentDisposition</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.ContentTransferEncoding.html" class="code" data-type="Class">ContentTransferEncoding</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.HeaderLabel.html" class="code" data-type="Class">HeaderLabel</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.MsgID.html" class="code" data-type="Class">MsgID</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.MessageID.html" class="code" data-type="Class">MessageID</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.InvalidMessageID.html" class="code" data-type="Class">InvalidMessageID</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.Header.html" class="code" data-type="Class">Header</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.Terminal.html" class="code" data-type="Class">Terminal</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.WhiteSpaceTerminal.html" class="code" data-type="Class">WhiteSpaceTerminal</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.ValueTerminal.html" class="code" data-type="Class">ValueTerminal</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser.EWWhiteSpaceTerminal.html" class="code" data-type="Class">EWWhiteSpaceTerminal</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email._header_value_parser.html#DOT" class="code" data-type="Variable">DOT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email._header_value_parser.html#ListSeparator" class="code" data-type="Variable">ListSeparator</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email._header_value_parser.html#RouteComponentMarker" class="code" data-type="Variable">RouteComponentMarker</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_fws" class="code" data-type="Function">get_fws</a></td>
+    <td><span>FWS = 1*WSP</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_encoded_word" class="code" data-type="Function">get_encoded_word</a></td>
+    <td><span>encoded-word = "=?" charset "?" encoding "?" encoded-text "?="</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_unstructured" class="code" data-type="Function">get_unstructured</a></td>
+    <td><span>unstructured = (*([FWS] vchar) *WSP) / obs-unstruct obs-unstruct = *((*LF *CR *(obs-utext) *LF *CR)) / FWS) obs-utext = %d0 / obs-NO-WS-CTL / LF / CR</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_qp_ctext" class="code" data-type="Function">get_qp_ctext</a></td>
+    <td><span>ctext = &lt;printable ascii except \ ( )&gt;</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_qcontent" class="code" data-type="Function">get_qcontent</a></td>
+    <td><span>qcontent = qtext / quoted-pair</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_atext" class="code" data-type="Function">get_atext</a></td>
+    <td><span>atext = &lt;matches _atext_matcher&gt;</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_bare_quoted_string" class="code" data-type="Function">get_bare_quoted_string</a></td>
+    <td><span>bare-quoted-string = DQUOTE *([FWS] qcontent) [FWS] DQUOTE</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_comment" class="code" data-type="Function">get_comment</a></td>
+    <td><span>comment = "(" *([FWS] ccontent) [FWS] ")" ccontent = ctext / quoted-pair / comment</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_cfws" class="code" data-type="Function">get_cfws</a></td>
+    <td><span>CFWS = (1*([FWS] comment) [FWS]) / FWS</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_quoted_string" class="code" data-type="Function">get_quoted_string</a></td>
+    <td><span>quoted-string = [CFWS] &lt;bare-quoted-string&gt; [CFWS]</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_atom" class="code" data-type="Function">get_atom</a></td>
+    <td><span>atom = [CFWS] 1*atext [CFWS]</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_dot_atom_text" class="code" data-type="Function">get_dot_atom_text</a></td>
+    <td><span>dot-text = 1*atext *("." 1*atext)</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_dot_atom" class="code" data-type="Function">get_dot_atom</a></td>
+    <td><span>dot-atom = [CFWS] dot-atom-text [CFWS]</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_word" class="code" data-type="Function">get_word</a></td>
+    <td><span>word = atom / quoted-string</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_phrase" class="code" data-type="Function">get_phrase</a></td>
+    <td><span>phrase = 1*word / obs-phrase obs-phrase = word *(word / "." / CFWS)</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_local_part" class="code" data-type="Function">get_local_part</a></td>
+    <td><span>local-part = dot-atom / quoted-string / obs-local-part</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_obs_local_part" class="code" data-type="Function">get_obs_local_part</a></td>
+    <td><span>obs-local-part = word *("." word)</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_dtext" class="code" data-type="Function">get_dtext</a></td>
+    <td><span>dtext = &lt;printable ascii except \ [ ]&gt; / obs-dtext obs-dtext = obs-NO-WS-CTL / quoted-pair</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_domain_literal" class="code" data-type="Function">get_domain_literal</a></td>
+    <td><span>domain-literal = [CFWS] "[" *([FWS] dtext) [FWS] "]" [CFWS]</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_domain" class="code" data-type="Function">get_domain</a></td>
+    <td><span>domain = dot-atom / domain-literal / obs-domain obs-domain = atom *("." atom))</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_addr_spec" class="code" data-type="Function">get_addr_spec</a></td>
+    <td><span>addr-spec = local-part "@" domain</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_obs_route" class="code" data-type="Function">get_obs_route</a></td>
+    <td><span>obs-route = obs-domain-list ":" obs-domain-list = *(CFWS / ",") "@" domain *("," [CFWS] ["@" domain])</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_angle_addr" class="code" data-type="Function">get_angle_addr</a></td>
+    <td><span>angle-addr = [CFWS] "&lt;" addr-spec "&gt;" [CFWS] / obs-angle-addr obs-angle-addr = [CFWS] "&lt;" obs-route addr-spec "&gt;" [CFWS]</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_display_name" class="code" data-type="Function">get_display_name</a></td>
+    <td><span>display-name = phrase</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_name_addr" class="code" data-type="Function">get_name_addr</a></td>
+    <td><span>name-addr = [display-name] angle-addr</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_mailbox" class="code" data-type="Function">get_mailbox</a></td>
+    <td><span>mailbox = name-addr / addr-spec</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_invalid_mailbox" class="code" data-type="Function">get_invalid_mailbox</a></td>
+    <td><span>Read everything up to one of the chars in endchars.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_mailbox_list" class="code" data-type="Function">get_mailbox_list</a></td>
+    <td><span>mailbox-list = (mailbox *("," mailbox)) / obs-mbox-list obs-mbox-list = *([CFWS] ",") mailbox *("," [mailbox / CFWS])</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_group_list" class="code" data-type="Function">get_group_list</a></td>
+    <td><span>group-list = mailbox-list / CFWS / obs-group-list obs-group-list = 1*([CFWS] ",") [CFWS]</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_group" class="code" data-type="Function">get_group</a></td>
+    <td><span>group = display-name ":" [group-list] ";" [CFWS]</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_address" class="code" data-type="Function">get_address</a></td>
+    <td><span>address = mailbox / group</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_address_list" class="code" data-type="Function">get_address_list</a></td>
+    <td><span>address_list = (address *("," address)) / obs-addr-list obs-addr-list = *([CFWS] ",") address *("," [address / CFWS])</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_no_fold_literal" class="code" data-type="Function">get_no_fold_literal</a></td>
+    <td><span>no-fold-literal = "[" *dtext "]"</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_msg_id" class="code" data-type="Function">get_msg_id</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#parse_message_id" class="code" data-type="Function">parse_message_id</a></td>
+    <td><span>message-id      =   "Message-ID:" msg-id CRLF</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#parse_mime_version" class="code" data-type="Function">parse_mime_version</a></td>
+    <td><span>mime-version = [CFWS] 1*digit [CFWS] "." [CFWS] 1*digit [CFWS]</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_invalid_parameter" class="code" data-type="Function">get_invalid_parameter</a></td>
+    <td><span>Read everything up to the next ';'.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_ttext" class="code" data-type="Function">get_ttext</a></td>
+    <td><span>ttext = &lt;matches _ttext_matcher&gt;</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_token" class="code" data-type="Function">get_token</a></td>
+    <td><span>token = [CFWS] 1*ttext [CFWS]</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_attrtext" class="code" data-type="Function">get_attrtext</a></td>
+    <td><span>attrtext = 1*(any non-ATTRIBUTE_ENDS character)</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_attribute" class="code" data-type="Function">get_attribute</a></td>
+    <td><span>[CFWS] 1*attrtext [CFWS]</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_extended_attrtext" class="code" data-type="Function">get_extended_attrtext</a></td>
+    <td><span>attrtext = 1*(any non-ATTRIBUTE_ENDS character plus '%')</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_extended_attribute" class="code" data-type="Function">get_extended_attribute</a></td>
+    <td><span>[CFWS] 1*extended_attrtext [CFWS]</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_section" class="code" data-type="Function">get_section</a></td>
+    <td><span>'*' digits</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_value" class="code" data-type="Function">get_value</a></td>
+    <td><span>quoted-string / attribute</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#get_parameter" class="code" data-type="Function">get_parameter</a></td>
+    <td><span>attribute [section] ["*"] [CFWS] "=" value</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#parse_mime_parameters" class="code" data-type="Function">parse_mime_parameters</a></td>
+    <td><span>parameter *( ";" parameter )</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#parse_content_type_header" class="code" data-type="Function">parse_content_type_header</a></td>
+    <td><span>maintype "/" subtype *( ";" parameter )</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#parse_content_disposition_header" class="code" data-type="Function">parse_content_disposition_header</a></td>
+    <td><span>disposition-type *( ";" parameter )</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#parse_content_transfer_encoding_header" class="code" data-type="Function">parse_content_transfer_encoding_header</a></td>
+    <td><span>mechanism</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.email._header_value_parser._InvalidEwError.html" class="code" data-type="Class">_InvalidEwError</a></td>
+    <td><span>Invalid encoded word found while parsing headers.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email._header_value_parser.html#_wsp_splitter" class="code" data-type="Variable">_wsp_splitter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email._header_value_parser.html#_non_atom_end_matcher" class="code" data-type="Variable">_non_atom_end_matcher</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email._header_value_parser.html#_non_printable_finder" class="code" data-type="Variable">_non_printable_finder</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email._header_value_parser.html#_non_token_end_matcher" class="code" data-type="Variable">_non_token_end_matcher</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email._header_value_parser.html#_non_attribute_end_matcher" class="code" data-type="Variable">_non_attribute_end_matcher</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email._header_value_parser.html#_non_extended_attribute_end_matcher" class="code" data-type="Variable">_non_extended_attribute_end_matcher</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#_validate_xtext" class="code" data-type="Function">_validate_xtext</a></td>
+    <td><span>If input token contains ASCII non-printables, register a defect.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#_get_ptext_to_endchars" class="code" data-type="Function">_get_ptext_to_endchars</a></td>
+    <td><span>Scan printables/quoted-pairs until endchars and return unquoted ptext.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#_check_for_early_dl_end" class="code" data-type="Function">_check_for_early_dl_end</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#_find_mime_parameters" class="code" data-type="Function">_find_mime_parameters</a></td>
+    <td><span>Do our best to find the parameters in an invalid MIME header</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#_steal_trailing_WSP_if_exists" class="code" data-type="Function">_steal_trailing_WSP_if_exists</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#_refold_parse_tree" class="code" data-type="Function">_refold_parse_tree</a></td>
+    <td><span>Return string of contents of parse_tree folded according to RFC rules.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#_fold_as_ew" class="code" data-type="Function">_fold_as_ew</a></td>
+    <td><span>Fold string to_encode into lines as encoded word, combining if allowed. Return the new value for last_ew, or None if ew_combine_allowed is False.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.email._header_value_parser.html#_fold_mime_parameters" class="code" data-type="Function">_fold_mime_parameters</a></td>
+    <td><span>Fold TokenList 'part' into the 'lines' list as mime parameters.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.email._header_value_parser.WSP">
+    
+  </a>
+  <a name="WSP">
+    
+  </a>
+  <div class="functionHeader">
+    WSP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.email._header_value_parser.CFWS_LEADER">
+    
+  </a>
+  <a name="CFWS_LEADER">
+    
+  </a>
+  <div class="functionHeader">
+    CFWS_LEADER =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.email._header_value_parser.SPECIALS">
+    
+  </a>
+  <a name="SPECIALS">
+    
+  </a>
+  <div class="functionHeader">
+    SPECIALS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.email._header_value_parser.ATOM_ENDS">
+    
+  </a>
+  <a name="ATOM_ENDS">
+    
+  </a>
+  <div class="functionHeader">
+    ATOM_ENDS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.email._header_value_parser.DOT_ATOM_ENDS">
+    
+  </a>
+  <a name="DOT_ATOM_ENDS">
+    
+  </a>
+  <div class="functionHeader">
+    DOT_ATOM_ENDS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.email._header_value_parser.PHRASE_ENDS">
+    
+  </a>
+  <a name="PHRASE_ENDS">
+    
+  </a>
+  <div class="functionHeader">
+    PHRASE_ENDS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.email._header_value_parser.TSPECIALS">
+    
+  </a>
+  <a name="TSPECIALS">
+    
+  </a>
+  <div class="functionHeader">
+    TSPECIALS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.email._header_value_parser.TOKEN_ENDS">
+    
+  </a>
+  <a name="TOKEN_ENDS">
+    
+  </a>
+  <div class="functionHeader">
+    TOKEN_ENDS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.email._header_value_parser.ASPECIALS">
+    
+  </a>
+  <a name="ASPECIALS">
+    
+  </a>
+  <div class="functionHeader">
+    ASPECIALS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.email._header_value_parser.ATTRIBUTE_ENDS">
+    
+  </a>
+  <a name="ATTRIBUTE_ENDS">
+    
+  </a>
+  <div class="functionHeader">
+    ATTRIBUTE_ENDS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.email._header_value_parser.EXTENDED_ATTRIBUTE_ENDS">
+    
+  </a>
+  <a name="EXTENDED_ATTRIBUTE_ENDS">
+    
+  </a>
+  <div class="functionHeader">
+    EXTENDED_ATTRIBUTE_ENDS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.quote_string">
+    
+  </a>
+  <a name="quote_string">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    quote_string(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.email._header_value_parser.rfc2047_matcher">
+    
+  </a>
+  <a name="rfc2047_matcher">
+    
+  </a>
+  <div class="functionHeader">
+    rfc2047_matcher =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.email._header_value_parser.DOT">
+    
+  </a>
+  <a name="DOT">
+    
+  </a>
+  <div class="functionHeader">
+    DOT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.email._header_value_parser.ListSeparator">
+    
+  </a>
+  <a name="ListSeparator">
+    
+  </a>
+  <div class="functionHeader">
+    ListSeparator =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.email._header_value_parser.RouteComponentMarker">
+    
+  </a>
+  <a name="RouteComponentMarker">
+    
+  </a>
+  <div class="functionHeader">
+    RouteComponentMarker =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.email._header_value_parser._wsp_splitter">
+    
+  </a>
+  <a name="_wsp_splitter">
+    
+  </a>
+  <div class="functionHeader">
+    _wsp_splitter =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.email._header_value_parser._non_atom_end_matcher">
+    
+  </a>
+  <a name="_non_atom_end_matcher">
+    
+  </a>
+  <div class="functionHeader">
+    _non_atom_end_matcher =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.email._header_value_parser._non_printable_finder">
+    
+  </a>
+  <a name="_non_printable_finder">
+    
+  </a>
+  <div class="functionHeader">
+    _non_printable_finder =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.email._header_value_parser._non_token_end_matcher">
+    
+  </a>
+  <a name="_non_token_end_matcher">
+    
+  </a>
+  <div class="functionHeader">
+    _non_token_end_matcher =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.email._header_value_parser._non_attribute_end_matcher">
+    
+  </a>
+  <a name="_non_attribute_end_matcher">
+    
+  </a>
+  <div class="functionHeader">
+    _non_attribute_end_matcher =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.email._header_value_parser._non_extended_attribute_end_matcher">
+    
+  </a>
+  <a name="_non_extended_attribute_end_matcher">
+    
+  </a>
+  <div class="functionHeader">
+    _non_extended_attribute_end_matcher =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.email._header_value_parser._validate_xtext">
+    
+  </a>
+  <a name="_validate_xtext">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _validate_xtext(xtext):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">If input token contains ASCII non-printables, register a defect.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.email._header_value_parser._get_ptext_to_endchars">
+    
+  </a>
+  <a name="_get_ptext_to_endchars">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_ptext_to_endchars(value, endchars):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Scan printables/quoted-pairs until endchars and return unquoted ptext.
+
+This function turns a run of qcontent, ccontent-without-comments, or
+dtext-with-quoted-printables into a single string by unquoting any
+quoted printables.  It returns the string, the remaining value, and
+a flag that is True iff there were any quoted printables decoded.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_fws">
+    
+  </a>
+  <a name="get_fws">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_fws(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">FWS = 1*WSP
+
+This isn't the RFC definition.  We're using fws to represent tokens where
+folding can be done, but when we are parsing the *un*folding has already
+been done so we don't need to watch out for CRLF.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_encoded_word">
+    
+  </a>
+  <a name="get_encoded_word">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_encoded_word(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">encoded-word = "=?" charset "?" encoding "?" encoded-text "?="
+
+    </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_unstructured">
+    
+  </a>
+  <a name="get_unstructured">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_unstructured(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">unstructured = (*([FWS] vchar) *WSP) / obs-unstruct
+   obs-unstruct = *((*LF *CR *(obs-utext) *LF *CR)) / FWS)
+   obs-utext = %d0 / obs-NO-WS-CTL / LF / CR
+
+   obs-NO-WS-CTL is control characters except WSP/CR/LF.
+
+So, basically, we have printable runs, plus control characters or nulls in
+the obsolete syntax, separated by whitespace.  Since RFC 2047 uses the
+obsolete syntax in its specification, but requires whitespace on either
+side of the encoded words, I can see no reason to need to separate the
+non-printable-non-whitespace from the printable runs if they occur, so we
+parse this into xtext tokens separated by WSP tokens.
+
+Because an 'unstructured' value must by definition constitute the entire
+value, this 'get' routine does not return a remaining value, only the
+parsed TokenList.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_qp_ctext">
+    
+  </a>
+  <a name="get_qp_ctext">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_qp_ctext(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">ctext = &lt;printable ascii except \ ( )&gt;
+
+This is not the RFC ctext, since we are handling nested comments in comment
+and unquoting quoted-pairs here.  We allow anything except the '()'
+characters, but if we find any ASCII other than the RFC defined printable
+ASCII, a NonPrintableDefect is added to the token's defects list.  Since
+quoted pairs are converted to their unquoted values, what is returned is
+a 'ptext' token.  In this case it is a WhiteSpaceTerminal, so it's value
+is ' '.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_qcontent">
+    
+  </a>
+  <a name="get_qcontent">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_qcontent(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">qcontent = qtext / quoted-pair
+
+We allow anything except the DQUOTE character, but if we find any ASCII
+other than the RFC defined printable ASCII, a NonPrintableDefect is
+added to the token's defects list.  Any quoted pairs are converted to their
+unquoted values, so what is returned is a 'ptext' token.  In this case it
+is a ValueTerminal.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_atext">
+    
+  </a>
+  <a name="get_atext">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_atext(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">atext = &lt;matches _atext_matcher&gt;
+
+We allow any non-ATOM_ENDS in atext, but add an InvalidATextDefect to
+the token's defects list if we find non-atext characters.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_bare_quoted_string">
+    
+  </a>
+  <a name="get_bare_quoted_string">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_bare_quoted_string(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">bare-quoted-string = DQUOTE *([FWS] qcontent) [FWS] DQUOTE
+
+A quoted-string without the leading or trailing white space.  Its
+value is the text between the quote marks, with whitespace
+preserved and quoted pairs decoded.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_comment">
+    
+  </a>
+  <a name="get_comment">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_comment(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">comment = "(" *([FWS] ccontent) [FWS] ")"
+   ccontent = ctext / quoted-pair / comment
+
+We handle nested comments here, and quoted-pair in our qp-ctext routine.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_cfws">
+    
+  </a>
+  <a name="get_cfws">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_cfws(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">CFWS = (1*([FWS] comment) [FWS]) / FWS
+
+    </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_quoted_string">
+    
+  </a>
+  <a name="get_quoted_string">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_quoted_string(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">quoted-string = [CFWS] &lt;bare-quoted-string&gt; [CFWS]
+
+'bare-quoted-string' is an intermediate class defined by this
+parser and not by the RFC grammar.  It is the quoted string
+without any attached CFWS.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_atom">
+    
+  </a>
+  <a name="get_atom">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_atom(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">atom = [CFWS] 1*atext [CFWS]
+
+An atom could be an rfc2047 encoded word.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_dot_atom_text">
+    
+  </a>
+  <a name="get_dot_atom_text">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_dot_atom_text(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">dot-text = 1*atext *("." 1*atext)
+
+    </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_dot_atom">
+    
+  </a>
+  <a name="get_dot_atom">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_dot_atom(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">dot-atom = [CFWS] dot-atom-text [CFWS]
+
+Any place we can have a dot atom, we could instead have an rfc2047 encoded
+word.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_word">
+    
+  </a>
+  <a name="get_word">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_word(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">word = atom / quoted-string
+
+Either atom or quoted-string may start with CFWS.  We have to peel off this
+CFWS first to determine which type of word to parse.  Afterward we splice
+the leading CFWS, if any, into the parsed sub-token.
+
+If neither an atom or a quoted-string is found before the next special, a
+HeaderParseError is raised.
+
+The token returned is either an Atom or a QuotedString, as appropriate.
+This means the 'word' level of the formal grammar is not represented in the
+parse tree; this is because having that extra layer when manipulating the
+parse tree is more confusing than it is helpful.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_phrase">
+    
+  </a>
+  <a name="get_phrase">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_phrase(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">phrase = 1*word / obs-phrase
+    obs-phrase = word *(word / "." / CFWS)
+
+This means a phrase can be a sequence of words, periods, and CFWS in any
+order as long as it starts with at least one word.  If anything other than
+words is detected, an ObsoleteHeaderDefect is added to the token's defect
+list.  We also accept a phrase that starts with CFWS followed by a dot;
+this is registered as an InvalidHeaderDefect, since it is not supported by
+even the obsolete grammar.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_local_part">
+    
+  </a>
+  <a name="get_local_part">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_local_part(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">local-part = dot-atom / quoted-string / obs-local-part
+
+    </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_obs_local_part">
+    
+  </a>
+  <a name="get_obs_local_part">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_obs_local_part(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">obs-local-part = word *("." word)
+    </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_dtext">
+    
+  </a>
+  <a name="get_dtext">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_dtext(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">dtext = &lt;printable ascii except \ [ ]&gt; / obs-dtext
+    obs-dtext = obs-NO-WS-CTL / quoted-pair
+
+We allow anything except the excluded characters, but if we find any
+ASCII other than the RFC defined printable ASCII, a NonPrintableDefect is
+added to the token's defects list.  Quoted pairs are converted to their
+unquoted values, so what is returned is a ptext token, in this case a
+ValueTerminal.  If there were quoted-printables, an ObsoleteHeaderDefect is
+added to the returned token's defect list.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.email._header_value_parser._check_for_early_dl_end">
+    
+  </a>
+  <a name="_check_for_early_dl_end">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _check_for_early_dl_end(value, domain_literal):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_domain_literal">
+    
+  </a>
+  <a name="get_domain_literal">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_domain_literal(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">domain-literal = [CFWS] "[" *([FWS] dtext) [FWS] "]" [CFWS]
+
+    </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_domain">
+    
+  </a>
+  <a name="get_domain">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_domain(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">domain = dot-atom / domain-literal / obs-domain
+obs-domain = atom *("." atom))</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_addr_spec">
+    
+  </a>
+  <a name="get_addr_spec">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_addr_spec(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">addr-spec = local-part "@" domain
+
+    </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_obs_route">
+    
+  </a>
+  <a name="get_obs_route">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_obs_route(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">obs-route = obs-domain-list ":"
+obs-domain-list = *(CFWS / ",") "@" domain *("," [CFWS] ["@" domain])
+
+Returns an obs-route token with the appropriate sub-tokens (that is,
+there is no obs-domain-list in the parse tree).</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_angle_addr">
+    
+  </a>
+  <a name="get_angle_addr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_angle_addr(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">angle-addr = [CFWS] "&lt;" addr-spec "&gt;" [CFWS] / obs-angle-addr
+obs-angle-addr = [CFWS] "&lt;" obs-route addr-spec "&gt;" [CFWS]</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_display_name">
+    
+  </a>
+  <a name="get_display_name">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_display_name(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">display-name = phrase
+
+Because this is simply a name-rule, we don't return a display-name
+token containing a phrase, but rather a display-name token with
+the content of the phrase.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_name_addr">
+    
+  </a>
+  <a name="get_name_addr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_name_addr(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">name-addr = [display-name] angle-addr
+
+    </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_mailbox">
+    
+  </a>
+  <a name="get_mailbox">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_mailbox(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">mailbox = name-addr / addr-spec
+
+    </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_invalid_mailbox">
+    
+  </a>
+  <a name="get_invalid_mailbox">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_invalid_mailbox(value, endchars):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Read everything up to one of the chars in endchars.
+
+This is outside the formal grammar.  The InvalidMailbox TokenList that is
+returned acts like a Mailbox, but the data attributes are None.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_mailbox_list">
+    
+  </a>
+  <a name="get_mailbox_list">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_mailbox_list(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">mailbox-list = (mailbox *("," mailbox)) / obs-mbox-list
+    obs-mbox-list = *([CFWS] ",") mailbox *("," [mailbox / CFWS])
+
+For this routine we go outside the formal grammar in order to improve error
+handling.  We recognize the end of the mailbox list only at the end of the
+value or at a ';' (the group terminator).  This is so that we can turn
+invalid mailboxes into InvalidMailbox tokens and continue parsing any
+remaining valid mailboxes.  We also allow all mailbox entries to be null,
+and this condition is handled appropriately at a higher level.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_group_list">
+    
+  </a>
+  <a name="get_group_list">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_group_list(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">group-list = mailbox-list / CFWS / obs-group-list
+obs-group-list = 1*([CFWS] ",") [CFWS]</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_group">
+    
+  </a>
+  <a name="get_group">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_group(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">group = display-name ":" [group-list] ";" [CFWS]
+
+    </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_address">
+    
+  </a>
+  <a name="get_address">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_address(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">address = mailbox / group
+
+Note that counter-intuitively, an address can be either a single address or
+a list of addresses (a group).  This is why the returned Address object has
+a 'mailboxes' attribute which treats a single address as a list of length
+one.  When you need to differentiate between to two cases, extract the single
+element, which is either a mailbox or a group token.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_address_list">
+    
+  </a>
+  <a name="get_address_list">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_address_list(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">address_list = (address *("," address)) / obs-addr-list
+    obs-addr-list = *([CFWS] ",") address *("," [address / CFWS])
+
+We depart from the formal grammar here by continuing to parse until the end
+of the input, assuming the input to be entirely composed of an
+address-list.  This is always true in email parsing, and allows us
+to skip invalid addresses to parse additional valid ones.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_no_fold_literal">
+    
+  </a>
+  <a name="get_no_fold_literal">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_no_fold_literal(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">no-fold-literal = "[" *dtext "]"
+    </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_msg_id">
+    
+  </a>
+  <a name="get_msg_id">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_msg_id(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">msg-id = [CFWS] "&lt;" id-left '@' id-right  "&gt;" [CFWS]
+id-left = dot-atom-text / obs-id-left
+id-right = dot-atom-text / no-fold-literal / obs-id-right
+no-fold-literal = "[" *dtext "]"</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.parse_message_id">
+    
+  </a>
+  <a name="parse_message_id">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse_message_id(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">message-id      =   "Message-ID:" msg-id CRLF
+    </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.parse_mime_version">
+    
+  </a>
+  <a name="parse_mime_version">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse_mime_version(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">mime-version = [CFWS] 1*digit [CFWS] "." [CFWS] 1*digit [CFWS]
+
+    </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_invalid_parameter">
+    
+  </a>
+  <a name="get_invalid_parameter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_invalid_parameter(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Read everything up to the next ';'.
+
+This is outside the formal grammar.  The InvalidParameter TokenList that is
+returned acts like a Parameter, but the data attributes are None.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_ttext">
+    
+  </a>
+  <a name="get_ttext">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_ttext(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">ttext = &lt;matches _ttext_matcher&gt;
+
+We allow any non-TOKEN_ENDS in ttext, but add defects to the token's
+defects list if we find non-ttext characters.  We also register defects for
+*any* non-printables even though the RFC doesn't exclude all of them,
+because we follow the spirit of RFC 5322.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_token">
+    
+  </a>
+  <a name="get_token">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_token(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">token = [CFWS] 1*ttext [CFWS]
+
+The RFC equivalent of ttext is any US-ASCII chars except space, ctls, or
+tspecials.  We also exclude tabs even though the RFC doesn't.
+
+The RFC implies the CFWS but is not explicit about it in the BNF.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_attrtext">
+    
+  </a>
+  <a name="get_attrtext">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_attrtext(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">attrtext = 1*(any non-ATTRIBUTE_ENDS character)
+
+We allow any non-ATTRIBUTE_ENDS in attrtext, but add defects to the
+token's defects list if we find non-attrtext characters.  We also register
+defects for *any* non-printables even though the RFC doesn't exclude all of
+them, because we follow the spirit of RFC 5322.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_attribute">
+    
+  </a>
+  <a name="get_attribute">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_attribute(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">[CFWS] 1*attrtext [CFWS]
+
+This version of the BNF makes the CFWS explicit, and as usual we use a
+value terminal for the actual run of characters.  The RFC equivalent of
+attrtext is the token characters, with the subtraction of '*', "'", and '%'.
+We include tab in the excluded set just as we do for token.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_extended_attrtext">
+    
+  </a>
+  <a name="get_extended_attrtext">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_extended_attrtext(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">attrtext = 1*(any non-ATTRIBUTE_ENDS character plus '%')
+
+This is a special parsing routine so that we get a value that
+includes % escapes as a single string (which we decode as a single
+string later).</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_extended_attribute">
+    
+  </a>
+  <a name="get_extended_attribute">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_extended_attribute(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">[CFWS] 1*extended_attrtext [CFWS]
+
+This is like the non-extended version except we allow % characters, so that
+we can pick up an encoded value as a single string.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_section">
+    
+  </a>
+  <a name="get_section">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_section(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">'*' digits
+
+The formal BNF is more complicated because leading 0s are not allowed.  We
+check for that and add a defect.  We also assume no CFWS is allowed between
+the '*' and the digits, though the RFC is not crystal clear on that.
+The caller should already have dealt with leading CFWS.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_value">
+    
+  </a>
+  <a name="get_value">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_value(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">quoted-string / attribute
+
+    </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.get_parameter">
+    
+  </a>
+  <a name="get_parameter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_parameter(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">attribute [section] ["*"] [CFWS] "=" value
+
+The CFWS is implied by the RFC but not made explicit in the BNF.  This
+simplified form of the BNF from the RFC is made to conform with the RFC BNF
+through some extra checks.  We do it this way because it makes both error
+recovery and working with the resulting parse tree easier.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.parse_mime_parameters">
+    
+  </a>
+  <a name="parse_mime_parameters">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse_mime_parameters(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">parameter *( ";" parameter )
+
+That BNF is meant to indicate this routine should only be called after
+finding and handling the leading ';'.  There is no corresponding rule in
+the formal RFC grammar, but it is more convenient for us for the set of
+parameters to be treated as its own TokenList.
+
+This is 'parse' routine because it consumes the remaining value, but it
+would never be called to parse a full header.  Instead it is called to
+parse everything after the non-parameter value of a specific MIME header.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.email._header_value_parser._find_mime_parameters">
+    
+  </a>
+  <a name="_find_mime_parameters">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _find_mime_parameters(tokenlist, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Do our best to find the parameters in an invalid MIME header
+
+    </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.parse_content_type_header">
+    
+  </a>
+  <a name="parse_content_type_header">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse_content_type_header(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">maintype "/" subtype *( ";" parameter )
+
+The maintype and substype are tokens.  Theoretically they could
+be checked against the official IANA list + x-token, but we
+don't do that.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.parse_content_disposition_header">
+    
+  </a>
+  <a name="parse_content_disposition_header">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse_content_disposition_header(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">disposition-type *( ";" parameter )
+
+    </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email._header_value_parser.parse_content_transfer_encoding_header">
+    
+  </a>
+  <a name="parse_content_transfer_encoding_header">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse_content_transfer_encoding_header(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">mechanism
+
+    </p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.email._header_value_parser._steal_trailing_WSP_if_exists">
+    
+  </a>
+  <a name="_steal_trailing_WSP_if_exists">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _steal_trailing_WSP_if_exists(lines):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.email._header_value_parser._refold_parse_tree">
+    
+  </a>
+  <a name="_refold_parse_tree">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _refold_parse_tree(parse_tree):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return string of contents of parse_tree folded according to RFC rules.
+
+    </p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.email._header_value_parser._fold_as_ew">
+    
+  </a>
+  <a name="_fold_as_ew">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _fold_as_ew(to_encode, lines, maxlen, last_ew, ew_combine_allowed, charset):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Fold string to_encode into lines as encoded word, combining if allowed.
+Return the new value for last_ew, or None if ew_combine_allowed is False.
+
+If there is already an encoded word in the last line of lines (indicated by
+a non-None value for last_ew) and ew_combine_allowed is true, decode the
+existing ew, combine it with to_encode, and re-encode.  Otherwise, encode
+to_encode.  In either case, split to_encode as necessary so that the
+encoded segments fit within maxlen.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.email._header_value_parser._fold_mime_parameters">
+    
+  </a>
+  <a name="_fold_mime_parameters">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _fold_mime_parameters(part, lines, maxlen, encoding):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Fold TokenList 'part' into the 'lines' list as mime parameters.
+
+Using the decoded list of parameters and values, format them according to
+the RFC rules, including using RFC2231 encoding if the value cannot be
+expressed in 'encoding' and/or the parameter+value is too long to fit
+within 'maxlen'.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

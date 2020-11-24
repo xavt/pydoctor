@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.rlcompleter.Completer : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.rlcompleter.html" class="code" data-type="Module">rlcompleter</a>.<a href="Lib.rlcompleter.Completer.html" class="code" data-type="Class">Completer</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.rlcompleter.Completer:</code></p>
+        <p><a href="classIndex.html#Lib.rlcompleter.Completer">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div class="undocumented">Undocumented</div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3465">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.rlcompleter.Completer.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Create a new completer for the command line.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.rlcompleter.Completer.html#use_main_ns" class="code" data-type="Instance Variable">use_main_ns</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.rlcompleter.Completer.html#namespace" class="code" data-type="Instance Variable">namespace</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.rlcompleter.Completer.html#complete" class="code" data-type="Method">complete</a></td>
+    <td><span>Return the next possible completion for 'text'.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.rlcompleter.Completer.html#matches" class="code" data-type="Instance Variable">matches</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.rlcompleter.Completer.html#global_matches" class="code" data-type="Method">global_matches</a></td>
+    <td><span>Compute matches when text is a simple name.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.rlcompleter.Completer.html#attr_matches" class="code" data-type="Method">attr_matches</a></td>
+    <td><span>Compute matches when text contains a dot.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.rlcompleter.Completer.html#_callable_postfix" class="code" data-type="Method">_callable_postfix</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.rlcompleter.Completer.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, namespace=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create a new completer for the command line.
+
+Completer([namespace]) -&gt; completer instance.
+
+If unspecified, the default namespace where completions are performed
+is __main__ (technically, __main__.__dict__). Namespaces should be
+given as dictionaries.
+
+Completer instances should be used as the completion mechanism of
+readline via the set_completer() call:
+
+readline.set_completer(Completer(my_namespace).complete)</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.rlcompleter.Completer.use_main_ns">
+    
+  </a>
+  <a name="use_main_ns">
+    
+  </a>
+  <div class="functionHeader">
+    use_main_ns =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.rlcompleter.Completer.namespace">
+    
+  </a>
+  <a name="namespace">
+    
+  </a>
+  <div class="functionHeader">
+    namespace =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.rlcompleter.Completer.complete">
+    
+  </a>
+  <a name="complete">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    complete(self, text, state):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the next possible completion for 'text'.
+
+This is called successively with state == 0, 1, 2, ... until it
+returns None.  The completion should begin with 'text'.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.rlcompleter.Completer.matches">
+    
+  </a>
+  <a name="matches">
+    
+  </a>
+  <div class="functionHeader">
+    matches =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.rlcompleter.Completer._callable_postfix">
+    
+  </a>
+  <a name="_callable_postfix">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _callable_postfix(self, val, word):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.rlcompleter.Completer.global_matches">
+    
+  </a>
+  <a name="global_matches">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    global_matches(self, text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Compute matches when text is a simple name.
+
+Return a list of all keywords, built-in functions and names currently
+defined in self.namespace that match.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.rlcompleter.Completer.attr_matches">
+    
+  </a>
+  <a name="attr_matches">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    attr_matches(self, text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Compute matches when text contains a dot.
+
+Assuming the text is of the form NAME.NAME....[NAME], and is
+evaluable in self.namespace, it will be evaluated and its attributes
+(as revealed by dir()) are used as possible completions.  (For class
+instances, class members are also considered.)
+
+WARNING: this can still invoke arbitrary C code, if an object
+with a __getattr__ hook is evaluated.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

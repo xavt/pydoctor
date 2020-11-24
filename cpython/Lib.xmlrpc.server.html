@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.xmlrpc.server : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.xmlrpc.html" class="code" data-type="Package">xmlrpc</a>.<a href="Lib.xmlrpc.server.html" class="code" data-type="Module">server</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">XML-RPC Servers.
+
+This module can be used to create simple XML-RPC servers
+by creating a server and either installing functions, a
+class instance, or by extending the SimpleXMLRPCServer
+class.
+
+It can also be used to handle XML-RPC requests in a CGI
+environment using CGIXMLRPCRequestHandler.
+
+The Doc* classes can be used to create XML-RPC servers that
+serve pydoc-style documentation in response to HTTP
+GET requests. This documentation is dynamically generated
+based on the functions and methods registered with the
+server.
+
+A list of possible usage patterns follows:
+
+1. Install functions:
+
+server = SimpleXMLRPCServer(("localhost", 8000))
+server.register_function(pow)
+server.register_function(lambda x,y: x+y, 'add')
+server.serve_forever()
+
+2. Install an instance:
+
+class MyFuncs:
+    def __init__(self):
+        # make all of the sys functions available through sys.func_name
+        import sys
+        self.sys = sys
+    def _listMethods(self):
+        # implement this method so that system.listMethods
+        # knows to advertise the sys methods
+        return list_public_methods(self) + \
+                ['sys.' + method for method in list_public_methods(self.sys)]
+    def pow(self, x, y): return pow(x, y)
+    def add(self, x, y) : return x + y
+
+server = SimpleXMLRPCServer(("localhost", 8000))
+server.register_introspection_functions()
+server.register_instance(MyFuncs())
+server.serve_forever()
+
+3. Install an instance with custom dispatch method:
+
+class Math:
+    def _listMethods(self):
+        # this method must be present for system.listMethods
+        # to work
+        return ['add', 'pow']
+    def _methodHelp(self, method):
+        # this method must be present for system.methodHelp
+        # to work
+        if method == 'add':
+            return "add(2,3) =&gt; 5"
+        elif method == 'pow':
+            return "pow(x, y[, z]) =&gt; number"
+        else:
+            # By convention, return empty
+            # string if no help is available
+            return ""
+    def _dispatch(self, method, params):
+        if method == 'pow':
+            return pow(*params)
+        elif method == 'add':
+            return params[0] + params[1]
+        else:
+            raise ValueError('bad method')
+
+server = SimpleXMLRPCServer(("localhost", 8000))
+server.register_introspection_functions()
+server.register_instance(Math())
+server.serve_forever()
+
+4. Subclass SimpleXMLRPCServer:
+
+class MathServer(SimpleXMLRPCServer):
+    def _dispatch(self, method, params):
+        try:
+            # We are forcing the 'export_' prefix on methods that are
+            # callable through XML-RPC to prevent potential security
+            # problems
+            func = getattr(self, 'export_' + method)
+        except AttributeError:
+            raise Exception('method "%s" is not supported' % method)
+        else:
+            return func(*params)
+
+    def export_add(self, x, y):
+        return x + y
+
+server = MathServer(("localhost", 8000))
+server.serve_forever()
+
+5. CGI script:
+
+server = CGIXMLRPCRequestHandler()
+server.register_function(pow)
+server.handle_request()</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id12191">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xmlrpc.server.html#fcntl" class="code" data-type="Variable">fcntl</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xmlrpc.server.html#resolve_dotted_attribute" class="code" data-type="Function">resolve_dotted_attribute</a></td>
+    <td><span>resolve_dotted_attribute(a, 'b.c.d') =&gt; a.b.c.d</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xmlrpc.server.html#list_public_methods" class="code" data-type="Function">list_public_methods</a></td>
+    <td><span>Returns a list of attribute strings, found in the specified object, which represent callable attributes</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xmlrpc.server.SimpleXMLRPCDispatcher.html" class="code" data-type="Class">SimpleXMLRPCDispatcher</a></td>
+    <td><span>Mix-in class that dispatches XML-RPC requests.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xmlrpc.server.SimpleXMLRPCRequestHandler.html" class="code" data-type="Class">SimpleXMLRPCRequestHandler</a></td>
+    <td><span>Simple XML-RPC request handler class.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xmlrpc.server.SimpleXMLRPCServer.html" class="code" data-type="Class">SimpleXMLRPCServer</a></td>
+    <td><span>Simple XML-RPC server.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xmlrpc.server.MultiPathXMLRPCServer.html" class="code" data-type="Class">MultiPathXMLRPCServer</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xmlrpc.server.CGIXMLRPCRequestHandler.html" class="code" data-type="Class">CGIXMLRPCRequestHandler</a></td>
+    <td><span>Simple handler for XML-RPC data passed through CGI.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xmlrpc.server.ServerHTMLDoc.html" class="code" data-type="Class">ServerHTMLDoc</a></td>
+    <td><span>Class used to generate pydoc HTML document for a server</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xmlrpc.server.XMLRPCDocGenerator.html" class="code" data-type="Class">XMLRPCDocGenerator</a></td>
+    <td><span>Generates documentation for an XML-RPC server.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xmlrpc.server.DocXMLRPCRequestHandler.html" class="code" data-type="Class">DocXMLRPCRequestHandler</a></td>
+    <td><span>XML-RPC and documentation request handler class.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xmlrpc.server.DocXMLRPCServer.html" class="code" data-type="Class">DocXMLRPCServer</a></td>
+    <td><span>XML-RPC and HTML documentation server.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xmlrpc.server.DocCGIXMLRPCRequestHandler.html" class="code" data-type="Class">DocCGIXMLRPCRequestHandler</a></td>
+    <td><span>Handler for XML-RPC data and documentation requests passed through CGI</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xmlrpc.server.ExampleService.html" class="code" data-type="Class">ExampleService</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.xmlrpc.server.fcntl">
+    
+  </a>
+  <a name="fcntl">
+    
+  </a>
+  <div class="functionHeader">
+    fcntl =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xmlrpc.server.resolve_dotted_attribute">
+    
+  </a>
+  <a name="resolve_dotted_attribute">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    resolve_dotted_attribute(obj, attr, allow_dotted_names=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">resolve_dotted_attribute(a, 'b.c.d') =&gt; a.b.c.d
+
+Resolves a dotted attribute name to an object.  Raises
+an AttributeError if any attribute in the chain starts with a '_'.
+
+If the optional allow_dotted_names argument is false, dots are not
+supported and this function operates similar to getattr(obj, attr).</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xmlrpc.server.list_public_methods">
+    
+  </a>
+  <a name="list_public_methods">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    list_public_methods(obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns a list of attribute strings, found in the specified
+object, which represent callable attributes</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.mailcap : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.mailcap.html" class="code" data-type="Module">mailcap</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Mailcap file handling.  See RFC 1524.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3103">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.mailcap.html#lineno_sort_key" class="code" data-type="Function">lineno_sort_key</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.mailcap.html#getcaps" class="code" data-type="Function">getcaps</a></td>
+    <td><span>Return a dictionary containing the mailcap database.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.mailcap.html#listmailcapfiles" class="code" data-type="Function">listmailcapfiles</a></td>
+    <td><span>Return a list of all mailcap files found on the system.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.mailcap.html#readmailcapfile" class="code" data-type="Function">readmailcapfile</a></td>
+    <td><span>Read a mailcap file and return a dictionary keyed by MIME type.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.mailcap.html#parseline" class="code" data-type="Function">parseline</a></td>
+    <td><span>Parse one entry in a mailcap file and return a dictionary.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.mailcap.html#parsefield" class="code" data-type="Function">parsefield</a></td>
+    <td><span>Separate one key-value pair in a mailcap entry.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.mailcap.html#findmatch" class="code" data-type="Function">findmatch</a></td>
+    <td><span>Find a match for a mailcap entry.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.mailcap.html#lookup" class="code" data-type="Function">lookup</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.mailcap.html#subst" class="code" data-type="Function">subst</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.mailcap.html#findparam" class="code" data-type="Function">findparam</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.mailcap.html#test" class="code" data-type="Function">test</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.mailcap.html#show" class="code" data-type="Function">show</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.mailcap.html#_readmailcapfile" class="code" data-type="Function">_readmailcapfile</a></td>
+    <td><span>Read a mailcap file and return a dictionary keyed by MIME type.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction">
+  
+  <a name="Lib.mailcap.lineno_sort_key">
+    
+  </a>
+  <a name="lineno_sort_key">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    lineno_sort_key(entry):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.mailcap.getcaps">
+    
+  </a>
+  <a name="getcaps">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getcaps():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a dictionary containing the mailcap database.
+
+The dictionary maps a MIME type (in all lowercase, e.g. 'text/plain')
+to a list of dictionaries corresponding to mailcap entries.  The list
+collects all the entries for that MIME type from all available mailcap
+files.  Each dictionary contains key-value pairs for that MIME type,
+where the viewing command is stored with the key "view".</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.mailcap.listmailcapfiles">
+    
+  </a>
+  <a name="listmailcapfiles">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    listmailcapfiles():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a list of all mailcap files found on the system.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.mailcap.readmailcapfile">
+    
+  </a>
+  <a name="readmailcapfile">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    readmailcapfile(fp):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Read a mailcap file and return a dictionary keyed by MIME type.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.mailcap._readmailcapfile">
+    
+  </a>
+  <a name="_readmailcapfile">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _readmailcapfile(fp, lineno):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Read a mailcap file and return a dictionary keyed by MIME type.
+
+Each MIME type is mapped to an entry consisting of a list of
+dictionaries; the list will contain more than one such dictionary
+if a given MIME type appears more than once in the mailcap file.
+Each dictionary contains key-value pairs for that MIME type, where
+the viewing command is stored with the key "view".</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.mailcap.parseline">
+    
+  </a>
+  <a name="parseline">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parseline(line):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse one entry in a mailcap file and return a dictionary.
+
+The viewing command is stored as the value with the key "view",
+and the rest of the fields produce key-value pairs in the dict.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.mailcap.parsefield">
+    
+  </a>
+  <a name="parsefield">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parsefield(line, i, n):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Separate one key-value pair in a mailcap entry.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.mailcap.findmatch">
+    
+  </a>
+  <a name="findmatch">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    findmatch(caps, MIMEtype, key="""view""", filename="""/dev/null""", plist=[]):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Find a match for a mailcap entry.
+
+Return a tuple containing the command line, and the mailcap entry
+used; (None, None) if no match is found.  This may invoke the
+'test' command of several matching entries before deciding which
+entry to use.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.mailcap.lookup">
+    
+  </a>
+  <a name="lookup">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    lookup(caps, MIMEtype, key=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.mailcap.subst">
+    
+  </a>
+  <a name="subst">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    subst(field, MIMEtype, filename, plist=[]):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.mailcap.findparam">
+    
+  </a>
+  <a name="findparam">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    findparam(name, plist):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.mailcap.test">
+    
+  </a>
+  <a name="test">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.mailcap.show">
+    
+  </a>
+  <a name="show">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    show(caps):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

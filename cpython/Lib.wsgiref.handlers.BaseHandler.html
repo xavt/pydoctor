@@ -1,0 +1,1068 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.wsgiref.handlers.BaseHandler : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.wsgiref.html" class="code" data-type="Package">wsgiref</a>.<a href="Lib.wsgiref.handlers.html" class="code" data-type="Module">handlers</a>.<a href="Lib.wsgiref.handlers.BaseHandler.html" class="code" data-type="Class">BaseHandler</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.wsgiref.handlers.BaseHandler:</code></p><p>Known subclasses: <a href="Lib.wsgiref.handlers.SimpleHandler.html" class="code" data-type="Class">Lib.wsgiref.handlers.SimpleHandler</a></p>
+        <p><a href="classIndex.html#Lib.wsgiref.handlers.BaseHandler">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Manage the invocation of a WSGI application</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id11986">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#wsgi_version" class="code" data-type="Class Variable">wsgi_version</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#wsgi_multithread" class="code" data-type="Class Variable">wsgi_multithread</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#wsgi_multiprocess" class="code" data-type="Class Variable">wsgi_multiprocess</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#wsgi_run_once" class="code" data-type="Class Variable">wsgi_run_once</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#origin_server" class="code" data-type="Class Variable">origin_server</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#http_version" class="code" data-type="Class Variable">http_version</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#server_software" class="code" data-type="Class Variable">server_software</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#os_environ" class="code" data-type="Class Variable">os_environ</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#traceback_limit" class="code" data-type="Class Variable">traceback_limit</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#error_status" class="code" data-type="Class Variable">error_status</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#error_headers" class="code" data-type="Class Variable">error_headers</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#error_body" class="code" data-type="Class Variable">error_body</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#status" class="code" data-type="Instance Variable">status</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#result" class="code" data-type="Instance Variable">result</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#headers_sent" class="code" data-type="Instance Variable">headers_sent</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#headers" class="code" data-type="Instance Variable">headers</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#bytes_sent" class="code" data-type="Instance Variable">bytes_sent</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#run" class="code" data-type="Method">run</a></td>
+    <td><span>Invoke the application</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#setup_environ" class="code" data-type="Method">setup_environ</a></td>
+    <td><span>Set up the environment for one request</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#environ" class="code" data-type="Instance Variable">environ</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#finish_response" class="code" data-type="Method">finish_response</a></td>
+    <td><span>Send any iterable data, then close self and the iterable</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#get_scheme" class="code" data-type="Method">get_scheme</a></td>
+    <td><span>Return the URL scheme being used</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#set_content_length" class="code" data-type="Method">set_content_length</a></td>
+    <td><span>Compute Content-Length or switch to chunked encoding if possible</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#cleanup_headers" class="code" data-type="Method">cleanup_headers</a></td>
+    <td><span>Make any necessary header changes or defaults</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#start_response" class="code" data-type="Method">start_response</a></td>
+    <td><span>'start_response()' callable as specified by PEP 3333</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#send_preamble" class="code" data-type="Method">send_preamble</a></td>
+    <td><span>Transmit version/status/date/server, via self._write()</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#write" class="code" data-type="Method">write</a></td>
+    <td><span>'write()' callable as specified by PEP 3333</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#sendfile" class="code" data-type="Method">sendfile</a></td>
+    <td><span>Platform-specific file transmission</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#finish_content" class="code" data-type="Method">finish_content</a></td>
+    <td><span>Ensure headers and content have both been sent</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#close" class="code" data-type="Method">close</a></td>
+    <td><span>Close the iterable (if needed) and reset all instance vars</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#send_headers" class="code" data-type="Method">send_headers</a></td>
+    <td><span>Transmit headers to the client, via self._write()</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#result_is_file" class="code" data-type="Method">result_is_file</a></td>
+    <td><span>True if 'self.result' is an instance of 'self.wsgi_file_wrapper'</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#client_is_modern" class="code" data-type="Method">client_is_modern</a></td>
+    <td><span>True if client can accept status and headers</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#log_exception" class="code" data-type="Method">log_exception</a></td>
+    <td><span>Log the 'exc_info' tuple in the server log</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#handle_error" class="code" data-type="Method">handle_error</a></td>
+    <td><span>Log current error, and send error output to client if possible</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#error_output" class="code" data-type="Method">error_output</a></td>
+    <td><span>WSGI mini-app to create error output</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#get_stdin" class="code" data-type="Method">get_stdin</a></td>
+    <td><span>Override in subclass to return suitable 'wsgi.input'</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#get_stderr" class="code" data-type="Method">get_stderr</a></td>
+    <td><span>Override in subclass to return suitable 'wsgi.errors'</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#add_cgi_vars" class="code" data-type="Method">add_cgi_vars</a></td>
+    <td><span>Override in subclass to insert CGI variables in 'self.environ'</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#_convert_string_type" class="code" data-type="Method">_convert_string_type</a></td>
+    <td><span>Convert/check value type.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#_write" class="code" data-type="Method">_write</a></td>
+    <td><span>Override in subclass to buffer data for send to client</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.wsgiref.handlers.BaseHandler.html#_flush" class="code" data-type="Method">_flush</a></td>
+    <td><span>Override in subclass to force sending of recent '_write()' calls</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.wsgi_version">
+    
+  </a>
+  <a name="wsgi_version">
+    
+  </a>
+  <div class="functionHeader">
+    wsgi_version =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Tuple[int, ...]</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.wsgi_multithread">
+    
+  </a>
+  <a name="wsgi_multithread">
+    
+  </a>
+  <div class="functionHeader">
+    wsgi_multithread =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.wsgiref.handlers.SimpleHandler.html" class="code" data-type="Class">Lib.wsgiref.handlers.SimpleHandler</a></div>
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.wsgi_multiprocess">
+    
+  </a>
+  <a name="wsgi_multiprocess">
+    
+  </a>
+  <div class="functionHeader">
+    wsgi_multiprocess =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.wsgiref.handlers.SimpleHandler.html" class="code" data-type="Class">Lib.wsgiref.handlers.SimpleHandler</a></div>
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.wsgi_run_once">
+    
+  </a>
+  <a name="wsgi_run_once">
+    
+  </a>
+  <div class="functionHeader">
+    wsgi_run_once =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.wsgiref.handlers.CGIHandler.html" class="code" data-type="Class">Lib.wsgiref.handlers.CGIHandler</a>, <a href="Lib.wsgiref.handlers.IISCGIHandler.html" class="code" data-type="Class">Lib.wsgiref.handlers.IISCGIHandler</a></div>
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.origin_server">
+    
+  </a>
+  <a name="origin_server">
+    
+  </a>
+  <div class="functionHeader">
+    origin_server =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.wsgiref.handlers.BaseCGIHandler.html" class="code" data-type="Class">Lib.wsgiref.handlers.BaseCGIHandler</a></div>
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.http_version">
+    
+  </a>
+  <a name="http_version">
+    
+  </a>
+  <div class="functionHeader">
+    http_version =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.server_software">
+    
+  </a>
+  <a name="server_software">
+    
+  </a>
+  <div class="functionHeader">
+    server_software =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.os_environ">
+    
+  </a>
+  <a name="os_environ">
+    
+  </a>
+  <div class="functionHeader">
+    os_environ =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.wsgiref.handlers.CGIHandler.html" class="code" data-type="Class">Lib.wsgiref.handlers.CGIHandler</a>, <a href="Lib.wsgiref.handlers.IISCGIHandler.html" class="code" data-type="Class">Lib.wsgiref.handlers.IISCGIHandler</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.traceback_limit">
+    
+  </a>
+  <a name="traceback_limit">
+    
+  </a>
+  <div class="functionHeader">
+    traceback_limit =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.error_status">
+    
+  </a>
+  <a name="error_status">
+    
+  </a>
+  <div class="functionHeader">
+    error_status =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.error_headers">
+    
+  </a>
+  <a name="error_headers">
+    
+  </a>
+  <div class="functionHeader">
+    error_headers =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.error_body">
+    
+  </a>
+  <a name="error_body">
+    
+  </a>
+  <div class="functionHeader">
+    error_body =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.status">
+    
+  </a>
+  <a name="status">
+    
+  </a>
+  <div class="functionHeader">
+    status =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.result">
+    
+  </a>
+  <a name="result">
+    
+  </a>
+  <div class="functionHeader">
+    result =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.headers_sent">
+    
+  </a>
+  <a name="headers_sent">
+    
+  </a>
+  <div class="functionHeader">
+    headers_sent =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.headers">
+    
+  </a>
+  <a name="headers">
+    
+  </a>
+  <div class="functionHeader">
+    headers =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.bytes_sent">
+    
+  </a>
+  <a name="bytes_sent">
+    
+  </a>
+  <div class="functionHeader">
+    bytes_sent =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.run">
+    
+  </a>
+  <a name="run">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    run(self, application):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Invoke the application</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.setup_environ">
+    
+  </a>
+  <a name="setup_environ">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setup_environ(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set up the environment for one request</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.environ">
+    
+  </a>
+  <a name="environ">
+    
+  </a>
+  <div class="functionHeader">
+    environ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.finish_response">
+    
+  </a>
+  <a name="finish_response">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    finish_response(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Send any iterable data, then close self and the iterable
+
+Subclasses intended for use in asynchronous servers will
+want to redefine this method, such that it sets up callbacks
+in the event loop to iterate over the data, and to call
+'self.close()' once the response is finished.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.get_scheme">
+    
+  </a>
+  <a name="get_scheme">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_scheme(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the URL scheme being used</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.set_content_length">
+    
+  </a>
+  <a name="set_content_length">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_content_length(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Compute Content-Length or switch to chunked encoding if possible</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.cleanup_headers">
+    
+  </a>
+  <a name="cleanup_headers">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    cleanup_headers(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Make any necessary header changes or defaults
+
+Subclasses can extend this to add other defaults.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.start_response">
+    
+  </a>
+  <a name="start_response">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    start_response(self, status, headers, exc_info=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">'start_response()' callable as specified by PEP 3333</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler._convert_string_type">
+    
+  </a>
+  <a name="_convert_string_type">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _convert_string_type(self, value, title):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convert/check value type.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.send_preamble">
+    
+  </a>
+  <a name="send_preamble">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    send_preamble(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Transmit version/status/date/server, via self._write()</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.write">
+    
+  </a>
+  <a name="write">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    write(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">'write()' callable as specified by PEP 3333</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.sendfile">
+    
+  </a>
+  <a name="sendfile">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    sendfile(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Platform-specific file transmission
+
+Override this method in subclasses to support platform-specific
+file transmission.  It is only called if the application's
+return iterable ('self.result') is an instance of
+'self.wsgi_file_wrapper'.
+
+This method should return a true value if it was able to actually
+transmit the wrapped file-like object using a platform-specific
+approach.  It should return a false value if normal iteration
+should be used instead.  An exception can be raised to indicate
+that transmission was attempted, but failed.
+
+NOTE: this method should call 'self.send_headers()' if
+'self.headers_sent' is false and it is going to attempt direct
+transmission of the file.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.finish_content">
+    
+  </a>
+  <a name="finish_content">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    finish_content(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Ensure headers and content have both been sent</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.close">
+    
+  </a>
+  <a name="close">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    close(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Close the iterable (if needed) and reset all instance vars
+
+Subclasses may want to also drop the client connection.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.send_headers">
+    
+  </a>
+  <a name="send_headers">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    send_headers(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Transmit headers to the client, via self._write()</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.result_is_file">
+    
+  </a>
+  <a name="result_is_file">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    result_is_file(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">True if 'self.result' is an instance of 'self.wsgi_file_wrapper'</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.client_is_modern">
+    
+  </a>
+  <a name="client_is_modern">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    client_is_modern(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">True if client can accept status and headers</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.log_exception">
+    
+  </a>
+  <a name="log_exception">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    log_exception(self, exc_info):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Log the 'exc_info' tuple in the server log
+
+Subclasses may override to retarget the output or change its format.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.handle_error">
+    
+  </a>
+  <a name="handle_error">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    handle_error(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Log current error, and send error output to client if possible</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.error_output">
+    
+  </a>
+  <a name="error_output">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    error_output(self, environ, start_response):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">WSGI mini-app to create error output
+
+By default, this just uses the 'error_status', 'error_headers',
+and 'error_body' attributes to generate an output page.  It can
+be overridden in a subclass to dynamically generate diagnostics,
+choose an appropriate message for the user's preferred language, etc.
+
+Note, however, that it's not recommended from a security perspective to
+spit out diagnostics to any old user; ideally, you should have to do
+something special to enable diagnostic output, which is why we don't
+include any here!</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler._write">
+    
+  </a>
+  <a name="_write">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _write(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.wsgiref.handlers.SimpleHandler.html" class="code" data-type="Class">Lib.wsgiref.handlers.SimpleHandler</a></div>
+    
+    <div><p class="pre">Override in subclass to buffer data for send to client
+
+It's okay if this method actually transmits the data; BaseHandler
+just separates write and flush operations for greater efficiency
+when the underlying system actually has such a distinction.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler._flush">
+    
+  </a>
+  <a name="_flush">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _flush(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.wsgiref.handlers.SimpleHandler.html" class="code" data-type="Class">Lib.wsgiref.handlers.SimpleHandler</a></div>
+    
+    <div><p class="pre">Override in subclass to force sending of recent '_write()' calls
+
+It's okay if this method is a no-op (i.e., if '_write()' actually
+sends the data.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.get_stdin">
+    
+  </a>
+  <a name="get_stdin">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_stdin(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.wsgiref.handlers.SimpleHandler.html" class="code" data-type="Class">Lib.wsgiref.handlers.SimpleHandler</a></div>
+    
+    <div><p class="pre">Override in subclass to return suitable 'wsgi.input'</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.get_stderr">
+    
+  </a>
+  <a name="get_stderr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_stderr(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.wsgiref.handlers.SimpleHandler.html" class="code" data-type="Class">Lib.wsgiref.handlers.SimpleHandler</a></div>
+    
+    <div><p class="pre">Override in subclass to return suitable 'wsgi.errors'</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.wsgiref.handlers.BaseHandler.add_cgi_vars">
+    
+  </a>
+  <a name="add_cgi_vars">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    add_cgi_vars(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.wsgiref.handlers.SimpleHandler.html" class="code" data-type="Class">Lib.wsgiref.handlers.SimpleHandler</a></div>
+    
+    <div><p class="pre">Override in subclass to insert CGI variables in 'self.environ'</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

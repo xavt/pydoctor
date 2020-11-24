@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.getopt : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.getopt.html" class="code" data-type="Module">getopt</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Parser for command line options.
+
+This module helps scripts to parse the command line arguments in
+sys.argv.  It supports the same conventions as the Unix getopt()
+function (including the special meanings of arguments of the form `-'
+and `--').  Long options similar to those supported by GNU software
+may be used as well via an optional third argument.  This module
+provides two functions and an exception:
+
+getopt() -- Parse command line options
+gnu_getopt() -- Like getopt(), but allow option and non-option arguments
+to be intermixed.
+GetoptError -- exception (class) raised with 'opt' attribute, which is the
+option involved with the exception.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id1965">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.getopt.GetoptError.html" class="code" data-type="Class">GetoptError</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.getopt.html#getopt" class="code" data-type="Function">getopt</a></td>
+    <td><span>getopt(args, options[, long_options]) -&gt; opts, args</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.getopt.html#gnu_getopt" class="code" data-type="Function">gnu_getopt</a></td>
+    <td><span>getopt(args, options[, long_options]) -&gt; opts, args</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.getopt.html#do_longs" class="code" data-type="Function">do_longs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.getopt.html#long_has_args" class="code" data-type="Function">long_has_args</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.getopt.html#do_shorts" class="code" data-type="Function">do_shorts</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.getopt.html#short_has_arg" class="code" data-type="Function">short_has_arg</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.getopt.html#_" class="code" data-type="Function">_</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction private">
+  
+  <a name="Lib.getopt._">
+    
+  </a>
+  <a name="_">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _(s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.getopt.getopt">
+    
+  </a>
+  <a name="getopt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getopt(args, shortopts, longopts=[]):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">getopt(args, options[, long_options]) -&gt; opts, args
+
+Parses command line options and parameter list.  args is the
+argument list to be parsed, without the leading reference to the
+running program.  Typically, this means "sys.argv[1:]".  shortopts
+is the string of option letters that the script wants to
+recognize, with options that require an argument followed by a
+colon (i.e., the same format that Unix getopt() uses).  If
+specified, longopts is a list of strings with the names of the
+long options which should be supported.  The leading '--'
+characters should not be included in the option name.  Options
+which require an argument should be followed by an equal sign
+('=').
+
+The return value consists of two elements: the first is a list of
+(option, value) pairs; the second is the list of program arguments
+left after the option list was stripped (this is a trailing slice
+of the first argument).  Each option-and-value pair returned has
+the option as its first element, prefixed with a hyphen (e.g.,
+'-x'), and the option argument as its second element, or an empty
+string if the option has no argument.  The options occur in the
+list in the same order in which they were found, thus allowing
+multiple occurrences.  Long and short options may be mixed.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.getopt.gnu_getopt">
+    
+  </a>
+  <a name="gnu_getopt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    gnu_getopt(args, shortopts, longopts=[]):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">getopt(args, options[, long_options]) -&gt; opts, args
+
+This function works like getopt(), except that GNU style scanning
+mode is used by default. This means that option and non-option
+arguments may be intermixed. The getopt() function stops
+processing options as soon as a non-option argument is
+encountered.
+
+If the first character of the option string is `+', or if the
+environment variable POSIXLY_CORRECT is set, then option
+processing stops as soon as a non-option argument is encountered.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.getopt.do_longs">
+    
+  </a>
+  <a name="do_longs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    do_longs(opts, opt, longopts, args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.getopt.long_has_args">
+    
+  </a>
+  <a name="long_has_args">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    long_has_args(opt, longopts):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.getopt.do_shorts">
+    
+  </a>
+  <a name="do_shorts">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    do_shorts(opts, optstring, shortopts, args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.getopt.short_has_arg">
+    
+  </a>
+  <a name="short_has_arg">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    short_has_arg(opt, shortopts):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

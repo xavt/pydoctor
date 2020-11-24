@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.xml.sax.handler.LexicalHandler : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.xml.html" class="code" data-type="Package">xml</a>.<a href="Lib.xml.sax.html" class="code" data-type="Package">sax</a>.<a href="Lib.xml.sax.handler.html" class="code" data-type="Module">handler</a>.<a href="Lib.xml.sax.handler.LexicalHandler.html" class="code" data-type="Class">LexicalHandler</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.xml.sax.handler.LexicalHandler:</code></p>
+        <p><a href="classIndex.html#Lib.xml.sax.handler.LexicalHandler">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Optional SAX2 handler for lexical events.
+
+This handler is used to obtain lexical information about an XML
+document, that is, information about how the document was encoded
+(as opposed to what it contains, which is reported to the
+ContentHandler), such as comments and CDATA marked section
+boundaries.
+
+To set the LexicalHandler of an XMLReader, use the setProperty
+method with the property identifier
+'http://xml.org/sax/properties/lexical-handler'.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id12160">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.sax.handler.LexicalHandler.html#comment" class="code" data-type="Method">comment</a></td>
+    <td><span>Reports a comment anywhere in the document (including the DTD and outside the document element).</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.sax.handler.LexicalHandler.html#startDTD" class="code" data-type="Method">startDTD</a></td>
+    <td><span>Report the start of the DTD declarations, if the document has an associated DTD.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.sax.handler.LexicalHandler.html#endDTD" class="code" data-type="Method">endDTD</a></td>
+    <td><span>Signals the end of DTD declarations.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.sax.handler.LexicalHandler.html#startCDATA" class="code" data-type="Method">startCDATA</a></td>
+    <td><span>Reports the beginning of a CDATA marked section.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.sax.handler.LexicalHandler.html#endCDATA" class="code" data-type="Method">endCDATA</a></td>
+    <td><span>Reports the end of a CDATA marked section.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.xml.sax.handler.LexicalHandler.comment">
+    
+  </a>
+  <a name="comment">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    comment(self, content):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Reports a comment anywhere in the document (including the
+DTD and outside the document element).
+
+content is a string that holds the contents of the comment.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.sax.handler.LexicalHandler.startDTD">
+    
+  </a>
+  <a name="startDTD">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    startDTD(self, name, public_id, system_id):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Report the start of the DTD declarations, if the document
+has an associated DTD.
+
+A startEntity event will be reported before declaration events
+from the external DTD subset are reported, and this can be
+used to infer from which subset DTD declarations derive.
+
+name is the name of the document element type, public_id the
+public identifier of the DTD (or None if none were supplied)
+and system_id the system identfier of the external subset (or
+None if none were supplied).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.sax.handler.LexicalHandler.endDTD">
+    
+  </a>
+  <a name="endDTD">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    endDTD(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Signals the end of DTD declarations.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.sax.handler.LexicalHandler.startCDATA">
+    
+  </a>
+  <a name="startCDATA">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    startCDATA(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Reports the beginning of a CDATA marked section.
+
+The contents of the CDATA marked section will be reported
+through the characters event.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.sax.handler.LexicalHandler.endCDATA">
+    
+  </a>
+  <a name="endCDATA">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    endCDATA(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Reports the end of a CDATA marked section.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

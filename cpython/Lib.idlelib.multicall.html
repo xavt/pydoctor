@@ -1,0 +1,1158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.idlelib.multicall : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.idlelib.html" class="code" data-type="Package">idlelib</a>.<a href="Lib.idlelib.multicall.html" class="code" data-type="Module">multicall</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">MultiCall - a class which inherits its methods from a Tkinter widget (Text, for
+example), but enables multiple calls of functions per virtual event - all
+matching events will be called, not only the most specific one. This is done
+by wrapping the event functions - event_add, event_delete and event_info.
+MultiCall recognizes only a subset of legal event sequences. Sequences which
+are not recognized are treated by the original Tk handling mechanism. A
+more-specific event will be called before a less-specific event.
+
+The recognized sequences are complete one-event sequences (no emacs-style
+Ctrl-X Ctrl-C, no shortcuts like &lt;3&gt;), for all types of events.
+Key/Button Press/Release events can have modifiers.
+The recognized modifiers are Shift, Control, Option and Command for Mac, and
+Control, Alt, Shift, Meta/M for other platforms.
+
+For all events which were handled by MultiCall, a new member is added to the
+event instance passed to the binded functions - mc_type. This is one of the
+event type constants defined in this module (such as MC_KEYPRESS).
+For Key/Button events (which are handled by MultiCall and may receive
+modifiers), another member is added - mc_state. This member gives the state
+of the recognized modifiers, as a combination of the modifier constants
+also defined in this module (for example, MC_SHIFT).
+Using these members is absolutely portable.
+
+The order by which events are called is defined by these rules:
+1. A more-specific event will be called before a less-specific event.
+2. A recently-binded event will be called before a previously-binded event,
+   unless this conflicts with the first rule.
+Each function will be called at most once for each event.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2389">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#MC_KEYPRESS" class="code" data-type="Variable">MC_KEYPRESS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#MC_KEYRELEASE" class="code" data-type="Variable">MC_KEYRELEASE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#MC_BUTTONPRESS" class="code" data-type="Variable">MC_BUTTONPRESS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#MC_BUTTONRELEASE" class="code" data-type="Variable">MC_BUTTONRELEASE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#MC_ACTIVATE" class="code" data-type="Variable">MC_ACTIVATE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#MC_CIRCULATE" class="code" data-type="Variable">MC_CIRCULATE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#MC_COLORMAP" class="code" data-type="Variable">MC_COLORMAP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#MC_CONFIGURE" class="code" data-type="Variable">MC_CONFIGURE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#MC_DEACTIVATE" class="code" data-type="Variable">MC_DEACTIVATE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#MC_DESTROY" class="code" data-type="Variable">MC_DESTROY</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#MC_ENTER" class="code" data-type="Variable">MC_ENTER</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#MC_EXPOSE" class="code" data-type="Variable">MC_EXPOSE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#MC_FOCUSIN" class="code" data-type="Variable">MC_FOCUSIN</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#MC_FOCUSOUT" class="code" data-type="Variable">MC_FOCUSOUT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#MC_GRAVITY" class="code" data-type="Variable">MC_GRAVITY</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#MC_LEAVE" class="code" data-type="Variable">MC_LEAVE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#MC_MAP" class="code" data-type="Variable">MC_MAP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#MC_MOTION" class="code" data-type="Variable">MC_MOTION</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#MC_MOUSEWHEEL" class="code" data-type="Variable">MC_MOUSEWHEEL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#MC_PROPERTY" class="code" data-type="Variable">MC_PROPERTY</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#MC_REPARENT" class="code" data-type="Variable">MC_REPARENT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#MC_UNMAP" class="code" data-type="Variable">MC_UNMAP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#MC_VISIBILITY" class="code" data-type="Variable">MC_VISIBILITY</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#MC_SHIFT" class="code" data-type="Variable">MC_SHIFT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#MC_CONTROL" class="code" data-type="Variable">MC_CONTROL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#MC_ALT" class="code" data-type="Variable">MC_ALT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#MC_META" class="code" data-type="Variable">MC_META</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#MC_OPTION" class="code" data-type="Variable">MC_OPTION</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#MC_COMMAND" class="code" data-type="Variable">MC_COMMAND</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#APPLICATION_GONE" class="code" data-type="Variable">APPLICATION_GONE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.multicall.html#expand_substates" class="code" data-type="Function">expand_substates</a></td>
+    <td><span>For each item of states return a list containing all combinations of that item with individual bits reset, sorted by the number of set bits.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#r" class="code" data-type="Variable">r</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.multicall.html#MultiCallCreator" class="code" data-type="Function">MultiCallCreator</a></td>
+    <td><span>Return a MultiCall class which inherits its methods from the given widget class (for example, Tkinter.Text). This is used instead of a templating mechanism.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#_modifiers" class="code" data-type="Variable">_modifiers</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#_modifier_masks" class="code" data-type="Variable">_modifier_masks</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#_modifier_names" class="code" data-type="Variable">_modifier_names</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.multicall._SimpleBinder.html" class="code" data-type="Class">_SimpleBinder</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#_states" class="code" data-type="Variable">_states</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#_state_names" class="code" data-type="Variable">_state_names</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#_state_subsets" class="code" data-type="Variable">_state_subsets</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#_state_codes" class="code" data-type="Variable">_state_codes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.multicall._ComplexBinder.html" class="code" data-type="Class">_ComplexBinder</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#_types" class="code" data-type="Variable">_types</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#_binder_classes" class="code" data-type="Variable">_binder_classes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#_type_names" class="code" data-type="Variable">_type_names</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#_keysym_re" class="code" data-type="Variable">_keysym_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#_button_re" class="code" data-type="Variable">_button_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.multicall.html#_parse_sequence" class="code" data-type="Function">_parse_sequence</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.multicall.html#_triplet_to_sequence" class="code" data-type="Function">_triplet_to_sequence</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.multicall.html#_multicall_dict" class="code" data-type="Variable">_multicall_dict</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.multicall.html#_multi_call" class="code" data-type="Function">_multi_call</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.idlelib.multicall.MC_KEYPRESS">
+    
+  </a>
+  <a name="MC_KEYPRESS">
+    
+  </a>
+  <div class="functionHeader">
+    MC_KEYPRESS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.multicall.MC_KEYRELEASE">
+    
+  </a>
+  <a name="MC_KEYRELEASE">
+    
+  </a>
+  <div class="functionHeader">
+    MC_KEYRELEASE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.multicall.MC_BUTTONPRESS">
+    
+  </a>
+  <a name="MC_BUTTONPRESS">
+    
+  </a>
+  <div class="functionHeader">
+    MC_BUTTONPRESS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.multicall.MC_BUTTONRELEASE">
+    
+  </a>
+  <a name="MC_BUTTONRELEASE">
+    
+  </a>
+  <div class="functionHeader">
+    MC_BUTTONRELEASE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.multicall.MC_ACTIVATE">
+    
+  </a>
+  <a name="MC_ACTIVATE">
+    
+  </a>
+  <div class="functionHeader">
+    MC_ACTIVATE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.multicall.MC_CIRCULATE">
+    
+  </a>
+  <a name="MC_CIRCULATE">
+    
+  </a>
+  <div class="functionHeader">
+    MC_CIRCULATE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.multicall.MC_COLORMAP">
+    
+  </a>
+  <a name="MC_COLORMAP">
+    
+  </a>
+  <div class="functionHeader">
+    MC_COLORMAP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.multicall.MC_CONFIGURE">
+    
+  </a>
+  <a name="MC_CONFIGURE">
+    
+  </a>
+  <div class="functionHeader">
+    MC_CONFIGURE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.multicall.MC_DEACTIVATE">
+    
+  </a>
+  <a name="MC_DEACTIVATE">
+    
+  </a>
+  <div class="functionHeader">
+    MC_DEACTIVATE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.multicall.MC_DESTROY">
+    
+  </a>
+  <a name="MC_DESTROY">
+    
+  </a>
+  <div class="functionHeader">
+    MC_DESTROY =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.multicall.MC_ENTER">
+    
+  </a>
+  <a name="MC_ENTER">
+    
+  </a>
+  <div class="functionHeader">
+    MC_ENTER =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.multicall.MC_EXPOSE">
+    
+  </a>
+  <a name="MC_EXPOSE">
+    
+  </a>
+  <div class="functionHeader">
+    MC_EXPOSE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.multicall.MC_FOCUSIN">
+    
+  </a>
+  <a name="MC_FOCUSIN">
+    
+  </a>
+  <div class="functionHeader">
+    MC_FOCUSIN =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.multicall.MC_FOCUSOUT">
+    
+  </a>
+  <a name="MC_FOCUSOUT">
+    
+  </a>
+  <div class="functionHeader">
+    MC_FOCUSOUT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.multicall.MC_GRAVITY">
+    
+  </a>
+  <a name="MC_GRAVITY">
+    
+  </a>
+  <div class="functionHeader">
+    MC_GRAVITY =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.multicall.MC_LEAVE">
+    
+  </a>
+  <a name="MC_LEAVE">
+    
+  </a>
+  <div class="functionHeader">
+    MC_LEAVE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.multicall.MC_MAP">
+    
+  </a>
+  <a name="MC_MAP">
+    
+  </a>
+  <div class="functionHeader">
+    MC_MAP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.multicall.MC_MOTION">
+    
+  </a>
+  <a name="MC_MOTION">
+    
+  </a>
+  <div class="functionHeader">
+    MC_MOTION =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.multicall.MC_MOUSEWHEEL">
+    
+  </a>
+  <a name="MC_MOUSEWHEEL">
+    
+  </a>
+  <div class="functionHeader">
+    MC_MOUSEWHEEL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.multicall.MC_PROPERTY">
+    
+  </a>
+  <a name="MC_PROPERTY">
+    
+  </a>
+  <div class="functionHeader">
+    MC_PROPERTY =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.multicall.MC_REPARENT">
+    
+  </a>
+  <a name="MC_REPARENT">
+    
+  </a>
+  <div class="functionHeader">
+    MC_REPARENT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.multicall.MC_UNMAP">
+    
+  </a>
+  <a name="MC_UNMAP">
+    
+  </a>
+  <div class="functionHeader">
+    MC_UNMAP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.multicall.MC_VISIBILITY">
+    
+  </a>
+  <a name="MC_VISIBILITY">
+    
+  </a>
+  <div class="functionHeader">
+    MC_VISIBILITY =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.multicall.MC_SHIFT">
+    
+  </a>
+  <a name="MC_SHIFT">
+    
+  </a>
+  <div class="functionHeader">
+    MC_SHIFT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.multicall.MC_CONTROL">
+    
+  </a>
+  <a name="MC_CONTROL">
+    
+  </a>
+  <div class="functionHeader">
+    MC_CONTROL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.multicall.MC_ALT">
+    
+  </a>
+  <a name="MC_ALT">
+    
+  </a>
+  <div class="functionHeader">
+    MC_ALT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.multicall.MC_META">
+    
+  </a>
+  <a name="MC_META">
+    
+  </a>
+  <div class="functionHeader">
+    MC_META =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.multicall.MC_OPTION">
+    
+  </a>
+  <a name="MC_OPTION">
+    
+  </a>
+  <div class="functionHeader">
+    MC_OPTION =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.multicall.MC_COMMAND">
+    
+  </a>
+  <a name="MC_COMMAND">
+    
+  </a>
+  <div class="functionHeader">
+    MC_COMMAND =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.multicall._modifiers">
+    
+  </a>
+  <a name="_modifiers">
+    
+  </a>
+  <div class="functionHeader">
+    _modifiers =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Tuple</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.multicall._modifier_masks">
+    
+  </a>
+  <a name="_modifier_masks">
+    
+  </a>
+  <div class="functionHeader">
+    _modifier_masks =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.multicall._modifier_names">
+    
+  </a>
+  <a name="_modifier_names">
+    
+  </a>
+  <div class="functionHeader">
+    _modifier_names =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.multicall.APPLICATION_GONE">
+    
+  </a>
+  <a name="APPLICATION_GONE">
+    
+  </a>
+  <div class="functionHeader">
+    APPLICATION_GONE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.multicall._states">
+    
+  </a>
+  <a name="_states">
+    
+  </a>
+  <div class="functionHeader">
+    _states =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.multicall._state_names">
+    
+  </a>
+  <a name="_state_names">
+    
+  </a>
+  <div class="functionHeader">
+    _state_names =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.multicall.expand_substates">
+    
+  </a>
+  <a name="expand_substates">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    expand_substates(states):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">For each item of states return a list containing all combinations of
+that item with individual bits reset, sorted by the number of set bits.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.multicall._state_subsets">
+    
+  </a>
+  <a name="_state_subsets">
+    
+  </a>
+  <div class="functionHeader">
+    _state_subsets =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.multicall._state_codes">
+    
+  </a>
+  <a name="_state_codes">
+    
+  </a>
+  <div class="functionHeader">
+    _state_codes =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.idlelib.multicall.r">
+    
+  </a>
+  <a name="r">
+    
+  </a>
+  <div class="functionHeader">
+    r =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.multicall._types">
+    
+  </a>
+  <a name="_types">
+    
+  </a>
+  <div class="functionHeader">
+    _types =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Tuple</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.multicall._binder_classes">
+    
+  </a>
+  <a name="_binder_classes">
+    
+  </a>
+  <div class="functionHeader">
+    _binder_classes =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.multicall._type_names">
+    
+  </a>
+  <a name="_type_names">
+    
+  </a>
+  <div class="functionHeader">
+    _type_names =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.multicall._keysym_re">
+    
+  </a>
+  <a name="_keysym_re">
+    
+  </a>
+  <div class="functionHeader">
+    _keysym_re =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.multicall._button_re">
+    
+  </a>
+  <a name="_button_re">
+    
+  </a>
+  <div class="functionHeader">
+    _button_re =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.idlelib.multicall._parse_sequence">
+    
+  </a>
+  <a name="_parse_sequence">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _parse_sequence(sequence):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get a string which should describe an event sequence. If it is
+successfully parsed as one, return a tuple containing the state (as an int),
+the event type (as an index of _types), and the detail - None if none, or a
+string if there is one. If the parsing is unsuccessful, return None.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.idlelib.multicall._triplet_to_sequence">
+    
+  </a>
+  <a name="_triplet_to_sequence">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _triplet_to_sequence(triplet):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.multicall._multicall_dict">
+    
+  </a>
+  <a name="_multicall_dict">
+    
+  </a>
+  <div class="functionHeader">
+    _multicall_dict =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.multicall.MultiCallCreator">
+    
+  </a>
+  <a name="MultiCallCreator">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    MultiCallCreator(widget):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a MultiCall class which inherits its methods from the
+given widget class (for example, Tkinter.Text). This is used
+instead of a templating mechanism.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.idlelib.multicall._multi_call">
+    
+  </a>
+  <a name="_multi_call">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _multi_call(parent):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

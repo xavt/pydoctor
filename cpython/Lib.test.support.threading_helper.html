@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.test.support.threading_helper : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.test.html" class="code" data-type="Package">test</a>.<a href="Lib.test.support.html" class="code" data-type="Package">support</a>.<a href="Lib.test.support.threading_helper.html" class="code" data-type="Module">threading_helper</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div class="undocumented">Undocumented</div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id4183">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.support.threading_helper.html#threading_setup" class="code" data-type="Function">threading_setup</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.support.threading_helper.html#threading_cleanup" class="code" data-type="Function">threading_cleanup</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.support.threading_helper.html#reap_threads" class="code" data-type="Function">reap_threads</a></td>
+    <td><span>Use this function when threads are being used.  This will ensure that the threads are cleaned up even when the test fails.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.support.threading_helper.html#wait_threads_exit" class="code" data-type="Function">wait_threads_exit</a></td>
+    <td><span>bpo-31234: Context manager to wait until all threads created in the with statement exit.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.support.threading_helper.html#join_thread" class="code" data-type="Function">join_thread</a></td>
+    <td><span>Join a thread. Raise an AssertionError if the thread is still alive after timeout seconds.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.support.threading_helper.html#start_threads" class="code" data-type="Function">start_threads</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.support.threading_helper.catch_threading_exception.html" class="code" data-type="Class">catch_threading_exception</a></td>
+    <td><span>Context manager catching threading.Thread exception using threading.excepthook.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction">
+  
+  <a name="Lib.test.support.threading_helper.threading_setup">
+    
+  </a>
+  <a name="threading_setup">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    threading_setup():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.support.threading_helper.threading_cleanup">
+    
+  </a>
+  <a name="threading_cleanup">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    threading_cleanup(*original_values):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.support.threading_helper.reap_threads">
+    
+  </a>
+  <a name="reap_threads">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    reap_threads(func):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Use this function when threads are being used.  This will
+ensure that the threads are cleaned up even when the test fails.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.support.threading_helper.wait_threads_exit">
+    
+  </a>
+  <a name="wait_threads_exit">
+    
+  </a>
+  <div class="functionHeader">
+    @contextlib.contextmanager<br />
+    def
+    wait_threads_exit(timeout=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">bpo-31234: Context manager to wait until all threads created in the with
+statement exit.
+
+Use _thread.count() to check if threads exited. Indirectly, wait until
+threads exit the internal t_bootstrap() C function of the _thread module.
+
+threading_setup() and threading_cleanup() are designed to emit a warning
+if a test leaves running threads in the background. This context manager
+is designed to cleanup threads started by the _thread.start_new_thread()
+which doesn't allow to wait for thread exit, whereas thread.Thread has a
+join() method.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.support.threading_helper.join_thread">
+    
+  </a>
+  <a name="join_thread">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    join_thread(thread, timeout=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Join a thread. Raise an AssertionError if the thread is still alive
+after timeout seconds.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.support.threading_helper.start_threads">
+    
+  </a>
+  <a name="start_threads">
+    
+  </a>
+  <div class="functionHeader">
+    @contextlib.contextmanager<br />
+    def
+    start_threads(threads, unlock=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

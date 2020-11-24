@@ -1,0 +1,1444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.optparse.OptionParser : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.optparse.html" class="code" data-type="Module">optparse</a>.<a href="Lib.optparse.OptionParser.html" class="code" data-type="Class">OptionParser</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.optparse.OptionParser(<a href="Lib.optparse.OptionContainer.html" class="code" data-type="Class">OptionContainer</a>):</code></p>
+        <p><a href="classIndex.html#Lib.optparse.OptionParser">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Class attributes:
+  standard_option_list : [Option]
+    list of standard options that will be accepted by all instances
+    of this parser class (intended to be overridden by subclasses).
+
+Instance attributes:
+  usage : string
+    a usage string for your program.  Before it is displayed
+    to the user, "%prog" will be expanded to the name of
+    your program (self.prog or os.path.basename(sys.argv[0])).
+  prog : string
+    the name of the current program (to override
+    os.path.basename(sys.argv[0])).
+  description : string
+    A paragraph of text giving a brief overview of your program.
+    optparse reformats this paragraph to fit the current terminal
+    width and prints it when the user requests help (after usage,
+    but before the list of options).
+  epilog : string
+    paragraph of help text to print after option help
+
+  option_groups : [OptionGroup]
+    list of option groups in this parser (option groups are
+    irrelevant for parsing the command-line, but very useful
+    for generating help)
+
+  allow_interspersed_args : bool = true
+    if true, positional arguments may be interspersed with options.
+    Assuming -a and -b each take a single argument, the command-line
+      -ablah foo bar -bboo baz
+    will be interpreted the same as
+      -ablah -bboo -- foo bar baz
+    If this flag were false, that command line would be interpreted as
+      -ablah -- foo bar -bboo baz
+    -- ie. we stop processing options as soon as we see the first
+    non-option argument.  (This is the tradition followed by
+    Python's getopt module, Perl's Getopt::Std, and other argument-
+    parsing libraries, but it is generally annoying to users.)
+
+  process_default_values : bool = true
+    if true, option default values are processed similarly to option
+    values from the command line: that is, they are passed to the
+    type-checking function for the option's type (as long as the
+    default value is a string).  (This really only matters if you
+    have defined custom types; see SF bug #955889.)  Set it to false
+    to restore the behaviour of Optik 1.4.1 and earlier.
+
+  rargs : [string]
+    the argument list currently being parsed.  Only set when
+    parse_args() is active, and continually trimmed down as
+    we consume arguments.  Mainly there for the benefit of
+    callback options.
+  largs : [string]
+    the list of leftover arguments that we have skipped while
+    parsing options.  If allow_interspersed_args is false, this
+    list is always empty.
+  values : Values
+    the set of option values currently being accumulated.  Only
+    set when parse_args() is active.  Also mainly for callbacks.
+
+Because of the 'rargs', 'largs', and 'values' attributes,
+OptionParser is not thread-safe.  If, for some perverse reason, you
+need to parse command-line arguments simultaneously in different
+threads, use different OptionParser instances.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3331">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.optparse.OptionParser.html#standard_option_list" class="code" data-type="Class Variable">standard_option_list</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.OptionParser.html#prog" class="code" data-type="Instance Variable">prog</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.OptionParser.html#version" class="code" data-type="Instance Variable">version</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.OptionParser.html#allow_interspersed_args" class="code" data-type="Instance Variable">allow_interspersed_args</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.OptionParser.html#process_default_values" class="code" data-type="Instance Variable">process_default_values</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.OptionParser.html#formatter" class="code" data-type="Instance Variable">formatter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.OptionParser.html#epilog" class="code" data-type="Instance Variable">epilog</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#destroy" class="code" data-type="Method">destroy</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.OptionParser.html#option_list" class="code" data-type="Instance Variable">option_list</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.OptionParser.html#option_groups" class="code" data-type="Instance Variable">option_groups</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.OptionParser.html#rargs" class="code" data-type="Instance Variable">rargs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.OptionParser.html#largs" class="code" data-type="Instance Variable">largs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.OptionParser.html#values" class="code" data-type="Instance Variable">values</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#set_usage" class="code" data-type="Method">set_usage</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.OptionParser.html#usage" class="code" data-type="Instance Variable">usage</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#enable_interspersed_args" class="code" data-type="Method">enable_interspersed_args</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#disable_interspersed_args" class="code" data-type="Method">disable_interspersed_args</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#set_process_default_values" class="code" data-type="Method">set_process_default_values</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#set_default" class="code" data-type="Method">set_default</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#set_defaults" class="code" data-type="Method">set_defaults</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#get_default_values" class="code" data-type="Method">get_default_values</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#add_option_group" class="code" data-type="Method">add_option_group</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#get_option_group" class="code" data-type="Method">get_option_group</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#parse_args" class="code" data-type="Method">parse_args</a></td>
+    <td><span>parse_args(args : [string] = sys.argv[1:], values : Values = None) -&gt; (values : Values, args : [string])</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#check_values" class="code" data-type="Method">check_values</a></td>
+    <td><span>check_values(values : Values, args : [string]) -&gt; (values : Values, args : [string])</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#get_prog_name" class="code" data-type="Method">get_prog_name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#expand_prog_name" class="code" data-type="Method">expand_prog_name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#get_description" class="code" data-type="Method">get_description</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#exit" class="code" data-type="Method">exit</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#error" class="code" data-type="Method">error</a></td>
+    <td><span>error(msg : string)</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#get_usage" class="code" data-type="Method">get_usage</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#print_usage" class="code" data-type="Method">print_usage</a></td>
+    <td><span>print_usage(file : file = stdout)</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#get_version" class="code" data-type="Method">get_version</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#print_version" class="code" data-type="Method">print_version</a></td>
+    <td><span>print_version(file : file = stdout)</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#format_option_help" class="code" data-type="Method">format_option_help</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#format_epilog" class="code" data-type="Method">format_epilog</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#format_help" class="code" data-type="Method">format_help</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#print_help" class="code" data-type="Method">print_help</a></td>
+    <td><span>print_help(file : file = stdout)</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#_create_option_list" class="code" data-type="Method">_create_option_list</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#_add_help_option" class="code" data-type="Method">_add_help_option</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#_add_version_option" class="code" data-type="Method">_add_version_option</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#_populate_option_list" class="code" data-type="Method">_populate_option_list</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#_init_parsing_state" class="code" data-type="Method">_init_parsing_state</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#_get_all_options" class="code" data-type="Method">_get_all_options</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#_get_args" class="code" data-type="Method">_get_args</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#_process_args" class="code" data-type="Method">_process_args</a></td>
+    <td><span>_process_args(largs : [string], rargs : [string], values : Values)</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#_match_long_opt" class="code" data-type="Method">_match_long_opt</a></td>
+    <td><span>_match_long_opt(opt : string) -&gt; string</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#_process_long_opt" class="code" data-type="Method">_process_long_opt</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionParser.html#_process_short_opts" class="code" data-type="Method">_process_short_opts</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.optparse.OptionContainer.html" class="code" data-type="Class">OptionContainer</a>:
+          </p>
+          <table class="children sortable" id="id3332">
+  
+  <tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.OptionContainer.html#option_class" class="code" data-type="Instance Variable">option_class</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.OptionContainer.html#defaults" class="code" data-type="Instance Variable">defaults</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionContainer.html#set_conflict_handler" class="code" data-type="Method">set_conflict_handler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.OptionContainer.html#conflict_handler" class="code" data-type="Instance Variable">conflict_handler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionContainer.html#set_description" class="code" data-type="Method">set_description</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.OptionContainer.html#description" class="code" data-type="Instance Variable">description</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionContainer.html#add_option" class="code" data-type="Method">add_option</a></td>
+    <td><span>add_option(Option) add_option(opt_str, ..., kwarg=val, ...)</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionContainer.html#add_options" class="code" data-type="Method">add_options</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionContainer.html#get_option" class="code" data-type="Method">get_option</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionContainer.html#has_option" class="code" data-type="Method">has_option</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionContainer.html#remove_option" class="code" data-type="Method">remove_option</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionContainer.html#format_description" class="code" data-type="Method">format_description</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionContainer.html#_create_option_mappings" class="code" data-type="Method">_create_option_mappings</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.OptionContainer.html#_short_opt" class="code" data-type="Instance Variable">_short_opt</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.OptionContainer.html#_long_opt" class="code" data-type="Instance Variable">_long_opt</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionContainer.html#_share_option_mappings" class="code" data-type="Method">_share_option_mappings</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionContainer.html#_check_conflict" class="code" data-type="Method">_check_conflict</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.optparse.OptionParser.standard_option_list">
+    
+  </a>
+  <a name="standard_option_list">
+    
+  </a>
+  <div class="functionHeader">
+    standard_option_list =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionParser.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, usage=None, option_list=None, option_class=Option, version=None, conflict_handler="""error""", description=None, formatter=None, add_help_option=(True), prog=None, epilog=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.optparse.OptionContainer.html#__init__" class="code" data-type="Method">Lib.optparse.OptionContainer.__init__</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.optparse.OptionParser.prog">
+    
+  </a>
+  <a name="prog">
+    
+  </a>
+  <div class="functionHeader">
+    prog =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.optparse.OptionParser.version">
+    
+  </a>
+  <a name="version">
+    
+  </a>
+  <div class="functionHeader">
+    version =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.optparse.OptionParser.allow_interspersed_args">
+    
+  </a>
+  <a name="allow_interspersed_args">
+    
+  </a>
+  <div class="functionHeader">
+    allow_interspersed_args =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.optparse.OptionParser.process_default_values">
+    
+  </a>
+  <a name="process_default_values">
+    
+  </a>
+  <div class="functionHeader">
+    process_default_values =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.optparse.OptionParser.formatter">
+    
+  </a>
+  <a name="formatter">
+    
+  </a>
+  <div class="functionHeader">
+    formatter =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.optparse.OptionParser.epilog">
+    
+  </a>
+  <a name="epilog">
+    
+  </a>
+  <div class="functionHeader">
+    epilog =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionParser.destroy">
+    
+  </a>
+  <a name="destroy">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    destroy(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.optparse.OptionContainer.html#destroy" class="code" data-type="Method">Lib.optparse.OptionContainer.destroy</a></div>
+    
+    <div><p class="pre">Declare that you are done with this OptionParser.  This cleans up
+reference cycles so the OptionParser (and all objects referenced by
+it) can be garbage-collected promptly.  After calling destroy(), the
+OptionParser is unusable.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.optparse.OptionParser._create_option_list">
+    
+  </a>
+  <a name="_create_option_list">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _create_option_list(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.optparse.OptionParser.option_list">
+    
+  </a>
+  <a name="option_list">
+    
+  </a>
+  <div class="functionHeader">
+    option_list =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.optparse.OptionParser.option_groups">
+    
+  </a>
+  <a name="option_groups">
+    
+  </a>
+  <div class="functionHeader">
+    option_groups =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.optparse.OptionParser._add_help_option">
+    
+  </a>
+  <a name="_add_help_option">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _add_help_option(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.optparse.OptionParser._add_version_option">
+    
+  </a>
+  <a name="_add_version_option">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _add_version_option(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.optparse.OptionParser._populate_option_list">
+    
+  </a>
+  <a name="_populate_option_list">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _populate_option_list(self, option_list, add_help=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.optparse.OptionParser._init_parsing_state">
+    
+  </a>
+  <a name="_init_parsing_state">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _init_parsing_state(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.optparse.OptionParser.rargs">
+    
+  </a>
+  <a name="rargs">
+    
+  </a>
+  <div class="functionHeader">
+    rargs =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.optparse.OptionParser.largs">
+    
+  </a>
+  <a name="largs">
+    
+  </a>
+  <div class="functionHeader">
+    largs =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.optparse.OptionParser.values">
+    
+  </a>
+  <a name="values">
+    
+  </a>
+  <div class="functionHeader">
+    values =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionParser.set_usage">
+    
+  </a>
+  <a name="set_usage">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_usage(self, usage):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.optparse.OptionParser.usage">
+    
+  </a>
+  <a name="usage">
+    
+  </a>
+  <div class="functionHeader">
+    usage =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionParser.enable_interspersed_args">
+    
+  </a>
+  <a name="enable_interspersed_args">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    enable_interspersed_args(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set parsing to not stop on the first non-option, allowing
+interspersing switches with command arguments. This is the
+default behavior. See also disable_interspersed_args() and the
+class documentation description of the attribute
+allow_interspersed_args.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionParser.disable_interspersed_args">
+    
+  </a>
+  <a name="disable_interspersed_args">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    disable_interspersed_args(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set parsing to stop on the first non-option. Use this if
+you have a command processor which runs another command that
+has options of its own and you want to make sure these options
+don't get confused.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionParser.set_process_default_values">
+    
+  </a>
+  <a name="set_process_default_values">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_process_default_values(self, process):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionParser.set_default">
+    
+  </a>
+  <a name="set_default">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_default(self, dest, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionParser.set_defaults">
+    
+  </a>
+  <a name="set_defaults">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_defaults(self, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.optparse.OptionParser._get_all_options">
+    
+  </a>
+  <a name="_get_all_options">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_all_options(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionParser.get_default_values">
+    
+  </a>
+  <a name="get_default_values">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_default_values(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionParser.add_option_group">
+    
+  </a>
+  <a name="add_option_group">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    add_option_group(self, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionParser.get_option_group">
+    
+  </a>
+  <a name="get_option_group">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_option_group(self, opt_str):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.optparse.OptionParser._get_args">
+    
+  </a>
+  <a name="_get_args">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_args(self, args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionParser.parse_args">
+    
+  </a>
+  <a name="parse_args">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse_args(self, args=None, values=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">parse_args(args : [string] = sys.argv[1:],
+           values : Values = None)
+-&gt; (values : Values, args : [string])
+
+Parse the command-line options found in 'args' (default:
+sys.argv[1:]).  Any errors result in a call to 'error()', which
+by default prints the usage message to stderr and calls
+sys.exit() with an error message.  On success returns a pair
+(values, args) where 'values' is a Values instance (with all
+your option values) and 'args' is the list of arguments left
+over after parsing options.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionParser.check_values">
+    
+  </a>
+  <a name="check_values">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    check_values(self, values, args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">check_values(values : Values, args : [string])
+-&gt; (values : Values, args : [string])
+
+Check that the supplied option values and leftover arguments are
+valid.  Returns the option values and leftover arguments
+(possibly adjusted, possibly completely new -- whatever you
+like).  Default implementation just returns the passed-in
+values; subclasses may override as desired.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.optparse.OptionParser._process_args">
+    
+  </a>
+  <a name="_process_args">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _process_args(self, largs, rargs, values):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">_process_args(largs : [string],
+                 rargs : [string],
+                 values : Values)
+
+Process command-line arguments and populate 'values', consuming
+options and arguments from 'rargs'.  If 'allow_interspersed_args' is
+false, stop at the first non-option argument.  If true, accumulate any
+interspersed non-option arguments in 'largs'.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.optparse.OptionParser._match_long_opt">
+    
+  </a>
+  <a name="_match_long_opt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _match_long_opt(self, opt):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">_match_long_opt(opt : string) -&gt; string
+
+Determine which long option string 'opt' matches, ie. which one
+it is an unambiguous abbreviation for.  Raises BadOptionError if
+'opt' doesn't unambiguously match any long option string.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.optparse.OptionParser._process_long_opt">
+    
+  </a>
+  <a name="_process_long_opt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _process_long_opt(self, rargs, values):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.optparse.OptionParser._process_short_opts">
+    
+  </a>
+  <a name="_process_short_opts">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _process_short_opts(self, rargs, values):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionParser.get_prog_name">
+    
+  </a>
+  <a name="get_prog_name">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_prog_name(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionParser.expand_prog_name">
+    
+  </a>
+  <a name="expand_prog_name">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    expand_prog_name(self, s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionParser.get_description">
+    
+  </a>
+  <a name="get_description">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_description(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.optparse.OptionContainer.html#get_description" class="code" data-type="Method">Lib.optparse.OptionContainer.get_description</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionParser.exit">
+    
+  </a>
+  <a name="exit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    exit(self, status=0, msg=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionParser.error">
+    
+  </a>
+  <a name="error">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    error(self, msg):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">error(msg : string)
+
+Print a usage message incorporating 'msg' to stderr and exit.
+If you override this in a subclass, it should not return -- it
+should either exit or raise an exception.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionParser.get_usage">
+    
+  </a>
+  <a name="get_usage">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_usage(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionParser.print_usage">
+    
+  </a>
+  <a name="print_usage">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    print_usage(self, file=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">print_usage(file : file = stdout)
+
+Print the usage message for the current program (self.usage) to
+'file' (default stdout).  Any occurrence of the string "%prog" in
+self.usage is replaced with the name of the current program
+(basename of sys.argv[0]).  Does nothing if self.usage is empty
+or not defined.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionParser.get_version">
+    
+  </a>
+  <a name="get_version">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_version(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionParser.print_version">
+    
+  </a>
+  <a name="print_version">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    print_version(self, file=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">print_version(file : file = stdout)
+
+Print the version message for this program (self.version) to
+'file' (default stdout).  As with print_usage(), any occurrence
+of "%prog" in self.version is replaced by the current program's
+name.  Does nothing if self.version is empty or undefined.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionParser.format_option_help">
+    
+  </a>
+  <a name="format_option_help">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    format_option_help(self, formatter=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.optparse.OptionContainer.html#format_option_help" class="code" data-type="Method">Lib.optparse.OptionContainer.format_option_help</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionParser.format_epilog">
+    
+  </a>
+  <a name="format_epilog">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    format_epilog(self, formatter):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionParser.format_help">
+    
+  </a>
+  <a name="format_help">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    format_help(self, formatter=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.optparse.OptionContainer.html#format_help" class="code" data-type="Method">Lib.optparse.OptionContainer.format_help</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionParser.print_help">
+    
+  </a>
+  <a name="print_help">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    print_help(self, file=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">print_help(file : file = stdout)
+
+Print an extended help message, listing all options and any
+help text provided with them, to 'file' (default stdout).</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

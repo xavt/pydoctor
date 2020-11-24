@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.ctypes._aix : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module private"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.ctypes.html" class="code" data-type="Package">ctypes</a>.<a href="Lib.ctypes._aix.html" class="code" data-type="Module">_aix</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Lib/ctypes.util.find_library() support for AIX
+Similar approach as done for Darwin support by using separate files
+but unlike Darwin - no extension such as ctypes.macholib.*
+
+dlopen() is an interface to AIX initAndLoad() - primary documentation at:
+https://www.ibm.com/support/knowledgecenter/en/ssw_aix_61/com.ibm.aix.basetrf1/dlopen.htm
+https://www.ibm.com/support/knowledgecenter/en/ssw_aix_61/com.ibm.aix.basetrf1/load.htm
+
+AIX supports two styles for dlopen(): svr4 (System V Release 4) which is common on posix
+platforms, but also a BSD style - aka SVR3.
+
+From AIX 5.3 Difference Addendum (December 2004)
+2.9 SVR4 linking affinity
+Nowadays, there are two major object file formats used by the operating systems:
+XCOFF: The COFF enhanced by IBM and others. The original COFF (Common
+Object File Format) was the base of SVR3 and BSD 4.2 systems.
+ELF:   Executable and Linking Format that was developed by AT&amp;T and is a
+base for SVR4 UNIX.
+
+While the shared library content is identical on AIX - one is located as a filepath name
+(svr4 style) and the other is located as a member of an archive (and the archive
+is located as a filepath name).
+
+The key difference arises when supporting multiple abi formats (i.e., 32 and 64 bit).
+For svr4 either only one ABI is supported, or there are two directories, or there
+are different file names. The most common solution for multiple ABI is multiple
+directories.
+
+For the XCOFF (aka AIX) style - one directory (one archive file) is sufficient
+as multiple shared libraries can be in the archive - even sharing the same name.
+In documentation the archive is also referred to as the "base" and the shared
+library object is referred to as the "member".
+
+For dlopen() on AIX (read initAndLoad()) the calls are similar.
+Default activity occurs when no path information is provided. When path
+information is provided dlopen() does not search any other directories.
+
+For SVR4 - the shared library name is the name of the file expected: libFOO.so
+For AIX - the shared library is expressed as base(member). The search is for the
+base (e.g., libFOO.a) and once the base is found the shared library - identified by
+member (e.g., libFOO.so, or shr.o) is located and loaded.
+
+The mode bit RTLD_MEMBER tells initAndLoad() that it needs to use the AIX (SVR3)
+naming style.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id686">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ctypes._aix.html#__author__" class="code" data-type="Variable">__author__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ctypes._aix.html#AIX_ABI" class="code" data-type="Variable">AIX_ABI</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ctypes._aix.html#get_ld_header" class="code" data-type="Function">get_ld_header</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ctypes._aix.html#get_ld_header_info" class="code" data-type="Function">get_ld_header_info</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ctypes._aix.html#get_ld_headers" class="code" data-type="Function">get_ld_headers</a></td>
+    <td><span>Parse the header of the loader section of executable and archives This function calls /usr/bin/dump -H as a subprocess and returns a list of (ld_header, ld_header_info) tuples.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ctypes._aix.html#get_shared" class="code" data-type="Function">get_shared</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ctypes._aix.html#get_one_match" class="code" data-type="Function">get_one_match</a></td>
+    <td><span>Must be only one match, otherwise result is None. When there is a match, strip leading "[" and trailing "]"</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ctypes._aix.html#get_legacy" class="code" data-type="Function">get_legacy</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ctypes._aix.html#get_version" class="code" data-type="Function">get_version</a></td>
+    <td><span>Sort list of members and return highest numbered version - if it exists. This function is called when an unversioned libFOO.a(libFOO.so) has not been found.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ctypes._aix.html#get_member" class="code" data-type="Function">get_member</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ctypes._aix.html#get_libpaths" class="code" data-type="Function">get_libpaths</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ctypes._aix.html#find_shared" class="code" data-type="Function">find_shared</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ctypes._aix.html#find_library" class="code" data-type="Function">find_library</a></td>
+    <td><span>AIX implementation of ctypes.util.find_library() Find an archive member that will dlopen(). If not available, also search for a file (or link) with a .so suffix.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.ctypes._aix.html#_last_version" class="code" data-type="Function">_last_version</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.ctypes._aix.__author__">
+    
+  </a>
+  <a name="__author__">
+    
+  </a>
+  <div class="functionHeader">
+    __author__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.ctypes._aix.AIX_ABI">
+    
+  </a>
+  <a name="AIX_ABI">
+    
+  </a>
+  <div class="functionHeader">
+    AIX_ABI =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.ctypes._aix._last_version">
+    
+  </a>
+  <a name="_last_version">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _last_version(libnames, sep):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ctypes._aix.get_ld_header">
+    
+  </a>
+  <a name="get_ld_header">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_ld_header(p):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ctypes._aix.get_ld_header_info">
+    
+  </a>
+  <a name="get_ld_header_info">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_ld_header_info(p):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ctypes._aix.get_ld_headers">
+    
+  </a>
+  <a name="get_ld_headers">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_ld_headers(file):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse the header of the loader section of executable and archives
+This function calls /usr/bin/dump -H as a subprocess
+and returns a list of (ld_header, ld_header_info) tuples.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ctypes._aix.get_shared">
+    
+  </a>
+  <a name="get_shared">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_shared(ld_headers):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">extract the shareable objects from ld_headers
+character "[" is used to strip off the path information.
+Note: the "[" and "]" characters that are part of dump -H output
+are not removed here.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ctypes._aix.get_one_match">
+    
+  </a>
+  <a name="get_one_match">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_one_match(expr, lines):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Must be only one match, otherwise result is None.
+When there is a match, strip leading "[" and trailing "]"</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ctypes._aix.get_legacy">
+    
+  </a>
+  <a name="get_legacy">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_legacy(members):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">This routine provides historical aka legacy naming schemes started
+in AIX4 shared library support for library members names.
+e.g., in /usr/lib/libc.a the member name shr.o for 32-bit binary and
+shr_64.o for 64-bit binary.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ctypes._aix.get_version">
+    
+  </a>
+  <a name="get_version">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_version(name, members):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Sort list of members and return highest numbered version - if it exists.
+This function is called when an unversioned libFOO.a(libFOO.so) has
+not been found.
+
+Versioning for the member name is expected to follow
+GNU LIBTOOL conventions: the highest version (x, then X.y, then X.Y.z)
+ * find [libFoo.so.X]
+ * find [libFoo.so.X.Y]
+ * find [libFoo.so.X.Y.Z]
+
+Before the GNU convention became the standard scheme regardless of
+binary size AIX packagers used GNU convention "as-is" for 32-bit
+archive members but used an "distinguishing" name for 64-bit members.
+This scheme inserted either 64 or _64 between libFOO and .so
+- generally libFOO_64.so, but occasionally libFOO64.so</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ctypes._aix.get_member">
+    
+  </a>
+  <a name="get_member">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_member(name, members):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return an archive member matching the request in name.
+Name is the library name without any prefix like lib, suffix like .so,
+or version number.
+Given a list of members find and return the most appropriate result
+Priority is given to generic libXXX.so, then a versioned libXXX.so.a.b.c
+and finally, legacy AIX naming scheme.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ctypes._aix.get_libpaths">
+    
+  </a>
+  <a name="get_libpaths">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_libpaths():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">On AIX, the buildtime searchpath is stored in the executable.
+as "loader header information".
+The command /usr/bin/dump -H extracts this info.
+Prefix searched libraries with LD_LIBRARY_PATH (preferred),
+or LIBPATH if defined. These paths are appended to the paths
+to libraries the python executable is linked with.
+This mimics AIX dlopen() behavior.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ctypes._aix.find_shared">
+    
+  </a>
+  <a name="find_shared">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    find_shared(paths, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">paths is a list of directories to search for an archive.
+name is the abbreviated name given to find_library().
+Process: search "paths" for archive, and if an archive is found
+return the result of get_member().
+If an archive is not found then return None</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ctypes._aix.find_library">
+    
+  </a>
+  <a name="find_library">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    find_library(name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">AIX implementation of ctypes.util.find_library()
+Find an archive member that will dlopen(). If not available,
+also search for a file (or link) with a .so suffix.
+
+AIX supports two types of schemes that can be used with dlopen().
+The so-called SystemV Release4 (svr4) format is commonly suffixed
+with .so while the (default) AIX scheme has the library (archive)
+ending with the suffix .a
+As an archive has multiple members (e.g., 32-bit and 64-bit) in one file
+the argument passed to dlopen must include both the library and
+the member names in a single string.
+
+find_library() looks first for an archive (.a) with a suitable member.
+If no archive+member pair is found, look for a .so file.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

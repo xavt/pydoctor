@@ -1,0 +1,1340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.importlib._bootstrap_external : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module private"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.importlib.html" class="code" data-type="Package">importlib</a>.<a href="Lib.importlib._bootstrap_external.html" class="code" data-type="Module">_bootstrap_external</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Core implementation of path-based import.
+
+This module is NOT meant to be directly imported! It has been designed such
+that it can be bootstrapped into Python as the implementation of import. As
+such it requires the injection of specific modules and attributes in order to
+work. One should use importlib as the public-facing version of this module.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2536">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#path_separators" class="code" data-type="Variable">path_separators</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#path_sep" class="code" data-type="Variable">path_sep</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#MAGIC_NUMBER" class="code" data-type="Variable">MAGIC_NUMBER</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#SOURCE_SUFFIXES" class="code" data-type="Variable">SOURCE_SUFFIXES</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#EXTENSION_SUFFIXES" class="code" data-type="Variable">EXTENSION_SUFFIXES</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#BYTECODE_SUFFIXES" class="code" data-type="Variable">BYTECODE_SUFFIXES</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#cache_from_source" class="code" data-type="Function">cache_from_source</a></td>
+    <td><span>Given the path to a .py file, return the path to its .pyc file.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#source_from_cache" class="code" data-type="Function">source_from_cache</a></td>
+    <td><span>Given the path to a .pyc. file, return the path to its .py file.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#decode_source" class="code" data-type="Function">decode_source</a></td>
+    <td><span>Decode bytes representing source code and return the string.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#spec_from_file_location" class="code" data-type="Function">spec_from_file_location</a></td>
+    <td><span>Return a module spec based on a file location.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.importlib._bootstrap_external.WindowsRegistryFinder.html" class="code" data-type="Class">WindowsRegistryFinder</a></td>
+    <td><span>Meta path finder for modules declared in the Windows registry.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.importlib._bootstrap_external.SourceLoader.html" class="code" data-type="Class">SourceLoader</a></td>
+    <td><span class="undocumented">No class7/7 methods documented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.importlib._bootstrap_external.FileLoader.html" class="code" data-type="Class">FileLoader</a></td>
+    <td><span>Base file loader class which implements the loader protocol methods that require file system usage.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.importlib._bootstrap_external.SourceFileLoader.html" class="code" data-type="Class">SourceFileLoader</a></td>
+    <td><span>Concrete implementation of SourceLoader using the file system.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.importlib._bootstrap_external.SourcelessFileLoader.html" class="code" data-type="Class">SourcelessFileLoader</a></td>
+    <td><span>Loader which handles sourceless file imports.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.importlib._bootstrap_external.ExtensionFileLoader.html" class="code" data-type="Class">ExtensionFileLoader</a></td>
+    <td><span>Loader for extension modules.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.importlib._bootstrap_external.PathFinder.html" class="code" data-type="Class">PathFinder</a></td>
+    <td><span>Meta path finder for sys.path and package __path__ attributes.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.importlib._bootstrap_external.FileFinder.html" class="code" data-type="Class">FileFinder</a></td>
+    <td><span>File-based finder.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_bootstrap" class="code" data-type="Variable">_bootstrap</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_MS_WINDOWS" class="code" data-type="Variable">_MS_WINDOWS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_pathseps_with_colon" class="code" data-type="Variable">_pathseps_with_colon</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_CASE_INSENSITIVE_PLATFORMS_STR_KEY" class="code" data-type="Variable">_CASE_INSENSITIVE_PLATFORMS_STR_KEY</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_CASE_INSENSITIVE_PLATFORMS_BYTES_KEY" class="code" data-type="Variable">_CASE_INSENSITIVE_PLATFORMS_BYTES_KEY</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_CASE_INSENSITIVE_PLATFORMS" class="code" data-type="Variable">_CASE_INSENSITIVE_PLATFORMS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_make_relax_case" class="code" data-type="Function">_make_relax_case</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_relax_case" class="code" data-type="Variable">_relax_case</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_pack_uint32" class="code" data-type="Function">_pack_uint32</a></td>
+    <td><span>Convert a 32-bit integer to little-endian.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_unpack_uint32" class="code" data-type="Function">_unpack_uint32</a></td>
+    <td><span>Convert 4 bytes in little-endian to an integer.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_unpack_uint16" class="code" data-type="Function">_unpack_uint16</a></td>
+    <td><span>Convert 2 bytes in little-endian to an integer.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_path_join" class="code" data-type="Function">_path_join</a></td>
+    <td><span>Replacement for os.path.join().</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_path_split" class="code" data-type="Function">_path_split</a></td>
+    <td><span>Replacement for os.path.split().</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_path_stat" class="code" data-type="Function">_path_stat</a></td>
+    <td><span>Stat the path.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_path_is_mode_type" class="code" data-type="Function">_path_is_mode_type</a></td>
+    <td><span>Test whether the path is the specified mode type.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_path_isfile" class="code" data-type="Function">_path_isfile</a></td>
+    <td><span>Replacement for os.path.isfile.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_path_isdir" class="code" data-type="Function">_path_isdir</a></td>
+    <td><span>Replacement for os.path.isdir.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_path_isabs" class="code" data-type="Function">_path_isabs</a></td>
+    <td><span>Replacement for os.path.isabs.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_write_atomic" class="code" data-type="Function">_write_atomic</a></td>
+    <td><span>Best-effort function to write data to a path atomically. Be prepared to handle a FileExistsError if concurrent writing of the temporary file is attempted.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_code_type" class="code" data-type="Variable">_code_type</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_RAW_MAGIC_NUMBER" class="code" data-type="Variable">_RAW_MAGIC_NUMBER</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_PYCACHE" class="code" data-type="Variable">_PYCACHE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_OPT" class="code" data-type="Variable">_OPT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_get_sourcefile" class="code" data-type="Function">_get_sourcefile</a></td>
+    <td><span>Convert a bytecode file path to a source path (if possible).</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_get_cached" class="code" data-type="Function">_get_cached</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_calc_mode" class="code" data-type="Function">_calc_mode</a></td>
+    <td><span>Calculate the mode permissions for a bytecode file.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_check_name" class="code" data-type="Function">_check_name</a></td>
+    <td><span>Decorator to verify that the module being requested matches the one the loader can handle.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_find_module_shim" class="code" data-type="Function">_find_module_shim</a></td>
+    <td><span>Try to find a loader for the specified module by delegating to self.find_loader().</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_classify_pyc" class="code" data-type="Function">_classify_pyc</a></td>
+    <td><span>Perform basic validity checking of a pyc header and return the flags field, which determines how the pyc should be further validated against the source.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_validate_timestamp_pyc" class="code" data-type="Function">_validate_timestamp_pyc</a></td>
+    <td><span>Validate a pyc against the source last-modified time.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_validate_hash_pyc" class="code" data-type="Function">_validate_hash_pyc</a></td>
+    <td><span>Validate a hash-based pyc by checking the real source hash against the one in the pyc header.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_compile_bytecode" class="code" data-type="Function">_compile_bytecode</a></td>
+    <td><span>Compile bytecode as found in a pyc.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_code_to_timestamp_pyc" class="code" data-type="Function">_code_to_timestamp_pyc</a></td>
+    <td><span>Produce the data for a timestamp-based pyc.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_code_to_hash_pyc" class="code" data-type="Function">_code_to_hash_pyc</a></td>
+    <td><span>Produce the data for a hash-based pyc.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_POPULATE" class="code" data-type="Variable">_POPULATE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.importlib._bootstrap_external._LoaderBasics.html" class="code" data-type="Class">_LoaderBasics</a></td>
+    <td><span>Base class of common code needed by both SourceLoader and SourcelessFileLoader.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.importlib._bootstrap_external._NamespacePath.html" class="code" data-type="Class">_NamespacePath</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.importlib._bootstrap_external._NamespaceLoader.html" class="code" data-type="Class">_NamespaceLoader</a></td>
+    <td><span class="undocumented">No class0/1 instance variables docstring; , 2/7 methods docstring; , 1/1 static methods documented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_fix_up_module" class="code" data-type="Function">_fix_up_module</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_get_supported_file_loaders" class="code" data-type="Function">_get_supported_file_loaders</a></td>
+    <td><span>Returns a list of file-based module loaders.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_set_bootstrap_module" class="code" data-type="Function">_set_bootstrap_module</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib._bootstrap_external.html#_install" class="code" data-type="Function">_install</a></td>
+    <td><span>Install the path-based import components.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable private">
+  
+  <a name="Lib.importlib._bootstrap_external._bootstrap">
+    
+  </a>
+  <a name="_bootstrap">
+    
+  </a>
+  <div class="functionHeader">
+    _bootstrap =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.importlib._bootstrap_external._MS_WINDOWS">
+    
+  </a>
+  <a name="_MS_WINDOWS">
+    
+  </a>
+  <div class="functionHeader">
+    _MS_WINDOWS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.importlib._bootstrap_external.path_separators">
+    
+  </a>
+  <a name="path_separators">
+    
+  </a>
+  <div class="functionHeader">
+    path_separators =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.importlib._bootstrap_external.path_sep">
+    
+  </a>
+  <a name="path_sep">
+    
+  </a>
+  <div class="functionHeader">
+    path_sep =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.importlib._bootstrap_external._pathseps_with_colon">
+    
+  </a>
+  <a name="_pathseps_with_colon">
+    
+  </a>
+  <div class="functionHeader">
+    _pathseps_with_colon =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.importlib._bootstrap_external._CASE_INSENSITIVE_PLATFORMS_STR_KEY">
+    
+  </a>
+  <a name="_CASE_INSENSITIVE_PLATFORMS_STR_KEY">
+    
+  </a>
+  <div class="functionHeader">
+    _CASE_INSENSITIVE_PLATFORMS_STR_KEY =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Tuple[str, ...]</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.importlib._bootstrap_external._CASE_INSENSITIVE_PLATFORMS_BYTES_KEY">
+    
+  </a>
+  <a name="_CASE_INSENSITIVE_PLATFORMS_BYTES_KEY">
+    
+  </a>
+  <div class="functionHeader">
+    _CASE_INSENSITIVE_PLATFORMS_BYTES_KEY =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Tuple[str, ...]</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.importlib._bootstrap_external._CASE_INSENSITIVE_PLATFORMS">
+    
+  </a>
+  <a name="_CASE_INSENSITIVE_PLATFORMS">
+    
+  </a>
+  <div class="functionHeader">
+    _CASE_INSENSITIVE_PLATFORMS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.importlib._bootstrap_external._make_relax_case">
+    
+  </a>
+  <a name="_make_relax_case">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _make_relax_case():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.importlib._bootstrap_external._relax_case">
+    
+  </a>
+  <a name="_relax_case">
+    
+  </a>
+  <div class="functionHeader">
+    _relax_case =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.importlib._bootstrap_external._pack_uint32">
+    
+  </a>
+  <a name="_pack_uint32">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _pack_uint32(x):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convert a 32-bit integer to little-endian.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.importlib._bootstrap_external._unpack_uint32">
+    
+  </a>
+  <a name="_unpack_uint32">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _unpack_uint32(data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convert 4 bytes in little-endian to an integer.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.importlib._bootstrap_external._unpack_uint16">
+    
+  </a>
+  <a name="_unpack_uint16">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _unpack_uint16(data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convert 2 bytes in little-endian to an integer.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.importlib._bootstrap_external._path_join">
+    
+  </a>
+  <a name="_path_join">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _path_join(*path_parts):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Replacement for os.path.join().</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.importlib._bootstrap_external._path_split">
+    
+  </a>
+  <a name="_path_split">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _path_split(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Replacement for os.path.split().</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.importlib._bootstrap_external._path_stat">
+    
+  </a>
+  <a name="_path_stat">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _path_stat(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Stat the path.
+
+Made a separate function to make it easier to override in experiments
+(e.g. cache stat results).</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.importlib._bootstrap_external._path_is_mode_type">
+    
+  </a>
+  <a name="_path_is_mode_type">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _path_is_mode_type(path, mode):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Test whether the path is the specified mode type.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.importlib._bootstrap_external._path_isfile">
+    
+  </a>
+  <a name="_path_isfile">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _path_isfile(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Replacement for os.path.isfile.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.importlib._bootstrap_external._path_isdir">
+    
+  </a>
+  <a name="_path_isdir">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _path_isdir(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Replacement for os.path.isdir.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.importlib._bootstrap_external._path_isabs">
+    
+  </a>
+  <a name="_path_isabs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _path_isabs(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Replacement for os.path.isabs.
+
+Considers a Windows drive-relative path (no drive, but starts with slash) to
+still be "absolute".</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.importlib._bootstrap_external._write_atomic">
+    
+  </a>
+  <a name="_write_atomic">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _write_atomic(path, data, mode=438):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Best-effort function to write data to a path atomically.
+Be prepared to handle a FileExistsError if concurrent writing of the
+temporary file is attempted.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.importlib._bootstrap_external._code_type">
+    
+  </a>
+  <a name="_code_type">
+    
+  </a>
+  <div class="functionHeader">
+    _code_type =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.importlib._bootstrap_external.MAGIC_NUMBER">
+    
+  </a>
+  <a name="MAGIC_NUMBER">
+    
+  </a>
+  <div class="functionHeader">
+    MAGIC_NUMBER =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.importlib._bootstrap_external._RAW_MAGIC_NUMBER">
+    
+  </a>
+  <a name="_RAW_MAGIC_NUMBER">
+    
+  </a>
+  <div class="functionHeader">
+    _RAW_MAGIC_NUMBER =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.importlib._bootstrap_external._PYCACHE">
+    
+  </a>
+  <a name="_PYCACHE">
+    
+  </a>
+  <div class="functionHeader">
+    _PYCACHE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.importlib._bootstrap_external._OPT">
+    
+  </a>
+  <a name="_OPT">
+    
+  </a>
+  <div class="functionHeader">
+    _OPT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.importlib._bootstrap_external.SOURCE_SUFFIXES">
+    
+  </a>
+  <a name="SOURCE_SUFFIXES">
+    
+  </a>
+  <div class="functionHeader">
+    SOURCE_SUFFIXES =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[str]</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.importlib._bootstrap_external.EXTENSION_SUFFIXES">
+    
+  </a>
+  <a name="EXTENSION_SUFFIXES">
+    
+  </a>
+  <div class="functionHeader">
+    EXTENSION_SUFFIXES =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.importlib._bootstrap_external.BYTECODE_SUFFIXES">
+    
+  </a>
+  <a name="BYTECODE_SUFFIXES">
+    
+  </a>
+  <div class="functionHeader">
+    BYTECODE_SUFFIXES =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[str]</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.importlib._bootstrap_external.cache_from_source">
+    
+  </a>
+  <a name="cache_from_source">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    cache_from_source(path, debug_override=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Given the path to a .py file, return the path to its .pyc file.
+
+The .py file does not need to exist; this simply returns the path to the
+.pyc file calculated as if the .py file were imported.
+
+The 'optimization' parameter controls the presumed optimization level of
+the bytecode file. If 'optimization' is not None, the string representation
+of the argument is taken and verified to be alphanumeric (else ValueError
+is raised).
+
+The debug_override parameter is deprecated. If debug_override is not None,
+a True value is the same as setting 'optimization' to the empty string
+while a False value is equivalent to setting 'optimization' to '1'.
+
+If sys.implementation.cache_tag is None then NotImplementedError is raised.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.importlib._bootstrap_external.source_from_cache">
+    
+  </a>
+  <a name="source_from_cache">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    source_from_cache(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Given the path to a .pyc. file, return the path to its .py file.
+
+The .pyc file does not need to exist; this simply returns the path to
+the .py file calculated to correspond to the .pyc file.  If path does
+not conform to PEP 3147/488 format, ValueError will be raised. If
+sys.implementation.cache_tag is None then NotImplementedError is raised.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.importlib._bootstrap_external._get_sourcefile">
+    
+  </a>
+  <a name="_get_sourcefile">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_sourcefile(bytecode_path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convert a bytecode file path to a source path (if possible).
+
+This function exists purely for backwards-compatibility for
+PyImport_ExecCodeModuleWithFilenames() in the C API.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.importlib._bootstrap_external._get_cached">
+    
+  </a>
+  <a name="_get_cached">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_cached(filename):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.importlib._bootstrap_external._calc_mode">
+    
+  </a>
+  <a name="_calc_mode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _calc_mode(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Calculate the mode permissions for a bytecode file.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.importlib._bootstrap_external._check_name">
+    
+  </a>
+  <a name="_check_name">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _check_name(method):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Decorator to verify that the module being requested matches the one the
+loader can handle.
+
+The first argument (self) must define _name which the second argument is
+compared against. If the comparison fails then ImportError is raised.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.importlib._bootstrap_external._find_module_shim">
+    
+  </a>
+  <a name="_find_module_shim">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _find_module_shim(self, fullname):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Try to find a loader for the specified module by delegating to
+self.find_loader().
+
+This method is deprecated in favor of finder.find_spec().</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.importlib._bootstrap_external._classify_pyc">
+    
+  </a>
+  <a name="_classify_pyc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _classify_pyc(data, name, exc_details):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Perform basic validity checking of a pyc header and return the flags field,
+which determines how the pyc should be further validated against the source.
+
+*data* is the contents of the pyc file. (Only the first 16 bytes are
+required, though.)
+
+*name* is the name of the module being imported. It is used for logging.
+
+*exc_details* is a dictionary passed to ImportError if it raised for
+improved debugging.
+
+ImportError is raised when the magic number is incorrect or when the flags
+field is invalid. EOFError is raised when the data is found to be truncated.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.importlib._bootstrap_external._validate_timestamp_pyc">
+    
+  </a>
+  <a name="_validate_timestamp_pyc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _validate_timestamp_pyc(data, source_mtime, source_size, name, exc_details):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Validate a pyc against the source last-modified time.
+
+*data* is the contents of the pyc file. (Only the first 16 bytes are
+required.)
+
+*source_mtime* is the last modified timestamp of the source file.
+
+*source_size* is None or the size of the source file in bytes.
+
+*name* is the name of the module being imported. It is used for logging.
+
+*exc_details* is a dictionary passed to ImportError if it raised for
+improved debugging.
+
+An ImportError is raised if the bytecode is stale.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.importlib._bootstrap_external._validate_hash_pyc">
+    
+  </a>
+  <a name="_validate_hash_pyc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _validate_hash_pyc(data, source_hash, name, exc_details):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Validate a hash-based pyc by checking the real source hash against the one in
+the pyc header.
+
+*data* is the contents of the pyc file. (Only the first 16 bytes are
+required.)
+
+*source_hash* is the importlib.util.source_hash() of the source file.
+
+*name* is the name of the module being imported. It is used for logging.
+
+*exc_details* is a dictionary passed to ImportError if it raised for
+improved debugging.
+
+An ImportError is raised if the bytecode is stale.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.importlib._bootstrap_external._compile_bytecode">
+    
+  </a>
+  <a name="_compile_bytecode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _compile_bytecode(data, name=None, bytecode_path=None, source_path=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Compile bytecode as found in a pyc.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.importlib._bootstrap_external._code_to_timestamp_pyc">
+    
+  </a>
+  <a name="_code_to_timestamp_pyc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _code_to_timestamp_pyc(code, mtime=0, source_size=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Produce the data for a timestamp-based pyc.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.importlib._bootstrap_external._code_to_hash_pyc">
+    
+  </a>
+  <a name="_code_to_hash_pyc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _code_to_hash_pyc(code, source_hash, checked=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Produce the data for a hash-based pyc.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.importlib._bootstrap_external.decode_source">
+    
+  </a>
+  <a name="decode_source">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    decode_source(source_bytes):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Decode bytes representing source code and return the string.
+
+Universal newline support is used in the decoding.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.importlib._bootstrap_external._POPULATE">
+    
+  </a>
+  <a name="_POPULATE">
+    
+  </a>
+  <div class="functionHeader">
+    _POPULATE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.importlib._bootstrap_external.spec_from_file_location">
+    
+  </a>
+  <a name="spec_from_file_location">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    spec_from_file_location(name, location=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a module spec based on a file location.
+
+To indicate that the module is a package, set
+submodule_search_locations to a list of directory paths.  An
+empty list is sufficient, though its not otherwise useful to the
+import system.
+
+The loader must take a spec as its only __init__() arg.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.importlib._bootstrap_external._fix_up_module">
+    
+  </a>
+  <a name="_fix_up_module">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _fix_up_module(ns, name, pathname, cpathname=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.importlib._bootstrap_external._get_supported_file_loaders">
+    
+  </a>
+  <a name="_get_supported_file_loaders">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_supported_file_loaders():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns a list of file-based module loaders.
+
+Each item is a tuple (loader, suffixes).</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.importlib._bootstrap_external._set_bootstrap_module">
+    
+  </a>
+  <a name="_set_bootstrap_module">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _set_bootstrap_module(_bootstrap_module):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.importlib._bootstrap_external._install">
+    
+  </a>
+  <a name="_install">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _install(_bootstrap_module):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Install the path-based import components.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

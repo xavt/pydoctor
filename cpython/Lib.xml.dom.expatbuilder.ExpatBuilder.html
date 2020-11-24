@@ -1,0 +1,934 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.xml.dom.expatbuilder.ExpatBuilder : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.xml.html" class="code" data-type="Package">xml</a>.<a href="Lib.xml.dom.html" class="code" data-type="Package">dom</a>.<a href="Lib.xml.dom.expatbuilder.html" class="code" data-type="Module">expatbuilder</a>.<a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html" class="code" data-type="Class">ExpatBuilder</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.xml.dom.expatbuilder.ExpatBuilder:</code></p><p>Known subclasses: <a href="Lib.xml.dom.expatbuilder.ExpatBuilderNS.html" class="code" data-type="Class">Lib.xml.dom.expatbuilder.ExpatBuilderNS</a>, <a href="Lib.xml.dom.expatbuilder.FragmentBuilder.html" class="code" data-type="Class">Lib.xml.dom.expatbuilder.FragmentBuilder</a>, <a href="Lib.xml.dom.expatbuilder.InternalSubsetExtractor.html" class="code" data-type="Class">Lib.xml.dom.expatbuilder.InternalSubsetExtractor</a></p>
+        <p><a href="classIndex.html#Lib.xml.dom.expatbuilder.ExpatBuilder">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Document builder that uses Expat to build a ParsedXML.DOM document
+instance.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id12046">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#createParser" class="code" data-type="Method">createParser</a></td>
+    <td><span>Create a new parser object.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#getParser" class="code" data-type="Method">getParser</a></td>
+    <td><span>Return the parser object, creating a new one if needed.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#reset" class="code" data-type="Method">reset</a></td>
+    <td><span>Free all data structures used during DOM construction.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#document" class="code" data-type="Instance Variable">document</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#curNode" class="code" data-type="Instance Variable">curNode</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#install" class="code" data-type="Method">install</a></td>
+    <td><span>Install the callbacks needed to build the DOM into the parser.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#parseFile" class="code" data-type="Method">parseFile</a></td>
+    <td><span>Parse a document from a file object, returning the document node.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#parseString" class="code" data-type="Method">parseString</a></td>
+    <td><span>Parse a document from a string, returning the document node.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#start_doctype_decl_handler" class="code" data-type="Method">start_doctype_decl_handler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#end_doctype_decl_handler" class="code" data-type="Method">end_doctype_decl_handler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#pi_handler" class="code" data-type="Method">pi_handler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#character_data_handler_cdata" class="code" data-type="Method">character_data_handler_cdata</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#character_data_handler" class="code" data-type="Method">character_data_handler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#entity_decl_handler" class="code" data-type="Method">entity_decl_handler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#notation_decl_handler" class="code" data-type="Method">notation_decl_handler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#comment_handler" class="code" data-type="Method">comment_handler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#start_cdata_section_handler" class="code" data-type="Method">start_cdata_section_handler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#end_cdata_section_handler" class="code" data-type="Method">end_cdata_section_handler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#external_entity_ref_handler" class="code" data-type="Method">external_entity_ref_handler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#first_element_handler" class="code" data-type="Method">first_element_handler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#start_element_handler" class="code" data-type="Method">start_element_handler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#end_element_handler" class="code" data-type="Method">end_element_handler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#element_decl_handler" class="code" data-type="Method">element_decl_handler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#attlist_decl_handler" class="code" data-type="Method">attlist_decl_handler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#xml_decl_handler" class="code" data-type="Method">xml_decl_handler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#_options" class="code" data-type="Instance Variable">_options</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#_filter" class="code" data-type="Instance Variable">_filter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#_finish_start_element" class="code" data-type="Method">_finish_start_element</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#_parser" class="code" data-type="Instance Variable">_parser</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#_intern_setdefault" class="code" data-type="Instance Variable">_intern_setdefault</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#_elem_info" class="code" data-type="Instance Variable">_elem_info</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#_cdata" class="code" data-type="Instance Variable">_cdata</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#_setup_subset" class="code" data-type="Method">_setup_subset</a></td>
+    <td><span>Load the internal subset if there might be one.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#_finish_end_element" class="code" data-type="Method">_finish_end_element</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#_cdata_continue" class="code" data-type="Instance Variable">_cdata_continue</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html#_handle_white_text_nodes" class="code" data-type="Method">_handle_white_text_nodes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, options=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.xml.dom.expatbuilder.FragmentBuilder.html" class="code" data-type="Class">Lib.xml.dom.expatbuilder.FragmentBuilder</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder._options">
+    
+  </a>
+  <a name="_options">
+    
+  </a>
+  <div class="functionHeader">
+    _options =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder._filter">
+    
+  </a>
+  <a name="_filter">
+    
+  </a>
+  <div class="functionHeader">
+    _filter =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder._finish_start_element">
+    
+  </a>
+  <a name="_finish_start_element">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _finish_start_element(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder._parser">
+    
+  </a>
+  <a name="_parser">
+    
+  </a>
+  <div class="functionHeader">
+    _parser =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder.createParser">
+    
+  </a>
+  <a name="createParser">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    createParser(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create a new parser object.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder.getParser">
+    
+  </a>
+  <a name="getParser">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getParser(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the parser object, creating a new one if needed.</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder._intern_setdefault">
+    
+  </a>
+  <a name="_intern_setdefault">
+    
+  </a>
+  <div class="functionHeader">
+    _intern_setdefault =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder.reset">
+    
+  </a>
+  <a name="reset">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    reset(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.xml.dom.expatbuilder.ExpatBuilderNS.html" class="code" data-type="Class">Lib.xml.dom.expatbuilder.ExpatBuilderNS</a>, <a href="Lib.xml.dom.expatbuilder.FragmentBuilder.html" class="code" data-type="Class">Lib.xml.dom.expatbuilder.FragmentBuilder</a></div>
+    
+    <div><p class="pre">Free all data structures used during DOM construction.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder.document">
+    
+  </a>
+  <a name="document">
+    
+  </a>
+  <div class="functionHeader">
+    document =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.xml.dom.expatbuilder.FragmentBuilder.html" class="code" data-type="Class">Lib.xml.dom.expatbuilder.FragmentBuilder</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder.curNode">
+    
+  </a>
+  <a name="curNode">
+    
+  </a>
+  <div class="functionHeader">
+    curNode =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.xml.dom.expatbuilder.FragmentBuilder.html" class="code" data-type="Class">Lib.xml.dom.expatbuilder.FragmentBuilder</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder._elem_info">
+    
+  </a>
+  <a name="_elem_info">
+    
+  </a>
+  <div class="functionHeader">
+    _elem_info =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder._cdata">
+    
+  </a>
+  <a name="_cdata">
+    
+  </a>
+  <div class="functionHeader">
+    _cdata =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder.install">
+    
+  </a>
+  <a name="install">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    install(self, parser):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.xml.dom.expatbuilder.InternalSubsetExtractor.html" class="code" data-type="Class">Lib.xml.dom.expatbuilder.InternalSubsetExtractor</a></div>
+    
+    <div><p class="pre">Install the callbacks needed to build the DOM into the parser.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder.parseFile">
+    
+  </a>
+  <a name="parseFile">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parseFile(self, file):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.xml.dom.expatbuilder.FragmentBuilder.html" class="code" data-type="Class">Lib.xml.dom.expatbuilder.FragmentBuilder</a>, <a href="Lib.xml.dom.expatbuilder.InternalSubsetExtractor.html" class="code" data-type="Class">Lib.xml.dom.expatbuilder.InternalSubsetExtractor</a></div>
+    
+    <div><p class="pre">Parse a document from a file object, returning the document
+node.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder.parseString">
+    
+  </a>
+  <a name="parseString">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parseString(self, string):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.xml.dom.expatbuilder.FragmentBuilder.html" class="code" data-type="Class">Lib.xml.dom.expatbuilder.FragmentBuilder</a>, <a href="Lib.xml.dom.expatbuilder.InternalSubsetExtractor.html" class="code" data-type="Class">Lib.xml.dom.expatbuilder.InternalSubsetExtractor</a></div>
+    
+    <div><p class="pre">Parse a document from a string, returning the document node.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder._setup_subset">
+    
+  </a>
+  <a name="_setup_subset">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _setup_subset(self, buffer):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Load the internal subset if there might be one.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder.start_doctype_decl_handler">
+    
+  </a>
+  <a name="start_doctype_decl_handler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    start_doctype_decl_handler(self, doctypeName, systemId, publicId, has_internal_subset):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.xml.dom.expatbuilder.InternalSubsetExtractor.html" class="code" data-type="Class">Lib.xml.dom.expatbuilder.InternalSubsetExtractor</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder.end_doctype_decl_handler">
+    
+  </a>
+  <a name="end_doctype_decl_handler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    end_doctype_decl_handler(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.xml.dom.expatbuilder.InternalSubsetExtractor.html" class="code" data-type="Class">Lib.xml.dom.expatbuilder.InternalSubsetExtractor</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder._finish_end_element">
+    
+  </a>
+  <a name="_finish_end_element">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _finish_end_element(self, curNode):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder.pi_handler">
+    
+  </a>
+  <a name="pi_handler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    pi_handler(self, target, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder.character_data_handler_cdata">
+    
+  </a>
+  <a name="character_data_handler_cdata">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    character_data_handler_cdata(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder._cdata_continue">
+    
+  </a>
+  <a name="_cdata_continue">
+    
+  </a>
+  <div class="functionHeader">
+    _cdata_continue =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder.character_data_handler">
+    
+  </a>
+  <a name="character_data_handler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    character_data_handler(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder.entity_decl_handler">
+    
+  </a>
+  <a name="entity_decl_handler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    entity_decl_handler(self, entityName, is_parameter_entity, value, base, systemId, publicId, notationName):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder.notation_decl_handler">
+    
+  </a>
+  <a name="notation_decl_handler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    notation_decl_handler(self, notationName, base, systemId, publicId):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder.comment_handler">
+    
+  </a>
+  <a name="comment_handler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    comment_handler(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder.start_cdata_section_handler">
+    
+  </a>
+  <a name="start_cdata_section_handler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    start_cdata_section_handler(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder.end_cdata_section_handler">
+    
+  </a>
+  <a name="end_cdata_section_handler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    end_cdata_section_handler(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder.external_entity_ref_handler">
+    
+  </a>
+  <a name="external_entity_ref_handler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    external_entity_ref_handler(self, context, base, systemId, publicId):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.xml.dom.expatbuilder.FragmentBuilder.html" class="code" data-type="Class">Lib.xml.dom.expatbuilder.FragmentBuilder</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder.first_element_handler">
+    
+  </a>
+  <a name="first_element_handler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    first_element_handler(self, name, attributes):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder.start_element_handler">
+    
+  </a>
+  <a name="start_element_handler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    start_element_handler(self, name, attributes):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.xml.dom.expatbuilder.InternalSubsetExtractor.html" class="code" data-type="Class">Lib.xml.dom.expatbuilder.InternalSubsetExtractor</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder.end_element_handler">
+    
+  </a>
+  <a name="end_element_handler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    end_element_handler(self, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder._handle_white_text_nodes">
+    
+  </a>
+  <a name="_handle_white_text_nodes">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _handle_white_text_nodes(self, node, info):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder.element_decl_handler">
+    
+  </a>
+  <a name="element_decl_handler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    element_decl_handler(self, name, model):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder.attlist_decl_handler">
+    
+  </a>
+  <a name="attlist_decl_handler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    attlist_decl_handler(self, elem, name, type, default, required):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.dom.expatbuilder.ExpatBuilder.xml_decl_handler">
+    
+  </a>
+  <a name="xml_decl_handler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    xml_decl_handler(self, version, encoding, standalone):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

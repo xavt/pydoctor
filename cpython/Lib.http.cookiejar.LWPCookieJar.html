@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.http.cookiejar.LWPCookieJar : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.http.html" class="code" data-type="Package">http</a>.<a href="Lib.http.cookiejar.html" class="code" data-type="Module">cookiejar</a>.<a href="Lib.http.cookiejar.LWPCookieJar.html" class="code" data-type="Class">LWPCookieJar</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.http.cookiejar.LWPCookieJar(<a href="Lib.http.cookiejar.FileCookieJar.html" class="code" data-type="Class">FileCookieJar</a>):</code></p>
+        <p><a href="classIndex.html#Lib.http.cookiejar.LWPCookieJar">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">The LWPCookieJar saves a sequence of "Set-Cookie3" lines.
+"Set-Cookie3" is the format used by the libwww-perl library, not known
+to be compatible with any browser, but which is easy to read and
+doesn't lose information about RFC 2965 cookies.
+
+Additional methods
+
+as_lwp_str(ignore_discard=True, ignore_expired=True)</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2011">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.LWPCookieJar.html#as_lwp_str" class="code" data-type="Method">as_lwp_str</a></td>
+    <td><span>Return cookies as a string of "\n"-separated "Set-Cookie3" headers.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.LWPCookieJar.html#save" class="code" data-type="Method">save</a></td>
+    <td><span>Save cookies to a file.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.LWPCookieJar.html#_really_load" class="code" data-type="Method">_really_load</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.http.cookiejar.FileCookieJar.html" class="code" data-type="Class">FileCookieJar</a>:
+          </p>
+          <table class="children sortable" id="id2012">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.FileCookieJar.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Cookies are NOT loaded from the named file until either the .load() or .revert() method is called.</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.http.cookiejar.FileCookieJar.html#filename" class="code" data-type="Instance Variable">filename</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.http.cookiejar.FileCookieJar.html#delayload" class="code" data-type="Instance Variable">delayload</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.FileCookieJar.html#load" class="code" data-type="Method">load</a></td>
+    <td><span>Load cookies from a file.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.FileCookieJar.html#revert" class="code" data-type="Method">revert</a></td>
+    <td><span>Clear all cookies and reload cookies from a saved file.</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.http.cookiejar.FileCookieJar.html#_cookies" class="code" data-type="Instance Variable">_cookies</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.http.cookiejar.CookieJar.html" class="code" data-type="Class">CookieJar</a> (via <a href="Lib.http.cookiejar.FileCookieJar.html" class="code" data-type="Class">FileCookieJar</a>):
+          </p>
+          <table class="children sortable" id="id2013">
+  
+  <tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#non_word_re" class="code" data-type="Class Variable">non_word_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#quote_re" class="code" data-type="Class Variable">quote_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#strict_domain_re" class="code" data-type="Class Variable">strict_domain_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#domain_re" class="code" data-type="Class Variable">domain_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#dots_re" class="code" data-type="Class Variable">dots_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#magic_re" class="code" data-type="Class Variable">magic_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#set_policy" class="code" data-type="Method">set_policy</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#add_cookie_header" class="code" data-type="Method">add_cookie_header</a></td>
+    <td><span>Add correct Cookie: header to request (urllib.request.Request object).</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#make_cookies" class="code" data-type="Method">make_cookies</a></td>
+    <td><span>Return sequence of Cookie objects extracted from response object.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#set_cookie_if_ok" class="code" data-type="Method">set_cookie_if_ok</a></td>
+    <td><span>Set a cookie if policy says it's OK to do so.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#set_cookie" class="code" data-type="Method">set_cookie</a></td>
+    <td><span>Set a cookie, without checking whether or not it should be set.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#extract_cookies" class="code" data-type="Method">extract_cookies</a></td>
+    <td><span>Extract cookies from response, where allowable given the request.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#clear" class="code" data-type="Method">clear</a></td>
+    <td><span>Clear some cookies.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#clear_session_cookies" class="code" data-type="Method">clear_session_cookies</a></td>
+    <td><span>Discard all session cookies.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#clear_expired_cookies" class="code" data-type="Method">clear_expired_cookies</a></td>
+    <td><span>Discard all expired cookies.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#__iter__" class="code" data-type="Method">__iter__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#__len__" class="code" data-type="Method">__len__</a></td>
+    <td><span>Return number of contained cookies.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#__str__" class="code" data-type="Method">__str__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#_policy" class="code" data-type="Instance Variable">_policy</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#_cookies_lock" class="code" data-type="Instance Variable">_cookies_lock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#_cookies_for_domain" class="code" data-type="Method">_cookies_for_domain</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#_cookies_for_request" class="code" data-type="Method">_cookies_for_request</a></td>
+    <td><span>Return a list of cookies to be returned to server.</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#_cookie_attrs" class="code" data-type="Method">_cookie_attrs</a></td>
+    <td><span>Return a list of cookie-attributes to be returned to server.</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#_now" class="code" data-type="Instance Variable">_now</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#_normalized_cookie_tuples" class="code" data-type="Method">_normalized_cookie_tuples</a></td>
+    <td><span>Return list of tuples containing normalised cookie information.</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#_cookie_from_cookie_tuple" class="code" data-type="Method">_cookie_from_cookie_tuple</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#_cookies_from_attrs_set" class="code" data-type="Method">_cookies_from_attrs_set</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#_process_rfc2109_cookies" class="code" data-type="Method">_process_rfc2109_cookies</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.http.cookiejar.LWPCookieJar.as_lwp_str">
+    
+  </a>
+  <a name="as_lwp_str">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    as_lwp_str(self, ignore_discard=(True), ignore_expires=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return cookies as a string of "\n"-separated "Set-Cookie3" headers.
+
+ignore_discard and ignore_expires: see docstring for FileCookieJar.save</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.cookiejar.LWPCookieJar.save">
+    
+  </a>
+  <a name="save">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    save(self, filename=None, ignore_discard=(False), ignore_expires=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.http.cookiejar.FileCookieJar.html#save" class="code" data-type="Method">Lib.http.cookiejar.FileCookieJar.save</a></div>
+    
+    <div><p class="pre">Save cookies to a file.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.http.cookiejar.LWPCookieJar._really_load">
+    
+  </a>
+  <a name="_really_load">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _really_load(self, f, filename, ignore_discard, ignore_expires):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

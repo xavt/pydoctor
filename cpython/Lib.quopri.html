@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.quopri : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.quopri.html" class="code" data-type="Module">quopri</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Conversions to/from quoted-printable transport encoding as per RFC 1521.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3454">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.quopri.html#ESCAPE" class="code" data-type="Variable">ESCAPE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.quopri.html#MAXLINESIZE" class="code" data-type="Variable">MAXLINESIZE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.quopri.html#HEX" class="code" data-type="Variable">HEX</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.quopri.html#EMPTYSTRING" class="code" data-type="Variable">EMPTYSTRING</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.quopri.html#a2b_qp" class="code" data-type="Variable">a2b_qp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.quopri.html#b2a_qp" class="code" data-type="Variable">b2a_qp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.quopri.html#needsquoting" class="code" data-type="Function">needsquoting</a></td>
+    <td><span>Decide whether a particular byte ordinal needs to be quoted.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.quopri.html#quote" class="code" data-type="Function">quote</a></td>
+    <td><span>Quote a single character.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.quopri.html#encode" class="code" data-type="Function">encode</a></td>
+    <td><span>Read 'input', apply quoted-printable encoding, and write to 'output'.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.quopri.html#encodestring" class="code" data-type="Function">encodestring</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.quopri.html#decode" class="code" data-type="Function">decode</a></td>
+    <td><span>Read 'input', apply quoted-printable decoding, and write to 'output'. 'input' and 'output' are binary file objects. If 'header' is true, decode underscore as space (per RFC 1522).</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.quopri.html#decodestring" class="code" data-type="Function">decodestring</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.quopri.html#ishex" class="code" data-type="Function">ishex</a></td>
+    <td><span>Return true if the byte ordinal 'c' is a hexadecimal digit in ASCII.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.quopri.html#unhex" class="code" data-type="Function">unhex</a></td>
+    <td><span>Get the integer value of a hexadecimal number.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.quopri.html#main" class="code" data-type="Function">main</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.quopri.ESCAPE">
+    
+  </a>
+  <a name="ESCAPE">
+    
+  </a>
+  <div class="functionHeader">
+    ESCAPE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.quopri.MAXLINESIZE">
+    
+  </a>
+  <a name="MAXLINESIZE">
+    
+  </a>
+  <div class="functionHeader">
+    MAXLINESIZE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.quopri.HEX">
+    
+  </a>
+  <a name="HEX">
+    
+  </a>
+  <div class="functionHeader">
+    HEX =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.quopri.EMPTYSTRING">
+    
+  </a>
+  <a name="EMPTYSTRING">
+    
+  </a>
+  <div class="functionHeader">
+    EMPTYSTRING =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.quopri.a2b_qp">
+    
+  </a>
+  <a name="a2b_qp">
+    
+  </a>
+  <div class="functionHeader">
+    a2b_qp =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.quopri.b2a_qp">
+    
+  </a>
+  <a name="b2a_qp">
+    
+  </a>
+  <div class="functionHeader">
+    b2a_qp =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.quopri.needsquoting">
+    
+  </a>
+  <a name="needsquoting">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    needsquoting(c, quotetabs, header):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Decide whether a particular byte ordinal needs to be quoted.
+
+The 'quotetabs' flag indicates whether embedded tabs and spaces should be
+quoted.  Note that line-ending tabs and spaces are always encoded, as per
+RFC 1521.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.quopri.quote">
+    
+  </a>
+  <a name="quote">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    quote(c):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Quote a single character.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.quopri.encode">
+    
+  </a>
+  <a name="encode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    encode(input, output, quotetabs, header=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Read 'input', apply quoted-printable encoding, and write to 'output'.
+
+'input' and 'output' are binary file objects. The 'quotetabs' flag
+indicates whether embedded tabs and spaces should be quoted. Note that
+line-ending tabs and spaces are always encoded, as per RFC 1521.
+The 'header' flag indicates whether we are encoding spaces as _ as per RFC
+1522.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.quopri.encodestring">
+    
+  </a>
+  <a name="encodestring">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    encodestring(s, quotetabs=(False), header=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.quopri.decode">
+    
+  </a>
+  <a name="decode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    decode(input, output, header=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Read 'input', apply quoted-printable decoding, and write to 'output'.
+'input' and 'output' are binary file objects.
+If 'header' is true, decode underscore as space (per RFC 1522).</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.quopri.decodestring">
+    
+  </a>
+  <a name="decodestring">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    decodestring(s, header=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.quopri.ishex">
+    
+  </a>
+  <a name="ishex">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ishex(c):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return true if the byte ordinal 'c' is a hexadecimal digit in ASCII.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.quopri.unhex">
+    
+  </a>
+  <a name="unhex">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    unhex(s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get the integer value of a hexadecimal number.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.quopri.main">
+    
+  </a>
+  <a name="main">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    main():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.trace : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.trace.html" class="code" data-type="Module">trace</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">program/module to trace Python program or function execution
+
+Sample use, command line:
+  trace.py -c -f counts --ignore-dir '$prefix' spam.py eggs
+  trace.py -t --ignore-dir '$prefix' spam.py eggs
+  trace.py --trackcalls spam.py eggs
+
+Sample use, programmatically
+  import sys
+
+  # create a Trace object, telling it what to ignore, and whether to
+  # do tracing or line-counting or both.
+  tracer = trace.Trace(ignoredirs=[sys.base_prefix, sys.base_exec_prefix,],
+                       trace=0, count=1)
+  # run the new command using the given tracer
+  tracer.run('main()')
+  # make a report, placing output in /tmp
+  r = tracer.results()
+  r.write_results(show_missing=True, coverdir="/tmp")</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id11450">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.trace.html#PRAGMA_NOCOVER" class="code" data-type="Variable">PRAGMA_NOCOVER</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.trace.CoverageResults.html" class="code" data-type="Class">CoverageResults</a></td>
+    <td><span class="undocumented">No class0/6 instance variables docstring; , 4/5 methods documented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.trace.Trace.html" class="code" data-type="Class">Trace</a></td>
+    <td><span class="undocumented">No class0/13 instance variables docstring; , 4/12 methods documented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.trace.html#main" class="code" data-type="Function">main</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.trace._Ignore.html" class="code" data-type="Class">_Ignore</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.trace.html#_modname" class="code" data-type="Function">_modname</a></td>
+    <td><span>Return a plausible module name for the patch.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.trace.html#_fullmodname" class="code" data-type="Function">_fullmodname</a></td>
+    <td><span>Return a plausible module name for the path.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.trace.html#_find_lines_from_code" class="code" data-type="Function">_find_lines_from_code</a></td>
+    <td><span>Return dict where keys are lines in the line number table.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.trace.html#_find_lines" class="code" data-type="Function">_find_lines</a></td>
+    <td><span>Return lineno dict for all code objects reachable from code.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.trace.html#_find_strings" class="code" data-type="Function">_find_strings</a></td>
+    <td><span>Return a dict of possible docstring positions.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.trace.html#_find_executable_linenos" class="code" data-type="Function">_find_executable_linenos</a></td>
+    <td><span>Return dict where keys are line numbers in the line number table.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.trace.PRAGMA_NOCOVER">
+    
+  </a>
+  <a name="PRAGMA_NOCOVER">
+    
+  </a>
+  <div class="functionHeader">
+    PRAGMA_NOCOVER =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.trace._modname">
+    
+  </a>
+  <a name="_modname">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _modname(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a plausible module name for the patch.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.trace._fullmodname">
+    
+  </a>
+  <a name="_fullmodname">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _fullmodname(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a plausible module name for the path.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.trace._find_lines_from_code">
+    
+  </a>
+  <a name="_find_lines_from_code">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _find_lines_from_code(code, strs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return dict where keys are lines in the line number table.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.trace._find_lines">
+    
+  </a>
+  <a name="_find_lines">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _find_lines(code, strs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return lineno dict for all code objects reachable from code.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.trace._find_strings">
+    
+  </a>
+  <a name="_find_strings">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _find_strings(filename, encoding=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a dict of possible docstring positions.
+
+The dict maps line numbers to strings.  There is an entry for
+line that contains only a string or a part of a triple-quoted
+string.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.trace._find_executable_linenos">
+    
+  </a>
+  <a name="_find_executable_linenos">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _find_executable_linenos(filename):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return dict where keys are line numbers in the line number table.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.trace.main">
+    
+  </a>
+  <a name="main">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    main():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

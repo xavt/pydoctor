@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.bdb.Breakpoint : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.bdb.html" class="code" data-type="Module">bdb</a>.<a href="Lib.bdb.Breakpoint.html" class="code" data-type="Class">Breakpoint</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.bdb.Breakpoint:</code></p>
+        <p><a href="classIndex.html#Lib.bdb.Breakpoint">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Breakpoint class.
+
+Implements temporary breakpoints, ignore counts, disabling and
+(re)-enabling, and conditionals.
+
+Breakpoints are indexed by number through bpbynumber and by
+the (file, line) tuple using bplist.  The former points to a
+single instance of class Breakpoint.  The latter points to a
+list of such instances since there may be more than one
+breakpoint per line.
+
+When creating a breakpoint, its associated filename should be
+in canonical form.  If funcname is defined, a breakpoint hit will be
+counted when the first line of that function is executed.  A
+conditional breakpoint always counts a hit.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id457">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.bdb.Breakpoint.html#next" class="code" data-type="Class Variable">next</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.bdb.Breakpoint.html#bplist" class="code" data-type="Class Variable">bplist</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.bdb.Breakpoint.html#bpbynumber" class="code" data-type="Class Variable">bpbynumber</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.bdb.Breakpoint.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.bdb.Breakpoint.html#funcname" class="code" data-type="Instance Variable">funcname</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.bdb.Breakpoint.html#func_first_executable_line" class="code" data-type="Instance Variable">func_first_executable_line</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.bdb.Breakpoint.html#file" class="code" data-type="Instance Variable">file</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.bdb.Breakpoint.html#line" class="code" data-type="Instance Variable">line</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.bdb.Breakpoint.html#temporary" class="code" data-type="Instance Variable">temporary</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.bdb.Breakpoint.html#cond" class="code" data-type="Instance Variable">cond</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.bdb.Breakpoint.html#enabled" class="code" data-type="Instance Variable">enabled</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.bdb.Breakpoint.html#ignore" class="code" data-type="Instance Variable">ignore</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.bdb.Breakpoint.html#hits" class="code" data-type="Instance Variable">hits</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.bdb.Breakpoint.html#number" class="code" data-type="Instance Variable">number</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.bdb.Breakpoint.html#deleteMe" class="code" data-type="Method">deleteMe</a></td>
+    <td><span>Delete the breakpoint from the list associated to a file:line.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.bdb.Breakpoint.html#enable" class="code" data-type="Method">enable</a></td>
+    <td><span>Mark the breakpoint as enabled.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.bdb.Breakpoint.html#disable" class="code" data-type="Method">disable</a></td>
+    <td><span>Mark the breakpoint as disabled.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.bdb.Breakpoint.html#bpprint" class="code" data-type="Method">bpprint</a></td>
+    <td><span>Print the output of bpformat().</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.bdb.Breakpoint.html#bpformat" class="code" data-type="Method">bpformat</a></td>
+    <td><span>Return a string with information about the breakpoint.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.bdb.Breakpoint.html#__str__" class="code" data-type="Method">__str__</a></td>
+    <td><span>Return a condensed description of the breakpoint.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.bdb.Breakpoint.next">
+    
+  </a>
+  <a name="next">
+    
+  </a>
+  <div class="functionHeader">
+    next =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.bdb.Breakpoint.bplist">
+    
+  </a>
+  <a name="bplist">
+    
+  </a>
+  <div class="functionHeader">
+    bplist =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.bdb.Breakpoint.bpbynumber">
+    
+  </a>
+  <a name="bpbynumber">
+    
+  </a>
+  <div class="functionHeader">
+    bpbynumber =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.bdb.Breakpoint.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, file, line, temporary=(False), cond=None, funcname=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.bdb.Breakpoint.funcname">
+    
+  </a>
+  <a name="funcname">
+    
+  </a>
+  <div class="functionHeader">
+    funcname =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.bdb.Breakpoint.func_first_executable_line">
+    
+  </a>
+  <a name="func_first_executable_line">
+    
+  </a>
+  <div class="functionHeader">
+    func_first_executable_line =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.bdb.Breakpoint.file">
+    
+  </a>
+  <a name="file">
+    
+  </a>
+  <div class="functionHeader">
+    file =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.bdb.Breakpoint.line">
+    
+  </a>
+  <a name="line">
+    
+  </a>
+  <div class="functionHeader">
+    line =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.bdb.Breakpoint.temporary">
+    
+  </a>
+  <a name="temporary">
+    
+  </a>
+  <div class="functionHeader">
+    temporary =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.bdb.Breakpoint.cond">
+    
+  </a>
+  <a name="cond">
+    
+  </a>
+  <div class="functionHeader">
+    cond =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.bdb.Breakpoint.enabled">
+    
+  </a>
+  <a name="enabled">
+    
+  </a>
+  <div class="functionHeader">
+    enabled =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.bdb.Breakpoint.ignore">
+    
+  </a>
+  <a name="ignore">
+    
+  </a>
+  <div class="functionHeader">
+    ignore =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.bdb.Breakpoint.hits">
+    
+  </a>
+  <a name="hits">
+    
+  </a>
+  <div class="functionHeader">
+    hits =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.bdb.Breakpoint.number">
+    
+  </a>
+  <a name="number">
+    
+  </a>
+  <div class="functionHeader">
+    number =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.bdb.Breakpoint.deleteMe">
+    
+  </a>
+  <a name="deleteMe">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    deleteMe(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Delete the breakpoint from the list associated to a file:line.
+
+If it is the last breakpoint in that position, it also deletes
+the entry for the file:line.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.bdb.Breakpoint.enable">
+    
+  </a>
+  <a name="enable">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    enable(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Mark the breakpoint as enabled.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.bdb.Breakpoint.disable">
+    
+  </a>
+  <a name="disable">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    disable(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Mark the breakpoint as disabled.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.bdb.Breakpoint.bpprint">
+    
+  </a>
+  <a name="bpprint">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    bpprint(self, out=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Print the output of bpformat().
+
+The optional out argument directs where the output is sent
+and defaults to standard output.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.bdb.Breakpoint.bpformat">
+    
+  </a>
+  <a name="bpformat">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    bpformat(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a string with information about the breakpoint.
+
+The information includes the breakpoint number, temporary
+status, file:line position, break condition, number of times to
+ignore, and number of times hit.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.bdb.Breakpoint.__str__">
+    
+  </a>
+  <a name="__str__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __str__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a condensed description of the breakpoint.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

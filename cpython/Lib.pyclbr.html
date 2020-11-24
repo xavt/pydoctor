@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.pyclbr : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.pyclbr.html" class="code" data-type="Module">pyclbr</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Parse a Python module and describe its classes and functions.
+
+Parse enough of a Python file to recognize imports and class and
+function definitions, and to find out the superclasses of a class.
+
+The interface consists of a single function:
+    readmodule_ex(module, path=None)
+where module is the name of a Python module, and path is an optional
+list of directories where the module is to be searched.  If present,
+path is prepended to the system search path sys.path.  The return value
+is a dictionary.  The keys of the dictionary are the names of the
+classes and functions defined in the module (including classes that are
+defined via the from XXX import YYY construct).  The values are
+instances of classes Class and Function.  One special key/value pair is
+present for packages: the key '__path__' has a list as its value which
+contains the package search path.
+
+Classes and Functions have a common superclass: _Object.  Every instance
+has the following attributes:
+    module  -- name of the module;
+    name    -- name of the object;
+    file    -- file in which the object is defined;
+    lineno  -- line in the file where the object's definition starts;
+    parent  -- parent of this object, if any;
+    children -- nested objects contained in this object.
+The 'children' attribute is a dictionary mapping names to objects.
+
+Instances of Function describe functions with the attributes from _Object,
+plus the following:
+    is_async -- if a function is defined with an 'async' prefix
+
+Instances of Class describe classes with the attributes from _Object,
+plus the following:
+    super   -- list of super classes (Class instances if possible);
+    methods -- mapping of method names to beginning line numbers.
+If the name of a super class is not recognized, the corresponding
+entry in the list of super classes is not a class instance but a
+string giving the name of the super class.  Since import statements
+are recognized and imported modules are scanned as well, this
+shouldn't happen often.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3424">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.pyclbr.Function.html" class="code" data-type="Class">Function</a></td>
+    <td><span>Information about a Python function, including methods.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.pyclbr.Class.html" class="code" data-type="Class">Class</a></td>
+    <td><span>Information about a Python class.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pyclbr.html#readmodule" class="code" data-type="Function">readmodule</a></td>
+    <td><span>Return Class objects for the top-level classes in module.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pyclbr.html#readmodule_ex" class="code" data-type="Function">readmodule_ex</a></td>
+    <td><span>Return a dictionary with all functions and classes in module.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pyclbr.html#_modules" class="code" data-type="Variable">_modules</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.pyclbr._Object.html" class="code" data-type="Class">_Object</a></td>
+    <td><span>Information about Python class or function.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pyclbr.html#_nest_function" class="code" data-type="Function">_nest_function</a></td>
+    <td><span>Return a Function after nesting within ob.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pyclbr.html#_nest_class" class="code" data-type="Function">_nest_class</a></td>
+    <td><span>Return a Class after nesting within ob.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pyclbr.html#_readmodule" class="code" data-type="Function">_readmodule</a></td>
+    <td><span>Do the hard work for readmodule[_ex].</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.pyclbr._ModuleBrowser.html" class="code" data-type="Class">_ModuleBrowser</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pyclbr.html#_create_tree" class="code" data-type="Function">_create_tree</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pyclbr.html#_main" class="code" data-type="Function">_main</a></td>
+    <td><span>Print module output (default this file) for quick visual check.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable private">
+  
+  <a name="Lib.pyclbr._modules">
+    
+  </a>
+  <a name="_modules">
+    
+  </a>
+  <div class="functionHeader">
+    _modules =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pyclbr._nest_function">
+    
+  </a>
+  <a name="_nest_function">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _nest_function(ob, func_name, lineno, is_async=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a Function after nesting within ob.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pyclbr._nest_class">
+    
+  </a>
+  <a name="_nest_class">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _nest_class(ob, class_name, lineno, super=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a Class after nesting within ob.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pyclbr.readmodule">
+    
+  </a>
+  <a name="readmodule">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    readmodule(module, path=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return Class objects for the top-level classes in module.
+
+This is the original interface, before Functions were added.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pyclbr.readmodule_ex">
+    
+  </a>
+  <a name="readmodule_ex">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    readmodule_ex(module, path=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a dictionary with all functions and classes in module.
+
+Search for module in PATH + sys.path.
+If possible, include imported superclasses.
+Do this by reading source, without importing (and executing) it.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pyclbr._readmodule">
+    
+  </a>
+  <a name="_readmodule">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _readmodule(module, path, inpackage=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Do the hard work for readmodule[_ex].
+
+If inpackage is given, it must be the dotted name of the package in
+which we are searching for a submodule, and then PATH must be the
+package search path; otherwise, we are searching for a top-level
+module, and path is combined with sys.path.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pyclbr._create_tree">
+    
+  </a>
+  <a name="_create_tree">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _create_tree(fullmodule, path, fname, source, tree, inpackage):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pyclbr._main">
+    
+  </a>
+  <a name="_main">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _main():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Print module output (default this file) for quick visual check.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

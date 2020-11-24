@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.smtplib.LMTP : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.smtplib.html" class="code" data-type="Module">smtplib</a>.<a href="Lib.smtplib.LMTP.html" class="code" data-type="Class">LMTP</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.smtplib.LMTP(<a href="Lib.smtplib.SMTP.html" class="code" data-type="Class">SMTP</a>):</code></p>
+        <p><a href="classIndex.html#Lib.smtplib.LMTP">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">LMTP - Local Mail Transfer Protocol
+
+The LMTP protocol, which is very similar to ESMTP, is heavily based
+on the standard SMTP client. It's common to use Unix sockets for
+LMTP, so our connect() method must support that as well as a regular
+host:port server.  local_hostname and source_address have the same
+meaning as they do in the SMTP class.  To specify a Unix socket,
+you must use an absolute path as the host, starting with a '/'.
+
+Authentication is supported, using the regular SMTP mechanism. When
+using a Unix socket, LMTP generally don't support or require any
+authentication, but your mileage might vary.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3532">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.smtplib.LMTP.html#ehlo_msg" class="code" data-type="Class Variable">ehlo_msg</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.LMTP.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Initialize a new instance.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.LMTP.html#connect" class="code" data-type="Method">connect</a></td>
+    <td><span>Connect to the LMTP daemon, on either a Unix or a TCP socket.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtplib.LMTP.html#sock" class="code" data-type="Instance Variable">sock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtplib.LMTP.html#file" class="code" data-type="Instance Variable">file</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.smtplib.SMTP.html" class="code" data-type="Class">SMTP</a>:
+          </p>
+          <table class="children sortable" id="id3533">
+  
+  <tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtplib.SMTP.html#debuglevel" class="code" data-type="Instance Variable">debuglevel</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtplib.SMTP.html#helo_resp" class="code" data-type="Instance Variable">helo_resp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtplib.SMTP.html#ehlo_resp" class="code" data-type="Instance Variable">ehlo_resp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtplib.SMTP.html#does_esmtp" class="code" data-type="Instance Variable">does_esmtp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtplib.SMTP.html#timeout" class="code" data-type="Instance Variable">timeout</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtplib.SMTP.html#esmtp_features" class="code" data-type="Instance Variable">esmtp_features</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtplib.SMTP.html#command_encoding" class="code" data-type="Instance Variable">command_encoding</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtplib.SMTP.html#source_address" class="code" data-type="Instance Variable">source_address</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtplib.SMTP.html#local_hostname" class="code" data-type="Instance Variable">local_hostname</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#__enter__" class="code" data-type="Method">__enter__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#__exit__" class="code" data-type="Method">__exit__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#set_debuglevel" class="code" data-type="Method">set_debuglevel</a></td>
+    <td><span>Set the debug output level.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#send" class="code" data-type="Method">send</a></td>
+    <td><span>Send `s' to the server.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#putcmd" class="code" data-type="Method">putcmd</a></td>
+    <td><span>Send a command to the server.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#getreply" class="code" data-type="Method">getreply</a></td>
+    <td><span>Get a reply from the server.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#docmd" class="code" data-type="Method">docmd</a></td>
+    <td><span>Send a command, and return its response code.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#helo" class="code" data-type="Method">helo</a></td>
+    <td><span>SMTP 'helo' command. Hostname to send for this command defaults to the FQDN of the local host.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#ehlo" class="code" data-type="Method">ehlo</a></td>
+    <td><span>SMTP 'ehlo' command. Hostname to send for this command defaults to the FQDN of the local host.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#has_extn" class="code" data-type="Method">has_extn</a></td>
+    <td><span>Does the server support a given SMTP service extension?</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#help" class="code" data-type="Method">help</a></td>
+    <td><span>SMTP 'help' command. Returns help text from server.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#rset" class="code" data-type="Method">rset</a></td>
+    <td><span>SMTP 'rset' command -- resets session.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#noop" class="code" data-type="Method">noop</a></td>
+    <td><span>SMTP 'noop' command -- doesn't do anything :&gt;</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#mail" class="code" data-type="Method">mail</a></td>
+    <td><span>SMTP 'mail' command -- begins mail xfer session.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#rcpt" class="code" data-type="Method">rcpt</a></td>
+    <td><span>SMTP 'rcpt' command -- indicates 1 recipient for this mail.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#data" class="code" data-type="Method">data</a></td>
+    <td><span>SMTP 'DATA' command -- sends message data to server.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#verify" class="code" data-type="Method">verify</a></td>
+    <td><span>SMTP 'verify' command -- checks for address validity.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#expn" class="code" data-type="Method">expn</a></td>
+    <td><span>SMTP 'expn' command -- expands a mailing list.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#ehlo_or_helo_if_needed" class="code" data-type="Method">ehlo_or_helo_if_needed</a></td>
+    <td><span>Call self.ehlo() and/or self.helo() if needed.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#auth" class="code" data-type="Method">auth</a></td>
+    <td><span>Authentication command - requires response processing.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#auth_cram_md5" class="code" data-type="Method">auth_cram_md5</a></td>
+    <td><span>Authobject to use with CRAM-MD5 authentication. Requires self.user and self.password to be set.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#auth_plain" class="code" data-type="Method">auth_plain</a></td>
+    <td><span>Authobject to use with PLAIN authentication. Requires self.user and self.password to be set.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#auth_login" class="code" data-type="Method">auth_login</a></td>
+    <td><span>Authobject to use with LOGIN authentication. Requires self.user and self.password to be set.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#login" class="code" data-type="Method">login</a></td>
+    <td><span>Log in on an SMTP server that requires authentication.</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtplib.SMTP.html#user" class="code" data-type="Instance Variable">user</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtplib.SMTP.html#password" class="code" data-type="Instance Variable">password</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#starttls" class="code" data-type="Method">starttls</a></td>
+    <td><span>Puts the connection to the SMTP server into TLS mode.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#sendmail" class="code" data-type="Method">sendmail</a></td>
+    <td><span>This command performs an entire mail transaction.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#send_message" class="code" data-type="Method">send_message</a></td>
+    <td><span>Converts message to a bytestring and passes it to sendmail.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#close" class="code" data-type="Method">close</a></td>
+    <td><span>Close the connection to the SMTP server.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#quit" class="code" data-type="Method">quit</a></td>
+    <td><span>Terminate the SMTP session.</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtplib.SMTP.html#_host" class="code" data-type="Instance Variable">_host</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#_print_debug" class="code" data-type="Method">_print_debug</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#_get_socket" class="code" data-type="Method">_get_socket</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtplib.SMTP.html#_rset" class="code" data-type="Method">_rset</a></td>
+    <td><span>Internal 'rset' command which ignores any SMTPServerDisconnected error.</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.smtplib.LMTP.ehlo_msg">
+    
+  </a>
+  <a name="ehlo_msg">
+    
+  </a>
+  <div class="functionHeader">
+    ehlo_msg =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.smtplib.SMTP.html#ehlo_msg" class="code" data-type="Class Variable">Lib.smtplib.SMTP.ehlo_msg</a></div>
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.smtplib.LMTP.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, host="""""", port=LMTP_PORT, local_hostname=None, source_address=None, timeout=socket._GLOBAL_DEFAULT_TIMEOUT):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.smtplib.SMTP.html#__init__" class="code" data-type="Method">Lib.smtplib.SMTP.__init__</a></div>
+    
+    <div><p class="pre">Initialize a new instance.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.smtplib.LMTP.connect">
+    
+  </a>
+  <a name="connect">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    connect(self, host="""localhost""", port=0, source_address=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.smtplib.SMTP.html#connect" class="code" data-type="Method">Lib.smtplib.SMTP.connect</a></div>
+    
+    <div><p class="pre">Connect to the LMTP daemon, on either a Unix or a TCP socket.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.smtplib.LMTP.sock">
+    
+  </a>
+  <a name="sock">
+    
+  </a>
+  <div class="functionHeader">
+    sock =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.smtplib.SMTP.html#sock" class="code" data-type="Instance Variable">Lib.smtplib.SMTP.sock</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.smtplib.LMTP.file">
+    
+  </a>
+  <a name="file">
+    
+  </a>
+  <div class="functionHeader">
+    file =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.smtplib.SMTP.html#file" class="code" data-type="Instance Variable">Lib.smtplib.SMTP.file</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

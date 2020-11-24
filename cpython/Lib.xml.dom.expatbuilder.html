@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.xml.dom.expatbuilder : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.xml.html" class="code" data-type="Package">xml</a>.<a href="Lib.xml.dom.html" class="code" data-type="Package">dom</a>.<a href="Lib.xml.dom.expatbuilder.html" class="code" data-type="Module">expatbuilder</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Facility to use the Expat parser to load a minidom instance
+from a string or file.
+
+This avoids all the overhead of SAX and pulldom to gain performance.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id12044">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xml.dom.expatbuilder.html#theDOMImplementation" class="code" data-type="Variable">theDOMImplementation</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ElementInfo.html" class="code" data-type="Class">ElementInfo</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilder.html" class="code" data-type="Class">ExpatBuilder</a></td>
+    <td><span>Document builder that uses Expat to build a ParsedXML.DOM document instance.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.expatbuilder.FilterVisibilityController.html" class="code" data-type="Class">FilterVisibilityController</a></td>
+    <td><span>Wrapper around a DOMBuilderFilter which implements the checks to make the whatToShow filter attribute work.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.expatbuilder.FilterCrutch.html" class="code" data-type="Class">FilterCrutch</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.expatbuilder.Rejecter.html" class="code" data-type="Class">Rejecter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.expatbuilder.Skipper.html" class="code" data-type="Class">Skipper</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.expatbuilder.FragmentBuilder.html" class="code" data-type="Class">FragmentBuilder</a></td>
+    <td><span>Builder which constructs document fragments given XML source text and a context node.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.expatbuilder.Namespaces.html" class="code" data-type="Class">Namespaces</a></td>
+    <td><span>Mix-in class for builders; adds support for namespaces.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ExpatBuilderNS.html" class="code" data-type="Class">ExpatBuilderNS</a></td>
+    <td><span>Document builder that supports namespaces.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.expatbuilder.FragmentBuilderNS.html" class="code" data-type="Class">FragmentBuilderNS</a></td>
+    <td><span>Fragment builder that supports namespaces.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.expatbuilder.ParseEscape.html" class="code" data-type="Class">ParseEscape</a></td>
+    <td><span>Exception raised to short-circuit parsing in InternalSubsetExtractor.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.xml.dom.expatbuilder.InternalSubsetExtractor.html" class="code" data-type="Class">InternalSubsetExtractor</a></td>
+    <td><span>XML processor which can rip out the internal document type subset.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.dom.expatbuilder.html#parse" class="code" data-type="Function">parse</a></td>
+    <td><span>Parse a document, returning the resulting Document node.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.dom.expatbuilder.html#parseString" class="code" data-type="Function">parseString</a></td>
+    <td><span>Parse a document from a string, returning the resulting Document node.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.dom.expatbuilder.html#parseFragment" class="code" data-type="Function">parseFragment</a></td>
+    <td><span>Parse a fragment of a document, given the context from which it was originally extracted.  context should be the parent of the node(s) which are in the fragment.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.dom.expatbuilder.html#parseFragmentString" class="code" data-type="Function">parseFragmentString</a></td>
+    <td><span>Parse a fragment of a document from a string, given the context from which it was originally extracted.  context should be the parent of the node(s) which are in the fragment.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.dom.expatbuilder.html#makeBuilder" class="code" data-type="Function">makeBuilder</a></td>
+    <td><span>Create a builder based on an Options object.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xml.dom.expatbuilder.html#_typeinfo_map" class="code" data-type="Variable">_typeinfo_map</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.dom.expatbuilder.html#_intern" class="code" data-type="Function">_intern</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.xml.dom.expatbuilder.html#_parse_ns_name" class="code" data-type="Function">_parse_ns_name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xml.dom.expatbuilder.html#_ALLOWED_FILTER_RETURNS" class="code" data-type="Variable">_ALLOWED_FILTER_RETURNS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xml.dom.expatbuilder.html#_FRAGMENT_BUILDER_INTERNAL_SYSTEM_ID" class="code" data-type="Variable">_FRAGMENT_BUILDER_INTERNAL_SYSTEM_ID</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.xml.dom.expatbuilder.html#_FRAGMENT_BUILDER_TEMPLATE" class="code" data-type="Variable">_FRAGMENT_BUILDER_TEMPLATE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.xml.dom.expatbuilder.theDOMImplementation">
+    
+  </a>
+  <a name="theDOMImplementation">
+    
+  </a>
+  <div class="functionHeader">
+    theDOMImplementation =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.xml.dom.expatbuilder._typeinfo_map">
+    
+  </a>
+  <a name="_typeinfo_map">
+    
+  </a>
+  <div class="functionHeader">
+    _typeinfo_map =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xml.dom.expatbuilder._intern">
+    
+  </a>
+  <a name="_intern">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _intern(builder, s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.xml.dom.expatbuilder._parse_ns_name">
+    
+  </a>
+  <a name="_parse_ns_name">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _parse_ns_name(builder, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.xml.dom.expatbuilder._ALLOWED_FILTER_RETURNS">
+    
+  </a>
+  <a name="_ALLOWED_FILTER_RETURNS">
+    
+  </a>
+  <div class="functionHeader">
+    _ALLOWED_FILTER_RETURNS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.xml.dom.expatbuilder._FRAGMENT_BUILDER_INTERNAL_SYSTEM_ID">
+    
+  </a>
+  <a name="_FRAGMENT_BUILDER_INTERNAL_SYSTEM_ID">
+    
+  </a>
+  <div class="functionHeader">
+    _FRAGMENT_BUILDER_INTERNAL_SYSTEM_ID =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.xml.dom.expatbuilder._FRAGMENT_BUILDER_TEMPLATE">
+    
+  </a>
+  <a name="_FRAGMENT_BUILDER_TEMPLATE">
+    
+  </a>
+  <div class="functionHeader">
+    _FRAGMENT_BUILDER_TEMPLATE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xml.dom.expatbuilder.parse">
+    
+  </a>
+  <a name="parse">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse(file, namespaces=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse a document, returning the resulting Document node.
+
+'file' may be either a file name or an open file object.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xml.dom.expatbuilder.parseString">
+    
+  </a>
+  <a name="parseString">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parseString(string, namespaces=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse a document from a string, returning the resulting
+Document node.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xml.dom.expatbuilder.parseFragment">
+    
+  </a>
+  <a name="parseFragment">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parseFragment(file, context, namespaces=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse a fragment of a document, given the context from which it
+was originally extracted.  context should be the parent of the
+node(s) which are in the fragment.
+
+'file' may be either a file name or an open file object.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xml.dom.expatbuilder.parseFragmentString">
+    
+  </a>
+  <a name="parseFragmentString">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parseFragmentString(string, context, namespaces=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse a fragment of a document from a string, given the context
+from which it was originally extracted.  context should be the
+parent of the node(s) which are in the fragment.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.xml.dom.expatbuilder.makeBuilder">
+    
+  </a>
+  <a name="makeBuilder">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    makeBuilder(options):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create a builder based on an Options object.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

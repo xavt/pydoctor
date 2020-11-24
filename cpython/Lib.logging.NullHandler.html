@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.logging.NullHandler : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.logging.html" class="code" data-type="Package">logging</a>.<a href="Lib.logging.NullHandler.html" class="code" data-type="Class">NullHandler</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.logging.NullHandler(<a href="Lib.logging.Handler.html" class="code" data-type="Class">Handler</a>):</code></p>
+        <p><a href="classIndex.html#Lib.logging.NullHandler">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">This handler does nothing. It's intended to be used to avoid the
+"No handlers could be found for logger XXX" one-off warning. This is
+important for library code, which may contain code to log events. If a user
+of the library does not configure logging, the one-off warning might be
+produced; to avoid this, the library developer simply needs to instantiate
+a NullHandler and add it to the top-level logger of the library module or
+package.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3030">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.NullHandler.html#handle" class="code" data-type="Method">handle</a></td>
+    <td><span>Stub.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.NullHandler.html#emit" class="code" data-type="Method">emit</a></td>
+    <td><span>Stub.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.NullHandler.html#createLock" class="code" data-type="Method">createLock</a></td>
+    <td><span>Acquire a thread lock for serializing access to the underlying I/O.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.NullHandler.html#lock" class="code" data-type="Instance Variable">lock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.NullHandler.html#_at_fork_reinit" class="code" data-type="Method">_at_fork_reinit</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.logging.Handler.html" class="code" data-type="Class">Handler</a>:
+          </p>
+          <table class="children sortable" id="id3031">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Handler.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Initializes the instance - basically setting the formatter to None and the filter list to empty.</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.Handler.html#level" class="code" data-type="Instance Variable">level</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.Handler.html#formatter" class="code" data-type="Instance Variable">formatter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Handler.html#get_name" class="code" data-type="Method">get_name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Handler.html#set_name" class="code" data-type="Method">set_name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.Handler.html#name" class="code" data-type="Class Variable">name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Handler.html#acquire" class="code" data-type="Method">acquire</a></td>
+    <td><span>Acquire the I/O thread lock.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Handler.html#release" class="code" data-type="Method">release</a></td>
+    <td><span>Release the I/O thread lock.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Handler.html#setLevel" class="code" data-type="Method">setLevel</a></td>
+    <td><span>Set the logging level of this handler.  level must be an int or a str.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Handler.html#format" class="code" data-type="Method">format</a></td>
+    <td><span>Format the specified record.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Handler.html#setFormatter" class="code" data-type="Method">setFormatter</a></td>
+    <td><span>Set the formatter for this handler.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Handler.html#flush" class="code" data-type="Method">flush</a></td>
+    <td><span>Ensure all logging output has been flushed.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Handler.html#close" class="code" data-type="Method">close</a></td>
+    <td><span>Tidy up any resources used by the handler.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Handler.html#handleError" class="code" data-type="Method">handleError</a></td>
+    <td><span>Handle errors which occur during an emit() call.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Handler.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.Handler.html#_name" class="code" data-type="Instance Variable">_name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.logging.Filterer.html" class="code" data-type="Class">Filterer</a> (via <a href="Lib.logging.Handler.html" class="code" data-type="Class">Handler</a>):
+          </p>
+          <table class="children sortable" id="id3032">
+  
+  <tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.Filterer.html#filters" class="code" data-type="Instance Variable">filters</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Filterer.html#addFilter" class="code" data-type="Method">addFilter</a></td>
+    <td><span>Add the specified filter to this handler.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Filterer.html#removeFilter" class="code" data-type="Method">removeFilter</a></td>
+    <td><span>Remove the specified filter from this handler.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Filterer.html#filter" class="code" data-type="Method">filter</a></td>
+    <td><span>Determine if a record is loggable by consulting all the filters.</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.logging.NullHandler.handle">
+    
+  </a>
+  <a name="handle">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    handle(self, record):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.logging.Handler.html#handle" class="code" data-type="Method">Lib.logging.Handler.handle</a></div>
+    
+    <div><p class="pre">Stub.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.NullHandler.emit">
+    
+  </a>
+  <a name="emit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    emit(self, record):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.logging.Handler.html#emit" class="code" data-type="Method">Lib.logging.Handler.emit</a></div>
+    
+    <div><p class="pre">Stub.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.NullHandler.createLock">
+    
+  </a>
+  <a name="createLock">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    createLock(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.logging.Handler.html#createLock" class="code" data-type="Method">Lib.logging.Handler.createLock</a></div>
+    
+    <div><p class="pre">Acquire a thread lock for serializing access to the underlying I/O.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.logging.NullHandler.lock">
+    
+  </a>
+  <a name="lock">
+    
+  </a>
+  <div class="functionHeader">
+    lock =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.logging.Handler.html#lock" class="code" data-type="Instance Variable">Lib.logging.Handler.lock</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.logging.NullHandler._at_fork_reinit">
+    
+  </a>
+  <a name="_at_fork_reinit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _at_fork_reinit(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.logging.Handler.html#_at_fork_reinit" class="code" data-type="Method">Lib.logging.Handler._at_fork_reinit</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

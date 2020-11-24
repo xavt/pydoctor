@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.idlelib.tree : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.idlelib.html" class="code" data-type="Package">idlelib</a>.<a href="Lib.idlelib.tree.html" class="code" data-type="Module">tree</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div class="undocumented">Undocumented</div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2489">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.tree.html#ICONDIR" class="code" data-type="Variable">ICONDIR</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.tree.html#listicons" class="code" data-type="Function">listicons</a></td>
+    <td><span>Utility to display the available icons.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.tree.html#wheel_event" class="code" data-type="Function">wheel_event</a></td>
+    <td><span>Handle scrollwheel event.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.tree.TreeNode.html" class="code" data-type="Class">TreeNode</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.tree.TreeItem.html" class="code" data-type="Class">TreeItem</a></td>
+    <td><span>Abstract class representing tree items.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.tree.FileTreeItem.html" class="code" data-type="Class">FileTreeItem</a></td>
+    <td><span>Example TreeItem subclass -- browse the file system.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.tree.ScrolledCanvas.html" class="code" data-type="Class">ScrolledCanvas</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.tree.html#_icondir" class="code" data-type="Variable">_icondir</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.tree.html#_tree_widget" class="code" data-type="Function">_tree_widget</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.idlelib.tree.ICONDIR">
+    
+  </a>
+  <a name="ICONDIR">
+    
+  </a>
+  <div class="functionHeader">
+    ICONDIR =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.tree._icondir">
+    
+  </a>
+  <a name="_icondir">
+    
+  </a>
+  <div class="functionHeader">
+    _icondir =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.tree.listicons">
+    
+  </a>
+  <a name="listicons">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    listicons(icondir=ICONDIR):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Utility to display the available icons.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.tree.wheel_event">
+    
+  </a>
+  <a name="wheel_event">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    wheel_event(event, widget=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Handle scrollwheel event.
+
+For wheel up, event.delta = 120*n on Windows, -1*n on darwin,
+where n can be &gt; 1 if one scrolls fast.  Flicking the wheel
+generates up to maybe 20 events with n up to 10 or more 1.
+Macs use wheel down (delta = 1*n) to scroll up, so positive
+delta means to scroll up on both systems.
+
+X-11 sends Control-Button-4,5 events instead.
+
+The widget parameter is needed so browser label bindings can pass
+the underlying canvas.
+
+This function depends on widget.yview to not be overridden by
+a subclass.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.idlelib.tree._tree_widget">
+    
+  </a>
+  <a name="_tree_widget">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _tree_widget(parent):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

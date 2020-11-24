@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.plistlib : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.plistlib.html" class="code" data-type="Module">plistlib</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">plistlib.py -- a tool to generate and parse MacOSX .plist files.
+
+The property list (.plist) file format is a simple XML pickle supporting
+basic object types, like dictionaries, lists, numbers and strings.
+Usually the top level object is a dictionary.
+
+To write out a plist file, use the dump(value, file)
+function. 'value' is the top level object, 'file' is
+a (writable) file object.
+
+To parse a plist from a file, use the load(file) function,
+with a (readable) file object as the only argument. It
+returns the top level object (again, usually a dictionary).
+
+To work with plist data in bytes objects, you can use loads()
+and dumps().
+
+Values can be strings, integers, floats, booleans, tuples, lists,
+dictionaries (but only with string keys), Data, bytes, bytearray, or
+datetime.datetime objects.
+
+Generate Plist example:
+
+    pl = dict(
+        aString = "Doodah",
+        aList = ["A", "B", 12, 32.1, [1, 2, 3]],
+        aFloat = 0.1,
+        anInt = 728,
+        aDict = dict(
+            anotherString = "&lt;hello &amp; hi there!&gt;",
+            aUnicodeValue = "M\xe4ssig, Ma\xdf",
+            aTrueValue = True,
+            aFalseValue = False,
+        ),
+        someData = b"&lt;binary gunk&gt;",
+        someMoreData = b"&lt;lots of binary gunk&gt;" * 10,
+        aDate = datetime.datetime.fromtimestamp(time.mktime(time.gmtime())),
+    )
+    with open(fileName, 'wb') as fp:
+        dump(pl, fp)
+
+Parse Plist example:
+
+    with open(fileName, 'rb') as fp:
+        pl = load(fp)
+    print(pl["aKey"])</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3391">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.plistlib.html#PlistFormat" class="code" data-type="Variable">PlistFormat</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.plistlib.UID.html" class="code" data-type="Class">UID</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.plistlib.html#PLISTHEADER" class="code" data-type="Variable">PLISTHEADER</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.plistlib.InvalidFileException.html" class="code" data-type="Class">InvalidFileException</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.plistlib.html#load" class="code" data-type="Function">load</a></td>
+    <td><span>Read a .plist file. 'fp' should be a readable and binary file object. Return the unpacked root object (which usually is a dictionary).</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.plistlib.html#loads" class="code" data-type="Function">loads</a></td>
+    <td><span>Read a .plist file from a bytes object. Return the unpacked root object (which usually is a dictionary).</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.plistlib.html#dump" class="code" data-type="Function">dump</a></td>
+    <td><span>Write 'value' to a .plist file. 'fp' should be a writable, binary file object.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.plistlib.html#dumps" class="code" data-type="Function">dumps</a></td>
+    <td><span>Return a bytes object with the contents for a .plist file.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.plistlib.html#_controlCharPat" class="code" data-type="Variable">_controlCharPat</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.plistlib.html#_encode_base64" class="code" data-type="Function">_encode_base64</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.plistlib.html#_decode_base64" class="code" data-type="Function">_decode_base64</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.plistlib.html#_dateParser" class="code" data-type="Variable">_dateParser</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.plistlib.html#_date_from_string" class="code" data-type="Function">_date_from_string</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.plistlib.html#_date_to_string" class="code" data-type="Function">_date_to_string</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.plistlib.html#_escape" class="code" data-type="Function">_escape</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.plistlib._PlistParser.html" class="code" data-type="Class">_PlistParser</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.plistlib._DumbXMLWriter.html" class="code" data-type="Class">_DumbXMLWriter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.plistlib._PlistWriter.html" class="code" data-type="Class">_PlistWriter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.plistlib.html#_is_fmt_xml" class="code" data-type="Function">_is_fmt_xml</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.plistlib.html#_BINARY_FORMAT" class="code" data-type="Variable">_BINARY_FORMAT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.plistlib.html#_undefined" class="code" data-type="Variable">_undefined</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.plistlib._BinaryPlistParser.html" class="code" data-type="Class">_BinaryPlistParser</a></td>
+    <td><span>Read or write a binary plist file, following the description of the binary format.  Raise InvalidFileException in case of error, otherwise return the root object.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.plistlib.html#_count_to_size" class="code" data-type="Function">_count_to_size</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.plistlib.html#_scalars" class="code" data-type="Variable">_scalars</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.plistlib._BinaryPlistWriter.html" class="code" data-type="Class">_BinaryPlistWriter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.plistlib.html#_is_fmt_binary" class="code" data-type="Function">_is_fmt_binary</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.plistlib.html#_FORMATS" class="code" data-type="Variable">_FORMATS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.plistlib.PlistFormat">
+    
+  </a>
+  <a name="PlistFormat">
+    
+  </a>
+  <div class="functionHeader">
+    PlistFormat =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.plistlib.PLISTHEADER">
+    
+  </a>
+  <a name="PLISTHEADER">
+    
+  </a>
+  <div class="functionHeader">
+    PLISTHEADER =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.plistlib._controlCharPat">
+    
+  </a>
+  <a name="_controlCharPat">
+    
+  </a>
+  <div class="functionHeader">
+    _controlCharPat =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.plistlib._encode_base64">
+    
+  </a>
+  <a name="_encode_base64">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _encode_base64(s, maxlinelength=76):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.plistlib._decode_base64">
+    
+  </a>
+  <a name="_decode_base64">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _decode_base64(s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.plistlib._dateParser">
+    
+  </a>
+  <a name="_dateParser">
+    
+  </a>
+  <div class="functionHeader">
+    _dateParser =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.plistlib._date_from_string">
+    
+  </a>
+  <a name="_date_from_string">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _date_from_string(s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.plistlib._date_to_string">
+    
+  </a>
+  <a name="_date_to_string">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _date_to_string(d):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.plistlib._escape">
+    
+  </a>
+  <a name="_escape">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _escape(text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.plistlib._is_fmt_xml">
+    
+  </a>
+  <a name="_is_fmt_xml">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _is_fmt_xml(header):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.plistlib._BINARY_FORMAT">
+    
+  </a>
+  <a name="_BINARY_FORMAT">
+    
+  </a>
+  <div class="functionHeader">
+    _BINARY_FORMAT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict[int, str]</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.plistlib._undefined">
+    
+  </a>
+  <a name="_undefined">
+    
+  </a>
+  <div class="functionHeader">
+    _undefined =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.plistlib._count_to_size">
+    
+  </a>
+  <a name="_count_to_size">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _count_to_size(count):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.plistlib._scalars">
+    
+  </a>
+  <a name="_scalars">
+    
+  </a>
+  <div class="functionHeader">
+    _scalars =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.plistlib._is_fmt_binary">
+    
+  </a>
+  <a name="_is_fmt_binary">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _is_fmt_binary(header):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.plistlib._FORMATS">
+    
+  </a>
+  <a name="_FORMATS">
+    
+  </a>
+  <div class="functionHeader">
+    _FORMATS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.plistlib.load">
+    
+  </a>
+  <a name="load">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    load(fp):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Read a .plist file. 'fp' should be a readable and binary file object.
+Return the unpacked root object (which usually is a dictionary).</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.plistlib.loads">
+    
+  </a>
+  <a name="loads">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    loads(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Read a .plist file from a bytes object.
+Return the unpacked root object (which usually is a dictionary).</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.plistlib.dump">
+    
+  </a>
+  <a name="dump">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    dump(value, fp):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Write 'value' to a .plist file. 'fp' should be a writable,
+binary file object.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.plistlib.dumps">
+    
+  </a>
+  <a name="dumps">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    dumps(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a bytes object with the contents for a .plist file.
+    </p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

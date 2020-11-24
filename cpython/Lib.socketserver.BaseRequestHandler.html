@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.socketserver.BaseRequestHandler : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.socketserver.html" class="code" data-type="Module">socketserver</a>.<a href="Lib.socketserver.BaseRequestHandler.html" class="code" data-type="Class">BaseRequestHandler</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.socketserver.BaseRequestHandler:</code></p><p>Known subclasses: <a href="Lib.socketserver.DatagramRequestHandler.html" class="code" data-type="Class">Lib.socketserver.DatagramRequestHandler</a>, <a href="Lib.socketserver.StreamRequestHandler.html" class="code" data-type="Class">Lib.socketserver.StreamRequestHandler</a></p>
+        <p><a href="classIndex.html#Lib.socketserver.BaseRequestHandler">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Base class for request handler classes.
+
+This class is instantiated for each request to be handled.  The
+constructor sets the instance variables request, client_address
+and server, and then calls the handle() method.  To implement a
+specific service, all you need to do is to derive a class which
+defines a handle() method.
+
+The handle() method can find the request as self.request, the
+client address as self.client_address, and the server (in case it
+needs access to per-server information) as self.server.  Since a
+separate instance is created for each request, the handle() method
+can define other arbitrary instance variables.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3573">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.socketserver.BaseRequestHandler.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.socketserver.BaseRequestHandler.html#request" class="code" data-type="Instance Variable">request</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.socketserver.BaseRequestHandler.html#client_address" class="code" data-type="Instance Variable">client_address</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.socketserver.BaseRequestHandler.html#server" class="code" data-type="Instance Variable">server</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.socketserver.BaseRequestHandler.html#setup" class="code" data-type="Method">setup</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.socketserver.BaseRequestHandler.html#handle" class="code" data-type="Method">handle</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.socketserver.BaseRequestHandler.html#finish" class="code" data-type="Method">finish</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.socketserver.BaseRequestHandler.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, request, client_address, server):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.socketserver.BaseRequestHandler.request">
+    
+  </a>
+  <a name="request">
+    
+  </a>
+  <div class="functionHeader">
+    request =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.socketserver.BaseRequestHandler.client_address">
+    
+  </a>
+  <a name="client_address">
+    
+  </a>
+  <div class="functionHeader">
+    client_address =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.socketserver.BaseRequestHandler.server">
+    
+  </a>
+  <a name="server">
+    
+  </a>
+  <div class="functionHeader">
+    server =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.socketserver.BaseRequestHandler.setup">
+    
+  </a>
+  <a name="setup">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setup(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.socketserver.DatagramRequestHandler.html" class="code" data-type="Class">Lib.socketserver.DatagramRequestHandler</a>, <a href="Lib.socketserver.StreamRequestHandler.html" class="code" data-type="Class">Lib.socketserver.StreamRequestHandler</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.socketserver.BaseRequestHandler.handle">
+    
+  </a>
+  <a name="handle">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    handle(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.socketserver.BaseRequestHandler.finish">
+    
+  </a>
+  <a name="finish">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    finish(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.socketserver.DatagramRequestHandler.html" class="code" data-type="Class">Lib.socketserver.DatagramRequestHandler</a>, <a href="Lib.socketserver.StreamRequestHandler.html" class="code" data-type="Class">Lib.socketserver.StreamRequestHandler</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

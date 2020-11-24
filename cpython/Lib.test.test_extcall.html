@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.test.test_extcall : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.test.html" class="code" data-type="Package">test</a>.<a href="Lib.test.test_extcall.html" class="code" data-type="Module">test_extcall</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Doctest for method/function calls.
+
+We're going the use these types for extra testing
+
+    &gt;&gt;&gt; from collections import UserList
+    &gt;&gt;&gt; from collections import UserDict
+
+We're defining four helper functions
+
+    &gt;&gt;&gt; def e(a,b):
+    ...     print(a, b)
+
+    &gt;&gt;&gt; def f(*a, **k):
+    ...     print(a, support.sortdict(k))
+
+    &gt;&gt;&gt; def g(x, *y, **z):
+    ...     print(x, y, support.sortdict(z))
+
+    &gt;&gt;&gt; def h(j=1, a=2, h=3):
+    ...     print(j, a, h)
+
+Argument list examples
+
+    &gt;&gt;&gt; f()
+    () {}
+    &gt;&gt;&gt; f(1)
+    (1,) {}
+    &gt;&gt;&gt; f(1, 2)
+    (1, 2) {}
+    &gt;&gt;&gt; f(1, 2, 3)
+    (1, 2, 3) {}
+    &gt;&gt;&gt; f(1, 2, 3, *(4, 5))
+    (1, 2, 3, 4, 5) {}
+    &gt;&gt;&gt; f(1, 2, 3, *[4, 5])
+    (1, 2, 3, 4, 5) {}
+    &gt;&gt;&gt; f(*[1, 2, 3], 4, 5)
+    (1, 2, 3, 4, 5) {}
+    &gt;&gt;&gt; f(1, 2, 3, *UserList([4, 5]))
+    (1, 2, 3, 4, 5) {}
+    &gt;&gt;&gt; f(1, 2, 3, *[4, 5], *[6, 7])
+    (1, 2, 3, 4, 5, 6, 7) {}
+    &gt;&gt;&gt; f(1, *[2, 3], 4, *[5, 6], 7)
+    (1, 2, 3, 4, 5, 6, 7) {}
+    &gt;&gt;&gt; f(*UserList([1, 2]), *UserList([3, 4]), 5, *UserList([6, 7]))
+    (1, 2, 3, 4, 5, 6, 7) {}
+
+Here we add keyword arguments
+
+    &gt;&gt;&gt; f(1, 2, 3, **{'a':4, 'b':5})
+    (1, 2, 3) {'a': 4, 'b': 5}
+    &gt;&gt;&gt; f(1, 2, **{'a': -1, 'b': 5}, **{'a': 4, 'c': 6})
+    Traceback (most recent call last):
+        ...
+    TypeError: test.test_extcall.f() got multiple values for keyword argument 'a'
+    &gt;&gt;&gt; f(1, 2, **{'a': -1, 'b': 5}, a=4, c=6)
+    Traceback (most recent call last):
+        ...
+    TypeError: test.test_extcall.f() got multiple values for keyword argument 'a'
+    &gt;&gt;&gt; f(1, 2, a=3, **{'a': 4}, **{'a': 5})
+    Traceback (most recent call last):
+        ...
+    TypeError: test.test_extcall.f() got multiple values for keyword argument 'a'
+    &gt;&gt;&gt; f(1, 2, 3, *[4, 5], **{'a':6, 'b':7})
+    (1, 2, 3, 4, 5) {'a': 6, 'b': 7}
+    &gt;&gt;&gt; f(1, 2, 3, x=4, y=5, *(6, 7), **{'a':8, 'b': 9})
+    (1, 2, 3, 6, 7) {'a': 8, 'b': 9, 'x': 4, 'y': 5}
+    &gt;&gt;&gt; f(1, 2, 3, *[4, 5], **{'c': 8}, **{'a':6, 'b':7})
+    (1, 2, 3, 4, 5) {'a': 6, 'b': 7, 'c': 8}
+    &gt;&gt;&gt; f(1, 2, 3, *(4, 5), x=6, y=7, **{'a':8, 'b': 9})
+    (1, 2, 3, 4, 5) {'a': 8, 'b': 9, 'x': 6, 'y': 7}
+
+    &gt;&gt;&gt; f(1, 2, 3, **UserDict(a=4, b=5))
+    (1, 2, 3) {'a': 4, 'b': 5}
+    &gt;&gt;&gt; f(1, 2, 3, *(4, 5), **UserDict(a=6, b=7))
+    (1, 2, 3, 4, 5) {'a': 6, 'b': 7}
+    &gt;&gt;&gt; f(1, 2, 3, x=4, y=5, *(6, 7), **UserDict(a=8, b=9))
+    (1, 2, 3, 6, 7) {'a': 8, 'b': 9, 'x': 4, 'y': 5}
+    &gt;&gt;&gt; f(1, 2, 3, *(4, 5), x=6, y=7, **UserDict(a=8, b=9))
+    (1, 2, 3, 4, 5) {'a': 8, 'b': 9, 'x': 6, 'y': 7}
+
+Mix keyword arguments and dict unpacking
+
+    &gt;&gt;&gt; d1 = {'a':1}
+
+    &gt;&gt;&gt; d2 = {'c':3}
+
+    &gt;&gt;&gt; f(b=2, **d1, **d2)
+    () {'a': 1, 'b': 2, 'c': 3}
+
+    &gt;&gt;&gt; f(**d1, b=2, **d2)
+    () {'a': 1, 'b': 2, 'c': 3}
+
+    &gt;&gt;&gt; f(**d1, **d2, b=2)
+    () {'a': 1, 'b': 2, 'c': 3}
+
+    &gt;&gt;&gt; f(**d1, b=2, **d2, d=4)
+    () {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+
+Examples with invalid arguments (TypeErrors). We're also testing the function
+names in the exception messages.
+
+Verify clearing of SF bug #733667
+
+    &gt;&gt;&gt; e(c=4)
+    Traceback (most recent call last):
+      ...
+    TypeError: e() got an unexpected keyword argument 'c'
+
+    &gt;&gt;&gt; g()
+    Traceback (most recent call last):
+      ...
+    TypeError: g() missing 1 required positional argument: 'x'
+
+    &gt;&gt;&gt; g(*())
+    Traceback (most recent call last):
+      ...
+    TypeError: g() missing 1 required positional argument: 'x'
+
+    &gt;&gt;&gt; g(*(), **{})
+    Traceback (most recent call last):
+      ...
+    TypeError: g() missing 1 required positional argument: 'x'
+
+    &gt;&gt;&gt; g(1)
+    1 () {}
+    &gt;&gt;&gt; g(1, 2)
+    1 (2,) {}
+    &gt;&gt;&gt; g(1, 2, 3)
+    1 (2, 3) {}
+    &gt;&gt;&gt; g(1, 2, 3, *(4, 5))
+    1 (2, 3, 4, 5) {}
+
+    &gt;&gt;&gt; class Nothing: pass
+    ...
+    &gt;&gt;&gt; g(*Nothing())
+    Traceback (most recent call last):
+      ...
+    TypeError: test.test_extcall.g() argument after * must be an iterable, not Nothing
+
+    &gt;&gt;&gt; class Nothing:
+    ...     def __len__(self): return 5
+    ...
+
+    &gt;&gt;&gt; g(*Nothing())
+    Traceback (most recent call last):
+      ...
+    TypeError: test.test_extcall.g() argument after * must be an iterable, not Nothing
+
+    &gt;&gt;&gt; class Nothing():
+    ...     def __len__(self): return 5
+    ...     def __getitem__(self, i):
+    ...         if i&lt;3: return i
+    ...         else: raise IndexError(i)
+    ...
+
+    &gt;&gt;&gt; g(*Nothing())
+    0 (1, 2) {}
+
+    &gt;&gt;&gt; class Nothing:
+    ...     def __init__(self): self.c = 0
+    ...     def __iter__(self): return self
+    ...     def __next__(self):
+    ...         if self.c == 4:
+    ...             raise StopIteration
+    ...         c = self.c
+    ...         self.c += 1
+    ...         return c
+    ...
+
+    &gt;&gt;&gt; g(*Nothing())
+    0 (1, 2, 3) {}
+
+Check for issue #4806: Does a TypeError in a generator get propagated with the
+right error message? (Also check with other iterables.)
+
+    &gt;&gt;&gt; def broken(): raise TypeError("myerror")
+    ...
+
+    &gt;&gt;&gt; g(*(broken() for i in range(1)))
+    Traceback (most recent call last):
+      ...
+    TypeError: myerror
+    &gt;&gt;&gt; g(*range(1), *(broken() for i in range(1)))
+    Traceback (most recent call last):
+      ...
+    TypeError: myerror
+
+    &gt;&gt;&gt; class BrokenIterable1:
+    ...     def __iter__(self):
+    ...         raise TypeError('myerror')
+    ...
+    &gt;&gt;&gt; g(*BrokenIterable1())
+    Traceback (most recent call last):
+      ...
+    TypeError: myerror
+    &gt;&gt;&gt; g(*range(1), *BrokenIterable1())
+    Traceback (most recent call last):
+      ...
+    TypeError: myerror
+
+    &gt;&gt;&gt; class BrokenIterable2:
+    ...     def __iter__(self):
+    ...         yield 0
+    ...         raise TypeError('myerror')
+    ...
+    &gt;&gt;&gt; g(*BrokenIterable2())
+    Traceback (most recent call last):
+      ...
+    TypeError: myerror
+    &gt;&gt;&gt; g(*range(1), *BrokenIterable2())
+    Traceback (most recent call last):
+      ...
+    TypeError: myerror
+
+    &gt;&gt;&gt; class BrokenSequence:
+    ...     def __getitem__(self, idx):
+    ...         raise TypeError('myerror')
+    ...
+    &gt;&gt;&gt; g(*BrokenSequence())
+    Traceback (most recent call last):
+      ...
+    TypeError: myerror
+    &gt;&gt;&gt; g(*range(1), *BrokenSequence())
+    Traceback (most recent call last):
+      ...
+    TypeError: myerror
+
+Make sure that the function doesn't stomp the dictionary
+
+    &gt;&gt;&gt; d = {'a': 1, 'b': 2, 'c': 3}
+    &gt;&gt;&gt; d2 = d.copy()
+    &gt;&gt;&gt; g(1, d=4, **d)
+    1 () {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+    &gt;&gt;&gt; d == d2
+    True
+
+What about willful misconduct?
+
+    &gt;&gt;&gt; def saboteur(**kw):
+    ...     kw['x'] = 'm'
+    ...     return kw
+
+    &gt;&gt;&gt; d = {}
+    &gt;&gt;&gt; kw = saboteur(a=1, **d)
+    &gt;&gt;&gt; d
+    {}
+
+
+    &gt;&gt;&gt; g(1, 2, 3, **{'x': 4, 'y': 5})
+    Traceback (most recent call last):
+      ...
+    TypeError: g() got multiple values for argument 'x'
+
+    &gt;&gt;&gt; f(**{1:2})
+    Traceback (most recent call last):
+      ...
+    TypeError: keywords must be strings
+
+    &gt;&gt;&gt; h(**{'e': 2})
+    Traceback (most recent call last):
+      ...
+    TypeError: h() got an unexpected keyword argument 'e'
+
+    &gt;&gt;&gt; h(*h)
+    Traceback (most recent call last):
+      ...
+    TypeError: test.test_extcall.h() argument after * must be an iterable, not function
+
+    &gt;&gt;&gt; h(1, *h)
+    Traceback (most recent call last):
+      ...
+    TypeError: Value after * must be an iterable, not function
+
+    &gt;&gt;&gt; h(*[1], *h)
+    Traceback (most recent call last):
+      ...
+    TypeError: Value after * must be an iterable, not function
+
+    &gt;&gt;&gt; dir(*h)
+    Traceback (most recent call last):
+      ...
+    TypeError: dir() argument after * must be an iterable, not function
+
+    &gt;&gt;&gt; nothing = None
+    &gt;&gt;&gt; nothing(*h)
+    Traceback (most recent call last):
+      ...
+    TypeError: None argument after * must be an iterable, not function
+
+    &gt;&gt;&gt; h(**h)
+    Traceback (most recent call last):
+      ...
+    TypeError: test.test_extcall.h() argument after ** must be a mapping, not function
+
+    &gt;&gt;&gt; h(**[])
+    Traceback (most recent call last):
+      ...
+    TypeError: test.test_extcall.h() argument after ** must be a mapping, not list
+
+    &gt;&gt;&gt; h(a=1, **h)
+    Traceback (most recent call last):
+      ...
+    TypeError: test.test_extcall.h() argument after ** must be a mapping, not function
+
+    &gt;&gt;&gt; h(a=1, **[])
+    Traceback (most recent call last):
+      ...
+    TypeError: test.test_extcall.h() argument after ** must be a mapping, not list
+
+    &gt;&gt;&gt; h(**{'a': 1}, **h)
+    Traceback (most recent call last):
+      ...
+    TypeError: test.test_extcall.h() argument after ** must be a mapping, not function
+
+    &gt;&gt;&gt; h(**{'a': 1}, **[])
+    Traceback (most recent call last):
+      ...
+    TypeError: test.test_extcall.h() argument after ** must be a mapping, not list
+
+    &gt;&gt;&gt; dir(**h)
+    Traceback (most recent call last):
+      ...
+    TypeError: dir() argument after ** must be a mapping, not function
+
+    &gt;&gt;&gt; nothing(**h)
+    Traceback (most recent call last):
+      ...
+    TypeError: None argument after ** must be a mapping, not function
+
+    &gt;&gt;&gt; dir(b=1, **{'b': 1})
+    Traceback (most recent call last):
+      ...
+    TypeError: dir() got multiple values for keyword argument 'b'
+
+Test a kwargs mapping with duplicated keys.
+
+    &gt;&gt;&gt; from collections.abc import Mapping
+    &gt;&gt;&gt; class MultiDict(Mapping):
+    ...     def __init__(self, items):
+    ...         self._items = items
+    ...
+    ...     def __iter__(self):
+    ...         return (k for k, v in self._items)
+    ...
+    ...     def __getitem__(self, key):
+    ...         for k, v in self._items:
+    ...             if k == key:
+    ...                 return v
+    ...         raise KeyError(key)
+    ...
+    ...     def __len__(self):
+    ...         return len(self._items)
+    ...
+    ...     def keys(self):
+    ...         return [k for k, v in self._items]
+    ...
+    ...     def values(self):
+    ...         return [v for k, v in self._items]
+    ...
+    ...     def items(self):
+    ...         return [(k, v) for k, v in self._items]
+    ...
+    &gt;&gt;&gt; g(**MultiDict([('x', 1), ('y', 2)]))
+    1 () {'y': 2}
+
+    &gt;&gt;&gt; g(**MultiDict([('x', 1), ('x', 2)]))
+    Traceback (most recent call last):
+      ...
+    TypeError: test.test_extcall.g() got multiple values for keyword argument 'x'
+
+    &gt;&gt;&gt; g(a=3, **MultiDict([('x', 1), ('x', 2)]))
+    Traceback (most recent call last):
+      ...
+    TypeError: test.test_extcall.g() got multiple values for keyword argument 'x'
+
+    &gt;&gt;&gt; g(**MultiDict([('a', 3)]), **MultiDict([('x', 1), ('x', 2)]))
+    Traceback (most recent call last):
+      ...
+    TypeError: test.test_extcall.g() got multiple values for keyword argument 'x'
+
+Another helper function
+
+    &gt;&gt;&gt; def f2(*a, **b):
+    ...     return a, b
+
+
+    &gt;&gt;&gt; d = {}
+    &gt;&gt;&gt; for i in range(512):
+    ...     key = 'k%d' % i
+    ...     d[key] = i
+    &gt;&gt;&gt; a, b = f2(1, *(2,3), **d)
+    &gt;&gt;&gt; len(a), len(b), b == d
+    (3, 512, True)
+
+    &gt;&gt;&gt; class Foo:
+    ...     def method(self, arg1, arg2):
+    ...         return arg1+arg2
+
+    &gt;&gt;&gt; x = Foo()
+    &gt;&gt;&gt; Foo.method(*(x, 1, 2))
+    3
+    &gt;&gt;&gt; Foo.method(x, *(1, 2))
+    3
+    &gt;&gt;&gt; Foo.method(*(1, 2, 3))
+    5
+    &gt;&gt;&gt; Foo.method(1, *[2, 3])
+    5
+
+A PyCFunction that takes only positional parameters should allow an
+empty keyword dictionary to pass without a complaint, but raise a
+TypeError if te dictionary is not empty
+
+    &gt;&gt;&gt; try:
+    ...     silence = id(1, *{})
+    ...     True
+    ... except:
+    ...     False
+    True
+
+    &gt;&gt;&gt; id(1, **{'foo': 1})
+    Traceback (most recent call last):
+      ...
+    TypeError: id() takes no keyword arguments
+
+A corner case of keyword dictionary items being deleted during
+the function call setup. See &lt;http://bugs.python.org/issue2016&gt;.
+
+    &gt;&gt;&gt; class Name(str):
+    ...     def __eq__(self, other):
+    ...         try:
+    ...              del x[self]
+    ...         except KeyError:
+    ...              pass
+    ...         return str.__eq__(self, other)
+    ...     def __hash__(self):
+    ...         return str.__hash__(self)
+
+    &gt;&gt;&gt; x = {Name("a"):1, Name("b"):2}
+    &gt;&gt;&gt; def f(a, b):
+    ...     print(a,b)
+    &gt;&gt;&gt; f(**x)
+    1 2
+
+Too many arguments:
+
+    &gt;&gt;&gt; def f(): pass
+    &gt;&gt;&gt; f(1)
+    Traceback (most recent call last):
+      ...
+    TypeError: f() takes 0 positional arguments but 1 was given
+    &gt;&gt;&gt; def f(a): pass
+    &gt;&gt;&gt; f(1, 2)
+    Traceback (most recent call last):
+      ...
+    TypeError: f() takes 1 positional argument but 2 were given
+    &gt;&gt;&gt; def f(a, b=1): pass
+    &gt;&gt;&gt; f(1, 2, 3)
+    Traceback (most recent call last):
+      ...
+    TypeError: f() takes from 1 to 2 positional arguments but 3 were given
+    &gt;&gt;&gt; def f(*, kw): pass
+    &gt;&gt;&gt; f(1, kw=3)
+    Traceback (most recent call last):
+      ...
+    TypeError: f() takes 0 positional arguments but 1 positional argument (and 1 keyword-only argument) were given
+    &gt;&gt;&gt; def f(*, kw, b): pass
+    &gt;&gt;&gt; f(1, 2, 3, b=3, kw=3)
+    Traceback (most recent call last):
+      ...
+    TypeError: f() takes 0 positional arguments but 3 positional arguments (and 2 keyword-only arguments) were given
+    &gt;&gt;&gt; def f(a, b=2, *, kw): pass
+    &gt;&gt;&gt; f(2, 3, 4, kw=4)
+    Traceback (most recent call last):
+      ...
+    TypeError: f() takes from 1 to 2 positional arguments but 3 positional arguments (and 1 keyword-only argument) were given
+
+Too few and missing arguments:
+
+    &gt;&gt;&gt; def f(a): pass
+    &gt;&gt;&gt; f()
+    Traceback (most recent call last):
+      ...
+    TypeError: f() missing 1 required positional argument: 'a'
+    &gt;&gt;&gt; def f(a, b): pass
+    &gt;&gt;&gt; f()
+    Traceback (most recent call last):
+      ...
+    TypeError: f() missing 2 required positional arguments: 'a' and 'b'
+    &gt;&gt;&gt; def f(a, b, c): pass
+    &gt;&gt;&gt; f()
+    Traceback (most recent call last):
+      ...
+    TypeError: f() missing 3 required positional arguments: 'a', 'b', and 'c'
+    &gt;&gt;&gt; def f(a, b, c, d, e): pass
+    &gt;&gt;&gt; f()
+    Traceback (most recent call last):
+      ...
+    TypeError: f() missing 5 required positional arguments: 'a', 'b', 'c', 'd', and 'e'
+    &gt;&gt;&gt; def f(a, b=4, c=5, d=5): pass
+    &gt;&gt;&gt; f(c=12, b=9)
+    Traceback (most recent call last):
+      ...
+    TypeError: f() missing 1 required positional argument: 'a'
+
+Same with keyword only args:
+
+    &gt;&gt;&gt; def f(*, w): pass
+    &gt;&gt;&gt; f()
+    Traceback (most recent call last):
+      ...
+    TypeError: f() missing 1 required keyword-only argument: 'w'
+    &gt;&gt;&gt; def f(*, a, b, c, d, e): pass
+    &gt;&gt;&gt; f()
+    Traceback (most recent call last):
+      ...
+    TypeError: f() missing 5 required keyword-only arguments: 'a', 'b', 'c', 'd', and 'e'</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id6029">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_extcall.html#test_main" class="code" data-type="Function">test_main</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction">
+  
+  <a name="Lib.test.test_extcall.test_main">
+    
+  </a>
+  <a name="test_main">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_main():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.asyncio.sslproto._SSLPipe : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class private"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.asyncio.html" class="code" data-type="Package">asyncio</a>.<a href="Lib.asyncio.sslproto.html" class="code" data-type="Module">sslproto</a>.<a href="Lib.asyncio.sslproto._SSLPipe.html" class="code" data-type="Class">_SSLPipe</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.asyncio.sslproto._SSLPipe(<span title="object">object</span>):</code></p>
+        <p><a href="classIndex.html#Lib.asyncio.sslproto._SSLPipe">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">An SSL "Pipe".
+
+An SSL pipe allows you to communicate with an SSL/TLS protocol instance
+through memory buffers. It can be used to implement a security layer for an
+existing connection where you don't have access to the connection's file
+descriptor, or for some reason you don't want to use it.
+
+An SSL pipe can be in "wrapped" and "unwrapped" mode. In unwrapped mode,
+data is passed through untransformed. In wrapped mode, application level
+data is encrypted to SSL record level data and vice versa. The SSL record
+level is the lowest level in the SSL protocol suite and is what travels
+as-is over the wire.
+
+An SslPipe initially is in "unwrapped" mode. To start SSL, call
+do_handshake(). To shutdown SSL again, call unwrap().</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id378">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.asyncio.sslproto._SSLPipe.html#max_size" class="code" data-type="Class Variable">max_size</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.sslproto._SSLPipe.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>The *context* argument specifies the ssl.SSLContext to use.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.sslproto._SSLPipe.html#context" class="code" data-type="Method">context</a></td>
+    <td><span>The SSL context passed to the constructor.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.sslproto._SSLPipe.html#ssl_object" class="code" data-type="Method">ssl_object</a></td>
+    <td><span>The internal ssl.SSLObject instance.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.sslproto._SSLPipe.html#need_ssldata" class="code" data-type="Method">need_ssldata</a></td>
+    <td><span>Whether more record level data is needed to complete a handshake that is currently in progress.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.sslproto._SSLPipe.html#wrapped" class="code" data-type="Method">wrapped</a></td>
+    <td><span>Whether a security layer is currently in effect.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.sslproto._SSLPipe.html#do_handshake" class="code" data-type="Method">do_handshake</a></td>
+    <td><span>Start the SSL handshake.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.sslproto._SSLPipe.html#shutdown" class="code" data-type="Method">shutdown</a></td>
+    <td><span>Start the SSL shutdown sequence.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.sslproto._SSLPipe.html#feed_eof" class="code" data-type="Method">feed_eof</a></td>
+    <td><span>Send a potentially "ragged" EOF.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.sslproto._SSLPipe.html#feed_ssldata" class="code" data-type="Method">feed_ssldata</a></td>
+    <td><span>Feed SSL record level data into the pipe.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.sslproto._SSLPipe.html#feed_appdata" class="code" data-type="Method">feed_appdata</a></td>
+    <td><span>Feed plaintext data into the pipe.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.sslproto._SSLPipe.html#_context" class="code" data-type="Instance Variable">_context</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.sslproto._SSLPipe.html#_server_side" class="code" data-type="Instance Variable">_server_side</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.sslproto._SSLPipe.html#_server_hostname" class="code" data-type="Instance Variable">_server_hostname</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.sslproto._SSLPipe.html#_state" class="code" data-type="Instance Variable">_state</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.sslproto._SSLPipe.html#_incoming" class="code" data-type="Instance Variable">_incoming</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.sslproto._SSLPipe.html#_outgoing" class="code" data-type="Instance Variable">_outgoing</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.sslproto._SSLPipe.html#_sslobj" class="code" data-type="Instance Variable">_sslobj</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.sslproto._SSLPipe.html#_need_ssldata" class="code" data-type="Instance Variable">_need_ssldata</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.sslproto._SSLPipe.html#_handshake_cb" class="code" data-type="Instance Variable">_handshake_cb</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.sslproto._SSLPipe.html#_shutdown_cb" class="code" data-type="Instance Variable">_shutdown_cb</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.asyncio.sslproto._SSLPipe.max_size">
+    
+  </a>
+  <a name="max_size">
+    
+  </a>
+  <div class="functionHeader">
+    max_size =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.sslproto._SSLPipe.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, context, server_side, server_hostname=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">The *context* argument specifies the ssl.SSLContext to use.
+
+The *server_side* argument indicates whether this is a server side or
+client side transport.
+
+The optional *server_hostname* argument can be used to specify the
+hostname you are connecting to. You may only specify this parameter if
+the _ssl module supports Server Name Indication (SNI).</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.sslproto._SSLPipe._context">
+    
+  </a>
+  <a name="_context">
+    
+  </a>
+  <div class="functionHeader">
+    _context =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.sslproto._SSLPipe._server_side">
+    
+  </a>
+  <a name="_server_side">
+    
+  </a>
+  <div class="functionHeader">
+    _server_side =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.sslproto._SSLPipe._server_hostname">
+    
+  </a>
+  <a name="_server_hostname">
+    
+  </a>
+  <div class="functionHeader">
+    _server_hostname =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.sslproto._SSLPipe._state">
+    
+  </a>
+  <a name="_state">
+    
+  </a>
+  <div class="functionHeader">
+    _state =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.sslproto._SSLPipe._incoming">
+    
+  </a>
+  <a name="_incoming">
+    
+  </a>
+  <div class="functionHeader">
+    _incoming =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.sslproto._SSLPipe._outgoing">
+    
+  </a>
+  <a name="_outgoing">
+    
+  </a>
+  <div class="functionHeader">
+    _outgoing =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.sslproto._SSLPipe._sslobj">
+    
+  </a>
+  <a name="_sslobj">
+    
+  </a>
+  <div class="functionHeader">
+    _sslobj =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.sslproto._SSLPipe._need_ssldata">
+    
+  </a>
+  <a name="_need_ssldata">
+    
+  </a>
+  <div class="functionHeader">
+    _need_ssldata =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.sslproto._SSLPipe._handshake_cb">
+    
+  </a>
+  <a name="_handshake_cb">
+    
+  </a>
+  <div class="functionHeader">
+    _handshake_cb =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.sslproto._SSLPipe._shutdown_cb">
+    
+  </a>
+  <a name="_shutdown_cb">
+    
+  </a>
+  <div class="functionHeader">
+    _shutdown_cb =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.sslproto._SSLPipe.context">
+    
+  </a>
+  <a name="context">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    context(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">The SSL context passed to the constructor.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.sslproto._SSLPipe.ssl_object">
+    
+  </a>
+  <a name="ssl_object">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    ssl_object(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">The internal ssl.SSLObject instance.
+
+Return None if the pipe is not wrapped.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.sslproto._SSLPipe.need_ssldata">
+    
+  </a>
+  <a name="need_ssldata">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    need_ssldata(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Whether more record level data is needed to complete a handshake
+that is currently in progress.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.sslproto._SSLPipe.wrapped">
+    
+  </a>
+  <a name="wrapped">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    wrapped(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Whether a security layer is currently in effect.
+
+Return False during handshake.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.sslproto._SSLPipe.do_handshake">
+    
+  </a>
+  <a name="do_handshake">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    do_handshake(self, callback=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Start the SSL handshake.
+
+Return a list of ssldata. A ssldata element is a list of buffers
+
+The optional *callback* argument can be used to install a callback that
+will be called when the handshake is complete. The callback will be
+called with None if successful, else an exception instance.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.sslproto._SSLPipe.shutdown">
+    
+  </a>
+  <a name="shutdown">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    shutdown(self, callback=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Start the SSL shutdown sequence.
+
+Return a list of ssldata. A ssldata element is a list of buffers
+
+The optional *callback* argument can be used to install a callback that
+will be called when the shutdown is complete. The callback will be
+called without arguments.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.sslproto._SSLPipe.feed_eof">
+    
+  </a>
+  <a name="feed_eof">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    feed_eof(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Send a potentially "ragged" EOF.
+
+This method will raise an SSL_ERROR_EOF exception if the EOF is
+unexpected.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.sslproto._SSLPipe.feed_ssldata">
+    
+  </a>
+  <a name="feed_ssldata">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    feed_ssldata(self, data, only_handshake=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Feed SSL record level data into the pipe.
+
+The data must be a bytes instance. It is OK to send an empty bytes
+instance. This can be used to get ssldata for a handshake initiated by
+this endpoint.
+
+Return a (ssldata, appdata) tuple. The ssldata element is a list of
+buffers containing SSL data that needs to be sent to the remote SSL.
+
+The appdata element is a list of buffers containing plaintext data that
+needs to be forwarded to the application. The appdata list may contain
+an empty buffer indicating an SSL "close_notify" alert. This alert must
+be acknowledged by calling shutdown().</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.sslproto._SSLPipe.feed_appdata">
+    
+  </a>
+  <a name="feed_appdata">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    feed_appdata(self, data, offset=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Feed plaintext data into the pipe.
+
+Return an (ssldata, offset) tuple. The ssldata element is a list of
+buffers containing record level data that needs to be sent to the
+remote SSL instance. The offset is the number of plaintext bytes that
+were processed, which may be less than the length of data.
+
+NOTE: In case of short writes, this call MUST be retried with the SAME
+buffer passed into the *data* argument (i.e. the id() must be the
+same). This is an OpenSSL requirement. A further particularity is that
+a short write will always have offset == 0, because the _ssl module
+does not enable partial writes. And even though the offset is zero,
+there will still be encrypted data in ssldata.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

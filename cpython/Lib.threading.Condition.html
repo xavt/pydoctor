@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.threading.Condition : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.threading.html" class="code" data-type="Module">threading</a>.<a href="Lib.threading.Condition.html" class="code" data-type="Class">Condition</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.threading.Condition:</code></p>
+        <p><a href="classIndex.html#Lib.threading.Condition">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Class that implements a condition variable.
+
+A condition variable allows one or more threads to wait until they are
+notified by another thread.
+
+If the lock argument is given and not None, it must be a Lock or RLock
+object, and it is used as the underlying lock. Otherwise, a new RLock object
+is created and used as the underlying lock.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id10894">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.Condition.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.threading.Condition.html#acquire" class="code" data-type="Instance Variable">acquire</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.threading.Condition.html#release" class="code" data-type="Instance Variable">release</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.Condition.html#__enter__" class="code" data-type="Method">__enter__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.Condition.html#__exit__" class="code" data-type="Method">__exit__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.Condition.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.Condition.html#wait" class="code" data-type="Method">wait</a></td>
+    <td><span>Wait until notified or until a timeout occurs.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.Condition.html#wait_for" class="code" data-type="Method">wait_for</a></td>
+    <td><span>Wait until a condition evaluates to True.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.Condition.html#notify" class="code" data-type="Method">notify</a></td>
+    <td><span>Wake up one or more threads waiting on this condition, if any.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.Condition.html#notify_all" class="code" data-type="Method">notify_all</a></td>
+    <td><span>Wake up all threads waiting on this condition.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.threading.Condition.html#_lock" class="code" data-type="Instance Variable">_lock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.Condition.html#_release_save" class="code" data-type="Method">_release_save</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.Condition.html#_acquire_restore" class="code" data-type="Method">_acquire_restore</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.Condition.html#_is_owned" class="code" data-type="Method">_is_owned</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.threading.Condition.html#_waiters" class="code" data-type="Instance Variable">_waiters</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.Condition.html#_at_fork_reinit" class="code" data-type="Method">_at_fork_reinit</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.threading.Condition.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, lock=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.threading.Condition._lock">
+    
+  </a>
+  <a name="_lock">
+    
+  </a>
+  <div class="functionHeader">
+    _lock =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.threading.Condition.acquire">
+    
+  </a>
+  <a name="acquire">
+    
+  </a>
+  <div class="functionHeader">
+    acquire =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.threading.Condition.release">
+    
+  </a>
+  <a name="release">
+    
+  </a>
+  <div class="functionHeader">
+    release =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.threading.Condition._release_save">
+    
+  </a>
+  <a name="_release_save">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _release_save(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.threading.Condition._acquire_restore">
+    
+  </a>
+  <a name="_acquire_restore">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _acquire_restore(self, x):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.threading.Condition._is_owned">
+    
+  </a>
+  <a name="_is_owned">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _is_owned(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.threading.Condition._waiters">
+    
+  </a>
+  <a name="_waiters">
+    
+  </a>
+  <div class="functionHeader">
+    _waiters =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.threading.Condition._at_fork_reinit">
+    
+  </a>
+  <a name="_at_fork_reinit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _at_fork_reinit(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.threading.Condition.__enter__">
+    
+  </a>
+  <a name="__enter__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __enter__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.threading.Condition.__exit__">
+    
+  </a>
+  <a name="__exit__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __exit__(self, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.threading.Condition.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __repr__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.threading.Condition.wait">
+    
+  </a>
+  <a name="wait">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    wait(self, timeout=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Wait until notified or until a timeout occurs.
+
+If the calling thread has not acquired the lock when this method is
+called, a RuntimeError is raised.
+
+This method releases the underlying lock, and then blocks until it is
+awakened by a notify() or notify_all() call for the same condition
+variable in another thread, or until the optional timeout occurs. Once
+awakened or timed out, it re-acquires the lock and returns.
+
+When the timeout argument is present and not None, it should be a
+floating point number specifying a timeout for the operation in seconds
+(or fractions thereof).
+
+When the underlying lock is an RLock, it is not released using its
+release() method, since this may not actually unlock the lock when it
+was acquired multiple times recursively. Instead, an internal interface
+of the RLock class is used, which really unlocks it even when it has
+been recursively acquired several times. Another internal interface is
+then used to restore the recursion level when the lock is reacquired.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.threading.Condition.wait_for">
+    
+  </a>
+  <a name="wait_for">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    wait_for(self, predicate, timeout=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Wait until a condition evaluates to True.
+
+predicate should be a callable which result will be interpreted as a
+boolean value.  A timeout may be provided giving the maximum time to
+wait.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.threading.Condition.notify">
+    
+  </a>
+  <a name="notify">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    notify(self, n=1):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Wake up one or more threads waiting on this condition, if any.
+
+If the calling thread has not acquired the lock when this method is
+called, a RuntimeError is raised.
+
+This method wakes up at most n of the threads waiting for the condition
+variable; it is a no-op if no threads are waiting.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.threading.Condition.notify_all">
+    
+  </a>
+  <a name="notify_all">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    notify_all(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Wake up all threads waiting on this condition.
+
+If the calling thread has not acquired the lock when this method
+is called, a RuntimeError is raised.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.doctest.DocTestParser : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.doctest.html" class="code" data-type="Module">doctest</a>.<a href="Lib.doctest.DocTestParser.html" class="code" data-type="Class">DocTestParser</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.doctest.DocTestParser:</code></p>
+        <p><a href="classIndex.html#Lib.doctest.DocTestParser">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">A class used to parse strings containing doctest examples.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id1117">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.doctest.DocTestParser.html#parse" class="code" data-type="Method">parse</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.doctest.DocTestParser.html#get_doctest" class="code" data-type="Method">get_doctest</a></td>
+    <td><span>Extract all doctest examples from the given string, and collect them into a `DocTest` object.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.doctest.DocTestParser.html#get_examples" class="code" data-type="Method">get_examples</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="classvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.doctest.DocTestParser.html#_EXAMPLE_RE" class="code" data-type="Class Variable">_EXAMPLE_RE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.doctest.DocTestParser.html#_EXCEPTION_RE" class="code" data-type="Class Variable">_EXCEPTION_RE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.doctest.DocTestParser.html#_IS_BLANK_OR_COMMENT" class="code" data-type="Class Variable">_IS_BLANK_OR_COMMENT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.doctest.DocTestParser.html#_parse_example" class="code" data-type="Method">_parse_example</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="classvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.doctest.DocTestParser.html#_OPTION_DIRECTIVE_RE" class="code" data-type="Class Variable">_OPTION_DIRECTIVE_RE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.doctest.DocTestParser.html#_find_options" class="code" data-type="Method">_find_options</a></td>
+    <td><span>Return a dictionary containing option overrides extracted from option directives in the given source string.</span></td>
+  </tr><tr class="classvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.doctest.DocTestParser.html#_INDENT_RE" class="code" data-type="Class Variable">_INDENT_RE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.doctest.DocTestParser.html#_min_indent" class="code" data-type="Method">_min_indent</a></td>
+    <td><span>Return the minimum indentation of any non-blank line in `s`</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.doctest.DocTestParser.html#_check_prompt_blank" class="code" data-type="Method">_check_prompt_blank</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.doctest.DocTestParser.html#_check_prefix" class="code" data-type="Method">_check_prefix</a></td>
+    <td><span>Check that every line in the given list starts with the given prefix; if any line does not, then raise a ValueError.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable private">
+  
+  <a name="Lib.doctest.DocTestParser._EXAMPLE_RE">
+    
+  </a>
+  <a name="_EXAMPLE_RE">
+    
+  </a>
+  <div class="functionHeader">
+    _EXAMPLE_RE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable private">
+  
+  <a name="Lib.doctest.DocTestParser._EXCEPTION_RE">
+    
+  </a>
+  <a name="_EXCEPTION_RE">
+    
+  </a>
+  <div class="functionHeader">
+    _EXCEPTION_RE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable private">
+  
+  <a name="Lib.doctest.DocTestParser._IS_BLANK_OR_COMMENT">
+    
+  </a>
+  <a name="_IS_BLANK_OR_COMMENT">
+    
+  </a>
+  <div class="functionHeader">
+    _IS_BLANK_OR_COMMENT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.doctest.DocTestParser.parse">
+    
+  </a>
+  <a name="parse">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse(self, string, name="""&lt;string&gt;"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Divide the given string into examples and intervening text,
+and return them as a list of alternating Examples and strings.
+Line numbers for the Examples are 0-based.  The optional
+argument `name` is a name identifying this string, and is only
+used for error messages.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.doctest.DocTestParser.get_doctest">
+    
+  </a>
+  <a name="get_doctest">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_doctest(self, string, globs, name, filename, lineno):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Extract all doctest examples from the given string, and
+collect them into a `DocTest` object.
+
+`globs`, `name`, `filename`, and `lineno` are attributes for
+the new `DocTest` object.  See the documentation for `DocTest`
+for more information.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.doctest.DocTestParser.get_examples">
+    
+  </a>
+  <a name="get_examples">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_examples(self, string, name="""&lt;string&gt;"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Extract all doctest examples from the given string, and return
+them as a list of `Example` objects.  Line numbers are
+0-based, because it's most common in doctests that nothing
+interesting appears on the same line as opening triple-quote,
+and so the first interesting line is called "line 1" then.
+
+The optional argument `name` is a name identifying this
+string, and is only used for error messages.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.doctest.DocTestParser._parse_example">
+    
+  </a>
+  <a name="_parse_example">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _parse_example(self, m, name, lineno):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Given a regular expression match from `_EXAMPLE_RE` (`m`),
+return a pair `(source, want)`, where `source` is the matched
+example's source code (with prompts and indentation stripped);
+and `want` is the example's expected output (with indentation
+stripped).
+
+`name` is the string's name, and `lineno` is the line number
+where the example starts; both are used for error messages.</p></div>
+  </div>
+</div><div class="baseclassvariable private">
+  
+  <a name="Lib.doctest.DocTestParser._OPTION_DIRECTIVE_RE">
+    
+  </a>
+  <a name="_OPTION_DIRECTIVE_RE">
+    
+  </a>
+  <div class="functionHeader">
+    _OPTION_DIRECTIVE_RE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.doctest.DocTestParser._find_options">
+    
+  </a>
+  <a name="_find_options">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _find_options(self, source, name, lineno):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a dictionary containing option overrides extracted from
+option directives in the given source string.
+
+`name` is the string's name, and `lineno` is the line number
+where the example starts; both are used for error messages.</p></div>
+  </div>
+</div><div class="baseclassvariable private">
+  
+  <a name="Lib.doctest.DocTestParser._INDENT_RE">
+    
+  </a>
+  <a name="_INDENT_RE">
+    
+  </a>
+  <div class="functionHeader">
+    _INDENT_RE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.doctest.DocTestParser._min_indent">
+    
+  </a>
+  <a name="_min_indent">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _min_indent(self, s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the minimum indentation of any non-blank line in `s`</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.doctest.DocTestParser._check_prompt_blank">
+    
+  </a>
+  <a name="_check_prompt_blank">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _check_prompt_blank(self, lines, indent, name, lineno):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Given the lines of a source string (including prompts and
+leading indentation), check to make sure that every prompt is
+followed by a space character.  If any line is not followed by
+a space character, then raise ValueError.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.doctest.DocTestParser._check_prefix">
+    
+  </a>
+  <a name="_check_prefix">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _check_prefix(self, lines, prefix, name, lineno):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Check that every line in the given list starts with the given
+prefix; if any line does not, then raise a ValueError.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

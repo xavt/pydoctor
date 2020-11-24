@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.test.test_asyncio.utils.TestLoop : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.test.html" class="code" data-type="Package">test</a>.<a href="Lib.test.test_asyncio.html" class="code" data-type="Package">test_asyncio</a>.<a href="Lib.test.test_asyncio.utils.html" class="code" data-type="Module">utils</a>.<a href="Lib.test.test_asyncio.utils.TestLoop.html" class="code" data-type="Class">TestLoop</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.test.test_asyncio.utils.TestLoop(<span title="asyncio.base_events.BaseEventLoop">base_events.BaseEventLoop</span>):</code></p>
+        <p><a href="classIndex.html#Lib.test.test_asyncio.utils.TestLoop">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Loop for unittests.
+
+It manages self time directly.
+If something scheduled to be executed later then
+on next loop iteration after all ready handlers done
+generator passed to __init__ is calling.
+
+Generator should be like this:
+
+    def gen():
+        ...
+        when = yield ...
+        ... = yield time_advance
+
+Value returned by yield is absolute time of next scheduled handler.
+Value passed to yield is time advance to move loop's time forward.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id4958">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#readers" class="code" data-type="Instance Variable">readers</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#writers" class="code" data-type="Instance Variable">writers</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#time" class="code" data-type="Method">time</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#advance_time" class="code" data-type="Method">advance_time</a></td>
+    <td><span>Move test time forward.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#close" class="code" data-type="Method">close</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#assert_reader" class="code" data-type="Method">assert_reader</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#assert_no_reader" class="code" data-type="Method">assert_no_reader</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#assert_writer" class="code" data-type="Method">assert_writer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#add_reader" class="code" data-type="Method">add_reader</a></td>
+    <td><span>Add a reader callback.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#remove_reader" class="code" data-type="Method">remove_reader</a></td>
+    <td><span>Remove a reader callback.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#add_writer" class="code" data-type="Method">add_writer</a></td>
+    <td><span>Add a writer callback..</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#remove_writer" class="code" data-type="Method">remove_writer</a></td>
+    <td><span>Remove a writer callback.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#reset_counters" class="code" data-type="Method">reset_counters</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#remove_reader_count" class="code" data-type="Instance Variable">remove_reader_count</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#remove_writer_count" class="code" data-type="Instance Variable">remove_writer_count</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#call_at" class="code" data-type="Method">call_at</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#_check_on_close" class="code" data-type="Instance Variable">_check_on_close</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#_gen" class="code" data-type="Instance Variable">_gen</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#_time" class="code" data-type="Instance Variable">_time</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#_clock_resolution" class="code" data-type="Instance Variable">_clock_resolution</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#_timers" class="code" data-type="Instance Variable">_timers</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#_selector" class="code" data-type="Instance Variable">_selector</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#_transports" class="code" data-type="Instance Variable">_transports</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#_add_reader" class="code" data-type="Method">_add_reader</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#_remove_reader" class="code" data-type="Method">_remove_reader</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#_add_writer" class="code" data-type="Method">_add_writer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#_remove_writer" class="code" data-type="Method">_remove_writer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#_ensure_fd_no_transport" class="code" data-type="Method">_ensure_fd_no_transport</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#_run_once" class="code" data-type="Method">_run_once</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#_process_events" class="code" data-type="Method">_process_events</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_asyncio.utils.TestLoop.html#_write_to_self" class="code" data-type="Method">_write_to_self</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, gen=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop._check_on_close">
+    
+  </a>
+  <a name="_check_on_close">
+    
+  </a>
+  <div class="functionHeader">
+    _check_on_close =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop._gen">
+    
+  </a>
+  <a name="_gen">
+    
+  </a>
+  <div class="functionHeader">
+    _gen =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop._time">
+    
+  </a>
+  <a name="_time">
+    
+  </a>
+  <div class="functionHeader">
+    _time =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop._clock_resolution">
+    
+  </a>
+  <a name="_clock_resolution">
+    
+  </a>
+  <div class="functionHeader">
+    _clock_resolution =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>float</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop._timers">
+    
+  </a>
+  <a name="_timers">
+    
+  </a>
+  <div class="functionHeader">
+    _timers =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop._selector">
+    
+  </a>
+  <a name="_selector">
+    
+  </a>
+  <div class="functionHeader">
+    _selector =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop.readers">
+    
+  </a>
+  <a name="readers">
+    
+  </a>
+  <div class="functionHeader">
+    readers =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop.writers">
+    
+  </a>
+  <a name="writers">
+    
+  </a>
+  <div class="functionHeader">
+    writers =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop._transports">
+    
+  </a>
+  <a name="_transports">
+    
+  </a>
+  <div class="functionHeader">
+    _transports =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop.time">
+    
+  </a>
+  <a name="time">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    time(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop.advance_time">
+    
+  </a>
+  <a name="advance_time">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    advance_time(self, advance):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Move test time forward.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop.close">
+    
+  </a>
+  <a name="close">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    close(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop._add_reader">
+    
+  </a>
+  <a name="_add_reader">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _add_reader(self, fd, callback, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop._remove_reader">
+    
+  </a>
+  <a name="_remove_reader">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _remove_reader(self, fd):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop.assert_reader">
+    
+  </a>
+  <a name="assert_reader">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assert_reader(self, fd, callback, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop.assert_no_reader">
+    
+  </a>
+  <a name="assert_no_reader">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assert_no_reader(self, fd):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop._add_writer">
+    
+  </a>
+  <a name="_add_writer">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _add_writer(self, fd, callback, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop._remove_writer">
+    
+  </a>
+  <a name="_remove_writer">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _remove_writer(self, fd):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop.assert_writer">
+    
+  </a>
+  <a name="assert_writer">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assert_writer(self, fd, callback, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop._ensure_fd_no_transport">
+    
+  </a>
+  <a name="_ensure_fd_no_transport">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _ensure_fd_no_transport(self, fd):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop.add_reader">
+    
+  </a>
+  <a name="add_reader">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    add_reader(self, fd, callback, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Add a reader callback.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop.remove_reader">
+    
+  </a>
+  <a name="remove_reader">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    remove_reader(self, fd):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Remove a reader callback.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop.add_writer">
+    
+  </a>
+  <a name="add_writer">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    add_writer(self, fd, callback, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Add a writer callback..</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop.remove_writer">
+    
+  </a>
+  <a name="remove_writer">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    remove_writer(self, fd):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Remove a writer callback.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop.reset_counters">
+    
+  </a>
+  <a name="reset_counters">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    reset_counters(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop.remove_reader_count">
+    
+  </a>
+  <a name="remove_reader_count">
+    
+  </a>
+  <div class="functionHeader">
+    remove_reader_count =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop.remove_writer_count">
+    
+  </a>
+  <a name="remove_writer_count">
+    
+  </a>
+  <div class="functionHeader">
+    remove_writer_count =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop._run_once">
+    
+  </a>
+  <a name="_run_once">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _run_once(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop.call_at">
+    
+  </a>
+  <a name="call_at">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    call_at(self, when, callback, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop._process_events">
+    
+  </a>
+  <a name="_process_events">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _process_events(self, event_list):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.test.test_asyncio.utils.TestLoop._write_to_self">
+    
+  </a>
+  <a name="_write_to_self">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _write_to_self(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

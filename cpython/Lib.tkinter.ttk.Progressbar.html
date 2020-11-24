@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.tkinter.ttk.Progressbar : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.tkinter.html" class="code" data-type="Package">tkinter</a>.<a href="Lib.tkinter.ttk.html" class="code" data-type="Module">ttk</a>.<a href="Lib.tkinter.ttk.Progressbar.html" class="code" data-type="Class">Progressbar</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.tkinter.ttk.Progressbar(<a href="Lib.tkinter.ttk.Widget.html" class="code" data-type="Class">Widget</a>):</code></p>
+        <p><a href="classIndex.html#Lib.tkinter.ttk.Progressbar">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Ttk Progressbar widget shows the status of a long-running
+operation. They can operate in two modes: determinate mode shows the
+amount completed relative to the total amount of work to be done, and
+indeterminate mode provides an animated display to let the user know
+that something is happening.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id11425">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Progressbar.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Construct a Ttk Progressbar with parent master.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Progressbar.html#start" class="code" data-type="Method">start</a></td>
+    <td><span>Begin autoincrement mode: schedules a recurring timer event that calls method step every interval milliseconds.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Progressbar.html#step" class="code" data-type="Method">step</a></td>
+    <td><span>Increments the value option by amount.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Progressbar.html#stop" class="code" data-type="Method">stop</a></td>
+    <td><span>Stop autoincrement mode: cancels any recurring timer event initiated by start.</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.tkinter.ttk.Widget.html" class="code" data-type="Class">Widget</a>:
+          </p>
+          <table class="children sortable" id="id11426">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Widget.html#identify" class="code" data-type="Method">identify</a></td>
+    <td><span>Returns the name of the element at position x, y, or the empty string if the point does not lie within any element.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Widget.html#instate" class="code" data-type="Method">instate</a></td>
+    <td><span>Test the widget's state.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.ttk.Widget.html#state" class="code" data-type="Method">state</a></td>
+    <td><span>Modify or inquire widget state.</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Progressbar.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, master=None, **kw):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.tkinter.ttk.Widget.html#__init__" class="code" data-type="Method">Lib.tkinter.ttk.Widget.__init__</a></div>
+    
+    <div><p class="pre">Construct a Ttk Progressbar with parent master.
+
+STANDARD OPTIONS
+
+    class, cursor, style, takefocus
+
+WIDGET-SPECIFIC OPTIONS
+
+    orient, length, mode, maximum, value, variable, phase</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Progressbar.start">
+    
+  </a>
+  <a name="start">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    start(self, interval=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Begin autoincrement mode: schedules a recurring timer event
+that calls method step every interval milliseconds.
+
+interval defaults to 50 milliseconds (20 steps/second) if omitted.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Progressbar.step">
+    
+  </a>
+  <a name="step">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    step(self, amount=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Increments the value option by amount.
+
+amount defaults to 1.0 if omitted.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.ttk.Progressbar.stop">
+    
+  </a>
+  <a name="stop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    stop(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Stop autoincrement mode: cancels any recurring timer event
+initiated by start.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

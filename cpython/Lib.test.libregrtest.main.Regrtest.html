@@ -1,0 +1,1174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.test.libregrtest.main.Regrtest : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.test.html" class="code" data-type="Package">test</a>.<a href="Lib.test.libregrtest.html" class="code" data-type="Package">libregrtest</a>.<a href="Lib.test.libregrtest.main.html" class="code" data-type="Module">main</a>.<a href="Lib.test.libregrtest.main.Regrtest.html" class="code" data-type="Class">Regrtest</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.test.libregrtest.main.Regrtest:</code></p>
+        <p><a href="classIndex.html#Lib.test.libregrtest.main.Regrtest">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Execute a test suite.
+
+This also parses command-line options and modifies its behavior
+accordingly.
+
+tests -- a list of strings containing test names (optional)
+testdir -- the directory in which to look for tests (optional)
+
+Users other than the Python test suite will certainly want to
+specify testdir; if it's omitted, the directory containing the
+Python test suite is searched for.
+
+If the tests argument is omitted, the tests listed on the
+command-line will be used.  If that's empty, too, then all *.py
+files beginning with test_ will be used.
+
+The other default arguments (verbose, quiet, exclude,
+single, randomize, findleaks, use_resources, trace, coverdir,
+print_slow, and random_seed) allow programmers calling main()
+directly to set the values that would normally be set by flags
+on the command line.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3951">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#ns" class="code" data-type="Instance Variable">ns</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#tests" class="code" data-type="Instance Variable">tests</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#selected" class="code" data-type="Instance Variable">selected</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#good" class="code" data-type="Instance Variable">good</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#bad" class="code" data-type="Instance Variable">bad</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#skipped" class="code" data-type="Instance Variable">skipped</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#resource_denieds" class="code" data-type="Instance Variable">resource_denieds</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#environment_changed" class="code" data-type="Instance Variable">environment_changed</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#run_no_tests" class="code" data-type="Instance Variable">run_no_tests</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#rerun" class="code" data-type="Instance Variable">rerun</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#first_result" class="code" data-type="Instance Variable">first_result</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#interrupted" class="code" data-type="Instance Variable">interrupted</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#test_times" class="code" data-type="Instance Variable">test_times</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#tracer" class="code" data-type="Instance Variable">tracer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#start_time" class="code" data-type="Instance Variable">start_time</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#test_count" class="code" data-type="Instance Variable">test_count</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#test_count_width" class="code" data-type="Instance Variable">test_count_width</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#next_single_test" class="code" data-type="Instance Variable">next_single_test</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#next_single_filename" class="code" data-type="Instance Variable">next_single_filename</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#testsuite_xml" class="code" data-type="Instance Variable">testsuite_xml</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#win_load_tracker" class="code" data-type="Instance Variable">win_load_tracker</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#tmp_dir" class="code" data-type="Instance Variable">tmp_dir</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#worker_test_name" class="code" data-type="Instance Variable">worker_test_name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#get_executed" class="code" data-type="Method">get_executed</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#accumulate_result" class="code" data-type="Method">accumulate_result</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#log" class="code" data-type="Method">log</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#display_progress" class="code" data-type="Method">display_progress</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#parse_args" class="code" data-type="Method">parse_args</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#find_tests" class="code" data-type="Method">find_tests</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#list_tests" class="code" data-type="Method">list_tests</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#list_cases" class="code" data-type="Method">list_cases</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#rerun_failed_tests" class="code" data-type="Method">rerun_failed_tests</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#display_result" class="code" data-type="Method">display_result</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#run_tests_sequential" class="code" data-type="Method">run_tests_sequential</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#display_header" class="code" data-type="Method">display_header</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#get_tests_result" class="code" data-type="Method">get_tests_result</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#run_tests" class="code" data-type="Method">run_tests</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#finalize" class="code" data-type="Method">finalize</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#save_xml_result" class="code" data-type="Method">save_xml_result</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#set_temp_dir" class="code" data-type="Method">set_temp_dir</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#create_temp_dir" class="code" data-type="Method">create_temp_dir</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#cleanup" class="code" data-type="Method">cleanup</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#main" class="code" data-type="Method">main</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#getloadavg" class="code" data-type="Method">getloadavg</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#_list_cases" class="code" data-type="Method">_list_cases</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#_test_forever" class="code" data-type="Method">_test_forever</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.main.Regrtest.html#_main" class="code" data-type="Method">_main</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.ns">
+    
+  </a>
+  <a name="ns">
+    
+  </a>
+  <div class="functionHeader">
+    ns =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.tests">
+    
+  </a>
+  <a name="tests">
+    
+  </a>
+  <div class="functionHeader">
+    tests =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.selected">
+    
+  </a>
+  <a name="selected">
+    
+  </a>
+  <div class="functionHeader">
+    selected =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.good">
+    
+  </a>
+  <a name="good">
+    
+  </a>
+  <div class="functionHeader">
+    good =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.bad">
+    
+  </a>
+  <a name="bad">
+    
+  </a>
+  <div class="functionHeader">
+    bad =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.skipped">
+    
+  </a>
+  <a name="skipped">
+    
+  </a>
+  <div class="functionHeader">
+    skipped =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.resource_denieds">
+    
+  </a>
+  <a name="resource_denieds">
+    
+  </a>
+  <div class="functionHeader">
+    resource_denieds =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.environment_changed">
+    
+  </a>
+  <a name="environment_changed">
+    
+  </a>
+  <div class="functionHeader">
+    environment_changed =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.run_no_tests">
+    
+  </a>
+  <a name="run_no_tests">
+    
+  </a>
+  <div class="functionHeader">
+    run_no_tests =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.rerun">
+    
+  </a>
+  <a name="rerun">
+    
+  </a>
+  <div class="functionHeader">
+    rerun =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.first_result">
+    
+  </a>
+  <a name="first_result">
+    
+  </a>
+  <div class="functionHeader">
+    first_result =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.interrupted">
+    
+  </a>
+  <a name="interrupted">
+    
+  </a>
+  <div class="functionHeader">
+    interrupted =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.test_times">
+    
+  </a>
+  <a name="test_times">
+    
+  </a>
+  <div class="functionHeader">
+    test_times =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.tracer">
+    
+  </a>
+  <a name="tracer">
+    
+  </a>
+  <div class="functionHeader">
+    tracer =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.start_time">
+    
+  </a>
+  <a name="start_time">
+    
+  </a>
+  <div class="functionHeader">
+    start_time =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.test_count">
+    
+  </a>
+  <a name="test_count">
+    
+  </a>
+  <div class="functionHeader">
+    test_count =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.test_count_width">
+    
+  </a>
+  <a name="test_count_width">
+    
+  </a>
+  <div class="functionHeader">
+    test_count_width =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.next_single_test">
+    
+  </a>
+  <a name="next_single_test">
+    
+  </a>
+  <div class="functionHeader">
+    next_single_test =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.next_single_filename">
+    
+  </a>
+  <a name="next_single_filename">
+    
+  </a>
+  <div class="functionHeader">
+    next_single_filename =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.testsuite_xml">
+    
+  </a>
+  <a name="testsuite_xml">
+    
+  </a>
+  <div class="functionHeader">
+    testsuite_xml =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.win_load_tracker">
+    
+  </a>
+  <a name="win_load_tracker">
+    
+  </a>
+  <div class="functionHeader">
+    win_load_tracker =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.tmp_dir">
+    
+  </a>
+  <a name="tmp_dir">
+    
+  </a>
+  <div class="functionHeader">
+    tmp_dir =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.worker_test_name">
+    
+  </a>
+  <a name="worker_test_name">
+    
+  </a>
+  <div class="functionHeader">
+    worker_test_name =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.get_executed">
+    
+  </a>
+  <a name="get_executed">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_executed(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.accumulate_result">
+    
+  </a>
+  <a name="accumulate_result">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    accumulate_result(self, result, rerun=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.log">
+    
+  </a>
+  <a name="log">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    log(self, line=""""""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.display_progress">
+    
+  </a>
+  <a name="display_progress">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    display_progress(self, test_index, text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.parse_args">
+    
+  </a>
+  <a name="parse_args">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse_args(self, kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.find_tests">
+    
+  </a>
+  <a name="find_tests">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    find_tests(self, tests):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.list_tests">
+    
+  </a>
+  <a name="list_tests">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    list_tests(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest._list_cases">
+    
+  </a>
+  <a name="_list_cases">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _list_cases(self, suite):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.list_cases">
+    
+  </a>
+  <a name="list_cases">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    list_cases(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.rerun_failed_tests">
+    
+  </a>
+  <a name="rerun_failed_tests">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    rerun_failed_tests(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.display_result">
+    
+  </a>
+  <a name="display_result">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    display_result(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.run_tests_sequential">
+    
+  </a>
+  <a name="run_tests_sequential">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    run_tests_sequential(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest._test_forever">
+    
+  </a>
+  <a name="_test_forever">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _test_forever(self, tests):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.display_header">
+    
+  </a>
+  <a name="display_header">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    display_header(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.get_tests_result">
+    
+  </a>
+  <a name="get_tests_result">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_tests_result(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.run_tests">
+    
+  </a>
+  <a name="run_tests">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    run_tests(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.finalize">
+    
+  </a>
+  <a name="finalize">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    finalize(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.save_xml_result">
+    
+  </a>
+  <a name="save_xml_result">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    save_xml_result(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.set_temp_dir">
+    
+  </a>
+  <a name="set_temp_dir">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_temp_dir(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.create_temp_dir">
+    
+  </a>
+  <a name="create_temp_dir">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    create_temp_dir(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.cleanup">
+    
+  </a>
+  <a name="cleanup">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    cleanup(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.main">
+    
+  </a>
+  <a name="main">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    main(self, tests=None, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest.getloadavg">
+    
+  </a>
+  <a name="getloadavg">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getloadavg(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.test.libregrtest.main.Regrtest._main">
+    
+  </a>
+  <a name="_main">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _main(self, tests, kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

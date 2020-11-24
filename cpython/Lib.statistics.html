@@ -1,0 +1,1015 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.statistics : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.statistics.html" class="code" data-type="Module">statistics</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Basic statistics module.
+
+This module provides functions for calculating statistics of data, including
+averages, variance, and standard deviation.
+
+Calculating averages
+--------------------
+
+==================  ==================================================
+Function            Description
+==================  ==================================================
+mean                Arithmetic mean (average) of data.
+fmean               Fast, floating point arithmetic mean.
+geometric_mean      Geometric mean of data.
+harmonic_mean       Harmonic mean of data.
+median              Median (middle value) of data.
+median_low          Low median of data.
+median_high         High median of data.
+median_grouped      Median, or 50th percentile, of grouped data.
+mode                Mode (most common value) of data.
+multimode           List of modes (most common values of data).
+quantiles           Divide data into intervals with equal probability.
+==================  ==================================================
+
+Calculate the arithmetic mean ("the average") of data:
+
+&gt;&gt;&gt; mean([-1.0, 2.5, 3.25, 5.75])
+2.625
+
+
+Calculate the standard median of discrete data:
+
+&gt;&gt;&gt; median([2, 3, 4, 5])
+3.5
+
+
+Calculate the median, or 50th percentile, of data grouped into class intervals
+centred on the data values provided. E.g. if your data points are rounded to
+the nearest whole number:
+
+&gt;&gt;&gt; median_grouped([2, 2, 3, 3, 3, 4])  #doctest: +ELLIPSIS
+2.8333333333...
+
+This should be interpreted in this way: you have two data points in the class
+interval 1.5-2.5, three data points in the class interval 2.5-3.5, and one in
+the class interval 3.5-4.5. The median of these data points is 2.8333...
+
+
+Calculating variability or spread
+---------------------------------
+
+==================  =============================================
+Function            Description
+==================  =============================================
+pvariance           Population variance of data.
+variance            Sample variance of data.
+pstdev              Population standard deviation of data.
+stdev               Sample standard deviation of data.
+==================  =============================================
+
+Calculate the standard deviation of sample data:
+
+&gt;&gt;&gt; stdev([2.5, 3.25, 5.5, 11.25, 11.75])  #doctest: +ELLIPSIS
+4.38961843444...
+
+If you have previously calculated the mean, you can pass it as the optional
+second argument to the four "spread" functions to avoid recalculating it:
+
+&gt;&gt;&gt; data = [1, 2, 2, 4, 4, 4, 5, 6]
+&gt;&gt;&gt; mu = mean(data)
+&gt;&gt;&gt; pvariance(data, mu)
+2.5
+
+
+Exceptions
+----------
+
+A single exception is defined: StatisticsError is a subclass of ValueError.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3664">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.statistics.StatisticsError.html" class="code" data-type="Class">StatisticsError</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.statistics.html#mean" class="code" data-type="Function">mean</a></td>
+    <td><span>Return the sample arithmetic mean of data.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.statistics.html#fmean" class="code" data-type="Function">fmean</a></td>
+    <td><span>Convert data to floats and compute the arithmetic mean.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.statistics.html#geometric_mean" class="code" data-type="Function">geometric_mean</a></td>
+    <td><span>Convert data to floats and compute the geometric mean.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.statistics.html#harmonic_mean" class="code" data-type="Function">harmonic_mean</a></td>
+    <td><span>Return the harmonic mean of data.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.statistics.html#median" class="code" data-type="Function">median</a></td>
+    <td><span>Return the median (middle value) of numeric data.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.statistics.html#median_low" class="code" data-type="Function">median_low</a></td>
+    <td><span>Return the low median of numeric data.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.statistics.html#median_high" class="code" data-type="Function">median_high</a></td>
+    <td><span>Return the high median of data.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.statistics.html#median_grouped" class="code" data-type="Function">median_grouped</a></td>
+    <td><span>Return the 50th percentile (median) of grouped continuous data.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.statistics.html#mode" class="code" data-type="Function">mode</a></td>
+    <td><span>Return the most common data point from discrete or nominal data.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.statistics.html#multimode" class="code" data-type="Function">multimode</a></td>
+    <td><span>Return a list of the most frequently occurring values.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.statistics.html#quantiles" class="code" data-type="Function">quantiles</a></td>
+    <td><span>Divide *data* into *n* continuous intervals with equal probability.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.statistics.html#variance" class="code" data-type="Function">variance</a></td>
+    <td><span>Return the sample variance of data.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.statistics.html#pvariance" class="code" data-type="Function">pvariance</a></td>
+    <td><span>Return the population variance of ``data``.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.statistics.html#stdev" class="code" data-type="Function">stdev</a></td>
+    <td><span>Return the square root of the sample variance.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.statistics.html#pstdev" class="code" data-type="Function">pstdev</a></td>
+    <td><span>Return the square root of the population variance.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.statistics.NormalDist.html" class="code" data-type="Class">NormalDist</a></td>
+    <td><span>Normal distribution of a random variable</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.statistics.html#_sum" class="code" data-type="Function">_sum</a></td>
+    <td><span>_sum(data [, start]) -&gt; (type, sum, count)</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.statistics.html#_isfinite" class="code" data-type="Function">_isfinite</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.statistics.html#_coerce" class="code" data-type="Function">_coerce</a></td>
+    <td><span>Coerce types T and S to a common type, or raise TypeError.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.statistics.html#_exact_ratio" class="code" data-type="Function">_exact_ratio</a></td>
+    <td><span>Return Real number x to exact (numerator, denominator) pair.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.statistics.html#_convert" class="code" data-type="Function">_convert</a></td>
+    <td><span>Convert value to given numeric type T.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.statistics.html#_find_lteq" class="code" data-type="Function">_find_lteq</a></td>
+    <td><span>Locate the leftmost value exactly equal to x</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.statistics.html#_find_rteq" class="code" data-type="Function">_find_rteq</a></td>
+    <td><span>Locate the rightmost value exactly equal to x</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.statistics.html#_fail_neg" class="code" data-type="Function">_fail_neg</a></td>
+    <td><span>Iterate over values, failing if any are less than zero.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.statistics.html#_ss" class="code" data-type="Function">_ss</a></td>
+    <td><span>Return sum of square deviations of sequence data.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.statistics.html#_normal_dist_inv_cdf" class="code" data-type="Function">_normal_dist_inv_cdf</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction private">
+  
+  <a name="Lib.statistics._sum">
+    
+  </a>
+  <a name="_sum">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _sum(data, start=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">_sum(data [, start]) -&gt; (type, sum, count)
+
+Return a high-precision sum of the given numeric data as a fraction,
+together with the type to be converted to and the count of items.
+
+If optional argument ``start`` is given, it is added to the total.
+If ``data`` is empty, ``start`` (defaulting to 0) is returned.
+
+
+Examples
+--------
+
+&gt;&gt;&gt; _sum([3, 2.25, 4.5, -0.5, 1.0], 0.75)
+(&lt;class 'float'&gt;, Fraction(11, 1), 5)
+
+Some sources of round-off error will be avoided:
+
+# Built-in sum returns zero.
+&gt;&gt;&gt; _sum([1e50, 1, -1e50] * 1000)
+(&lt;class 'float'&gt;, Fraction(1000, 1), 3000)
+
+Fractions and Decimals are also supported:
+
+&gt;&gt;&gt; from fractions import Fraction as F
+&gt;&gt;&gt; _sum([F(2, 3), F(7, 5), F(1, 4), F(5, 6)])
+(&lt;class 'fractions.Fraction'&gt;, Fraction(63, 20), 4)
+
+&gt;&gt;&gt; from decimal import Decimal as D
+&gt;&gt;&gt; data = [D("0.1375"), D("0.2108"), D("0.3061"), D("0.0419")]
+&gt;&gt;&gt; _sum(data)
+(&lt;class 'decimal.Decimal'&gt;, Fraction(6963, 10000), 4)
+
+Mixed types are currently treated as an error, except that int is
+allowed.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.statistics._isfinite">
+    
+  </a>
+  <a name="_isfinite">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _isfinite(x):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.statistics._coerce">
+    
+  </a>
+  <a name="_coerce">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _coerce(T, S):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Coerce types T and S to a common type, or raise TypeError.
+
+Coercion rules are currently an implementation detail. See the CoerceTest
+test class in test_statistics for details.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.statistics._exact_ratio">
+    
+  </a>
+  <a name="_exact_ratio">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _exact_ratio(x):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return Real number x to exact (numerator, denominator) pair.
+
+&gt;&gt;&gt; _exact_ratio(0.25)
+(1, 4)
+
+x is expected to be an int, Fraction, Decimal or float.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.statistics._convert">
+    
+  </a>
+  <a name="_convert">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _convert(value, T):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convert value to given numeric type T.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.statistics._find_lteq">
+    
+  </a>
+  <a name="_find_lteq">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _find_lteq(a, x):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Locate the leftmost value exactly equal to x</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.statistics._find_rteq">
+    
+  </a>
+  <a name="_find_rteq">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _find_rteq(a, l, x):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Locate the rightmost value exactly equal to x</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.statistics._fail_neg">
+    
+  </a>
+  <a name="_fail_neg">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _fail_neg(values, errmsg="""negative value"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Iterate over values, failing if any are less than zero.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.statistics.mean">
+    
+  </a>
+  <a name="mean">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    mean(data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the sample arithmetic mean of data.
+
+&gt;&gt;&gt; mean([1, 2, 3, 4, 4])
+2.8
+
+&gt;&gt;&gt; from fractions import Fraction as F
+&gt;&gt;&gt; mean([F(3, 7), F(1, 21), F(5, 3), F(1, 3)])
+Fraction(13, 21)
+
+&gt;&gt;&gt; from decimal import Decimal as D
+&gt;&gt;&gt; mean([D("0.5"), D("0.75"), D("0.625"), D("0.375")])
+Decimal('0.5625')
+
+If ``data`` is empty, StatisticsError will be raised.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.statistics.fmean">
+    
+  </a>
+  <a name="fmean">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    fmean(data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convert data to floats and compute the arithmetic mean.
+
+This runs faster than the mean() function and it always returns a float.
+If the input dataset is empty, it raises a StatisticsError.
+
+&gt;&gt;&gt; fmean([3.5, 4.0, 5.25])
+4.25</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.statistics.geometric_mean">
+    
+  </a>
+  <a name="geometric_mean">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    geometric_mean(data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convert data to floats and compute the geometric mean.
+
+Raises a StatisticsError if the input dataset is empty,
+if it contains a zero, or if it contains a negative value.
+
+No special efforts are made to achieve exact results.
+(However, this may change in the future.)
+
+&gt;&gt;&gt; round(geometric_mean([54, 24, 36]), 9)
+36.0</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.statistics.harmonic_mean">
+    
+  </a>
+  <a name="harmonic_mean">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    harmonic_mean(data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the harmonic mean of data.
+
+The harmonic mean, sometimes called the subcontrary mean, is the
+reciprocal of the arithmetic mean of the reciprocals of the data,
+and is often appropriate when averaging quantities which are rates
+or ratios, for example speeds. Example:
+
+Suppose an investor purchases an equal value of shares in each of
+three companies, with P/E (price/earning) ratios of 2.5, 3 and 10.
+What is the average P/E ratio for the investor's portfolio?
+
+&gt;&gt;&gt; harmonic_mean([2.5, 3, 10])  # For an equal investment portfolio.
+3.6
+
+Using the arithmetic mean would give an average of about 5.167, which
+is too high.
+
+If ``data`` is empty, or any element is less than zero,
+``harmonic_mean`` will raise ``StatisticsError``.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.statistics.median">
+    
+  </a>
+  <a name="median">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    median(data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the median (middle value) of numeric data.
+
+When the number of data points is odd, return the middle data point.
+When the number of data points is even, the median is interpolated by
+taking the average of the two middle values:
+
+&gt;&gt;&gt; median([1, 3, 5])
+3
+&gt;&gt;&gt; median([1, 3, 5, 7])
+4.0</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.statistics.median_low">
+    
+  </a>
+  <a name="median_low">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    median_low(data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the low median of numeric data.
+
+When the number of data points is odd, the middle value is returned.
+When it is even, the smaller of the two middle values is returned.
+
+&gt;&gt;&gt; median_low([1, 3, 5])
+3
+&gt;&gt;&gt; median_low([1, 3, 5, 7])
+3</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.statistics.median_high">
+    
+  </a>
+  <a name="median_high">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    median_high(data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the high median of data.
+
+When the number of data points is odd, the middle value is returned.
+When it is even, the larger of the two middle values is returned.
+
+&gt;&gt;&gt; median_high([1, 3, 5])
+3
+&gt;&gt;&gt; median_high([1, 3, 5, 7])
+5</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.statistics.median_grouped">
+    
+  </a>
+  <a name="median_grouped">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    median_grouped(data, interval=1):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the 50th percentile (median) of grouped continuous data.
+
+&gt;&gt;&gt; median_grouped([1, 2, 2, 3, 4, 4, 4, 4, 4, 5])
+3.7
+&gt;&gt;&gt; median_grouped([52, 52, 53, 54])
+52.5
+
+This calculates the median as the 50th percentile, and should be
+used when your data is continuous and grouped. In the above example,
+the values 1, 2, 3, etc. actually represent the midpoint of classes
+0.5-1.5, 1.5-2.5, 2.5-3.5, etc. The middle value falls somewhere in
+class 3.5-4.5, and interpolation is used to estimate it.
+
+Optional argument ``interval`` represents the class interval, and
+defaults to 1. Changing the class interval naturally will change the
+interpolated 50th percentile value:
+
+&gt;&gt;&gt; median_grouped([1, 3, 3, 5, 7], interval=1)
+3.25
+&gt;&gt;&gt; median_grouped([1, 3, 3, 5, 7], interval=2)
+3.5
+
+This function does not check whether the data points are at least
+``interval`` apart.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.statistics.mode">
+    
+  </a>
+  <a name="mode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    mode(data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the most common data point from discrete or nominal data.
+
+``mode`` assumes discrete data, and returns a single value. This is the
+standard treatment of the mode as commonly taught in schools:
+
+    &gt;&gt;&gt; mode([1, 1, 2, 3, 3, 3, 3, 4])
+    3
+
+This also works with nominal (non-numeric) data:
+
+    &gt;&gt;&gt; mode(["red", "blue", "blue", "red", "green", "red", "red"])
+    'red'
+
+If there are multiple modes with same frequency, return the first one
+encountered:
+
+    &gt;&gt;&gt; mode(['red', 'red', 'green', 'blue', 'blue'])
+    'red'
+
+If *data* is empty, ``mode``, raises StatisticsError.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.statistics.multimode">
+    
+  </a>
+  <a name="multimode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    multimode(data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a list of the most frequently occurring values.
+
+Will return more than one result if there are multiple modes
+or an empty list if *data* is empty.
+
+&gt;&gt;&gt; multimode('aabbbbbbbbcc')
+['b']
+&gt;&gt;&gt; multimode('aabbbbccddddeeffffgg')
+['b', 'd', 'f']
+&gt;&gt;&gt; multimode('')
+[]</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.statistics.quantiles">
+    
+  </a>
+  <a name="quantiles">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    quantiles(data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Divide *data* into *n* continuous intervals with equal probability.
+
+Returns a list of (n - 1) cut points separating the intervals.
+
+Set *n* to 4 for quartiles (the default).  Set *n* to 10 for deciles.
+Set *n* to 100 for percentiles which gives the 99 cuts points that
+separate *data* in to 100 equal sized groups.
+
+The *data* can be any iterable containing sample.
+The cut points are linearly interpolated between data points.
+
+If *method* is set to *inclusive*, *data* is treated as population
+data.  The minimum value is treated as the 0th percentile and the
+maximum value is treated as the 100th percentile.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.statistics._ss">
+    
+  </a>
+  <a name="_ss">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _ss(data, c=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return sum of square deviations of sequence data.
+
+If ``c`` is None, the mean is calculated in one pass, and the deviations
+from the mean are calculated in a second pass. Otherwise, deviations are
+calculated from ``c`` as given. Use the second case with care, as it can
+lead to garbage results.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.statistics.variance">
+    
+  </a>
+  <a name="variance">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    variance(data, xbar=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the sample variance of data.
+
+data should be an iterable of Real-valued numbers, with at least two
+values. The optional argument xbar, if given, should be the mean of
+the data. If it is missing or None, the mean is automatically calculated.
+
+Use this function when your data is a sample from a population. To
+calculate the variance from the entire population, see ``pvariance``.
+
+Examples:
+
+&gt;&gt;&gt; data = [2.75, 1.75, 1.25, 0.25, 0.5, 1.25, 3.5]
+&gt;&gt;&gt; variance(data)
+1.3720238095238095
+
+If you have already calculated the mean of your data, you can pass it as
+the optional second argument ``xbar`` to avoid recalculating it:
+
+&gt;&gt;&gt; m = mean(data)
+&gt;&gt;&gt; variance(data, m)
+1.3720238095238095
+
+This function does not check that ``xbar`` is actually the mean of
+``data``. Giving arbitrary values for ``xbar`` may lead to invalid or
+impossible results.
+
+Decimals and Fractions are supported:
+
+&gt;&gt;&gt; from decimal import Decimal as D
+&gt;&gt;&gt; variance([D("27.5"), D("30.25"), D("30.25"), D("34.5"), D("41.75")])
+Decimal('31.01875')
+
+&gt;&gt;&gt; from fractions import Fraction as F
+&gt;&gt;&gt; variance([F(1, 6), F(1, 2), F(5, 3)])
+Fraction(67, 108)</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.statistics.pvariance">
+    
+  </a>
+  <a name="pvariance">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    pvariance(data, mu=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the population variance of ``data``.
+
+data should be a sequence or iterable of Real-valued numbers, with at least one
+value. The optional argument mu, if given, should be the mean of
+the data. If it is missing or None, the mean is automatically calculated.
+
+Use this function to calculate the variance from the entire population.
+To estimate the variance from a sample, the ``variance`` function is
+usually a better choice.
+
+Examples:
+
+&gt;&gt;&gt; data = [0.0, 0.25, 0.25, 1.25, 1.5, 1.75, 2.75, 3.25]
+&gt;&gt;&gt; pvariance(data)
+1.25
+
+If you have already calculated the mean of the data, you can pass it as
+the optional second argument to avoid recalculating it:
+
+&gt;&gt;&gt; mu = mean(data)
+&gt;&gt;&gt; pvariance(data, mu)
+1.25
+
+Decimals and Fractions are supported:
+
+&gt;&gt;&gt; from decimal import Decimal as D
+&gt;&gt;&gt; pvariance([D("27.5"), D("30.25"), D("30.25"), D("34.5"), D("41.75")])
+Decimal('24.815')
+
+&gt;&gt;&gt; from fractions import Fraction as F
+&gt;&gt;&gt; pvariance([F(1, 4), F(5, 4), F(1, 2)])
+Fraction(13, 72)</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.statistics.stdev">
+    
+  </a>
+  <a name="stdev">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    stdev(data, xbar=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the square root of the sample variance.
+
+See ``variance`` for arguments and other details.
+
+&gt;&gt;&gt; stdev([1.5, 2.5, 2.5, 2.75, 3.25, 4.75])
+1.0810874155219827</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.statistics.pstdev">
+    
+  </a>
+  <a name="pstdev">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    pstdev(data, mu=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the square root of the population variance.
+
+See ``pvariance`` for arguments and other details.
+
+&gt;&gt;&gt; pstdev([1.5, 2.5, 2.5, 2.75, 3.25, 4.75])
+0.986893273527251</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.statistics._normal_dist_inv_cdf">
+    
+  </a>
+  <a name="_normal_dist_inv_cdf">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _normal_dist_inv_cdf(p, mu, sigma):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

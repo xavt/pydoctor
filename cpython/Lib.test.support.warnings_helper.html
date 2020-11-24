@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.test.support.warnings_helper : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.test.html" class="code" data-type="Package">test</a>.<a href="Lib.test.support.html" class="code" data-type="Package">support</a>.<a href="Lib.test.support.warnings_helper.html" class="code" data-type="Module">warnings_helper</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div class="undocumented">Undocumented</div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id4185">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.support.warnings_helper.html#check_syntax_warning" class="code" data-type="Function">check_syntax_warning</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.support.warnings_helper.html#ignore_warnings" class="code" data-type="Function">ignore_warnings</a></td>
+    <td><span>Decorator to suppress deprecation warnings.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.support.warnings_helper.WarningsRecorder.html" class="code" data-type="Class">WarningsRecorder</a></td>
+    <td><span>Convenience wrapper for the warnings list returned on entry to the warnings.catch_warnings() context manager.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.support.warnings_helper.html#check_warnings" class="code" data-type="Function">check_warnings</a></td>
+    <td><span>Context manager to silence warnings.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.support.warnings_helper.html#check_no_warnings" class="code" data-type="Function">check_no_warnings</a></td>
+    <td><span>Context manager to check that no warnings are emitted.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.support.warnings_helper.html#check_no_resource_warning" class="code" data-type="Function">check_no_resource_warning</a></td>
+    <td><span>Context manager to check that no ResourceWarning is emitted.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.support.warnings_helper.html#save_restore_warnings_filters" class="code" data-type="Function">save_restore_warnings_filters</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.support.warnings_helper.html#_filterwarnings" class="code" data-type="Function">_filterwarnings</a></td>
+    <td><span>Catch the warnings, then check if all the expected warnings have been raised and re-raise unexpected warnings. If 'quiet' is True, only re-raise the unexpected warnings.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction">
+  
+  <a name="Lib.test.support.warnings_helper.check_syntax_warning">
+    
+  </a>
+  <a name="check_syntax_warning">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    check_syntax_warning(testcase, statement, errtext=""""""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.support.warnings_helper.ignore_warnings">
+    
+  </a>
+  <a name="ignore_warnings">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ignore_warnings():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Decorator to suppress deprecation warnings.
+
+Use of context managers to hide warnings make diffs
+more noisy and tools like 'git blame' less useful.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.support.warnings_helper.check_warnings">
+    
+  </a>
+  <a name="check_warnings">
+    
+  </a>
+  <div class="functionHeader">
+    @contextlib.contextmanager<br />
+    def
+    check_warnings(*filters, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Context manager to silence warnings.
+
+Accept 2-tuples as positional arguments:
+    ("message regexp", WarningCategory)
+
+Optional argument:
+ - if 'quiet' is True, it does not fail if a filter catches nothing
+    (default True without argument,
+     default False if some filters are defined)
+
+Without argument, it defaults to:
+    check_warnings(("", Warning), quiet=True)</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.support.warnings_helper.check_no_warnings">
+    
+  </a>
+  <a name="check_no_warnings">
+    
+  </a>
+  <div class="functionHeader">
+    @contextlib.contextmanager<br />
+    def
+    check_no_warnings(testcase, message="""""", category=Warning, force_gc=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Context manager to check that no warnings are emitted.
+
+This context manager enables a given warning within its scope
+and checks that no warnings are emitted even with that warning
+enabled.
+
+If force_gc is True, a garbage collection is attempted before checking
+for warnings. This may help to catch warnings emitted when objects
+are deleted, such as ResourceWarning.
+
+Other keyword arguments are passed to warnings.filterwarnings().</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.support.warnings_helper.check_no_resource_warning">
+    
+  </a>
+  <a name="check_no_resource_warning">
+    
+  </a>
+  <div class="functionHeader">
+    @contextlib.contextmanager<br />
+    def
+    check_no_resource_warning(testcase):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Context manager to check that no ResourceWarning is emitted.
+
+Usage:
+
+    with check_no_resource_warning(self):
+        f = open(...)
+        ...
+        del f
+
+You must remove the object which may emit ResourceWarning before
+the end of the context manager.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.test.support.warnings_helper._filterwarnings">
+    
+  </a>
+  <a name="_filterwarnings">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _filterwarnings(filters, quiet=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Catch the warnings, then check if all the expected
+warnings have been raised and re-raise unexpected warnings.
+If 'quiet' is True, only re-raise the unexpected warnings.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.support.warnings_helper.save_restore_warnings_filters">
+    
+  </a>
+  <a name="save_restore_warnings_filters">
+    
+  </a>
+  <div class="functionHeader">
+    @contextlib.contextmanager<br />
+    def
+    save_restore_warnings_filters():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

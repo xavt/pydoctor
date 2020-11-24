@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.idlelib.redirector.OriginalCommand : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.idlelib.html" class="code" data-type="Package">idlelib</a>.<a href="Lib.idlelib.redirector.html" class="code" data-type="Module">redirector</a>.<a href="Lib.idlelib.redirector.OriginalCommand.html" class="code" data-type="Class">OriginalCommand</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.idlelib.redirector.OriginalCommand:</code></p>
+        <p><a href="classIndex.html#Lib.idlelib.redirector.OriginalCommand">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Callable for original tk command that has been redirected.
+
+Returned by .register; can be used in the function registered.
+redir = WidgetRedirector(text)
+def my_insert(*args):
+    print("insert", args)
+    original_insert(*args)
+original_insert = redir.register("insert", my_insert)</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2428">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.redirector.OriginalCommand.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Create .tk_call and .orig_and_operation for .__call__ method.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.redirector.OriginalCommand.html#redir" class="code" data-type="Instance Variable">redir</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.redirector.OriginalCommand.html#operation" class="code" data-type="Instance Variable">operation</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.redirector.OriginalCommand.html#tk" class="code" data-type="Instance Variable">tk</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.redirector.OriginalCommand.html#orig" class="code" data-type="Instance Variable">orig</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.redirector.OriginalCommand.html#tk_call" class="code" data-type="Instance Variable">tk_call</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.redirector.OriginalCommand.html#orig_and_operation" class="code" data-type="Instance Variable">orig_and_operation</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.redirector.OriginalCommand.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.redirector.OriginalCommand.html#__call__" class="code" data-type="Method">__call__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.idlelib.redirector.OriginalCommand.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, redir, operation):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create .tk_call and .orig_and_operation for .__call__ method.
+
+.redir and .operation store the input args for __repr__.
+.tk and .orig copy attributes of .redir (probably not needed).</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.redirector.OriginalCommand.redir">
+    
+  </a>
+  <a name="redir">
+    
+  </a>
+  <div class="functionHeader">
+    redir =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.redirector.OriginalCommand.operation">
+    
+  </a>
+  <a name="operation">
+    
+  </a>
+  <div class="functionHeader">
+    operation =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.redirector.OriginalCommand.tk">
+    
+  </a>
+  <a name="tk">
+    
+  </a>
+  <div class="functionHeader">
+    tk =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.redirector.OriginalCommand.orig">
+    
+  </a>
+  <a name="orig">
+    
+  </a>
+  <div class="functionHeader">
+    orig =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.redirector.OriginalCommand.tk_call">
+    
+  </a>
+  <a name="tk_call">
+    
+  </a>
+  <div class="functionHeader">
+    tk_call =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.redirector.OriginalCommand.orig_and_operation">
+    
+  </a>
+  <a name="orig_and_operation">
+    
+  </a>
+  <div class="functionHeader">
+    orig_and_operation =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.redirector.OriginalCommand.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __repr__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.redirector.OriginalCommand.__call__">
+    
+  </a>
+  <a name="__call__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __call__(self, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

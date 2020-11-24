@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.ssl : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.ssl.html" class="code" data-type="Module">ssl</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">This module provides some more Pythonic support for SSL.
+
+Object types:
+
+  SSLSocket -- subtype of socket.socket which does SSL over the socket
+
+Exceptions:
+
+  SSLError -- exception raised for I/O errors
+
+Functions:
+
+  cert_time_to_seconds -- convert time string used for certificate
+                          notBefore and notAfter functions to integer
+                          seconds past the Epoch (the time values
+                          returned from time.time())
+
+  fetch_server_certificate (HOST, PORT) -- fetch the certificate provided
+                          by the server running on HOST at port PORT.  No
+                          validation of the certificate is performed.
+
+Integer constants:
+
+SSL_ERROR_ZERO_RETURN
+SSL_ERROR_WANT_READ
+SSL_ERROR_WANT_WRITE
+SSL_ERROR_WANT_X509_LOOKUP
+SSL_ERROR_SYSCALL
+SSL_ERROR_SSL
+SSL_ERROR_WANT_CONNECT
+
+SSL_ERROR_EOF
+SSL_ERROR_INVALID_ERROR_CODE
+
+The following group define certificate requirements that one side is
+allowing/requiring from the other side:
+
+CERT_NONE - no certificates from the other side are required (or will
+            be looked at if provided)
+CERT_OPTIONAL - certificates are not required, but if provided will be
+                validated, and if validation fails, the connection will
+                also fail
+CERT_REQUIRED - certificates are required, and will be validated, and
+                if validation fails, the connection will also fail
+
+The following constants identify various SSL protocol variants:
+
+PROTOCOL_SSLv2
+PROTOCOL_SSLv3
+PROTOCOL_SSLv23
+PROTOCOL_TLS
+PROTOCOL_TLS_CLIENT
+PROTOCOL_TLS_SERVER
+PROTOCOL_TLSv1
+PROTOCOL_TLSv1_1
+PROTOCOL_TLSv1_2
+
+The following constants identify various SSL alert message descriptions as per
+http://www.iana.org/assignments/tls-parameters/tls-parameters.xml#tls-parameters-6
+
+ALERT_DESCRIPTION_CLOSE_NOTIFY
+ALERT_DESCRIPTION_UNEXPECTED_MESSAGE
+ALERT_DESCRIPTION_BAD_RECORD_MAC
+ALERT_DESCRIPTION_RECORD_OVERFLOW
+ALERT_DESCRIPTION_DECOMPRESSION_FAILURE
+ALERT_DESCRIPTION_HANDSHAKE_FAILURE
+ALERT_DESCRIPTION_BAD_CERTIFICATE
+ALERT_DESCRIPTION_UNSUPPORTED_CERTIFICATE
+ALERT_DESCRIPTION_CERTIFICATE_REVOKED
+ALERT_DESCRIPTION_CERTIFICATE_EXPIRED
+ALERT_DESCRIPTION_CERTIFICATE_UNKNOWN
+ALERT_DESCRIPTION_ILLEGAL_PARAMETER
+ALERT_DESCRIPTION_UNKNOWN_CA
+ALERT_DESCRIPTION_ACCESS_DENIED
+ALERT_DESCRIPTION_DECODE_ERROR
+ALERT_DESCRIPTION_DECRYPT_ERROR
+ALERT_DESCRIPTION_PROTOCOL_VERSION
+ALERT_DESCRIPTION_INSUFFICIENT_SECURITY
+ALERT_DESCRIPTION_INTERNAL_ERROR
+ALERT_DESCRIPTION_USER_CANCELLED
+ALERT_DESCRIPTION_NO_RENEGOTIATION
+ALERT_DESCRIPTION_UNSUPPORTED_EXTENSION
+ALERT_DESCRIPTION_CERTIFICATE_UNOBTAINABLE
+ALERT_DESCRIPTION_UNRECOGNIZED_NAME
+ALERT_DESCRIPTION_BAD_CERTIFICATE_STATUS_RESPONSE
+ALERT_DESCRIPTION_BAD_CERTIFICATE_HASH_VALUE
+ALERT_DESCRIPTION_UNKNOWN_PSK_IDENTITY</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3653">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.ssl.TLSVersion.html" class="code" data-type="Class">TLSVersion</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ssl.html#CHANNEL_BINDING_TYPES" class="code" data-type="Variable">CHANNEL_BINDING_TYPES</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ssl.html#HAS_NEVER_CHECK_COMMON_NAME" class="code" data-type="Variable">HAS_NEVER_CHECK_COMMON_NAME</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ssl.html#match_hostname" class="code" data-type="Function">match_hostname</a></td>
+    <td><span>Verify that *cert* (in decoded format as returned by SSLSocket.getpeercert()) matches the *hostname*.  RFC 2818 and RFC 6125 rules are followed.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ssl.html#DefaultVerifyPaths" class="code" data-type="Variable">DefaultVerifyPaths</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ssl.html#get_default_verify_paths" class="code" data-type="Function">get_default_verify_paths</a></td>
+    <td><span>Return paths to default cafile and capath.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.ssl.Purpose.html" class="code" data-type="Class">Purpose</a></td>
+    <td><span>SSLContext purpose flags with X509v3 Extended Key Usage objects</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.ssl.SSLContext.html" class="code" data-type="Class">SSLContext</a></td>
+    <td><span>An SSLContext holds various SSL-related configuration options and data, such as certificates and possibly a private key.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ssl.html#create_default_context" class="code" data-type="Function">create_default_context</a></td>
+    <td><span>Create a SSLContext object with default settings.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.ssl.SSLObject.html" class="code" data-type="Class">SSLObject</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.ssl.SSLSocket.html" class="code" data-type="Class">SSLSocket</a></td>
+    <td><span>This class implements a subtype of socket.socket that wraps the underlying OS socket in an SSL context when necessary, and provides read and write methods over that channel.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ssl.html#wrap_socket" class="code" data-type="Function">wrap_socket</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ssl.html#cert_time_to_seconds" class="code" data-type="Function">cert_time_to_seconds</a></td>
+    <td><span>Return the time in seconds since the Epoch, given the timestring representing the "notBefore" or "notAfter" date from a certificate in ``"%b %d %H:%M:%S %Y %Z"`` strptime format (C locale).</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ssl.html#PEM_HEADER" class="code" data-type="Variable">PEM_HEADER</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ssl.html#PEM_FOOTER" class="code" data-type="Variable">PEM_FOOTER</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ssl.html#DER_cert_to_PEM_cert" class="code" data-type="Function">DER_cert_to_PEM_cert</a></td>
+    <td><span>Takes a certificate in binary DER format and returns the PEM version of it as a string.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ssl.html#PEM_cert_to_DER_cert" class="code" data-type="Function">PEM_cert_to_DER_cert</a></td>
+    <td><span>Takes a certificate in ASCII PEM format and returns the DER-encoded version of it as a byte sequence</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ssl.html#get_server_certificate" class="code" data-type="Function">get_server_certificate</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ssl.html#get_protocol_name" class="code" data-type="Function">get_protocol_name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ssl.html#_PROTOCOL_NAMES" class="code" data-type="Variable">_PROTOCOL_NAMES</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ssl.html#_SSLv2_IF_EXISTS" class="code" data-type="Variable">_SSLv2_IF_EXISTS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.ssl._TLSContentType.html" class="code" data-type="Class">_TLSContentType</a></td>
+    <td><span>Content types (record layer)</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.ssl._TLSAlertType.html" class="code" data-type="Class">_TLSAlertType</a></td>
+    <td><span>Alert types for TLSContentType.ALERT messages</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.ssl._TLSMessageType.html" class="code" data-type="Class">_TLSMessageType</a></td>
+    <td><span>Message types (handshake protocol)</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.ssl.html#_dnsname_match" class="code" data-type="Function">_dnsname_match</a></td>
+    <td><span>Matching according to RFC 6125, section 6.4.3</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.ssl.html#_inet_paton" class="code" data-type="Function">_inet_paton</a></td>
+    <td><span>Try to convert an IP address to packed binary form</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.ssl.html#_ipaddress_match" class="code" data-type="Function">_ipaddress_match</a></td>
+    <td><span>Exact matching of IP addresses.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.ssl._ASN1Object.html" class="code" data-type="Class">_ASN1Object</a></td>
+    <td><span>ASN.1 object identifier lookup</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.ssl.html#_create_unverified_context" class="code" data-type="Function">_create_unverified_context</a></td>
+    <td><span>Create a SSLContext object for Python stdlib modules</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.ssl.html#_sslcopydoc" class="code" data-type="Function">_sslcopydoc</a></td>
+    <td><span>Copy docstring from SSLObject to SSLSocket</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable private">
+  
+  <a name="Lib.ssl._PROTOCOL_NAMES">
+    
+  </a>
+  <a name="_PROTOCOL_NAMES">
+    
+  </a>
+  <div class="functionHeader">
+    _PROTOCOL_NAMES =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.ssl._SSLv2_IF_EXISTS">
+    
+  </a>
+  <a name="_SSLv2_IF_EXISTS">
+    
+  </a>
+  <div class="functionHeader">
+    _SSLv2_IF_EXISTS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.ssl.CHANNEL_BINDING_TYPES">
+    
+  </a>
+  <a name="CHANNEL_BINDING_TYPES">
+    
+  </a>
+  <div class="functionHeader">
+    CHANNEL_BINDING_TYPES =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[str]</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.ssl.HAS_NEVER_CHECK_COMMON_NAME">
+    
+  </a>
+  <a name="HAS_NEVER_CHECK_COMMON_NAME">
+    
+  </a>
+  <div class="functionHeader">
+    HAS_NEVER_CHECK_COMMON_NAME =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.ssl._dnsname_match">
+    
+  </a>
+  <a name="_dnsname_match">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _dnsname_match(dn, hostname):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Matching according to RFC 6125, section 6.4.3
+
+- Hostnames are compared lower case.
+- For IDNA, both dn and hostname must be encoded as IDN A-label (ACE).
+- Partial wildcards like 'www*.example.org', multiple wildcards, sole
+  wildcard or wildcards in labels other then the left-most label are not
+  supported and a CertificateError is raised.
+- A wildcard must match at least one character.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.ssl._inet_paton">
+    
+  </a>
+  <a name="_inet_paton">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _inet_paton(ipname):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Try to convert an IP address to packed binary form
+
+Supports IPv4 addresses on all platforms and IPv6 on platforms with IPv6
+support.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.ssl._ipaddress_match">
+    
+  </a>
+  <a name="_ipaddress_match">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _ipaddress_match(cert_ipaddress, host_ip):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Exact matching of IP addresses.
+
+RFC 6125 explicitly doesn't define an algorithm for this
+(section 1.7.2 - "Out of Scope").</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ssl.match_hostname">
+    
+  </a>
+  <a name="match_hostname">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    match_hostname(cert, hostname):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Verify that *cert* (in decoded format as returned by
+SSLSocket.getpeercert()) matches the *hostname*.  RFC 2818 and RFC 6125
+rules are followed.
+
+The function matches IP addresses rather than dNSNames if hostname is a
+valid ipaddress string. IPv4 addresses are supported on all platforms.
+IPv6 addresses are supported on platforms with IPv6 support (AF_INET6
+and inet_pton).
+
+CertificateError is raised on failure. On success, the function
+returns nothing.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.ssl.DefaultVerifyPaths">
+    
+  </a>
+  <a name="DefaultVerifyPaths">
+    
+  </a>
+  <div class="functionHeader">
+    DefaultVerifyPaths =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ssl.get_default_verify_paths">
+    
+  </a>
+  <a name="get_default_verify_paths">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_default_verify_paths():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return paths to default cafile and capath.
+    </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ssl.create_default_context">
+    
+  </a>
+  <a name="create_default_context">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    create_default_context(purpose=Purpose.SERVER_AUTH):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create a SSLContext object with default settings.
+
+NOTE: The protocol and settings may change anytime without prior
+      deprecation. The values represent a fair balance between maximum
+      compatibility and security.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.ssl._create_unverified_context">
+    
+  </a>
+  <a name="_create_unverified_context">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _create_unverified_context(protocol=PROTOCOL_TLS):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create a SSLContext object for Python stdlib modules
+
+All Python stdlib modules shall use this function to create SSLContext
+objects in order to keep common settings in one place. The configuration
+is less restrict than create_default_context()'s to increase backward
+compatibility.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.ssl._sslcopydoc">
+    
+  </a>
+  <a name="_sslcopydoc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _sslcopydoc(func):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Copy docstring from SSLObject to SSLSocket</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ssl.wrap_socket">
+    
+  </a>
+  <a name="wrap_socket">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    wrap_socket(sock, keyfile=None, certfile=None, server_side=(False), cert_reqs=CERT_NONE, ssl_version=PROTOCOL_TLS, ca_certs=None, do_handshake_on_connect=(True), suppress_ragged_eofs=(True), ciphers=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ssl.cert_time_to_seconds">
+    
+  </a>
+  <a name="cert_time_to_seconds">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    cert_time_to_seconds(cert_time):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the time in seconds since the Epoch, given the timestring
+representing the "notBefore" or "notAfter" date from a certificate
+in ``"%b %d %H:%M:%S %Y %Z"`` strptime format (C locale).
+
+"notBefore" or "notAfter" dates must use UTC (RFC 5280).
+
+Month is one of: Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec
+UTC should be specified as GMT (see ASN1_TIME_print())</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.ssl.PEM_HEADER">
+    
+  </a>
+  <a name="PEM_HEADER">
+    
+  </a>
+  <div class="functionHeader">
+    PEM_HEADER =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.ssl.PEM_FOOTER">
+    
+  </a>
+  <a name="PEM_FOOTER">
+    
+  </a>
+  <div class="functionHeader">
+    PEM_FOOTER =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ssl.DER_cert_to_PEM_cert">
+    
+  </a>
+  <a name="DER_cert_to_PEM_cert">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    DER_cert_to_PEM_cert(der_cert_bytes):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Takes a certificate in binary DER format and returns the
+PEM version of it as a string.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ssl.PEM_cert_to_DER_cert">
+    
+  </a>
+  <a name="PEM_cert_to_DER_cert">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    PEM_cert_to_DER_cert(pem_cert_string):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Takes a certificate in ASCII PEM format and returns the
+DER-encoded version of it as a byte sequence</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ssl.get_server_certificate">
+    
+  </a>
+  <a name="get_server_certificate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_server_certificate(addr, ssl_version=PROTOCOL_TLS, ca_certs=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Retrieve the certificate from the server at the specified address,
+and return it as a PEM-encoded string.
+If 'ca_certs' is specified, validate the server cert against it.
+If 'ssl_version' is specified, use it in the connection attempt.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ssl.get_protocol_name">
+    
+  </a>
+  <a name="get_protocol_name">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_protocol_name(protocol_code):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

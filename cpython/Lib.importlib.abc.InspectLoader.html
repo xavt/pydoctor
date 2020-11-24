@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.importlib.abc.InspectLoader : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.importlib.html" class="code" data-type="Package">importlib</a>.<a href="Lib.importlib.abc.html" class="code" data-type="Module">abc</a>.<a href="Lib.importlib.abc.InspectLoader.html" class="code" data-type="Class">InspectLoader</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.importlib.abc.InspectLoader(<a href="Lib.importlib._abc.Loader.html" class="code" data-type="Class">Loader</a>):</code></p><p>Known subclasses: <a href="Lib.importlib.abc.ExecutionLoader.html" class="code" data-type="Class">Lib.importlib.abc.ExecutionLoader</a></p>
+        <p><a href="classIndex.html#Lib.importlib.abc.InspectLoader">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Abstract base class for loaders which support inspection about the
+modules they can load.
+
+This ABC represents one of the optional protocols specified by PEP 302.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2564">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib.abc.InspectLoader.html#is_package" class="code" data-type="Method">is_package</a></td>
+    <td><span>Optional method which when implemented should return whether the module is a package.  The fullname is a str.  Returns a bool.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib.abc.InspectLoader.html#get_code" class="code" data-type="Method">get_code</a></td>
+    <td><span>Method which returns the code object for the module.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib.abc.InspectLoader.html#get_source" class="code" data-type="Method">get_source</a></td>
+    <td><span>Abstract method which should return the source code for the module.  The fullname is a str.  Returns a str.</span></td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><a href="Lib.importlib.abc.InspectLoader.html#source_to_code" class="code" data-type="Static Method">source_to_code</a></td>
+    <td><span>Compile 'data' into a code object.</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.importlib._abc.Loader.html" class="code" data-type="Class">Loader</a>:
+          </p>
+          <table class="children sortable" id="id2565">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib._abc.Loader.html#create_module" class="code" data-type="Method">create_module</a></td>
+    <td><span>Return a module to initialize and into which to load.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib._abc.Loader.html#load_module" class="code" data-type="Method">load_module</a></td>
+    <td><span>Return the loaded module.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib._abc.Loader.html#module_repr" class="code" data-type="Method">module_repr</a></td>
+    <td><span>Return a module's repr.</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.importlib.abc.InspectLoader.is_package">
+    
+  </a>
+  <a name="is_package">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_package(self, fullname):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Optional method which when implemented should return whether the
+module is a package.  The fullname is a str.  Returns a bool.
+
+Raises ImportError if the module cannot be found.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.importlib.abc.InspectLoader.get_code">
+    
+  </a>
+  <a name="get_code">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_code(self, fullname):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.importlib.abc.ExecutionLoader.html" class="code" data-type="Class">Lib.importlib.abc.ExecutionLoader</a></div>
+    
+    <div><p class="pre">Method which returns the code object for the module.
+
+The fullname is a str.  Returns a types.CodeType if possible, else
+returns None if a code object does not make sense
+(e.g. built-in module). Raises ImportError if the module cannot be
+found.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.importlib.abc.InspectLoader.get_source">
+    
+  </a>
+  <a name="get_source">
+    
+  </a>
+  <div class="functionHeader">
+    @abc.abstractmethod<br />
+    def
+    get_source(self, fullname):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Abstract method which should return the source code for the
+module.  The fullname is a str.  Returns a str.
+
+Raises ImportError if the module cannot be found.</p></div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  <a name="Lib.importlib.abc.InspectLoader.source_to_code">
+    
+  </a>
+  <a name="source_to_code">
+    
+  </a>
+  <div class="functionHeader">
+    @staticmethod<br />
+    def
+    source_to_code(data, path="""&lt;string&gt;"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Compile 'data' into a code object.
+
+The 'data' argument can be anything that compile() can handle. The'path'
+argument should be where the data was retrieved (when applicable).</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.email.generator.BytesGenerator : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.email.html" class="code" data-type="Package">email</a>.<a href="Lib.email.generator.html" class="code" data-type="Module">generator</a>.<a href="Lib.email.generator.BytesGenerator.html" class="code" data-type="Class">BytesGenerator</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.email.generator.BytesGenerator(<a href="Lib.email.generator.Generator.html" class="code" data-type="Class">Generator</a>):</code></p>
+        <p><a href="classIndex.html#Lib.email.generator.BytesGenerator">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Generates a bytes version of a Message object tree.
+
+Functionally identical to the base Generator except that the output is
+bytes and not string.  When surrogates were used in the input to encode
+bytes, these are decoded back to bytes for output.  If the policy has
+cte_type set to 7bit, then the message is transformed such that the
+non-ASCII bytes are properly content transfer encoded, using the charset
+unknown-8bit.
+
+The outfp object must accept bytes in its write method.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id1298">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.generator.BytesGenerator.html#write" class="code" data-type="Method">write</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.generator.BytesGenerator.html#_new_buffer" class="code" data-type="Method">_new_buffer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.generator.BytesGenerator.html#_encode" class="code" data-type="Method">_encode</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.generator.BytesGenerator.html#_write_headers" class="code" data-type="Method">_write_headers</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.generator.BytesGenerator.html#_handle_text" class="code" data-type="Method">_handle_text</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.email.generator.BytesGenerator.html#_compile_re" class="code" data-type="Class Method">_compile_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.email.generator.Generator.html" class="code" data-type="Class">Generator</a>:
+          </p>
+          <table class="children sortable" id="id1299">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.generator.Generator.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Create the generator for message flattening.</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.email.generator.Generator.html#maxheaderlen" class="code" data-type="Instance Variable">maxheaderlen</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.email.generator.Generator.html#policy" class="code" data-type="Instance Variable">policy</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.generator.Generator.html#flatten" class="code" data-type="Method">flatten</a></td>
+    <td><span>Print the message object tree rooted at msg to the output file specified when the Generator instance was created.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.generator.Generator.html#clone" class="code" data-type="Method">clone</a></td>
+    <td><span>Clone this generator with the exact same options.</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.email.generator.Generator.html#_fp" class="code" data-type="Instance Variable">_fp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.email.generator.Generator.html#_mangle_from_" class="code" data-type="Instance Variable">_mangle_from_</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.email.generator.Generator.html#_NL" class="code" data-type="Instance Variable">_NL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.email.generator.Generator.html#_encoded_NL" class="code" data-type="Instance Variable">_encoded_NL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.email.generator.Generator.html#_EMPTY" class="code" data-type="Instance Variable">_EMPTY</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.email.generator.Generator.html#_encoded_EMPTY" class="code" data-type="Instance Variable">_encoded_EMPTY</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.generator.Generator.html#_write_lines" class="code" data-type="Method">_write_lines</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.generator.Generator.html#_write" class="code" data-type="Method">_write</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.email.generator.Generator.html#_munge_cte" class="code" data-type="Instance Variable">_munge_cte</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.generator.Generator.html#_dispatch" class="code" data-type="Method">_dispatch</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.generator.Generator.html#_handle_multipart" class="code" data-type="Method">_handle_multipart</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.generator.Generator.html#_handle_multipart_signed" class="code" data-type="Method">_handle_multipart_signed</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.generator.Generator.html#_handle_message_delivery_status" class="code" data-type="Method">_handle_message_delivery_status</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.generator.Generator.html#_handle_message" class="code" data-type="Method">_handle_message</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.email.generator.Generator.html#_make_boundary" class="code" data-type="Class Method">_make_boundary</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.email.generator.BytesGenerator.write">
+    
+  </a>
+  <a name="write">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    write(self, s):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.email.generator.Generator.html#write" class="code" data-type="Method">Lib.email.generator.Generator.write</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.email.generator.BytesGenerator._new_buffer">
+    
+  </a>
+  <a name="_new_buffer">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _new_buffer(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.email.generator.Generator.html#_new_buffer" class="code" data-type="Method">Lib.email.generator.Generator._new_buffer</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.email.generator.BytesGenerator._encode">
+    
+  </a>
+  <a name="_encode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _encode(self, s):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.email.generator.Generator.html#_encode" class="code" data-type="Method">Lib.email.generator.Generator._encode</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.email.generator.BytesGenerator._write_headers">
+    
+  </a>
+  <a name="_write_headers">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _write_headers(self, msg):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.email.generator.Generator.html#_write_headers" class="code" data-type="Method">Lib.email.generator.Generator._write_headers</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.email.generator.BytesGenerator._handle_text">
+    
+  </a>
+  <a name="_handle_text">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _handle_text(self, msg):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.email.generator.Generator.html#_handle_text" class="code" data-type="Method">Lib.email.generator.Generator._handle_text</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassmethod private">
+  
+  <a name="Lib.email.generator.BytesGenerator._compile_re">
+    
+  </a>
+  <a name="_compile_re">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    _compile_re(cls, s, flags):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.email.generator.Generator.html#_compile_re" class="code" data-type="Class Method">Lib.email.generator.Generator._compile_re</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

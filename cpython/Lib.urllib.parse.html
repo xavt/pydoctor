@@ -1,0 +1,1941 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.urllib.parse : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.urllib.html" class="code" data-type="Package">urllib</a>.<a href="Lib.urllib.parse.html" class="code" data-type="Module">parse</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Parse (absolute and relative) URLs.
+
+urlparse module is based upon the following RFC specifications.
+
+RFC 3986 (STD66): "Uniform Resource Identifiers" by T. Berners-Lee, R. Fielding
+and L.  Masinter, January 2005.
+
+RFC 2732 : "Format for Literal IPv6 Addresses in URL's by R.Hinden, B.Carpenter
+and L.Masinter, December 1999.
+
+RFC 2396:  "Uniform Resource Identifiers (URI)": Generic Syntax by T.
+Berners-Lee, R. Fielding, and L. Masinter, August 1998.
+
+RFC 2368: "The mailto URL scheme", by P.Hoffman , L Masinter, J. Zawinski, July 1998.
+
+RFC 1808: "Relative Uniform Resource Locators", by R. Fielding, UC Irvine, June
+1995.
+
+RFC 1738: "Uniform Resource Locators (URL)" by T. Berners-Lee, L. Masinter, M.
+McCahill, December 1994
+
+RFC 3986 is considered the current standard and any future changes to
+urlparse module should conform with it.  The urlparse module is
+currently not entirely compliant with this RFC due to defacto
+scenarios for parsing, and for backward compatibility purposes, some
+parsing quirks from older RFCs are retained. The testcases in
+test_urlparse.py provides a good indicator of parsing behavior.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id11825">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.parse.html#uses_relative" class="code" data-type="Variable">uses_relative</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.parse.html#uses_netloc" class="code" data-type="Variable">uses_netloc</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.parse.html#uses_params" class="code" data-type="Variable">uses_params</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.parse.html#non_hierarchical" class="code" data-type="Variable">non_hierarchical</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.parse.html#uses_query" class="code" data-type="Variable">uses_query</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.parse.html#uses_fragment" class="code" data-type="Variable">uses_fragment</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.parse.html#scheme_chars" class="code" data-type="Variable">scheme_chars</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.parse.html#MAX_CACHE_SIZE" class="code" data-type="Variable">MAX_CACHE_SIZE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#clear_cache" class="code" data-type="Function">clear_cache</a></td>
+    <td><span>Clear the parse cache and the quoters cache.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.parse.DefragResult.html" class="code" data-type="Class">DefragResult</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.parse.SplitResult.html" class="code" data-type="Class">SplitResult</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.parse.ParseResult.html" class="code" data-type="Class">ParseResult</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.parse.DefragResultBytes.html" class="code" data-type="Class">DefragResultBytes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.parse.SplitResultBytes.html" class="code" data-type="Class">SplitResultBytes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.parse.ParseResultBytes.html" class="code" data-type="Class">ParseResultBytes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#urlparse" class="code" data-type="Function">urlparse</a></td>
+    <td><span>Parse a URL into 6 components: &lt;scheme&gt;://&lt;netloc&gt;/&lt;path&gt;;&lt;params&gt;?&lt;query&gt;#&lt;fragment&gt;</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#urlsplit" class="code" data-type="Function">urlsplit</a></td>
+    <td><span>Parse a URL into 5 components: &lt;scheme&gt;://&lt;netloc&gt;/&lt;path&gt;?&lt;query&gt;#&lt;fragment&gt;</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#urlunparse" class="code" data-type="Function">urlunparse</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#urlunsplit" class="code" data-type="Function">urlunsplit</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#urljoin" class="code" data-type="Function">urljoin</a></td>
+    <td><span>Join a base URL and a possibly relative URL to form an absolute interpretation of the latter.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#urldefrag" class="code" data-type="Function">urldefrag</a></td>
+    <td><span>Removes any existing fragment from URL.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#unquote_to_bytes" class="code" data-type="Function">unquote_to_bytes</a></td>
+    <td><span>unquote_to_bytes('abc%20def') -&gt; b'abc def'.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#unquote" class="code" data-type="Function">unquote</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#parse_qs" class="code" data-type="Function">parse_qs</a></td>
+    <td><span>Parse a query given as a string argument.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#parse_qsl" class="code" data-type="Function">parse_qsl</a></td>
+    <td><span>Parse a query given as a string argument.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#unquote_plus" class="code" data-type="Function">unquote_plus</a></td>
+    <td><span>Like unquote(), but also replace plus signs by spaces, as required for unquoting HTML form values.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.parse.Quoter.html" class="code" data-type="Class">Quoter</a></td>
+    <td><span>A mapping from bytes (in range(0,256)) to strings.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#quote" class="code" data-type="Function">quote</a></td>
+    <td><span>quote('abc def') -&gt; 'abc%20def'</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#quote_plus" class="code" data-type="Function">quote_plus</a></td>
+    <td><span>Like quote(), but also replace ' ' with '+', as required for quoting HTML form values. Plus signs in the original string are escaped unless they are included in safe. It also does not have safe default to '/'.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#quote_from_bytes" class="code" data-type="Function">quote_from_bytes</a></td>
+    <td><span>Like quote(), but accepts a bytes object rather than a str, and does not perform string-to-bytes encoding.  It always returns an ASCII string. quote_from_bytes(b'abc def?') -&gt; 'abc%20def%3f'</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#urlencode" class="code" data-type="Function">urlencode</a></td>
+    <td><span>Encode a dict or sequence of two-element tuples into a URL query string.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#to_bytes" class="code" data-type="Function">to_bytes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#unwrap" class="code" data-type="Function">unwrap</a></td>
+    <td><span>Transform a string like '&lt;URL:scheme://host/path&gt;' into 'scheme://host/path'.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#splittype" class="code" data-type="Function">splittype</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#splithost" class="code" data-type="Function">splithost</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#splituser" class="code" data-type="Function">splituser</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#splitpasswd" class="code" data-type="Function">splitpasswd</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#splitport" class="code" data-type="Function">splitport</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#splitnport" class="code" data-type="Function">splitnport</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#splitquery" class="code" data-type="Function">splitquery</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#splittag" class="code" data-type="Function">splittag</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#splitattr" class="code" data-type="Function">splitattr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#splitvalue" class="code" data-type="Function">splitvalue</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.parse.html#_parse_cache" class="code" data-type="Variable">_parse_cache</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.parse.html#_implicit_encoding" class="code" data-type="Variable">_implicit_encoding</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.parse.html#_implicit_errors" class="code" data-type="Variable">_implicit_errors</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#_noop" class="code" data-type="Function">_noop</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#_encode_result" class="code" data-type="Function">_encode_result</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#_decode_args" class="code" data-type="Function">_decode_args</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#_coerce_args" class="code" data-type="Function">_coerce_args</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.parse._ResultMixinStr.html" class="code" data-type="Class">_ResultMixinStr</a></td>
+    <td><span>Standard approach to encoding parsed results from str to bytes</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.parse._ResultMixinBytes.html" class="code" data-type="Class">_ResultMixinBytes</a></td>
+    <td><span>Standard approach to decoding parsed results from bytes to str</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.parse._NetlocResultMixinBase.html" class="code" data-type="Class">_NetlocResultMixinBase</a></td>
+    <td><span>Shared methods for the parsed result objects containing a netloc element</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.parse._NetlocResultMixinStr.html" class="code" data-type="Class">_NetlocResultMixinStr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.urllib.parse._NetlocResultMixinBytes.html" class="code" data-type="Class">_NetlocResultMixinBytes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.parse.html#_DefragResultBase" class="code" data-type="Variable">_DefragResultBase</a></td>
+    <td><span>DefragResult(url, fragment)</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.parse.html#_SplitResultBase" class="code" data-type="Variable">_SplitResultBase</a></td>
+    <td><span>SplitResult(scheme, netloc, path, query, fragment)</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.parse.html#_ParseResultBase" class="code" data-type="Variable">_ParseResultBase</a></td>
+    <td><span>ParseResult(scheme, netloc, path, params, query, fragment)</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#_fix_result_transcoding" class="code" data-type="Function">_fix_result_transcoding</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#_splitparams" class="code" data-type="Function">_splitparams</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#_splitnetloc" class="code" data-type="Function">_splitnetloc</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#_checknetloc" class="code" data-type="Function">_checknetloc</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.parse.html#_hexdig" class="code" data-type="Variable">_hexdig</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.parse.html#_hextobyte" class="code" data-type="Variable">_hextobyte</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.parse.html#_asciire" class="code" data-type="Variable">_asciire</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.parse.html#_ALWAYS_SAFE" class="code" data-type="Variable">_ALWAYS_SAFE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.parse.html#_ALWAYS_SAFE_BYTES" class="code" data-type="Variable">_ALWAYS_SAFE_BYTES</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.parse.html#_safe_quoters" class="code" data-type="Variable">_safe_quoters</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#_to_bytes" class="code" data-type="Function">_to_bytes</a></td>
+    <td><span>to_bytes(u"URL") --&gt; 'URL'.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.parse.html#_typeprog" class="code" data-type="Variable">_typeprog</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#_splittype" class="code" data-type="Function">_splittype</a></td>
+    <td><span>splittype('type:opaquestring') --&gt; 'type', 'opaquestring'.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.parse.html#_hostprog" class="code" data-type="Variable">_hostprog</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#_splithost" class="code" data-type="Function">_splithost</a></td>
+    <td><span>splithost('//host[:port]/path') --&gt; 'host[:port]', '/path'.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#_splituser" class="code" data-type="Function">_splituser</a></td>
+    <td><span>splituser('user[:passwd]@host[:port]') --&gt; 'user[:passwd]', 'host[:port]'.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#_splitpasswd" class="code" data-type="Function">_splitpasswd</a></td>
+    <td><span>splitpasswd('user:passwd') -&gt; 'user', 'passwd'.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.urllib.parse.html#_portprog" class="code" data-type="Variable">_portprog</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#_splitport" class="code" data-type="Function">_splitport</a></td>
+    <td><span>splitport('host:port') --&gt; 'host', 'port'.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#_splitnport" class="code" data-type="Function">_splitnport</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#_splitquery" class="code" data-type="Function">_splitquery</a></td>
+    <td><span>splitquery('/path?query') --&gt; '/path', 'query'.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#_splittag" class="code" data-type="Function">_splittag</a></td>
+    <td><span>splittag('/path#tag') --&gt; '/path', 'tag'.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#_splitattr" class="code" data-type="Function">_splitattr</a></td>
+    <td><span>splitattr('/path;attr1=value1;attr2=value2;...') -&gt; '/path', ['attr1=value1', 'attr2=value2', ...].</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.urllib.parse.html#_splitvalue" class="code" data-type="Function">_splitvalue</a></td>
+    <td><span>splitvalue('attr=value') --&gt; 'attr', 'value'.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.urllib.parse.uses_relative">
+    
+  </a>
+  <a name="uses_relative">
+    
+  </a>
+  <div class="functionHeader">
+    uses_relative =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[str]</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.urllib.parse.uses_netloc">
+    
+  </a>
+  <a name="uses_netloc">
+    
+  </a>
+  <div class="functionHeader">
+    uses_netloc =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[str]</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.urllib.parse.uses_params">
+    
+  </a>
+  <a name="uses_params">
+    
+  </a>
+  <div class="functionHeader">
+    uses_params =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[str]</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.urllib.parse.non_hierarchical">
+    
+  </a>
+  <a name="non_hierarchical">
+    
+  </a>
+  <div class="functionHeader">
+    non_hierarchical =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[str]</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.urllib.parse.uses_query">
+    
+  </a>
+  <a name="uses_query">
+    
+  </a>
+  <div class="functionHeader">
+    uses_query =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[str]</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.urllib.parse.uses_fragment">
+    
+  </a>
+  <a name="uses_fragment">
+    
+  </a>
+  <div class="functionHeader">
+    uses_fragment =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[str]</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.urllib.parse.scheme_chars">
+    
+  </a>
+  <a name="scheme_chars">
+    
+  </a>
+  <div class="functionHeader">
+    scheme_chars =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.urllib.parse.MAX_CACHE_SIZE">
+    
+  </a>
+  <a name="MAX_CACHE_SIZE">
+    
+  </a>
+  <div class="functionHeader">
+    MAX_CACHE_SIZE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.urllib.parse._parse_cache">
+    
+  </a>
+  <a name="_parse_cache">
+    
+  </a>
+  <div class="functionHeader">
+    _parse_cache =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.parse.clear_cache">
+    
+  </a>
+  <a name="clear_cache">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    clear_cache():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Clear the parse cache and the quoters cache.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.urllib.parse._implicit_encoding">
+    
+  </a>
+  <a name="_implicit_encoding">
+    
+  </a>
+  <div class="functionHeader">
+    _implicit_encoding =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.urllib.parse._implicit_errors">
+    
+  </a>
+  <a name="_implicit_errors">
+    
+  </a>
+  <div class="functionHeader">
+    _implicit_errors =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.urllib.parse._noop">
+    
+  </a>
+  <a name="_noop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _noop(obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.urllib.parse._encode_result">
+    
+  </a>
+  <a name="_encode_result">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _encode_result(obj, encoding=_implicit_encoding, errors=_implicit_errors):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.urllib.parse._decode_args">
+    
+  </a>
+  <a name="_decode_args">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _decode_args(args, encoding=_implicit_encoding, errors=_implicit_errors):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.urllib.parse._coerce_args">
+    
+  </a>
+  <a name="_coerce_args">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _coerce_args(*args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.urllib.parse._DefragResultBase">
+    
+  </a>
+  <a name="_DefragResultBase">
+    
+  </a>
+  <div class="functionHeader">
+    _DefragResultBase =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="pre">
+DefragResult(url, fragment)
+
+A 2-tuple that contains the url without fragment identifier and the fragment
+identifier as a separate argument.
+</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.urllib.parse._SplitResultBase">
+    
+  </a>
+  <a name="_SplitResultBase">
+    
+  </a>
+  <div class="functionHeader">
+    _SplitResultBase =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="pre">
+SplitResult(scheme, netloc, path, query, fragment)
+
+A 5-tuple that contains the different components of a URL. Similar to
+ParseResult, but does not split params.
+</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.urllib.parse._ParseResultBase">
+    
+  </a>
+  <a name="_ParseResultBase">
+    
+  </a>
+  <div class="functionHeader">
+    _ParseResultBase =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="pre">
+ParseResult(scheme, netloc, path, params, query, fragment)
+
+A 6-tuple that contains components of a parsed URL.
+</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.urllib.parse._fix_result_transcoding">
+    
+  </a>
+  <a name="_fix_result_transcoding">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _fix_result_transcoding():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.parse.urlparse">
+    
+  </a>
+  <a name="urlparse">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    urlparse(url, scheme="""""", allow_fragments=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse a URL into 6 components:
+&lt;scheme&gt;://&lt;netloc&gt;/&lt;path&gt;;&lt;params&gt;?&lt;query&gt;#&lt;fragment&gt;
+
+The result is a named 6-tuple with fields corresponding to the
+above. It is either a ParseResult or ParseResultBytes object,
+depending on the type of the url parameter.
+
+The username, password, hostname, and port sub-components of netloc
+can also be accessed as attributes of the returned object.
+
+The scheme argument provides the default value of the scheme
+component when no scheme is found in url.
+
+If allow_fragments is False, no attempt is made to separate the
+fragment component from the previous component, which can be either
+path or query.
+
+Note that % escapes are not expanded.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.urllib.parse._splitparams">
+    
+  </a>
+  <a name="_splitparams">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _splitparams(url):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.urllib.parse._splitnetloc">
+    
+  </a>
+  <a name="_splitnetloc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _splitnetloc(url, start=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.urllib.parse._checknetloc">
+    
+  </a>
+  <a name="_checknetloc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _checknetloc(netloc):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.parse.urlsplit">
+    
+  </a>
+  <a name="urlsplit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    urlsplit(url, scheme="""""", allow_fragments=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse a URL into 5 components:
+&lt;scheme&gt;://&lt;netloc&gt;/&lt;path&gt;?&lt;query&gt;#&lt;fragment&gt;
+
+The result is a named 5-tuple with fields corresponding to the
+above. It is either a SplitResult or SplitResultBytes object,
+depending on the type of the url parameter.
+
+The username, password, hostname, and port sub-components of netloc
+can also be accessed as attributes of the returned object.
+
+The scheme argument provides the default value of the scheme
+component when no scheme is found in url.
+
+If allow_fragments is False, no attempt is made to separate the
+fragment component from the previous component, which can be either
+path or query.
+
+Note that % escapes are not expanded.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.parse.urlunparse">
+    
+  </a>
+  <a name="urlunparse">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    urlunparse(components):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Put a parsed URL back together again.  This may result in a
+slightly different, but equivalent URL, if the URL that was parsed
+originally had redundant delimiters, e.g. a ? with an empty query
+(the draft states that these are equivalent).</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.parse.urlunsplit">
+    
+  </a>
+  <a name="urlunsplit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    urlunsplit(components):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Combine the elements of a tuple as returned by urlsplit() into a
+complete URL as a string. The data argument can be any five-item iterable.
+This may result in a slightly different, but equivalent URL, if the URL that
+was parsed originally had unnecessary delimiters (for example, a ? with an
+empty query; the RFC states that these are equivalent).</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.parse.urljoin">
+    
+  </a>
+  <a name="urljoin">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    urljoin(base, url, allow_fragments=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Join a base URL and a possibly relative URL to form an absolute
+interpretation of the latter.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.parse.urldefrag">
+    
+  </a>
+  <a name="urldefrag">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    urldefrag(url):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Removes any existing fragment from URL.
+
+Returns a tuple of the defragmented URL and the fragment.  If
+the URL contained no fragments, the second element is the
+empty string.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.urllib.parse._hexdig">
+    
+  </a>
+  <a name="_hexdig">
+    
+  </a>
+  <div class="functionHeader">
+    _hexdig =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.urllib.parse._hextobyte">
+    
+  </a>
+  <a name="_hextobyte">
+    
+  </a>
+  <div class="functionHeader">
+    _hextobyte =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.parse.unquote_to_bytes">
+    
+  </a>
+  <a name="unquote_to_bytes">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    unquote_to_bytes(string):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">unquote_to_bytes('abc%20def') -&gt; b'abc def'.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.urllib.parse._asciire">
+    
+  </a>
+  <a name="_asciire">
+    
+  </a>
+  <div class="functionHeader">
+    _asciire =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.parse.unquote">
+    
+  </a>
+  <a name="unquote">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    unquote(string, encoding="""utf-8""", errors="""replace"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Replace %xx escapes by their single-character equivalent. The optional
+encoding and errors parameters specify how to decode percent-encoded
+sequences into Unicode characters, as accepted by the bytes.decode()
+method.
+By default, percent-encoded sequences are decoded with UTF-8, and invalid
+sequences are replaced by a placeholder character.
+
+unquote('abc%20def') -&gt; 'abc def'.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.parse.parse_qs">
+    
+  </a>
+  <a name="parse_qs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse_qs(qs, keep_blank_values=(False), strict_parsing=(False), encoding="""utf-8""", errors="""replace""", max_num_fields=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse a query given as a string argument.
+
+Arguments:
+
+qs: percent-encoded query string to be parsed
+
+keep_blank_values: flag indicating whether blank values in
+    percent-encoded queries should be treated as blank strings.
+    A true value indicates that blanks should be retained as
+    blank strings.  The default false value indicates that
+    blank values are to be ignored and treated as if they were
+    not included.
+
+strict_parsing: flag indicating what to do with parsing errors.
+    If false (the default), errors are silently ignored.
+    If true, errors raise a ValueError exception.
+
+encoding and errors: specify how to decode percent-encoded sequences
+    into Unicode characters, as accepted by the bytes.decode() method.
+
+max_num_fields: int. If set, then throws a ValueError if there
+    are more than n fields read by parse_qsl().
+
+Returns a dictionary.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.parse.parse_qsl">
+    
+  </a>
+  <a name="parse_qsl">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse_qsl(qs, keep_blank_values=(False), strict_parsing=(False), encoding="""utf-8""", errors="""replace""", max_num_fields=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse a query given as a string argument.
+
+Arguments:
+
+qs: percent-encoded query string to be parsed
+
+keep_blank_values: flag indicating whether blank values in
+    percent-encoded queries should be treated as blank strings.
+    A true value indicates that blanks should be retained as blank
+    strings.  The default false value indicates that blank values
+    are to be ignored and treated as if they were  not included.
+
+strict_parsing: flag indicating what to do with parsing errors. If
+    false (the default), errors are silently ignored. If true,
+    errors raise a ValueError exception.
+
+encoding and errors: specify how to decode percent-encoded sequences
+    into Unicode characters, as accepted by the bytes.decode() method.
+
+max_num_fields: int. If set, then throws a ValueError
+    if there are more than n fields read by parse_qsl().
+
+Returns a list, as G-d intended.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.parse.unquote_plus">
+    
+  </a>
+  <a name="unquote_plus">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    unquote_plus(string, encoding="""utf-8""", errors="""replace"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Like unquote(), but also replace plus signs by spaces, as required for
+unquoting HTML form values.
+
+unquote_plus('%7e/abc+def') -&gt; '~/abc def'</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.urllib.parse._ALWAYS_SAFE">
+    
+  </a>
+  <a name="_ALWAYS_SAFE">
+    
+  </a>
+  <div class="functionHeader">
+    _ALWAYS_SAFE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.urllib.parse._ALWAYS_SAFE_BYTES">
+    
+  </a>
+  <a name="_ALWAYS_SAFE_BYTES">
+    
+  </a>
+  <div class="functionHeader">
+    _ALWAYS_SAFE_BYTES =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.urllib.parse._safe_quoters">
+    
+  </a>
+  <a name="_safe_quoters">
+    
+  </a>
+  <div class="functionHeader">
+    _safe_quoters =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.parse.quote">
+    
+  </a>
+  <a name="quote">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    quote(string, safe="""/""", encoding=None, errors=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">quote('abc def') -&gt; 'abc%20def'
+
+Each part of a URL, e.g. the path info, the query, etc., has a
+different set of reserved characters that must be quoted. The
+quote function offers a cautious (not minimal) way to quote a
+string for most of these parts.
+
+RFC 3986 Uniform Resource Identifier (URI): Generic Syntax lists
+the following (un)reserved characters.
+
+unreserved    = ALPHA / DIGIT / "-" / "." / "_" / "~"
+reserved      = gen-delims / sub-delims
+gen-delims    = ":" / "/" / "?" / "#" / "[" / "]" / "@"
+sub-delims    = "!" / "$" / "&amp;" / "'" / "(" / ")"
+              / "*" / "+" / "," / ";" / "="
+
+Each of the reserved characters is reserved in some component of a URL,
+but not necessarily in all of them.
+
+The quote function %-escapes all characters that are neither in the
+unreserved chars ("always safe") nor the additional chars set via the
+safe arg.
+
+The default for the safe arg is '/'. The character is reserved, but in
+typical usage the quote function is being called on a path where the
+existing slash characters are to be preserved.
+
+Python 3.7 updates from using RFC 2396 to RFC 3986 to quote URL strings.
+Now, "~" is included in the set of unreserved characters.
+
+string and safe may be either str or bytes objects. encoding and errors
+must not be specified if string is a bytes object.
+
+The optional encoding and errors parameters specify how to deal with
+non-ASCII characters, as accepted by the str.encode method.
+By default, encoding='utf-8' (characters are encoded with UTF-8), and
+errors='strict' (unsupported characters raise a UnicodeEncodeError).</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.parse.quote_plus">
+    
+  </a>
+  <a name="quote_plus">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    quote_plus(string, safe="""""", encoding=None, errors=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Like quote(), but also replace ' ' with '+', as required for quoting
+HTML form values. Plus signs in the original string are escaped unless
+they are included in safe. It also does not have safe default to '/'.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.parse.quote_from_bytes">
+    
+  </a>
+  <a name="quote_from_bytes">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    quote_from_bytes(bs, safe="""/"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Like quote(), but accepts a bytes object rather than a str, and does
+not perform string-to-bytes encoding.  It always returns an ASCII string.
+quote_from_bytes(b'abc def?') -&gt; 'abc%20def%3f'</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.parse.urlencode">
+    
+  </a>
+  <a name="urlencode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    urlencode(query, doseq=(False), safe="""""", encoding=None, errors=None, quote_via=quote_plus):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Encode a dict or sequence of two-element tuples into a URL query string.
+
+If any values in the query arg are sequences and doseq is true, each
+sequence element is converted to a separate parameter.
+
+If the query arg is a sequence of two-element tuples, the order of the
+parameters in the output will match the order of parameters in the
+input.
+
+The components of a query arg may each be either a string or a bytes type.
+
+The safe, encoding, and errors parameters are passed down to the function
+specified by quote_via (encoding and errors only if a component is a str).</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.parse.to_bytes">
+    
+  </a>
+  <a name="to_bytes">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    to_bytes(url):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.urllib.parse._to_bytes">
+    
+  </a>
+  <a name="_to_bytes">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _to_bytes(url):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">to_bytes(u"URL") --&gt; 'URL'.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.parse.unwrap">
+    
+  </a>
+  <a name="unwrap">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    unwrap(url):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Transform a string like '&lt;URL:scheme://host/path&gt;' into 'scheme://host/path'.
+
+The string is returned unchanged if it's not a wrapped URL.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.parse.splittype">
+    
+  </a>
+  <a name="splittype">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    splittype(url):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.urllib.parse._typeprog">
+    
+  </a>
+  <a name="_typeprog">
+    
+  </a>
+  <div class="functionHeader">
+    _typeprog =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.urllib.parse._splittype">
+    
+  </a>
+  <a name="_splittype">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _splittype(url):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">splittype('type:opaquestring') --&gt; 'type', 'opaquestring'.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.parse.splithost">
+    
+  </a>
+  <a name="splithost">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    splithost(url):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.urllib.parse._hostprog">
+    
+  </a>
+  <a name="_hostprog">
+    
+  </a>
+  <div class="functionHeader">
+    _hostprog =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.urllib.parse._splithost">
+    
+  </a>
+  <a name="_splithost">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _splithost(url):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">splithost('//host[:port]/path') --&gt; 'host[:port]', '/path'.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.parse.splituser">
+    
+  </a>
+  <a name="splituser">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    splituser(host):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.urllib.parse._splituser">
+    
+  </a>
+  <a name="_splituser">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _splituser(host):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">splituser('user[:passwd]@host[:port]') --&gt; 'user[:passwd]', 'host[:port]'.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.parse.splitpasswd">
+    
+  </a>
+  <a name="splitpasswd">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    splitpasswd(user):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.urllib.parse._splitpasswd">
+    
+  </a>
+  <a name="_splitpasswd">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _splitpasswd(user):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">splitpasswd('user:passwd') -&gt; 'user', 'passwd'.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.parse.splitport">
+    
+  </a>
+  <a name="splitport">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    splitport(host):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.urllib.parse._portprog">
+    
+  </a>
+  <a name="_portprog">
+    
+  </a>
+  <div class="functionHeader">
+    _portprog =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.urllib.parse._splitport">
+    
+  </a>
+  <a name="_splitport">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _splitport(host):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">splitport('host:port') --&gt; 'host', 'port'.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.parse.splitnport">
+    
+  </a>
+  <a name="splitnport">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    splitnport(host, defport=(-1)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.urllib.parse._splitnport">
+    
+  </a>
+  <a name="_splitnport">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _splitnport(host, defport=(-1)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Split host and port, returning numeric port.
+Return given default port if no ':' found; defaults to -1.
+Return numerical port if a valid number are found after ':'.
+Return None if ':' but not a valid number.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.parse.splitquery">
+    
+  </a>
+  <a name="splitquery">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    splitquery(url):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.urllib.parse._splitquery">
+    
+  </a>
+  <a name="_splitquery">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _splitquery(url):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">splitquery('/path?query') --&gt; '/path', 'query'.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.parse.splittag">
+    
+  </a>
+  <a name="splittag">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    splittag(url):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.urllib.parse._splittag">
+    
+  </a>
+  <a name="_splittag">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _splittag(url):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">splittag('/path#tag') --&gt; '/path', 'tag'.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.parse.splitattr">
+    
+  </a>
+  <a name="splitattr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    splitattr(url):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.urllib.parse._splitattr">
+    
+  </a>
+  <a name="_splitattr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _splitattr(url):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">splitattr('/path;attr1=value1;attr2=value2;...') -&gt;
+'/path', ['attr1=value1', 'attr2=value2', ...].</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.urllib.parse.splitvalue">
+    
+  </a>
+  <a name="splitvalue">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    splitvalue(attr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.urllib.parse._splitvalue">
+    
+  </a>
+  <a name="_splitvalue">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _splitvalue(attr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">splitvalue('attr=value') --&gt; 'attr', 'value'.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

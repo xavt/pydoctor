@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.idlelib.searchbase.SearchDialogBase : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.idlelib.html" class="code" data-type="Package">idlelib</a>.<a href="Lib.idlelib.searchbase.html" class="code" data-type="Module">searchbase</a>.<a href="Lib.idlelib.searchbase.SearchDialogBase.html" class="code" data-type="Class">SearchDialogBase</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.idlelib.searchbase.SearchDialogBase:</code></p><p>Known subclasses: <a href="Lib.idlelib.searchbase._searchbase.html" class="code" data-type="Class">Lib.idlelib.searchbase._searchbase</a></p>
+        <p><a href="classIndex.html#Lib.idlelib.searchbase.SearchDialogBase">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Create most of a 3 or 4 row, 3 column search dialog.
+
+The left and wide middle column contain:
+1 or 2 labeled text entry lines (make_entry, create_entries);
+a row of standard Checkbuttons (make_frame, create_option_buttons),
+each of which corresponds to a search engine Variable;
+a row of dialog-specific Check/Radiobuttons (create_other_buttons).
+
+The narrow right column contains command buttons
+(make_button, create_command_buttons).
+These are bound to functions that execute the command.
+
+Except for command buttons, this base class is not limited to items
+common to all three subclasses.  Rather, it is the Find dialog minus
+the "Find Next" command, its execution function, and the
+default_command attribute needed in create_widgets. The other
+dialogs override attributes and methods, the latter to replace and
+add widgets.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2458">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.idlelib.searchbase.SearchDialogBase.html#title" class="code" data-type="Class Variable">title</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.idlelib.searchbase.SearchDialogBase.html#icon" class="code" data-type="Class Variable">icon</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.idlelib.searchbase.SearchDialogBase.html#needwrapbutton" class="code" data-type="Class Variable">needwrapbutton</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.searchbase.SearchDialogBase.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Initialize root, engine, and top attributes.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.searchbase.SearchDialogBase.html#root" class="code" data-type="Instance Variable">root</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.searchbase.SearchDialogBase.html#bell" class="code" data-type="Instance Variable">bell</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.searchbase.SearchDialogBase.html#engine" class="code" data-type="Instance Variable">engine</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.searchbase.SearchDialogBase.html#top" class="code" data-type="Instance Variable">top</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.searchbase.SearchDialogBase.html#open" class="code" data-type="Method">open</a></td>
+    <td><span>Make dialog visible on top of others and ready to use.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.searchbase.SearchDialogBase.html#text" class="code" data-type="Instance Variable">text</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.searchbase.SearchDialogBase.html#close" class="code" data-type="Method">close</a></td>
+    <td><span>Put dialog away for later use.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.searchbase.SearchDialogBase.html#create_widgets" class="code" data-type="Method">create_widgets</a></td>
+    <td><span>Create basic 3 row x 3 col search (find) dialog.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.searchbase.SearchDialogBase.html#frame" class="code" data-type="Instance Variable">frame</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.searchbase.SearchDialogBase.html#row" class="code" data-type="Instance Variable">row</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.searchbase.SearchDialogBase.html#make_entry" class="code" data-type="Method">make_entry</a></td>
+    <td><span>Return (entry, label), .</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.searchbase.SearchDialogBase.html#create_entries" class="code" data-type="Method">create_entries</a></td>
+    <td><span>Create one or more entry lines with make_entry.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.searchbase.SearchDialogBase.html#ent" class="code" data-type="Instance Variable">ent</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.searchbase.SearchDialogBase.html#make_frame" class="code" data-type="Method">make_frame</a></td>
+    <td><span>Return (frame, label).</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.searchbase.SearchDialogBase.html#create_option_buttons" class="code" data-type="Method">create_option_buttons</a></td>
+    <td><span>Return (filled frame, options) for testing.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.searchbase.SearchDialogBase.html#create_other_buttons" class="code" data-type="Method">create_other_buttons</a></td>
+    <td><span>Return (frame, others) for testing.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.searchbase.SearchDialogBase.html#make_button" class="code" data-type="Method">make_button</a></td>
+    <td><span>Return command button gridded in command frame.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.searchbase.SearchDialogBase.html#create_command_buttons" class="code" data-type="Method">create_command_buttons</a></td>
+    <td><span>Place buttons in vertical command frame gridded on right.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.searchbase.SearchDialogBase.html#buttonframe" class="code" data-type="Instance Variable">buttonframe</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.idlelib.searchbase.SearchDialogBase.title">
+    
+  </a>
+  <a name="title">
+    
+  </a>
+  <div class="functionHeader">
+    title =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.idlelib.searchbase.SearchDialogBase.icon">
+    
+  </a>
+  <a name="icon">
+    
+  </a>
+  <div class="functionHeader">
+    icon =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.idlelib.searchbase.SearchDialogBase.needwrapbutton">
+    
+  </a>
+  <a name="needwrapbutton">
+    
+  </a>
+  <div class="functionHeader">
+    needwrapbutton =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.searchbase.SearchDialogBase.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, root, engine):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.idlelib.searchbase._searchbase.html" class="code" data-type="Class">Lib.idlelib.searchbase._searchbase</a></div>
+    
+    <div><p class="pre">Initialize root, engine, and top attributes.
+
+top (level widget): set in create_widgets() called from open().
+frame: container for all widgets in dialog.
+text (Text searched): set in open(), only used in subclasses().
+ent (ry): created in make_entry() called from create_entry().
+row (of grid): 0 in create_widgets(), +1 in make_entry/frame().
+default_command: set in subclasses, used in create_widgets().
+
+title (of dialog): class attribute, override in subclasses.
+icon (of dialog): ditto, use unclear if cannot minimize dialog.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.searchbase.SearchDialogBase.root">
+    
+  </a>
+  <a name="root">
+    
+  </a>
+  <div class="functionHeader">
+    root =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.idlelib.searchbase._searchbase.html" class="code" data-type="Class">Lib.idlelib.searchbase._searchbase</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.searchbase.SearchDialogBase.bell">
+    
+  </a>
+  <a name="bell">
+    
+  </a>
+  <div class="functionHeader">
+    bell =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.searchbase.SearchDialogBase.engine">
+    
+  </a>
+  <a name="engine">
+    
+  </a>
+  <div class="functionHeader">
+    engine =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.idlelib.searchbase._searchbase.html" class="code" data-type="Class">Lib.idlelib.searchbase._searchbase</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.searchbase.SearchDialogBase.top">
+    
+  </a>
+  <a name="top">
+    
+  </a>
+  <div class="functionHeader">
+    top =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.searchbase.SearchDialogBase.open">
+    
+  </a>
+  <a name="open">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    open(self, text, searchphrase=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Make dialog visible on top of others and ready to use.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.searchbase.SearchDialogBase.text">
+    
+  </a>
+  <a name="text">
+    
+  </a>
+  <div class="functionHeader">
+    text =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.searchbase.SearchDialogBase.close">
+    
+  </a>
+  <a name="close">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    close(self, event=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Put dialog away for later use.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.searchbase.SearchDialogBase.create_widgets">
+    
+  </a>
+  <a name="create_widgets">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    create_widgets(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create basic 3 row x 3 col search (find) dialog.
+
+Other dialogs override subsidiary create_x methods as needed.
+Replace and Find-in-Files add another entry row.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.searchbase.SearchDialogBase.frame">
+    
+  </a>
+  <a name="frame">
+    
+  </a>
+  <div class="functionHeader">
+    frame =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.searchbase.SearchDialogBase.row">
+    
+  </a>
+  <a name="row">
+    
+  </a>
+  <div class="functionHeader">
+    row =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.searchbase.SearchDialogBase.make_entry">
+    
+  </a>
+  <a name="make_entry">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    make_entry(self, label_text, var):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return (entry, label), .
+
+entry - gridded labeled Entry for text entry.
+label - Label widget, returned for testing.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.searchbase.SearchDialogBase.create_entries">
+    
+  </a>
+  <a name="create_entries">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    create_entries(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create one or more entry lines with make_entry.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.searchbase.SearchDialogBase.ent">
+    
+  </a>
+  <a name="ent">
+    
+  </a>
+  <div class="functionHeader">
+    ent =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.searchbase.SearchDialogBase.make_frame">
+    
+  </a>
+  <a name="make_frame">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    make_frame(self, labeltext=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return (frame, label).
+
+frame - gridded labeled Frame for option or other buttons.
+label - Label widget, returned for testing.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.searchbase.SearchDialogBase.create_option_buttons">
+    
+  </a>
+  <a name="create_option_buttons">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    create_option_buttons(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return (filled frame, options) for testing.
+
+Options is a list of searchengine booleanvar, label pairs.
+A gridded frame from make_frame is filled with a Checkbutton
+for each pair, bound to the var, with the corresponding label.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.searchbase.SearchDialogBase.create_other_buttons">
+    
+  </a>
+  <a name="create_other_buttons">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    create_other_buttons(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return (frame, others) for testing.
+
+Others is a list of value, label pairs.
+A gridded frame from make_frame is filled with radio buttons.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.searchbase.SearchDialogBase.make_button">
+    
+  </a>
+  <a name="make_button">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    make_button(self, label, command, isdef=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return command button gridded in command frame.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.searchbase.SearchDialogBase.create_command_buttons">
+    
+  </a>
+  <a name="create_command_buttons">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    create_command_buttons(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Place buttons in vertical command frame gridded on right.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.searchbase.SearchDialogBase.buttonframe">
+    
+  </a>
+  <a name="buttonframe">
+    
+  </a>
+  <div class="functionHeader">
+    buttonframe =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

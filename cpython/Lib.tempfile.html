@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.tempfile : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.tempfile.html" class="code" data-type="Module">tempfile</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Temporary files.
+
+This module provides generic, low- and high-level interfaces for
+creating temporary files and directories.  All of the interfaces
+provided by this module can be used without fear of race conditions
+except for 'mktemp'.  'mktemp' is subject to race conditions and
+should not be used; it is provided for backward compatibility only.
+
+The default path names are returned as str.  If you supply bytes as
+input, all return values will be in bytes.  Ex:
+
+    &gt;&gt;&gt; tempfile.mkstemp()
+    (4, '/tmp/tmptpu9nin8')
+    &gt;&gt;&gt; tempfile.mkdtemp(suffix=b'')
+    b'/tmp/tmppbi8f0hy'
+
+This module also provides some data items to the user:
+
+  TMP_MAX  - maximum number of names that will be tried before
+             giving up.
+  tempdir  - If this is set to a string before the first use of
+             any routine from this module, it will be considered as
+             another candidate location to store temporary files.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3702">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tempfile.html#TMP_MAX" class="code" data-type="Variable">TMP_MAX</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tempfile.html#template" class="code" data-type="Variable">template</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.tempfile.html#gettempprefix" class="code" data-type="Function">gettempprefix</a></td>
+    <td><span>The default prefix for temporary directories.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.tempfile.html#gettempprefixb" class="code" data-type="Function">gettempprefixb</a></td>
+    <td><span>The default prefix for temporary directories as bytes.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tempfile.html#tempdir" class="code" data-type="Variable">tempdir</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.tempfile.html#gettempdir" class="code" data-type="Function">gettempdir</a></td>
+    <td><span>Accessor for tempfile.tempdir.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.tempfile.html#gettempdirb" class="code" data-type="Function">gettempdirb</a></td>
+    <td><span>A bytes version of tempfile.gettempdir().</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.tempfile.html#mkstemp" class="code" data-type="Function">mkstemp</a></td>
+    <td><span>User-callable function to create and return a unique temporary file.  The return value is a pair (fd, name) where fd is the file descriptor returned by os.open, and name is the filename.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.tempfile.html#mkdtemp" class="code" data-type="Function">mkdtemp</a></td>
+    <td><span>User-callable function to create and return a unique temporary directory.  The return value is the pathname of the directory.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.tempfile.html#mktemp" class="code" data-type="Function">mktemp</a></td>
+    <td><span>User-callable function to return a unique temporary file name.  The file is not created.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.tempfile.html#NamedTemporaryFile" class="code" data-type="Function">NamedTemporaryFile</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.tempfile.html#TemporaryFile" class="code" data-type="Function">TemporaryFile</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tempfile.SpooledTemporaryFile.html" class="code" data-type="Class">SpooledTemporaryFile</a></td>
+    <td><span>Temporary file wrapper, specialized to switch from BytesIO or StringIO to a real file when it exceeds a certain size or when a fileno is needed.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tempfile.TemporaryDirectory.html" class="code" data-type="Class">TemporaryDirectory</a></td>
+    <td><span>Create and return a temporary directory.  This has the same behavior as mkdtemp but can be used as a context manager.  For example:</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tempfile.html#_text_openflags" class="code" data-type="Variable">_text_openflags</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tempfile.html#_once_lock" class="code" data-type="Variable">_once_lock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.tempfile.html#_exists" class="code" data-type="Function">_exists</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.tempfile.html#_infer_return_type" class="code" data-type="Function">_infer_return_type</a></td>
+    <td><span>Look at the type of all args and divine their implied return type.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.tempfile.html#_sanitize_params" class="code" data-type="Function">_sanitize_params</a></td>
+    <td><span>Common parameter processing for most APIs in this module.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.tempfile._RandomNameSequence.html" class="code" data-type="Class">_RandomNameSequence</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.tempfile.html#_candidate_tempdir_list" class="code" data-type="Function">_candidate_tempdir_list</a></td>
+    <td><span>Generate a list of candidate temporary directories which _get_default_tempdir will try.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.tempfile.html#_get_default_tempdir" class="code" data-type="Function">_get_default_tempdir</a></td>
+    <td><span>Calculate the default directory to use for temporary files. This routine should be called exactly once.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tempfile.html#_name_sequence" class="code" data-type="Variable">_name_sequence</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.tempfile.html#_get_candidate_names" class="code" data-type="Function">_get_candidate_names</a></td>
+    <td><span>Common setup sequence for all user-callable interfaces.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.tempfile.html#_mkstemp_inner" class="code" data-type="Function">_mkstemp_inner</a></td>
+    <td><span>Code common to mkstemp, TemporaryFile, and NamedTemporaryFile.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.tempfile._TemporaryFileCloser.html" class="code" data-type="Class">_TemporaryFileCloser</a></td>
+    <td><span>A separate object allowing proper closing of a temporary file's underlying file object, without adding a __del__ method to the temporary file.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.tempfile._TemporaryFileWrapper.html" class="code" data-type="Class">_TemporaryFileWrapper</a></td>
+    <td><span>Temporary file wrapper</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tempfile.html#_O_TMPFILE_WORKS" class="code" data-type="Variable">_O_TMPFILE_WORKS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable private">
+  
+  <a name="Lib.tempfile._text_openflags">
+    
+  </a>
+  <a name="_text_openflags">
+    
+  </a>
+  <div class="functionHeader">
+    _text_openflags =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tempfile.TMP_MAX">
+    
+  </a>
+  <a name="TMP_MAX">
+    
+  </a>
+  <div class="functionHeader">
+    TMP_MAX =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tempfile.template">
+    
+  </a>
+  <a name="template">
+    
+  </a>
+  <div class="functionHeader">
+    template =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.tempfile._once_lock">
+    
+  </a>
+  <a name="_once_lock">
+    
+  </a>
+  <div class="functionHeader">
+    _once_lock =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.tempfile._exists">
+    
+  </a>
+  <a name="_exists">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _exists(fn):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.tempfile._infer_return_type">
+    
+  </a>
+  <a name="_infer_return_type">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _infer_return_type(*args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Look at the type of all args and divine their implied return type.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.tempfile._sanitize_params">
+    
+  </a>
+  <a name="_sanitize_params">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _sanitize_params(prefix, suffix, dir):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Common parameter processing for most APIs in this module.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.tempfile._candidate_tempdir_list">
+    
+  </a>
+  <a name="_candidate_tempdir_list">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _candidate_tempdir_list():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Generate a list of candidate temporary directories which
+_get_default_tempdir will try.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.tempfile._get_default_tempdir">
+    
+  </a>
+  <a name="_get_default_tempdir">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_default_tempdir():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Calculate the default directory to use for temporary files.
+This routine should be called exactly once.
+
+We determine whether or not a candidate temp dir is usable by
+trying to create and write to a file in that directory.  If this
+is successful, the test file is deleted.  To prevent denial of
+service, the name of the test file must be randomized.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.tempfile._name_sequence">
+    
+  </a>
+  <a name="_name_sequence">
+    
+  </a>
+  <div class="functionHeader">
+    _name_sequence =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.tempfile._get_candidate_names">
+    
+  </a>
+  <a name="_get_candidate_names">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_candidate_names():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Common setup sequence for all user-callable interfaces.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.tempfile._mkstemp_inner">
+    
+  </a>
+  <a name="_mkstemp_inner">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _mkstemp_inner(dir, pre, suf, flags, output_type):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Code common to mkstemp, TemporaryFile, and NamedTemporaryFile.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.tempfile.gettempprefix">
+    
+  </a>
+  <a name="gettempprefix">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    gettempprefix():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">The default prefix for temporary directories.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.tempfile.gettempprefixb">
+    
+  </a>
+  <a name="gettempprefixb">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    gettempprefixb():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">The default prefix for temporary directories as bytes.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tempfile.tempdir">
+    
+  </a>
+  <a name="tempdir">
+    
+  </a>
+  <div class="functionHeader">
+    tempdir =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.tempfile.gettempdir">
+    
+  </a>
+  <a name="gettempdir">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    gettempdir():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Accessor for tempfile.tempdir.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.tempfile.gettempdirb">
+    
+  </a>
+  <a name="gettempdirb">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    gettempdirb():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">A bytes version of tempfile.gettempdir().</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.tempfile.mkstemp">
+    
+  </a>
+  <a name="mkstemp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    mkstemp(suffix=None, prefix=None, dir=None, text=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">User-callable function to create and return a unique temporary
+file.  The return value is a pair (fd, name) where fd is the
+file descriptor returned by os.open, and name is the filename.
+
+If 'suffix' is not None, the file name will end with that suffix,
+otherwise there will be no suffix.
+
+If 'prefix' is not None, the file name will begin with that prefix,
+otherwise a default prefix is used.
+
+If 'dir' is not None, the file will be created in that directory,
+otherwise a default directory is used.
+
+If 'text' is specified and true, the file is opened in text
+mode.  Else (the default) the file is opened in binary mode.
+
+If any of 'suffix', 'prefix' and 'dir' are not None, they must be the
+same type.  If they are bytes, the returned name will be bytes; str
+otherwise.
+
+The file is readable and writable only by the creating user ID.
+If the operating system uses permission bits to indicate whether a
+file is executable, the file is executable by no one. The file
+descriptor is not inherited by children of this process.
+
+Caller is responsible for deleting the file when done with it.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.tempfile.mkdtemp">
+    
+  </a>
+  <a name="mkdtemp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    mkdtemp(suffix=None, prefix=None, dir=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">User-callable function to create and return a unique temporary
+directory.  The return value is the pathname of the directory.
+
+Arguments are as for mkstemp, except that the 'text' argument is
+not accepted.
+
+The directory is readable, writable, and searchable only by the
+creating user.
+
+Caller is responsible for deleting the directory when done with it.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.tempfile.mktemp">
+    
+  </a>
+  <a name="mktemp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    mktemp(suffix="""""", prefix=template, dir=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">User-callable function to return a unique temporary file name.  The
+file is not created.
+
+Arguments are similar to mkstemp, except that the 'text' argument is
+not accepted, and suffix=None, prefix=None and bytes file names are not
+supported.
+
+THIS FUNCTION IS UNSAFE AND SHOULD NOT BE USED.  The file name may
+refer to a file that did not exist at some point, but by the time
+you get around to creating it, someone else may have beaten you to
+the punch.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.tempfile.NamedTemporaryFile">
+    
+  </a>
+  <a name="NamedTemporaryFile">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    NamedTemporaryFile(mode="""w+b""", buffering=(-1), encoding=None, newline=None, suffix=None, prefix=None, dir=None, delete=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create and return a temporary file.
+Arguments:
+'prefix', 'suffix', 'dir' -- as for mkstemp.
+'mode' -- the mode argument to io.open (default "w+b").
+'buffering' -- the buffer size argument to io.open (default -1).
+'encoding' -- the encoding argument to io.open (default None)
+'newline' -- the newline argument to io.open (default None)
+'delete' -- whether the file is deleted on close (default True).
+'errors' -- the errors argument to io.open (default None)
+The file is created as mkstemp() would do it.
+
+Returns an object with a file-like interface; the name of the file
+is accessible as its 'name' attribute.  The file will be automatically
+deleted when it is closed unless the 'delete' argument is set to False.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.tempfile._O_TMPFILE_WORKS">
+    
+  </a>
+  <a name="_O_TMPFILE_WORKS">
+    
+  </a>
+  <div class="functionHeader">
+    _O_TMPFILE_WORKS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.tempfile.TemporaryFile">
+    
+  </a>
+  <a name="TemporaryFile">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    TemporaryFile(mode="""w+b""", buffering=(-1), encoding=None, newline=None, suffix=None, prefix=None, dir=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create and return a temporary file.
+Arguments:
+'prefix', 'suffix', 'dir' -- as for mkstemp.
+'mode' -- the mode argument to io.open (default "w+b").
+'buffering' -- the buffer size argument to io.open (default -1).
+'encoding' -- the encoding argument to io.open (default None)
+'newline' -- the newline argument to io.open (default None)
+'errors' -- the errors argument to io.open (default None)
+The file is created as mkstemp() would do it.
+
+Returns an object with a file-like interface.  The file has no
+name, and will cease to exist when it is closed.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

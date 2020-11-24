@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.zipapp : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.zipapp.html" class="code" data-type="Module">zipapp</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div class="undocumented">Undocumented</div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id12215">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipapp.html#MAIN_TEMPLATE" class="code" data-type="Variable">MAIN_TEMPLATE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipapp.html#shebang_encoding" class="code" data-type="Variable">shebang_encoding</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.zipapp.ZipAppError.html" class="code" data-type="Class">ZipAppError</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipapp.html#create_archive" class="code" data-type="Function">create_archive</a></td>
+    <td><span>Create an application archive from SOURCE.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipapp.html#get_interpreter" class="code" data-type="Function">get_interpreter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipapp.html#main" class="code" data-type="Function">main</a></td>
+    <td><span>Run the zipapp command line interface.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipapp.html#_maybe_open" class="code" data-type="Function">_maybe_open</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipapp.html#_write_file_prefix" class="code" data-type="Function">_write_file_prefix</a></td>
+    <td><span>Write a shebang line.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipapp.html#_copy_archive" class="code" data-type="Function">_copy_archive</a></td>
+    <td><span>Copy an application archive, modifying the shebang line.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.zipapp.MAIN_TEMPLATE">
+    
+  </a>
+  <a name="MAIN_TEMPLATE">
+    
+  </a>
+  <div class="functionHeader">
+    MAIN_TEMPLATE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipapp.shebang_encoding">
+    
+  </a>
+  <a name="shebang_encoding">
+    
+  </a>
+  <div class="functionHeader">
+    shebang_encoding =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.zipapp._maybe_open">
+    
+  </a>
+  <a name="_maybe_open">
+    
+  </a>
+  <div class="functionHeader">
+    @contextlib.contextmanager<br />
+    def
+    _maybe_open(archive, mode):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.zipapp._write_file_prefix">
+    
+  </a>
+  <a name="_write_file_prefix">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _write_file_prefix(f, interpreter):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Write a shebang line.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.zipapp._copy_archive">
+    
+  </a>
+  <a name="_copy_archive">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _copy_archive(archive, new_archive, interpreter=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Copy an application archive, modifying the shebang line.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.zipapp.create_archive">
+    
+  </a>
+  <a name="create_archive">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    create_archive(source, target=None, interpreter=None, main=None, filter=None, compressed=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create an application archive from SOURCE.
+
+The SOURCE can be the name of a directory, or a filename or a file-like
+object referring to an existing archive.
+
+The content of SOURCE is packed into an application archive in TARGET,
+which can be a filename or a file-like object.  If SOURCE is a directory,
+TARGET can be omitted and will default to the name of SOURCE with .pyz
+appended.
+
+The created application archive will have a shebang line specifying
+that it should run with INTERPRETER (there will be no shebang line if
+INTERPRETER is None), and a __main__.py which runs MAIN (if MAIN is
+not specified, an existing __main__.py will be used).  It is an error
+to specify MAIN for anything other than a directory source with no
+__main__.py, and it is an error to omit MAIN if the directory has no
+__main__.py.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.zipapp.get_interpreter">
+    
+  </a>
+  <a name="get_interpreter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_interpreter(archive):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.zipapp.main">
+    
+  </a>
+  <a name="main">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    main(args=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Run the zipapp command line interface.
+
+The ARGS parameter lets you specify the argument list directly.
+Omitting ARGS (or setting it to None) works as for argparse, using
+sys.argv[1:] as the argument list.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

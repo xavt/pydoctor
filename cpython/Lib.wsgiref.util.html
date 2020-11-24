@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.wsgiref.util : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.wsgiref.html" class="code" data-type="Package">wsgiref</a>.<a href="Lib.wsgiref.util.html" class="code" data-type="Module">util</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Miscellaneous WSGI-related Utilities</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id12006">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.wsgiref.util.FileWrapper.html" class="code" data-type="Class">FileWrapper</a></td>
+    <td><span>Wrapper to convert file-like objects to iterables</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.wsgiref.util.html#guess_scheme" class="code" data-type="Function">guess_scheme</a></td>
+    <td><span>Return a guess for whether 'wsgi.url_scheme' should be 'http' or 'https'</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.wsgiref.util.html#application_uri" class="code" data-type="Function">application_uri</a></td>
+    <td><span>Return the application's base URI (no PATH_INFO or QUERY_STRING)</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.wsgiref.util.html#request_uri" class="code" data-type="Function">request_uri</a></td>
+    <td><span>Return the full request URI, optionally including the query string</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.wsgiref.util.html#shift_path_info" class="code" data-type="Function">shift_path_info</a></td>
+    <td><span>Shift a name from PATH_INFO to SCRIPT_NAME, returning it</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.wsgiref.util.html#setup_testing_defaults" class="code" data-type="Function">setup_testing_defaults</a></td>
+    <td><span>Update 'environ' with trivial defaults for testing purposes</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.wsgiref.util.html#is_hop_by_hop" class="code" data-type="Function">is_hop_by_hop</a></td>
+    <td><span>Return true if 'header_name' is an HTTP/1.1 "Hop-by-Hop" header</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.wsgiref.util.html#_hoppish" class="code" data-type="Variable">_hoppish</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction">
+  
+  <a name="Lib.wsgiref.util.guess_scheme">
+    
+  </a>
+  <a name="guess_scheme">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    guess_scheme(environ):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a guess for whether 'wsgi.url_scheme' should be 'http' or 'https'
+    </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.wsgiref.util.application_uri">
+    
+  </a>
+  <a name="application_uri">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    application_uri(environ):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the application's base URI (no PATH_INFO or QUERY_STRING)</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.wsgiref.util.request_uri">
+    
+  </a>
+  <a name="request_uri">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    request_uri(environ, include_query=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the full request URI, optionally including the query string</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.wsgiref.util.shift_path_info">
+    
+  </a>
+  <a name="shift_path_info">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    shift_path_info(environ):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Shift a name from PATH_INFO to SCRIPT_NAME, returning it
+
+If there are no remaining path segments in PATH_INFO, return None.
+Note: 'environ' is modified in-place; use a copy if you need to keep
+the original PATH_INFO or SCRIPT_NAME.
+
+Note: when PATH_INFO is just a '/', this returns '' and appends a trailing
+'/' to SCRIPT_NAME, even though empty path segments are normally ignored,
+and SCRIPT_NAME doesn't normally end in a '/'.  This is intentional
+behavior, to ensure that an application can tell the difference between
+'/x' and '/x/' when traversing to objects.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.wsgiref.util.setup_testing_defaults">
+    
+  </a>
+  <a name="setup_testing_defaults">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setup_testing_defaults(environ):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Update 'environ' with trivial defaults for testing purposes
+
+This adds various parameters required for WSGI, including HTTP_HOST,
+SERVER_NAME, SERVER_PORT, REQUEST_METHOD, SCRIPT_NAME, PATH_INFO,
+and all of the wsgi.* variables.  It only supplies default values,
+and does not replace any existing settings for these variables.
+
+This routine is intended to make it easier for unit tests of WSGI
+servers and applications to set up dummy environments.  It should *not*
+be used by actual WSGI servers or applications, since the data is fake!</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.wsgiref.util._hoppish">
+    
+  </a>
+  <a name="_hoppish">
+    
+  </a>
+  <div class="functionHeader">
+    _hoppish =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.wsgiref.util.is_hop_by_hop">
+    
+  </a>
+  <a name="is_hop_by_hop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_hop_by_hop(header_name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return true if 'header_name' is an HTTP/1.1 "Hop-by-Hop" header</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

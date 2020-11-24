@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.tkinter.tix.tixCommand : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.tkinter.html" class="code" data-type="Package">tkinter</a>.<a href="Lib.tkinter.tix.html" class="code" data-type="Module">tix</a>.<a href="Lib.tkinter.tix.tixCommand.html" class="code" data-type="Class">tixCommand</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.tkinter.tix.tixCommand:</code></p><p>Known subclasses: <a href="Lib.tkinter.tix.Tk.html" class="code" data-type="Class">Lib.tkinter.tix.Tk</a></p>
+        <p><a href="classIndex.html#Lib.tkinter.tix.tixCommand">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">The tix commands provide access to miscellaneous  elements
+of  Tix's  internal state and the Tix application context.
+Most of the information manipulated by these  commands pertains
+to  the  application  as a whole, or to a screen or
+display, rather than to a particular window.
+
+This is a mixin class, assumed to be mixed to Tkinter.Tk
+that supports the self.tk.call method.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id11223">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.tixCommand.html#tix_addbitmapdir" class="code" data-type="Method">tix_addbitmapdir</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.tixCommand.html#tix_cget" class="code" data-type="Method">tix_cget</a></td>
+    <td><span>Returns  the  current  value  of the configuration option given by option. Option may be  any  of  the options described in the CONFIGURATION OPTIONS section.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.tixCommand.html#tix_configure" class="code" data-type="Method">tix_configure</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.tixCommand.html#tix_filedialog" class="code" data-type="Method">tix_filedialog</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.tixCommand.html#tix_getbitmap" class="code" data-type="Method">tix_getbitmap</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.tixCommand.html#tix_getimage" class="code" data-type="Method">tix_getimage</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.tixCommand.html#tix_option_get" class="code" data-type="Method">tix_option_get</a></td>
+    <td><span>Gets  the options  maintained  by  the  Tix scheme mechanism. Available options include:</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.tixCommand.html#tix_resetoptions" class="code" data-type="Method">tix_resetoptions</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.tixCommand.tix_addbitmapdir">
+    
+  </a>
+  <a name="tix_addbitmapdir">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tix_addbitmapdir(self, directory):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Tix maintains a list of directories under which
+the  tix_getimage  and tix_getbitmap commands will
+search for image files. The standard bitmap  directory
+is $TIX_LIBRARY/bitmaps. The addbitmapdir command
+adds directory into this list. By  using  this
+command, the  image  files  of an applications can
+also be located using the tix_getimage or tix_getbitmap
+command.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.tixCommand.tix_cget">
+    
+  </a>
+  <a name="tix_cget">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tix_cget(self, option):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns  the  current  value  of the configuration
+option given by option. Option may be  any  of  the
+options described in the CONFIGURATION OPTIONS section.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.tixCommand.tix_configure">
+    
+  </a>
+  <a name="tix_configure">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tix_configure(self, cnf=None, **kw):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Query or modify the configuration options of the Tix application
+context. If no option is specified, returns a dictionary all of the
+available options.  If option is specified with no value, then the
+command returns a list describing the one named option (this list
+will be identical to the corresponding sublist of the value
+returned if no option is specified).  If one or more option-value
+pairs are specified, then the command modifies the given option(s)
+to have the given value(s); in this case the command returns an
+empty string. Option may be any of the configuration options.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.tixCommand.tix_filedialog">
+    
+  </a>
+  <a name="tix_filedialog">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tix_filedialog(self, dlgclass=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns the file selection dialog that may be shared among
+different calls from this application.  This command will create a
+file selection dialog widget when it is called the first time. This
+dialog will be returned by all subsequent calls to tix_filedialog.
+An optional dlgclass parameter can be passed to specified what type
+of file selection dialog widget is desired. Possible options are
+tix FileSelectDialog or tixExFileSelectDialog.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.tixCommand.tix_getbitmap">
+    
+  </a>
+  <a name="tix_getbitmap">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tix_getbitmap(self, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Locates a bitmap file of the name name.xpm or name in one of the
+bitmap directories (see the tix_addbitmapdir command above).  By
+using tix_getbitmap, you can avoid hard coding the pathnames of the
+bitmap files in your application. When successful, it returns the
+complete pathname of the bitmap file, prefixed with the character
+'@'.  The returned value can be used to configure the -bitmap
+option of the TK and Tix widgets.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.tixCommand.tix_getimage">
+    
+  </a>
+  <a name="tix_getimage">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tix_getimage(self, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Locates an image file of the name name.xpm, name.xbm or name.ppm
+in one of the bitmap directories (see the addbitmapdir command
+above). If more than one file with the same name (but different
+extensions) exist, then the image type is chosen according to the
+depth of the X display: xbm images are chosen on monochrome
+displays and color images are chosen on color displays. By using
+tix_ getimage, you can avoid hard coding the pathnames of the
+image files in your application. When successful, this command
+returns the name of the newly created image, which can be used to
+configure the -image option of the Tk and Tix widgets.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.tixCommand.tix_option_get">
+    
+  </a>
+  <a name="tix_option_get">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tix_option_get(self, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Gets  the options  maintained  by  the  Tix
+scheme mechanism. Available options include:
+
+    active_bg       active_fg      bg
+    bold_font       dark1_bg       dark1_fg
+    dark2_bg        dark2_fg       disabled_fg
+    fg              fixed_font     font
+    inactive_bg     inactive_fg    input1_bg
+    input2_bg       italic_font    light1_bg
+    light1_fg       light2_bg      light2_fg
+    menu_font       output1_bg     output2_bg
+    select_bg       select_fg      selector
+    </p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.tixCommand.tix_resetoptions">
+    
+  </a>
+  <a name="tix_resetoptions">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tix_resetoptions(self, newScheme, newFontSet, newScmPrio=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Resets the scheme and fontset of the Tix application to
+newScheme and newFontSet, respectively.  This affects only those
+widgets created after this call. Therefore, it is best to call the
+resetoptions command before the creation of any widgets in a Tix
+application.
+
+The optional parameter newScmPrio can be given to reset the
+priority level of the Tk options set by the Tix schemes.
+
+Because of the way Tk handles the X option database, after Tix has
+been has imported and inited, it is not possible to reset the color
+schemes and font sets using the tix config command.  Instead, the
+tix_resetoptions command must be used.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

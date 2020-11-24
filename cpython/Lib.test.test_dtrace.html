@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.test.test_dtrace : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.test.html" class="code" data-type="Package">test</a>.<a href="Lib.test.test_dtrace.html" class="code" data-type="Module">test_dtrace</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div class="undocumented">Undocumented</div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id5759">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_dtrace.html#abspath" class="code" data-type="Function">abspath</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_dtrace.html#normalize_trace_output" class="code" data-type="Function">normalize_trace_output</a></td>
+    <td><span>Normalize DTrace output for comparison.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_dtrace.TraceBackend.html" class="code" data-type="Class">TraceBackend</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_dtrace.DTraceBackend.html" class="code" data-type="Class">DTraceBackend</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_dtrace.SystemTapBackend.html" class="code" data-type="Class">SystemTapBackend</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_dtrace.TraceTests.html" class="code" data-type="Class">TraceTests</a></td>
+    <td><span class="undocumented">No class0/1 class methods docstring; , 0/3 class variables docstring; , 1/5 methods documented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_dtrace.DTraceNormalTests.html" class="code" data-type="Class">DTraceNormalTests</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_dtrace.DTraceOptimizedTests.html" class="code" data-type="Class">DTraceOptimizedTests</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_dtrace.SystemTapNormalTests.html" class="code" data-type="Class">SystemTapNormalTests</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.test_dtrace.SystemTapOptimizedTests.html" class="code" data-type="Class">SystemTapOptimizedTests</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.test_dtrace.html#test_main" class="code" data-type="Function">test_main</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction">
+  
+  <a name="Lib.test.test_dtrace.abspath">
+    
+  </a>
+  <a name="abspath">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    abspath(filename):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.test_dtrace.normalize_trace_output">
+    
+  </a>
+  <a name="normalize_trace_output">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    normalize_trace_output(output):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Normalize DTrace output for comparison.
+
+DTrace keeps a per-CPU buffer, and when showing the fired probes, buffers
+are concatenated. So if the operating system moves our thread around, the
+straight result can be "non-causal". So we add timestamps to the probe
+firing, sort by that field, then strip it from the output</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.test_dtrace.test_main">
+    
+  </a>
+  <a name="test_main">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_main():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

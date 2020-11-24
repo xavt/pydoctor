@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.asyncio.events : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.asyncio.html" class="code" data-type="Package">asyncio</a>.<a href="Lib.asyncio.events.html" class="code" data-type="Module">events</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Event loop and event loop policy.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id306">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.asyncio.events.Handle.html" class="code" data-type="Class">Handle</a></td>
+    <td><span>Object returned by callback registration methods.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.asyncio.events.TimerHandle.html" class="code" data-type="Class">TimerHandle</a></td>
+    <td><span>Object returned by timed callback registration methods.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.asyncio.events.AbstractServer.html" class="code" data-type="Class">AbstractServer</a></td>
+    <td><span>Abstract server returned by create_server().</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoop.html" class="code" data-type="Class">AbstractEventLoop</a></td>
+    <td><span>Abstract event loop.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoopPolicy.html" class="code" data-type="Class">AbstractEventLoopPolicy</a></td>
+    <td><span>Abstract policy for accessing the event loop.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.asyncio.events.BaseDefaultEventLoopPolicy.html" class="code" data-type="Class">BaseDefaultEventLoopPolicy</a></td>
+    <td><span>Default policy implementation for accessing the event loop.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.events.html#get_running_loop" class="code" data-type="Function">get_running_loop</a></td>
+    <td><span>Return the running event loop.  Raise a RuntimeError if there is none.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.events.html#get_event_loop_policy" class="code" data-type="Function">get_event_loop_policy</a></td>
+    <td><span>Get the current event loop policy.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.events.html#set_event_loop_policy" class="code" data-type="Function">set_event_loop_policy</a></td>
+    <td><span>Set the current event loop policy.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.events.html#get_event_loop" class="code" data-type="Function">get_event_loop</a></td>
+    <td><span>Return an asyncio event loop.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.events.html#set_event_loop" class="code" data-type="Function">set_event_loop</a></td>
+    <td><span>Equivalent to calling get_event_loop_policy().set_event_loop(loop).</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.events.html#new_event_loop" class="code" data-type="Function">new_event_loop</a></td>
+    <td><span>Equivalent to calling get_event_loop_policy().new_event_loop().</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.events.html#get_child_watcher" class="code" data-type="Function">get_child_watcher</a></td>
+    <td><span>Equivalent to calling get_event_loop_policy().get_child_watcher().</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.events.html#set_child_watcher" class="code" data-type="Function">set_child_watcher</a></td>
+    <td><span>Equivalent to calling get_event_loop_policy().set_child_watcher(watcher).</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.asyncio.events.html#_event_loop_policy" class="code" data-type="Variable">_event_loop_policy</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.asyncio.events.html#_lock" class="code" data-type="Variable">_lock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.asyncio.events._RunningLoop.html" class="code" data-type="Class">_RunningLoop</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.asyncio.events.html#_running_loop" class="code" data-type="Variable">_running_loop</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.events.html#_get_running_loop" class="code" data-type="Function">_get_running_loop</a></td>
+    <td><span>Return the running event loop or None.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.events.html#_set_running_loop" class="code" data-type="Function">_set_running_loop</a></td>
+    <td><span>Set the running event loop.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.events.html#_init_event_loop_policy" class="code" data-type="Function">_init_event_loop_policy</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable private">
+  
+  <a name="Lib.asyncio.events._event_loop_policy">
+    
+  </a>
+  <a name="_event_loop_policy">
+    
+  </a>
+  <div class="functionHeader">
+    _event_loop_policy =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.asyncio.events._lock">
+    
+  </a>
+  <a name="_lock">
+    
+  </a>
+  <div class="functionHeader">
+    _lock =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.asyncio.events._running_loop">
+    
+  </a>
+  <a name="_running_loop">
+    
+  </a>
+  <div class="functionHeader">
+    _running_loop =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.asyncio.events.get_running_loop">
+    
+  </a>
+  <a name="get_running_loop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_running_loop():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the running event loop.  Raise a RuntimeError if there is none.
+
+This function is thread-specific.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.asyncio.events._get_running_loop">
+    
+  </a>
+  <a name="_get_running_loop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_running_loop():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the running event loop or None.
+
+This is a low-level function intended to be used by event loops.
+This function is thread-specific.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.asyncio.events._set_running_loop">
+    
+  </a>
+  <a name="_set_running_loop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _set_running_loop(loop):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set the running event loop.
+
+This is a low-level function intended to be used by event loops.
+This function is thread-specific.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.asyncio.events._init_event_loop_policy">
+    
+  </a>
+  <a name="_init_event_loop_policy">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _init_event_loop_policy():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.asyncio.events.get_event_loop_policy">
+    
+  </a>
+  <a name="get_event_loop_policy">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_event_loop_policy():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get the current event loop policy.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.asyncio.events.set_event_loop_policy">
+    
+  </a>
+  <a name="set_event_loop_policy">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_event_loop_policy(policy):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set the current event loop policy.
+
+If policy is None, the default policy is restored.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.asyncio.events.get_event_loop">
+    
+  </a>
+  <a name="get_event_loop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_event_loop():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return an asyncio event loop.
+
+When called from a coroutine or a callback (e.g. scheduled with call_soon
+or similar API), this function will always return the running event loop.
+
+If there is no running event loop set, the function will return
+the result of `get_event_loop_policy().get_event_loop()` call.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.asyncio.events.set_event_loop">
+    
+  </a>
+  <a name="set_event_loop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_event_loop(loop):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Equivalent to calling get_event_loop_policy().set_event_loop(loop).</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.asyncio.events.new_event_loop">
+    
+  </a>
+  <a name="new_event_loop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    new_event_loop():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Equivalent to calling get_event_loop_policy().new_event_loop().</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.asyncio.events.get_child_watcher">
+    
+  </a>
+  <a name="get_child_watcher">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_child_watcher():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Equivalent to calling get_event_loop_policy().get_child_watcher().</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.asyncio.events.set_child_watcher">
+    
+  </a>
+  <a name="set_child_watcher">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_child_watcher(watcher):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Equivalent to calling
+get_event_loop_policy().set_child_watcher(watcher).</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

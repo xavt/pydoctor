@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.crypt : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.crypt.html" class="code" data-type="Module">crypt</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Wrapper to the POSIX crypt library call and associated functionality.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id643">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.crypt.html#mksalt" class="code" data-type="Function">mksalt</a></td>
+    <td><span>Generate a salt for the specified method.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.crypt.html#crypt" class="code" data-type="Function">crypt</a></td>
+    <td><span>Return a string representing the one-way hash of a password, with a salt prepended.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.crypt.html#methods" class="code" data-type="Variable">methods</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.crypt.html#_saltchars" class="code" data-type="Variable">_saltchars</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.crypt.html#_sr" class="code" data-type="Variable">_sr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.crypt._Method.html" class="code" data-type="Class">_Method</a></td>
+    <td><span>Class representing a salt method per the Modular Crypt Format or the legacy 2-character crypt method.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.crypt.html#_add_method" class="code" data-type="Function">_add_method</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable private">
+  
+  <a name="Lib.crypt._saltchars">
+    
+  </a>
+  <a name="_saltchars">
+    
+  </a>
+  <div class="functionHeader">
+    _saltchars =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.crypt._sr">
+    
+  </a>
+  <a name="_sr">
+    
+  </a>
+  <div class="functionHeader">
+    _sr =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.crypt.mksalt">
+    
+  </a>
+  <a name="mksalt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    mksalt(method=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Generate a salt for the specified method.
+
+If not specified, the strongest available method will be used.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.crypt.crypt">
+    
+  </a>
+  <a name="crypt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    crypt(word, salt=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a string representing the one-way hash of a password, with a salt
+prepended.
+
+If ``salt`` is not specified or is ``None``, the strongest
+available method will be selected and a salt generated.  Otherwise,
+``salt`` may be one of the ``crypt.METHOD_*`` values, or a string as
+returned by ``crypt.mksalt()``.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.crypt.methods">
+    
+  </a>
+  <a name="methods">
+    
+  </a>
+  <div class="functionHeader">
+    methods =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.crypt._add_method">
+    
+  </a>
+  <a name="_add_method">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _add_method(name, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

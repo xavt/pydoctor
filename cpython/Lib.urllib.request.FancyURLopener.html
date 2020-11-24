@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.urllib.request.FancyURLopener : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.urllib.html" class="code" data-type="Package">urllib</a>.<a href="Lib.urllib.request.html" class="code" data-type="Module">request</a>.<a href="Lib.urllib.request.FancyURLopener.html" class="code" data-type="Class">FancyURLopener</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.urllib.request.FancyURLopener(<a href="Lib.urllib.request.URLopener.html" class="code" data-type="Class">URLopener</a>):</code></p>
+        <p><a href="classIndex.html#Lib.urllib.request.FancyURLopener">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Derived class with handlers for errors we can handle (perhaps).</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id11910">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.FancyURLopener.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.urllib.request.FancyURLopener.html#auth_cache" class="code" data-type="Instance Variable">auth_cache</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.urllib.request.FancyURLopener.html#tries" class="code" data-type="Instance Variable">tries</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.urllib.request.FancyURLopener.html#maxtries" class="code" data-type="Instance Variable">maxtries</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.FancyURLopener.html#http_error_default" class="code" data-type="Method">http_error_default</a></td>
+    <td><span>Default error handling -- don't raise an exception.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.FancyURLopener.html#http_error_302" class="code" data-type="Method">http_error_302</a></td>
+    <td><span>Error 302 -- relocated (temporarily).</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.FancyURLopener.html#redirect_internal" class="code" data-type="Method">redirect_internal</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.FancyURLopener.html#http_error_301" class="code" data-type="Method">http_error_301</a></td>
+    <td><span>Error 301 -- also relocated (permanently).</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.FancyURLopener.html#http_error_303" class="code" data-type="Method">http_error_303</a></td>
+    <td><span>Error 303 -- also relocated (essentially identical to 302).</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.FancyURLopener.html#http_error_307" class="code" data-type="Method">http_error_307</a></td>
+    <td><span>Error 307 -- relocated, but turn POST into error.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.FancyURLopener.html#http_error_401" class="code" data-type="Method">http_error_401</a></td>
+    <td><span>Error 401 -- authentication required. This function supports Basic authentication only.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.FancyURLopener.html#http_error_407" class="code" data-type="Method">http_error_407</a></td>
+    <td><span>Error 407 -- proxy authentication required. This function supports Basic authentication only.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.FancyURLopener.html#retry_proxy_http_basic_auth" class="code" data-type="Method">retry_proxy_http_basic_auth</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.FancyURLopener.html#retry_proxy_https_basic_auth" class="code" data-type="Method">retry_proxy_https_basic_auth</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.FancyURLopener.html#retry_http_basic_auth" class="code" data-type="Method">retry_http_basic_auth</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.FancyURLopener.html#retry_https_basic_auth" class="code" data-type="Method">retry_https_basic_auth</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.FancyURLopener.html#get_user_passwd" class="code" data-type="Method">get_user_passwd</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.FancyURLopener.html#prompt_user_passwd" class="code" data-type="Method">prompt_user_passwd</a></td>
+    <td><span>Override this in a GUI environment!</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.urllib.request.URLopener.html" class="code" data-type="Class">URLopener</a>:
+          </p>
+          <table class="children sortable" id="id11911">
+  
+  <tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.urllib.request.URLopener.html#version" class="code" data-type="Class Variable">version</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.urllib.request.URLopener.html#proxies" class="code" data-type="Instance Variable">proxies</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.urllib.request.URLopener.html#key_file" class="code" data-type="Instance Variable">key_file</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.urllib.request.URLopener.html#cert_file" class="code" data-type="Instance Variable">cert_file</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.urllib.request.URLopener.html#addheaders" class="code" data-type="Instance Variable">addheaders</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.urllib.request.URLopener.html#tempcache" class="code" data-type="Instance Variable">tempcache</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.urllib.request.URLopener.html#ftpcache" class="code" data-type="Instance Variable">ftpcache</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.URLopener.html#__del__" class="code" data-type="Method">__del__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.URLopener.html#close" class="code" data-type="Method">close</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.URLopener.html#cleanup" class="code" data-type="Method">cleanup</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.URLopener.html#addheader" class="code" data-type="Method">addheader</a></td>
+    <td><span>Add a header to be used by the HTTP interface only e.g. u.addheader('Accept', 'sound/basic')</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.URLopener.html#open" class="code" data-type="Method">open</a></td>
+    <td><span>Use URLopener().open(file) instead of open(file, 'r').</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.urllib.request.URLopener.html#type" class="code" data-type="Instance Variable">type</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.URLopener.html#open_unknown" class="code" data-type="Method">open_unknown</a></td>
+    <td><span>Overridable interface to open unknown URL type.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.URLopener.html#open_unknown_proxy" class="code" data-type="Method">open_unknown_proxy</a></td>
+    <td><span>Overridable interface to open unknown URL type.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.URLopener.html#retrieve" class="code" data-type="Method">retrieve</a></td>
+    <td><span>retrieve(url) returns (filename, headers) for a local object or (tempfilename, headers) for a remote object.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.URLopener.html#open_http" class="code" data-type="Method">open_http</a></td>
+    <td><span>Use HTTP protocol.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.URLopener.html#http_error" class="code" data-type="Method">http_error</a></td>
+    <td><span>Handle http errors.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.URLopener.html#open_https" class="code" data-type="Method">open_https</a></td>
+    <td><span>Use HTTPS protocol.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.URLopener.html#open_file" class="code" data-type="Method">open_file</a></td>
+    <td><span>Use local file or FTP depending on form of URL.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.URLopener.html#open_local_file" class="code" data-type="Method">open_local_file</a></td>
+    <td><span>Use local file.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.URLopener.html#open_ftp" class="code" data-type="Method">open_ftp</a></td>
+    <td><span>Use FTP protocol.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.URLopener.html#open_data" class="code" data-type="Method">open_data</a></td>
+    <td><span>Use "data" URL.</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.urllib.request.URLopener.html#__tempfiles" class="code" data-type="Instance Variable">__tempfiles</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.urllib.request.URLopener.html#__unlink" class="code" data-type="Instance Variable">__unlink</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.URLopener.html#_open_generic_http" class="code" data-type="Method">_open_generic_http</a></td>
+    <td><span>Make an HTTP connection using connection_class.</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.urllib.request.URLopener.html#_https_connection" class="code" data-type="Method">_https_connection</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.urllib.request.FancyURLopener.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.urllib.request.URLopener.html#__init__" class="code" data-type="Method">Lib.urllib.request.URLopener.__init__</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.urllib.request.FancyURLopener.auth_cache">
+    
+  </a>
+  <a name="auth_cache">
+    
+  </a>
+  <div class="functionHeader">
+    auth_cache =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.urllib.request.FancyURLopener.tries">
+    
+  </a>
+  <a name="tries">
+    
+  </a>
+  <div class="functionHeader">
+    tries =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.urllib.request.FancyURLopener.maxtries">
+    
+  </a>
+  <a name="maxtries">
+    
+  </a>
+  <div class="functionHeader">
+    maxtries =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.urllib.request.FancyURLopener.http_error_default">
+    
+  </a>
+  <a name="http_error_default">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    http_error_default(self, url, fp, errcode, errmsg, headers):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.urllib.request.URLopener.html#http_error_default" class="code" data-type="Method">Lib.urllib.request.URLopener.http_error_default</a></div>
+    
+    <div><p class="pre">Default error handling -- don't raise an exception.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.urllib.request.FancyURLopener.http_error_302">
+    
+  </a>
+  <a name="http_error_302">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    http_error_302(self, url, fp, errcode, errmsg, headers, data=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Error 302 -- relocated (temporarily).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.urllib.request.FancyURLopener.redirect_internal">
+    
+  </a>
+  <a name="redirect_internal">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    redirect_internal(self, url, fp, errcode, errmsg, headers, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.urllib.request.FancyURLopener.http_error_301">
+    
+  </a>
+  <a name="http_error_301">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    http_error_301(self, url, fp, errcode, errmsg, headers, data=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Error 301 -- also relocated (permanently).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.urllib.request.FancyURLopener.http_error_303">
+    
+  </a>
+  <a name="http_error_303">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    http_error_303(self, url, fp, errcode, errmsg, headers, data=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Error 303 -- also relocated (essentially identical to 302).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.urllib.request.FancyURLopener.http_error_307">
+    
+  </a>
+  <a name="http_error_307">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    http_error_307(self, url, fp, errcode, errmsg, headers, data=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Error 307 -- relocated, but turn POST into error.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.urllib.request.FancyURLopener.http_error_401">
+    
+  </a>
+  <a name="http_error_401">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    http_error_401(self, url, fp, errcode, errmsg, headers, data=None, retry=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Error 401 -- authentication required.
+This function supports Basic authentication only.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.urllib.request.FancyURLopener.http_error_407">
+    
+  </a>
+  <a name="http_error_407">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    http_error_407(self, url, fp, errcode, errmsg, headers, data=None, retry=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Error 407 -- proxy authentication required.
+This function supports Basic authentication only.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.urllib.request.FancyURLopener.retry_proxy_http_basic_auth">
+    
+  </a>
+  <a name="retry_proxy_http_basic_auth">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    retry_proxy_http_basic_auth(self, url, realm, data=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.urllib.request.FancyURLopener.retry_proxy_https_basic_auth">
+    
+  </a>
+  <a name="retry_proxy_https_basic_auth">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    retry_proxy_https_basic_auth(self, url, realm, data=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.urllib.request.FancyURLopener.retry_http_basic_auth">
+    
+  </a>
+  <a name="retry_http_basic_auth">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    retry_http_basic_auth(self, url, realm, data=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.urllib.request.FancyURLopener.retry_https_basic_auth">
+    
+  </a>
+  <a name="retry_https_basic_auth">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    retry_https_basic_auth(self, url, realm, data=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.urllib.request.FancyURLopener.get_user_passwd">
+    
+  </a>
+  <a name="get_user_passwd">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_user_passwd(self, host, realm, clear_cache=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.urllib.request.FancyURLopener.prompt_user_passwd">
+    
+  </a>
+  <a name="prompt_user_passwd">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    prompt_user_passwd(self, host, realm):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Override this in a GUI environment!</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

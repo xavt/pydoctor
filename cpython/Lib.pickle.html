@@ -1,0 +1,2208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.pickle : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.pickle.html" class="code" data-type="Module">pickle</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Create portable serialized representations of Python objects.
+
+See module copyreg for a mechanism for registering custom picklers.
+See module pickletools source for extensive comments.
+
+Classes:
+
+    Pickler
+    Unpickler
+
+Functions:
+
+    dump(object, file)
+    dumps(object) -&gt; string
+    load(file) -&gt; object
+    loads(bytes) -&gt; object
+
+Misc variables:
+
+    __version__
+    format_version
+    compatible_formats</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3372">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#bytes_types" class="code" data-type="Variable">bytes_types</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#format_version" class="code" data-type="Variable">format_version</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#compatible_formats" class="code" data-type="Variable">compatible_formats</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#HIGHEST_PROTOCOL" class="code" data-type="Variable">HIGHEST_PROTOCOL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#DEFAULT_PROTOCOL" class="code" data-type="Variable">DEFAULT_PROTOCOL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.pickle.PickleError.html" class="code" data-type="Class">PickleError</a></td>
+    <td><span>A common base class for the other pickling exceptions.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.pickle.PicklingError.html" class="code" data-type="Class">PicklingError</a></td>
+    <td><span>This exception is raised when an unpicklable object is passed to the dump() method.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.pickle.UnpicklingError.html" class="code" data-type="Class">UnpicklingError</a></td>
+    <td><span>This exception is raised when there is a problem unpickling an object, such as a security violation.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#PyStringMap" class="code" data-type="Variable">PyStringMap</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#MARK" class="code" data-type="Variable">MARK</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#STOP" class="code" data-type="Variable">STOP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#POP" class="code" data-type="Variable">POP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#POP_MARK" class="code" data-type="Variable">POP_MARK</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#DUP" class="code" data-type="Variable">DUP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#FLOAT" class="code" data-type="Variable">FLOAT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#INT" class="code" data-type="Variable">INT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#BININT" class="code" data-type="Variable">BININT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#BININT1" class="code" data-type="Variable">BININT1</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#LONG" class="code" data-type="Variable">LONG</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#BININT2" class="code" data-type="Variable">BININT2</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#NONE" class="code" data-type="Variable">NONE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#PERSID" class="code" data-type="Variable">PERSID</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#BINPERSID" class="code" data-type="Variable">BINPERSID</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#REDUCE" class="code" data-type="Variable">REDUCE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#STRING" class="code" data-type="Variable">STRING</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#BINSTRING" class="code" data-type="Variable">BINSTRING</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#SHORT_BINSTRING" class="code" data-type="Variable">SHORT_BINSTRING</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#UNICODE" class="code" data-type="Variable">UNICODE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#BINUNICODE" class="code" data-type="Variable">BINUNICODE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#APPEND" class="code" data-type="Variable">APPEND</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#BUILD" class="code" data-type="Variable">BUILD</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#GLOBAL" class="code" data-type="Variable">GLOBAL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#DICT" class="code" data-type="Variable">DICT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#EMPTY_DICT" class="code" data-type="Variable">EMPTY_DICT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#APPENDS" class="code" data-type="Variable">APPENDS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#GET" class="code" data-type="Variable">GET</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#BINGET" class="code" data-type="Variable">BINGET</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#INST" class="code" data-type="Variable">INST</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#LONG_BINGET" class="code" data-type="Variable">LONG_BINGET</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#LIST" class="code" data-type="Variable">LIST</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#EMPTY_LIST" class="code" data-type="Variable">EMPTY_LIST</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#OBJ" class="code" data-type="Variable">OBJ</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#PUT" class="code" data-type="Variable">PUT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#BINPUT" class="code" data-type="Variable">BINPUT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#LONG_BINPUT" class="code" data-type="Variable">LONG_BINPUT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#SETITEM" class="code" data-type="Variable">SETITEM</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#TUPLE" class="code" data-type="Variable">TUPLE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#EMPTY_TUPLE" class="code" data-type="Variable">EMPTY_TUPLE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#SETITEMS" class="code" data-type="Variable">SETITEMS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#BINFLOAT" class="code" data-type="Variable">BINFLOAT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#TRUE" class="code" data-type="Variable">TRUE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#FALSE" class="code" data-type="Variable">FALSE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#PROTO" class="code" data-type="Variable">PROTO</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#NEWOBJ" class="code" data-type="Variable">NEWOBJ</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#EXT1" class="code" data-type="Variable">EXT1</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#EXT2" class="code" data-type="Variable">EXT2</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#EXT4" class="code" data-type="Variable">EXT4</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#TUPLE1" class="code" data-type="Variable">TUPLE1</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#TUPLE2" class="code" data-type="Variable">TUPLE2</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#TUPLE3" class="code" data-type="Variable">TUPLE3</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#NEWTRUE" class="code" data-type="Variable">NEWTRUE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#NEWFALSE" class="code" data-type="Variable">NEWFALSE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#LONG1" class="code" data-type="Variable">LONG1</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#LONG4" class="code" data-type="Variable">LONG4</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#BINBYTES" class="code" data-type="Variable">BINBYTES</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#SHORT_BINBYTES" class="code" data-type="Variable">SHORT_BINBYTES</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#SHORT_BINUNICODE" class="code" data-type="Variable">SHORT_BINUNICODE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#BINUNICODE8" class="code" data-type="Variable">BINUNICODE8</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#BINBYTES8" class="code" data-type="Variable">BINBYTES8</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#EMPTY_SET" class="code" data-type="Variable">EMPTY_SET</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#ADDITEMS" class="code" data-type="Variable">ADDITEMS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#FROZENSET" class="code" data-type="Variable">FROZENSET</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#NEWOBJ_EX" class="code" data-type="Variable">NEWOBJ_EX</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#STACK_GLOBAL" class="code" data-type="Variable">STACK_GLOBAL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#MEMOIZE" class="code" data-type="Variable">MEMOIZE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#FRAME" class="code" data-type="Variable">FRAME</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#BYTEARRAY8" class="code" data-type="Variable">BYTEARRAY8</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#NEXT_BUFFER" class="code" data-type="Variable">NEXT_BUFFER</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#READONLY_BUFFER" class="code" data-type="Variable">READONLY_BUFFER</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pickle.html#whichmodule" class="code" data-type="Function">whichmodule</a></td>
+    <td><span>Find the module an object belong to.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pickle.html#encode_long" class="code" data-type="Function">encode_long</a></td>
+    <td><span>Encode a long to a two's complement little-endian binary string. Note that 0 is a special case, returning an empty string, to save a byte in the LONG1 pickling context.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pickle.html#decode_long" class="code" data-type="Function">decode_long</a></td>
+    <td><span>Decode a long from a two's complement little-endian binary string.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#Pickler" class="code" data-type="Variable">Pickler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#Unpickler" class="code" data-type="Variable">Unpickler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#dump" class="code" data-type="Variable">dump</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#dumps" class="code" data-type="Variable">dumps</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#load" class="code" data-type="Variable">load</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#loads" class="code" data-type="Variable">loads</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#parser" class="code" data-type="Variable">parser</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#args" class="code" data-type="Variable">args</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#obj" class="code" data-type="Variable">obj</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#_HAVE_PICKLE_BUFFER" class="code" data-type="Variable">_HAVE_PICKLE_BUFFER</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.pickle._Stop.html" class="code" data-type="Class">_Stop</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pickle.html#_tuplesize2code" class="code" data-type="Variable">_tuplesize2code</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.pickle._Framer.html" class="code" data-type="Class">_Framer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.pickle._Unframer.html" class="code" data-type="Class">_Unframer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pickle.html#_getattribute" class="code" data-type="Function">_getattribute</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.pickle._Pickler.html" class="code" data-type="Class">_Pickler</a></td>
+    <td><span class="undocumented">No class0/2 class variables docstring; , 0/10 instance variables docstring; , 4/27 methods documented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.pickle._Unpickler.html" class="code" data-type="Class">_Unpickler</a></td>
+    <td><span class="undocumented">No class0/1 class variables docstring; , 0/15 instance variables docstring; , 2/76 methods documented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pickle.html#_dump" class="code" data-type="Function">_dump</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pickle.html#_dumps" class="code" data-type="Function">_dumps</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pickle.html#_load" class="code" data-type="Function">_load</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pickle.html#_loads" class="code" data-type="Function">_loads</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.pickle.html#_test" class="code" data-type="Function">_test</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable private">
+  
+  <a name="Lib.pickle._HAVE_PICKLE_BUFFER">
+    
+  </a>
+  <a name="_HAVE_PICKLE_BUFFER">
+    
+  </a>
+  <div class="functionHeader">
+    _HAVE_PICKLE_BUFFER =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.bytes_types">
+    
+  </a>
+  <a name="bytes_types">
+    
+  </a>
+  <div class="functionHeader">
+    bytes_types =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.format_version">
+    
+  </a>
+  <a name="format_version">
+    
+  </a>
+  <div class="functionHeader">
+    format_version =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.compatible_formats">
+    
+  </a>
+  <a name="compatible_formats">
+    
+  </a>
+  <div class="functionHeader">
+    compatible_formats =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[str]</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.HIGHEST_PROTOCOL">
+    
+  </a>
+  <a name="HIGHEST_PROTOCOL">
+    
+  </a>
+  <div class="functionHeader">
+    HIGHEST_PROTOCOL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.DEFAULT_PROTOCOL">
+    
+  </a>
+  <a name="DEFAULT_PROTOCOL">
+    
+  </a>
+  <div class="functionHeader">
+    DEFAULT_PROTOCOL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.PyStringMap">
+    
+  </a>
+  <a name="PyStringMap">
+    
+  </a>
+  <div class="functionHeader">
+    PyStringMap =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.MARK">
+    
+  </a>
+  <a name="MARK">
+    
+  </a>
+  <div class="functionHeader">
+    MARK =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.STOP">
+    
+  </a>
+  <a name="STOP">
+    
+  </a>
+  <div class="functionHeader">
+    STOP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.POP">
+    
+  </a>
+  <a name="POP">
+    
+  </a>
+  <div class="functionHeader">
+    POP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.POP_MARK">
+    
+  </a>
+  <a name="POP_MARK">
+    
+  </a>
+  <div class="functionHeader">
+    POP_MARK =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.DUP">
+    
+  </a>
+  <a name="DUP">
+    
+  </a>
+  <div class="functionHeader">
+    DUP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.FLOAT">
+    
+  </a>
+  <a name="FLOAT">
+    
+  </a>
+  <div class="functionHeader">
+    FLOAT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.INT">
+    
+  </a>
+  <a name="INT">
+    
+  </a>
+  <div class="functionHeader">
+    INT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.BININT">
+    
+  </a>
+  <a name="BININT">
+    
+  </a>
+  <div class="functionHeader">
+    BININT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.BININT1">
+    
+  </a>
+  <a name="BININT1">
+    
+  </a>
+  <div class="functionHeader">
+    BININT1 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.LONG">
+    
+  </a>
+  <a name="LONG">
+    
+  </a>
+  <div class="functionHeader">
+    LONG =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.BININT2">
+    
+  </a>
+  <a name="BININT2">
+    
+  </a>
+  <div class="functionHeader">
+    BININT2 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.NONE">
+    
+  </a>
+  <a name="NONE">
+    
+  </a>
+  <div class="functionHeader">
+    NONE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.PERSID">
+    
+  </a>
+  <a name="PERSID">
+    
+  </a>
+  <div class="functionHeader">
+    PERSID =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.BINPERSID">
+    
+  </a>
+  <a name="BINPERSID">
+    
+  </a>
+  <div class="functionHeader">
+    BINPERSID =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.REDUCE">
+    
+  </a>
+  <a name="REDUCE">
+    
+  </a>
+  <div class="functionHeader">
+    REDUCE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.STRING">
+    
+  </a>
+  <a name="STRING">
+    
+  </a>
+  <div class="functionHeader">
+    STRING =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.BINSTRING">
+    
+  </a>
+  <a name="BINSTRING">
+    
+  </a>
+  <div class="functionHeader">
+    BINSTRING =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.SHORT_BINSTRING">
+    
+  </a>
+  <a name="SHORT_BINSTRING">
+    
+  </a>
+  <div class="functionHeader">
+    SHORT_BINSTRING =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.UNICODE">
+    
+  </a>
+  <a name="UNICODE">
+    
+  </a>
+  <div class="functionHeader">
+    UNICODE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.BINUNICODE">
+    
+  </a>
+  <a name="BINUNICODE">
+    
+  </a>
+  <div class="functionHeader">
+    BINUNICODE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.APPEND">
+    
+  </a>
+  <a name="APPEND">
+    
+  </a>
+  <div class="functionHeader">
+    APPEND =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.BUILD">
+    
+  </a>
+  <a name="BUILD">
+    
+  </a>
+  <div class="functionHeader">
+    BUILD =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.GLOBAL">
+    
+  </a>
+  <a name="GLOBAL">
+    
+  </a>
+  <div class="functionHeader">
+    GLOBAL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.DICT">
+    
+  </a>
+  <a name="DICT">
+    
+  </a>
+  <div class="functionHeader">
+    DICT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.EMPTY_DICT">
+    
+  </a>
+  <a name="EMPTY_DICT">
+    
+  </a>
+  <div class="functionHeader">
+    EMPTY_DICT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.APPENDS">
+    
+  </a>
+  <a name="APPENDS">
+    
+  </a>
+  <div class="functionHeader">
+    APPENDS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.GET">
+    
+  </a>
+  <a name="GET">
+    
+  </a>
+  <div class="functionHeader">
+    GET =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.BINGET">
+    
+  </a>
+  <a name="BINGET">
+    
+  </a>
+  <div class="functionHeader">
+    BINGET =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.INST">
+    
+  </a>
+  <a name="INST">
+    
+  </a>
+  <div class="functionHeader">
+    INST =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.LONG_BINGET">
+    
+  </a>
+  <a name="LONG_BINGET">
+    
+  </a>
+  <div class="functionHeader">
+    LONG_BINGET =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.LIST">
+    
+  </a>
+  <a name="LIST">
+    
+  </a>
+  <div class="functionHeader">
+    LIST =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.EMPTY_LIST">
+    
+  </a>
+  <a name="EMPTY_LIST">
+    
+  </a>
+  <div class="functionHeader">
+    EMPTY_LIST =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.OBJ">
+    
+  </a>
+  <a name="OBJ">
+    
+  </a>
+  <div class="functionHeader">
+    OBJ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.PUT">
+    
+  </a>
+  <a name="PUT">
+    
+  </a>
+  <div class="functionHeader">
+    PUT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.BINPUT">
+    
+  </a>
+  <a name="BINPUT">
+    
+  </a>
+  <div class="functionHeader">
+    BINPUT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.LONG_BINPUT">
+    
+  </a>
+  <a name="LONG_BINPUT">
+    
+  </a>
+  <div class="functionHeader">
+    LONG_BINPUT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.SETITEM">
+    
+  </a>
+  <a name="SETITEM">
+    
+  </a>
+  <div class="functionHeader">
+    SETITEM =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.TUPLE">
+    
+  </a>
+  <a name="TUPLE">
+    
+  </a>
+  <div class="functionHeader">
+    TUPLE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.EMPTY_TUPLE">
+    
+  </a>
+  <a name="EMPTY_TUPLE">
+    
+  </a>
+  <div class="functionHeader">
+    EMPTY_TUPLE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.SETITEMS">
+    
+  </a>
+  <a name="SETITEMS">
+    
+  </a>
+  <div class="functionHeader">
+    SETITEMS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.BINFLOAT">
+    
+  </a>
+  <a name="BINFLOAT">
+    
+  </a>
+  <div class="functionHeader">
+    BINFLOAT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.TRUE">
+    
+  </a>
+  <a name="TRUE">
+    
+  </a>
+  <div class="functionHeader">
+    TRUE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.FALSE">
+    
+  </a>
+  <a name="FALSE">
+    
+  </a>
+  <div class="functionHeader">
+    FALSE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.PROTO">
+    
+  </a>
+  <a name="PROTO">
+    
+  </a>
+  <div class="functionHeader">
+    PROTO =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.NEWOBJ">
+    
+  </a>
+  <a name="NEWOBJ">
+    
+  </a>
+  <div class="functionHeader">
+    NEWOBJ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.EXT1">
+    
+  </a>
+  <a name="EXT1">
+    
+  </a>
+  <div class="functionHeader">
+    EXT1 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.EXT2">
+    
+  </a>
+  <a name="EXT2">
+    
+  </a>
+  <div class="functionHeader">
+    EXT2 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.EXT4">
+    
+  </a>
+  <a name="EXT4">
+    
+  </a>
+  <div class="functionHeader">
+    EXT4 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.TUPLE1">
+    
+  </a>
+  <a name="TUPLE1">
+    
+  </a>
+  <div class="functionHeader">
+    TUPLE1 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.TUPLE2">
+    
+  </a>
+  <a name="TUPLE2">
+    
+  </a>
+  <div class="functionHeader">
+    TUPLE2 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.TUPLE3">
+    
+  </a>
+  <a name="TUPLE3">
+    
+  </a>
+  <div class="functionHeader">
+    TUPLE3 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.NEWTRUE">
+    
+  </a>
+  <a name="NEWTRUE">
+    
+  </a>
+  <div class="functionHeader">
+    NEWTRUE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.NEWFALSE">
+    
+  </a>
+  <a name="NEWFALSE">
+    
+  </a>
+  <div class="functionHeader">
+    NEWFALSE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.LONG1">
+    
+  </a>
+  <a name="LONG1">
+    
+  </a>
+  <div class="functionHeader">
+    LONG1 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.LONG4">
+    
+  </a>
+  <a name="LONG4">
+    
+  </a>
+  <div class="functionHeader">
+    LONG4 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.pickle._tuplesize2code">
+    
+  </a>
+  <a name="_tuplesize2code">
+    
+  </a>
+  <div class="functionHeader">
+    _tuplesize2code =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.BINBYTES">
+    
+  </a>
+  <a name="BINBYTES">
+    
+  </a>
+  <div class="functionHeader">
+    BINBYTES =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.SHORT_BINBYTES">
+    
+  </a>
+  <a name="SHORT_BINBYTES">
+    
+  </a>
+  <div class="functionHeader">
+    SHORT_BINBYTES =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.SHORT_BINUNICODE">
+    
+  </a>
+  <a name="SHORT_BINUNICODE">
+    
+  </a>
+  <div class="functionHeader">
+    SHORT_BINUNICODE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.BINUNICODE8">
+    
+  </a>
+  <a name="BINUNICODE8">
+    
+  </a>
+  <div class="functionHeader">
+    BINUNICODE8 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.BINBYTES8">
+    
+  </a>
+  <a name="BINBYTES8">
+    
+  </a>
+  <div class="functionHeader">
+    BINBYTES8 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.EMPTY_SET">
+    
+  </a>
+  <a name="EMPTY_SET">
+    
+  </a>
+  <div class="functionHeader">
+    EMPTY_SET =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.ADDITEMS">
+    
+  </a>
+  <a name="ADDITEMS">
+    
+  </a>
+  <div class="functionHeader">
+    ADDITEMS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.FROZENSET">
+    
+  </a>
+  <a name="FROZENSET">
+    
+  </a>
+  <div class="functionHeader">
+    FROZENSET =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.NEWOBJ_EX">
+    
+  </a>
+  <a name="NEWOBJ_EX">
+    
+  </a>
+  <div class="functionHeader">
+    NEWOBJ_EX =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.STACK_GLOBAL">
+    
+  </a>
+  <a name="STACK_GLOBAL">
+    
+  </a>
+  <div class="functionHeader">
+    STACK_GLOBAL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.MEMOIZE">
+    
+  </a>
+  <a name="MEMOIZE">
+    
+  </a>
+  <div class="functionHeader">
+    MEMOIZE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.FRAME">
+    
+  </a>
+  <a name="FRAME">
+    
+  </a>
+  <div class="functionHeader">
+    FRAME =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.BYTEARRAY8">
+    
+  </a>
+  <a name="BYTEARRAY8">
+    
+  </a>
+  <div class="functionHeader">
+    BYTEARRAY8 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.NEXT_BUFFER">
+    
+  </a>
+  <a name="NEXT_BUFFER">
+    
+  </a>
+  <div class="functionHeader">
+    NEXT_BUFFER =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.READONLY_BUFFER">
+    
+  </a>
+  <a name="READONLY_BUFFER">
+    
+  </a>
+  <div class="functionHeader">
+    READONLY_BUFFER =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pickle._getattribute">
+    
+  </a>
+  <a name="_getattribute">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _getattribute(obj, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pickle.whichmodule">
+    
+  </a>
+  <a name="whichmodule">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    whichmodule(obj, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Find the module an object belong to.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pickle.encode_long">
+    
+  </a>
+  <a name="encode_long">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    encode_long(x):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Encode a long to a two's complement little-endian binary string.
+Note that 0 is a special case, returning an empty string, to save a
+byte in the LONG1 pickling context.
+
+&gt;&gt;&gt; encode_long(0)
+b''
+&gt;&gt;&gt; encode_long(255)
+b'\xff\x00'
+&gt;&gt;&gt; encode_long(32767)
+b'\xff\x7f'
+&gt;&gt;&gt; encode_long(-256)
+b'\x00\xff'
+&gt;&gt;&gt; encode_long(-32768)
+b'\x00\x80'
+&gt;&gt;&gt; encode_long(-128)
+b'\x80'
+&gt;&gt;&gt; encode_long(127)
+b'\x7f'
+&gt;&gt;&gt;</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pickle.decode_long">
+    
+  </a>
+  <a name="decode_long">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    decode_long(data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Decode a long from a two's complement little-endian binary string.
+
+&gt;&gt;&gt; decode_long(b'')
+0
+&gt;&gt;&gt; decode_long(b"\xff\x00")
+255
+&gt;&gt;&gt; decode_long(b"\xff\x7f")
+32767
+&gt;&gt;&gt; decode_long(b"\x00\xff")
+-256
+&gt;&gt;&gt; decode_long(b"\x00\x80")
+-32768
+&gt;&gt;&gt; decode_long(b"\x80")
+-128
+&gt;&gt;&gt; decode_long(b"\x7f")
+127</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pickle._dump">
+    
+  </a>
+  <a name="_dump">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _dump(obj, file, protocol=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pickle._dumps">
+    
+  </a>
+  <a name="_dumps">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _dumps(obj, protocol=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pickle._load">
+    
+  </a>
+  <a name="_load">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _load(file):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pickle._loads">
+    
+  </a>
+  <a name="_loads">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _loads():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.Pickler">
+    
+  </a>
+  <a name="Pickler">
+    
+  </a>
+  <div class="functionHeader">
+    Pickler =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.Unpickler">
+    
+  </a>
+  <a name="Unpickler">
+    
+  </a>
+  <div class="functionHeader">
+    Unpickler =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.dump">
+    
+  </a>
+  <a name="dump">
+    
+  </a>
+  <div class="functionHeader">
+    dump =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.dumps">
+    
+  </a>
+  <a name="dumps">
+    
+  </a>
+  <div class="functionHeader">
+    dumps =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.load">
+    
+  </a>
+  <a name="load">
+    
+  </a>
+  <div class="functionHeader">
+    load =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.loads">
+    
+  </a>
+  <a name="loads">
+    
+  </a>
+  <div class="functionHeader">
+    loads =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.pickle._test">
+    
+  </a>
+  <a name="_test">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _test():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.parser">
+    
+  </a>
+  <a name="parser">
+    
+  </a>
+  <div class="functionHeader">
+    parser =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.args">
+    
+  </a>
+  <a name="args">
+    
+  </a>
+  <div class="functionHeader">
+    args =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pickle.obj">
+    
+  </a>
+  <a name="obj">
+    
+  </a>
+  <div class="functionHeader">
+    obj =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.sndhdr : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.sndhdr.html" class="code" data-type="Module">sndhdr</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Routines to help recognizing sound files.
+
+Function whathdr() recognizes various types of sound file headers.
+It understands almost all headers that SOX can decode.
+
+The return tuple contains the following items, in this order:
+- file type (as SOX understands it)
+- sampling rate (0 if unknown or hard to decode)
+- number of channels (0 if unknown or hard to decode)
+- number of frames in the file (-1 if unknown or hard to decode)
+- number of bits/sample, or 'U' for U-LAW, or 'A' for A-LAW
+
+If the file doesn't have a recognizable type, it returns None.
+If the file can't be opened, OSError is raised.
+
+To compute the total time, divide the number of frames by the
+sampling rate (a frame contains a sample for each channel).
+
+Function what() calls whathdr().  (It used to also use some
+heuristics for raw data, but this doesn't work very well.)
+
+Finally, the function test() is a simple main program that calls
+what() for all files mentioned on the argument list.  For directory
+arguments it calls what() for all files in that directory.  Default
+argument is "." (testing all files in the current directory).  The
+option -r tells it to recurse down directories found inside
+explicitly given directories.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3534">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.sndhdr.html#SndHeaders" class="code" data-type="Variable">SndHeaders</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.sndhdr.html#what" class="code" data-type="Function">what</a></td>
+    <td><span>Guess the type of a sound file.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.sndhdr.html#whathdr" class="code" data-type="Function">whathdr</a></td>
+    <td><span>Recognize sound headers.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.sndhdr.html#tests" class="code" data-type="Variable">tests</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.sndhdr.html#test_aifc" class="code" data-type="Function">test_aifc</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.sndhdr.html#test_au" class="code" data-type="Function">test_au</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.sndhdr.html#test_hcom" class="code" data-type="Function">test_hcom</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.sndhdr.html#test_voc" class="code" data-type="Function">test_voc</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.sndhdr.html#test_wav" class="code" data-type="Function">test_wav</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.sndhdr.html#test_8svx" class="code" data-type="Function">test_8svx</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.sndhdr.html#test_sndt" class="code" data-type="Function">test_sndt</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.sndhdr.html#test_sndr" class="code" data-type="Function">test_sndr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.sndhdr.html#get_long_be" class="code" data-type="Function">get_long_be</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.sndhdr.html#get_long_le" class="code" data-type="Function">get_long_le</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.sndhdr.html#get_short_be" class="code" data-type="Function">get_short_be</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.sndhdr.html#get_short_le" class="code" data-type="Function">get_short_le</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.sndhdr.html#test" class="code" data-type="Function">test</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.sndhdr.html#testall" class="code" data-type="Function">testall</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.sndhdr.SndHeaders">
+    
+  </a>
+  <a name="SndHeaders">
+    
+  </a>
+  <div class="functionHeader">
+    SndHeaders =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.sndhdr.what">
+    
+  </a>
+  <a name="what">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    what(filename):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Guess the type of a sound file.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.sndhdr.whathdr">
+    
+  </a>
+  <a name="whathdr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    whathdr(filename):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Recognize sound headers.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.sndhdr.tests">
+    
+  </a>
+  <a name="tests">
+    
+  </a>
+  <div class="functionHeader">
+    tests =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.sndhdr.test_aifc">
+    
+  </a>
+  <a name="test_aifc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_aifc(h, f):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.sndhdr.test_au">
+    
+  </a>
+  <a name="test_au">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_au(h, f):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.sndhdr.test_hcom">
+    
+  </a>
+  <a name="test_hcom">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_hcom(h, f):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.sndhdr.test_voc">
+    
+  </a>
+  <a name="test_voc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_voc(h, f):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.sndhdr.test_wav">
+    
+  </a>
+  <a name="test_wav">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_wav(h, f):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.sndhdr.test_8svx">
+    
+  </a>
+  <a name="test_8svx">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_8svx(h, f):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.sndhdr.test_sndt">
+    
+  </a>
+  <a name="test_sndt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_sndt(h, f):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.sndhdr.test_sndr">
+    
+  </a>
+  <a name="test_sndr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_sndr(h, f):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.sndhdr.get_long_be">
+    
+  </a>
+  <a name="get_long_be">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_long_be(b):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.sndhdr.get_long_le">
+    
+  </a>
+  <a name="get_long_le">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_long_le(b):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.sndhdr.get_short_be">
+    
+  </a>
+  <a name="get_short_be">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_short_be(b):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.sndhdr.get_short_le">
+    
+  </a>
+  <a name="get_short_le">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_short_le(b):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.sndhdr.test">
+    
+  </a>
+  <a name="test">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.sndhdr.testall">
+    
+  </a>
+  <a name="testall">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    testall(list, recursive, toplevel):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.ipaddress : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.ipaddress.html" class="code" data-type="Module">ipaddress</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">A fast, lightweight IPv4/IPv6 manipulation library in Python.
+
+This library is used to create/poke/manipulate IPv4 and IPv6 addresses
+and networks.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2614">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ipaddress.html#__version__" class="code" data-type="Variable">__version__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ipaddress.html#IPV4LENGTH" class="code" data-type="Variable">IPV4LENGTH</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ipaddress.html#IPV6LENGTH" class="code" data-type="Variable">IPV6LENGTH</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.ipaddress.AddressValueError.html" class="code" data-type="Class">AddressValueError</a></td>
+    <td><span>A Value Error related to the address.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.ipaddress.NetmaskValueError.html" class="code" data-type="Class">NetmaskValueError</a></td>
+    <td><span>A Value Error related to the netmask.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ipaddress.html#ip_address" class="code" data-type="Function">ip_address</a></td>
+    <td><span>Take an IP string/int and return an object of the correct type.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ipaddress.html#ip_network" class="code" data-type="Function">ip_network</a></td>
+    <td><span>Take an IP string/int and return an object of the correct type.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ipaddress.html#ip_interface" class="code" data-type="Function">ip_interface</a></td>
+    <td><span>Take an IP string/int and return an object of the correct type.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ipaddress.html#v4_int_to_packed" class="code" data-type="Function">v4_int_to_packed</a></td>
+    <td><span>Represent an address as 4 packed bytes in network (big-endian) order.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ipaddress.html#v6_int_to_packed" class="code" data-type="Function">v6_int_to_packed</a></td>
+    <td><span>Represent an address as 16 packed bytes in network (big-endian) order.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ipaddress.html#summarize_address_range" class="code" data-type="Function">summarize_address_range</a></td>
+    <td><span>Summarize a network range given the first and last IP addresses.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ipaddress.html#collapse_addresses" class="code" data-type="Function">collapse_addresses</a></td>
+    <td><span>Collapse a list of IP objects.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ipaddress.html#get_mixed_type_key" class="code" data-type="Function">get_mixed_type_key</a></td>
+    <td><span>Return a key suitable for sorting between networks and addresses.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.ipaddress.IPv4Address.html" class="code" data-type="Class">IPv4Address</a></td>
+    <td><span>Represent and manipulate single IPv4 Addresses.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.ipaddress.IPv4Interface.html" class="code" data-type="Class">IPv4Interface</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.ipaddress.IPv4Network.html" class="code" data-type="Class">IPv4Network</a></td>
+    <td><span>This class represents and manipulates 32-bit IPv4 network + addresses..</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.ipaddress.IPv6Address.html" class="code" data-type="Class">IPv6Address</a></td>
+    <td><span>Represent and manipulate single IPv6 Addresses.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.ipaddress.IPv6Interface.html" class="code" data-type="Class">IPv6Interface</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.ipaddress.IPv6Network.html" class="code" data-type="Class">IPv6Network</a></td>
+    <td><span>This class represents and manipulates 128-bit IPv6 networks.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.ipaddress.html#_split_optional_netmask" class="code" data-type="Function">_split_optional_netmask</a></td>
+    <td><span>Helper to split the netmask and raise AddressValueError if needed</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.ipaddress.html#_find_address_range" class="code" data-type="Function">_find_address_range</a></td>
+    <td><span>Find a sequence of sorted deduplicated IPv#Address.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.ipaddress.html#_count_righthand_zero_bits" class="code" data-type="Function">_count_righthand_zero_bits</a></td>
+    <td><span>Count the number of zero bits on the right hand side.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.ipaddress.html#_collapse_addresses_internal" class="code" data-type="Function">_collapse_addresses_internal</a></td>
+    <td><span>Loops through the addresses, collapsing concurrent netblocks.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.ipaddress._IPAddressBase.html" class="code" data-type="Class">_IPAddressBase</a></td>
+    <td><span>The mother class.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ipaddress.html#_address_fmt_re" class="code" data-type="Variable">_address_fmt_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.ipaddress._BaseAddress.html" class="code" data-type="Class">_BaseAddress</a></td>
+    <td><span>A generic IP object.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.ipaddress._BaseNetwork.html" class="code" data-type="Class">_BaseNetwork</a></td>
+    <td><span>A generic IP network object.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.ipaddress._BaseV4.html" class="code" data-type="Class">_BaseV4</a></td>
+    <td><span>Base IPv4 object.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.ipaddress._IPv4Constants.html" class="code" data-type="Class">_IPv4Constants</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.ipaddress._BaseV6.html" class="code" data-type="Class">_BaseV6</a></td>
+    <td><span>Base IPv6 object.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.ipaddress._IPv6Constants.html" class="code" data-type="Class">_IPv6Constants</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.ipaddress.__version__">
+    
+  </a>
+  <a name="__version__">
+    
+  </a>
+  <div class="functionHeader">
+    __version__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.ipaddress.IPV4LENGTH">
+    
+  </a>
+  <a name="IPV4LENGTH">
+    
+  </a>
+  <div class="functionHeader">
+    IPV4LENGTH =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.ipaddress.IPV6LENGTH">
+    
+  </a>
+  <a name="IPV6LENGTH">
+    
+  </a>
+  <div class="functionHeader">
+    IPV6LENGTH =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ipaddress.ip_address">
+    
+  </a>
+  <a name="ip_address">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ip_address(address):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Take an IP string/int and return an object of the correct type.
+
+Args:
+    address: A string or integer, the IP address.  Either IPv4 or
+      IPv6 addresses may be supplied; integers less than 2**32 will
+      be considered to be IPv4 by default.
+
+Returns:
+    An IPv4Address or IPv6Address object.
+
+Raises:
+    ValueError: if the *address* passed isn't either a v4 or a v6
+      address</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ipaddress.ip_network">
+    
+  </a>
+  <a name="ip_network">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ip_network(address, strict=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Take an IP string/int and return an object of the correct type.
+
+Args:
+    address: A string or integer, the IP network.  Either IPv4 or
+      IPv6 networks may be supplied; integers less than 2**32 will
+      be considered to be IPv4 by default.
+
+Returns:
+    An IPv4Network or IPv6Network object.
+
+Raises:
+    ValueError: if the string passed isn't either a v4 or a v6
+      address. Or if the network has host bits set.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ipaddress.ip_interface">
+    
+  </a>
+  <a name="ip_interface">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ip_interface(address):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Take an IP string/int and return an object of the correct type.
+
+Args:
+    address: A string or integer, the IP address.  Either IPv4 or
+      IPv6 addresses may be supplied; integers less than 2**32 will
+      be considered to be IPv4 by default.
+
+Returns:
+    An IPv4Interface or IPv6Interface object.
+
+Raises:
+    ValueError: if the string passed isn't either a v4 or a v6
+      address.
+
+Notes:
+    The IPv?Interface classes describe an Address on a particular
+    Network, so they're basically a combination of both the Address
+    and Network classes.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ipaddress.v4_int_to_packed">
+    
+  </a>
+  <a name="v4_int_to_packed">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    v4_int_to_packed(address):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Represent an address as 4 packed bytes in network (big-endian) order.
+
+Args:
+    address: An integer representation of an IPv4 IP address.
+
+Returns:
+    The integer address packed as 4 bytes in network (big-endian) order.
+
+Raises:
+    ValueError: If the integer is negative or too large to be an
+      IPv4 IP address.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ipaddress.v6_int_to_packed">
+    
+  </a>
+  <a name="v6_int_to_packed">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    v6_int_to_packed(address):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Represent an address as 16 packed bytes in network (big-endian) order.
+
+Args:
+    address: An integer representation of an IPv6 IP address.
+
+Returns:
+    The integer address packed as 16 bytes in network (big-endian) order.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.ipaddress._split_optional_netmask">
+    
+  </a>
+  <a name="_split_optional_netmask">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _split_optional_netmask(address):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Helper to split the netmask and raise AddressValueError if needed</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.ipaddress._find_address_range">
+    
+  </a>
+  <a name="_find_address_range">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _find_address_range(addresses):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Find a sequence of sorted deduplicated IPv#Address.
+
+Args:
+    addresses: a list of IPv#Address objects.
+
+Yields:
+    A tuple containing the first and last IP addresses in the sequence.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.ipaddress._count_righthand_zero_bits">
+    
+  </a>
+  <a name="_count_righthand_zero_bits">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _count_righthand_zero_bits(number, bits):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Count the number of zero bits on the right hand side.
+
+Args:
+    number: an integer.
+    bits: maximum number of bits to count.
+
+Returns:
+    The number of zero bits on the right hand side of the number.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ipaddress.summarize_address_range">
+    
+  </a>
+  <a name="summarize_address_range">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    summarize_address_range(first, last):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Summarize a network range given the first and last IP addresses.
+
+Example:
+    &gt;&gt;&gt; list(summarize_address_range(IPv4Address('192.0.2.0'),
+    ...                              IPv4Address('192.0.2.130')))
+    ...                                #doctest: +NORMALIZE_WHITESPACE
+    [IPv4Network('192.0.2.0/25'), IPv4Network('192.0.2.128/31'),
+     IPv4Network('192.0.2.130/32')]
+
+Args:
+    first: the first IPv4Address or IPv6Address in the range.
+    last: the last IPv4Address or IPv6Address in the range.
+
+Returns:
+    An iterator of the summarized IPv(4|6) network objects.
+
+Raise:
+    TypeError:
+        If the first and last objects are not IP addresses.
+        If the first and last objects are not the same version.
+    ValueError:
+        If the last object is not greater than the first.
+        If the version of the first address is not 4 or 6.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.ipaddress._collapse_addresses_internal">
+    
+  </a>
+  <a name="_collapse_addresses_internal">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _collapse_addresses_internal(addresses):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Loops through the addresses, collapsing concurrent netblocks.
+
+Example:
+
+    ip1 = IPv4Network('192.0.2.0/26')
+    ip2 = IPv4Network('192.0.2.64/26')
+    ip3 = IPv4Network('192.0.2.128/26')
+    ip4 = IPv4Network('192.0.2.192/26')
+
+    _collapse_addresses_internal([ip1, ip2, ip3, ip4]) -&gt;
+      [IPv4Network('192.0.2.0/24')]
+
+    This shouldn't be called directly; it is called via
+      collapse_addresses([]).
+
+Args:
+    addresses: A list of IPv4Network's or IPv6Network's
+
+Returns:
+    A list of IPv4Network's or IPv6Network's depending on what we were
+    passed.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ipaddress.collapse_addresses">
+    
+  </a>
+  <a name="collapse_addresses">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    collapse_addresses(addresses):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Collapse a list of IP objects.
+
+Example:
+    collapse_addresses([IPv4Network('192.0.2.0/25'),
+                        IPv4Network('192.0.2.128/25')]) -&gt;
+                       [IPv4Network('192.0.2.0/24')]
+
+Args:
+    addresses: An iterator of IPv4Network or IPv6Network objects.
+
+Returns:
+    An iterator of the collapsed IPv(4|6)Network objects.
+
+Raises:
+    TypeError: If passed a list of mixed version objects.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ipaddress.get_mixed_type_key">
+    
+  </a>
+  <a name="get_mixed_type_key">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_mixed_type_key(obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a key suitable for sorting between networks and addresses.
+
+Address and Network objects are not sortable by default; they're
+fundamentally different so the expression
+
+    IPv4Address('192.0.2.0') &lt;= IPv4Network('192.0.2.0/24')
+
+doesn't make any sense.  There are some times however, where you may wish
+to have ipaddress sort these for you anyway. If you need to do this, you
+can use this function as the key= argument to sorted().
+
+Args:
+  obj: either a Network or Address object.
+Returns:
+  appropriate key.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.ipaddress._address_fmt_re">
+    
+  </a>
+  <a name="_address_fmt_re">
+    
+  </a>
+  <div class="functionHeader">
+    _address_fmt_re =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

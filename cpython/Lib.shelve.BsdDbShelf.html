@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.shelve.BsdDbShelf : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.shelve.html" class="code" data-type="Module">shelve</a>.<a href="Lib.shelve.BsdDbShelf.html" class="code" data-type="Class">BsdDbShelf</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.shelve.BsdDbShelf(<a href="Lib.shelve.Shelf.html" class="code" data-type="Class">Shelf</a>):</code></p>
+        <p><a href="classIndex.html#Lib.shelve.BsdDbShelf">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Shelf implementation using the "BSD" db interface.
+
+This adds methods first(), next(), previous(), last() and
+set_location() that have no counterpart in [g]dbm databases.
+
+The actual database must be opened using one of the "bsddb"
+modules "open" routines (i.e. bsddb.hashopen, bsddb.btopen or
+bsddb.rnopen) and passed to the constructor.
+
+See the module's __doc__ string for an overview of the interface.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3500">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.shelve.BsdDbShelf.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.shelve.BsdDbShelf.html#set_location" class="code" data-type="Method">set_location</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.shelve.BsdDbShelf.html#next" class="code" data-type="Method">next</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.shelve.BsdDbShelf.html#previous" class="code" data-type="Method">previous</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.shelve.BsdDbShelf.html#first" class="code" data-type="Method">first</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.shelve.BsdDbShelf.html#last" class="code" data-type="Method">last</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.shelve.Shelf.html" class="code" data-type="Class">Shelf</a>:
+          </p>
+          <table class="children sortable" id="id3501">
+  
+  <tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.shelve.Shelf.html#dict" class="code" data-type="Instance Variable">dict</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.shelve.Shelf.html#writeback" class="code" data-type="Instance Variable">writeback</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.shelve.Shelf.html#cache" class="code" data-type="Instance Variable">cache</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.shelve.Shelf.html#keyencoding" class="code" data-type="Instance Variable">keyencoding</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.shelve.Shelf.html#__iter__" class="code" data-type="Method">__iter__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.shelve.Shelf.html#__len__" class="code" data-type="Method">__len__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.shelve.Shelf.html#__contains__" class="code" data-type="Method">__contains__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.shelve.Shelf.html#get" class="code" data-type="Method">get</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.shelve.Shelf.html#__getitem__" class="code" data-type="Method">__getitem__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.shelve.Shelf.html#__setitem__" class="code" data-type="Method">__setitem__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.shelve.Shelf.html#__delitem__" class="code" data-type="Method">__delitem__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.shelve.Shelf.html#__enter__" class="code" data-type="Method">__enter__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.shelve.Shelf.html#__exit__" class="code" data-type="Method">__exit__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.shelve.Shelf.html#close" class="code" data-type="Method">close</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.shelve.Shelf.html#__del__" class="code" data-type="Method">__del__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.shelve.Shelf.html#sync" class="code" data-type="Method">sync</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.shelve.Shelf.html#_protocol" class="code" data-type="Instance Variable">_protocol</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.shelve.BsdDbShelf.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, dict, protocol=None, writeback=(False), keyencoding="""utf-8"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.shelve.Shelf.html#__init__" class="code" data-type="Method">Lib.shelve.Shelf.__init__</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.shelve.BsdDbShelf.set_location">
+    
+  </a>
+  <a name="set_location">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_location(self, key):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.shelve.BsdDbShelf.next">
+    
+  </a>
+  <a name="next">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    next(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.shelve.BsdDbShelf.previous">
+    
+  </a>
+  <a name="previous">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    previous(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.shelve.BsdDbShelf.first">
+    
+  </a>
+  <a name="first">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    first(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.shelve.BsdDbShelf.last">
+    
+  </a>
+  <a name="last">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    last(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

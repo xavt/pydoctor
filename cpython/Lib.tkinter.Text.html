@@ -1,0 +1,2349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.tkinter.Text : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.tkinter.html" class="code" data-type="Package">tkinter</a>.<a href="Lib.tkinter.Text.html" class="code" data-type="Class">Text</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.tkinter.Text(<a href="Lib.tkinter.Widget.html" class="code" data-type="Class">Widget</a>, <a href="Lib.tkinter.XView.html" class="code" data-type="Class">XView</a>, <a href="Lib.tkinter.YView.html" class="code" data-type="Class">YView</a>):</code></p>
+        <p><a href="classIndex.html#Lib.tkinter.Text">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Text widget which can display text in various forms.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id11027">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Construct a text widget with the parent MASTER.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#bbox" class="code" data-type="Method">bbox</a></td>
+    <td><span>Return a tuple of (x,y,width,height) which gives the bounding box of the visible part of the character at the given index.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#compare" class="code" data-type="Method">compare</a></td>
+    <td><span>Return whether between index INDEX1 and index INDEX2 the relation OP is satisfied. OP is one of &lt;, &lt;=, ==, &gt;=, &gt;, or !=.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#count" class="code" data-type="Method">count</a></td>
+    <td><span>Counts the number of relevant things between the two indices. If index1 is after index2, the result will be a negative number (and this holds for each of the possible options).</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#debug" class="code" data-type="Method">debug</a></td>
+    <td><span>Turn on the internal consistency checks of the B-Tree inside the text widget according to BOOLEAN.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#delete" class="code" data-type="Method">delete</a></td>
+    <td><span>Delete the characters between INDEX1 and INDEX2 (not included).</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#dlineinfo" class="code" data-type="Method">dlineinfo</a></td>
+    <td><span>Return tuple (x,y,width,height,baseline) giving the bounding box and baseline position of the visible part of the line containing the character at INDEX.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#dump" class="code" data-type="Method">dump</a></td>
+    <td><span>Return the contents of the widget between index1 and index2.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#edit" class="code" data-type="Method">edit</a></td>
+    <td><span>Internal method</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#edit_modified" class="code" data-type="Method">edit_modified</a></td>
+    <td><span>Get or Set the modified flag</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#edit_redo" class="code" data-type="Method">edit_redo</a></td>
+    <td><span>Redo the last undone edit</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#edit_reset" class="code" data-type="Method">edit_reset</a></td>
+    <td><span>Clears the undo and redo stacks</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#edit_separator" class="code" data-type="Method">edit_separator</a></td>
+    <td><span>Inserts a separator (boundary) on the undo stack.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#edit_undo" class="code" data-type="Method">edit_undo</a></td>
+    <td><span>Undoes the last edit action</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#get" class="code" data-type="Method">get</a></td>
+    <td><span>Return the text from INDEX1 to INDEX2 (not included).</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#image_cget" class="code" data-type="Method">image_cget</a></td>
+    <td><span>Return the value of OPTION of an embedded image at INDEX.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#image_configure" class="code" data-type="Method">image_configure</a></td>
+    <td><span>Configure an embedded image at INDEX.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#image_create" class="code" data-type="Method">image_create</a></td>
+    <td><span>Create an embedded image at INDEX.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#image_names" class="code" data-type="Method">image_names</a></td>
+    <td><span>Return all names of embedded images in this widget.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#index" class="code" data-type="Method">index</a></td>
+    <td><span>Return the index in the form line.char for INDEX.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#insert" class="code" data-type="Method">insert</a></td>
+    <td><span>Insert CHARS before the characters at INDEX. An additional tag can be given in ARGS. Additional CHARS and tags can follow in ARGS.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#mark_gravity" class="code" data-type="Method">mark_gravity</a></td>
+    <td><span>Change the gravity of a mark MARKNAME to DIRECTION (LEFT or RIGHT). Return the current value if None is given for DIRECTION.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#mark_names" class="code" data-type="Method">mark_names</a></td>
+    <td><span>Return all mark names.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#mark_set" class="code" data-type="Method">mark_set</a></td>
+    <td><span>Set mark MARKNAME before the character at INDEX.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#mark_unset" class="code" data-type="Method">mark_unset</a></td>
+    <td><span>Delete all marks in MARKNAMES.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#mark_next" class="code" data-type="Method">mark_next</a></td>
+    <td><span>Return the name of the next mark after INDEX.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#mark_previous" class="code" data-type="Method">mark_previous</a></td>
+    <td><span>Return the name of the previous mark before INDEX.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#peer_create" class="code" data-type="Method">peer_create</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#peer_names" class="code" data-type="Method">peer_names</a></td>
+    <td><span>Returns a list of peers of this widget (this does not include the widget itself).</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#replace" class="code" data-type="Method">replace</a></td>
+    <td><span>Replaces the range of characters between index1 and index2 with the given characters and tags specified by args.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#scan_mark" class="code" data-type="Method">scan_mark</a></td>
+    <td><span>Remember the current X, Y coordinates.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#scan_dragto" class="code" data-type="Method">scan_dragto</a></td>
+    <td><span>Adjust the view of the text to 10 times the difference between X and Y and the coordinates given in scan_mark.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#search" class="code" data-type="Method">search</a></td>
+    <td><span>Search PATTERN beginning from INDEX until STOPINDEX. Return the index of the first character of a match or an empty string.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#see" class="code" data-type="Method">see</a></td>
+    <td><span>Scroll such that the character at INDEX is visible.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#tag_add" class="code" data-type="Method">tag_add</a></td>
+    <td><span>Add tag TAGNAME to all characters between INDEX1 and index2 in ARGS. Additional pairs of indices may follow in ARGS.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#tag_unbind" class="code" data-type="Method">tag_unbind</a></td>
+    <td><span>Unbind for all characters with TAGNAME for event SEQUENCE  the function identified with FUNCID.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#tag_bind" class="code" data-type="Method">tag_bind</a></td>
+    <td><span>Bind to all characters with TAGNAME at event SEQUENCE a call to function FUNC.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#tag_cget" class="code" data-type="Method">tag_cget</a></td>
+    <td><span>Return the value of OPTION for tag TAGNAME.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#tag_configure" class="code" data-type="Method">tag_configure</a></td>
+    <td><span>Configure a tag TAGNAME.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#tag_delete" class="code" data-type="Method">tag_delete</a></td>
+    <td><span>Delete all tags in TAGNAMES.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#tag_lower" class="code" data-type="Method">tag_lower</a></td>
+    <td><span>Change the priority of tag TAGNAME such that it is lower than the priority of BELOWTHIS.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#tag_names" class="code" data-type="Method">tag_names</a></td>
+    <td><span>Return a list of all tag names.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#tag_nextrange" class="code" data-type="Method">tag_nextrange</a></td>
+    <td><span>Return a list of start and end index for the first sequence of characters between INDEX1 and INDEX2 which all have tag TAGNAME. The text is searched forward from INDEX1.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#tag_prevrange" class="code" data-type="Method">tag_prevrange</a></td>
+    <td><span>Return a list of start and end index for the first sequence of characters between INDEX1 and INDEX2 which all have tag TAGNAME. The text is searched backwards from INDEX1.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#tag_raise" class="code" data-type="Method">tag_raise</a></td>
+    <td><span>Change the priority of tag TAGNAME such that it is higher than the priority of ABOVETHIS.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#tag_ranges" class="code" data-type="Method">tag_ranges</a></td>
+    <td><span>Return a list of ranges of text which have tag TAGNAME.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#tag_remove" class="code" data-type="Method">tag_remove</a></td>
+    <td><span>Remove tag TAGNAME from all characters between INDEX1 and INDEX2.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#window_cget" class="code" data-type="Method">window_cget</a></td>
+    <td><span>Return the value of OPTION of an embedded window at INDEX.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#window_configure" class="code" data-type="Method">window_configure</a></td>
+    <td><span>Configure an embedded window at INDEX.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#window_create" class="code" data-type="Method">window_create</a></td>
+    <td><span>Create a window at INDEX.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#window_names" class="code" data-type="Method">window_names</a></td>
+    <td><span>Return all names of embedded windows in this widget.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Text.html#yview_pickplace" class="code" data-type="Method">yview_pickplace</a></td>
+    <td><span>Obsolete function, use see.</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.tkinter.BaseWidget.html" class="code" data-type="Class">BaseWidget</a> (via <a href="Lib.tkinter.Widget.html" class="code" data-type="Class">Widget</a>):
+          </p>
+          <table class="children sortable" id="id11028">
+  
+  <tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tkinter.BaseWidget.html#master" class="code" data-type="Instance Variable">master</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tkinter.BaseWidget.html#tk" class="code" data-type="Instance Variable">tk</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tkinter.BaseWidget.html#children" class="code" data-type="Instance Variable">children</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tkinter.BaseWidget.html#widgetName" class="code" data-type="Instance Variable">widgetName</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.BaseWidget.html#destroy" class="code" data-type="Method">destroy</a></td>
+    <td><span>Destroy this and all descendants widgets.</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.BaseWidget.html#_setup" class="code" data-type="Method">_setup</a></td>
+    <td><span>Internal function. Sets up information about children.</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tkinter.BaseWidget.html#_name" class="code" data-type="Instance Variable">_name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tkinter.BaseWidget.html#_w" class="code" data-type="Instance Variable">_w</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tkinter.BaseWidget.html#_tclCommands" class="code" data-type="Instance Variable">_tclCommands</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.BaseWidget.html#_do" class="code" data-type="Method">_do</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.tkinter.Misc.html" class="code" data-type="Class">Misc</a> (via <a href="Lib.tkinter.Widget.html" class="code" data-type="Class">Widget</a>, <a href="Lib.tkinter.BaseWidget.html" class="code" data-type="Class">BaseWidget</a>):
+          </p>
+          <table class="children sortable" id="id11029">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#deletecommand" class="code" data-type="Method">deletecommand</a></td>
+    <td><span>Internal function.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#tk_strictMotif" class="code" data-type="Method">tk_strictMotif</a></td>
+    <td><span>Set Tcl internal variable, whether the look and feel should adhere to Motif.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#tk_bisque" class="code" data-type="Method">tk_bisque</a></td>
+    <td><span>Change the color scheme to light brown as used in Tk 3.6 and before.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#tk_setPalette" class="code" data-type="Method">tk_setPalette</a></td>
+    <td><span>Set a new color scheme for all widget elements.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#wait_variable" class="code" data-type="Method">wait_variable</a></td>
+    <td><span>Wait until the variable is modified.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#wait_window" class="code" data-type="Method">wait_window</a></td>
+    <td><span>Wait until a WIDGET is destroyed.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#wait_visibility" class="code" data-type="Method">wait_visibility</a></td>
+    <td><span>Wait until the visibility of a WIDGET changes (e.g. it appears).</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#setvar" class="code" data-type="Method">setvar</a></td>
+    <td><span>Set Tcl variable NAME to VALUE.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#getvar" class="code" data-type="Method">getvar</a></td>
+    <td><span>Return value of Tcl variable NAME.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#getint" class="code" data-type="Method">getint</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#getdouble" class="code" data-type="Method">getdouble</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#getboolean" class="code" data-type="Method">getboolean</a></td>
+    <td><span>Return a boolean value for Tcl boolean values true and false given as parameter.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#focus_set" class="code" data-type="Method">focus_set</a></td>
+    <td><span>Direct input focus to this widget.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#focus_force" class="code" data-type="Method">focus_force</a></td>
+    <td><span>Direct input focus to this widget even if the application does not have the focus. Use with caution!</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#focus_get" class="code" data-type="Method">focus_get</a></td>
+    <td><span>Return the widget which has currently the focus in the application.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#focus_displayof" class="code" data-type="Method">focus_displayof</a></td>
+    <td><span>Return the widget which has currently the focus on the display where this widget is located.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#focus_lastfor" class="code" data-type="Method">focus_lastfor</a></td>
+    <td><span>Return the widget which would have the focus if top level for this widget gets the focus from the window manager.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#tk_focusFollowsMouse" class="code" data-type="Method">tk_focusFollowsMouse</a></td>
+    <td><span>The widget under mouse will get automatically focus. Can not be disabled easily.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#tk_focusNext" class="code" data-type="Method">tk_focusNext</a></td>
+    <td><span>Return the next widget in the focus order which follows widget which has currently the focus.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#tk_focusPrev" class="code" data-type="Method">tk_focusPrev</a></td>
+    <td><span>Return previous widget in the focus order. See tk_focusNext for details.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#after" class="code" data-type="Method">after</a></td>
+    <td><span>Call function once after given time.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#after_idle" class="code" data-type="Method">after_idle</a></td>
+    <td><span>Call FUNC once if the Tcl main loop has no event to process.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#after_cancel" class="code" data-type="Method">after_cancel</a></td>
+    <td><span>Cancel scheduling of function identified with ID.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#bell" class="code" data-type="Method">bell</a></td>
+    <td><span>Ring a display's bell.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#clipboard_get" class="code" data-type="Method">clipboard_get</a></td>
+    <td><span>Retrieve data from the clipboard on window's display.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#clipboard_clear" class="code" data-type="Method">clipboard_clear</a></td>
+    <td><span>Clear the data in the Tk clipboard.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#clipboard_append" class="code" data-type="Method">clipboard_append</a></td>
+    <td><span>Append STRING to the Tk clipboard.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#grab_current" class="code" data-type="Method">grab_current</a></td>
+    <td><span>Return widget which has currently the grab in this application or None.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#grab_release" class="code" data-type="Method">grab_release</a></td>
+    <td><span>Release grab for this widget if currently set.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#grab_set" class="code" data-type="Method">grab_set</a></td>
+    <td><span>Set grab for this widget.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#grab_set_global" class="code" data-type="Method">grab_set_global</a></td>
+    <td><span>Set global grab for this widget.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#grab_status" class="code" data-type="Method">grab_status</a></td>
+    <td><span>Return None, "local" or "global" if this widget has no, a local or a global grab.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#option_add" class="code" data-type="Method">option_add</a></td>
+    <td><span>Set a VALUE (second parameter) for an option PATTERN (first parameter).</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#option_clear" class="code" data-type="Method">option_clear</a></td>
+    <td><span>Clear the option database.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#option_get" class="code" data-type="Method">option_get</a></td>
+    <td><span>Return the value for an option NAME for this widget with CLASSNAME.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#option_readfile" class="code" data-type="Method">option_readfile</a></td>
+    <td><span>Read file FILENAME into the option database.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#selection_clear" class="code" data-type="Method">selection_clear</a></td>
+    <td><span>Clear the current X selection.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#selection_get" class="code" data-type="Method">selection_get</a></td>
+    <td><span>Return the contents of the current X selection.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#selection_handle" class="code" data-type="Method">selection_handle</a></td>
+    <td><span>Specify a function COMMAND to call if the X selection owned by this widget is queried by another application.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#selection_own" class="code" data-type="Method">selection_own</a></td>
+    <td><span>Become owner of X selection.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#selection_own_get" class="code" data-type="Method">selection_own_get</a></td>
+    <td><span>Return owner of X selection.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#send" class="code" data-type="Method">send</a></td>
+    <td><span>Send Tcl command CMD to different interpreter INTERP to be executed.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#lower" class="code" data-type="Method">lower</a></td>
+    <td><span>Lower this widget in the stacking order.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#tkraise" class="code" data-type="Method">tkraise</a></td>
+    <td><span>Raise this widget in the stacking order.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_atom" class="code" data-type="Method">winfo_atom</a></td>
+    <td><span>Return integer which represents atom NAME.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_atomname" class="code" data-type="Method">winfo_atomname</a></td>
+    <td><span>Return name of atom with identifier ID.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_cells" class="code" data-type="Method">winfo_cells</a></td>
+    <td><span>Return number of cells in the colormap for this widget.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_children" class="code" data-type="Method">winfo_children</a></td>
+    <td><span>Return a list of all widgets which are children of this widget.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_class" class="code" data-type="Method">winfo_class</a></td>
+    <td><span>Return window class name of this widget.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_colormapfull" class="code" data-type="Method">winfo_colormapfull</a></td>
+    <td><span>Return True if at the last color request the colormap was full.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_containing" class="code" data-type="Method">winfo_containing</a></td>
+    <td><span>Return the widget which is at the root coordinates ROOTX, ROOTY.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_depth" class="code" data-type="Method">winfo_depth</a></td>
+    <td><span>Return the number of bits per pixel.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_exists" class="code" data-type="Method">winfo_exists</a></td>
+    <td><span>Return true if this widget exists.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_fpixels" class="code" data-type="Method">winfo_fpixels</a></td>
+    <td><span>Return the number of pixels for the given distance NUMBER (e.g. "3c") as float.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_geometry" class="code" data-type="Method">winfo_geometry</a></td>
+    <td><span>Return geometry string for this widget in the form "widthxheight+X+Y".</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_height" class="code" data-type="Method">winfo_height</a></td>
+    <td><span>Return height of this widget.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_id" class="code" data-type="Method">winfo_id</a></td>
+    <td><span>Return identifier ID for this widget.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_interps" class="code" data-type="Method">winfo_interps</a></td>
+    <td><span>Return the name of all Tcl interpreters for this display.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_ismapped" class="code" data-type="Method">winfo_ismapped</a></td>
+    <td><span>Return true if this widget is mapped.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_manager" class="code" data-type="Method">winfo_manager</a></td>
+    <td><span>Return the window manager name for this widget.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_name" class="code" data-type="Method">winfo_name</a></td>
+    <td><span>Return the name of this widget.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_parent" class="code" data-type="Method">winfo_parent</a></td>
+    <td><span>Return the name of the parent of this widget.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_pathname" class="code" data-type="Method">winfo_pathname</a></td>
+    <td><span>Return the pathname of the widget given by ID.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_pixels" class="code" data-type="Method">winfo_pixels</a></td>
+    <td><span>Rounded integer value of winfo_fpixels.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_pointerx" class="code" data-type="Method">winfo_pointerx</a></td>
+    <td><span>Return the x coordinate of the pointer on the root window.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_pointerxy" class="code" data-type="Method">winfo_pointerxy</a></td>
+    <td><span>Return a tuple of x and y coordinates of the pointer on the root window.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_pointery" class="code" data-type="Method">winfo_pointery</a></td>
+    <td><span>Return the y coordinate of the pointer on the root window.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_reqheight" class="code" data-type="Method">winfo_reqheight</a></td>
+    <td><span>Return requested height of this widget.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_reqwidth" class="code" data-type="Method">winfo_reqwidth</a></td>
+    <td><span>Return requested width of this widget.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_rgb" class="code" data-type="Method">winfo_rgb</a></td>
+    <td><span>Return tuple of decimal values for red, green, blue for COLOR in this widget.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_rootx" class="code" data-type="Method">winfo_rootx</a></td>
+    <td><span>Return x coordinate of upper left corner of this widget on the root window.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_rooty" class="code" data-type="Method">winfo_rooty</a></td>
+    <td><span>Return y coordinate of upper left corner of this widget on the root window.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_screen" class="code" data-type="Method">winfo_screen</a></td>
+    <td><span>Return the screen name of this widget.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_screencells" class="code" data-type="Method">winfo_screencells</a></td>
+    <td><span>Return the number of the cells in the colormap of the screen of this widget.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_screendepth" class="code" data-type="Method">winfo_screendepth</a></td>
+    <td><span>Return the number of bits per pixel of the root window of the screen of this widget.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_screenheight" class="code" data-type="Method">winfo_screenheight</a></td>
+    <td><span>Return the number of pixels of the height of the screen of this widget in pixel.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_screenmmheight" class="code" data-type="Method">winfo_screenmmheight</a></td>
+    <td><span>Return the number of pixels of the height of the screen of this widget in mm.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_screenmmwidth" class="code" data-type="Method">winfo_screenmmwidth</a></td>
+    <td><span>Return the number of pixels of the width of the screen of this widget in mm.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_screenvisual" class="code" data-type="Method">winfo_screenvisual</a></td>
+    <td><span>Return one of the strings directcolor, grayscale, pseudocolor, staticcolor, staticgray, or truecolor for the default colormodel of this screen.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_screenwidth" class="code" data-type="Method">winfo_screenwidth</a></td>
+    <td><span>Return the number of pixels of the width of the screen of this widget in pixel.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_server" class="code" data-type="Method">winfo_server</a></td>
+    <td><span>Return information of the X-Server of the screen of this widget in the form "XmajorRminor vendor vendorVersion".</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_toplevel" class="code" data-type="Method">winfo_toplevel</a></td>
+    <td><span>Return the toplevel widget of this widget.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_viewable" class="code" data-type="Method">winfo_viewable</a></td>
+    <td><span>Return true if the widget and all its higher ancestors are mapped.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_visual" class="code" data-type="Method">winfo_visual</a></td>
+    <td><span>Return one of the strings directcolor, grayscale, pseudocolor, staticcolor, staticgray, or truecolor for the colormodel of this widget.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_visualid" class="code" data-type="Method">winfo_visualid</a></td>
+    <td><span>Return the X identifier for the visual for this widget.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_visualsavailable" class="code" data-type="Method">winfo_visualsavailable</a></td>
+    <td><span>Return a list of all visuals available for the screen of this widget.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_vrootheight" class="code" data-type="Method">winfo_vrootheight</a></td>
+    <td><span>Return the height of the virtual root window associated with this widget in pixels. If there is no virtual root window return the height of the screen.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_vrootwidth" class="code" data-type="Method">winfo_vrootwidth</a></td>
+    <td><span>Return the width of the virtual root window associated with this widget in pixel. If there is no virtual root window return the width of the screen.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_vrootx" class="code" data-type="Method">winfo_vrootx</a></td>
+    <td><span>Return the x offset of the virtual root relative to the root window of the screen of this widget.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_vrooty" class="code" data-type="Method">winfo_vrooty</a></td>
+    <td><span>Return the y offset of the virtual root relative to the root window of the screen of this widget.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_width" class="code" data-type="Method">winfo_width</a></td>
+    <td><span>Return the width of this widget.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_x" class="code" data-type="Method">winfo_x</a></td>
+    <td><span>Return the x coordinate of the upper left corner of this widget in the parent.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#winfo_y" class="code" data-type="Method">winfo_y</a></td>
+    <td><span>Return the y coordinate of the upper left corner of this widget in the parent.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#update" class="code" data-type="Method">update</a></td>
+    <td><span>Enter event loop until all pending events have been processed by Tcl.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#update_idletasks" class="code" data-type="Method">update_idletasks</a></td>
+    <td><span>Enter event loop until all idle callbacks have been called. This will update the display of windows but not process events caused by the user.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#bindtags" class="code" data-type="Method">bindtags</a></td>
+    <td><span>Set or get the list of bindtags for this widget.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#bind" class="code" data-type="Method">bind</a></td>
+    <td><span>Bind to this widget at event SEQUENCE a call to function FUNC.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#unbind" class="code" data-type="Method">unbind</a></td>
+    <td><span>Unbind for this widget for event SEQUENCE  the function identified with FUNCID.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#bind_all" class="code" data-type="Method">bind_all</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#unbind_all" class="code" data-type="Method">unbind_all</a></td>
+    <td><span>Unbind for all widgets for event SEQUENCE all functions.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#bind_class" class="code" data-type="Method">bind_class</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#unbind_class" class="code" data-type="Method">unbind_class</a></td>
+    <td><span>Unbind for all widgets with bindtag CLASSNAME for event SEQUENCE all functions.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#mainloop" class="code" data-type="Method">mainloop</a></td>
+    <td><span>Call the mainloop of Tk.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#quit" class="code" data-type="Method">quit</a></td>
+    <td><span>Quit the Tcl interpreter. All widgets will be destroyed.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#nametowidget" class="code" data-type="Method">nametowidget</a></td>
+    <td><span>Return the Tkinter instance of a widget identified by its Tcl name NAME.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#configure" class="code" data-type="Method">configure</a></td>
+    <td><span>Configure resources of a widget.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#cget" class="code" data-type="Method">cget</a></td>
+    <td><span>Return the resource value for a KEY given as string.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#__setitem__" class="code" data-type="Method">__setitem__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#keys" class="code" data-type="Method">keys</a></td>
+    <td><span>Return a list of all resource names of this widget.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#__str__" class="code" data-type="Method">__str__</a></td>
+    <td><span>Return the window path name of this widget.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#pack_propagate" class="code" data-type="Method">pack_propagate</a></td>
+    <td><span>Set or get the status for propagation of geometry information.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#pack_slaves" class="code" data-type="Method">pack_slaves</a></td>
+    <td><span>Return a list of all slaves of this widget in its packing order.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#place_slaves" class="code" data-type="Method">place_slaves</a></td>
+    <td><span>Return a list of all slaves of this widget in its packing order.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#grid_anchor" class="code" data-type="Method">grid_anchor</a></td>
+    <td><span>The anchor value controls how to place the grid within the master when no row/column has any weight.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#grid_bbox" class="code" data-type="Method">grid_bbox</a></td>
+    <td><span>Return a tuple of integer coordinates for the bounding box of this widget controlled by the geometry manager grid.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#grid_columnconfigure" class="code" data-type="Method">grid_columnconfigure</a></td>
+    <td><span>Configure column INDEX of a grid.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#grid_location" class="code" data-type="Method">grid_location</a></td>
+    <td><span>Return a tuple of column and row which identify the cell at which the pixel at position X and Y inside the master widget is located.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#grid_propagate" class="code" data-type="Method">grid_propagate</a></td>
+    <td><span>Set or get the status for propagation of geometry information.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#grid_rowconfigure" class="code" data-type="Method">grid_rowconfigure</a></td>
+    <td><span>Configure row INDEX of a grid.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#grid_size" class="code" data-type="Method">grid_size</a></td>
+    <td><span>Return a tuple of the number of column and rows in the grid.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#grid_slaves" class="code" data-type="Method">grid_slaves</a></td>
+    <td><span>Return a list of all slaves of this widget in its packing order.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#event_add" class="code" data-type="Method">event_add</a></td>
+    <td><span>Bind a virtual event VIRTUAL (of the form &lt;&lt;Name&gt;&gt;) to an event SEQUENCE such that the virtual event is triggered whenever SEQUENCE occurs.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#event_delete" class="code" data-type="Method">event_delete</a></td>
+    <td><span>Unbind a virtual event VIRTUAL from SEQUENCE.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#event_generate" class="code" data-type="Method">event_generate</a></td>
+    <td><span>Generate an event SEQUENCE. Additional keyword arguments specify parameter of the event (e.g. x, y, rootx, rooty).</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#event_info" class="code" data-type="Method">event_info</a></td>
+    <td><span>Return a list of all virtual events or the information about the SEQUENCE bound to the virtual event VIRTUAL.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#image_types" class="code" data-type="Method">image_types</a></td>
+    <td><span>Return a list of all available image types (e.g. photo bitmap).</span></td>
+  </tr><tr class="baseclassvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.tkinter.Misc.html#_last_child_ids" class="code" data-type="Class Variable">_last_child_ids</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#__winfo_parseitem" class="code" data-type="Method">__winfo_parseitem</a></td>
+    <td><span>Internal function.</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#__winfo_getint" class="code" data-type="Method">__winfo_getint</a></td>
+    <td><span>Internal function.</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#_bind" class="code" data-type="Method">_bind</a></td>
+    <td><span>Internal function.</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#_getints" class="code" data-type="Method">_getints</a></td>
+    <td><span>Internal function.</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#_getdoubles" class="code" data-type="Method">_getdoubles</a></td>
+    <td><span>Internal function.</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#_getboolean" class="code" data-type="Method">_getboolean</a></td>
+    <td><span>Internal function.</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#_displayof" class="code" data-type="Method">_displayof</a></td>
+    <td><span>Internal function.</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#_windowingsystem" class="code" data-type="Method">_windowingsystem</a></td>
+    <td><span>Internal function.</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#_options" class="code" data-type="Method">_options</a></td>
+    <td><span>Internal function.</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#_register" class="code" data-type="Method">_register</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#_root" class="code" data-type="Method">_root</a></td>
+    <td><span>Internal function.</span></td>
+  </tr><tr class="baseclassvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.tkinter.Misc.html#_subst_format" class="code" data-type="Class Variable">_subst_format</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.tkinter.Misc.html#_subst_format_str" class="code" data-type="Class Variable">_subst_format_str</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#_substitute" class="code" data-type="Method">_substitute</a></td>
+    <td><span>Internal function.</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#_report_exception" class="code" data-type="Method">_report_exception</a></td>
+    <td><span>Internal function.</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#_getconfigure" class="code" data-type="Method">_getconfigure</a></td>
+    <td><span>Call Tcl configure command and return the result as a dict.</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#_getconfigure1" class="code" data-type="Method">_getconfigure1</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#_configure" class="code" data-type="Method">_configure</a></td>
+    <td><span>Internal function.</span></td>
+  </tr><tr class="baseclassvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.tkinter.Misc.html#_noarg_" class="code" data-type="Class Variable">_noarg_</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#_gridconvvalue" class="code" data-type="Method">_gridconvvalue</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Misc.html#_grid_configure" class="code" data-type="Method">_grid_configure</a></td>
+    <td><span>Internal function.</span></td>
+  </tr>
+</table>
+          
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.tkinter.Pack.html" class="code" data-type="Class">Pack</a> (via <a href="Lib.tkinter.Widget.html" class="code" data-type="Class">Widget</a>):
+          </p>
+          <table class="children sortable" id="id11030">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Pack.html#pack_configure" class="code" data-type="Method">pack_configure</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Pack.html#pack_forget" class="code" data-type="Method">pack_forget</a></td>
+    <td><span>Unmap this widget and do not use it for the packing order.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Pack.html#pack_info" class="code" data-type="Method">pack_info</a></td>
+    <td><span>Return information about the packing options for this widget.</span></td>
+  </tr>
+</table>
+          
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.tkinter.Place.html" class="code" data-type="Class">Place</a> (via <a href="Lib.tkinter.Widget.html" class="code" data-type="Class">Widget</a>):
+          </p>
+          <table class="children sortable" id="id11031">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Place.html#place_configure" class="code" data-type="Method">place_configure</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Place.html#place_forget" class="code" data-type="Method">place_forget</a></td>
+    <td><span>Unmap this widget.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Place.html#place_info" class="code" data-type="Method">place_info</a></td>
+    <td><span>Return information about the placing options for this widget.</span></td>
+  </tr>
+</table>
+          
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.tkinter.Grid.html" class="code" data-type="Class">Grid</a> (via <a href="Lib.tkinter.Widget.html" class="code" data-type="Class">Widget</a>):
+          </p>
+          <table class="children sortable" id="id11032">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Grid.html#grid_configure" class="code" data-type="Method">grid_configure</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Grid.html#grid_forget" class="code" data-type="Method">grid_forget</a></td>
+    <td><span>Unmap this widget.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Grid.html#grid_remove" class="code" data-type="Method">grid_remove</a></td>
+    <td><span>Unmap this widget but remember the grid options.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.Grid.html#grid_info" class="code" data-type="Method">grid_info</a></td>
+    <td><span>Return information about the options for positioning this widget in a grid.</span></td>
+  </tr>
+</table>
+          
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.tkinter.XView.html" class="code" data-type="Class">XView</a>:
+          </p>
+          <table class="children sortable" id="id11033">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.XView.html#xview" class="code" data-type="Method">xview</a></td>
+    <td><span>Query and change the horizontal position of the view.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.XView.html#xview_moveto" class="code" data-type="Method">xview_moveto</a></td>
+    <td><span>Adjusts the view in the window so that FRACTION of the total width of the canvas is off-screen to the left.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.XView.html#xview_scroll" class="code" data-type="Method">xview_scroll</a></td>
+    <td><span>Shift the x-view according to NUMBER which is measured in "units" or "pages" (WHAT).</span></td>
+  </tr>
+</table>
+          
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.tkinter.YView.html" class="code" data-type="Class">YView</a>:
+          </p>
+          <table class="children sortable" id="id11034">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.YView.html#yview" class="code" data-type="Method">yview</a></td>
+    <td><span>Query and change the vertical position of the view.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.YView.html#yview_moveto" class="code" data-type="Method">yview_moveto</a></td>
+    <td><span>Adjusts the view in the window so that FRACTION of the total height of the canvas is off-screen to the top.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.YView.html#yview_scroll" class="code" data-type="Method">yview_scroll</a></td>
+    <td><span>Shift the y-view according to NUMBER which is measured in "units" or "pages" (WHAT).</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, master=None, cnf={}, **kw):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.tkinter.BaseWidget.html#__init__" class="code" data-type="Method">Lib.tkinter.BaseWidget.__init__</a></div>
+    
+    <div><p class="pre">Construct a text widget with the parent MASTER.
+
+STANDARD OPTIONS
+
+    background, borderwidth, cursor,
+    exportselection, font, foreground,
+    highlightbackground, highlightcolor,
+    highlightthickness, insertbackground,
+    insertborderwidth, insertofftime,
+    insertontime, insertwidth, padx, pady,
+    relief, selectbackground,
+    selectborderwidth, selectforeground,
+    setgrid, takefocus,
+    xscrollcommand, yscrollcommand,
+
+WIDGET-SPECIFIC OPTIONS
+
+    autoseparators, height, maxundo,
+    spacing1, spacing2, spacing3,
+    state, tabs, undo, width, wrap,</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.bbox">
+    
+  </a>
+  <a name="bbox">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    bbox(self, index):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a tuple of (x,y,width,height) which gives the bounding
+box of the visible part of the character at the given index.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.compare">
+    
+  </a>
+  <a name="compare">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    compare(self, index1, op, index2):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return whether between index INDEX1 and index INDEX2 the
+relation OP is satisfied. OP is one of &lt;, &lt;=, ==, &gt;=, &gt;, or !=.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.count">
+    
+  </a>
+  <a name="count">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    count(self, index1, index2, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Counts the number of relevant things between the two indices.
+If index1 is after index2, the result will be a negative number
+(and this holds for each of the possible options).
+
+The actual items which are counted depends on the options given by
+args. The result is a list of integers, one for the result of each
+counting option given. Valid counting options are "chars",
+"displaychars", "displayindices", "displaylines", "indices",
+"lines", "xpixels" and "ypixels". There is an additional possible
+option "update", which if given then all subsequent options ensure
+that any possible out of date information is recalculated.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.debug">
+    
+  </a>
+  <a name="debug">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    debug(self, boolean=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Turn on the internal consistency checks of the B-Tree inside the text
+widget according to BOOLEAN.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.delete">
+    
+  </a>
+  <a name="delete">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    delete(self, index1, index2=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Delete the characters between INDEX1 and INDEX2 (not included).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.dlineinfo">
+    
+  </a>
+  <a name="dlineinfo">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    dlineinfo(self, index):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return tuple (x,y,width,height,baseline) giving the bounding box
+and baseline position of the visible part of the line containing
+the character at INDEX.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.dump">
+    
+  </a>
+  <a name="dump">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    dump(self, index1, index2=None, command=None, **kw):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the contents of the widget between index1 and index2.
+
+The type of contents returned in filtered based on the keyword
+parameters; if 'all', 'image', 'mark', 'tag', 'text', or 'window' are
+given and true, then the corresponding items are returned. The result
+is a list of triples of the form (key, value, index). If none of the
+keywords are true then 'all' is used by default.
+
+If the 'command' argument is given, it is called once for each element
+of the list of triples, with the values of each triple serving as the
+arguments to the function. In this case the list is not returned.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.edit">
+    
+  </a>
+  <a name="edit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    edit(self, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Internal method
+
+This method controls the undo mechanism and
+the modified flag. The exact behavior of the
+command depends on the option argument that
+follows the edit argument. The following forms
+of the command are currently supported:
+
+edit_modified, edit_redo, edit_reset, edit_separator
+and edit_undo</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.edit_modified">
+    
+  </a>
+  <a name="edit_modified">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    edit_modified(self, arg=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get or Set the modified flag
+
+If arg is not specified, returns the modified
+flag of the widget. The insert, delete, edit undo and
+edit redo commands or the user can set or clear the
+modified flag. If boolean is specified, sets the
+modified flag of the widget to arg.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.edit_redo">
+    
+  </a>
+  <a name="edit_redo">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    edit_redo(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Redo the last undone edit
+
+When the undo option is true, reapplies the last
+undone edits provided no other edits were done since
+then. Generates an error when the redo stack is empty.
+Does nothing when the undo option is false.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.edit_reset">
+    
+  </a>
+  <a name="edit_reset">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    edit_reset(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Clears the undo and redo stacks
+        </p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.edit_separator">
+    
+  </a>
+  <a name="edit_separator">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    edit_separator(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Inserts a separator (boundary) on the undo stack.
+
+Does nothing when the undo option is false</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.edit_undo">
+    
+  </a>
+  <a name="edit_undo">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    edit_undo(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Undoes the last edit action
+
+If the undo option is true. An edit action is defined
+as all the insert and delete commands that are recorded
+on the undo stack in between two separators. Generates
+an error when the undo stack is empty. Does nothing
+when the undo option is false</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.get">
+    
+  </a>
+  <a name="get">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get(self, index1, index2=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the text from INDEX1 to INDEX2 (not included).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.image_cget">
+    
+  </a>
+  <a name="image_cget">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    image_cget(self, index, option):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the value of OPTION of an embedded image at INDEX.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.image_configure">
+    
+  </a>
+  <a name="image_configure">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    image_configure(self, index, cnf=None, **kw):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Configure an embedded image at INDEX.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.image_create">
+    
+  </a>
+  <a name="image_create">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    image_create(self, index, cnf={}, **kw):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create an embedded image at INDEX.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.image_names">
+    
+  </a>
+  <a name="image_names">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    image_names(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.tkinter.Misc.html#image_names" class="code" data-type="Method">Lib.tkinter.Misc.image_names</a></div>
+    
+    <div><p class="pre">Return all names of embedded images in this widget.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.index">
+    
+  </a>
+  <a name="index">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    index(self, index):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the index in the form line.char for INDEX.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.insert">
+    
+  </a>
+  <a name="insert">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    insert(self, index, chars, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Insert CHARS before the characters at INDEX. An additional
+tag can be given in ARGS. Additional CHARS and tags can follow in ARGS.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.mark_gravity">
+    
+  </a>
+  <a name="mark_gravity">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    mark_gravity(self, markName, direction=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Change the gravity of a mark MARKNAME to DIRECTION (LEFT or RIGHT).
+Return the current value if None is given for DIRECTION.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.mark_names">
+    
+  </a>
+  <a name="mark_names">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    mark_names(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return all mark names.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.mark_set">
+    
+  </a>
+  <a name="mark_set">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    mark_set(self, markName, index):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set mark MARKNAME before the character at INDEX.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.mark_unset">
+    
+  </a>
+  <a name="mark_unset">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    mark_unset(self, *markNames):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Delete all marks in MARKNAMES.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.mark_next">
+    
+  </a>
+  <a name="mark_next">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    mark_next(self, index):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the name of the next mark after INDEX.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.mark_previous">
+    
+  </a>
+  <a name="mark_previous">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    mark_previous(self, index):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the name of the previous mark before INDEX.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.peer_create">
+    
+  </a>
+  <a name="peer_create">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    peer_create(self, newPathName, cnf={}, **kw):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Creates a peer text widget with the given newPathName, and any
+optional standard configuration options. By default the peer will
+have the same start and end line as the parent widget, but
+these can be overridden with the standard configuration options.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.peer_names">
+    
+  </a>
+  <a name="peer_names">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    peer_names(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns a list of peers of this widget (this does not include
+the widget itself).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.replace">
+    
+  </a>
+  <a name="replace">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    replace(self, index1, index2, chars, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Replaces the range of characters between index1 and index2 with
+the given characters and tags specified by args.
+
+See the method insert for some more information about args, and the
+method delete for information about the indices.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.scan_mark">
+    
+  </a>
+  <a name="scan_mark">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    scan_mark(self, x, y):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Remember the current X, Y coordinates.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.scan_dragto">
+    
+  </a>
+  <a name="scan_dragto">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    scan_dragto(self, x, y):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Adjust the view of the text to 10 times the
+difference between X and Y and the coordinates given in
+scan_mark.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.search">
+    
+  </a>
+  <a name="search">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    search(self, pattern, index, stopindex=None, forwards=None, backwards=None, exact=None, regexp=None, nocase=None, count=None, elide=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Search PATTERN beginning from INDEX until STOPINDEX.
+Return the index of the first character of a match or an
+empty string.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.see">
+    
+  </a>
+  <a name="see">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    see(self, index):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Scroll such that the character at INDEX is visible.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.tag_add">
+    
+  </a>
+  <a name="tag_add">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tag_add(self, tagName, index1, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Add tag TAGNAME to all characters between INDEX1 and index2 in ARGS.
+Additional pairs of indices may follow in ARGS.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.tag_unbind">
+    
+  </a>
+  <a name="tag_unbind">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tag_unbind(self, tagName, sequence, funcid=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Unbind for all characters with TAGNAME for event SEQUENCE  the
+function identified with FUNCID.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.tag_bind">
+    
+  </a>
+  <a name="tag_bind">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tag_bind(self, tagName, sequence, func, add=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Bind to all characters with TAGNAME at event SEQUENCE a call to function FUNC.
+
+An additional boolean parameter ADD specifies whether FUNC will be
+called additionally to the other bound function or whether it will
+replace the previous function. See bind for the return value.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.tag_cget">
+    
+  </a>
+  <a name="tag_cget">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tag_cget(self, tagName, option):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the value of OPTION for tag TAGNAME.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.tag_configure">
+    
+  </a>
+  <a name="tag_configure">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tag_configure(self, tagName, cnf=None, **kw):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Configure a tag TAGNAME.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.tag_delete">
+    
+  </a>
+  <a name="tag_delete">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tag_delete(self, *tagNames):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Delete all tags in TAGNAMES.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.tag_lower">
+    
+  </a>
+  <a name="tag_lower">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tag_lower(self, tagName, belowThis=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Change the priority of tag TAGNAME such that it is lower
+than the priority of BELOWTHIS.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.tag_names">
+    
+  </a>
+  <a name="tag_names">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tag_names(self, index=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a list of all tag names.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.tag_nextrange">
+    
+  </a>
+  <a name="tag_nextrange">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tag_nextrange(self, tagName, index1, index2=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a list of start and end index for the first sequence of
+characters between INDEX1 and INDEX2 which all have tag TAGNAME.
+The text is searched forward from INDEX1.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.tag_prevrange">
+    
+  </a>
+  <a name="tag_prevrange">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tag_prevrange(self, tagName, index1, index2=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a list of start and end index for the first sequence of
+characters between INDEX1 and INDEX2 which all have tag TAGNAME.
+The text is searched backwards from INDEX1.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.tag_raise">
+    
+  </a>
+  <a name="tag_raise">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tag_raise(self, tagName, aboveThis=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Change the priority of tag TAGNAME such that it is higher
+than the priority of ABOVETHIS.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.tag_ranges">
+    
+  </a>
+  <a name="tag_ranges">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tag_ranges(self, tagName):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a list of ranges of text which have tag TAGNAME.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.tag_remove">
+    
+  </a>
+  <a name="tag_remove">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tag_remove(self, tagName, index1, index2=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Remove tag TAGNAME from all characters between INDEX1 and INDEX2.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.window_cget">
+    
+  </a>
+  <a name="window_cget">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    window_cget(self, index, option):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the value of OPTION of an embedded window at INDEX.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.window_configure">
+    
+  </a>
+  <a name="window_configure">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    window_configure(self, index, cnf=None, **kw):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Configure an embedded window at INDEX.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.window_create">
+    
+  </a>
+  <a name="window_create">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    window_create(self, index, cnf={}, **kw):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create a window at INDEX.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.window_names">
+    
+  </a>
+  <a name="window_names">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    window_names(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return all names of embedded windows in this widget.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.Text.yview_pickplace">
+    
+  </a>
+  <a name="yview_pickplace">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    yview_pickplace(self, *what):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Obsolete function, use see.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,1005 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.datetime.date : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.datetime.html" class="code" data-type="Module">datetime</a>.<a href="Lib.datetime.date.html" class="code" data-type="Class">date</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.datetime.date:</code></p><p>Known subclasses: <a href="Lib.datetime.datetime.html" class="code" data-type="Class">Lib.datetime.datetime</a></p>
+        <p><a href="classIndex.html#Lib.datetime.date">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Concrete date type.
+
+Constructors:
+
+__new__()
+fromtimestamp()
+today()
+fromordinal()
+
+Operators:
+
+__repr__, __str__
+__eq__, __le__, __lt__, __ge__, __gt__, __hash__
+__add__, __radd__, __sub__ (add/radd only with timedelta arg)
+
+Methods:
+
+timetuple()
+toordinal()
+weekday()
+isoweekday(), isocalendar(), isoformat()
+ctime()
+strftime()
+
+Properties (readonly):
+year, month, day</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id884">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.datetime.date.html#__slots__" class="code" data-type="Class Variable">__slots__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.datetime.date.html#__new__" class="code" data-type="Method">__new__</a></td>
+    <td><span>Constructor.</span></td>
+  </tr><tr class="classmethod">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.datetime.date.html#fromtimestamp" class="code" data-type="Class Method">fromtimestamp</a></td>
+    <td><span>Construct a date from a POSIX timestamp (like time.time()).</span></td>
+  </tr><tr class="classmethod">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.datetime.date.html#today" class="code" data-type="Class Method">today</a></td>
+    <td><span>Construct a date from time.time().</span></td>
+  </tr><tr class="classmethod">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.datetime.date.html#fromordinal" class="code" data-type="Class Method">fromordinal</a></td>
+    <td><span>Construct a date from a proleptic Gregorian ordinal.</span></td>
+  </tr><tr class="classmethod">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.datetime.date.html#fromisoformat" class="code" data-type="Class Method">fromisoformat</a></td>
+    <td><span>Construct a date from the output of date.isoformat().</span></td>
+  </tr><tr class="classmethod">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.datetime.date.html#fromisocalendar" class="code" data-type="Class Method">fromisocalendar</a></td>
+    <td><span>Construct a date from the ISO year, week number and weekday.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.datetime.date.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span>Convert to formal string, for repr().</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.datetime.date.html#ctime" class="code" data-type="Method">ctime</a></td>
+    <td><span>Return ctime() style string.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.datetime.date.html#strftime" class="code" data-type="Method">strftime</a></td>
+    <td><span>Format using strftime().</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.datetime.date.html#__format__" class="code" data-type="Method">__format__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.datetime.date.html#isoformat" class="code" data-type="Method">isoformat</a></td>
+    <td><span>Return the date formatted according to ISO.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.datetime.date.html#year" class="code" data-type="Method">year</a></td>
+    <td><span>year (1-9999)</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.datetime.date.html#month" class="code" data-type="Method">month</a></td>
+    <td><span>month (1-12)</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.datetime.date.html#day" class="code" data-type="Method">day</a></td>
+    <td><span>day (1-31)</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.datetime.date.html#timetuple" class="code" data-type="Method">timetuple</a></td>
+    <td><span>Return local time tuple compatible with time.localtime().</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.datetime.date.html#toordinal" class="code" data-type="Method">toordinal</a></td>
+    <td><span>Return proleptic Gregorian ordinal for the year, month and day.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.datetime.date.html#replace" class="code" data-type="Method">replace</a></td>
+    <td><span>Return a new date with new values for the specified fields.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.datetime.date.html#__eq__" class="code" data-type="Method">__eq__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.datetime.date.html#__le__" class="code" data-type="Method">__le__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.datetime.date.html#__lt__" class="code" data-type="Method">__lt__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.datetime.date.html#__ge__" class="code" data-type="Method">__ge__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.datetime.date.html#__gt__" class="code" data-type="Method">__gt__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.datetime.date.html#__hash__" class="code" data-type="Method">__hash__</a></td>
+    <td><span>Hash.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.datetime.date.html#__add__" class="code" data-type="Method">__add__</a></td>
+    <td><span>Add a date to a timedelta.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.datetime.date.html#__sub__" class="code" data-type="Method">__sub__</a></td>
+    <td><span>Subtract two dates, or a date and a timedelta.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.datetime.date.html#weekday" class="code" data-type="Method">weekday</a></td>
+    <td><span>Return day of the week, where Monday == 0 ... Sunday == 6.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.datetime.date.html#isoweekday" class="code" data-type="Method">isoweekday</a></td>
+    <td><span>Return day of the week, where Monday == 1 ... Sunday == 7.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.datetime.date.html#isocalendar" class="code" data-type="Method">isocalendar</a></td>
+    <td><span>Return a named tuple containing ISO year, week number, and weekday.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.datetime.date.html#__reduce__" class="code" data-type="Method">__reduce__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.datetime.date.html#_hashcode" class="code" data-type="Instance Variable">_hashcode</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.datetime.date.html#_year" class="code" data-type="Instance Variable">_year</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.datetime.date.html#_month" class="code" data-type="Instance Variable">_month</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.datetime.date.html#_day" class="code" data-type="Instance Variable">_day</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.datetime.date.html#_cmp" class="code" data-type="Method">_cmp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.datetime.date.html#_getstate" class="code" data-type="Method">_getstate</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.datetime.date.html#__setstate" class="code" data-type="Method">__setstate</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.datetime.date.__slots__">
+    
+  </a>
+  <a name="__slots__">
+    
+  </a>
+  <div class="functionHeader">
+    __slots__ =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.datetime.datetime.html" class="code" data-type="Class">Lib.datetime.datetime</a></div>
+    <div class="undocumented">Undocumented</div> (type: <code>Tuple[str, ...]</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.datetime.date.__new__">
+    
+  </a>
+  <a name="__new__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __new__(cls, year, month=None, day=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.datetime.datetime.html" class="code" data-type="Class">Lib.datetime.datetime</a></div>
+    
+    <div><p class="pre">Constructor.
+
+Arguments:
+
+year, month, day (required, base 1)</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.datetime.date._hashcode">
+    
+  </a>
+  <a name="_hashcode">
+    
+  </a>
+  <div class="functionHeader">
+    _hashcode =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.datetime.datetime.html" class="code" data-type="Class">Lib.datetime.datetime</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.datetime.date._year">
+    
+  </a>
+  <a name="_year">
+    
+  </a>
+  <div class="functionHeader">
+    _year =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.datetime.datetime.html" class="code" data-type="Class">Lib.datetime.datetime</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.datetime.date._month">
+    
+  </a>
+  <a name="_month">
+    
+  </a>
+  <div class="functionHeader">
+    _month =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.datetime.datetime.html" class="code" data-type="Class">Lib.datetime.datetime</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.datetime.date._day">
+    
+  </a>
+  <a name="_day">
+    
+  </a>
+  <div class="functionHeader">
+    _day =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.datetime.datetime.html" class="code" data-type="Class">Lib.datetime.datetime</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassmethod">
+  
+  <a name="Lib.datetime.date.fromtimestamp">
+    
+  </a>
+  <a name="fromtimestamp">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    fromtimestamp(cls, t):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.datetime.datetime.html" class="code" data-type="Class">Lib.datetime.datetime</a></div>
+    
+    <div><p class="pre">Construct a date from a POSIX timestamp (like time.time()).</p></div>
+  </div>
+</div><div class="baseclassmethod">
+  
+  <a name="Lib.datetime.date.today">
+    
+  </a>
+  <a name="today">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    today(cls):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Construct a date from time.time().</p></div>
+  </div>
+</div><div class="baseclassmethod">
+  
+  <a name="Lib.datetime.date.fromordinal">
+    
+  </a>
+  <a name="fromordinal">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    fromordinal(cls, n):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Construct a date from a proleptic Gregorian ordinal.
+
+January 1 of year 1 is day 1.  Only the year, month and day are
+non-zero in the result.</p></div>
+  </div>
+</div><div class="baseclassmethod">
+  
+  <a name="Lib.datetime.date.fromisoformat">
+    
+  </a>
+  <a name="fromisoformat">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    fromisoformat(cls, date_string):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.datetime.datetime.html" class="code" data-type="Class">Lib.datetime.datetime</a></div>
+    
+    <div><p class="pre">Construct a date from the output of date.isoformat().</p></div>
+  </div>
+</div><div class="baseclassmethod">
+  
+  <a name="Lib.datetime.date.fromisocalendar">
+    
+  </a>
+  <a name="fromisocalendar">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    fromisocalendar(cls, year, week, day):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Construct a date from the ISO year, week number and weekday.
+
+This is the inverse of the date.isocalendar() function</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.datetime.date.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __repr__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.datetime.datetime.html" class="code" data-type="Class">Lib.datetime.datetime</a></div>
+    
+    <div><p class="pre">Convert to formal string, for repr().
+
+&gt;&gt;&gt; dt = datetime(2010, 1, 1)
+&gt;&gt;&gt; repr(dt)
+'datetime.datetime(2010, 1, 1, 0, 0)'
+
+&gt;&gt;&gt; dt = datetime(2010, 1, 1, tzinfo=timezone.utc)
+&gt;&gt;&gt; repr(dt)
+'datetime.datetime(2010, 1, 1, 0, 0, tzinfo=datetime.timezone.utc)'</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.datetime.date.ctime">
+    
+  </a>
+  <a name="ctime">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ctime(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.datetime.datetime.html" class="code" data-type="Class">Lib.datetime.datetime</a></div>
+    
+    <div><p class="pre">Return ctime() style string.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.datetime.date.strftime">
+    
+  </a>
+  <a name="strftime">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    strftime(self, fmt):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Format using strftime().</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.datetime.date.__format__">
+    
+  </a>
+  <a name="__format__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __format__(self, fmt):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.datetime.date.isoformat">
+    
+  </a>
+  <a name="isoformat">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    isoformat(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.datetime.datetime.html" class="code" data-type="Class">Lib.datetime.datetime</a></div>
+    
+    <div><p class="pre">Return the date formatted according to ISO.
+
+This is 'YYYY-MM-DD'.
+
+References:
+- http://www.w3.org/TR/NOTE-datetime
+- http://www.cl.cam.ac.uk/~mgk25/iso-time.html</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.datetime.date.year">
+    
+  </a>
+  <a name="year">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    year(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">year (1-9999)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.datetime.date.month">
+    
+  </a>
+  <a name="month">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    month(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">month (1-12)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.datetime.date.day">
+    
+  </a>
+  <a name="day">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    day(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">day (1-31)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.datetime.date.timetuple">
+    
+  </a>
+  <a name="timetuple">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    timetuple(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.datetime.datetime.html" class="code" data-type="Class">Lib.datetime.datetime</a></div>
+    
+    <div><p class="pre">Return local time tuple compatible with time.localtime().</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.datetime.date.toordinal">
+    
+  </a>
+  <a name="toordinal">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    toordinal(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return proleptic Gregorian ordinal for the year, month and day.
+
+January 1 of year 1 is day 1.  Only the year, month and day values
+contribute to the result.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.datetime.date.replace">
+    
+  </a>
+  <a name="replace">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    replace(self, year=None, month=None, day=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.datetime.datetime.html" class="code" data-type="Class">Lib.datetime.datetime</a></div>
+    
+    <div><p class="pre">Return a new date with new values for the specified fields.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.datetime.date.__eq__">
+    
+  </a>
+  <a name="__eq__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __eq__(self, other):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.datetime.datetime.html" class="code" data-type="Class">Lib.datetime.datetime</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.datetime.date.__le__">
+    
+  </a>
+  <a name="__le__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __le__(self, other):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.datetime.datetime.html" class="code" data-type="Class">Lib.datetime.datetime</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.datetime.date.__lt__">
+    
+  </a>
+  <a name="__lt__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __lt__(self, other):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.datetime.datetime.html" class="code" data-type="Class">Lib.datetime.datetime</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.datetime.date.__ge__">
+    
+  </a>
+  <a name="__ge__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __ge__(self, other):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.datetime.datetime.html" class="code" data-type="Class">Lib.datetime.datetime</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.datetime.date.__gt__">
+    
+  </a>
+  <a name="__gt__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __gt__(self, other):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.datetime.datetime.html" class="code" data-type="Class">Lib.datetime.datetime</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.datetime.date._cmp">
+    
+  </a>
+  <a name="_cmp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _cmp(self, other):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.datetime.datetime.html" class="code" data-type="Class">Lib.datetime.datetime</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.datetime.date.__hash__">
+    
+  </a>
+  <a name="__hash__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __hash__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.datetime.datetime.html" class="code" data-type="Class">Lib.datetime.datetime</a></div>
+    
+    <div><p class="pre">Hash.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.datetime.date.__add__">
+    
+  </a>
+  <a name="__add__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __add__(self, other):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.datetime.datetime.html" class="code" data-type="Class">Lib.datetime.datetime</a></div>
+    
+    <div><p class="pre">Add a date to a timedelta.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.datetime.date.__sub__">
+    
+  </a>
+  <a name="__sub__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __sub__(self, other):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.datetime.datetime.html" class="code" data-type="Class">Lib.datetime.datetime</a></div>
+    
+    <div><p class="pre">Subtract two dates, or a date and a timedelta.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.datetime.date.weekday">
+    
+  </a>
+  <a name="weekday">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    weekday(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return day of the week, where Monday == 0 ... Sunday == 6.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.datetime.date.isoweekday">
+    
+  </a>
+  <a name="isoweekday">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    isoweekday(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return day of the week, where Monday == 1 ... Sunday == 7.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.datetime.date.isocalendar">
+    
+  </a>
+  <a name="isocalendar">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    isocalendar(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a named tuple containing ISO year, week number, and weekday.
+
+The first ISO week of the year is the (Mon-Sun) week
+containing the year's first Thursday; everything else derives
+from that.
+
+The first week is 1; Monday is 1 ... Sunday is 7.
+
+ISO calendar algorithm taken from
+http://www.phys.uu.nl/~vgent/calendar/isocalendar.htm
+(used with permission)</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.datetime.date._getstate">
+    
+  </a>
+  <a name="_getstate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _getstate(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.datetime.datetime.html" class="code" data-type="Class">Lib.datetime.datetime</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.datetime.date.__setstate">
+    
+  </a>
+  <a name="__setstate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __setstate(self, string):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.datetime.datetime.html" class="code" data-type="Class">Lib.datetime.datetime</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.datetime.date.__reduce__">
+    
+  </a>
+  <a name="__reduce__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __reduce__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.datetime.datetime.html" class="code" data-type="Class">Lib.datetime.datetime</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

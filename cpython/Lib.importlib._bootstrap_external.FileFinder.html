@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.importlib._bootstrap_external.FileFinder : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.importlib.html" class="code" data-type="Package">importlib</a>.<a href="Lib.importlib._bootstrap_external.html" class="code" data-type="Module">_bootstrap_external</a>.<a href="Lib.importlib._bootstrap_external.FileFinder.html" class="code" data-type="Class">FileFinder</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.importlib._bootstrap_external.FileFinder:</code></p>
+        <p><a href="classIndex.html#Lib.importlib._bootstrap_external.FileFinder">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">File-based finder.
+
+Interactions with the file system are cached for performance, being
+refreshed when the directory the finder is handling has been modified.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2555">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib._bootstrap_external.FileFinder.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Initialize with the path to search on and a variable number of 2-tuples containing the loader and the file suffixes the loader recognizes.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.importlib._bootstrap_external.FileFinder.html#path" class="code" data-type="Instance Variable">path</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib._bootstrap_external.FileFinder.html#invalidate_caches" class="code" data-type="Method">invalidate_caches</a></td>
+    <td><span>Invalidate the directory mtime.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib._bootstrap_external.FileFinder.html#find_loader" class="code" data-type="Method">find_loader</a></td>
+    <td><span>Try to find a loader for the specified module, or the namespace package portions. Returns (loader, list-of-portions).</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib._bootstrap_external.FileFinder.html#find_spec" class="code" data-type="Method">find_spec</a></td>
+    <td><span>Try to find a spec for the specified module.</span></td>
+  </tr><tr class="classmethod">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.importlib._bootstrap_external.FileFinder.html#path_hook" class="code" data-type="Class Method">path_hook</a></td>
+    <td><span>A class method which returns a closure to use on sys.path_hook which will return an instance using the specified loaders and the path called on the closure.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib._bootstrap_external.FileFinder.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.importlib._bootstrap_external.FileFinder.html#_loaders" class="code" data-type="Instance Variable">_loaders</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.importlib._bootstrap_external.FileFinder.html#_path_mtime" class="code" data-type="Instance Variable">_path_mtime</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.importlib._bootstrap_external.FileFinder.html#_path_cache" class="code" data-type="Instance Variable">_path_cache</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.importlib._bootstrap_external.FileFinder.html#_relaxed_path_cache" class="code" data-type="Instance Variable">_relaxed_path_cache</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib._bootstrap_external.FileFinder.html#_get_spec" class="code" data-type="Method">_get_spec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib._bootstrap_external.FileFinder.html#_fill_cache" class="code" data-type="Method">_fill_cache</a></td>
+    <td><span>Fill the cache of potential modules and packages for this directory.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.importlib._bootstrap_external.FileFinder.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, path, *loader_details):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Initialize with the path to search on and a variable number of
+2-tuples containing the loader and the file suffixes the loader
+recognizes.</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.importlib._bootstrap_external.FileFinder._loaders">
+    
+  </a>
+  <a name="_loaders">
+    
+  </a>
+  <div class="functionHeader">
+    _loaders =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.importlib._bootstrap_external.FileFinder.path">
+    
+  </a>
+  <a name="path">
+    
+  </a>
+  <div class="functionHeader">
+    path =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.importlib._bootstrap_external.FileFinder._path_mtime">
+    
+  </a>
+  <a name="_path_mtime">
+    
+  </a>
+  <div class="functionHeader">
+    _path_mtime =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.importlib._bootstrap_external.FileFinder._path_cache">
+    
+  </a>
+  <a name="_path_cache">
+    
+  </a>
+  <div class="functionHeader">
+    _path_cache =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.importlib._bootstrap_external.FileFinder._relaxed_path_cache">
+    
+  </a>
+  <a name="_relaxed_path_cache">
+    
+  </a>
+  <div class="functionHeader">
+    _relaxed_path_cache =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.importlib._bootstrap_external.FileFinder.invalidate_caches">
+    
+  </a>
+  <a name="invalidate_caches">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    invalidate_caches(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Invalidate the directory mtime.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.importlib._bootstrap_external.FileFinder.find_loader">
+    
+  </a>
+  <a name="find_loader">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    find_loader(self, fullname):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Try to find a loader for the specified module, or the namespace
+package portions. Returns (loader, list-of-portions).
+
+This method is deprecated.  Use find_spec() instead.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.importlib._bootstrap_external.FileFinder._get_spec">
+    
+  </a>
+  <a name="_get_spec">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_spec(self, loader_class, fullname, path, smsl, target):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.importlib._bootstrap_external.FileFinder.find_spec">
+    
+  </a>
+  <a name="find_spec">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    find_spec(self, fullname, target=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Try to find a spec for the specified module.
+
+Returns the matching spec, or None if not found.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.importlib._bootstrap_external.FileFinder._fill_cache">
+    
+  </a>
+  <a name="_fill_cache">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _fill_cache(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Fill the cache of potential modules and packages for this directory.</p></div>
+  </div>
+</div><div class="baseclassmethod">
+  
+  <a name="Lib.importlib._bootstrap_external.FileFinder.path_hook">
+    
+  </a>
+  <a name="path_hook">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    path_hook(cls, *loader_details):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">A class method which returns a closure to use on sys.path_hook
+which will return an instance using the specified loaders and the path
+called on the closure.
+
+If the path called on the closure is not a directory, ImportError is
+raised.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.importlib._bootstrap_external.FileFinder.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __repr__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

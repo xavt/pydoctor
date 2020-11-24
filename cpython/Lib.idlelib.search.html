@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.idlelib.search : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.idlelib.html" class="code" data-type="Package">idlelib</a>.<a href="Lib.idlelib.search.html" class="code" data-type="Module">search</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Search dialog for Find, Find Again, and Find Selection
+functionality.
+
+Inherits from SearchDialogBase for GUI and uses searchengine
+to prepare search pattern.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2455">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.search.html#find" class="code" data-type="Function">find</a></td>
+    <td><span>Open the search dialog.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.search.html#find_again" class="code" data-type="Function">find_again</a></td>
+    <td><span>Repeat the search for the last pattern and preferences.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.search.html#find_selection" class="code" data-type="Function">find_selection</a></td>
+    <td><span>Search for the selected pattern in the text.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.search.SearchDialog.html" class="code" data-type="Class">SearchDialog</a></td>
+    <td><span>Dialog for finding a pattern in text.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.search.html#_setup" class="code" data-type="Function">_setup</a></td>
+    <td><span>Return the new or existing singleton SearchDialog instance.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.search.html#_search_dialog" class="code" data-type="Function">_search_dialog</a></td>
+    <td><span>Display search test box.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction private">
+  
+  <a name="Lib.idlelib.search._setup">
+    
+  </a>
+  <a name="_setup">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _setup(text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the new or existing singleton SearchDialog instance.
+
+The singleton dialog saves user entries and preferences
+across instances.
+
+Args:
+    text: Text widget containing the text to be searched.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.search.find">
+    
+  </a>
+  <a name="find">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    find(text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Open the search dialog.
+
+Module-level function to access the singleton SearchDialog
+instance and open the dialog.  If text is selected, it is
+used as the search phrase; otherwise, the previous entry
+is used.  No search is done with this command.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.search.find_again">
+    
+  </a>
+  <a name="find_again">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    find_again(text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Repeat the search for the last pattern and preferences.
+
+Module-level function to access the singleton SearchDialog
+instance to search again using the user entries and preferences
+from the last dialog.  If there was no prior search, open the
+search dialog; otherwise, perform the search without showing the
+dialog.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.search.find_selection">
+    
+  </a>
+  <a name="find_selection">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    find_selection(text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Search for the selected pattern in the text.
+
+Module-level function to access the singleton SearchDialog
+instance to search using the selected text.  With a text
+selection, perform the search without displaying the dialog.
+Without a selection, use the prior entry as the search phrase
+and don't display the dialog.  If there has been no prior
+search, open the search dialog.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.idlelib.search._search_dialog">
+    
+  </a>
+  <a name="_search_dialog">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _search_dialog(parent):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Display search test box.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.threading.Barrier : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.threading.html" class="code" data-type="Module">threading</a>.<a href="Lib.threading.Barrier.html" class="code" data-type="Class">Barrier</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.threading.Barrier:</code></p>
+        <p><a href="classIndex.html#Lib.threading.Barrier">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Implements a Barrier.
+
+Useful for synchronizing a fixed number of threads at known synchronization
+points.  Threads block on 'wait()' and are simultaneously awoken once they
+have all made that call.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id10899">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.Barrier.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Create a barrier, initialised to 'parties' threads.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.Barrier.html#wait" class="code" data-type="Method">wait</a></td>
+    <td><span>Wait for the barrier.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.Barrier.html#reset" class="code" data-type="Method">reset</a></td>
+    <td><span>Reset the barrier to the initial state.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.Barrier.html#abort" class="code" data-type="Method">abort</a></td>
+    <td><span>Place the barrier into a 'broken' state.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.Barrier.html#parties" class="code" data-type="Method">parties</a></td>
+    <td><span>Return the number of threads required to trip the barrier.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.Barrier.html#n_waiting" class="code" data-type="Method">n_waiting</a></td>
+    <td><span>Return the number of threads currently waiting at the barrier.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.Barrier.html#broken" class="code" data-type="Method">broken</a></td>
+    <td><span>Return True if the barrier is in a broken state.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.threading.Barrier.html#_cond" class="code" data-type="Instance Variable">_cond</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.threading.Barrier.html#_action" class="code" data-type="Instance Variable">_action</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.threading.Barrier.html#_timeout" class="code" data-type="Instance Variable">_timeout</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.threading.Barrier.html#_parties" class="code" data-type="Instance Variable">_parties</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.threading.Barrier.html#_state" class="code" data-type="Instance Variable">_state</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.threading.Barrier.html#_count" class="code" data-type="Instance Variable">_count</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.Barrier.html#_enter" class="code" data-type="Method">_enter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.Barrier.html#_release" class="code" data-type="Method">_release</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.Barrier.html#_wait" class="code" data-type="Method">_wait</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.Barrier.html#_exit" class="code" data-type="Method">_exit</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.Barrier.html#_break" class="code" data-type="Method">_break</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.threading.Barrier.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, parties, action=None, timeout=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create a barrier, initialised to 'parties' threads.
+
+'action' is a callable which, when supplied, will be called by one of
+the threads after they have all entered the barrier and just prior to
+releasing them all. If a 'timeout' is provided, it is used as the
+default for all subsequent 'wait()' calls.</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.threading.Barrier._cond">
+    
+  </a>
+  <a name="_cond">
+    
+  </a>
+  <div class="functionHeader">
+    _cond =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.threading.Barrier._action">
+    
+  </a>
+  <a name="_action">
+    
+  </a>
+  <div class="functionHeader">
+    _action =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.threading.Barrier._timeout">
+    
+  </a>
+  <a name="_timeout">
+    
+  </a>
+  <div class="functionHeader">
+    _timeout =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.threading.Barrier._parties">
+    
+  </a>
+  <a name="_parties">
+    
+  </a>
+  <div class="functionHeader">
+    _parties =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.threading.Barrier._state">
+    
+  </a>
+  <a name="_state">
+    
+  </a>
+  <div class="functionHeader">
+    _state =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.threading.Barrier._count">
+    
+  </a>
+  <a name="_count">
+    
+  </a>
+  <div class="functionHeader">
+    _count =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.threading.Barrier.wait">
+    
+  </a>
+  <a name="wait">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    wait(self, timeout=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Wait for the barrier.
+
+When the specified number of threads have started waiting, they are all
+simultaneously awoken. If an 'action' was provided for the barrier, one
+of the threads will have executed that callback prior to returning.
+Returns an individual index number from 0 to 'parties-1'.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.threading.Barrier._enter">
+    
+  </a>
+  <a name="_enter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _enter(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.threading.Barrier._release">
+    
+  </a>
+  <a name="_release">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _release(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.threading.Barrier._wait">
+    
+  </a>
+  <a name="_wait">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _wait(self, timeout):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.threading.Barrier._exit">
+    
+  </a>
+  <a name="_exit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _exit(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.threading.Barrier.reset">
+    
+  </a>
+  <a name="reset">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    reset(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Reset the barrier to the initial state.
+
+Any threads currently waiting will get the BrokenBarrier exception
+raised.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.threading.Barrier.abort">
+    
+  </a>
+  <a name="abort">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    abort(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Place the barrier into a 'broken' state.
+
+Useful in case of error.  Any currently waiting threads and threads
+attempting to 'wait()' will have BrokenBarrierError raised.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.threading.Barrier._break">
+    
+  </a>
+  <a name="_break">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _break(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.threading.Barrier.parties">
+    
+  </a>
+  <a name="parties">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    parties(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the number of threads required to trip the barrier.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.threading.Barrier.n_waiting">
+    
+  </a>
+  <a name="n_waiting">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    n_waiting(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the number of threads currently waiting at the barrier.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.threading.Barrier.broken">
+    
+  </a>
+  <a name="broken">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    broken(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True if the barrier is in a broken state.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

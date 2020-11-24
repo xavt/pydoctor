@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.socket : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.socket.html" class="code" data-type="Module">socket</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">This module provides socket operations and some related functions.
+On Unix, it supports IP (Internet Protocol) and Unix domain sockets.
+On other systems, it only supports IP. Functions specific for a
+socket are available as methods of the socket object.
+
+Functions:
+
+socket() -- create a new socket object
+socketpair() -- create a pair of new socket objects [*]
+fromfd() -- create a socket object from an open file descriptor [*]
+send_fds() -- Send file descriptor to the socket.
+recv_fds() -- Recieve file descriptors from the socket.
+fromshare() -- create a socket object from data received from socket.share() [*]
+gethostname() -- return the current hostname
+gethostbyname() -- map a hostname to its IP number
+gethostbyaddr() -- map an IP number or hostname to DNS info
+getservbyname() -- map a service name and a protocol name to a port number
+getprotobyname() -- map a protocol name (e.g. 'tcp') to a number
+ntohs(), ntohl() -- convert 16, 32 bit int from network to host byte order
+htons(), htonl() -- convert 16, 32 bit int from host to network byte order
+inet_aton() -- convert IP addr string (123.45.67.89) to 32-bit packed format
+inet_ntoa() -- convert 32-bit packed format IP to string (123.45.67.89)
+socket.getdefaulttimeout() -- get the default timeout value
+socket.setdefaulttimeout() -- set the default timeout value
+create_connection() -- connects to an address, with an optional timeout and
+                       optional source address.
+
+ [*] not available on all platforms!
+
+Special objects:
+
+SocketType -- type object for socket objects
+error -- exception raised for I/O errors
+has_ipv6 -- boolean value indicating if IPv6 is supported
+
+IntEnum constants:
+
+AF_INET, AF_UNIX -- socket domains (first argument to socket() call)
+SOCK_STREAM, SOCK_DGRAM, SOCK_RAW -- socket types (second argument)
+
+Integer constants:
+
+Many other constants may be defined; these may be used in calls to
+the setsockopt() and getsockopt() methods.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3535">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.socket.html#errno" class="code" data-type="Variable">errno</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.socket.html#EBADF" class="code" data-type="Variable">EBADF</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.socket.html#EAGAIN" class="code" data-type="Variable">EAGAIN</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.socket.html#EWOULDBLOCK" class="code" data-type="Variable">EWOULDBLOCK</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.socket.html#errorTab" class="code" data-type="Variable">errorTab</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.socket.socket.html" class="code" data-type="Class">socket</a></td>
+    <td><span>A subclass of _socket.socket adding the makefile() method.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.socket.html#fromfd" class="code" data-type="Function">fromfd</a></td>
+    <td><span>fromfd(fd, family, type[, proto]) -&gt; socket object</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.socket.html#send_fds" class="code" data-type="Function">send_fds</a></td>
+    <td><span>send_fds(sock, buffers, fds[, flags[, address]]) -&gt; integer</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.socket.html#recv_fds" class="code" data-type="Function">recv_fds</a></td>
+    <td><span>recv_fds(sock, bufsize, maxfds[, flags]) -&gt; (data, list of file descriptors, msg_flags, address)</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.socket.html#fromshare" class="code" data-type="Function">fromshare</a></td>
+    <td><span>fromshare(info) -&gt; socket object</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.socket.html#socketpair" class="code" data-type="Function">socketpair</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.socket.SocketIO.html" class="code" data-type="Class">SocketIO</a></td>
+    <td><span>Raw I/O implementation for stream sockets.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.socket.html#getfqdn" class="code" data-type="Function">getfqdn</a></td>
+    <td><span>Get fully qualified domain name from name.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.socket.html#create_connection" class="code" data-type="Function">create_connection</a></td>
+    <td><span>Connect to *address* and return the socket object.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.socket.html#has_dualstack_ipv6" class="code" data-type="Function">has_dualstack_ipv6</a></td>
+    <td><span>Return True if the platform supports creating a SOCK_STREAM socket which can handle both AF_INET and AF_INET6 (IPv4 / IPv6) connections.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.socket.html#create_server" class="code" data-type="Function">create_server</a></td>
+    <td><span>Convenience function which creates a SOCK_STREAM type socket bound to *address* (a 2-tuple (host, port)) and return the socket object.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.socket.html#getaddrinfo" class="code" data-type="Function">getaddrinfo</a></td>
+    <td><span>Resolve host and port into list of address info entries.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.socket.html#_LOCALHOST" class="code" data-type="Variable">_LOCALHOST</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.socket.html#_LOCALHOST_V6" class="code" data-type="Variable">_LOCALHOST_V6</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.socket.html#_intenum_converter" class="code" data-type="Function">_intenum_converter</a></td>
+    <td><span>Convert a numeric family value to an IntEnum member.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.socket._GiveupOnSendfile.html" class="code" data-type="Class">_GiveupOnSendfile</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.socket.html#_blocking_errnos" class="code" data-type="Variable">_blocking_errnos</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.socket.html#_GLOBAL_DEFAULT_TIMEOUT" class="code" data-type="Variable">_GLOBAL_DEFAULT_TIMEOUT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.socket.errno">
+    
+  </a>
+  <a name="errno">
+    
+  </a>
+  <div class="functionHeader">
+    errno =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.socket.EBADF">
+    
+  </a>
+  <a name="EBADF">
+    
+  </a>
+  <div class="functionHeader">
+    EBADF =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.socket.EAGAIN">
+    
+  </a>
+  <a name="EAGAIN">
+    
+  </a>
+  <div class="functionHeader">
+    EAGAIN =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.socket.EWOULDBLOCK">
+    
+  </a>
+  <a name="EWOULDBLOCK">
+    
+  </a>
+  <div class="functionHeader">
+    EWOULDBLOCK =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.socket._LOCALHOST">
+    
+  </a>
+  <a name="_LOCALHOST">
+    
+  </a>
+  <div class="functionHeader">
+    _LOCALHOST =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.socket._LOCALHOST_V6">
+    
+  </a>
+  <a name="_LOCALHOST_V6">
+    
+  </a>
+  <div class="functionHeader">
+    _LOCALHOST_V6 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.socket._intenum_converter">
+    
+  </a>
+  <a name="_intenum_converter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _intenum_converter(value, enum_klass):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convert a numeric family value to an IntEnum member.
+
+If it's not a known member, return the numeric value itself.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.socket.errorTab">
+    
+  </a>
+  <a name="errorTab">
+    
+  </a>
+  <div class="functionHeader">
+    errorTab =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.socket.fromfd">
+    
+  </a>
+  <a name="fromfd">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    fromfd(fd, family, type, proto=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">fromfd(fd, family, type[, proto]) -&gt; socket object
+
+Create a socket object from a duplicate of the given file
+descriptor.  The remaining arguments are the same as for socket().</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.socket.send_fds">
+    
+  </a>
+  <a name="send_fds">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    send_fds(sock, buffers, fds, flags=0, address=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">send_fds(sock, buffers, fds[, flags[, address]]) -&gt; integer
+
+Send the list of file descriptors fds over an AF_UNIX socket.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.socket.recv_fds">
+    
+  </a>
+  <a name="recv_fds">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    recv_fds(sock, bufsize, maxfds, flags=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">recv_fds(sock, bufsize, maxfds[, flags]) -&gt; (data, list of file
+descriptors, msg_flags, address)
+
+Receive up to maxfds file descriptors returning the message
+data and a list containing the descriptors.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.socket.fromshare">
+    
+  </a>
+  <a name="fromshare">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    fromshare(info):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">fromshare(info) -&gt; socket object
+
+Create a socket object from the bytes object returned by
+socket.share(pid).</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.socket.socketpair">
+    
+  </a>
+  <a name="socketpair">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    socketpair(family=AF_INET, type=SOCK_STREAM, proto=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">socketpair([family[, type[, proto]]]) -&gt; (socket object, socket object)
+Create a pair of socket objects from the sockets returned by the platform
+socketpair() function.
+The arguments are the same as for socket() except the default family is AF_UNIX
+if defined on the platform; otherwise, the default is AF_INET.
+</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.socket._blocking_errnos">
+    
+  </a>
+  <a name="_blocking_errnos">
+    
+  </a>
+  <div class="functionHeader">
+    _blocking_errnos =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.socket.getfqdn">
+    
+  </a>
+  <a name="getfqdn">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getfqdn(name=""""""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get fully qualified domain name from name.
+
+An empty argument is interpreted as meaning the local host.
+
+First the hostname returned by gethostbyaddr() is checked, then
+possibly existing aliases. In case no FQDN is available, hostname
+from gethostname() is returned.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.socket._GLOBAL_DEFAULT_TIMEOUT">
+    
+  </a>
+  <a name="_GLOBAL_DEFAULT_TIMEOUT">
+    
+  </a>
+  <div class="functionHeader">
+    _GLOBAL_DEFAULT_TIMEOUT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.socket.create_connection">
+    
+  </a>
+  <a name="create_connection">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    create_connection(address, timeout=_GLOBAL_DEFAULT_TIMEOUT, source_address=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Connect to *address* and return the socket object.
+
+Convenience function.  Connect to *address* (a 2-tuple ``(host,
+port)``) and return the socket object.  Passing the optional
+*timeout* parameter will set the timeout on the socket instance
+before attempting to connect.  If no *timeout* is supplied, the
+global default timeout setting returned by :func:`getdefaulttimeout`
+is used.  If *source_address* is set it must be a tuple of (host, port)
+for the socket to bind as a source address before making the connection.
+A host of '' or port 0 tells the OS to use the default.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.socket.has_dualstack_ipv6">
+    
+  </a>
+  <a name="has_dualstack_ipv6">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    has_dualstack_ipv6():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True if the platform supports creating a SOCK_STREAM socket
+which can handle both AF_INET and AF_INET6 (IPv4 / IPv6) connections.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.socket.create_server">
+    
+  </a>
+  <a name="create_server">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    create_server(address):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convenience function which creates a SOCK_STREAM type socket
+bound to *address* (a 2-tuple (host, port)) and return the socket
+object.
+
+*family* should be either AF_INET or AF_INET6.
+*backlog* is the queue size passed to socket.listen().
+*reuse_port* dictates whether to use the SO_REUSEPORT socket option.
+*dualstack_ipv6*: if true and the platform supports it, it will
+create an AF_INET6 socket able to accept both IPv4 or IPv6
+connections. When false it will explicitly disable this option on
+platforms that enable it by default (e.g. Linux).
+
+&gt;&gt;&gt; with create_server(('', 8000)) as server:
+...     while True:
+...         conn, addr = server.accept()
+...         # handle new connection</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.socket.getaddrinfo">
+    
+  </a>
+  <a name="getaddrinfo">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getaddrinfo(host, port, family=0, type=0, proto=0, flags=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Resolve host and port into list of address info entries.
+
+Translate the host/port argument into a sequence of 5-tuples that contain
+all the necessary arguments for creating a socket connected to that service.
+host is a domain name, a string representation of an IPv4/v6 address or
+None. port is a string service name such as 'http', a numeric port number or
+None. By passing None as the value of host and port, you can pass NULL to
+the underlying C API.
+
+The family, type and proto arguments can be optionally specified in order to
+narrow the list of addresses returned. Passing zero as a value for each of
+these arguments selects the full range of results.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

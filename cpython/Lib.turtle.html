@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.turtle : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.turtle.html" class="code" data-type="Module">turtle</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Turtle graphics is a popular way for introducing programming to
+kids. It was part of the original Logo programming language developed
+by Wally Feurzig and Seymour Papert in 1966.
+
+Imagine a robotic turtle starting at (0, 0) in the x-y plane. After an ``import turtle``, give it
+the command turtle.forward(15), and it moves (on-screen!) 15 pixels in
+the direction it is facing, drawing a line as it moves. Give it the
+command turtle.right(25), and it rotates in-place 25 degrees clockwise.
+
+By combining together these and similar commands, intricate shapes and
+pictures can easily be drawn.
+
+----- turtle.py
+
+This module is an extended reimplementation of turtle.py from the
+Python standard distribution up to Python 2.5. (See: http://www.python.org)
+
+It tries to keep the merits of turtle.py and to be (nearly) 100%
+compatible with it. This means in the first place to enable the
+learning programmer to use all the commands, classes and methods
+interactively when using the module from within IDLE run with
+the -n switch.
+
+Roughly it has the following features added:
+
+- Better animation of the turtle movements, especially of turning the
+  turtle. So the turtles can more easily be used as a visual feedback
+  instrument by the (beginning) programmer.
+
+- Different turtle shapes, gif-images as turtle shapes, user defined
+  and user controllable turtle shapes, among them compound
+  (multicolored) shapes. Turtle shapes can be stretched and tilted, which
+  makes turtles very versatile geometrical objects.
+
+- Fine control over turtle movement and screen updates via delay(),
+  and enhanced tracer() and speed() methods.
+
+- Aliases for the most commonly used commands, like fd for forward etc.,
+  following the early Logo traditions. This reduces the boring work of
+  typing long sequences of commands, which often occur in a natural way
+  when kids try to program fancy pictures on their first encounter with
+  turtle graphics.
+
+- Turtles now have an undo()-method with configurable undo-buffer.
+
+- Some simple commands/methods for creating event driven programs
+  (mouse-, key-, timer-events). Especially useful for programming games.
+
+- A scrollable Canvas class. The default scrollable Canvas can be
+  extended interactively as needed while playing around with the turtle(s).
+
+- A TurtleScreen class with methods controlling background color or
+  background image, window and canvas size and other properties of the
+  TurtleScreen.
+
+- There is a method, setworldcoordinates(), to install a user defined
+  coordinate-system for the TurtleScreen.
+
+- The implementation uses a 2-vector class named Vec2D, derived from tuple.
+  This class is public, so it can be imported by the application programmer,
+  which makes certain types of computations very natural and compact.
+
+- Appearance of the TurtleScreen and the Turtles at startup/import can be
+  configured by means of a turtle.cfg configuration file.
+  The default configuration mimics the appearance of the old turtle module.
+
+- If configured appropriately the module reads in docstrings from a docstring
+  dictionary in some different language, supplied separately  and replaces
+  the English ones by those read in. There is a utility function
+  write_docstringdict() to write a dictionary with the original (English)
+  docstrings to disc, so it can serve as a template for translations.
+
+Behind the scenes there are some features included with possible
+extensions in mind. These will be commented and documented elsewhere.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id11471">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.turtle.html#config_dict" class="code" data-type="Function">config_dict</a></td>
+    <td><span>Convert content of config-file into dictionary.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.turtle.html#readconfig" class="code" data-type="Function">readconfig</a></td>
+    <td><span>Read config-files, change configuration-dict accordingly.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.turtle.Vec2D.html" class="code" data-type="Class">Vec2D</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.turtle.ScrolledCanvas.html" class="code" data-type="Class">ScrolledCanvas</a></td>
+    <td><span>Modeled after the scrolled canvas class from Grayons's Tkinter book.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html" class="code" data-type="Class">TurtleScreenBase</a></td>
+    <td><span>Provide the basic graphics functionality. Interface between Tkinter and turtle.py.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.turtle.Terminator.html" class="code" data-type="Class">Terminator</a></td>
+    <td><span>Will be raised in TurtleScreen.update, if _RUNNING becomes False.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.turtle.TurtleGraphicsError.html" class="code" data-type="Class">TurtleGraphicsError</a></td>
+    <td><span>Some TurtleGraphics Error</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.turtle.Shape.html" class="code" data-type="Class">Shape</a></td>
+    <td><span>Data structure modeling shapes.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.turtle.Tbuffer.html" class="code" data-type="Class">Tbuffer</a></td>
+    <td><span>Ring buffer used as undobuffer for RawTurtle objects.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.turtle.TurtleScreen.html" class="code" data-type="Class">TurtleScreen</a></td>
+    <td><span>Provides screen oriented methods like setbg etc.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.turtle.TNavigator.html" class="code" data-type="Class">TNavigator</a></td>
+    <td><span>Navigation part of the RawTurtle. Implements methods for turtle movement.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.turtle.TPen.html" class="code" data-type="Class">TPen</a></td>
+    <td><span>Drawing part of the RawTurtle. Implements drawing properties.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.turtle.RawTurtle.html" class="code" data-type="Class">RawTurtle</a></td>
+    <td><span>Animation part of the RawTurtle. Puts RawTurtle upon a TurtleScreen and provides tools for its animation.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.turtle.html#Screen" class="code" data-type="Function">Screen</a></td>
+    <td><span>Return the singleton screen object. If none exists at the moment, create a new one and return it, else return the existing one.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.turtle.Turtle.html" class="code" data-type="Class">Turtle</a></td>
+    <td><span>RawTurtle auto-creating (scrolled) canvas.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.turtle.html#write_docstringdict" class="code" data-type="Function">write_docstringdict</a></td>
+    <td><span>Create and write docstring-dictionary to file.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.turtle.html#read_docstrings" class="code" data-type="Function">read_docstrings</a></td>
+    <td><span>Read in docstrings from lang-specific docstring dictionary.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.turtle.html#getmethparlist" class="code" data-type="Function">getmethparlist</a></td>
+    <td><span>Get strings describing the arguments for the given object</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.turtle.html#switchpen" class="code" data-type="Function">switchpen</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.turtle.html#demo1" class="code" data-type="Function">demo1</a></td>
+    <td><span>Demo of old turtle.py - module</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.turtle.html#demo2" class="code" data-type="Function">demo2</a></td>
+    <td><span>Demo of some new features.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.turtle.html#_ver" class="code" data-type="Variable">_ver</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.turtle.html#_tg_classes" class="code" data-type="Variable">_tg_classes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.turtle.html#_tg_screen_functions" class="code" data-type="Variable">_tg_screen_functions</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.turtle.html#_tg_turtle_functions" class="code" data-type="Variable">_tg_turtle_functions</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.turtle.html#_tg_utilities" class="code" data-type="Variable">_tg_utilities</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.turtle.html#_alias_list" class="code" data-type="Variable">_alias_list</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.turtle.html#_CFG" class="code" data-type="Variable">_CFG</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.turtle.html#__methodDict" class="code" data-type="Function">__methodDict</a></td>
+    <td><span>helper function for Scrolled Canvas</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.turtle.html#__methods" class="code" data-type="Function">__methods</a></td>
+    <td><span>helper function for Scrolled Canvas</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.turtle.html#__stringBody" class="code" data-type="Variable">__stringBody</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.turtle.html#__forwardmethods" class="code" data-type="Function">__forwardmethods</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.turtle._Root.html" class="code" data-type="Class">_Root</a></td>
+    <td><span>Root class for Screen based on Tkinter.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.turtle._TurtleImage.html" class="code" data-type="Class">_TurtleImage</a></td>
+    <td><span>Helper class: Datatype to store Turtle attributes</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.turtle._Screen.html" class="code" data-type="Class">_Screen</a></td>
+    <td><span class="undocumented">No class0/2 class variables docstring; , 0/1 instance variables docstring; , 4/6 methods documented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.turtle.html#_LANGUAGE" class="code" data-type="Variable">_LANGUAGE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.turtle.html#_turtle_docrevise" class="code" data-type="Function">_turtle_docrevise</a></td>
+    <td><span>To reduce docstrings from RawTurtle class for functions</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.turtle.html#_screen_docrevise" class="code" data-type="Function">_screen_docrevise</a></td>
+    <td><span>To reduce docstrings from TurtleScreen class for functions</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.turtle.html#__func_body" class="code" data-type="Variable">__func_body</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.turtle.html#_make_global_funcs" class="code" data-type="Function">_make_global_funcs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable private">
+  
+  <a name="Lib.turtle._ver">
+    
+  </a>
+  <a name="_ver">
+    
+  </a>
+  <div class="functionHeader">
+    _ver =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.turtle._tg_classes">
+    
+  </a>
+  <a name="_tg_classes">
+    
+  </a>
+  <div class="functionHeader">
+    _tg_classes =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[str]</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.turtle._tg_screen_functions">
+    
+  </a>
+  <a name="_tg_screen_functions">
+    
+  </a>
+  <div class="functionHeader">
+    _tg_screen_functions =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[str]</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.turtle._tg_turtle_functions">
+    
+  </a>
+  <a name="_tg_turtle_functions">
+    
+  </a>
+  <div class="functionHeader">
+    _tg_turtle_functions =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[str]</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.turtle._tg_utilities">
+    
+  </a>
+  <a name="_tg_utilities">
+    
+  </a>
+  <div class="functionHeader">
+    _tg_utilities =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[str]</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.turtle._alias_list">
+    
+  </a>
+  <a name="_alias_list">
+    
+  </a>
+  <div class="functionHeader">
+    _alias_list =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[str]</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.turtle._CFG">
+    
+  </a>
+  <a name="_CFG">
+    
+  </a>
+  <div class="functionHeader">
+    _CFG =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.turtle.config_dict">
+    
+  </a>
+  <a name="config_dict">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    config_dict(filename):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convert content of config-file into dictionary.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.turtle.readconfig">
+    
+  </a>
+  <a name="readconfig">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    readconfig(cfgdict):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Read config-files, change configuration-dict accordingly.
+
+If there is a turtle.cfg file in the current working directory,
+read it from there. If this contains an importconfig-value,
+say 'myway', construct filename turtle_mayway.cfg else use
+turtle.cfg and read it from the import-directory, where
+turtle.py is located.
+Update configuration dictionary first according to config-file,
+in the import directory, then according to config-file in the
+current working directory.
+If no config-file is found, the default configuration is used.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.turtle.__methodDict">
+    
+  </a>
+  <a name="__methodDict">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __methodDict(cls, _dict):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">helper function for Scrolled Canvas</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.turtle.__methods">
+    
+  </a>
+  <a name="__methods">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __methods(cls):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">helper function for Scrolled Canvas</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.turtle.__stringBody">
+    
+  </a>
+  <a name="__stringBody">
+    
+  </a>
+  <div class="functionHeader">
+    __stringBody =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.turtle.__forwardmethods">
+    
+  </a>
+  <a name="__forwardmethods">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __forwardmethods(fromClass, toClass, toPart, exclude=()):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.turtle.Screen">
+    
+  </a>
+  <a name="Screen">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    Screen():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the singleton screen object.
+If none exists at the moment, create a new one and return it,
+else return the existing one.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.turtle.write_docstringdict">
+    
+  </a>
+  <a name="write_docstringdict">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    write_docstringdict(filename="""turtle_docstringdict"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create and write docstring-dictionary to file.
+
+Optional argument:
+filename -- a string, used as filename
+            default value is turtle_docstringdict
+
+Has to be called explicitly, (not used by the turtle-graphics classes)
+The docstring dictionary will be written to the Python script &lt;filname&gt;.py
+It is intended to serve as a template for translation of the docstrings
+into different languages.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.turtle.read_docstrings">
+    
+  </a>
+  <a name="read_docstrings">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    read_docstrings(lang):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Read in docstrings from lang-specific docstring dictionary.
+
+Transfer docstrings, translated to lang, from a dictionary-file
+to the methods of classes Screen and Turtle and - in revised form -
+to the corresponding functions.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.turtle._LANGUAGE">
+    
+  </a>
+  <a name="_LANGUAGE">
+    
+  </a>
+  <div class="functionHeader">
+    _LANGUAGE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.turtle.getmethparlist">
+    
+  </a>
+  <a name="getmethparlist">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getmethparlist(ob):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get strings describing the arguments for the given object
+
+Returns a pair of strings representing function parameter lists
+including parenthesis.  The first string is suitable for use in
+function definition and the second is suitable for use in function
+call.  The "self" parameter is not included.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.turtle._turtle_docrevise">
+    
+  </a>
+  <a name="_turtle_docrevise">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _turtle_docrevise(docstr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">To reduce docstrings from RawTurtle class for functions
+    </p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.turtle._screen_docrevise">
+    
+  </a>
+  <a name="_screen_docrevise">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _screen_docrevise(docstr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">To reduce docstrings from TurtleScreen class for functions
+    </p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.turtle.__func_body">
+    
+  </a>
+  <a name="__func_body">
+    
+  </a>
+  <div class="functionHeader">
+    __func_body =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.turtle._make_global_funcs">
+    
+  </a>
+  <a name="_make_global_funcs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _make_global_funcs(functions, cls, obj, init, docrevise):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.turtle.switchpen">
+    
+  </a>
+  <a name="switchpen">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    switchpen():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.turtle.demo1">
+    
+  </a>
+  <a name="demo1">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    demo1():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Demo of old turtle.py - module</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.turtle.demo2">
+    
+  </a>
+  <a name="demo2">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    demo2():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Demo of some new features.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

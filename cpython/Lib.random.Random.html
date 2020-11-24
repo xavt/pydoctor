@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.random.Random : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.random.html" class="code" data-type="Module">random</a>.<a href="Lib.random.Random.html" class="code" data-type="Class">Random</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.random.Random(<span title="_random.Random">_random.Random</span>):</code></p><p>Known subclasses: <a href="Lib.random.SystemRandom.html" class="code" data-type="Class">Lib.random.SystemRandom</a></p>
+        <p><a href="classIndex.html#Lib.random.Random">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Random number generator base class used by bound module functions.
+
+Used to instantiate instances of Random to get generators that don't
+share state.
+
+Class Random can also be subclassed if you want to use a different basic
+generator of your own devising: in that case, override the following
+methods:  random(), seed(), getstate(), and setstate().
+Optionally, implement a getrandbits() method so that randrange()
+can cover arbitrarily large ranges.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3456">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.random.Random.html#VERSION" class="code" data-type="Class Variable">VERSION</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Initialize an instance.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.random.Random.html#gauss_next" class="code" data-type="Instance Variable">gauss_next</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#seed" class="code" data-type="Method">seed</a></td>
+    <td><span>Initialize internal state from a seed.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#getstate" class="code" data-type="Method">getstate</a></td>
+    <td><span>Return internal state; can be passed to setstate() later.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#setstate" class="code" data-type="Method">setstate</a></td>
+    <td><span>Restore internal state from object returned by getstate().</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#__getstate__" class="code" data-type="Method">__getstate__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#__setstate__" class="code" data-type="Method">__setstate__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#__reduce__" class="code" data-type="Method">__reduce__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#__init_subclass__" class="code" data-type="Method">__init_subclass__</a></td>
+    <td><span>Control how subclasses generate random integers.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#randbytes" class="code" data-type="Method">randbytes</a></td>
+    <td><span>Generate n random bytes.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#randrange" class="code" data-type="Method">randrange</a></td>
+    <td><span>Choose a random item from range(start, stop[, step]).</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#randint" class="code" data-type="Method">randint</a></td>
+    <td><span>Return random integer in range [a, b], including both end points.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#choice" class="code" data-type="Method">choice</a></td>
+    <td><span>Choose a random element from a non-empty sequence.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#shuffle" class="code" data-type="Method">shuffle</a></td>
+    <td><span>Shuffle list x in place, and return None.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#sample" class="code" data-type="Method">sample</a></td>
+    <td><span>Chooses k unique random elements from a population sequence or set.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#choices" class="code" data-type="Method">choices</a></td>
+    <td><span>Return a k sized list of population elements chosen with replacement.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#uniform" class="code" data-type="Method">uniform</a></td>
+    <td><span>Get a random number in the range [a, b) or [a, b] depending on rounding.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#triangular" class="code" data-type="Method">triangular</a></td>
+    <td><span>Triangular distribution.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#normalvariate" class="code" data-type="Method">normalvariate</a></td>
+    <td><span>Normal distribution.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#gauss" class="code" data-type="Method">gauss</a></td>
+    <td><span>Gaussian distribution.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#lognormvariate" class="code" data-type="Method">lognormvariate</a></td>
+    <td><span>Log normal distribution.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#expovariate" class="code" data-type="Method">expovariate</a></td>
+    <td><span>Exponential distribution.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#vonmisesvariate" class="code" data-type="Method">vonmisesvariate</a></td>
+    <td><span>Circular data distribution.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#gammavariate" class="code" data-type="Method">gammavariate</a></td>
+    <td><span>Gamma distribution.  Not the gamma function!</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#betavariate" class="code" data-type="Method">betavariate</a></td>
+    <td><span>Beta distribution.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#paretovariate" class="code" data-type="Method">paretovariate</a></td>
+    <td><span>Pareto distribution.  alpha is the shape parameter.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#weibullvariate" class="code" data-type="Method">weibullvariate</a></td>
+    <td><span>Weibull distribution.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#_randbelow_with_getrandbits" class="code" data-type="Method">_randbelow_with_getrandbits</a></td>
+    <td><span>Return a random int in the range [0,n).  Returns 0 if n==0.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.random.Random.html#_randbelow_without_getrandbits" class="code" data-type="Method">_randbelow_without_getrandbits</a></td>
+    <td><span>Return a random int in the range [0,n).  Returns 0 if n==0.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.random.Random.VERSION">
+    
+  </a>
+  <a name="VERSION">
+    
+  </a>
+  <div class="functionHeader">
+    VERSION =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.random.Random.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, x=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Initialize an instance.
+
+Optional argument x controls seeding, as for Random.seed().</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.random.Random.gauss_next">
+    
+  </a>
+  <a name="gauss_next">
+    
+  </a>
+  <div class="functionHeader">
+    gauss_next =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.random.Random.seed">
+    
+  </a>
+  <a name="seed">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    seed(self, a=None, version=2):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.random.SystemRandom.html" class="code" data-type="Class">Lib.random.SystemRandom</a></div>
+    
+    <div><p class="pre">Initialize internal state from a seed.
+
+The only supported seed types are None, int, float,
+str, bytes, and bytearray.
+
+None or no argument seeds from current time or from an operating
+system specific randomness source if available.
+
+If *a* is an int, all bits are used.
+
+For version 2 (the default), all of the bits are used if *a* is a str,
+bytes, or bytearray.  For version 1 (provided for reproducing random
+sequences from older versions of Python), the algorithm for str and
+bytes generates a narrower range of seeds.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.random.Random.getstate">
+    
+  </a>
+  <a name="getstate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getstate(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return internal state; can be passed to setstate() later.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.random.Random.setstate">
+    
+  </a>
+  <a name="setstate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setstate(self, state):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Restore internal state from object returned by getstate().</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.random.Random.__getstate__">
+    
+  </a>
+  <a name="__getstate__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __getstate__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.random.Random.__setstate__">
+    
+  </a>
+  <a name="__setstate__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __setstate__(self, state):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.random.Random.__reduce__">
+    
+  </a>
+  <a name="__reduce__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __reduce__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.random.Random.__init_subclass__">
+    
+  </a>
+  <a name="__init_subclass__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init_subclass__(**kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Control how subclasses generate random integers.
+
+The algorithm a subclass can use depends on the random() and/or
+getrandbits() implementation available to it and determines
+whether it can generate random integers from arbitrarily large
+ranges.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.random.Random._randbelow_with_getrandbits">
+    
+  </a>
+  <a name="_randbelow_with_getrandbits">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _randbelow_with_getrandbits(self, n):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a random int in the range [0,n).  Returns 0 if n==0.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.random.Random._randbelow_without_getrandbits">
+    
+  </a>
+  <a name="_randbelow_without_getrandbits">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _randbelow_without_getrandbits(self, n, maxsize=(1 &lt;&lt; BPF)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a random int in the range [0,n).  Returns 0 if n==0.
+
+The implementation does not use getrandbits, but only random.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.random.Random.randbytes">
+    
+  </a>
+  <a name="randbytes">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    randbytes(self, n):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.random.SystemRandom.html" class="code" data-type="Class">Lib.random.SystemRandom</a></div>
+    
+    <div><p class="pre">Generate n random bytes.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.random.Random.randrange">
+    
+  </a>
+  <a name="randrange">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    randrange(self, start, stop=None, step=1):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Choose a random item from range(start, stop[, step]).
+
+This fixes the problem with randint() which includes the
+endpoint; in Python this is usually not what you want.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.random.Random.randint">
+    
+  </a>
+  <a name="randint">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    randint(self, a, b):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return random integer in range [a, b], including both end points.
+        </p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.random.Random.choice">
+    
+  </a>
+  <a name="choice">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    choice(self, seq):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Choose a random element from a non-empty sequence.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.random.Random.shuffle">
+    
+  </a>
+  <a name="shuffle">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    shuffle(self, x, random=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Shuffle list x in place, and return None.
+
+Optional argument random is a 0-argument function returning a
+random float in [0.0, 1.0); if it is the default None, the
+standard random.random will be used.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.random.Random.sample">
+    
+  </a>
+  <a name="sample">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    sample(self, population, k):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Chooses k unique random elements from a population sequence or set.
+
+Returns a new list containing elements from the population while
+leaving the original population unchanged.  The resulting list is
+in selection order so that all sub-slices will also be valid random
+samples.  This allows raffle winners (the sample) to be partitioned
+into grand prize and second place winners (the subslices).
+
+Members of the population need not be hashable or unique.  If the
+population contains repeats, then each occurrence is a possible
+selection in the sample.
+
+Repeated elements can be specified one at a time or with the optional
+counts parameter.  For example:
+
+    sample(['red', 'blue'], counts=[4, 2], k=5)
+
+is equivalent to:
+
+    sample(['red', 'red', 'red', 'red', 'blue', 'blue'], k=5)
+
+To choose a sample from a range of integers, use range() for the
+population argument.  This is especially fast and space efficient
+for sampling from a large population:
+
+    sample(range(10000000), 60)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.random.Random.choices">
+    
+  </a>
+  <a name="choices">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    choices(self, population, weights=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a k sized list of population elements chosen with replacement.
+
+If the relative weights or cumulative weights are not specified,
+the selections are made with equal probability.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.random.Random.uniform">
+    
+  </a>
+  <a name="uniform">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    uniform(self, a, b):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get a random number in the range [a, b) or [a, b] depending on rounding.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.random.Random.triangular">
+    
+  </a>
+  <a name="triangular">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    triangular(self, low=0.0, high=1.0, mode=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Triangular distribution.
+
+Continuous distribution bounded by given lower and upper limits,
+and having a given mode value in-between.
+
+http://en.wikipedia.org/wiki/Triangular_distribution</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.random.Random.normalvariate">
+    
+  </a>
+  <a name="normalvariate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    normalvariate(self, mu, sigma):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Normal distribution.
+
+mu is the mean, and sigma is the standard deviation.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.random.Random.gauss">
+    
+  </a>
+  <a name="gauss">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    gauss(self, mu, sigma):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Gaussian distribution.
+
+mu is the mean, and sigma is the standard deviation.  This is
+slightly faster than the normalvariate() function.
+
+Not thread-safe without a lock around calls.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.random.Random.lognormvariate">
+    
+  </a>
+  <a name="lognormvariate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    lognormvariate(self, mu, sigma):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Log normal distribution.
+
+If you take the natural logarithm of this distribution, you'll get a
+normal distribution with mean mu and standard deviation sigma.
+mu can have any value, and sigma must be greater than zero.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.random.Random.expovariate">
+    
+  </a>
+  <a name="expovariate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    expovariate(self, lambd):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Exponential distribution.
+
+lambd is 1.0 divided by the desired mean.  It should be
+nonzero.  (The parameter would be called "lambda", but that is
+a reserved word in Python.)  Returned values range from 0 to
+positive infinity if lambd is positive, and from negative
+infinity to 0 if lambd is negative.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.random.Random.vonmisesvariate">
+    
+  </a>
+  <a name="vonmisesvariate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    vonmisesvariate(self, mu, kappa):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Circular data distribution.
+
+mu is the mean angle, expressed in radians between 0 and 2*pi, and
+kappa is the concentration parameter, which must be greater than or
+equal to zero.  If kappa is equal to zero, this distribution reduces
+to a uniform random angle over the range 0 to 2*pi.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.random.Random.gammavariate">
+    
+  </a>
+  <a name="gammavariate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    gammavariate(self, alpha, beta):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Gamma distribution.  Not the gamma function!
+
+Conditions on the parameters are alpha &gt; 0 and beta &gt; 0.
+
+The probability distribution function is:
+
+            x ** (alpha - 1) * math.exp(-x / beta)
+  pdf(x) =  --------------------------------------
+              math.gamma(alpha) * beta ** alpha</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.random.Random.betavariate">
+    
+  </a>
+  <a name="betavariate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    betavariate(self, alpha, beta):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Beta distribution.
+
+Conditions on the parameters are alpha &gt; 0 and beta &gt; 0.
+Returned values range between 0 and 1.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.random.Random.paretovariate">
+    
+  </a>
+  <a name="paretovariate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    paretovariate(self, alpha):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Pareto distribution.  alpha is the shape parameter.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.random.Random.weibullvariate">
+    
+  </a>
+  <a name="weibullvariate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    weibullvariate(self, alpha, beta):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Weibull distribution.
+
+alpha is the scale parameter and beta is the shape parameter.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

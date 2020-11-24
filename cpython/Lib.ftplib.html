@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.ftplib : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.ftplib.html" class="code" data-type="Module">ftplib</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">An FTP client class and some helper functions.
+
+Based on RFC 959: File Transfer Protocol (FTP), by J. Postel and J. Reynolds
+
+Example:
+
+&gt;&gt;&gt; from ftplib import FTP
+&gt;&gt;&gt; ftp = FTP('ftp.python.org') # connect to host, default port
+&gt;&gt;&gt; ftp.login() # default, i.e.: user anonymous, passwd anonymous@
+'230 Guest login ok, access restrictions apply.'
+&gt;&gt;&gt; ftp.retrlines('LIST') # list directory contents
+total 9
+drwxr-xr-x   8 root     wheel        1024 Jan  3  1994 .
+drwxr-xr-x   8 root     wheel        1024 Jan  3  1994 ..
+drwxr-xr-x   2 root     wheel        1024 Jan  3  1994 bin
+drwxr-xr-x   2 root     wheel        1024 Jan  3  1994 etc
+d-wxrwxr-x   2 ftp      wheel        1024 Sep  5 13:43 incoming
+drwxr-xr-x   2 root     wheel        1024 Nov 17  1993 lib
+drwxr-xr-x   6 1094     wheel        1024 Sep 13 19:07 pub
+drwxr-xr-x   3 root     wheel        1024 Jan  3  1994 usr
+-rw-r--r--   1 root     root          312 Aug  1  1994 welcome.msg
+'226 Transfer complete.'
+&gt;&gt;&gt; ftp.quit()
+'221 Goodbye.'
+&gt;&gt;&gt;
+
+A nice test that reveals some of the network dialogue would be:
+python ftplib.py -d localhost -l -p -l</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id1954">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ftplib.html#MSG_OOB" class="code" data-type="Variable">MSG_OOB</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ftplib.html#FTP_PORT" class="code" data-type="Variable">FTP_PORT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ftplib.html#MAXLINE" class="code" data-type="Variable">MAXLINE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.ftplib.Error.html" class="code" data-type="Class">Error</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.ftplib.error_reply.html" class="code" data-type="Class">error_reply</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.ftplib.error_temp.html" class="code" data-type="Class">error_temp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.ftplib.error_perm.html" class="code" data-type="Class">error_perm</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.ftplib.error_proto.html" class="code" data-type="Class">error_proto</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ftplib.html#all_errors" class="code" data-type="Variable">all_errors</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ftplib.html#CRLF" class="code" data-type="Variable">CRLF</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ftplib.html#B_CRLF" class="code" data-type="Variable">B_CRLF</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.ftplib.FTP.html" class="code" data-type="Class">FTP</a></td>
+    <td><span>An FTP client class.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.ftplib.FTP_TLS.html" class="code" data-type="Class">FTP_TLS</a></td>
+    <td><span>A FTP subclass which adds TLS support to FTP as described in RFC-4217.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ftplib.html#parse150" class="code" data-type="Function">parse150</a></td>
+    <td><span>Parse the '150' response for a RETR request. Returns the expected transfer size or None; size is not guaranteed to be present in the 150 message.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ftplib.html#parse227" class="code" data-type="Function">parse227</a></td>
+    <td><span>Parse the '227' response for a PASV request. Raises error_proto if it does not contain '(h1,h2,h3,h4,p1,p2)' Return ('host.addr.as.numbers', port#) tuple.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ftplib.html#parse229" class="code" data-type="Function">parse229</a></td>
+    <td><span>Parse the '229' response for an EPSV request. Raises error_proto if it does not contain '(|||port|)' Return ('host.addr.as.numbers', port#) tuple.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ftplib.html#parse257" class="code" data-type="Function">parse257</a></td>
+    <td><span>Parse the '257' response for a MKD or PWD request. This is a response to a MKD or PWD request: a directory name. Returns the directoryname in the 257 reply.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ftplib.html#print_line" class="code" data-type="Function">print_line</a></td>
+    <td><span>Default retrlines callback to print a line.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ftplib.html#ftpcp" class="code" data-type="Function">ftpcp</a></td>
+    <td><span>Copy file from one FTP-instance to another.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ftplib.html#test" class="code" data-type="Function">test</a></td>
+    <td><span>Test program. Usage: ftp [-d] [-r[file]] host [-l[dir]] [-d[dir]] [-p] [file] ...</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ftplib.html#_SSLSocket" class="code" data-type="Variable">_SSLSocket</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ftplib.html#_150_re" class="code" data-type="Variable">_150_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ftplib.html#_227_re" class="code" data-type="Variable">_227_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.ftplib.MSG_OOB">
+    
+  </a>
+  <a name="MSG_OOB">
+    
+  </a>
+  <div class="functionHeader">
+    MSG_OOB =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.ftplib.FTP_PORT">
+    
+  </a>
+  <a name="FTP_PORT">
+    
+  </a>
+  <div class="functionHeader">
+    FTP_PORT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.ftplib.MAXLINE">
+    
+  </a>
+  <a name="MAXLINE">
+    
+  </a>
+  <div class="functionHeader">
+    MAXLINE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.ftplib.all_errors">
+    
+  </a>
+  <a name="all_errors">
+    
+  </a>
+  <div class="functionHeader">
+    all_errors =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.ftplib.CRLF">
+    
+  </a>
+  <a name="CRLF">
+    
+  </a>
+  <div class="functionHeader">
+    CRLF =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.ftplib.B_CRLF">
+    
+  </a>
+  <a name="B_CRLF">
+    
+  </a>
+  <div class="functionHeader">
+    B_CRLF =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.ftplib._SSLSocket">
+    
+  </a>
+  <a name="_SSLSocket">
+    
+  </a>
+  <div class="functionHeader">
+    _SSLSocket =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.ftplib._150_re">
+    
+  </a>
+  <a name="_150_re">
+    
+  </a>
+  <div class="functionHeader">
+    _150_re =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ftplib.parse150">
+    
+  </a>
+  <a name="parse150">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse150(resp):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse the '150' response for a RETR request.
+Returns the expected transfer size or None; size is not guaranteed to
+be present in the 150 message.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.ftplib._227_re">
+    
+  </a>
+  <a name="_227_re">
+    
+  </a>
+  <div class="functionHeader">
+    _227_re =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ftplib.parse227">
+    
+  </a>
+  <a name="parse227">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse227(resp):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse the '227' response for a PASV request.
+Raises error_proto if it does not contain '(h1,h2,h3,h4,p1,p2)'
+Return ('host.addr.as.numbers', port#) tuple.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ftplib.parse229">
+    
+  </a>
+  <a name="parse229">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse229(resp, peer):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse the '229' response for an EPSV request.
+Raises error_proto if it does not contain '(|||port|)'
+Return ('host.addr.as.numbers', port#) tuple.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ftplib.parse257">
+    
+  </a>
+  <a name="parse257">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse257(resp):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse the '257' response for a MKD or PWD request.
+This is a response to a MKD or PWD request: a directory name.
+Returns the directoryname in the 257 reply.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ftplib.print_line">
+    
+  </a>
+  <a name="print_line">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    print_line(line):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Default retrlines callback to print a line.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ftplib.ftpcp">
+    
+  </a>
+  <a name="ftpcp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ftpcp(source, sourcename, target, targetname="""""", type="""I"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Copy file from one FTP-instance to another.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ftplib.test">
+    
+  </a>
+  <a name="test">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Test program.
+Usage: ftp [-d] [-r[file]] host [-l[dir]] [-d[dir]] [-p] [file] ...
+
+-d dir
+-l list
+-p password</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

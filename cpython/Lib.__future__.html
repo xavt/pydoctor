@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.__future__ : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.__future__.html" class="code" data-type="Module">__future__</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Record of phased-in incompatible language changes.
+
+Each line is of the form:
+
+    FeatureName = "_Feature(" OptionalRelease "," MandatoryRelease ","
+                              CompilerFlag ")"
+
+where, normally, OptionalRelease &lt; MandatoryRelease, and both are 5-tuples
+of the same form as sys.version_info:
+
+    (PY_MAJOR_VERSION, # the 2 in 2.1.0a3; an int
+     PY_MINOR_VERSION, # the 1; an int
+     PY_MICRO_VERSION, # the 0; an int
+     PY_RELEASE_LEVEL, # "alpha", "beta", "candidate" or "final"; string
+     PY_RELEASE_SERIAL # the 3; an int
+    )
+
+OptionalRelease records the first release in which
+
+    from __future__ import FeatureName
+
+was accepted.
+
+In the case of MandatoryReleases that have not yet occurred,
+MandatoryRelease predicts the release in which the feature will become part
+of the language.
+
+Else MandatoryRelease records when the feature became part of the language;
+in releases at or after that, modules no longer need
+
+    from __future__ import FeatureName
+
+to use the feature in question, but may continue to use such imports.
+
+MandatoryRelease may also be None, meaning that a planned feature got
+dropped.
+
+Instances of class _Feature have two corresponding methods,
+.getOptionalRelease() and .getMandatoryRelease().
+
+CompilerFlag is the (bitfield) flag that should be passed in the fourth
+argument to the builtin function compile() to enable the feature in
+dynamically compiled code.  This flag is stored in the .compiler_flag
+attribute on _Future instances.  These values must match the appropriate
+#defines of CO_xxx flags in Include/compile.h.
+
+No feature line is ever to be deleted from this file.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.__future__.html#all_feature_names" class="code" data-type="Variable">all_feature_names</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.__future__.html#CO_NESTED" class="code" data-type="Variable">CO_NESTED</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.__future__.html#CO_GENERATOR_ALLOWED" class="code" data-type="Variable">CO_GENERATOR_ALLOWED</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.__future__.html#CO_FUTURE_DIVISION" class="code" data-type="Variable">CO_FUTURE_DIVISION</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.__future__.html#CO_FUTURE_ABSOLUTE_IMPORT" class="code" data-type="Variable">CO_FUTURE_ABSOLUTE_IMPORT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.__future__.html#CO_FUTURE_WITH_STATEMENT" class="code" data-type="Variable">CO_FUTURE_WITH_STATEMENT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.__future__.html#CO_FUTURE_PRINT_FUNCTION" class="code" data-type="Variable">CO_FUTURE_PRINT_FUNCTION</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.__future__.html#CO_FUTURE_UNICODE_LITERALS" class="code" data-type="Variable">CO_FUTURE_UNICODE_LITERALS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.__future__.html#CO_FUTURE_BARRY_AS_BDFL" class="code" data-type="Variable">CO_FUTURE_BARRY_AS_BDFL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.__future__.html#CO_FUTURE_GENERATOR_STOP" class="code" data-type="Variable">CO_FUTURE_GENERATOR_STOP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.__future__.html#CO_FUTURE_ANNOTATIONS" class="code" data-type="Variable">CO_FUTURE_ANNOTATIONS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.__future__.html#nested_scopes" class="code" data-type="Variable">nested_scopes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.__future__.html#generators" class="code" data-type="Variable">generators</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.__future__.html#division" class="code" data-type="Variable">division</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.__future__.html#absolute_import" class="code" data-type="Variable">absolute_import</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.__future__.html#with_statement" class="code" data-type="Variable">with_statement</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.__future__.html#print_function" class="code" data-type="Variable">print_function</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.__future__.html#unicode_literals" class="code" data-type="Variable">unicode_literals</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.__future__.html#barry_as_FLUFL" class="code" data-type="Variable">barry_as_FLUFL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.__future__.html#generator_stop" class="code" data-type="Variable">generator_stop</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.__future__.html#annotations" class="code" data-type="Variable">annotations</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.__future__._Feature.html" class="code" data-type="Class">_Feature</a></td>
+    <td><span class="undocumented">No class0/3 instance variables docstring; , 2/4 methods documented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.__future__.all_feature_names">
+    
+  </a>
+  <a name="all_feature_names">
+    
+  </a>
+  <div class="functionHeader">
+    all_feature_names =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[str]</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.__future__.CO_NESTED">
+    
+  </a>
+  <a name="CO_NESTED">
+    
+  </a>
+  <div class="functionHeader">
+    CO_NESTED =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.__future__.CO_GENERATOR_ALLOWED">
+    
+  </a>
+  <a name="CO_GENERATOR_ALLOWED">
+    
+  </a>
+  <div class="functionHeader">
+    CO_GENERATOR_ALLOWED =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.__future__.CO_FUTURE_DIVISION">
+    
+  </a>
+  <a name="CO_FUTURE_DIVISION">
+    
+  </a>
+  <div class="functionHeader">
+    CO_FUTURE_DIVISION =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.__future__.CO_FUTURE_ABSOLUTE_IMPORT">
+    
+  </a>
+  <a name="CO_FUTURE_ABSOLUTE_IMPORT">
+    
+  </a>
+  <div class="functionHeader">
+    CO_FUTURE_ABSOLUTE_IMPORT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.__future__.CO_FUTURE_WITH_STATEMENT">
+    
+  </a>
+  <a name="CO_FUTURE_WITH_STATEMENT">
+    
+  </a>
+  <div class="functionHeader">
+    CO_FUTURE_WITH_STATEMENT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.__future__.CO_FUTURE_PRINT_FUNCTION">
+    
+  </a>
+  <a name="CO_FUTURE_PRINT_FUNCTION">
+    
+  </a>
+  <div class="functionHeader">
+    CO_FUTURE_PRINT_FUNCTION =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.__future__.CO_FUTURE_UNICODE_LITERALS">
+    
+  </a>
+  <a name="CO_FUTURE_UNICODE_LITERALS">
+    
+  </a>
+  <div class="functionHeader">
+    CO_FUTURE_UNICODE_LITERALS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.__future__.CO_FUTURE_BARRY_AS_BDFL">
+    
+  </a>
+  <a name="CO_FUTURE_BARRY_AS_BDFL">
+    
+  </a>
+  <div class="functionHeader">
+    CO_FUTURE_BARRY_AS_BDFL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.__future__.CO_FUTURE_GENERATOR_STOP">
+    
+  </a>
+  <a name="CO_FUTURE_GENERATOR_STOP">
+    
+  </a>
+  <div class="functionHeader">
+    CO_FUTURE_GENERATOR_STOP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.__future__.CO_FUTURE_ANNOTATIONS">
+    
+  </a>
+  <a name="CO_FUTURE_ANNOTATIONS">
+    
+  </a>
+  <div class="functionHeader">
+    CO_FUTURE_ANNOTATIONS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.__future__.nested_scopes">
+    
+  </a>
+  <a name="nested_scopes">
+    
+  </a>
+  <div class="functionHeader">
+    nested_scopes =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.__future__.generators">
+    
+  </a>
+  <a name="generators">
+    
+  </a>
+  <div class="functionHeader">
+    generators =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.__future__.division">
+    
+  </a>
+  <a name="division">
+    
+  </a>
+  <div class="functionHeader">
+    division =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.__future__.absolute_import">
+    
+  </a>
+  <a name="absolute_import">
+    
+  </a>
+  <div class="functionHeader">
+    absolute_import =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.__future__.with_statement">
+    
+  </a>
+  <a name="with_statement">
+    
+  </a>
+  <div class="functionHeader">
+    with_statement =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.__future__.print_function">
+    
+  </a>
+  <a name="print_function">
+    
+  </a>
+  <div class="functionHeader">
+    print_function =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.__future__.unicode_literals">
+    
+  </a>
+  <a name="unicode_literals">
+    
+  </a>
+  <div class="functionHeader">
+    unicode_literals =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.__future__.barry_as_FLUFL">
+    
+  </a>
+  <a name="barry_as_FLUFL">
+    
+  </a>
+  <div class="functionHeader">
+    barry_as_FLUFL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.__future__.generator_stop">
+    
+  </a>
+  <a name="generator_stop">
+    
+  </a>
+  <div class="functionHeader">
+    generator_stop =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.__future__.annotations">
+    
+  </a>
+  <a name="annotations">
+    
+  </a>
+  <div class="functionHeader">
+    annotations =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

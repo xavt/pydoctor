@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.test.libregrtest.win_utils.WindowsLoadTracker : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.test.html" class="code" data-type="Package">test</a>.<a href="Lib.test.libregrtest.html" class="code" data-type="Package">libregrtest</a>.<a href="Lib.test.libregrtest.win_utils.html" class="code" data-type="Module">win_utils</a>.<a href="Lib.test.libregrtest.win_utils.WindowsLoadTracker.html" class="code" data-type="Class">WindowsLoadTracker</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.test.libregrtest.win_utils.WindowsLoadTracker:</code></p>
+        <p><a href="classIndex.html#Lib.test.libregrtest.win_utils.WindowsLoadTracker">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">This class asynchronously interacts with the `typeperf` command to read
+the system load on Windows. Multiprocessing and threads can't be used
+here because they interfere with the test suite's cases for those
+modules.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3964">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.win_utils.WindowsLoadTracker.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.win_utils.WindowsLoadTracker.html#start" class="code" data-type="Method">start</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.win_utils.WindowsLoadTracker.html#pipe" class="code" data-type="Instance Variable">pipe</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.win_utils.WindowsLoadTracker.html#close" class="code" data-type="Method">close</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.win_utils.WindowsLoadTracker.html#__del__" class="code" data-type="Method">__del__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.win_utils.WindowsLoadTracker.html#getloadavg" class="code" data-type="Method">getloadavg</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.win_utils.WindowsLoadTracker.html#_values" class="code" data-type="Instance Variable">_values</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.win_utils.WindowsLoadTracker.html#_load" class="code" data-type="Instance Variable">_load</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.win_utils.WindowsLoadTracker.html#_buffer" class="code" data-type="Instance Variable">_buffer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.win_utils.WindowsLoadTracker.html#_popen" class="code" data-type="Instance Variable">_popen</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.win_utils.WindowsLoadTracker.html#_get_counter_name" class="code" data-type="Method">_get_counter_name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.win_utils.WindowsLoadTracker.html#_parse_line" class="code" data-type="Method">_parse_line</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.win_utils.WindowsLoadTracker.html#_read_lines" class="code" data-type="Method">_read_lines</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.win_utils.WindowsLoadTracker.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.test.libregrtest.win_utils.WindowsLoadTracker._values">
+    
+  </a>
+  <a name="_values">
+    
+  </a>
+  <div class="functionHeader">
+    _values =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.test.libregrtest.win_utils.WindowsLoadTracker._load">
+    
+  </a>
+  <a name="_load">
+    
+  </a>
+  <div class="functionHeader">
+    _load =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.test.libregrtest.win_utils.WindowsLoadTracker._buffer">
+    
+  </a>
+  <a name="_buffer">
+    
+  </a>
+  <div class="functionHeader">
+    _buffer =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.test.libregrtest.win_utils.WindowsLoadTracker._popen">
+    
+  </a>
+  <a name="_popen">
+    
+  </a>
+  <div class="functionHeader">
+    _popen =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.win_utils.WindowsLoadTracker.start">
+    
+  </a>
+  <a name="start">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    start(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.libregrtest.win_utils.WindowsLoadTracker.pipe">
+    
+  </a>
+  <a name="pipe">
+    
+  </a>
+  <div class="functionHeader">
+    pipe =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.test.libregrtest.win_utils.WindowsLoadTracker._get_counter_name">
+    
+  </a>
+  <a name="_get_counter_name">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_counter_name(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.win_utils.WindowsLoadTracker.close">
+    
+  </a>
+  <a name="close">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    close(self, kill=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.win_utils.WindowsLoadTracker.__del__">
+    
+  </a>
+  <a name="__del__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __del__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.test.libregrtest.win_utils.WindowsLoadTracker._parse_line">
+    
+  </a>
+  <a name="_parse_line">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _parse_line(self, line):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.test.libregrtest.win_utils.WindowsLoadTracker._read_lines">
+    
+  </a>
+  <a name="_read_lines">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _read_lines(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.win_utils.WindowsLoadTracker.getloadavg">
+    
+  </a>
+  <a name="getloadavg">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getloadavg(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.logging.Manager : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.logging.html" class="code" data-type="Package">logging</a>.<a href="Lib.logging.Manager.html" class="code" data-type="Class">Manager</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.logging.Manager(<span title="object">object</span>):</code></p>
+        <p><a href="classIndex.html#Lib.logging.Manager">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">There is [under normal circumstances] just one Manager instance, which
+holds the hierarchy of loggers.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3023">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Manager.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Initialize the manager with the root node of the logger hierarchy.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.Manager.html#root" class="code" data-type="Instance Variable">root</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.Manager.html#disable" class="code" data-type="Instance Variable">disable</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.Manager.html#emittedNoHandlerWarning" class="code" data-type="Instance Variable">emittedNoHandlerWarning</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.Manager.html#loggerDict" class="code" data-type="Instance Variable">loggerDict</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.Manager.html#loggerClass" class="code" data-type="Instance Variable">loggerClass</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.Manager.html#logRecordFactory" class="code" data-type="Instance Variable">logRecordFactory</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Manager.html#getLogger" class="code" data-type="Method">getLogger</a></td>
+    <td><span>Get a logger with the specified name (channel name), creating it if it doesn't yet exist. This name is a dot-separated hierarchical name, such as "a", "a.b", "a.b.c" or similar.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Manager.html#setLoggerClass" class="code" data-type="Method">setLoggerClass</a></td>
+    <td><span>Set the class to be used when instantiating a logger with this Manager.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Manager.html#setLogRecordFactory" class="code" data-type="Method">setLogRecordFactory</a></td>
+    <td><span>Set the factory to be used when instantiating a log record with this Manager.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Manager.html#_fixupParents" class="code" data-type="Method">_fixupParents</a></td>
+    <td><span>Ensure that there are either loggers or placeholders all the way from the specified logger to the root of the logger hierarchy.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Manager.html#_fixupChildren" class="code" data-type="Method">_fixupChildren</a></td>
+    <td><span>Ensure that children of the placeholder ph are connected to the specified logger.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Manager.html#_clear_cache" class="code" data-type="Method">_clear_cache</a></td>
+    <td><span>Clear the cache for all loggers in loggerDict Called when level changes are made</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.logging.Manager.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, rootnode):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Initialize the manager with the root node of the logger hierarchy.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.logging.Manager.root">
+    
+  </a>
+  <a name="root">
+    
+  </a>
+  <div class="functionHeader">
+    root =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.logging.Manager.disable">
+    
+  </a>
+  <a name="disable">
+    
+  </a>
+  <div class="functionHeader">
+    disable =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.logging.Manager.emittedNoHandlerWarning">
+    
+  </a>
+  <a name="emittedNoHandlerWarning">
+    
+  </a>
+  <div class="functionHeader">
+    emittedNoHandlerWarning =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.logging.Manager.loggerDict">
+    
+  </a>
+  <a name="loggerDict">
+    
+  </a>
+  <div class="functionHeader">
+    loggerDict =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.logging.Manager.loggerClass">
+    
+  </a>
+  <a name="loggerClass">
+    
+  </a>
+  <div class="functionHeader">
+    loggerClass =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.logging.Manager.logRecordFactory">
+    
+  </a>
+  <a name="logRecordFactory">
+    
+  </a>
+  <div class="functionHeader">
+    logRecordFactory =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.Manager.getLogger">
+    
+  </a>
+  <a name="getLogger">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getLogger(self, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get a logger with the specified name (channel name), creating it
+if it doesn't yet exist. This name is a dot-separated hierarchical
+name, such as "a", "a.b", "a.b.c" or similar.
+
+If a PlaceHolder existed for the specified name [i.e. the logger
+didn't exist but a child of it did], replace it with the created
+logger and fix up the parent/child references which pointed to the
+placeholder to now point to the logger.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.Manager.setLoggerClass">
+    
+  </a>
+  <a name="setLoggerClass">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setLoggerClass(self, klass):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set the class to be used when instantiating a logger with this Manager.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.Manager.setLogRecordFactory">
+    
+  </a>
+  <a name="setLogRecordFactory">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setLogRecordFactory(self, factory):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set the factory to be used when instantiating a log record with this
+Manager.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.logging.Manager._fixupParents">
+    
+  </a>
+  <a name="_fixupParents">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _fixupParents(self, alogger):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Ensure that there are either loggers or placeholders all the way
+from the specified logger to the root of the logger hierarchy.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.logging.Manager._fixupChildren">
+    
+  </a>
+  <a name="_fixupChildren">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _fixupChildren(self, ph, alogger):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Ensure that children of the placeholder ph are connected to the
+specified logger.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.logging.Manager._clear_cache">
+    
+  </a>
+  <a name="_clear_cache">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _clear_cache(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Clear the cache for all loggers in loggerDict
+Called when level changes are made</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

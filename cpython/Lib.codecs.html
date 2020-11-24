@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.codecs : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.codecs.html" class="code" data-type="Module">codecs</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">codecs -- Python Codec Registry, API and helpers.
+
+
+Written by Marc-Andre Lemburg (mal@lemburg.com).
+
+(c) Copyright CNRI, All Rights Reserved. NO WARRANTY.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id504">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.codecs.html#BOM_UTF8" class="code" data-type="Variable">BOM_UTF8</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.codecs.html#BOM_LE" class="code" data-type="Variable">BOM_LE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.codecs.html#BOM_UTF16_LE" class="code" data-type="Variable">BOM_UTF16_LE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.codecs.html#BOM_BE" class="code" data-type="Variable">BOM_BE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.codecs.html#BOM_UTF16_BE" class="code" data-type="Variable">BOM_UTF16_BE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.codecs.html#BOM_UTF32_LE" class="code" data-type="Variable">BOM_UTF32_LE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.codecs.html#BOM_UTF32_BE" class="code" data-type="Variable">BOM_UTF32_BE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.codecs.CodecInfo.html" class="code" data-type="Class">CodecInfo</a></td>
+    <td><span>Codec details when looking up the codec registry</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.codecs.Codec.html" class="code" data-type="Class">Codec</a></td>
+    <td><span>Defines the interface for stateless encoders/decoders.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.codecs.IncrementalEncoder.html" class="code" data-type="Class">IncrementalEncoder</a></td>
+    <td><span>An IncrementalEncoder encodes an input in multiple steps. The input can be passed piece by piece to the encode() method. The IncrementalEncoder remembers the state of the encoding process between calls to encode().</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.codecs.BufferedIncrementalEncoder.html" class="code" data-type="Class">BufferedIncrementalEncoder</a></td>
+    <td><span>This subclass of IncrementalEncoder can be used as the baseclass for an incremental encoder if the encoder must keep some of the output in a buffer between calls to encode().</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.codecs.IncrementalDecoder.html" class="code" data-type="Class">IncrementalDecoder</a></td>
+    <td><span>An IncrementalDecoder decodes an input in multiple steps. The input can be passed piece by piece to the decode() method. The IncrementalDecoder remembers the state of the decoding process between calls to decode().</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.codecs.BufferedIncrementalDecoder.html" class="code" data-type="Class">BufferedIncrementalDecoder</a></td>
+    <td><span>This subclass of IncrementalDecoder can be used as the baseclass for an incremental decoder if the decoder must be able to handle incomplete byte sequences.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.codecs.StreamWriter.html" class="code" data-type="Class">StreamWriter</a></td>
+    <td><span class="undocumented">No class0/2 instance variables docstring; , 5/8 methods documented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.codecs.StreamReader.html" class="code" data-type="Class">StreamReader</a></td>
+    <td><span class="undocumented">No class0/6 instance variables docstring; , 8/12 methods documented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.codecs.StreamReaderWriter.html" class="code" data-type="Class">StreamReaderWriter</a></td>
+    <td><span>StreamReaderWriter instances allow wrapping streams which work in both read and write modes.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.codecs.StreamRecoder.html" class="code" data-type="Class">StreamRecoder</a></td>
+    <td><span>StreamRecoder instances translate data from one encoding to another.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.codecs.html#open" class="code" data-type="Function">open</a></td>
+    <td><span>Open an encoded file using the given mode and return a wrapped version providing transparent encoding/decoding.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.codecs.html#EncodedFile" class="code" data-type="Function">EncodedFile</a></td>
+    <td><span>Return a wrapped version of file which provides transparent encoding translation.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.codecs.html#getencoder" class="code" data-type="Function">getencoder</a></td>
+    <td><span>Lookup up the codec for the given encoding and return its encoder function.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.codecs.html#getdecoder" class="code" data-type="Function">getdecoder</a></td>
+    <td><span>Lookup up the codec for the given encoding and return its decoder function.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.codecs.html#getincrementalencoder" class="code" data-type="Function">getincrementalencoder</a></td>
+    <td><span>Lookup up the codec for the given encoding and return its IncrementalEncoder class or factory function.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.codecs.html#getincrementaldecoder" class="code" data-type="Function">getincrementaldecoder</a></td>
+    <td><span>Lookup up the codec for the given encoding and return its IncrementalDecoder class or factory function.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.codecs.html#getreader" class="code" data-type="Function">getreader</a></td>
+    <td><span>Lookup up the codec for the given encoding and return its StreamReader class or factory function.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.codecs.html#getwriter" class="code" data-type="Function">getwriter</a></td>
+    <td><span>Lookup up the codec for the given encoding and return its StreamWriter class or factory function.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.codecs.html#iterencode" class="code" data-type="Function">iterencode</a></td>
+    <td><span>Encoding iterator.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.codecs.html#iterdecode" class="code" data-type="Function">iterdecode</a></td>
+    <td><span>Decoding iterator.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.codecs.html#make_identity_dict" class="code" data-type="Function">make_identity_dict</a></td>
+    <td><span>make_identity_dict(rng) -&gt; dict</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.codecs.html#make_encoding_map" class="code" data-type="Function">make_encoding_map</a></td>
+    <td><span>Creates an encoding map from a decoding map.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.codecs.html#strict_errors" class="code" data-type="Variable">strict_errors</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.codecs.html#ignore_errors" class="code" data-type="Variable">ignore_errors</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.codecs.html#replace_errors" class="code" data-type="Variable">replace_errors</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.codecs.html#xmlcharrefreplace_errors" class="code" data-type="Variable">xmlcharrefreplace_errors</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.codecs.html#backslashreplace_errors" class="code" data-type="Variable">backslashreplace_errors</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.codecs.html#namereplace_errors" class="code" data-type="Variable">namereplace_errors</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.codecs.html#_false" class="code" data-type="Variable">_false</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.codecs.BOM_UTF8">
+    
+  </a>
+  <a name="BOM_UTF8">
+    
+  </a>
+  <div class="functionHeader">
+    BOM_UTF8 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.codecs.BOM_LE">
+    
+  </a>
+  <a name="BOM_LE">
+    
+  </a>
+  <div class="functionHeader">
+    BOM_LE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.codecs.BOM_UTF16_LE">
+    
+  </a>
+  <a name="BOM_UTF16_LE">
+    
+  </a>
+  <div class="functionHeader">
+    BOM_UTF16_LE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.codecs.BOM_BE">
+    
+  </a>
+  <a name="BOM_BE">
+    
+  </a>
+  <div class="functionHeader">
+    BOM_BE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.codecs.BOM_UTF16_BE">
+    
+  </a>
+  <a name="BOM_UTF16_BE">
+    
+  </a>
+  <div class="functionHeader">
+    BOM_UTF16_BE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.codecs.BOM_UTF32_LE">
+    
+  </a>
+  <a name="BOM_UTF32_LE">
+    
+  </a>
+  <div class="functionHeader">
+    BOM_UTF32_LE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.codecs.BOM_UTF32_BE">
+    
+  </a>
+  <a name="BOM_UTF32_BE">
+    
+  </a>
+  <div class="functionHeader">
+    BOM_UTF32_BE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.codecs.open">
+    
+  </a>
+  <a name="open">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    open(filename, mode="""r""", encoding=None, errors="""strict""", buffering=(-1)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Open an encoded file using the given mode and return
+a wrapped version providing transparent encoding/decoding.
+
+Note: The wrapped version will only accept the object format
+defined by the codecs, i.e. Unicode objects for most builtin
+codecs. Output is also codec dependent and will usually be
+Unicode as well.
+
+Underlying encoded files are always opened in binary mode.
+The default file mode is 'r', meaning to open the file in read mode.
+
+encoding specifies the encoding which is to be used for the
+file.
+
+errors may be given to define the error handling. It defaults
+to 'strict' which causes ValueErrors to be raised in case an
+encoding error occurs.
+
+buffering has the same meaning as for the builtin open() API.
+It defaults to -1 which means that the default buffer size will
+be used.
+
+The returned wrapped file object provides an extra attribute
+.encoding which allows querying the used encoding. This
+attribute is only available if an encoding was specified as
+parameter.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.codecs.EncodedFile">
+    
+  </a>
+  <a name="EncodedFile">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    EncodedFile(file, data_encoding, file_encoding=None, errors="""strict"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a wrapped version of file which provides transparent
+encoding translation.
+
+Data written to the wrapped file is decoded according
+to the given data_encoding and then encoded to the underlying
+file using file_encoding. The intermediate data type
+will usually be Unicode but depends on the specified codecs.
+
+Bytes read from the file are decoded using file_encoding and then
+passed back to the caller encoded using data_encoding.
+
+If file_encoding is not given, it defaults to data_encoding.
+
+errors may be given to define the error handling. It defaults
+to 'strict' which causes ValueErrors to be raised in case an
+encoding error occurs.
+
+The returned wrapped file object provides two extra attributes
+.data_encoding and .file_encoding which reflect the given
+parameters of the same name. The attributes can be used for
+introspection by Python programs.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.codecs.getencoder">
+    
+  </a>
+  <a name="getencoder">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getencoder(encoding):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Lookup up the codec for the given encoding and return
+its encoder function.
+
+Raises a LookupError in case the encoding cannot be found.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.codecs.getdecoder">
+    
+  </a>
+  <a name="getdecoder">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getdecoder(encoding):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Lookup up the codec for the given encoding and return
+its decoder function.
+
+Raises a LookupError in case the encoding cannot be found.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.codecs.getincrementalencoder">
+    
+  </a>
+  <a name="getincrementalencoder">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getincrementalencoder(encoding):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Lookup up the codec for the given encoding and return
+its IncrementalEncoder class or factory function.
+
+Raises a LookupError in case the encoding cannot be found
+or the codecs doesn't provide an incremental encoder.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.codecs.getincrementaldecoder">
+    
+  </a>
+  <a name="getincrementaldecoder">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getincrementaldecoder(encoding):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Lookup up the codec for the given encoding and return
+its IncrementalDecoder class or factory function.
+
+Raises a LookupError in case the encoding cannot be found
+or the codecs doesn't provide an incremental decoder.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.codecs.getreader">
+    
+  </a>
+  <a name="getreader">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getreader(encoding):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Lookup up the codec for the given encoding and return
+its StreamReader class or factory function.
+
+Raises a LookupError in case the encoding cannot be found.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.codecs.getwriter">
+    
+  </a>
+  <a name="getwriter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getwriter(encoding):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Lookup up the codec for the given encoding and return
+its StreamWriter class or factory function.
+
+Raises a LookupError in case the encoding cannot be found.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.codecs.iterencode">
+    
+  </a>
+  <a name="iterencode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    iterencode(iterator, encoding, errors="""strict""", **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Encoding iterator.
+
+Encodes the input strings from the iterator using an IncrementalEncoder.
+
+errors and kwargs are passed through to the IncrementalEncoder
+constructor.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.codecs.iterdecode">
+    
+  </a>
+  <a name="iterdecode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    iterdecode(iterator, encoding, errors="""strict""", **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Decoding iterator.
+
+Decodes the input strings from the iterator using an IncrementalDecoder.
+
+errors and kwargs are passed through to the IncrementalDecoder
+constructor.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.codecs.make_identity_dict">
+    
+  </a>
+  <a name="make_identity_dict">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    make_identity_dict(rng):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">make_identity_dict(rng) -&gt; dict
+
+Return a dictionary where elements of the rng sequence are
+mapped to themselves.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.codecs.make_encoding_map">
+    
+  </a>
+  <a name="make_encoding_map">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    make_encoding_map(decoding_map):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Creates an encoding map from a decoding map.
+
+If a target mapping in the decoding map occurs multiple
+times, then that target is mapped to None (undefined mapping),
+causing an exception when encountered by the charmap codec
+during translation.
+
+One example where this happens is cp875.py which decodes
+multiple character to \u001a.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.codecs.strict_errors">
+    
+  </a>
+  <a name="strict_errors">
+    
+  </a>
+  <div class="functionHeader">
+    strict_errors =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.codecs.ignore_errors">
+    
+  </a>
+  <a name="ignore_errors">
+    
+  </a>
+  <div class="functionHeader">
+    ignore_errors =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.codecs.replace_errors">
+    
+  </a>
+  <a name="replace_errors">
+    
+  </a>
+  <div class="functionHeader">
+    replace_errors =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.codecs.xmlcharrefreplace_errors">
+    
+  </a>
+  <a name="xmlcharrefreplace_errors">
+    
+  </a>
+  <div class="functionHeader">
+    xmlcharrefreplace_errors =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.codecs.backslashreplace_errors">
+    
+  </a>
+  <a name="backslashreplace_errors">
+    
+  </a>
+  <div class="functionHeader">
+    backslashreplace_errors =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.codecs.namereplace_errors">
+    
+  </a>
+  <a name="namereplace_errors">
+    
+  </a>
+  <div class="functionHeader">
+    namereplace_errors =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.codecs._false">
+    
+  </a>
+  <a name="_false">
+    
+  </a>
+  <div class="functionHeader">
+    _false =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

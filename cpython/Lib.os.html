@@ -1,0 +1,1508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.os : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.os.html" class="code" data-type="Module">os</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">OS routines for NT or Posix depending on what system we're on.
+
+This exports:
+  - all functions from posix or nt, e.g. unlink, stat, etc.
+  - os.path is either posixpath or ntpath
+  - os.name is either 'posix' or 'nt'
+  - os.curdir is a string representing the current directory (always '.')
+  - os.pardir is a string representing the parent directory (always '..')
+  - os.sep is the (or a most common) pathname separator ('/' or '\\')
+  - os.extsep is the extension separator (always '.')
+  - os.altsep is the alternate pathname separator (None or '/')
+  - os.pathsep is the component separator used in $PATH etc
+  - os.linesep is the line separator in text files ('\r' or '\n' or '\r\n')
+  - os.defpath is the default search path for executables
+  - os.devnull is the file path of the null device ('/dev/null', etc.)
+
+Programs that import and use 'os' stand a better chance of being
+portable between different platforms.  Of course, they must then
+only use functions that are defined by all platforms (e.g., unlink
+and opendir), and leave all pathname manipulation to os.path
+(e.g., split and join).</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3333">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.os.html#GenericAlias" class="code" data-type="Variable">GenericAlias</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.os.html#name" class="code" data-type="Variable">name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.os.html#linesep" class="code" data-type="Variable">linesep</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.os.html#SEEK_SET" class="code" data-type="Variable">SEEK_SET</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.os.html#SEEK_CUR" class="code" data-type="Variable">SEEK_CUR</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.os.html#SEEK_END" class="code" data-type="Variable">SEEK_END</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#makedirs" class="code" data-type="Function">makedirs</a></td>
+    <td><span>makedirs(name [, mode=0o777][, exist_ok=False])</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#removedirs" class="code" data-type="Function">removedirs</a></td>
+    <td><span>removedirs(name)</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#renames" class="code" data-type="Function">renames</a></td>
+    <td><span>renames(old, new)</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#walk" class="code" data-type="Function">walk</a></td>
+    <td><span>Directory tree generator.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#fwalk" class="code" data-type="Function">fwalk</a></td>
+    <td><span>Directory tree generator.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#execl" class="code" data-type="Function">execl</a></td>
+    <td><span>execl(file, *args)</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#execle" class="code" data-type="Function">execle</a></td>
+    <td><span>execle(file, *args, env)</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#execlp" class="code" data-type="Function">execlp</a></td>
+    <td><span>execlp(file, *args)</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#execlpe" class="code" data-type="Function">execlpe</a></td>
+    <td><span>execlpe(file, *args, env)</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#execvp" class="code" data-type="Function">execvp</a></td>
+    <td><span>execvp(file, args)</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#execvpe" class="code" data-type="Function">execvpe</a></td>
+    <td><span>execvpe(file, args, env)</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#get_exec_path" class="code" data-type="Function">get_exec_path</a></td>
+    <td><span>Returns the sequence of directories that will be searched for the named executable (similar to a shell) when launching a process.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.os.html#environ" class="code" data-type="Variable">environ</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#getenv" class="code" data-type="Function">getenv</a></td>
+    <td><span>Get an environment variable, return None if it doesn't exist. The optional second argument can specify an alternate default. key, default and the result are str.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.os.html#supports_bytes_environ" class="code" data-type="Variable">supports_bytes_environ</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.os.html#environb" class="code" data-type="Variable">environb</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#getenvb" class="code" data-type="Function">getenvb</a></td>
+    <td><span>Get an environment variable, return None if it doesn't exist. The optional second argument can specify an alternate default. key, default and the result are bytes.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.os.html#fsencode" class="code" data-type="Variable">fsencode</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.os.html#fsdecode" class="code" data-type="Variable">fsdecode</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.os.html#P_WAIT" class="code" data-type="Variable">P_WAIT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.os.html#P_NOWAIT" class="code" data-type="Variable">P_NOWAIT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.os.html#P_NOWAITO" class="code" data-type="Variable">P_NOWAITO</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#spawnv" class="code" data-type="Function">spawnv</a></td>
+    <td><span>spawnv(mode, file, args) -&gt; integer</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#spawnve" class="code" data-type="Function">spawnve</a></td>
+    <td><span>spawnve(mode, file, args, env) -&gt; integer</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#spawnvp" class="code" data-type="Function">spawnvp</a></td>
+    <td><span>spawnvp(mode, file, args) -&gt; integer</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#spawnvpe" class="code" data-type="Function">spawnvpe</a></td>
+    <td><span>spawnvpe(mode, file, args, env) -&gt; integer</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#spawnl" class="code" data-type="Function">spawnl</a></td>
+    <td><span>spawnl(mode, file, *args) -&gt; integer</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#spawnle" class="code" data-type="Function">spawnle</a></td>
+    <td><span>spawnle(mode, file, *args, env) -&gt; integer</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#spawnlp" class="code" data-type="Function">spawnlp</a></td>
+    <td><span>spawnlp(mode, file, *args) -&gt; integer</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#spawnlpe" class="code" data-type="Function">spawnlpe</a></td>
+    <td><span>spawnlpe(mode, file, *args, env) -&gt; integer</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#popen" class="code" data-type="Function">popen</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#fdopen" class="code" data-type="Function">fdopen</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.os.PathLike.html" class="code" data-type="Class">PathLike</a></td>
+    <td><span>Abstract base class for implementing the file system path protocol.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#add_dll_directory" class="code" data-type="Function">add_dll_directory</a></td>
+    <td><span>Add a path to the DLL search path.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#_exists" class="code" data-type="Function">_exists</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#_get_exports_list" class="code" data-type="Function">_get_exports_list</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.os.html#_globals" class="code" data-type="Variable">_globals</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#_add" class="code" data-type="Function">_add</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.os.html#_set" class="code" data-type="Variable">_set</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#_walk" class="code" data-type="Function">_walk</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#_fwalk" class="code" data-type="Function">_fwalk</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#_execvpe" class="code" data-type="Function">_execvpe</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.os._Environ.html" class="code" data-type="Class">_Environ</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#_createenviron" class="code" data-type="Function">_createenviron</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#_check_bytes" class="code" data-type="Function">_check_bytes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#_fscodec" class="code" data-type="Function">_fscodec</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#_spawnvef" class="code" data-type="Function">_spawnvef</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.os._wrap_close.html" class="code" data-type="Class">_wrap_close</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.os.html#_fspath" class="code" data-type="Function">_fspath</a></td>
+    <td><span>Return the path representation of a path-like object.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.os._AddedDllDirectory.html" class="code" data-type="Class">_AddedDllDirectory</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.os.GenericAlias">
+    
+  </a>
+  <a name="GenericAlias">
+    
+  </a>
+  <div class="functionHeader">
+    GenericAlias =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.os._exists">
+    
+  </a>
+  <a name="_exists">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _exists(name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.os._get_exports_list">
+    
+  </a>
+  <a name="_get_exports_list">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_exports_list(module):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.os.name">
+    
+  </a>
+  <a name="name">
+    
+  </a>
+  <div class="functionHeader">
+    name =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.os.linesep">
+    
+  </a>
+  <a name="linesep">
+    
+  </a>
+  <div class="functionHeader">
+    linesep =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.os._globals">
+    
+  </a>
+  <a name="_globals">
+    
+  </a>
+  <div class="functionHeader">
+    _globals =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.os._add">
+    
+  </a>
+  <a name="_add">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _add(str, fn):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.os._set">
+    
+  </a>
+  <a name="_set">
+    
+  </a>
+  <div class="functionHeader">
+    _set =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.os.SEEK_SET">
+    
+  </a>
+  <a name="SEEK_SET">
+    
+  </a>
+  <div class="functionHeader">
+    SEEK_SET =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.os.SEEK_CUR">
+    
+  </a>
+  <a name="SEEK_CUR">
+    
+  </a>
+  <div class="functionHeader">
+    SEEK_CUR =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.os.SEEK_END">
+    
+  </a>
+  <a name="SEEK_END">
+    
+  </a>
+  <div class="functionHeader">
+    SEEK_END =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.os.makedirs">
+    
+  </a>
+  <a name="makedirs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    makedirs(name, mode=511, exist_ok=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">makedirs(name [, mode=0o777][, exist_ok=False])
+
+Super-mkdir; create a leaf directory and all intermediate ones.  Works like
+mkdir, except that any intermediate path segment (not just the rightmost)
+will be created if it does not exist. If the target directory already
+exists, raise an OSError if exist_ok is False. Otherwise no exception is
+raised.  This is recursive.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.os.removedirs">
+    
+  </a>
+  <a name="removedirs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    removedirs(name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">removedirs(name)
+
+Super-rmdir; remove a leaf directory and all empty intermediate
+ones.  Works like rmdir except that, if the leaf directory is
+successfully removed, directories corresponding to rightmost path
+segments will be pruned away until either the whole path is
+consumed or an error occurs.  Errors during this latter phase are
+ignored -- they generally mean that a directory was not empty.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.os.renames">
+    
+  </a>
+  <a name="renames">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    renames(old, new):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">renames(old, new)
+
+Super-rename; create directories as necessary and delete any left
+empty.  Works like rename, except creation of any intermediate
+directories needed to make the new pathname good is attempted
+first.  After the rename, directories corresponding to rightmost
+path segments of the old name will be pruned until either the
+whole path is consumed or a nonempty directory is found.
+
+Note: this function can fail with the new directory structure made
+if you lack permissions needed to unlink the leaf directory or
+file.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.os.walk">
+    
+  </a>
+  <a name="walk">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    walk(top, topdown=(True), onerror=None, followlinks=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Directory tree generator.
+
+For each directory in the directory tree rooted at top (including top
+itself, but excluding '.' and '..'), yields a 3-tuple
+
+    dirpath, dirnames, filenames
+
+dirpath is a string, the path to the directory.  dirnames is a list of
+the names of the subdirectories in dirpath (excluding '.' and '..').
+filenames is a list of the names of the non-directory files in dirpath.
+Note that the names in the lists are just names, with no path components.
+To get a full path (which begins with top) to a file or directory in
+dirpath, do os.path.join(dirpath, name).
+
+If optional arg 'topdown' is true or not specified, the triple for a
+directory is generated before the triples for any of its subdirectories
+(directories are generated top down).  If topdown is false, the triple
+for a directory is generated after the triples for all of its
+subdirectories (directories are generated bottom up).
+
+When topdown is true, the caller can modify the dirnames list in-place
+(e.g., via del or slice assignment), and walk will only recurse into the
+subdirectories whose names remain in dirnames; this can be used to prune the
+search, or to impose a specific order of visiting.  Modifying dirnames when
+topdown is false has no effect on the behavior of os.walk(), since the
+directories in dirnames have already been generated by the time dirnames
+itself is generated. No matter the value of topdown, the list of
+subdirectories is retrieved before the tuples for the directory and its
+subdirectories are generated.
+
+By default errors from the os.scandir() call are ignored.  If
+optional arg 'onerror' is specified, it should be a function; it
+will be called with one argument, an OSError instance.  It can
+report the error to continue with the walk, or raise the exception
+to abort the walk.  Note that the filename is available as the
+filename attribute of the exception object.
+
+By default, os.walk does not follow symbolic links to subdirectories on
+systems that support them.  In order to get this functionality, set the
+optional argument 'followlinks' to true.
+
+Caution:  if you pass a relative pathname for top, don't change the
+current working directory between resumptions of walk.  walk never
+changes the current directory, and assumes that the client doesn't
+either.
+
+Example:
+
+import os
+from os.path import join, getsize
+for root, dirs, files in os.walk('python/Lib/email'):
+    print(root, "consumes", end="")
+    print(sum(getsize(join(root, name)) for name in files), end="")
+    print("bytes in", len(files), "non-directory files")
+    if 'CVS' in dirs:
+        dirs.remove('CVS')  # don't visit CVS directories</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.os._walk">
+    
+  </a>
+  <a name="_walk">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _walk(top, topdown, onerror, followlinks):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.os.fwalk">
+    
+  </a>
+  <a name="fwalk">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    fwalk(top=""".""", topdown=(True), onerror=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Directory tree generator.
+
+This behaves exactly like walk(), except that it yields a 4-tuple
+
+    dirpath, dirnames, filenames, dirfd
+
+`dirpath`, `dirnames` and `filenames` are identical to walk() output,
+and `dirfd` is a file descriptor referring to the directory `dirpath`.
+
+The advantage of fwalk() over walk() is that it's safe against symlink
+races (when follow_symlinks is False).
+
+If dir_fd is not None, it should be a file descriptor open to a directory,
+  and top should be relative; top will then be relative to that directory.
+  (dir_fd is always supported for fwalk.)
+
+Caution:
+Since fwalk() yields file descriptors, those are only valid until the
+next iteration step, so you should dup() them if you want to keep them
+for a longer period.
+
+Example:
+
+import os
+for root, dirs, files, rootfd in os.fwalk('python/Lib/email'):
+    print(root, "consumes", end="")
+    print(sum(os.stat(name, dir_fd=rootfd).st_size for name in files),
+          end="")
+    print("bytes in", len(files), "non-directory files")
+    if 'CVS' in dirs:
+        dirs.remove('CVS')  # don't visit CVS directories</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.os._fwalk">
+    
+  </a>
+  <a name="_fwalk">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _fwalk(topfd, toppath, isbytes, topdown, onerror, follow_symlinks):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.os.execl">
+    
+  </a>
+  <a name="execl">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    execl(file, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">execl(file, *args)
+
+Execute the executable file with argument list args, replacing the
+current process. </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.os.execle">
+    
+  </a>
+  <a name="execle">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    execle(file, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">execle(file, *args, env)
+
+Execute the executable file with argument list args and
+environment env, replacing the current process. </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.os.execlp">
+    
+  </a>
+  <a name="execlp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    execlp(file, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">execlp(file, *args)
+
+Execute the executable file (which is searched for along $PATH)
+with argument list args, replacing the current process. </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.os.execlpe">
+    
+  </a>
+  <a name="execlpe">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    execlpe(file, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">execlpe(file, *args, env)
+
+Execute the executable file (which is searched for along $PATH)
+with argument list args and environment env, replacing the current
+process. </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.os.execvp">
+    
+  </a>
+  <a name="execvp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    execvp(file, args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">execvp(file, args)
+
+Execute the executable file (which is searched for along $PATH)
+with argument list args, replacing the current process.
+args may be a list or tuple of strings. </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.os.execvpe">
+    
+  </a>
+  <a name="execvpe">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    execvpe(file, args, env):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">execvpe(file, args, env)
+
+Execute the executable file (which is searched for along $PATH)
+with argument list args and environment env, replacing the
+current process.
+args may be a list or tuple of strings. </p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.os._execvpe">
+    
+  </a>
+  <a name="_execvpe">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _execvpe(file, args, env=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.os.get_exec_path">
+    
+  </a>
+  <a name="get_exec_path">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_exec_path(env=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns the sequence of directories that will be searched for the
+named executable (similar to a shell) when launching a process.
+
+*env* must be an environment variable dict or None.  If *env* is None,
+os.environ will be used.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.os._createenviron">
+    
+  </a>
+  <a name="_createenviron">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _createenviron():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.os.environ">
+    
+  </a>
+  <a name="environ">
+    
+  </a>
+  <div class="functionHeader">
+    environ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.os.getenv">
+    
+  </a>
+  <a name="getenv">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getenv(key, default=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get an environment variable, return None if it doesn't exist.
+The optional second argument can specify an alternate default.
+key, default and the result are str.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.os.supports_bytes_environ">
+    
+  </a>
+  <a name="supports_bytes_environ">
+    
+  </a>
+  <div class="functionHeader">
+    supports_bytes_environ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.os._check_bytes">
+    
+  </a>
+  <a name="_check_bytes">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _check_bytes(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.os.environb">
+    
+  </a>
+  <a name="environb">
+    
+  </a>
+  <div class="functionHeader">
+    environb =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.os.getenvb">
+    
+  </a>
+  <a name="getenvb">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getenvb(key, default=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get an environment variable, return None if it doesn't exist.
+The optional second argument can specify an alternate default.
+key, default and the result are bytes.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.os._fscodec">
+    
+  </a>
+  <a name="_fscodec">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _fscodec():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.os.fsencode">
+    
+  </a>
+  <a name="fsencode">
+    
+  </a>
+  <div class="functionHeader">
+    fsencode =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.os.fsdecode">
+    
+  </a>
+  <a name="fsdecode">
+    
+  </a>
+  <div class="functionHeader">
+    fsdecode =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.os.P_WAIT">
+    
+  </a>
+  <a name="P_WAIT">
+    
+  </a>
+  <div class="functionHeader">
+    P_WAIT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.os.P_NOWAIT">
+    
+  </a>
+  <a name="P_NOWAIT">
+    
+  </a>
+  <div class="functionHeader">
+    P_NOWAIT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.os.P_NOWAITO">
+    
+  </a>
+  <a name="P_NOWAITO">
+    
+  </a>
+  <div class="functionHeader">
+    P_NOWAITO =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.os._spawnvef">
+    
+  </a>
+  <a name="_spawnvef">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _spawnvef(mode, file, args, env, func):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.os.spawnv">
+    
+  </a>
+  <a name="spawnv">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    spawnv(mode, file, args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">spawnv(mode, file, args) -&gt; integer
+
+Execute file with arguments from args in a subprocess.
+If mode == P_NOWAIT return the pid of the process.
+If mode == P_WAIT return the process's exit code if it exits normally;
+otherwise return -SIG, where SIG is the signal that killed it. </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.os.spawnve">
+    
+  </a>
+  <a name="spawnve">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    spawnve(mode, file, args, env):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">spawnve(mode, file, args, env) -&gt; integer
+
+Execute file with arguments from args in a subprocess with the
+specified environment.
+If mode == P_NOWAIT return the pid of the process.
+If mode == P_WAIT return the process's exit code if it exits normally;
+otherwise return -SIG, where SIG is the signal that killed it. </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.os.spawnvp">
+    
+  </a>
+  <a name="spawnvp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    spawnvp(mode, file, args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">spawnvp(mode, file, args) -&gt; integer
+
+Execute file (which is looked for along $PATH) with arguments from
+args in a subprocess.
+If mode == P_NOWAIT return the pid of the process.
+If mode == P_WAIT return the process's exit code if it exits normally;
+otherwise return -SIG, where SIG is the signal that killed it. </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.os.spawnvpe">
+    
+  </a>
+  <a name="spawnvpe">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    spawnvpe(mode, file, args, env):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">spawnvpe(mode, file, args, env) -&gt; integer
+
+Execute file (which is looked for along $PATH) with arguments from
+args in a subprocess with the supplied environment.
+If mode == P_NOWAIT return the pid of the process.
+If mode == P_WAIT return the process's exit code if it exits normally;
+otherwise return -SIG, where SIG is the signal that killed it. </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.os.spawnl">
+    
+  </a>
+  <a name="spawnl">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    spawnl(mode, file, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">spawnl(mode, file, *args) -&gt; integer
+
+Execute file with arguments from args in a subprocess.
+If mode == P_NOWAIT return the pid of the process.
+If mode == P_WAIT return the process's exit code if it exits normally;
+otherwise return -SIG, where SIG is the signal that killed it. </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.os.spawnle">
+    
+  </a>
+  <a name="spawnle">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    spawnle(mode, file, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">spawnle(mode, file, *args, env) -&gt; integer
+
+Execute file with arguments from args in a subprocess with the
+supplied environment.
+If mode == P_NOWAIT return the pid of the process.
+If mode == P_WAIT return the process's exit code if it exits normally;
+otherwise return -SIG, where SIG is the signal that killed it. </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.os.spawnlp">
+    
+  </a>
+  <a name="spawnlp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    spawnlp(mode, file, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">spawnlp(mode, file, *args) -&gt; integer
+
+Execute file (which is looked for along $PATH) with arguments from
+args in a subprocess with the supplied environment.
+If mode == P_NOWAIT return the pid of the process.
+If mode == P_WAIT return the process's exit code if it exits normally;
+otherwise return -SIG, where SIG is the signal that killed it. </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.os.spawnlpe">
+    
+  </a>
+  <a name="spawnlpe">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    spawnlpe(mode, file, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">spawnlpe(mode, file, *args, env) -&gt; integer
+
+Execute file (which is looked for along $PATH) with arguments from
+args in a subprocess with the supplied environment.
+If mode == P_NOWAIT return the pid of the process.
+If mode == P_WAIT return the process's exit code if it exits normally;
+otherwise return -SIG, where SIG is the signal that killed it. </p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.os.popen">
+    
+  </a>
+  <a name="popen">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    popen(cmd, mode="""r""", buffering=(-1)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.os.fdopen">
+    
+  </a>
+  <a name="fdopen">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    fdopen(fd, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.os._fspath">
+    
+  </a>
+  <a name="_fspath">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _fspath(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the path representation of a path-like object.
+
+If str or bytes is passed in, it is returned unchanged. Otherwise the
+os.PathLike interface is used to get the path representation. If the
+path representation is not str or bytes, TypeError is raised. If the
+provided path is not str, bytes, or os.PathLike, TypeError is raised.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.os.add_dll_directory">
+    
+  </a>
+  <a name="add_dll_directory">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    add_dll_directory(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Add a path to the DLL search path.
+
+This search path is used when resolving dependencies for imported
+extension modules (the module itself is resolved through sys.path),
+and also by ctypes.
+
+Remove the directory by calling close() on the returned object or
+using it in a with statement.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

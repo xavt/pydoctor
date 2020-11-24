@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.importlib.metadata.Distribution : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.importlib.html" class="code" data-type="Package">importlib</a>.<a href="Lib.importlib.metadata.html" class="code" data-type="Module">metadata</a>.<a href="Lib.importlib.metadata.Distribution.html" class="code" data-type="Class">Distribution</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.importlib.metadata.Distribution:</code></p><p>Known subclasses: <a href="Lib.importlib.metadata.PathDistribution.html" class="code" data-type="Class">Lib.importlib.metadata.PathDistribution</a></p>
+        <p><a href="classIndex.html#Lib.importlib.metadata.Distribution">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">A Python distribution package.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2589">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib.metadata.Distribution.html#read_text" class="code" data-type="Method">read_text</a></td>
+    <td><span>Attempt to load metadata file given by the name.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib.metadata.Distribution.html#locate_file" class="code" data-type="Method">locate_file</a></td>
+    <td><span>Given a path to a file in this distribution, return a path to it.</span></td>
+  </tr><tr class="classmethod">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.importlib.metadata.Distribution.html#from_name" class="code" data-type="Class Method">from_name</a></td>
+    <td><span>Return the Distribution for the given package name.</span></td>
+  </tr><tr class="classmethod">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.importlib.metadata.Distribution.html#discover" class="code" data-type="Class Method">discover</a></td>
+    <td><span>Return an iterable of Distribution objects for all packages.</span></td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><a href="Lib.importlib.metadata.Distribution.html#at" class="code" data-type="Static Method">at</a></td>
+    <td><span>Return a Distribution for the indicated metadata path</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib.metadata.Distribution.html#metadata" class="code" data-type="Method">metadata</a></td>
+    <td><span>Return the parsed metadata for this Distribution.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib.metadata.Distribution.html#version" class="code" data-type="Method">version</a></td>
+    <td><span>Return the 'Version' metadata for the distribution package.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib.metadata.Distribution.html#entry_points" class="code" data-type="Method">entry_points</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib.metadata.Distribution.html#files" class="code" data-type="Method">files</a></td>
+    <td><span>Files in this distribution.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib.metadata.Distribution.html#requires" class="code" data-type="Method">requires</a></td>
+    <td><span>Generated requirements specified for this Distribution</span></td>
+  </tr><tr class="staticmethod private">
+    
+    <td>Static Method</td>
+    <td><a href="Lib.importlib.metadata.Distribution.html#_discover_resolvers" class="code" data-type="Static Method">_discover_resolvers</a></td>
+    <td><span>Search the meta_path for resolvers.</span></td>
+  </tr><tr class="classmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.importlib.metadata.Distribution.html#_local" class="code" data-type="Class Method">_local</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib.metadata.Distribution.html#_read_files_distinfo" class="code" data-type="Method">_read_files_distinfo</a></td>
+    <td><span>Read the lines of RECORD</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib.metadata.Distribution.html#_read_files_egginfo" class="code" data-type="Method">_read_files_egginfo</a></td>
+    <td><span>SOURCES.txt might contain literal commas, so wrap each line in quotes.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib.metadata.Distribution.html#_read_dist_info_reqs" class="code" data-type="Method">_read_dist_info_reqs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.importlib.metadata.Distribution.html#_read_egg_info_reqs" class="code" data-type="Method">_read_egg_info_reqs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.importlib.metadata.Distribution.html#_deps_from_requires_text" class="code" data-type="Class Method">_deps_from_requires_text</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="staticmethod private">
+    
+    <td>Static Method</td>
+    <td><a href="Lib.importlib.metadata.Distribution.html#_read_sections" class="code" data-type="Static Method">_read_sections</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="staticmethod private">
+    
+    <td>Static Method</td>
+    <td><a href="Lib.importlib.metadata.Distribution.html#_convert_egg_info_reqs_to_simple_reqs" class="code" data-type="Static Method">_convert_egg_info_reqs_to_simple_reqs</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.importlib.metadata.Distribution.read_text">
+    
+  </a>
+  <a name="read_text">
+    
+  </a>
+  <div class="functionHeader">
+    @abc.abstractmethod<br />
+    def
+    read_text(self, filename):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.importlib.metadata.PathDistribution.html" class="code" data-type="Class">Lib.importlib.metadata.PathDistribution</a></div>
+    
+    <div><p class="pre">Attempt to load metadata file given by the name.
+
+:param filename: The name of the file in the distribution info.
+:return: The text if found, otherwise None.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.importlib.metadata.Distribution.locate_file">
+    
+  </a>
+  <a name="locate_file">
+    
+  </a>
+  <div class="functionHeader">
+    @abc.abstractmethod<br />
+    def
+    locate_file(self, path):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.importlib.metadata.PathDistribution.html" class="code" data-type="Class">Lib.importlib.metadata.PathDistribution</a></div>
+    
+    <div><p class="pre">Given a path to a file in this distribution, return a path
+to it.</p></div>
+  </div>
+</div><div class="baseclassmethod">
+  
+  <a name="Lib.importlib.metadata.Distribution.from_name">
+    
+  </a>
+  <a name="from_name">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    from_name(cls, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the Distribution for the given package name.
+
+:param name: The name of the distribution package to search for.
+:return: The Distribution instance (or subclass thereof) for the named
+    package, if found.
+:raises PackageNotFoundError: When the named package's distribution
+    metadata cannot be found.</p></div>
+  </div>
+</div><div class="baseclassmethod">
+  
+  <a name="Lib.importlib.metadata.Distribution.discover">
+    
+  </a>
+  <a name="discover">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    discover(cls, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return an iterable of Distribution objects for all packages.
+
+Pass a ``context`` or pass keyword arguments for constructing
+a context.
+
+:context: A ``DistributionFinder.Context`` object.
+:return: Iterable of Distribution objects for all packages.</p></div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  <a name="Lib.importlib.metadata.Distribution.at">
+    
+  </a>
+  <a name="at">
+    
+  </a>
+  <div class="functionHeader">
+    @staticmethod<br />
+    def
+    at(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a Distribution for the indicated metadata path
+
+:param path: a string or path-like object
+:return: a concrete Distribution instance for the path</p></div>
+  </div>
+</div><div class="basestaticmethod private">
+  
+  <a name="Lib.importlib.metadata.Distribution._discover_resolvers">
+    
+  </a>
+  <a name="_discover_resolvers">
+    
+  </a>
+  <div class="functionHeader">
+    @staticmethod<br />
+    def
+    _discover_resolvers():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Search the meta_path for resolvers.</p></div>
+  </div>
+</div><div class="baseclassmethod private">
+  
+  <a name="Lib.importlib.metadata.Distribution._local">
+    
+  </a>
+  <a name="_local">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    _local(cls, root="""."""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.importlib.metadata.Distribution.metadata">
+    
+  </a>
+  <a name="metadata">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    metadata(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the parsed metadata for this Distribution.
+
+The returned object will have keys that name the various bits of
+metadata.  See PEP 566 for details.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.importlib.metadata.Distribution.version">
+    
+  </a>
+  <a name="version">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    version(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the 'Version' metadata for the distribution package.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.importlib.metadata.Distribution.entry_points">
+    
+  </a>
+  <a name="entry_points">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    entry_points(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.importlib.metadata.Distribution.files">
+    
+  </a>
+  <a name="files">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    files(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Files in this distribution.
+
+:return: List of PackagePath for this distribution or None
+
+Result is `None` if the metadata file that enumerates files
+(i.e. RECORD for dist-info or SOURCES.txt for egg-info) is
+missing.
+Result may be empty if the metadata exists but is empty.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.importlib.metadata.Distribution._read_files_distinfo">
+    
+  </a>
+  <a name="_read_files_distinfo">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _read_files_distinfo(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Read the lines of RECORD</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.importlib.metadata.Distribution._read_files_egginfo">
+    
+  </a>
+  <a name="_read_files_egginfo">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _read_files_egginfo(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">SOURCES.txt might contain literal commas, so wrap each line
+in quotes.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.importlib.metadata.Distribution.requires">
+    
+  </a>
+  <a name="requires">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    requires(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Generated requirements specified for this Distribution</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.importlib.metadata.Distribution._read_dist_info_reqs">
+    
+  </a>
+  <a name="_read_dist_info_reqs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _read_dist_info_reqs(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.importlib.metadata.Distribution._read_egg_info_reqs">
+    
+  </a>
+  <a name="_read_egg_info_reqs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _read_egg_info_reqs(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassmethod private">
+  
+  <a name="Lib.importlib.metadata.Distribution._deps_from_requires_text">
+    
+  </a>
+  <a name="_deps_from_requires_text">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    _deps_from_requires_text(cls, source):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basestaticmethod private">
+  
+  <a name="Lib.importlib.metadata.Distribution._read_sections">
+    
+  </a>
+  <a name="_read_sections">
+    
+  </a>
+  <div class="functionHeader">
+    @staticmethod<br />
+    def
+    _read_sections(lines):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basestaticmethod private">
+  
+  <a name="Lib.importlib.metadata.Distribution._convert_egg_info_reqs_to_simple_reqs">
+    
+  </a>
+  <a name="_convert_egg_info_reqs_to_simple_reqs">
+    
+  </a>
+  <div class="functionHeader">
+    @staticmethod<br />
+    def
+    _convert_egg_info_reqs_to_simple_reqs(sections):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Historically, setuptools would solicit and store 'extra'
+requirements, including those with environment markers,
+in separate sections. More modern tools expect each
+dependency to be defined separately, with any relevant
+extras and environment markers attached directly to that
+requirement. This method converts the former to the
+latter. See _test_deps_from_requires_text for an example.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

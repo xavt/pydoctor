@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.symtable.Symbol : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.symtable.html" class="code" data-type="Module">symtable</a>.<a href="Lib.symtable.Symbol.html" class="code" data-type="Class">Symbol</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.symtable.Symbol:</code></p>
+        <p><a href="classIndex.html#Lib.symtable.Symbol">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div class="undocumented">Undocumented</div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3687">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.symtable.Symbol.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.symtable.Symbol.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.symtable.Symbol.html#get_name" class="code" data-type="Method">get_name</a></td>
+    <td><span>Return a name of a symbol.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.symtable.Symbol.html#is_referenced" class="code" data-type="Method">is_referenced</a></td>
+    <td><span>Return *True* if the symbol is used in its block.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.symtable.Symbol.html#is_parameter" class="code" data-type="Method">is_parameter</a></td>
+    <td><span>Return *True* if the symbol is a parameter.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.symtable.Symbol.html#is_global" class="code" data-type="Method">is_global</a></td>
+    <td><span>Return *True* if the sysmbol is global.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.symtable.Symbol.html#is_nonlocal" class="code" data-type="Method">is_nonlocal</a></td>
+    <td><span>Return *True* if the symbol is nonlocal.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.symtable.Symbol.html#is_declared_global" class="code" data-type="Method">is_declared_global</a></td>
+    <td><span>Return *True* if the symbol is declared global with a global statement.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.symtable.Symbol.html#is_local" class="code" data-type="Method">is_local</a></td>
+    <td><span>Return *True* if the symbol is local.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.symtable.Symbol.html#is_annotated" class="code" data-type="Method">is_annotated</a></td>
+    <td><span>Return *True* if the symbol is annotated.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.symtable.Symbol.html#is_free" class="code" data-type="Method">is_free</a></td>
+    <td><span>Return *True* if a referenced symbol is not assigned to.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.symtable.Symbol.html#is_imported" class="code" data-type="Method">is_imported</a></td>
+    <td><span>Return *True* if the symbol is created from an import statement.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.symtable.Symbol.html#is_assigned" class="code" data-type="Method">is_assigned</a></td>
+    <td><span>Return *True* if a symbol is assigned to.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.symtable.Symbol.html#is_namespace" class="code" data-type="Method">is_namespace</a></td>
+    <td><span>Returns *True* if name binding introduces new namespace.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.symtable.Symbol.html#get_namespaces" class="code" data-type="Method">get_namespaces</a></td>
+    <td><span>Return a list of namespaces bound to this name</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.symtable.Symbol.html#get_namespace" class="code" data-type="Method">get_namespace</a></td>
+    <td><span>Return the single namespace bound to this name.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.symtable.Symbol.html#__name" class="code" data-type="Instance Variable">__name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.symtable.Symbol.html#__flags" class="code" data-type="Instance Variable">__flags</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.symtable.Symbol.html#__scope" class="code" data-type="Instance Variable">__scope</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.symtable.Symbol.html#__namespaces" class="code" data-type="Instance Variable">__namespaces</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.symtable.Symbol.html#__module_scope" class="code" data-type="Instance Variable">__module_scope</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.symtable.Symbol.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, name, flags, namespaces=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.symtable.Symbol.__name">
+    
+  </a>
+  <a name="__name">
+    
+  </a>
+  <div class="functionHeader">
+    __name =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.symtable.Symbol.__flags">
+    
+  </a>
+  <a name="__flags">
+    
+  </a>
+  <div class="functionHeader">
+    __flags =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.symtable.Symbol.__scope">
+    
+  </a>
+  <a name="__scope">
+    
+  </a>
+  <div class="functionHeader">
+    __scope =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.symtable.Symbol.__namespaces">
+    
+  </a>
+  <a name="__namespaces">
+    
+  </a>
+  <div class="functionHeader">
+    __namespaces =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.symtable.Symbol.__module_scope">
+    
+  </a>
+  <a name="__module_scope">
+    
+  </a>
+  <div class="functionHeader">
+    __module_scope =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.symtable.Symbol.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __repr__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.symtable.Symbol.get_name">
+    
+  </a>
+  <a name="get_name">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_name(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a name of a symbol.
+        </p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.symtable.Symbol.is_referenced">
+    
+  </a>
+  <a name="is_referenced">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_referenced(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return *True* if the symbol is used in
+its block.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.symtable.Symbol.is_parameter">
+    
+  </a>
+  <a name="is_parameter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_parameter(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return *True* if the symbol is a parameter.
+        </p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.symtable.Symbol.is_global">
+    
+  </a>
+  <a name="is_global">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_global(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return *True* if the sysmbol is global.
+        </p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.symtable.Symbol.is_nonlocal">
+    
+  </a>
+  <a name="is_nonlocal">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_nonlocal(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return *True* if the symbol is nonlocal.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.symtable.Symbol.is_declared_global">
+    
+  </a>
+  <a name="is_declared_global">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_declared_global(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return *True* if the symbol is declared global
+with a global statement.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.symtable.Symbol.is_local">
+    
+  </a>
+  <a name="is_local">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_local(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return *True* if the symbol is local.
+        </p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.symtable.Symbol.is_annotated">
+    
+  </a>
+  <a name="is_annotated">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_annotated(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return *True* if the symbol is annotated.
+        </p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.symtable.Symbol.is_free">
+    
+  </a>
+  <a name="is_free">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_free(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return *True* if a referenced symbol is
+not assigned to.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.symtable.Symbol.is_imported">
+    
+  </a>
+  <a name="is_imported">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_imported(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return *True* if the symbol is created from
+an import statement.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.symtable.Symbol.is_assigned">
+    
+  </a>
+  <a name="is_assigned">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_assigned(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return *True* if a symbol is assigned to.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.symtable.Symbol.is_namespace">
+    
+  </a>
+  <a name="is_namespace">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_namespace(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns *True* if name binding introduces new namespace.
+
+If the name is used as the target of a function or class
+statement, this will be true.
+
+Note that a single name can be bound to multiple objects.  If
+is_namespace() is true, the name may also be bound to other
+objects, like an int or list, that does not introduce a new
+namespace.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.symtable.Symbol.get_namespaces">
+    
+  </a>
+  <a name="get_namespaces">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_namespaces(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a list of namespaces bound to this name</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.symtable.Symbol.get_namespace">
+    
+  </a>
+  <a name="get_namespace">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_namespace(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the single namespace bound to this name.
+
+Raises ValueError if the name is bound to multiple namespaces.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

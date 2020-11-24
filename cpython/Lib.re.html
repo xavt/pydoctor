@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.re : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.re.html" class="code" data-type="Module">re</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Support for regular expressions (RE).
+
+This module provides regular expression matching operations similar to
+those found in Perl.  It supports both 8-bit and Unicode strings; both
+the pattern and the strings being processed can contain null bytes and
+characters outside the US ASCII range.
+
+Regular expressions can contain both special and ordinary characters.
+Most ordinary characters, like "A", "a", or "0", are the simplest
+regular expressions; they simply match themselves.  You can
+concatenate ordinary characters, so last matches the string 'last'.
+
+The special characters are:
+    "."      Matches any character except a newline.
+    "^"      Matches the start of the string.
+    "$"      Matches the end of the string or just before the newline at
+             the end of the string.
+    "*"      Matches 0 or more (greedy) repetitions of the preceding RE.
+             Greedy means that it will match as many repetitions as possible.
+    "+"      Matches 1 or more (greedy) repetitions of the preceding RE.
+    "?"      Matches 0 or 1 (greedy) of the preceding RE.
+    *?,+?,?? Non-greedy versions of the previous three special characters.
+    {m,n}    Matches from m to n repetitions of the preceding RE.
+    {m,n}?   Non-greedy version of the above.
+    "\\"     Either escapes special characters or signals a special sequence.
+    []       Indicates a set of characters.
+             A "^" as the first character indicates a complementing set.
+    "|"      A|B, creates an RE that will match either A or B.
+    (...)    Matches the RE inside the parentheses.
+             The contents can be retrieved or matched later in the string.
+    (?aiLmsux) The letters set the corresponding flags defined below.
+    (?:...)  Non-grouping version of regular parentheses.
+    (?P&lt;name&gt;...) The substring matched by the group is accessible by name.
+    (?P=name)     Matches the text matched earlier by the group named name.
+    (?#...)  A comment; ignored.
+    (?=...)  Matches if ... matches next, but doesn't consume the string.
+    (?!...)  Matches if ... doesn't match next.
+    (?&lt;=...) Matches if preceded by ... (must be fixed length).
+    (?&lt;!...) Matches if not preceded by ... (must be fixed length).
+    (?(id/name)yes|no) Matches yes pattern if the group with id/name matched,
+                       the (optional) no pattern otherwise.
+
+The special sequences consist of "\\" and a character from the list
+below.  If the ordinary character is not on the list, then the
+resulting RE will match the second character.
+    \number  Matches the contents of the group of the same number.
+    \A       Matches only at the start of the string.
+    \Z       Matches only at the end of the string.
+    \b       Matches the empty string, but only at the start or end of a word.
+    \B       Matches the empty string, but not at the start or end of a word.
+    \d       Matches any decimal digit; equivalent to the set [0-9] in
+             bytes patterns or string patterns with the ASCII flag.
+             In string patterns without the ASCII flag, it will match the whole
+             range of Unicode digits.
+    \D       Matches any non-digit character; equivalent to [^\d].
+    \s       Matches any whitespace character; equivalent to [ \t\n\r\f\v] in
+             bytes patterns or string patterns with the ASCII flag.
+             In string patterns without the ASCII flag, it will match the whole
+             range of Unicode whitespace characters.
+    \S       Matches any non-whitespace character; equivalent to [^\s].
+    \w       Matches any alphanumeric character; equivalent to [a-zA-Z0-9_]
+             in bytes patterns or string patterns with the ASCII flag.
+             In string patterns without the ASCII flag, it will match the
+             range of Unicode alphanumeric characters (letters plus digits
+             plus underscore).
+             With LOCALE, it will match the set [0-9_] plus characters defined
+             as letters for the current locale.
+    \W       Matches the complement of \w.
+    \\       Matches a literal backslash.
+
+This module exports the following functions:
+    match     Match a regular expression pattern to the beginning of a string.
+    fullmatch Match a regular expression pattern to all of a string.
+    search    Search a string for the presence of a pattern.
+    sub       Substitute occurrences of a pattern found in a string.
+    subn      Same as sub, but also return the number of substitutions made.
+    split     Split a string by the occurrences of a pattern.
+    findall   Find all occurrences of a pattern in a string.
+    finditer  Return an iterator yielding a Match object for each match.
+    compile   Compile a pattern into a Pattern object.
+    purge     Clear the regular expression cache.
+    escape    Backslash all non-alphanumerics in a string.
+
+Each function other than purge and escape can take an optional 'flags' argument
+consisting of one or more of the following module constants, joined by "|".
+A, L, and U are mutually exclusive.
+    A  ASCII       For string patterns, make \w, \W, \b, \B, \d, \D
+                   match the corresponding ASCII character categories
+                   (rather than the whole Unicode categories, which is the
+                   default).
+                   For bytes patterns, this flag is the only available
+                   behaviour and needn't be specified.
+    I  IGNORECASE  Perform case-insensitive matching.
+    L  LOCALE      Make \w, \W, \b, \B, dependent on the current locale.
+    M  MULTILINE   "^" matches the beginning of lines (after a newline)
+                   as well as the string.
+                   "$" matches the end of lines (before a newline) as well
+                   as the end of the string.
+    S  DOTALL      "." matches any character at all, including the newline.
+    X  VERBOSE     Ignore whitespace and comments for nicer looking RE's.
+    U  UNICODE     For compatibility only. Ignored for string patterns (it
+                   is the default), and forbidden for bytes patterns.
+
+This module also defines an exception 'error'.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3459">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.re.html#__version__" class="code" data-type="Variable">__version__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.re.RegexFlag.html" class="code" data-type="Class">RegexFlag</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.re.html#match" class="code" data-type="Function">match</a></td>
+    <td><span>Try to apply the pattern at the start of the string, returning a Match object, or None if no match was found.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.re.html#fullmatch" class="code" data-type="Function">fullmatch</a></td>
+    <td><span>Try to apply the pattern to all of the string, returning a Match object, or None if no match was found.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.re.html#search" class="code" data-type="Function">search</a></td>
+    <td><span>Scan through string looking for a match to the pattern, returning a Match object, or None if no match was found.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.re.html#sub" class="code" data-type="Function">sub</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.re.html#subn" class="code" data-type="Function">subn</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.re.html#split" class="code" data-type="Function">split</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.re.html#findall" class="code" data-type="Function">findall</a></td>
+    <td><span>Return a list of all non-overlapping matches in the string.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.re.html#finditer" class="code" data-type="Function">finditer</a></td>
+    <td><span>Return an iterator over all non-overlapping matches in the string.  For each match, the iterator returns a Match object.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.re.html#compile" class="code" data-type="Function">compile</a></td>
+    <td><span>Compile a regular expression pattern, returning a Pattern object.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.re.html#purge" class="code" data-type="Function">purge</a></td>
+    <td><span>Clear the regular expression caches</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.re.html#template" class="code" data-type="Function">template</a></td>
+    <td><span>Compile a template pattern, returning a Pattern object</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.re.html#escape" class="code" data-type="Function">escape</a></td>
+    <td><span>Escape special characters in a string.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.re.html#Pattern" class="code" data-type="Variable">Pattern</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.re.html#Match" class="code" data-type="Variable">Match</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.re.Scanner.html" class="code" data-type="Class">Scanner</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.re.html#_locale" class="code" data-type="Variable">_locale</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.re.html#_special_chars_map" class="code" data-type="Variable">_special_chars_map</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.re.html#_cache" class="code" data-type="Variable">_cache</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.re.html#_MAXCACHE" class="code" data-type="Variable">_MAXCACHE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.re.html#_compile" class="code" data-type="Function">_compile</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.re.html#_compile_repl" class="code" data-type="Function">_compile_repl</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.re.html#_expand" class="code" data-type="Function">_expand</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.re.html#_subx" class="code" data-type="Function">_subx</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.re.html#_pickle" class="code" data-type="Function">_pickle</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable private">
+  
+  <a name="Lib.re._locale">
+    
+  </a>
+  <a name="_locale">
+    
+  </a>
+  <div class="functionHeader">
+    _locale =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.re.__version__">
+    
+  </a>
+  <a name="__version__">
+    
+  </a>
+  <div class="functionHeader">
+    __version__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.re.match">
+    
+  </a>
+  <a name="match">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    match(pattern, string, flags=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Try to apply the pattern at the start of the string, returning
+a Match object, or None if no match was found.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.re.fullmatch">
+    
+  </a>
+  <a name="fullmatch">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    fullmatch(pattern, string, flags=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Try to apply the pattern to all of the string, returning
+a Match object, or None if no match was found.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.re.search">
+    
+  </a>
+  <a name="search">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    search(pattern, string, flags=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Scan through string looking for a match to the pattern, returning
+a Match object, or None if no match was found.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.re.sub">
+    
+  </a>
+  <a name="sub">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    sub(pattern, repl, string, count=0, flags=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the string obtained by replacing the leftmost
+non-overlapping occurrences of the pattern in string by the
+replacement repl.  repl can be either a string or a callable;
+if a string, backslash escapes in it are processed.  If it is
+a callable, it's passed the Match object and must return
+a replacement string to be used.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.re.subn">
+    
+  </a>
+  <a name="subn">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    subn(pattern, repl, string, count=0, flags=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a 2-tuple containing (new_string, number).
+new_string is the string obtained by replacing the leftmost
+non-overlapping occurrences of the pattern in the source
+string by the replacement repl.  number is the number of
+substitutions that were made. repl can be either a string or a
+callable; if a string, backslash escapes in it are processed.
+If it is a callable, it's passed the Match object and must
+return a replacement string to be used.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.re.split">
+    
+  </a>
+  <a name="split">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    split(pattern, string, maxsplit=0, flags=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Split the source string by the occurrences of the pattern,
+returning a list containing the resulting substrings.  If
+capturing parentheses are used in pattern, then the text of all
+groups in the pattern are also returned as part of the resulting
+list.  If maxsplit is nonzero, at most maxsplit splits occur,
+and the remainder of the string is returned as the final element
+of the list.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.re.findall">
+    
+  </a>
+  <a name="findall">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    findall(pattern, string, flags=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a list of all non-overlapping matches in the string.
+
+If one or more capturing groups are present in the pattern, return
+a list of groups; this will be a list of tuples if the pattern
+has more than one group.
+
+Empty matches are included in the result.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.re.finditer">
+    
+  </a>
+  <a name="finditer">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    finditer(pattern, string, flags=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return an iterator over all non-overlapping matches in the
+string.  For each match, the iterator returns a Match object.
+
+Empty matches are included in the result.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.re.compile">
+    
+  </a>
+  <a name="compile">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    compile(pattern, flags=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Compile a regular expression pattern, returning a Pattern object.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.re.purge">
+    
+  </a>
+  <a name="purge">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    purge():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Clear the regular expression caches</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.re.template">
+    
+  </a>
+  <a name="template">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    template(pattern, flags=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Compile a template pattern, returning a Pattern object</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.re._special_chars_map">
+    
+  </a>
+  <a name="_special_chars_map">
+    
+  </a>
+  <div class="functionHeader">
+    _special_chars_map =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.re.escape">
+    
+  </a>
+  <a name="escape">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    escape(pattern):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Escape special characters in a string.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.re.Pattern">
+    
+  </a>
+  <a name="Pattern">
+    
+  </a>
+  <div class="functionHeader">
+    Pattern =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.re.Match">
+    
+  </a>
+  <a name="Match">
+    
+  </a>
+  <div class="functionHeader">
+    Match =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.re._cache">
+    
+  </a>
+  <a name="_cache">
+    
+  </a>
+  <div class="functionHeader">
+    _cache =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.re._MAXCACHE">
+    
+  </a>
+  <a name="_MAXCACHE">
+    
+  </a>
+  <div class="functionHeader">
+    _MAXCACHE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.re._compile">
+    
+  </a>
+  <a name="_compile">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _compile(pattern, flags):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.re._compile_repl">
+    
+  </a>
+  <a name="_compile_repl">
+    
+  </a>
+  <div class="functionHeader">
+    @functools.lru_cache(_MAXCACHE)<br />
+    def
+    _compile_repl(repl, pattern):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.re._expand">
+    
+  </a>
+  <a name="_expand">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _expand(pattern, match, template):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.re._subx">
+    
+  </a>
+  <a name="_subx">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _subx(pattern, template):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.re._pickle">
+    
+  </a>
+  <a name="_pickle">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _pickle(p):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

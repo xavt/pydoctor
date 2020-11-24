@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.datetime : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.datetime.html" class="code" data-type="Module">datetime</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Concrete date/time and related types.
+
+See http://www.iana.org/time-zones/repository/tz-link.html for
+time zone and DST data sources.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id882">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.datetime.html#MINYEAR" class="code" data-type="Variable">MINYEAR</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.datetime.html#MAXYEAR" class="code" data-type="Variable">MAXYEAR</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.datetime.html#dbm" class="code" data-type="Variable">dbm</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.datetime.timedelta.html" class="code" data-type="Class">timedelta</a></td>
+    <td><span>Represent the difference between two datetime objects.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.datetime.date.html" class="code" data-type="Class">date</a></td>
+    <td><span>Concrete date type.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.datetime.tzinfo.html" class="code" data-type="Class">tzinfo</a></td>
+    <td><span>Abstract base class for time zone info classes.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.datetime.IsoCalendarDate.html" class="code" data-type="Class">IsoCalendarDate</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.datetime.time.html" class="code" data-type="Class">time</a></td>
+    <td><span>Time with time zone.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.datetime.datetime.html" class="code" data-type="Class">datetime</a></td>
+    <td><span>datetime(year, month, day[, hour[, minute[, second[, microsecond[,tzinfo]]]]])</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.datetime.timezone.html" class="code" data-type="Class">timezone</a></td>
+    <td><span class="undocumented">No class0/1 class methods docstring; , 0/4 class variables docstring; , 0/2 instance variables docstring; , 2/10 methods docstring; , 0/1 static methods documented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.datetime.html#_cmp" class="code" data-type="Function">_cmp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.datetime.html#_MAXORDINAL" class="code" data-type="Variable">_MAXORDINAL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.datetime.html#_DAYS_IN_MONTH" class="code" data-type="Variable">_DAYS_IN_MONTH</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.datetime.html#_DAYS_BEFORE_MONTH" class="code" data-type="Variable">_DAYS_BEFORE_MONTH</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.datetime.html#_is_leap" class="code" data-type="Function">_is_leap</a></td>
+    <td><span>year -&gt; 1 if leap year, else 0.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.datetime.html#_days_before_year" class="code" data-type="Function">_days_before_year</a></td>
+    <td><span>year -&gt; number of days before January 1st of year.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.datetime.html#_days_in_month" class="code" data-type="Function">_days_in_month</a></td>
+    <td><span>year, month -&gt; number of days in that month in that year.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.datetime.html#_days_before_month" class="code" data-type="Function">_days_before_month</a></td>
+    <td><span>year, month -&gt; number of days in year preceding first day of month.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.datetime.html#_ymd2ord" class="code" data-type="Function">_ymd2ord</a></td>
+    <td><span>year, month, day -&gt; ordinal, considering 01-Jan-0001 as day 1.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.datetime.html#_DI400Y" class="code" data-type="Variable">_DI400Y</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.datetime.html#_DI100Y" class="code" data-type="Variable">_DI100Y</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.datetime.html#_DI4Y" class="code" data-type="Variable">_DI4Y</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.datetime.html#_ord2ymd" class="code" data-type="Function">_ord2ymd</a></td>
+    <td><span>ordinal -&gt; (year, month, day), considering 01-Jan-0001 as day 1.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.datetime.html#_MONTHNAMES" class="code" data-type="Variable">_MONTHNAMES</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.datetime.html#_DAYNAMES" class="code" data-type="Variable">_DAYNAMES</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.datetime.html#_build_struct_time" class="code" data-type="Function">_build_struct_time</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.datetime.html#_format_time" class="code" data-type="Function">_format_time</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.datetime.html#_format_offset" class="code" data-type="Function">_format_offset</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.datetime.html#_wrap_strftime" class="code" data-type="Function">_wrap_strftime</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.datetime.html#_parse_isoformat_date" class="code" data-type="Function">_parse_isoformat_date</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.datetime.html#_parse_hh_mm_ss_ff" class="code" data-type="Function">_parse_hh_mm_ss_ff</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.datetime.html#_parse_isoformat_time" class="code" data-type="Function">_parse_isoformat_time</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.datetime.html#_check_tzname" class="code" data-type="Function">_check_tzname</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.datetime.html#_check_utc_offset" class="code" data-type="Function">_check_utc_offset</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.datetime.html#_check_date_fields" class="code" data-type="Function">_check_date_fields</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.datetime.html#_check_time_fields" class="code" data-type="Function">_check_time_fields</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.datetime.html#_check_tzinfo_arg" class="code" data-type="Function">_check_tzinfo_arg</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.datetime.html#_cmperror" class="code" data-type="Function">_cmperror</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.datetime.html#_divide_and_round" class="code" data-type="Function">_divide_and_round</a></td>
+    <td><span>divide a by b and round result to the nearest integer</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.datetime.html#_isoweek1monday" class="code" data-type="Function">_isoweek1monday</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.datetime.html#_EPOCH" class="code" data-type="Variable">_EPOCH</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction private">
+  
+  <a name="Lib.datetime._cmp">
+    
+  </a>
+  <a name="_cmp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _cmp(x, y):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.datetime.MINYEAR">
+    
+  </a>
+  <a name="MINYEAR">
+    
+  </a>
+  <div class="functionHeader">
+    MINYEAR =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.datetime.MAXYEAR">
+    
+  </a>
+  <a name="MAXYEAR">
+    
+  </a>
+  <div class="functionHeader">
+    MAXYEAR =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.datetime._MAXORDINAL">
+    
+  </a>
+  <a name="_MAXORDINAL">
+    
+  </a>
+  <div class="functionHeader">
+    _MAXORDINAL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.datetime._DAYS_IN_MONTH">
+    
+  </a>
+  <a name="_DAYS_IN_MONTH">
+    
+  </a>
+  <div class="functionHeader">
+    _DAYS_IN_MONTH =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[int]</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.datetime._DAYS_BEFORE_MONTH">
+    
+  </a>
+  <a name="_DAYS_BEFORE_MONTH">
+    
+  </a>
+  <div class="functionHeader">
+    _DAYS_BEFORE_MONTH =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[int]</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.datetime.dbm">
+    
+  </a>
+  <a name="dbm">
+    
+  </a>
+  <div class="functionHeader">
+    dbm =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.datetime._is_leap">
+    
+  </a>
+  <a name="_is_leap">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _is_leap(year):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">year -&gt; 1 if leap year, else 0.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.datetime._days_before_year">
+    
+  </a>
+  <a name="_days_before_year">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _days_before_year(year):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">year -&gt; number of days before January 1st of year.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.datetime._days_in_month">
+    
+  </a>
+  <a name="_days_in_month">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _days_in_month(year, month):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">year, month -&gt; number of days in that month in that year.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.datetime._days_before_month">
+    
+  </a>
+  <a name="_days_before_month">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _days_before_month(year, month):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">year, month -&gt; number of days in year preceding first day of month.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.datetime._ymd2ord">
+    
+  </a>
+  <a name="_ymd2ord">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _ymd2ord(year, month, day):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">year, month, day -&gt; ordinal, considering 01-Jan-0001 as day 1.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.datetime._DI400Y">
+    
+  </a>
+  <a name="_DI400Y">
+    
+  </a>
+  <div class="functionHeader">
+    _DI400Y =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.datetime._DI100Y">
+    
+  </a>
+  <a name="_DI100Y">
+    
+  </a>
+  <div class="functionHeader">
+    _DI100Y =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.datetime._DI4Y">
+    
+  </a>
+  <a name="_DI4Y">
+    
+  </a>
+  <div class="functionHeader">
+    _DI4Y =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.datetime._ord2ymd">
+    
+  </a>
+  <a name="_ord2ymd">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _ord2ymd(n):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">ordinal -&gt; (year, month, day), considering 01-Jan-0001 as day 1.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.datetime._MONTHNAMES">
+    
+  </a>
+  <a name="_MONTHNAMES">
+    
+  </a>
+  <div class="functionHeader">
+    _MONTHNAMES =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.datetime._DAYNAMES">
+    
+  </a>
+  <a name="_DAYNAMES">
+    
+  </a>
+  <div class="functionHeader">
+    _DAYNAMES =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.datetime._build_struct_time">
+    
+  </a>
+  <a name="_build_struct_time">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _build_struct_time(y, m, d, hh, mm, ss, dstflag):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.datetime._format_time">
+    
+  </a>
+  <a name="_format_time">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _format_time(hh, mm, ss, us, timespec="""auto"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.datetime._format_offset">
+    
+  </a>
+  <a name="_format_offset">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _format_offset(off):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.datetime._wrap_strftime">
+    
+  </a>
+  <a name="_wrap_strftime">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _wrap_strftime(object, format, timetuple):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.datetime._parse_isoformat_date">
+    
+  </a>
+  <a name="_parse_isoformat_date">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _parse_isoformat_date(dtstr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.datetime._parse_hh_mm_ss_ff">
+    
+  </a>
+  <a name="_parse_hh_mm_ss_ff">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _parse_hh_mm_ss_ff(tstr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.datetime._parse_isoformat_time">
+    
+  </a>
+  <a name="_parse_isoformat_time">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _parse_isoformat_time(tstr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.datetime._check_tzname">
+    
+  </a>
+  <a name="_check_tzname">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _check_tzname(name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.datetime._check_utc_offset">
+    
+  </a>
+  <a name="_check_utc_offset">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _check_utc_offset(name, offset):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.datetime._check_date_fields">
+    
+  </a>
+  <a name="_check_date_fields">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _check_date_fields(year, month, day):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.datetime._check_time_fields">
+    
+  </a>
+  <a name="_check_time_fields">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _check_time_fields(hour, minute, second, microsecond, fold):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.datetime._check_tzinfo_arg">
+    
+  </a>
+  <a name="_check_tzinfo_arg">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _check_tzinfo_arg(tz):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.datetime._cmperror">
+    
+  </a>
+  <a name="_cmperror">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _cmperror(x, y):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.datetime._divide_and_round">
+    
+  </a>
+  <a name="_divide_and_round">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _divide_and_round(a, b):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">divide a by b and round result to the nearest integer
+
+When the ratio is exactly half-way between two integers,
+the even integer is returned.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.datetime._isoweek1monday">
+    
+  </a>
+  <a name="_isoweek1monday">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _isoweek1monday(year):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.datetime._EPOCH">
+    
+  </a>
+  <a name="_EPOCH">
+    
+  </a>
+  <div class="functionHeader">
+    _EPOCH =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

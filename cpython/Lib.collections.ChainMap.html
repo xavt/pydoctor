@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.collections.ChainMap : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.collections.html" class="code" data-type="Package">collections</a>.<a href="Lib.collections.ChainMap.html" class="code" data-type="Class">ChainMap</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.collections.ChainMap(<span title="_collections_abc.MutableMapping">_collections_abc.MutableMapping</span>):</code></p>
+        <p><a href="classIndex.html#Lib.collections.ChainMap">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">A ChainMap groups multiple dicts (or other mappings) together
+to create a single, updateable view.
+
+The underlying mappings are stored in a list.  That list is public and can
+be accessed or updated using the *maps* attribute.  There is no other
+state.
+
+Lookups search the underlying mappings successively until a key is found.
+In contrast, writes, updates, and deletions only operate on the first
+mapping.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id530">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.collections.ChainMap.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Initialize a ChainMap by setting *maps* to the given mappings. If no mappings are provided, a single empty dictionary is used.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.collections.ChainMap.html#maps" class="code" data-type="Instance Variable">maps</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.collections.ChainMap.html#__missing__" class="code" data-type="Method">__missing__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.collections.ChainMap.html#__getitem__" class="code" data-type="Method">__getitem__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.collections.ChainMap.html#get" class="code" data-type="Method">get</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.collections.ChainMap.html#__len__" class="code" data-type="Method">__len__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.collections.ChainMap.html#__iter__" class="code" data-type="Method">__iter__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.collections.ChainMap.html#__contains__" class="code" data-type="Method">__contains__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.collections.ChainMap.html#__bool__" class="code" data-type="Method">__bool__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.collections.ChainMap.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classmethod">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.collections.ChainMap.html#fromkeys" class="code" data-type="Class Method">fromkeys</a></td>
+    <td><span>Create a ChainMap with a single dict created from the iterable.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.collections.ChainMap.html#copy" class="code" data-type="Method">copy</a></td>
+    <td><span>New ChainMap or subclass with a new copy of maps[0] and refs to maps[1:]</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.collections.ChainMap.html#new_child" class="code" data-type="Method">new_child</a></td>
+    <td><span>New ChainMap with a new map followed by all previous maps. If no map is provided, an empty dict is used.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.collections.ChainMap.html#parents" class="code" data-type="Method">parents</a></td>
+    <td><span>New ChainMap from maps[1:].</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.collections.ChainMap.html#__setitem__" class="code" data-type="Method">__setitem__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.collections.ChainMap.html#__delitem__" class="code" data-type="Method">__delitem__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.collections.ChainMap.html#popitem" class="code" data-type="Method">popitem</a></td>
+    <td><span>Remove and return an item pair from maps[0]. Raise KeyError is maps[0] is empty.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.collections.ChainMap.html#pop" class="code" data-type="Method">pop</a></td>
+    <td><span>Remove *key* from maps[0] and return its value. Raise KeyError if *key* not in maps[0].</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.collections.ChainMap.html#clear" class="code" data-type="Method">clear</a></td>
+    <td><span>Clear maps[0], leaving maps[1:] intact.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.collections.ChainMap.html#__ior__" class="code" data-type="Method">__ior__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.collections.ChainMap.html#__or__" class="code" data-type="Method">__or__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.collections.ChainMap.html#__ror__" class="code" data-type="Method">__ror__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.collections.ChainMap.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, *maps):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Initialize a ChainMap by setting *maps* to the given mappings.
+If no mappings are provided, a single empty dictionary is used.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.collections.ChainMap.maps">
+    
+  </a>
+  <a name="maps">
+    
+  </a>
+  <div class="functionHeader">
+    maps =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.collections.ChainMap.__missing__">
+    
+  </a>
+  <a name="__missing__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __missing__(self, key):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.collections.ChainMap.__getitem__">
+    
+  </a>
+  <a name="__getitem__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __getitem__(self, key):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.collections.ChainMap.get">
+    
+  </a>
+  <a name="get">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get(self, key, default=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.collections.ChainMap.__len__">
+    
+  </a>
+  <a name="__len__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __len__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.collections.ChainMap.__iter__">
+    
+  </a>
+  <a name="__iter__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __iter__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.collections.ChainMap.__contains__">
+    
+  </a>
+  <a name="__contains__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __contains__(self, key):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.collections.ChainMap.__bool__">
+    
+  </a>
+  <a name="__bool__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __bool__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.collections.ChainMap.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    @_recursive_repr()<br />
+    def
+    __repr__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassmethod">
+  
+  <a name="Lib.collections.ChainMap.fromkeys">
+    
+  </a>
+  <a name="fromkeys">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    fromkeys(cls, iterable, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create a ChainMap with a single dict created from the iterable.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.collections.ChainMap.copy">
+    
+  </a>
+  <a name="copy">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    copy(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">New ChainMap or subclass with a new copy of maps[0] and refs to maps[1:]</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.collections.ChainMap.new_child">
+    
+  </a>
+  <a name="new_child">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    new_child(self, m=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">New ChainMap with a new map followed by all previous maps.
+If no map is provided, an empty dict is used.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.collections.ChainMap.parents">
+    
+  </a>
+  <a name="parents">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    parents(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">New ChainMap from maps[1:].</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.collections.ChainMap.__setitem__">
+    
+  </a>
+  <a name="__setitem__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __setitem__(self, key, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.collections.ChainMap.__delitem__">
+    
+  </a>
+  <a name="__delitem__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __delitem__(self, key):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.collections.ChainMap.popitem">
+    
+  </a>
+  <a name="popitem">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    popitem(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Remove and return an item pair from maps[0]. Raise KeyError is maps[0] is empty.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.collections.ChainMap.pop">
+    
+  </a>
+  <a name="pop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    pop(self, key, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Remove *key* from maps[0] and return its value. Raise KeyError if *key* not in maps[0].</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.collections.ChainMap.clear">
+    
+  </a>
+  <a name="clear">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    clear(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Clear maps[0], leaving maps[1:] intact.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.collections.ChainMap.__ior__">
+    
+  </a>
+  <a name="__ior__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __ior__(self, other):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.collections.ChainMap.__or__">
+    
+  </a>
+  <a name="__or__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __or__(self, other):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.collections.ChainMap.__ror__">
+    
+  </a>
+  <a name="__ror__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __ror__(self, other):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

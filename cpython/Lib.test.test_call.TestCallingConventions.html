@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.test.test_call.TestCallingConventions : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.test.html" class="code" data-type="Package">test</a>.<a href="Lib.test.test_call.html" class="code" data-type="Module">test_call</a>.<a href="Lib.test.test_call.TestCallingConventions.html" class="code" data-type="Class">TestCallingConventions</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.test.test_call.TestCallingConventions(<span title="unittest.TestCase">unittest.TestCase</span>):</code></p><p>Known subclasses: <a href="Lib.test.test_call.TestCallingConventionsClass.html" class="code" data-type="Class">Lib.test.test_call.TestCallingConventionsClass</a>, <a href="Lib.test.test_call.TestCallingConventionsClassInstance.html" class="code" data-type="Class">Lib.test.test_call.TestCallingConventionsClassInstance</a>, <a href="Lib.test.test_call.TestCallingConventionsInstance.html" class="code" data-type="Class">Lib.test.test_call.TestCallingConventionsInstance</a>, <a href="Lib.test.test_call.TestCallingConventionsStatic.html" class="code" data-type="Class">Lib.test.test_call.TestCallingConventionsStatic</a></p>
+        <p><a href="classIndex.html#Lib.test.test_call.TestCallingConventions">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Test calling using various C calling conventions (METH_*) from Python
+
+Subclasses test several kinds of functions (module-level, methods,
+class methods static methods) using these attributes:
+  obj: the object that contains tested functions (as attributes)
+  expected_self: expected "self" argument to the C function
+
+The base class tests module-level functions.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id5163">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_call.TestCallingConventions.html#setUp" class="code" data-type="Method">setUp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_call.TestCallingConventions.html#obj" class="code" data-type="Instance Variable">obj</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.test_call.TestCallingConventions.html#expected_self" class="code" data-type="Instance Variable">expected_self</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_call.TestCallingConventions.html#test_varargs" class="code" data-type="Method">test_varargs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_call.TestCallingConventions.html#test_varargs_ext" class="code" data-type="Method">test_varargs_ext</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_call.TestCallingConventions.html#test_varargs_error_kw" class="code" data-type="Method">test_varargs_error_kw</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_call.TestCallingConventions.html#test_varargs_keywords" class="code" data-type="Method">test_varargs_keywords</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_call.TestCallingConventions.html#test_varargs_keywords_ext" class="code" data-type="Method">test_varargs_keywords_ext</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_call.TestCallingConventions.html#test_o" class="code" data-type="Method">test_o</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_call.TestCallingConventions.html#test_o_ext" class="code" data-type="Method">test_o_ext</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_call.TestCallingConventions.html#test_o_error_no_arg" class="code" data-type="Method">test_o_error_no_arg</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_call.TestCallingConventions.html#test_o_error_two_args" class="code" data-type="Method">test_o_error_two_args</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_call.TestCallingConventions.html#test_o_error_ext" class="code" data-type="Method">test_o_error_ext</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_call.TestCallingConventions.html#test_o_error_kw" class="code" data-type="Method">test_o_error_kw</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_call.TestCallingConventions.html#test_o_error_arg_kw" class="code" data-type="Method">test_o_error_arg_kw</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_call.TestCallingConventions.html#test_noargs" class="code" data-type="Method">test_noargs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_call.TestCallingConventions.html#test_noargs_ext" class="code" data-type="Method">test_noargs_ext</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_call.TestCallingConventions.html#test_noargs_error_arg" class="code" data-type="Method">test_noargs_error_arg</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_call.TestCallingConventions.html#test_noargs_error_arg2" class="code" data-type="Method">test_noargs_error_arg2</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_call.TestCallingConventions.html#test_noargs_error_ext" class="code" data-type="Method">test_noargs_error_ext</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_call.TestCallingConventions.html#test_noargs_error_kw" class="code" data-type="Method">test_noargs_error_kw</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_call.TestCallingConventions.html#test_fastcall" class="code" data-type="Method">test_fastcall</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_call.TestCallingConventions.html#test_fastcall_ext" class="code" data-type="Method">test_fastcall_ext</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_call.TestCallingConventions.html#test_fastcall_error_kw" class="code" data-type="Method">test_fastcall_error_kw</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_call.TestCallingConventions.html#test_fastcall_keywords" class="code" data-type="Method">test_fastcall_keywords</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_call.TestCallingConventions.html#test_fastcall_keywords_ext" class="code" data-type="Method">test_fastcall_keywords_ext</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.test.test_call.TestCallingConventions.setUp">
+    
+  </a>
+  <a name="setUp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setUp(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.test.test_call.TestCallingConventionsClass.html" class="code" data-type="Class">Lib.test.test_call.TestCallingConventionsClass</a>, <a href="Lib.test.test_call.TestCallingConventionsClassInstance.html" class="code" data-type="Class">Lib.test.test_call.TestCallingConventionsClassInstance</a>, <a href="Lib.test.test_call.TestCallingConventionsInstance.html" class="code" data-type="Class">Lib.test.test_call.TestCallingConventionsInstance</a>, <a href="Lib.test.test_call.TestCallingConventionsStatic.html" class="code" data-type="Class">Lib.test.test_call.TestCallingConventionsStatic</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_call.TestCallingConventions.obj">
+    
+  </a>
+  <a name="obj">
+    
+  </a>
+  <div class="functionHeader">
+    obj =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.test.test_call.TestCallingConventionsClass.html" class="code" data-type="Class">Lib.test.test_call.TestCallingConventionsClass</a>, <a href="Lib.test.test_call.TestCallingConventionsClassInstance.html" class="code" data-type="Class">Lib.test.test_call.TestCallingConventionsClassInstance</a>, <a href="Lib.test.test_call.TestCallingConventionsInstance.html" class="code" data-type="Class">Lib.test.test_call.TestCallingConventionsInstance</a>, <a href="Lib.test.test_call.TestCallingConventionsStatic.html" class="code" data-type="Class">Lib.test.test_call.TestCallingConventionsStatic</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.test_call.TestCallingConventions.expected_self">
+    
+  </a>
+  <a name="expected_self">
+    
+  </a>
+  <div class="functionHeader">
+    expected_self =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.test.test_call.TestCallingConventionsClass.html" class="code" data-type="Class">Lib.test.test_call.TestCallingConventionsClass</a>, <a href="Lib.test.test_call.TestCallingConventionsClassInstance.html" class="code" data-type="Class">Lib.test.test_call.TestCallingConventionsClassInstance</a>, <a href="Lib.test.test_call.TestCallingConventionsInstance.html" class="code" data-type="Class">Lib.test.test_call.TestCallingConventionsInstance</a>, <a href="Lib.test.test_call.TestCallingConventionsStatic.html" class="code" data-type="Class">Lib.test.test_call.TestCallingConventionsStatic</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_call.TestCallingConventions.test_varargs">
+    
+  </a>
+  <a name="test_varargs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_varargs(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_call.TestCallingConventions.test_varargs_ext">
+    
+  </a>
+  <a name="test_varargs_ext">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_varargs_ext(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_call.TestCallingConventions.test_varargs_error_kw">
+    
+  </a>
+  <a name="test_varargs_error_kw">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_varargs_error_kw(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_call.TestCallingConventions.test_varargs_keywords">
+    
+  </a>
+  <a name="test_varargs_keywords">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_varargs_keywords(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_call.TestCallingConventions.test_varargs_keywords_ext">
+    
+  </a>
+  <a name="test_varargs_keywords_ext">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_varargs_keywords_ext(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_call.TestCallingConventions.test_o">
+    
+  </a>
+  <a name="test_o">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_o(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_call.TestCallingConventions.test_o_ext">
+    
+  </a>
+  <a name="test_o_ext">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_o_ext(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_call.TestCallingConventions.test_o_error_no_arg">
+    
+  </a>
+  <a name="test_o_error_no_arg">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_o_error_no_arg(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_call.TestCallingConventions.test_o_error_two_args">
+    
+  </a>
+  <a name="test_o_error_two_args">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_o_error_two_args(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_call.TestCallingConventions.test_o_error_ext">
+    
+  </a>
+  <a name="test_o_error_ext">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_o_error_ext(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_call.TestCallingConventions.test_o_error_kw">
+    
+  </a>
+  <a name="test_o_error_kw">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_o_error_kw(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_call.TestCallingConventions.test_o_error_arg_kw">
+    
+  </a>
+  <a name="test_o_error_arg_kw">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_o_error_arg_kw(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_call.TestCallingConventions.test_noargs">
+    
+  </a>
+  <a name="test_noargs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_noargs(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_call.TestCallingConventions.test_noargs_ext">
+    
+  </a>
+  <a name="test_noargs_ext">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_noargs_ext(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_call.TestCallingConventions.test_noargs_error_arg">
+    
+  </a>
+  <a name="test_noargs_error_arg">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_noargs_error_arg(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_call.TestCallingConventions.test_noargs_error_arg2">
+    
+  </a>
+  <a name="test_noargs_error_arg2">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_noargs_error_arg2(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_call.TestCallingConventions.test_noargs_error_ext">
+    
+  </a>
+  <a name="test_noargs_error_ext">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_noargs_error_ext(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_call.TestCallingConventions.test_noargs_error_kw">
+    
+  </a>
+  <a name="test_noargs_error_kw">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_noargs_error_kw(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_call.TestCallingConventions.test_fastcall">
+    
+  </a>
+  <a name="test_fastcall">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_fastcall(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_call.TestCallingConventions.test_fastcall_ext">
+    
+  </a>
+  <a name="test_fastcall_ext">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_fastcall_ext(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_call.TestCallingConventions.test_fastcall_error_kw">
+    
+  </a>
+  <a name="test_fastcall_error_kw">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_fastcall_error_kw(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_call.TestCallingConventions.test_fastcall_keywords">
+    
+  </a>
+  <a name="test_fastcall_keywords">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_fastcall_keywords(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_call.TestCallingConventions.test_fastcall_keywords_ext">
+    
+  </a>
+  <a name="test_fastcall_keywords_ext">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_fastcall_keywords_ext(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

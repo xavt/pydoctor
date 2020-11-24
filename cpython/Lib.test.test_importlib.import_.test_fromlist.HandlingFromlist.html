@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.test.html" class="code" data-type="Package">test</a>.<a href="Lib.test.test_importlib.html" class="code" data-type="Package">test_importlib</a>.<a href="Lib.test.test_importlib.import_.html" class="code" data-type="Package">import_</a>.<a href="Lib.test.test_importlib.import_.test_fromlist.html" class="code" data-type="Module">test_fromlist</a>.<a href="Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist.html" class="code" data-type="Class">HandlingFromlist</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist:</code></p>
+        <p><a href="classIndex.html#Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Using fromlist triggers different actions based on what is being asked
+of it.
+
+If fromlist specifies an object on a module, nothing special happens
+[object case]. This is even true if the object does not exist [bad object].
+
+If a package is being imported, then what is listed in fromlist may be
+treated as a module to be imported [module]. And this extends to what is
+contained in __all__ when '*' is imported [using *]. And '*' does not need
+to be the only name in the fromlist [using * with others].</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id6681">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist.html#test_object" class="code" data-type="Method">test_object</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist.html#test_nonexistent_object" class="code" data-type="Method">test_nonexistent_object</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist.html#test_module_from_package" class="code" data-type="Method">test_module_from_package</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist.html#test_nonexistent_from_package" class="code" data-type="Method">test_nonexistent_from_package</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist.html#test_module_from_package_triggers_ModuleNotFoundError" class="code" data-type="Method">test_module_from_package_triggers_ModuleNotFoundError</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist.html#test_empty_string" class="code" data-type="Method">test_empty_string</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist.html#basic_star_test" class="code" data-type="Method">basic_star_test</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist.html#test_using_star" class="code" data-type="Method">test_using_star</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist.html#test_fromlist_as_tuple" class="code" data-type="Method">test_fromlist_as_tuple</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist.html#test_star_with_others" class="code" data-type="Method">test_star_with_others</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist.html#test_nonexistent_in_all" class="code" data-type="Method">test_nonexistent_in_all</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist.html#test_star_in_all" class="code" data-type="Method">test_star_in_all</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist.html#test_invalid_type" class="code" data-type="Method">test_invalid_type</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist.html#test_invalid_type_in_all" class="code" data-type="Method">test_invalid_type_in_all</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist.test_object">
+    
+  </a>
+  <a name="test_object">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_object(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist.test_nonexistent_object">
+    
+  </a>
+  <a name="test_nonexistent_object">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_nonexistent_object(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist.test_module_from_package">
+    
+  </a>
+  <a name="test_module_from_package">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_module_from_package(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist.test_nonexistent_from_package">
+    
+  </a>
+  <a name="test_nonexistent_from_package">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_nonexistent_from_package(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist.test_module_from_package_triggers_ModuleNotFoundError">
+    
+  </a>
+  <a name="test_module_from_package_triggers_ModuleNotFoundError">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_module_from_package_triggers_ModuleNotFoundError(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist.test_empty_string">
+    
+  </a>
+  <a name="test_empty_string">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_empty_string(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist.basic_star_test">
+    
+  </a>
+  <a name="basic_star_test">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    basic_star_test(self, fromlist=['*']):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist.test_using_star">
+    
+  </a>
+  <a name="test_using_star">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_using_star(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist.test_fromlist_as_tuple">
+    
+  </a>
+  <a name="test_fromlist_as_tuple">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_fromlist_as_tuple(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist.test_star_with_others">
+    
+  </a>
+  <a name="test_star_with_others">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_star_with_others(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist.test_nonexistent_in_all">
+    
+  </a>
+  <a name="test_nonexistent_in_all">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_nonexistent_in_all(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist.test_star_in_all">
+    
+  </a>
+  <a name="test_star_in_all">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_star_in_all(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist.test_invalid_type">
+    
+  </a>
+  <a name="test_invalid_type">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_invalid_type(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_importlib.import_.test_fromlist.HandlingFromlist.test_invalid_type_in_all">
+    
+  </a>
+  <a name="test_invalid_type_in_all">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_invalid_type_in_all(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

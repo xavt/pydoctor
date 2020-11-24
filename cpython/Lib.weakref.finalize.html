@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.weakref.finalize : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.weakref.html" class="code" data-type="Module">weakref</a>.<a href="Lib.weakref.finalize.html" class="code" data-type="Class">finalize</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.weakref.finalize:</code></p>
+        <p><a href="classIndex.html#Lib.weakref.finalize">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Class for finalization of weakrefable objects
+
+finalize(obj, func, *args, **kwargs) returns a callable finalizer
+object which will be called when obj is garbage collected. The
+first time the finalizer is called it evaluates func(*arg, **kwargs)
+and returns the result. After this the finalizer is dead, and
+calling it just returns None.
+
+When the program exits any remaining finalizers for which the
+atexit attribute is true will be run in reverse order of creation.
+By default atexit is true.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id11945">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.weakref.finalize.html#__slots__" class="code" data-type="Class Variable">__slots__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.weakref.finalize.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.weakref.finalize.html#__call__" class="code" data-type="Method">__call__</a></td>
+    <td><span>If alive then mark as dead and return func(*args, **kwargs); otherwise return None</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.weakref.finalize.html#detach" class="code" data-type="Method">detach</a></td>
+    <td><span>If alive then mark as dead and return (obj, func, args, kwargs); otherwise return None</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.weakref.finalize.html#peek" class="code" data-type="Method">peek</a></td>
+    <td><span>If alive then return (obj, func, args, kwargs); otherwise return None</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.weakref.finalize.html#alive" class="code" data-type="Method">alive</a></td>
+    <td><span>Whether finalizer is alive</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.weakref.finalize.html#atexit" class="code" data-type="Method">atexit</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.weakref.finalize.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.weakref.finalize.html#_registry" class="code" data-type="Class Variable">_registry</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.weakref.finalize.html#_shutdown" class="code" data-type="Class Variable">_shutdown</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.weakref.finalize.html#_index_iter" class="code" data-type="Class Variable">_index_iter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.weakref.finalize.html#_dirty" class="code" data-type="Class Variable">_dirty</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.weakref.finalize.html#_registered_with_atexit" class="code" data-type="Class Variable">_registered_with_atexit</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.weakref.finalize._Info.html" class="code" data-type="Class">_Info</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.weakref.finalize.html#_select_for_exit" class="code" data-type="Class Method">_select_for_exit</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.weakref.finalize.html#_exitfunc" class="code" data-type="Class Method">_exitfunc</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.weakref.finalize.__slots__">
+    
+  </a>
+  <a name="__slots__">
+    
+  </a>
+  <div class="functionHeader">
+    __slots__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Tuple</code>)
+  </div>
+</div><div class="baseclassvariable private">
+  
+  <a name="Lib.weakref.finalize._registry">
+    
+  </a>
+  <a name="_registry">
+    
+  </a>
+  <div class="functionHeader">
+    _registry =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="baseclassvariable private">
+  
+  <a name="Lib.weakref.finalize._shutdown">
+    
+  </a>
+  <a name="_shutdown">
+    
+  </a>
+  <div class="functionHeader">
+    _shutdown =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseclassvariable private">
+  
+  <a name="Lib.weakref.finalize._index_iter">
+    
+  </a>
+  <a name="_index_iter">
+    
+  </a>
+  <div class="functionHeader">
+    _index_iter =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable private">
+  
+  <a name="Lib.weakref.finalize._dirty">
+    
+  </a>
+  <a name="_dirty">
+    
+  </a>
+  <div class="functionHeader">
+    _dirty =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseclassvariable private">
+  
+  <a name="Lib.weakref.finalize._registered_with_atexit">
+    
+  </a>
+  <a name="_registered_with_atexit">
+    
+  </a>
+  <div class="functionHeader">
+    _registered_with_atexit =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.weakref.finalize.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(*args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.weakref.finalize.__call__">
+    
+  </a>
+  <a name="__call__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __call__(self, _=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">If alive then mark as dead and return func(*args, **kwargs);
+otherwise return None</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.weakref.finalize.detach">
+    
+  </a>
+  <a name="detach">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    detach(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">If alive then mark as dead and return (obj, func, args, kwargs);
+otherwise return None</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.weakref.finalize.peek">
+    
+  </a>
+  <a name="peek">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    peek(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">If alive then return (obj, func, args, kwargs);
+otherwise return None</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.weakref.finalize.alive">
+    
+  </a>
+  <a name="alive">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    alive(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Whether finalizer is alive</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.weakref.finalize.atexit">
+    
+  </a>
+  <a name="atexit">
+    
+  </a>
+  <div class="functionHeader">
+    @atexit.setter<br />
+    def
+    atexit(self, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.weakref.finalize.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __repr__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassmethod private">
+  
+  <a name="Lib.weakref.finalize._select_for_exit">
+    
+  </a>
+  <a name="_select_for_exit">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    _select_for_exit(cls):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassmethod private">
+  
+  <a name="Lib.weakref.finalize._exitfunc">
+    
+  </a>
+  <a name="_exitfunc">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    _exitfunc(cls):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

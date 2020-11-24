@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.idlelib.redirector.WidgetRedirector : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.idlelib.html" class="code" data-type="Package">idlelib</a>.<a href="Lib.idlelib.redirector.html" class="code" data-type="Module">redirector</a>.<a href="Lib.idlelib.redirector.WidgetRedirector.html" class="code" data-type="Class">WidgetRedirector</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.idlelib.redirector.WidgetRedirector:</code></p>
+        <p><a href="classIndex.html#Lib.idlelib.redirector.WidgetRedirector">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Support for redirecting arbitrary widget subcommands.
+
+Some Tk operations don't normally pass through tkinter.  For example, if a
+character is inserted into a Text widget by pressing a key, a default Tk
+binding to the widget's 'insert' operation is activated, and the Tk library
+processes the insert without calling back into tkinter.
+
+Although a binding to &lt;Key&gt; could be made via tkinter, what we really want
+to do is to hook the Tk 'insert' operation itself.  For one thing, we want
+a text.insert call in idle code to have the same effect as a key press.
+
+When a widget is instantiated, a Tcl command is created whose name is the
+same as the pathname widget._w.  This command is used to invoke the various
+widget operations, e.g. insert (for a Text widget). We are going to hook
+this command and provide a facility ('register') to intercept the widget
+operation.  We will also intercept method calls on the tkinter class
+instance that represents the tk widget.
+
+In IDLE, WidgetRedirector is used in Percolator to intercept Text
+commands.  The function being registered provides access to the top
+of a Percolator chain.  At the bottom of the chain is a call to the
+original Tk widget operation.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2427">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.redirector.WidgetRedirector.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Initialize attributes and setup redirection.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.redirector.WidgetRedirector.html#widget" class="code" data-type="Instance Variable">widget</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.redirector.WidgetRedirector.html#tk" class="code" data-type="Instance Variable">tk</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.redirector.WidgetRedirector.html#orig" class="code" data-type="Instance Variable">orig</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.redirector.WidgetRedirector.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.redirector.WidgetRedirector.html#close" class="code" data-type="Method">close</a></td>
+    <td><span>Unregister operations and revert redirection created by .__init__.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.redirector.WidgetRedirector.html#register" class="code" data-type="Method">register</a></td>
+    <td><span>Return OriginalCommand(operation) after registering function.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.redirector.WidgetRedirector.html#unregister" class="code" data-type="Method">unregister</a></td>
+    <td><span>Return the function for the operation, or None.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.redirector.WidgetRedirector.html#dispatch" class="code" data-type="Method">dispatch</a></td>
+    <td><span>Callback from Tcl which runs when the widget is referenced.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.redirector.WidgetRedirector.html#_operations" class="code" data-type="Instance Variable">_operations</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.idlelib.redirector.WidgetRedirector.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, widget):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Initialize attributes and setup redirection.
+
+_operations: dict mapping operation name to new function.
+widget: the widget whose tcl command is to be intercepted.
+tk: widget.tk, a convenience attribute, probably not needed.
+orig: new name of the original tcl command.
+
+Since renaming to orig fails with TclError when orig already
+exists, only one WidgetDirector can exist for a given widget.</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.idlelib.redirector.WidgetRedirector._operations">
+    
+  </a>
+  <a name="_operations">
+    
+  </a>
+  <div class="functionHeader">
+    _operations =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.redirector.WidgetRedirector.widget">
+    
+  </a>
+  <a name="widget">
+    
+  </a>
+  <div class="functionHeader">
+    widget =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.redirector.WidgetRedirector.tk">
+    
+  </a>
+  <a name="tk">
+    
+  </a>
+  <div class="functionHeader">
+    tk =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.redirector.WidgetRedirector.orig">
+    
+  </a>
+  <a name="orig">
+    
+  </a>
+  <div class="functionHeader">
+    orig =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.redirector.WidgetRedirector.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __repr__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.redirector.WidgetRedirector.close">
+    
+  </a>
+  <a name="close">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    close(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Unregister operations and revert redirection created by .__init__.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.redirector.WidgetRedirector.register">
+    
+  </a>
+  <a name="register">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    register(self, operation, function):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return OriginalCommand(operation) after registering function.
+
+Registration adds an operation: function pair to ._operations.
+It also adds a widget function attribute that masks the tkinter
+class instance method.  Method masking operates independently
+from command dispatch.
+
+If a second function is registered for the same operation, the
+first function is replaced in both places.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.redirector.WidgetRedirector.unregister">
+    
+  </a>
+  <a name="unregister">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    unregister(self, operation):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the function for the operation, or None.
+
+Deleting the instance attribute unmasks the class attribute.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.redirector.WidgetRedirector.dispatch">
+    
+  </a>
+  <a name="dispatch">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    dispatch(self, operation, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Callback from Tcl which runs when the widget is referenced.
+
+If an operation has been registered in self._operations, apply the
+associated function to the args passed into Tcl. Otherwise, pass the
+operation through to Tk via the original Tcl function.
+
+Note that if a registered function is called, the operation is not
+passed through to Tk.  Apply the function returned by self.register()
+to *args to accomplish that.  For an example, see colorizer.py.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib._strptime : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module private"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib._strptime.html" class="code" data-type="Module">_strptime</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Strptime-related classes and functions.
+
+CLASSES:
+    LocaleTime -- Discovers and stores locale-specific time information
+    TimeRE -- Creates regexes for pattern matching a string of text containing
+                time information
+
+FUNCTIONS:
+    _getlang -- Figure out what language is being used for the locale
+    strptime -- Calculates the time struct represented by the passed-in string</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id181">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib._strptime.LocaleTime.html" class="code" data-type="Class">LocaleTime</a></td>
+    <td><span>Stores and handles locale-specific information related to time.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib._strptime.TimeRE.html" class="code" data-type="Class">TimeRE</a></td>
+    <td><span>Handle conversion from format directives to regexes.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._strptime.html#_getlang" class="code" data-type="Function">_getlang</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib._strptime.html#_cache_lock" class="code" data-type="Variable">_cache_lock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib._strptime.html#_TimeRE_cache" class="code" data-type="Variable">_TimeRE_cache</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib._strptime.html#_CACHE_MAX_SIZE" class="code" data-type="Variable">_CACHE_MAX_SIZE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib._strptime.html#_regex_cache" class="code" data-type="Variable">_regex_cache</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._strptime.html#_calc_julian_from_U_or_W" class="code" data-type="Function">_calc_julian_from_U_or_W</a></td>
+    <td><span>Calculate the Julian day based on the year, week of the year, and day of the week, with week_start_day representing whether the week of the year assumes the week starts on Sunday or Monday (6 or 0).</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._strptime.html#_calc_julian_from_V" class="code" data-type="Function">_calc_julian_from_V</a></td>
+    <td><span>Calculate the Julian day based on the ISO 8601 year, week, and weekday. ISO weeks start on Mondays, with week 01 being the week containing 4 Jan. ISO week days range from 1 (Monday) to 7 (Sunday).</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._strptime.html#_strptime" class="code" data-type="Function">_strptime</a></td>
+    <td><span>Return a 2-tuple consisting of a time struct and an int containing the number of microseconds based on the input string and the format string.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._strptime.html#_strptime_time" class="code" data-type="Function">_strptime_time</a></td>
+    <td><span>Return a time struct based on the input string and the format string.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._strptime.html#_strptime_datetime" class="code" data-type="Function">_strptime_datetime</a></td>
+    <td><span>Return a class cls instance based on the input string and the format string.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction private">
+  
+  <a name="Lib._strptime._getlang">
+    
+  </a>
+  <a name="_getlang">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _getlang():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib._strptime._cache_lock">
+    
+  </a>
+  <a name="_cache_lock">
+    
+  </a>
+  <div class="functionHeader">
+    _cache_lock =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib._strptime._TimeRE_cache">
+    
+  </a>
+  <a name="_TimeRE_cache">
+    
+  </a>
+  <div class="functionHeader">
+    _TimeRE_cache =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib._strptime._CACHE_MAX_SIZE">
+    
+  </a>
+  <a name="_CACHE_MAX_SIZE">
+    
+  </a>
+  <div class="functionHeader">
+    _CACHE_MAX_SIZE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib._strptime._regex_cache">
+    
+  </a>
+  <a name="_regex_cache">
+    
+  </a>
+  <div class="functionHeader">
+    _regex_cache =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._strptime._calc_julian_from_U_or_W">
+    
+  </a>
+  <a name="_calc_julian_from_U_or_W">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _calc_julian_from_U_or_W(year, week_of_year, day_of_week, week_starts_Mon):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Calculate the Julian day based on the year, week of the year, and day of
+the week, with week_start_day representing whether the week of the year
+assumes the week starts on Sunday or Monday (6 or 0).</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._strptime._calc_julian_from_V">
+    
+  </a>
+  <a name="_calc_julian_from_V">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _calc_julian_from_V(iso_year, iso_week, iso_weekday):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Calculate the Julian day based on the ISO 8601 year, week, and weekday.
+ISO weeks start on Mondays, with week 01 being the week containing 4 Jan.
+ISO week days range from 1 (Monday) to 7 (Sunday).</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._strptime._strptime">
+    
+  </a>
+  <a name="_strptime">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _strptime(data_string, format="""%a %b %d %H:%M:%S %Y"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a 2-tuple consisting of a time struct and an int containing
+the number of microseconds based on the input string and the
+format string.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._strptime._strptime_time">
+    
+  </a>
+  <a name="_strptime_time">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _strptime_time(data_string, format="""%a %b %d %H:%M:%S %Y"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a time struct based on the input string and the
+format string.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._strptime._strptime_datetime">
+    
+  </a>
+  <a name="_strptime_datetime">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _strptime_datetime(cls, data_string, format="""%a %b %d %H:%M:%S %Y"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a class cls instance based on the input string and the
+format string.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

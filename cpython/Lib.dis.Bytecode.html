@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.dis.Bytecode : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.dis.html" class="code" data-type="Module">dis</a>.<a href="Lib.dis.Bytecode.html" class="code" data-type="Class">Bytecode</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.dis.Bytecode:</code></p>
+        <p><a href="classIndex.html#Lib.dis.Bytecode">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">The bytecode operations of a piece of code
+
+Instantiate this with a function, method, other compiled object, string of
+code, or a code object (as returned by compile()).
+
+Iterating over this yields the bytecode operations as Instruction instances.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id902">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.dis.Bytecode.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.dis.Bytecode.html#codeobj" class="code" data-type="Instance Variable">codeobj</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.dis.Bytecode.html#first_line" class="code" data-type="Instance Variable">first_line</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.dis.Bytecode.html#current_offset" class="code" data-type="Instance Variable">current_offset</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.dis.Bytecode.html#__iter__" class="code" data-type="Method">__iter__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.dis.Bytecode.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classmethod">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.dis.Bytecode.html#from_traceback" class="code" data-type="Class Method">from_traceback</a></td>
+    <td><span>Construct a Bytecode from the given traceback</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.dis.Bytecode.html#info" class="code" data-type="Method">info</a></td>
+    <td><span>Return formatted information about the code object.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.dis.Bytecode.html#dis" class="code" data-type="Method">dis</a></td>
+    <td><span>Return a formatted view of the bytecode operations.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.dis.Bytecode.html#_line_offset" class="code" data-type="Instance Variable">_line_offset</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.dis.Bytecode.html#_cell_names" class="code" data-type="Instance Variable">_cell_names</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.dis.Bytecode.html#_linestarts" class="code" data-type="Instance Variable">_linestarts</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.dis.Bytecode.html#_original_object" class="code" data-type="Instance Variable">_original_object</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.dis.Bytecode.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, x):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.dis.Bytecode.codeobj">
+    
+  </a>
+  <a name="codeobj">
+    
+  </a>
+  <div class="functionHeader">
+    codeobj =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.dis.Bytecode.first_line">
+    
+  </a>
+  <a name="first_line">
+    
+  </a>
+  <div class="functionHeader">
+    first_line =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.dis.Bytecode._line_offset">
+    
+  </a>
+  <a name="_line_offset">
+    
+  </a>
+  <div class="functionHeader">
+    _line_offset =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.dis.Bytecode._cell_names">
+    
+  </a>
+  <a name="_cell_names">
+    
+  </a>
+  <div class="functionHeader">
+    _cell_names =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.dis.Bytecode._linestarts">
+    
+  </a>
+  <a name="_linestarts">
+    
+  </a>
+  <div class="functionHeader">
+    _linestarts =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.dis.Bytecode._original_object">
+    
+  </a>
+  <a name="_original_object">
+    
+  </a>
+  <div class="functionHeader">
+    _original_object =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.dis.Bytecode.current_offset">
+    
+  </a>
+  <a name="current_offset">
+    
+  </a>
+  <div class="functionHeader">
+    current_offset =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.dis.Bytecode.__iter__">
+    
+  </a>
+  <a name="__iter__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __iter__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.dis.Bytecode.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __repr__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassmethod">
+  
+  <a name="Lib.dis.Bytecode.from_traceback">
+    
+  </a>
+  <a name="from_traceback">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    from_traceback(cls, tb):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Construct a Bytecode from the given traceback </p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.dis.Bytecode.info">
+    
+  </a>
+  <a name="info">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    info(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return formatted information about the code object.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.dis.Bytecode.dis">
+    
+  </a>
+  <a name="dis">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    dis(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a formatted view of the bytecode operations.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

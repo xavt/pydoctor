@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.subprocess : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.subprocess.html" class="code" data-type="Module">subprocess</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Subprocesses with accessible I/O streams
+
+This module allows you to spawn processes, connect to their
+input/output/error pipes, and obtain their return codes.
+
+For a complete description of this module see the Python documentation.
+
+Main API
+========
+run(...): Runs a command, waits for it to complete, then returns a
+          CompletedProcess instance.
+Popen(...): A class for flexibly executing a command in a new process
+
+Constants
+---------
+DEVNULL: Special value that indicates that os.devnull should be used
+PIPE:    Special value that indicates a pipe should be created
+STDOUT:  Special value that indicates that stderr should go to stdout
+
+
+Older API
+=========
+call(...): Runs a command, waits for it to complete, then returns
+    the return code.
+check_call(...): Same as call() but raises CalledProcessError()
+    if return code is not 0
+check_output(...): Same as check_call() but returns the contents of
+    stdout instead of a return code
+getoutput(...): Runs a command in the shell, waits for it to complete,
+    then returns the output
+getstatusoutput(...): Runs a command in the shell, waits for it to complete,
+    then returns a (exitcode, output) tuple</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3670">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.subprocess.html#pwd" class="code" data-type="Variable">pwd</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.subprocess.html#grp" class="code" data-type="Variable">grp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.subprocess.html#fcntl" class="code" data-type="Variable">fcntl</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.subprocess.SubprocessError.html" class="code" data-type="Class">SubprocessError</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.subprocess.CalledProcessError.html" class="code" data-type="Class">CalledProcessError</a></td>
+    <td><span>Raised when run() is called with check=True and the process returns a non-zero exit status.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.subprocess.TimeoutExpired.html" class="code" data-type="Class">TimeoutExpired</a></td>
+    <td><span>This exception is raised when the timeout expires while waiting for a child process.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.subprocess.STARTUPINFO.html" class="code" data-type="Class">STARTUPINFO</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.subprocess.Handle.html" class="code" data-type="Class">Handle</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.subprocess.html#PIPE" class="code" data-type="Variable">PIPE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.subprocess.html#STDOUT" class="code" data-type="Variable">STDOUT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.subprocess.html#DEVNULL" class="code" data-type="Variable">DEVNULL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.subprocess.html#call" class="code" data-type="Function">call</a></td>
+    <td><span>Run command with arguments.  Wait for command to complete or timeout, then return the returncode attribute.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.subprocess.html#check_call" class="code" data-type="Function">check_call</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.subprocess.html#check_output" class="code" data-type="Function">check_output</a></td>
+    <td><span>Run command with arguments and return its output.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.subprocess.CompletedProcess.html" class="code" data-type="Class">CompletedProcess</a></td>
+    <td><span>A process that has finished running.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.subprocess.html#run" class="code" data-type="Function">run</a></td>
+    <td><span>Run command with arguments and return a CompletedProcess instance.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.subprocess.html#list2cmdline" class="code" data-type="Function">list2cmdline</a></td>
+    <td><span>Translate a sequence of arguments into a command line string, using the same rules as the MS C runtime:</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.subprocess.html#getstatusoutput" class="code" data-type="Function">getstatusoutput</a></td>
+    <td><span>Return (exitcode, output) of executing cmd in a shell.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.subprocess.html#getoutput" class="code" data-type="Function">getoutput</a></td>
+    <td><span>Return output (stdout or stderr) of executing cmd in a shell.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.subprocess.Popen.html" class="code" data-type="Class">Popen</a></td>
+    <td><span>Execute a child program in a new process.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.subprocess.html#_mswindows" class="code" data-type="Variable">_mswindows</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.subprocess.html#_PIPE_BUF" class="code" data-type="Variable">_PIPE_BUF</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.subprocess.html#_active" class="code" data-type="Variable">_active</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.subprocess.html#_cleanup" class="code" data-type="Function">_cleanup</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.subprocess.html#_optim_args_from_interpreter_flags" class="code" data-type="Function">_optim_args_from_interpreter_flags</a></td>
+    <td><span>Return a list of command-line arguments reproducing the current optimization settings in sys.flags.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.subprocess.html#_args_from_interpreter_flags" class="code" data-type="Function">_args_from_interpreter_flags</a></td>
+    <td><span>Return a list of command-line arguments reproducing the current settings in sys.flags, sys.warnoptions and sys._xoptions.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.subprocess.html#_use_posix_spawn" class="code" data-type="Function">_use_posix_spawn</a></td>
+    <td><span>Check if posix_spawn() can be used for subprocess.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.subprocess.html#_USE_POSIX_SPAWN" class="code" data-type="Variable">_USE_POSIX_SPAWN</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.subprocess.pwd">
+    
+  </a>
+  <a name="pwd">
+    
+  </a>
+  <div class="functionHeader">
+    pwd =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.subprocess.grp">
+    
+  </a>
+  <a name="grp">
+    
+  </a>
+  <div class="functionHeader">
+    grp =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.subprocess.fcntl">
+    
+  </a>
+  <a name="fcntl">
+    
+  </a>
+  <div class="functionHeader">
+    fcntl =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.subprocess._mswindows">
+    
+  </a>
+  <a name="_mswindows">
+    
+  </a>
+  <div class="functionHeader">
+    _mswindows =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.subprocess._PIPE_BUF">
+    
+  </a>
+  <a name="_PIPE_BUF">
+    
+  </a>
+  <div class="functionHeader">
+    _PIPE_BUF =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.subprocess._active">
+    
+  </a>
+  <a name="_active">
+    
+  </a>
+  <div class="functionHeader">
+    _active =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.subprocess._cleanup">
+    
+  </a>
+  <a name="_cleanup">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _cleanup():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.subprocess.PIPE">
+    
+  </a>
+  <a name="PIPE">
+    
+  </a>
+  <div class="functionHeader">
+    PIPE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.subprocess.STDOUT">
+    
+  </a>
+  <a name="STDOUT">
+    
+  </a>
+  <div class="functionHeader">
+    STDOUT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.subprocess.DEVNULL">
+    
+  </a>
+  <a name="DEVNULL">
+    
+  </a>
+  <div class="functionHeader">
+    DEVNULL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.subprocess._optim_args_from_interpreter_flags">
+    
+  </a>
+  <a name="_optim_args_from_interpreter_flags">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _optim_args_from_interpreter_flags():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a list of command-line arguments reproducing the current
+optimization settings in sys.flags.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.subprocess._args_from_interpreter_flags">
+    
+  </a>
+  <a name="_args_from_interpreter_flags">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _args_from_interpreter_flags():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a list of command-line arguments reproducing the current
+settings in sys.flags, sys.warnoptions and sys._xoptions.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.subprocess.call">
+    
+  </a>
+  <a name="call">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    call(*popenargs, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Run command with arguments.  Wait for command to complete or
+timeout, then return the returncode attribute.
+
+The arguments are the same as for the Popen constructor.  Example:
+
+retcode = call(["ls", "-l"])</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.subprocess.check_call">
+    
+  </a>
+  <a name="check_call">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    check_call(*popenargs, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Run command with arguments.  Wait for command to complete.  If
+the exit code was zero then return, otherwise raise
+CalledProcessError.  The CalledProcessError object will have the
+return code in the returncode attribute.
+
+The arguments are the same as for the call function.  Example:
+
+check_call(["ls", "-l"])</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.subprocess.check_output">
+    
+  </a>
+  <a name="check_output">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    check_output(*popenargs, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Run command with arguments and return its output.
+
+If the exit code was non-zero it raises a CalledProcessError.  The
+CalledProcessError object will have the return code in the returncode
+attribute and output in the output attribute.
+
+The arguments are the same as for the Popen constructor.  Example:
+
+&gt;&gt;&gt; check_output(["ls", "-l", "/dev/null"])
+b'crw-rw-rw- 1 root root 1, 3 Oct 18  2007 /dev/null\n'
+
+The stdout argument is not allowed as it is used internally.
+To capture standard error in the result, use stderr=STDOUT.
+
+&gt;&gt;&gt; check_output(["/bin/sh", "-c",
+...               "ls -l non_existent_file ; exit 0"],
+...              stderr=STDOUT)
+b'ls: non_existent_file: No such file or directory\n'
+
+There is an additional optional argument, "input", allowing you to
+pass a string to the subprocess's stdin.  If you use this argument
+you may not also use the Popen constructor's "stdin" argument, as
+it too will be used internally.  Example:
+
+&gt;&gt;&gt; check_output(["sed", "-e", "s/foo/bar/"],
+...              input=b"when in the course of fooman events\n")
+b'when in the course of barman events\n'
+
+By default, all communication is in bytes, and therefore any "input"
+should be bytes, and the return value will be bytes.  If in text mode,
+any "input" should be a string, and the return value will be a string
+decoded according to locale encoding, or by "encoding" if set. Text mode
+is triggered by setting any of text, encoding, errors or universal_newlines.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.subprocess.run">
+    
+  </a>
+  <a name="run">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    run(*popenargs, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Run command with arguments and return a CompletedProcess instance.
+
+The returned instance will have attributes args, returncode, stdout and
+stderr. By default, stdout and stderr are not captured, and those attributes
+will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them.
+
+If check is True and the exit code was non-zero, it raises a
+CalledProcessError. The CalledProcessError object will have the return code
+in the returncode attribute, and output &amp; stderr attributes if those streams
+were captured.
+
+If timeout is given, and the process takes too long, a TimeoutExpired
+exception will be raised.
+
+There is an optional argument "input", allowing you to
+pass bytes or a string to the subprocess's stdin.  If you use this argument
+you may not also use the Popen constructor's "stdin" argument, as
+it will be used internally.
+
+By default, all communication is in bytes, and therefore any "input" should
+be bytes, and the stdout and stderr will be bytes. If in text mode, any
+"input" should be a string, and stdout and stderr will be strings decoded
+according to locale encoding, or by "encoding" if set. Text mode is
+triggered by setting any of text, encoding, errors or universal_newlines.
+
+The other arguments are the same as for the Popen constructor.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.subprocess.list2cmdline">
+    
+  </a>
+  <a name="list2cmdline">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    list2cmdline(seq):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Translate a sequence of arguments into a command line
+string, using the same rules as the MS C runtime:
+
+1) Arguments are delimited by white space, which is either a
+   space or a tab.
+
+2) A string surrounded by double quotation marks is
+   interpreted as a single argument, regardless of white space
+   contained within.  A quoted string can be embedded in an
+   argument.
+
+3) A double quotation mark preceded by a backslash is
+   interpreted as a literal double quotation mark.
+
+4) Backslashes are interpreted literally, unless they
+   immediately precede a double quotation mark.
+
+5) If backslashes immediately precede a double quotation mark,
+   every pair of backslashes is interpreted as a literal
+   backslash.  If the number of backslashes is odd, the last
+   backslash escapes the next double quotation mark as
+   described in rule 3.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.subprocess.getstatusoutput">
+    
+  </a>
+  <a name="getstatusoutput">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getstatusoutput(cmd):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return (exitcode, output) of executing cmd in a shell.
+
+Execute the string 'cmd' in a shell with 'check_output' and
+return a 2-tuple (status, output). The locale encoding is used
+to decode the output and process newlines.
+
+A trailing newline is stripped from the output.
+The exit status for the command can be interpreted
+according to the rules for the function 'wait'. Example:
+
+&gt;&gt;&gt; import subprocess
+&gt;&gt;&gt; subprocess.getstatusoutput('ls /bin/ls')
+(0, '/bin/ls')
+&gt;&gt;&gt; subprocess.getstatusoutput('cat /bin/junk')
+(1, 'cat: /bin/junk: No such file or directory')
+&gt;&gt;&gt; subprocess.getstatusoutput('/bin/junk')
+(127, 'sh: /bin/junk: not found')
+&gt;&gt;&gt; subprocess.getstatusoutput('/bin/kill $$')
+(-15, '')</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.subprocess.getoutput">
+    
+  </a>
+  <a name="getoutput">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getoutput(cmd):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return output (stdout or stderr) of executing cmd in a shell.
+
+Like getstatusoutput(), except the exit status is ignored and the return
+value is a string containing the command's output.  Example:
+
+&gt;&gt;&gt; import subprocess
+&gt;&gt;&gt; subprocess.getoutput('ls /bin/ls')
+'/bin/ls'</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.subprocess._use_posix_spawn">
+    
+  </a>
+  <a name="_use_posix_spawn">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _use_posix_spawn():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Check if posix_spawn() can be used for subprocess.
+
+subprocess requires a posix_spawn() implementation that properly reports
+errors to the parent process, &amp; sets errno on the following failures:
+
+* Process attribute actions failed.
+* File actions failed.
+* exec() failed.
+
+Prefer an implementation which can use vfork() in some cases for best
+performance.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.subprocess._USE_POSIX_SPAWN">
+    
+  </a>
+  <a name="_USE_POSIX_SPAWN">
+    
+  </a>
+  <div class="functionHeader">
+    _USE_POSIX_SPAWN =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,2294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.zipfile : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.zipfile.html" class="code" data-type="Module">zipfile</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Read and write ZIP files.
+
+XXX references to utf-8 need further investigation.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id12216">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#zlib" class="code" data-type="Variable">zlib</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#bz2" class="code" data-type="Variable">bz2</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#lzma" class="code" data-type="Variable">lzma</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.zipfile.BadZipFile.html" class="code" data-type="Class">BadZipFile</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.zipfile.LargeZipFile.html" class="code" data-type="Class">LargeZipFile</a></td>
+    <td><span>Raised when writing a zipfile, the zipfile requires ZIP64 extensions and those extensions are disabled.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#ZIP64_LIMIT" class="code" data-type="Variable">ZIP64_LIMIT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#ZIP_FILECOUNT_LIMIT" class="code" data-type="Variable">ZIP_FILECOUNT_LIMIT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#ZIP_MAX_COMMENT" class="code" data-type="Variable">ZIP_MAX_COMMENT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#ZIP_STORED" class="code" data-type="Variable">ZIP_STORED</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#ZIP_DEFLATED" class="code" data-type="Variable">ZIP_DEFLATED</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#ZIP_BZIP2" class="code" data-type="Variable">ZIP_BZIP2</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#ZIP_LZMA" class="code" data-type="Variable">ZIP_LZMA</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#DEFAULT_VERSION" class="code" data-type="Variable">DEFAULT_VERSION</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#ZIP64_VERSION" class="code" data-type="Variable">ZIP64_VERSION</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#BZIP2_VERSION" class="code" data-type="Variable">BZIP2_VERSION</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#LZMA_VERSION" class="code" data-type="Variable">LZMA_VERSION</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#MAX_EXTRACT_VERSION" class="code" data-type="Variable">MAX_EXTRACT_VERSION</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#structEndArchive" class="code" data-type="Variable">structEndArchive</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#stringEndArchive" class="code" data-type="Variable">stringEndArchive</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#sizeEndCentDir" class="code" data-type="Variable">sizeEndCentDir</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#structCentralDir" class="code" data-type="Variable">structCentralDir</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#stringCentralDir" class="code" data-type="Variable">stringCentralDir</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#sizeCentralDir" class="code" data-type="Variable">sizeCentralDir</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#structFileHeader" class="code" data-type="Variable">structFileHeader</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#stringFileHeader" class="code" data-type="Variable">stringFileHeader</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#sizeFileHeader" class="code" data-type="Variable">sizeFileHeader</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#structEndArchive64Locator" class="code" data-type="Variable">structEndArchive64Locator</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#stringEndArchive64Locator" class="code" data-type="Variable">stringEndArchive64Locator</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#sizeEndCentDir64Locator" class="code" data-type="Variable">sizeEndCentDir64Locator</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#structEndArchive64" class="code" data-type="Variable">structEndArchive64</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#stringEndArchive64" class="code" data-type="Variable">stringEndArchive64</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#sizeEndCentDir64" class="code" data-type="Variable">sizeEndCentDir64</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipfile.html#is_zipfile" class="code" data-type="Function">is_zipfile</a></td>
+    <td><span>Quickly see if a file is a ZIP file by checking the magic number.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.zipfile.ZipInfo.html" class="code" data-type="Class">ZipInfo</a></td>
+    <td><span>Class with attributes describing each file in the ZIP archive.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.zipfile.LZMACompressor.html" class="code" data-type="Class">LZMACompressor</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.zipfile.LZMADecompressor.html" class="code" data-type="Class">LZMADecompressor</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#compressor_names" class="code" data-type="Variable">compressor_names</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.zipfile.ZipExtFile.html" class="code" data-type="Class">ZipExtFile</a></td>
+    <td><span>File-like object for reading an archive member. Is returned by ZipFile.open().</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.zipfile.ZipFile.html" class="code" data-type="Class">ZipFile</a></td>
+    <td><span>Class with methods to open, read, write, close, list zip files.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.zipfile.PyZipFile.html" class="code" data-type="Class">PyZipFile</a></td>
+    <td><span>Class to create ZIP archives with Python library files and packages.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.zipfile.CompleteDirs.html" class="code" data-type="Class">CompleteDirs</a></td>
+    <td><span>A ZipFile subclass that ensures that implied directories are always included in the namelist.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.zipfile.FastLookup.html" class="code" data-type="Class">FastLookup</a></td>
+    <td><span>ZipFile subclass to ensure implicit dirs exist and are resolved rapidly.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.zipfile.Path.html" class="code" data-type="Class">Path</a></td>
+    <td><span>A pathlib-compatible interface for zip files.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipfile.html#main" class="code" data-type="Function">main</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_ECD_SIGNATURE" class="code" data-type="Variable">_ECD_SIGNATURE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_ECD_DISK_NUMBER" class="code" data-type="Variable">_ECD_DISK_NUMBER</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_ECD_DISK_START" class="code" data-type="Variable">_ECD_DISK_START</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_ECD_ENTRIES_THIS_DISK" class="code" data-type="Variable">_ECD_ENTRIES_THIS_DISK</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_ECD_ENTRIES_TOTAL" class="code" data-type="Variable">_ECD_ENTRIES_TOTAL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_ECD_SIZE" class="code" data-type="Variable">_ECD_SIZE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_ECD_OFFSET" class="code" data-type="Variable">_ECD_OFFSET</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_ECD_COMMENT_SIZE" class="code" data-type="Variable">_ECD_COMMENT_SIZE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_ECD_COMMENT" class="code" data-type="Variable">_ECD_COMMENT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_ECD_LOCATION" class="code" data-type="Variable">_ECD_LOCATION</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_CD_SIGNATURE" class="code" data-type="Variable">_CD_SIGNATURE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_CD_CREATE_VERSION" class="code" data-type="Variable">_CD_CREATE_VERSION</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_CD_CREATE_SYSTEM" class="code" data-type="Variable">_CD_CREATE_SYSTEM</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_CD_EXTRACT_VERSION" class="code" data-type="Variable">_CD_EXTRACT_VERSION</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_CD_EXTRACT_SYSTEM" class="code" data-type="Variable">_CD_EXTRACT_SYSTEM</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_CD_FLAG_BITS" class="code" data-type="Variable">_CD_FLAG_BITS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_CD_COMPRESS_TYPE" class="code" data-type="Variable">_CD_COMPRESS_TYPE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_CD_TIME" class="code" data-type="Variable">_CD_TIME</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_CD_DATE" class="code" data-type="Variable">_CD_DATE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_CD_CRC" class="code" data-type="Variable">_CD_CRC</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_CD_COMPRESSED_SIZE" class="code" data-type="Variable">_CD_COMPRESSED_SIZE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_CD_UNCOMPRESSED_SIZE" class="code" data-type="Variable">_CD_UNCOMPRESSED_SIZE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_CD_FILENAME_LENGTH" class="code" data-type="Variable">_CD_FILENAME_LENGTH</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_CD_EXTRA_FIELD_LENGTH" class="code" data-type="Variable">_CD_EXTRA_FIELD_LENGTH</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_CD_COMMENT_LENGTH" class="code" data-type="Variable">_CD_COMMENT_LENGTH</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_CD_DISK_NUMBER_START" class="code" data-type="Variable">_CD_DISK_NUMBER_START</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_CD_INTERNAL_FILE_ATTRIBUTES" class="code" data-type="Variable">_CD_INTERNAL_FILE_ATTRIBUTES</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_CD_EXTERNAL_FILE_ATTRIBUTES" class="code" data-type="Variable">_CD_EXTERNAL_FILE_ATTRIBUTES</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_CD_LOCAL_HEADER_OFFSET" class="code" data-type="Variable">_CD_LOCAL_HEADER_OFFSET</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_FH_SIGNATURE" class="code" data-type="Variable">_FH_SIGNATURE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_FH_EXTRACT_VERSION" class="code" data-type="Variable">_FH_EXTRACT_VERSION</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_FH_EXTRACT_SYSTEM" class="code" data-type="Variable">_FH_EXTRACT_SYSTEM</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_FH_GENERAL_PURPOSE_FLAG_BITS" class="code" data-type="Variable">_FH_GENERAL_PURPOSE_FLAG_BITS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_FH_COMPRESSION_METHOD" class="code" data-type="Variable">_FH_COMPRESSION_METHOD</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_FH_LAST_MOD_TIME" class="code" data-type="Variable">_FH_LAST_MOD_TIME</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_FH_LAST_MOD_DATE" class="code" data-type="Variable">_FH_LAST_MOD_DATE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_FH_CRC" class="code" data-type="Variable">_FH_CRC</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_FH_COMPRESSED_SIZE" class="code" data-type="Variable">_FH_COMPRESSED_SIZE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_FH_UNCOMPRESSED_SIZE" class="code" data-type="Variable">_FH_UNCOMPRESSED_SIZE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_FH_FILENAME_LENGTH" class="code" data-type="Variable">_FH_FILENAME_LENGTH</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_FH_EXTRA_FIELD_LENGTH" class="code" data-type="Variable">_FH_EXTRA_FIELD_LENGTH</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_CD64_SIGNATURE" class="code" data-type="Variable">_CD64_SIGNATURE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_CD64_DIRECTORY_RECSIZE" class="code" data-type="Variable">_CD64_DIRECTORY_RECSIZE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_CD64_CREATE_VERSION" class="code" data-type="Variable">_CD64_CREATE_VERSION</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_CD64_EXTRACT_VERSION" class="code" data-type="Variable">_CD64_EXTRACT_VERSION</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_CD64_DISK_NUMBER" class="code" data-type="Variable">_CD64_DISK_NUMBER</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_CD64_DISK_NUMBER_START" class="code" data-type="Variable">_CD64_DISK_NUMBER_START</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_CD64_NUMBER_ENTRIES_THIS_DISK" class="code" data-type="Variable">_CD64_NUMBER_ENTRIES_THIS_DISK</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_CD64_NUMBER_ENTRIES_TOTAL" class="code" data-type="Variable">_CD64_NUMBER_ENTRIES_TOTAL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_CD64_DIRECTORY_SIZE" class="code" data-type="Variable">_CD64_DIRECTORY_SIZE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_CD64_OFFSET_START_CENTDIR" class="code" data-type="Variable">_CD64_OFFSET_START_CENTDIR</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_DD_SIGNATURE" class="code" data-type="Variable">_DD_SIGNATURE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_EXTRA_FIELD_STRUCT" class="code" data-type="Variable">_EXTRA_FIELD_STRUCT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipfile.html#_strip_extra" class="code" data-type="Function">_strip_extra</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipfile.html#_check_zipfile" class="code" data-type="Function">_check_zipfile</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipfile.html#_EndRecData64" class="code" data-type="Function">_EndRecData64</a></td>
+    <td><span>Read the ZIP64 end-of-archive records and use that to update endrec</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipfile.html#_EndRecData" class="code" data-type="Function">_EndRecData</a></td>
+    <td><span>Return data from the "End of Central Directory" record, or None.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.zipfile.html#_crctable" class="code" data-type="Variable">_crctable</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipfile.html#_gen_crc" class="code" data-type="Function">_gen_crc</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipfile.html#_ZipDecrypter" class="code" data-type="Function">_ZipDecrypter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipfile.html#_check_compression" class="code" data-type="Function">_check_compression</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipfile.html#_get_compressor" class="code" data-type="Function">_get_compressor</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipfile.html#_get_decompressor" class="code" data-type="Function">_get_decompressor</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.zipfile._SharedFile.html" class="code" data-type="Class">_SharedFile</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.zipfile._Tellable.html" class="code" data-type="Class">_Tellable</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.zipfile._ZipWriteFile.html" class="code" data-type="Class">_ZipWriteFile</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipfile.html#_parents" class="code" data-type="Function">_parents</a></td>
+    <td><span>Given a path with elements separated by posixpath.sep, generate all parents of that path.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipfile.html#_ancestry" class="code" data-type="Function">_ancestry</a></td>
+    <td><span>Given a path with elements separated by posixpath.sep, generate all elements of that path</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.zipfile.html#_difference" class="code" data-type="Function">_difference</a></td>
+    <td><span>Return items in minuend not in subtrahend, retaining order with O(1) lookup.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.zipfile.zlib">
+    
+  </a>
+  <a name="zlib">
+    
+  </a>
+  <div class="functionHeader">
+    zlib =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipfile.bz2">
+    
+  </a>
+  <a name="bz2">
+    
+  </a>
+  <div class="functionHeader">
+    bz2 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipfile.lzma">
+    
+  </a>
+  <a name="lzma">
+    
+  </a>
+  <div class="functionHeader">
+    lzma =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipfile.ZIP64_LIMIT">
+    
+  </a>
+  <a name="ZIP64_LIMIT">
+    
+  </a>
+  <div class="functionHeader">
+    ZIP64_LIMIT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipfile.ZIP_FILECOUNT_LIMIT">
+    
+  </a>
+  <a name="ZIP_FILECOUNT_LIMIT">
+    
+  </a>
+  <div class="functionHeader">
+    ZIP_FILECOUNT_LIMIT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipfile.ZIP_MAX_COMMENT">
+    
+  </a>
+  <a name="ZIP_MAX_COMMENT">
+    
+  </a>
+  <div class="functionHeader">
+    ZIP_MAX_COMMENT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipfile.ZIP_STORED">
+    
+  </a>
+  <a name="ZIP_STORED">
+    
+  </a>
+  <div class="functionHeader">
+    ZIP_STORED =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipfile.ZIP_DEFLATED">
+    
+  </a>
+  <a name="ZIP_DEFLATED">
+    
+  </a>
+  <div class="functionHeader">
+    ZIP_DEFLATED =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipfile.ZIP_BZIP2">
+    
+  </a>
+  <a name="ZIP_BZIP2">
+    
+  </a>
+  <div class="functionHeader">
+    ZIP_BZIP2 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipfile.ZIP_LZMA">
+    
+  </a>
+  <a name="ZIP_LZMA">
+    
+  </a>
+  <div class="functionHeader">
+    ZIP_LZMA =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipfile.DEFAULT_VERSION">
+    
+  </a>
+  <a name="DEFAULT_VERSION">
+    
+  </a>
+  <div class="functionHeader">
+    DEFAULT_VERSION =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipfile.ZIP64_VERSION">
+    
+  </a>
+  <a name="ZIP64_VERSION">
+    
+  </a>
+  <div class="functionHeader">
+    ZIP64_VERSION =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipfile.BZIP2_VERSION">
+    
+  </a>
+  <a name="BZIP2_VERSION">
+    
+  </a>
+  <div class="functionHeader">
+    BZIP2_VERSION =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipfile.LZMA_VERSION">
+    
+  </a>
+  <a name="LZMA_VERSION">
+    
+  </a>
+  <div class="functionHeader">
+    LZMA_VERSION =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipfile.MAX_EXTRACT_VERSION">
+    
+  </a>
+  <a name="MAX_EXTRACT_VERSION">
+    
+  </a>
+  <div class="functionHeader">
+    MAX_EXTRACT_VERSION =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipfile.structEndArchive">
+    
+  </a>
+  <a name="structEndArchive">
+    
+  </a>
+  <div class="functionHeader">
+    structEndArchive =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipfile.stringEndArchive">
+    
+  </a>
+  <a name="stringEndArchive">
+    
+  </a>
+  <div class="functionHeader">
+    stringEndArchive =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipfile.sizeEndCentDir">
+    
+  </a>
+  <a name="sizeEndCentDir">
+    
+  </a>
+  <div class="functionHeader">
+    sizeEndCentDir =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._ECD_SIGNATURE">
+    
+  </a>
+  <a name="_ECD_SIGNATURE">
+    
+  </a>
+  <div class="functionHeader">
+    _ECD_SIGNATURE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._ECD_DISK_NUMBER">
+    
+  </a>
+  <a name="_ECD_DISK_NUMBER">
+    
+  </a>
+  <div class="functionHeader">
+    _ECD_DISK_NUMBER =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._ECD_DISK_START">
+    
+  </a>
+  <a name="_ECD_DISK_START">
+    
+  </a>
+  <div class="functionHeader">
+    _ECD_DISK_START =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._ECD_ENTRIES_THIS_DISK">
+    
+  </a>
+  <a name="_ECD_ENTRIES_THIS_DISK">
+    
+  </a>
+  <div class="functionHeader">
+    _ECD_ENTRIES_THIS_DISK =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._ECD_ENTRIES_TOTAL">
+    
+  </a>
+  <a name="_ECD_ENTRIES_TOTAL">
+    
+  </a>
+  <div class="functionHeader">
+    _ECD_ENTRIES_TOTAL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._ECD_SIZE">
+    
+  </a>
+  <a name="_ECD_SIZE">
+    
+  </a>
+  <div class="functionHeader">
+    _ECD_SIZE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._ECD_OFFSET">
+    
+  </a>
+  <a name="_ECD_OFFSET">
+    
+  </a>
+  <div class="functionHeader">
+    _ECD_OFFSET =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._ECD_COMMENT_SIZE">
+    
+  </a>
+  <a name="_ECD_COMMENT_SIZE">
+    
+  </a>
+  <div class="functionHeader">
+    _ECD_COMMENT_SIZE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._ECD_COMMENT">
+    
+  </a>
+  <a name="_ECD_COMMENT">
+    
+  </a>
+  <div class="functionHeader">
+    _ECD_COMMENT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._ECD_LOCATION">
+    
+  </a>
+  <a name="_ECD_LOCATION">
+    
+  </a>
+  <div class="functionHeader">
+    _ECD_LOCATION =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipfile.structCentralDir">
+    
+  </a>
+  <a name="structCentralDir">
+    
+  </a>
+  <div class="functionHeader">
+    structCentralDir =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipfile.stringCentralDir">
+    
+  </a>
+  <a name="stringCentralDir">
+    
+  </a>
+  <div class="functionHeader">
+    stringCentralDir =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipfile.sizeCentralDir">
+    
+  </a>
+  <a name="sizeCentralDir">
+    
+  </a>
+  <div class="functionHeader">
+    sizeCentralDir =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._CD_SIGNATURE">
+    
+  </a>
+  <a name="_CD_SIGNATURE">
+    
+  </a>
+  <div class="functionHeader">
+    _CD_SIGNATURE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._CD_CREATE_VERSION">
+    
+  </a>
+  <a name="_CD_CREATE_VERSION">
+    
+  </a>
+  <div class="functionHeader">
+    _CD_CREATE_VERSION =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._CD_CREATE_SYSTEM">
+    
+  </a>
+  <a name="_CD_CREATE_SYSTEM">
+    
+  </a>
+  <div class="functionHeader">
+    _CD_CREATE_SYSTEM =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._CD_EXTRACT_VERSION">
+    
+  </a>
+  <a name="_CD_EXTRACT_VERSION">
+    
+  </a>
+  <div class="functionHeader">
+    _CD_EXTRACT_VERSION =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._CD_EXTRACT_SYSTEM">
+    
+  </a>
+  <a name="_CD_EXTRACT_SYSTEM">
+    
+  </a>
+  <div class="functionHeader">
+    _CD_EXTRACT_SYSTEM =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._CD_FLAG_BITS">
+    
+  </a>
+  <a name="_CD_FLAG_BITS">
+    
+  </a>
+  <div class="functionHeader">
+    _CD_FLAG_BITS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._CD_COMPRESS_TYPE">
+    
+  </a>
+  <a name="_CD_COMPRESS_TYPE">
+    
+  </a>
+  <div class="functionHeader">
+    _CD_COMPRESS_TYPE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._CD_TIME">
+    
+  </a>
+  <a name="_CD_TIME">
+    
+  </a>
+  <div class="functionHeader">
+    _CD_TIME =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._CD_DATE">
+    
+  </a>
+  <a name="_CD_DATE">
+    
+  </a>
+  <div class="functionHeader">
+    _CD_DATE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._CD_CRC">
+    
+  </a>
+  <a name="_CD_CRC">
+    
+  </a>
+  <div class="functionHeader">
+    _CD_CRC =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._CD_COMPRESSED_SIZE">
+    
+  </a>
+  <a name="_CD_COMPRESSED_SIZE">
+    
+  </a>
+  <div class="functionHeader">
+    _CD_COMPRESSED_SIZE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._CD_UNCOMPRESSED_SIZE">
+    
+  </a>
+  <a name="_CD_UNCOMPRESSED_SIZE">
+    
+  </a>
+  <div class="functionHeader">
+    _CD_UNCOMPRESSED_SIZE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._CD_FILENAME_LENGTH">
+    
+  </a>
+  <a name="_CD_FILENAME_LENGTH">
+    
+  </a>
+  <div class="functionHeader">
+    _CD_FILENAME_LENGTH =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._CD_EXTRA_FIELD_LENGTH">
+    
+  </a>
+  <a name="_CD_EXTRA_FIELD_LENGTH">
+    
+  </a>
+  <div class="functionHeader">
+    _CD_EXTRA_FIELD_LENGTH =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._CD_COMMENT_LENGTH">
+    
+  </a>
+  <a name="_CD_COMMENT_LENGTH">
+    
+  </a>
+  <div class="functionHeader">
+    _CD_COMMENT_LENGTH =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._CD_DISK_NUMBER_START">
+    
+  </a>
+  <a name="_CD_DISK_NUMBER_START">
+    
+  </a>
+  <div class="functionHeader">
+    _CD_DISK_NUMBER_START =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._CD_INTERNAL_FILE_ATTRIBUTES">
+    
+  </a>
+  <a name="_CD_INTERNAL_FILE_ATTRIBUTES">
+    
+  </a>
+  <div class="functionHeader">
+    _CD_INTERNAL_FILE_ATTRIBUTES =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._CD_EXTERNAL_FILE_ATTRIBUTES">
+    
+  </a>
+  <a name="_CD_EXTERNAL_FILE_ATTRIBUTES">
+    
+  </a>
+  <div class="functionHeader">
+    _CD_EXTERNAL_FILE_ATTRIBUTES =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._CD_LOCAL_HEADER_OFFSET">
+    
+  </a>
+  <a name="_CD_LOCAL_HEADER_OFFSET">
+    
+  </a>
+  <div class="functionHeader">
+    _CD_LOCAL_HEADER_OFFSET =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipfile.structFileHeader">
+    
+  </a>
+  <a name="structFileHeader">
+    
+  </a>
+  <div class="functionHeader">
+    structFileHeader =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipfile.stringFileHeader">
+    
+  </a>
+  <a name="stringFileHeader">
+    
+  </a>
+  <div class="functionHeader">
+    stringFileHeader =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipfile.sizeFileHeader">
+    
+  </a>
+  <a name="sizeFileHeader">
+    
+  </a>
+  <div class="functionHeader">
+    sizeFileHeader =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._FH_SIGNATURE">
+    
+  </a>
+  <a name="_FH_SIGNATURE">
+    
+  </a>
+  <div class="functionHeader">
+    _FH_SIGNATURE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._FH_EXTRACT_VERSION">
+    
+  </a>
+  <a name="_FH_EXTRACT_VERSION">
+    
+  </a>
+  <div class="functionHeader">
+    _FH_EXTRACT_VERSION =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._FH_EXTRACT_SYSTEM">
+    
+  </a>
+  <a name="_FH_EXTRACT_SYSTEM">
+    
+  </a>
+  <div class="functionHeader">
+    _FH_EXTRACT_SYSTEM =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._FH_GENERAL_PURPOSE_FLAG_BITS">
+    
+  </a>
+  <a name="_FH_GENERAL_PURPOSE_FLAG_BITS">
+    
+  </a>
+  <div class="functionHeader">
+    _FH_GENERAL_PURPOSE_FLAG_BITS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._FH_COMPRESSION_METHOD">
+    
+  </a>
+  <a name="_FH_COMPRESSION_METHOD">
+    
+  </a>
+  <div class="functionHeader">
+    _FH_COMPRESSION_METHOD =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._FH_LAST_MOD_TIME">
+    
+  </a>
+  <a name="_FH_LAST_MOD_TIME">
+    
+  </a>
+  <div class="functionHeader">
+    _FH_LAST_MOD_TIME =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._FH_LAST_MOD_DATE">
+    
+  </a>
+  <a name="_FH_LAST_MOD_DATE">
+    
+  </a>
+  <div class="functionHeader">
+    _FH_LAST_MOD_DATE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._FH_CRC">
+    
+  </a>
+  <a name="_FH_CRC">
+    
+  </a>
+  <div class="functionHeader">
+    _FH_CRC =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._FH_COMPRESSED_SIZE">
+    
+  </a>
+  <a name="_FH_COMPRESSED_SIZE">
+    
+  </a>
+  <div class="functionHeader">
+    _FH_COMPRESSED_SIZE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._FH_UNCOMPRESSED_SIZE">
+    
+  </a>
+  <a name="_FH_UNCOMPRESSED_SIZE">
+    
+  </a>
+  <div class="functionHeader">
+    _FH_UNCOMPRESSED_SIZE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._FH_FILENAME_LENGTH">
+    
+  </a>
+  <a name="_FH_FILENAME_LENGTH">
+    
+  </a>
+  <div class="functionHeader">
+    _FH_FILENAME_LENGTH =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._FH_EXTRA_FIELD_LENGTH">
+    
+  </a>
+  <a name="_FH_EXTRA_FIELD_LENGTH">
+    
+  </a>
+  <div class="functionHeader">
+    _FH_EXTRA_FIELD_LENGTH =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipfile.structEndArchive64Locator">
+    
+  </a>
+  <a name="structEndArchive64Locator">
+    
+  </a>
+  <div class="functionHeader">
+    structEndArchive64Locator =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipfile.stringEndArchive64Locator">
+    
+  </a>
+  <a name="stringEndArchive64Locator">
+    
+  </a>
+  <div class="functionHeader">
+    stringEndArchive64Locator =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipfile.sizeEndCentDir64Locator">
+    
+  </a>
+  <a name="sizeEndCentDir64Locator">
+    
+  </a>
+  <div class="functionHeader">
+    sizeEndCentDir64Locator =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipfile.structEndArchive64">
+    
+  </a>
+  <a name="structEndArchive64">
+    
+  </a>
+  <div class="functionHeader">
+    structEndArchive64 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipfile.stringEndArchive64">
+    
+  </a>
+  <a name="stringEndArchive64">
+    
+  </a>
+  <div class="functionHeader">
+    stringEndArchive64 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipfile.sizeEndCentDir64">
+    
+  </a>
+  <a name="sizeEndCentDir64">
+    
+  </a>
+  <div class="functionHeader">
+    sizeEndCentDir64 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._CD64_SIGNATURE">
+    
+  </a>
+  <a name="_CD64_SIGNATURE">
+    
+  </a>
+  <div class="functionHeader">
+    _CD64_SIGNATURE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._CD64_DIRECTORY_RECSIZE">
+    
+  </a>
+  <a name="_CD64_DIRECTORY_RECSIZE">
+    
+  </a>
+  <div class="functionHeader">
+    _CD64_DIRECTORY_RECSIZE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._CD64_CREATE_VERSION">
+    
+  </a>
+  <a name="_CD64_CREATE_VERSION">
+    
+  </a>
+  <div class="functionHeader">
+    _CD64_CREATE_VERSION =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._CD64_EXTRACT_VERSION">
+    
+  </a>
+  <a name="_CD64_EXTRACT_VERSION">
+    
+  </a>
+  <div class="functionHeader">
+    _CD64_EXTRACT_VERSION =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._CD64_DISK_NUMBER">
+    
+  </a>
+  <a name="_CD64_DISK_NUMBER">
+    
+  </a>
+  <div class="functionHeader">
+    _CD64_DISK_NUMBER =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._CD64_DISK_NUMBER_START">
+    
+  </a>
+  <a name="_CD64_DISK_NUMBER_START">
+    
+  </a>
+  <div class="functionHeader">
+    _CD64_DISK_NUMBER_START =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._CD64_NUMBER_ENTRIES_THIS_DISK">
+    
+  </a>
+  <a name="_CD64_NUMBER_ENTRIES_THIS_DISK">
+    
+  </a>
+  <div class="functionHeader">
+    _CD64_NUMBER_ENTRIES_THIS_DISK =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._CD64_NUMBER_ENTRIES_TOTAL">
+    
+  </a>
+  <a name="_CD64_NUMBER_ENTRIES_TOTAL">
+    
+  </a>
+  <div class="functionHeader">
+    _CD64_NUMBER_ENTRIES_TOTAL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._CD64_DIRECTORY_SIZE">
+    
+  </a>
+  <a name="_CD64_DIRECTORY_SIZE">
+    
+  </a>
+  <div class="functionHeader">
+    _CD64_DIRECTORY_SIZE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._CD64_OFFSET_START_CENTDIR">
+    
+  </a>
+  <a name="_CD64_OFFSET_START_CENTDIR">
+    
+  </a>
+  <div class="functionHeader">
+    _CD64_OFFSET_START_CENTDIR =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._DD_SIGNATURE">
+    
+  </a>
+  <a name="_DD_SIGNATURE">
+    
+  </a>
+  <div class="functionHeader">
+    _DD_SIGNATURE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._EXTRA_FIELD_STRUCT">
+    
+  </a>
+  <a name="_EXTRA_FIELD_STRUCT">
+    
+  </a>
+  <div class="functionHeader">
+    _EXTRA_FIELD_STRUCT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.zipfile._strip_extra">
+    
+  </a>
+  <a name="_strip_extra">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _strip_extra(extra, xids):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.zipfile._check_zipfile">
+    
+  </a>
+  <a name="_check_zipfile">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _check_zipfile(fp):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.zipfile.is_zipfile">
+    
+  </a>
+  <a name="is_zipfile">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_zipfile(filename):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Quickly see if a file is a ZIP file by checking the magic number.
+
+The filename argument may be a file or file-like object too.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.zipfile._EndRecData64">
+    
+  </a>
+  <a name="_EndRecData64">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _EndRecData64(fpin, offset, endrec):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Read the ZIP64 end-of-archive records and use that to update endrec</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.zipfile._EndRecData">
+    
+  </a>
+  <a name="_EndRecData">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _EndRecData(fpin):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return data from the "End of Central Directory" record, or None.
+
+The data is a list of the nine items in the ZIP "End of central dir"
+record followed by a tenth item, the file seek offset of this record.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.zipfile._crctable">
+    
+  </a>
+  <a name="_crctable">
+    
+  </a>
+  <div class="functionHeader">
+    _crctable =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.zipfile._gen_crc">
+    
+  </a>
+  <a name="_gen_crc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _gen_crc(crc):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.zipfile._ZipDecrypter">
+    
+  </a>
+  <a name="_ZipDecrypter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _ZipDecrypter(pwd):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.zipfile.compressor_names">
+    
+  </a>
+  <a name="compressor_names">
+    
+  </a>
+  <div class="functionHeader">
+    compressor_names =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict[int, str]</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.zipfile._check_compression">
+    
+  </a>
+  <a name="_check_compression">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _check_compression(compression):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.zipfile._get_compressor">
+    
+  </a>
+  <a name="_get_compressor">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_compressor(compress_type, compresslevel=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.zipfile._get_decompressor">
+    
+  </a>
+  <a name="_get_decompressor">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_decompressor(compress_type):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.zipfile._parents">
+    
+  </a>
+  <a name="_parents">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _parents(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Given a path with elements separated by
+posixpath.sep, generate all parents of that path.
+
+&gt;&gt;&gt; list(_parents('b/d'))
+['b']
+&gt;&gt;&gt; list(_parents('/b/d/'))
+['/b']
+&gt;&gt;&gt; list(_parents('b/d/f/'))
+['b/d', 'b']
+&gt;&gt;&gt; list(_parents('b'))
+[]
+&gt;&gt;&gt; list(_parents(''))
+[]</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.zipfile._ancestry">
+    
+  </a>
+  <a name="_ancestry">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _ancestry(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Given a path with elements separated by
+posixpath.sep, generate all elements of that path
+
+&gt;&gt;&gt; list(_ancestry('b/d'))
+['b/d', 'b']
+&gt;&gt;&gt; list(_ancestry('/b/d/'))
+['/b/d', '/b']
+&gt;&gt;&gt; list(_ancestry('b/d/f/'))
+['b/d/f', 'b/d', 'b']
+&gt;&gt;&gt; list(_ancestry('b'))
+['b']
+&gt;&gt;&gt; list(_ancestry(''))
+[]</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.zipfile._difference">
+    
+  </a>
+  <a name="_difference">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _difference(minuend, subtrahend):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return items in minuend not in subtrahend, retaining order
+with O(1) lookup.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.zipfile.main">
+    
+  </a>
+  <a name="main">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    main(args=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

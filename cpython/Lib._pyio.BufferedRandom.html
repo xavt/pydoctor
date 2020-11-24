@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib._pyio.BufferedRandom : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib._pyio.html" class="code" data-type="Module">_pyio</a>.<a href="Lib._pyio.BufferedRandom.html" class="code" data-type="Class">BufferedRandom</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib._pyio.BufferedRandom(<a href="Lib._pyio.BufferedWriter.html" class="code" data-type="Class">BufferedWriter</a>, <a href="Lib._pyio.BufferedReader.html" class="code" data-type="Class">BufferedReader</a>):</code></p>
+        <p><a href="classIndex.html#Lib._pyio.BufferedRandom">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">A buffered interface to random access streams.
+
+The constructor creates a reader and writer for a seekable stream,
+raw, given in the first argument. If the buffer_size is omitted it
+defaults to DEFAULT_BUFFER_SIZE.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id159">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.BufferedRandom.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Create a new buffered reader using the given readable raw IO object.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.BufferedRandom.html#seek" class="code" data-type="Method">seek</a></td>
+    <td><span>Change stream position.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.BufferedRandom.html#tell" class="code" data-type="Method">tell</a></td>
+    <td><span>Return an int indicating the current stream position.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.BufferedRandom.html#truncate" class="code" data-type="Method">truncate</a></td>
+    <td><span>Truncate file to size bytes.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.BufferedRandom.html#read" class="code" data-type="Method">read</a></td>
+    <td><span>Read and return up to size bytes, where size is an int.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.BufferedRandom.html#readinto" class="code" data-type="Method">readinto</a></td>
+    <td><span>Read bytes into a pre-allocated bytes-like object b.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.BufferedRandom.html#peek" class="code" data-type="Method">peek</a></td>
+    <td><span>Returns buffered bytes without advancing the position.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.BufferedRandom.html#read1" class="code" data-type="Method">read1</a></td>
+    <td><span>Read up to size bytes with at most one read() system call, where size is an int.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.BufferedRandom.html#readinto1" class="code" data-type="Method">readinto1</a></td>
+    <td><span>Read bytes into buffer *b*, using at most one system call</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.BufferedRandom.html#write" class="code" data-type="Method">write</a></td>
+    <td><span>Write the given bytes buffer to the IO stream.</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib._pyio.BufferedWriter.html" class="code" data-type="Class">BufferedWriter</a>:
+          </p>
+          <table class="children sortable" id="id160">
+  
+  <tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib._pyio.BufferedWriter.html#buffer_size" class="code" data-type="Instance Variable">buffer_size</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.BufferedWriter.html#writable" class="code" data-type="Method">writable</a></td>
+    <td><span>Return a bool indicating whether object was opened for writing.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.BufferedWriter.html#flush" class="code" data-type="Method">flush</a></td>
+    <td><span>Flush write buffers, if applicable.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.BufferedWriter.html#close" class="code" data-type="Method">close</a></td>
+    <td><span>Flush and close the IO object.</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib._pyio.BufferedWriter.html#_write_buf" class="code" data-type="Instance Variable">_write_buf</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib._pyio.BufferedWriter.html#_write_lock" class="code" data-type="Instance Variable">_write_lock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.BufferedWriter.html#_flush_unlocked" class="code" data-type="Method">_flush_unlocked</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib._pyio._BufferedIOMixin.html" class="code" data-type="Class">_BufferedIOMixin</a> (via <a href="Lib._pyio.BufferedWriter.html" class="code" data-type="Class">BufferedWriter</a>):
+          </p>
+          <table class="children sortable" id="id161">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio._BufferedIOMixin.html#detach" class="code" data-type="Method">detach</a></td>
+    <td><span>Separate the underlying raw stream from the buffer and return it.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio._BufferedIOMixin.html#seekable" class="code" data-type="Method">seekable</a></td>
+    <td><span>Return a bool indicating whether object supports random access.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio._BufferedIOMixin.html#raw" class="code" data-type="Method">raw</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio._BufferedIOMixin.html#closed" class="code" data-type="Method">closed</a></td>
+    <td><span>closed: bool.  True iff the file has been closed.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio._BufferedIOMixin.html#name" class="code" data-type="Method">name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio._BufferedIOMixin.html#mode" class="code" data-type="Method">mode</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio._BufferedIOMixin.html#__getstate__" class="code" data-type="Method">__getstate__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio._BufferedIOMixin.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio._BufferedIOMixin.html#fileno" class="code" data-type="Method">fileno</a></td>
+    <td><span>Returns underlying file descriptor (an int) if one exists.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio._BufferedIOMixin.html#isatty" class="code" data-type="Method">isatty</a></td>
+    <td><span>Return a bool indicating whether this is an 'interactive' stream.</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib._pyio._BufferedIOMixin.html#_raw" class="code" data-type="Instance Variable">_raw</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib._pyio.BufferedIOBase.html" class="code" data-type="Class">BufferedIOBase</a> (via <a href="Lib._pyio.BufferedWriter.html" class="code" data-type="Class">BufferedWriter</a>, <a href="Lib._pyio._BufferedIOMixin.html" class="code" data-type="Class">_BufferedIOMixin</a>):
+          </p>
+          <table class="children sortable" id="id162">
+  
+  <tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.BufferedIOBase.html#_readinto" class="code" data-type="Method">_readinto</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib._pyio.IOBase.html" class="code" data-type="Class">IOBase</a> (via <a href="Lib._pyio.BufferedWriter.html" class="code" data-type="Class">BufferedWriter</a>, <a href="Lib._pyio._BufferedIOMixin.html" class="code" data-type="Class">_BufferedIOMixin</a>, <a href="Lib._pyio.BufferedIOBase.html" class="code" data-type="Class">BufferedIOBase</a>):
+          </p>
+          <table class="children sortable" id="id163">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#__del__" class="code" data-type="Method">__del__</a></td>
+    <td><span>Destructor.  Calls close().</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#readable" class="code" data-type="Method">readable</a></td>
+    <td><span>Return a bool indicating whether object was opened for reading.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#__enter__" class="code" data-type="Method">__enter__</a></td>
+    <td><span>Context management protocol.  Returns self (an instance of IOBase).</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#__exit__" class="code" data-type="Method">__exit__</a></td>
+    <td><span>Context management protocol.  Calls close()</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#readline" class="code" data-type="Method">readline</a></td>
+    <td><span>Read and return a line of bytes from the stream.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#__iter__" class="code" data-type="Method">__iter__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#__next__" class="code" data-type="Method">__next__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#readlines" class="code" data-type="Method">readlines</a></td>
+    <td><span>Return a list of lines from the stream.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#writelines" class="code" data-type="Method">writelines</a></td>
+    <td><span>Write a list of lines to the stream.</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#_unsupported" class="code" data-type="Method">_unsupported</a></td>
+    <td><span>Internal: raise an OSError exception for unsupported operations.</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib._pyio.IOBase.html#__closed" class="code" data-type="Instance Variable">__closed</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#_checkSeekable" class="code" data-type="Method">_checkSeekable</a></td>
+    <td><span>Internal: raise UnsupportedOperation if file is not seekable</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#_checkReadable" class="code" data-type="Method">_checkReadable</a></td>
+    <td><span>Internal: raise UnsupportedOperation if file is not readable</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#_checkWritable" class="code" data-type="Method">_checkWritable</a></td>
+    <td><span>Internal: raise UnsupportedOperation if file is not writable</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#_checkClosed" class="code" data-type="Method">_checkClosed</a></td>
+    <td><span>Internal: raise a ValueError if file is closed</span></td>
+  </tr>
+</table>
+          
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib._pyio.BufferedReader.html" class="code" data-type="Class">BufferedReader</a>:
+          </p>
+          <table class="children sortable" id="id164">
+  
+  <tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib._pyio.BufferedReader.html#buffer_size" class="code" data-type="Instance Variable">buffer_size</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.BufferedReader.html#readable" class="code" data-type="Method">readable</a></td>
+    <td><span>Return a bool indicating whether object was opened for reading.</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib._pyio.BufferedReader.html#_read_lock" class="code" data-type="Instance Variable">_read_lock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.BufferedReader.html#_reset_read_buf" class="code" data-type="Method">_reset_read_buf</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib._pyio.BufferedReader.html#_read_buf" class="code" data-type="Instance Variable">_read_buf</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib._pyio.BufferedReader.html#_read_pos" class="code" data-type="Instance Variable">_read_pos</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.BufferedReader.html#_read_unlocked" class="code" data-type="Method">_read_unlocked</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.BufferedReader.html#_peek_unlocked" class="code" data-type="Method">_peek_unlocked</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.BufferedReader.html#_readinto" class="code" data-type="Method">_readinto</a></td>
+    <td><span>Read data into *buf* with at most one system call.</span></td>
+  </tr>
+</table>
+          
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib._pyio._BufferedIOMixin.html" class="code" data-type="Class">_BufferedIOMixin</a> (via <a href="Lib._pyio.BufferedReader.html" class="code" data-type="Class">BufferedReader</a>):
+          </p>
+          <table class="children sortable" id="id165">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio._BufferedIOMixin.html#flush" class="code" data-type="Method">flush</a></td>
+    <td><span>Flush write buffers, if applicable.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio._BufferedIOMixin.html#close" class="code" data-type="Method">close</a></td>
+    <td><span>Flush and close the IO object.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio._BufferedIOMixin.html#detach" class="code" data-type="Method">detach</a></td>
+    <td><span>Separate the underlying raw stream from the buffer and return it.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio._BufferedIOMixin.html#seekable" class="code" data-type="Method">seekable</a></td>
+    <td><span>Return a bool indicating whether object supports random access.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio._BufferedIOMixin.html#raw" class="code" data-type="Method">raw</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio._BufferedIOMixin.html#closed" class="code" data-type="Method">closed</a></td>
+    <td><span>closed: bool.  True iff the file has been closed.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio._BufferedIOMixin.html#name" class="code" data-type="Method">name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio._BufferedIOMixin.html#mode" class="code" data-type="Method">mode</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio._BufferedIOMixin.html#__getstate__" class="code" data-type="Method">__getstate__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio._BufferedIOMixin.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio._BufferedIOMixin.html#fileno" class="code" data-type="Method">fileno</a></td>
+    <td><span>Returns underlying file descriptor (an int) if one exists.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio._BufferedIOMixin.html#isatty" class="code" data-type="Method">isatty</a></td>
+    <td><span>Return a bool indicating whether this is an 'interactive' stream.</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib._pyio._BufferedIOMixin.html#_raw" class="code" data-type="Instance Variable">_raw</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib._pyio.IOBase.html" class="code" data-type="Class">IOBase</a> (via <a href="Lib._pyio.BufferedReader.html" class="code" data-type="Class">BufferedReader</a>, <a href="Lib._pyio._BufferedIOMixin.html" class="code" data-type="Class">_BufferedIOMixin</a>, <a href="Lib._pyio.BufferedIOBase.html" class="code" data-type="Class">BufferedIOBase</a>):
+          </p>
+          <table class="children sortable" id="id166">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#__del__" class="code" data-type="Method">__del__</a></td>
+    <td><span>Destructor.  Calls close().</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#writable" class="code" data-type="Method">writable</a></td>
+    <td><span>Return a bool indicating whether object was opened for writing.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#__enter__" class="code" data-type="Method">__enter__</a></td>
+    <td><span>Context management protocol.  Returns self (an instance of IOBase).</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#__exit__" class="code" data-type="Method">__exit__</a></td>
+    <td><span>Context management protocol.  Calls close()</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#readline" class="code" data-type="Method">readline</a></td>
+    <td><span>Read and return a line of bytes from the stream.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#__iter__" class="code" data-type="Method">__iter__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#__next__" class="code" data-type="Method">__next__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#readlines" class="code" data-type="Method">readlines</a></td>
+    <td><span>Return a list of lines from the stream.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#writelines" class="code" data-type="Method">writelines</a></td>
+    <td><span>Write a list of lines to the stream.</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#_unsupported" class="code" data-type="Method">_unsupported</a></td>
+    <td><span>Internal: raise an OSError exception for unsupported operations.</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib._pyio.IOBase.html#__closed" class="code" data-type="Instance Variable">__closed</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#_checkSeekable" class="code" data-type="Method">_checkSeekable</a></td>
+    <td><span>Internal: raise UnsupportedOperation if file is not seekable</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#_checkReadable" class="code" data-type="Method">_checkReadable</a></td>
+    <td><span>Internal: raise UnsupportedOperation if file is not readable</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#_checkWritable" class="code" data-type="Method">_checkWritable</a></td>
+    <td><span>Internal: raise UnsupportedOperation if file is not writable</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#_checkClosed" class="code" data-type="Method">_checkClosed</a></td>
+    <td><span>Internal: raise a ValueError if file is closed</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib._pyio.BufferedRandom.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, raw, buffer_size=DEFAULT_BUFFER_SIZE):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib._pyio.BufferedWriter.html#__init__" class="code" data-type="Method">Lib._pyio.BufferedWriter.__init__</a></div>
+    
+    <div><p class="pre">Create a new buffered reader using the given readable raw IO object.
+        </p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib._pyio.BufferedRandom.seek">
+    
+  </a>
+  <a name="seek">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    seek(self, pos, whence=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib._pyio.BufferedWriter.html#seek" class="code" data-type="Method">Lib._pyio.BufferedWriter.seek</a></div>
+    
+    <div><p class="pre">Change stream position.
+
+Change the stream position to byte offset pos. Argument pos is
+interpreted relative to the position indicated by whence.  Values
+for whence are ints:
+
+* 0 -- start of stream (the default); offset should be zero or positive
+* 1 -- current stream position; offset may be negative
+* 2 -- end of stream; offset is usually negative
+Some operating systems / file systems could provide additional values.
+
+Return an int indicating the new absolute position.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib._pyio.BufferedRandom.tell">
+    
+  </a>
+  <a name="tell">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tell(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib._pyio.BufferedWriter.html#tell" class="code" data-type="Method">Lib._pyio.BufferedWriter.tell</a></div>
+    
+    <div><p class="pre">Return an int indicating the current stream position.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib._pyio.BufferedRandom.truncate">
+    
+  </a>
+  <a name="truncate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    truncate(self, pos=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib._pyio.BufferedWriter.html#truncate" class="code" data-type="Method">Lib._pyio.BufferedWriter.truncate</a></div>
+    
+    <div><p class="pre">Truncate file to size bytes.
+
+Size defaults to the current IO position as reported by tell().  Return
+the new size.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib._pyio.BufferedRandom.read">
+    
+  </a>
+  <a name="read">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    read(self, size=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib._pyio.BufferedIOBase.html#read" class="code" data-type="Method">Lib._pyio.BufferedIOBase.read</a></div>
+    
+    <div><p class="pre">Read and return up to size bytes, where size is an int.
+
+If the argument is omitted, None, or negative, reads and
+returns all data until EOF.
+
+If the argument is positive, and the underlying raw stream is
+not 'interactive', multiple raw reads may be issued to satisfy
+the byte count (unless EOF is reached first).  But for
+interactive raw streams (XXX and for pipes?), at most one raw
+read will be issued, and a short result does not imply that
+EOF is imminent.
+
+Returns an empty bytes array on EOF.
+
+Raises BlockingIOError if the underlying raw stream has no
+data at the moment.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib._pyio.BufferedRandom.readinto">
+    
+  </a>
+  <a name="readinto">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    readinto(self, b):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib._pyio.BufferedIOBase.html#readinto" class="code" data-type="Method">Lib._pyio.BufferedIOBase.readinto</a></div>
+    
+    <div><p class="pre">Read bytes into a pre-allocated bytes-like object b.
+
+Like read(), this may issue multiple reads to the underlying raw
+stream, unless the latter is 'interactive'.
+
+Returns an int representing the number of bytes read (0 for EOF).
+
+Raises BlockingIOError if the underlying raw stream has no
+data at the moment.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib._pyio.BufferedRandom.peek">
+    
+  </a>
+  <a name="peek">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    peek(self, size=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib._pyio.BufferedReader.html#peek" class="code" data-type="Method">Lib._pyio.BufferedReader.peek</a></div>
+    
+    <div><p class="pre">Returns buffered bytes without advancing the position.
+
+The argument indicates a desired minimal number of bytes; we
+do at most one raw read to satisfy it.  We never return more
+than self.buffer_size.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib._pyio.BufferedRandom.read1">
+    
+  </a>
+  <a name="read1">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    read1(self, size=(-1)):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib._pyio.BufferedIOBase.html#read1" class="code" data-type="Method">Lib._pyio.BufferedIOBase.read1</a></div>
+    
+    <div><p class="pre">Read up to size bytes with at most one read() system call,
+where size is an int.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib._pyio.BufferedRandom.readinto1">
+    
+  </a>
+  <a name="readinto1">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    readinto1(self, b):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib._pyio.BufferedIOBase.html#readinto1" class="code" data-type="Method">Lib._pyio.BufferedIOBase.readinto1</a></div>
+    
+    <div><p class="pre">Read bytes into buffer *b*, using at most one system call
+
+Returns an int representing the number of bytes read (0 for EOF).
+
+Raises BlockingIOError if the underlying raw stream has no
+data at the moment.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib._pyio.BufferedRandom.write">
+    
+  </a>
+  <a name="write">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    write(self, b):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib._pyio.BufferedWriter.html#write" class="code" data-type="Method">Lib._pyio.BufferedWriter.write</a></div>
+    
+    <div><p class="pre">Write the given bytes buffer to the IO stream.
+
+Return the number of bytes written, which is always the length of b
+in bytes.
+
+Raises BlockingIOError if the buffer is full and the
+underlying raw stream cannot accept more data at the moment.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

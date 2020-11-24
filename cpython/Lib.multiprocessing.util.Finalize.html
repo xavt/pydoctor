@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.multiprocessing.util.Finalize : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.multiprocessing.html" class="code" data-type="Package">multiprocessing</a>.<a href="Lib.multiprocessing.util.html" class="code" data-type="Module">util</a>.<a href="Lib.multiprocessing.util.Finalize.html" class="code" data-type="Class">Finalize</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.multiprocessing.util.Finalize(<span title="object">object</span>):</code></p>
+        <p><a href="classIndex.html#Lib.multiprocessing.util.Finalize">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Class which supports object finalization using weakrefs</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3273">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.util.Finalize.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.util.Finalize.html#__call__" class="code" data-type="Method">__call__</a></td>
+    <td><span>Run the callback unless it has already been called or cancelled</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.util.Finalize.html#cancel" class="code" data-type="Method">cancel</a></td>
+    <td><span>Cancel finalization of the object</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.util.Finalize.html#still_active" class="code" data-type="Method">still_active</a></td>
+    <td><span>Return whether this finalizer is still waiting to invoke callback</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.util.Finalize.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.util.Finalize.html#_weakref" class="code" data-type="Instance Variable">_weakref</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.util.Finalize.html#_callback" class="code" data-type="Instance Variable">_callback</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.util.Finalize.html#_args" class="code" data-type="Instance Variable">_args</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.util.Finalize.html#_kwargs" class="code" data-type="Instance Variable">_kwargs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.util.Finalize.html#_key" class="code" data-type="Instance Variable">_key</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.util.Finalize.html#_pid" class="code" data-type="Instance Variable">_pid</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.multiprocessing.util.Finalize.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, obj, callback, args=(), kwargs=None, exitpriority=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.multiprocessing.util.Finalize._weakref">
+    
+  </a>
+  <a name="_weakref">
+    
+  </a>
+  <div class="functionHeader">
+    _weakref =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.multiprocessing.util.Finalize._callback">
+    
+  </a>
+  <a name="_callback">
+    
+  </a>
+  <div class="functionHeader">
+    _callback =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.multiprocessing.util.Finalize._args">
+    
+  </a>
+  <a name="_args">
+    
+  </a>
+  <div class="functionHeader">
+    _args =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.multiprocessing.util.Finalize._kwargs">
+    
+  </a>
+  <a name="_kwargs">
+    
+  </a>
+  <div class="functionHeader">
+    _kwargs =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.multiprocessing.util.Finalize._key">
+    
+  </a>
+  <a name="_key">
+    
+  </a>
+  <div class="functionHeader">
+    _key =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.multiprocessing.util.Finalize._pid">
+    
+  </a>
+  <a name="_pid">
+    
+  </a>
+  <div class="functionHeader">
+    _pid =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.util.Finalize.__call__">
+    
+  </a>
+  <a name="__call__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __call__(self, wr=None, _finalizer_registry=_finalizer_registry, sub_debug=sub_debug, getpid=os.getpid):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Run the callback unless it has already been called or cancelled</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.util.Finalize.cancel">
+    
+  </a>
+  <a name="cancel">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    cancel(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Cancel finalization of the object</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.util.Finalize.still_active">
+    
+  </a>
+  <a name="still_active">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    still_active(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return whether this finalizer is still waiting to invoke callback</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.util.Finalize.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __repr__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

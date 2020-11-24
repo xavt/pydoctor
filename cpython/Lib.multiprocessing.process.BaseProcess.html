@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.multiprocessing.process.BaseProcess : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.multiprocessing.html" class="code" data-type="Package">multiprocessing</a>.<a href="Lib.multiprocessing.process.html" class="code" data-type="Module">process</a>.<a href="Lib.multiprocessing.process.BaseProcess.html" class="code" data-type="Class">BaseProcess</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.multiprocessing.process.BaseProcess(<span title="object">object</span>):</code></p><p>Known subclasses: <a href="Lib.multiprocessing.process._MainProcess.html" class="code" data-type="Class">Lib.multiprocessing.process._MainProcess</a>, <a href="Lib.multiprocessing.process._ParentProcess.html" class="code" data-type="Class">Lib.multiprocessing.process._ParentProcess</a></p>
+        <p><a href="classIndex.html#Lib.multiprocessing.process.BaseProcess">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Process objects represent activity that is run in a separate process
+
+The class is analogous to `threading.Thread`</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3223">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.process.BaseProcess.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.process.BaseProcess.html#daemon" class="code" data-type="Method">daemon</a></td>
+    <td><span>Set whether process is a daemon</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.process.BaseProcess.html#run" class="code" data-type="Method">run</a></td>
+    <td><span>Method to be run in sub-process; can be overridden in sub-class</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.process.BaseProcess.html#start" class="code" data-type="Method">start</a></td>
+    <td><span>Start child process</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.process.BaseProcess.html#terminate" class="code" data-type="Method">terminate</a></td>
+    <td><span>Terminate process; sends SIGTERM signal or uses TerminateProcess()</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.process.BaseProcess.html#kill" class="code" data-type="Method">kill</a></td>
+    <td><span>Terminate process; sends SIGKILL signal or uses TerminateProcess()</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.process.BaseProcess.html#join" class="code" data-type="Method">join</a></td>
+    <td><span>Wait until child process terminates</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.process.BaseProcess.html#is_alive" class="code" data-type="Method">is_alive</a></td>
+    <td><span>Return whether process is alive</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.process.BaseProcess.html#close" class="code" data-type="Method">close</a></td>
+    <td><span>Close the Process object.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.process.BaseProcess.html#name" class="code" data-type="Method">name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.process.BaseProcess.html#authkey" class="code" data-type="Method">authkey</a></td>
+    <td><span>Set authorization key of process</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.process.BaseProcess.html#exitcode" class="code" data-type="Method">exitcode</a></td>
+    <td><span>Return exit code of process or `None` if it has yet to stop</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.process.BaseProcess.html#ident" class="code" data-type="Method">ident</a></td>
+    <td><span>Return identifier (PID) of process or `None` if it has yet to start</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.process.BaseProcess.html#sentinel" class="code" data-type="Method">sentinel</a></td>
+    <td><span>Return a file descriptor (Unix) or handle (Windows) suitable for waiting for process termination.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.process.BaseProcess.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.process.BaseProcess.html#_Popen" class="code" data-type="Method">_Popen</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.process.BaseProcess.html#_identity" class="code" data-type="Instance Variable">_identity</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.process.BaseProcess.html#_config" class="code" data-type="Instance Variable">_config</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.process.BaseProcess.html#_parent_pid" class="code" data-type="Instance Variable">_parent_pid</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.process.BaseProcess.html#_parent_name" class="code" data-type="Instance Variable">_parent_name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.process.BaseProcess.html#_popen" class="code" data-type="Instance Variable">_popen</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.process.BaseProcess.html#_closed" class="code" data-type="Instance Variable">_closed</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.process.BaseProcess.html#_target" class="code" data-type="Instance Variable">_target</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.process.BaseProcess.html#_args" class="code" data-type="Instance Variable">_args</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.process.BaseProcess.html#_kwargs" class="code" data-type="Instance Variable">_kwargs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.process.BaseProcess.html#_name" class="code" data-type="Instance Variable">_name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.process.BaseProcess.html#_check_closed" class="code" data-type="Method">_check_closed</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.process.BaseProcess.html#_sentinel" class="code" data-type="Instance Variable">_sentinel</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.process.BaseProcess.html#_bootstrap" class="code" data-type="Method">_bootstrap</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod private">
+  
+  <a name="Lib.multiprocessing.process.BaseProcess._Popen">
+    
+  </a>
+  <a name="_Popen">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _Popen(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.process.BaseProcess.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, group=None, target=None, name=None, args=(), kwargs={}):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.multiprocessing.process._MainProcess.html" class="code" data-type="Class">Lib.multiprocessing.process._MainProcess</a>, <a href="Lib.multiprocessing.process._ParentProcess.html" class="code" data-type="Class">Lib.multiprocessing.process._ParentProcess</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.multiprocessing.process.BaseProcess._identity">
+    
+  </a>
+  <a name="_identity">
+    
+  </a>
+  <div class="functionHeader">
+    _identity =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.multiprocessing.process._MainProcess.html" class="code" data-type="Class">Lib.multiprocessing.process._MainProcess</a>, <a href="Lib.multiprocessing.process._ParentProcess.html" class="code" data-type="Class">Lib.multiprocessing.process._ParentProcess</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.multiprocessing.process.BaseProcess._config">
+    
+  </a>
+  <a name="_config">
+    
+  </a>
+  <div class="functionHeader">
+    _config =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.multiprocessing.process._MainProcess.html" class="code" data-type="Class">Lib.multiprocessing.process._MainProcess</a>, <a href="Lib.multiprocessing.process._ParentProcess.html" class="code" data-type="Class">Lib.multiprocessing.process._ParentProcess</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.multiprocessing.process.BaseProcess._parent_pid">
+    
+  </a>
+  <a name="_parent_pid">
+    
+  </a>
+  <div class="functionHeader">
+    _parent_pid =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.multiprocessing.process._MainProcess.html" class="code" data-type="Class">Lib.multiprocessing.process._MainProcess</a>, <a href="Lib.multiprocessing.process._ParentProcess.html" class="code" data-type="Class">Lib.multiprocessing.process._ParentProcess</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.multiprocessing.process.BaseProcess._parent_name">
+    
+  </a>
+  <a name="_parent_name">
+    
+  </a>
+  <div class="functionHeader">
+    _parent_name =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.multiprocessing.process.BaseProcess._popen">
+    
+  </a>
+  <a name="_popen">
+    
+  </a>
+  <div class="functionHeader">
+    _popen =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.multiprocessing.process._MainProcess.html" class="code" data-type="Class">Lib.multiprocessing.process._MainProcess</a>, <a href="Lib.multiprocessing.process._ParentProcess.html" class="code" data-type="Class">Lib.multiprocessing.process._ParentProcess</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.multiprocessing.process.BaseProcess._closed">
+    
+  </a>
+  <a name="_closed">
+    
+  </a>
+  <div class="functionHeader">
+    _closed =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.multiprocessing.process._MainProcess.html" class="code" data-type="Class">Lib.multiprocessing.process._MainProcess</a>, <a href="Lib.multiprocessing.process._ParentProcess.html" class="code" data-type="Class">Lib.multiprocessing.process._ParentProcess</a></div>
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.multiprocessing.process.BaseProcess._target">
+    
+  </a>
+  <a name="_target">
+    
+  </a>
+  <div class="functionHeader">
+    _target =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.multiprocessing.process.BaseProcess._args">
+    
+  </a>
+  <a name="_args">
+    
+  </a>
+  <div class="functionHeader">
+    _args =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.multiprocessing.process.BaseProcess._kwargs">
+    
+  </a>
+  <a name="_kwargs">
+    
+  </a>
+  <div class="functionHeader">
+    _kwargs =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.multiprocessing.process.BaseProcess._name">
+    
+  </a>
+  <a name="_name">
+    
+  </a>
+  <div class="functionHeader">
+    _name =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.multiprocessing.process._MainProcess.html" class="code" data-type="Class">Lib.multiprocessing.process._MainProcess</a>, <a href="Lib.multiprocessing.process._ParentProcess.html" class="code" data-type="Class">Lib.multiprocessing.process._ParentProcess</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.process.BaseProcess.daemon">
+    
+  </a>
+  <a name="daemon">
+    
+  </a>
+  <div class="functionHeader">
+    @daemon.setter<br />
+    def
+    daemon(self, daemonic):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set whether process is a daemon</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.multiprocessing.process.BaseProcess._check_closed">
+    
+  </a>
+  <a name="_check_closed">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _check_closed(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.process.BaseProcess.run">
+    
+  </a>
+  <a name="run">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    run(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Method to be run in sub-process; can be overridden in sub-class</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.process.BaseProcess.start">
+    
+  </a>
+  <a name="start">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    start(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Start child process</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.multiprocessing.process.BaseProcess._sentinel">
+    
+  </a>
+  <a name="_sentinel">
+    
+  </a>
+  <div class="functionHeader">
+    _sentinel =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.multiprocessing.process._ParentProcess.html" class="code" data-type="Class">Lib.multiprocessing.process._ParentProcess</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.process.BaseProcess.terminate">
+    
+  </a>
+  <a name="terminate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    terminate(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Terminate process; sends SIGTERM signal or uses TerminateProcess()</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.process.BaseProcess.kill">
+    
+  </a>
+  <a name="kill">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    kill(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Terminate process; sends SIGKILL signal or uses TerminateProcess()</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.process.BaseProcess.join">
+    
+  </a>
+  <a name="join">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    join(self, timeout=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.multiprocessing.process._ParentProcess.html" class="code" data-type="Class">Lib.multiprocessing.process._ParentProcess</a></div>
+    
+    <div><p class="pre">Wait until child process terminates</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.process.BaseProcess.is_alive">
+    
+  </a>
+  <a name="is_alive">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_alive(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.multiprocessing.process._ParentProcess.html" class="code" data-type="Class">Lib.multiprocessing.process._ParentProcess</a></div>
+    
+    <div><p class="pre">Return whether process is alive</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.process.BaseProcess.close">
+    
+  </a>
+  <a name="close">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    close(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.multiprocessing.process._MainProcess.html" class="code" data-type="Class">Lib.multiprocessing.process._MainProcess</a></div>
+    
+    <div><p class="pre">Close the Process object.
+
+This method releases resources held by the Process object.  It is
+an error to call this method if the child process is still running.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.process.BaseProcess.name">
+    
+  </a>
+  <a name="name">
+    
+  </a>
+  <div class="functionHeader">
+    @name.setter<br />
+    def
+    name(self, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.process.BaseProcess.authkey">
+    
+  </a>
+  <a name="authkey">
+    
+  </a>
+  <div class="functionHeader">
+    @authkey.setter<br />
+    def
+    authkey(self, authkey):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set authorization key of process</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.process.BaseProcess.exitcode">
+    
+  </a>
+  <a name="exitcode">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    exitcode(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return exit code of process or `None` if it has yet to stop</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.process.BaseProcess.ident">
+    
+  </a>
+  <a name="ident">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    ident(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.multiprocessing.process._ParentProcess.html" class="code" data-type="Class">Lib.multiprocessing.process._ParentProcess</a></div>
+    
+    <div><p class="pre">Return identifier (PID) of process or `None` if it has yet to start</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.process.BaseProcess.sentinel">
+    
+  </a>
+  <a name="sentinel">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    sentinel(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a file descriptor (Unix) or handle (Windows) suitable for
+waiting for process termination.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.process.BaseProcess.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __repr__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.multiprocessing.process.BaseProcess._bootstrap">
+    
+  </a>
+  <a name="_bootstrap">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _bootstrap(self, parent_sentinel=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

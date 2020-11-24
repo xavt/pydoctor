@@ -1,0 +1,1687 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.telnetlib : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.telnetlib.html" class="code" data-type="Module">telnetlib</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">TELNET client class.
+
+Based on RFC 854: TELNET Protocol Specification, by J. Postel and
+J. Reynolds
+
+Example:
+
+&gt;&gt;&gt; from telnetlib import Telnet
+&gt;&gt;&gt; tn = Telnet('www.python.org', 79)   # connect to finger port
+&gt;&gt;&gt; tn.write(b'guido\r\n')
+&gt;&gt;&gt; print(tn.read_all())
+Login       Name               TTY         Idle    When    Where
+guido    Guido van Rossum      pts/2        &lt;Dec  2 11:10&gt; snag.cnri.reston..
+
+&gt;&gt;&gt;
+
+Note that read_all() won't read until eof -- it just reads some data
+-- but it guarantees to read at least one byte unless EOF is hit.
+
+It is possible to pass a Telnet object to a selector in order to wait until
+more data is available.  Note that in this case, read_eager() may return b''
+even if there was data on the socket, because the protocol negotiation may have
+eaten the data.  This is why EOFError is needed in some cases to distinguish
+between "no data" and "connection closed" (since the socket also appears ready
+for reading when it is closed).
+
+To do:
+- option negotiation
+- timeout should be intrinsic to the connection object instead of an
+  option on one of the read calls only</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3700">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#DEBUGLEVEL" class="code" data-type="Variable">DEBUGLEVEL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#TELNET_PORT" class="code" data-type="Variable">TELNET_PORT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#IAC" class="code" data-type="Variable">IAC</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#DONT" class="code" data-type="Variable">DONT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#DO" class="code" data-type="Variable">DO</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#WONT" class="code" data-type="Variable">WONT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#WILL" class="code" data-type="Variable">WILL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#theNULL" class="code" data-type="Variable">theNULL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#SE" class="code" data-type="Variable">SE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#NOP" class="code" data-type="Variable">NOP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#DM" class="code" data-type="Variable">DM</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#BRK" class="code" data-type="Variable">BRK</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#IP" class="code" data-type="Variable">IP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#AO" class="code" data-type="Variable">AO</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#AYT" class="code" data-type="Variable">AYT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#EC" class="code" data-type="Variable">EC</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#EL" class="code" data-type="Variable">EL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#GA" class="code" data-type="Variable">GA</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#SB" class="code" data-type="Variable">SB</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#BINARY" class="code" data-type="Variable">BINARY</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#ECHO" class="code" data-type="Variable">ECHO</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#RCP" class="code" data-type="Variable">RCP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#SGA" class="code" data-type="Variable">SGA</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#NAMS" class="code" data-type="Variable">NAMS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#STATUS" class="code" data-type="Variable">STATUS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#TM" class="code" data-type="Variable">TM</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#RCTE" class="code" data-type="Variable">RCTE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#NAOL" class="code" data-type="Variable">NAOL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#NAOP" class="code" data-type="Variable">NAOP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#NAOCRD" class="code" data-type="Variable">NAOCRD</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#NAOHTS" class="code" data-type="Variable">NAOHTS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#NAOHTD" class="code" data-type="Variable">NAOHTD</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#NAOFFD" class="code" data-type="Variable">NAOFFD</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#NAOVTS" class="code" data-type="Variable">NAOVTS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#NAOVTD" class="code" data-type="Variable">NAOVTD</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#NAOLFD" class="code" data-type="Variable">NAOLFD</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#XASCII" class="code" data-type="Variable">XASCII</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#LOGOUT" class="code" data-type="Variable">LOGOUT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#BM" class="code" data-type="Variable">BM</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#DET" class="code" data-type="Variable">DET</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#SUPDUP" class="code" data-type="Variable">SUPDUP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#SUPDUPOUTPUT" class="code" data-type="Variable">SUPDUPOUTPUT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#SNDLOC" class="code" data-type="Variable">SNDLOC</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#TTYPE" class="code" data-type="Variable">TTYPE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#EOR" class="code" data-type="Variable">EOR</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#TUID" class="code" data-type="Variable">TUID</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#OUTMRK" class="code" data-type="Variable">OUTMRK</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#TTYLOC" class="code" data-type="Variable">TTYLOC</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#VT3270REGIME" class="code" data-type="Variable">VT3270REGIME</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#X3PAD" class="code" data-type="Variable">X3PAD</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#NAWS" class="code" data-type="Variable">NAWS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#TSPEED" class="code" data-type="Variable">TSPEED</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#LFLOW" class="code" data-type="Variable">LFLOW</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#LINEMODE" class="code" data-type="Variable">LINEMODE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#XDISPLOC" class="code" data-type="Variable">XDISPLOC</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#OLD_ENVIRON" class="code" data-type="Variable">OLD_ENVIRON</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#AUTHENTICATION" class="code" data-type="Variable">AUTHENTICATION</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#ENCRYPT" class="code" data-type="Variable">ENCRYPT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#NEW_ENVIRON" class="code" data-type="Variable">NEW_ENVIRON</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#TN3270E" class="code" data-type="Variable">TN3270E</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#XAUTH" class="code" data-type="Variable">XAUTH</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#CHARSET" class="code" data-type="Variable">CHARSET</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#RSP" class="code" data-type="Variable">RSP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#COM_PORT_OPTION" class="code" data-type="Variable">COM_PORT_OPTION</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#SUPPRESS_LOCAL_ECHO" class="code" data-type="Variable">SUPPRESS_LOCAL_ECHO</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#TLS" class="code" data-type="Variable">TLS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#KERMIT" class="code" data-type="Variable">KERMIT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#SEND_URL" class="code" data-type="Variable">SEND_URL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#FORWARD_X" class="code" data-type="Variable">FORWARD_X</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#PRAGMA_LOGON" class="code" data-type="Variable">PRAGMA_LOGON</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#SSPI_LOGON" class="code" data-type="Variable">SSPI_LOGON</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#PRAGMA_HEARTBEAT" class="code" data-type="Variable">PRAGMA_HEARTBEAT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#EXOPL" class="code" data-type="Variable">EXOPL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.telnetlib.html#NOOPT" class="code" data-type="Variable">NOOPT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.telnetlib.Telnet.html" class="code" data-type="Class">Telnet</a></td>
+    <td><span>Telnet interface class.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.telnetlib.html#test" class="code" data-type="Function">test</a></td>
+    <td><span>Test program for telnetlib.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.telnetlib.DEBUGLEVEL">
+    
+  </a>
+  <a name="DEBUGLEVEL">
+    
+  </a>
+  <div class="functionHeader">
+    DEBUGLEVEL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.TELNET_PORT">
+    
+  </a>
+  <a name="TELNET_PORT">
+    
+  </a>
+  <div class="functionHeader">
+    TELNET_PORT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.IAC">
+    
+  </a>
+  <a name="IAC">
+    
+  </a>
+  <div class="functionHeader">
+    IAC =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.DONT">
+    
+  </a>
+  <a name="DONT">
+    
+  </a>
+  <div class="functionHeader">
+    DONT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.DO">
+    
+  </a>
+  <a name="DO">
+    
+  </a>
+  <div class="functionHeader">
+    DO =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.WONT">
+    
+  </a>
+  <a name="WONT">
+    
+  </a>
+  <div class="functionHeader">
+    WONT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.WILL">
+    
+  </a>
+  <a name="WILL">
+    
+  </a>
+  <div class="functionHeader">
+    WILL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.theNULL">
+    
+  </a>
+  <a name="theNULL">
+    
+  </a>
+  <div class="functionHeader">
+    theNULL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.SE">
+    
+  </a>
+  <a name="SE">
+    
+  </a>
+  <div class="functionHeader">
+    SE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.NOP">
+    
+  </a>
+  <a name="NOP">
+    
+  </a>
+  <div class="functionHeader">
+    NOP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.DM">
+    
+  </a>
+  <a name="DM">
+    
+  </a>
+  <div class="functionHeader">
+    DM =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.BRK">
+    
+  </a>
+  <a name="BRK">
+    
+  </a>
+  <div class="functionHeader">
+    BRK =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.IP">
+    
+  </a>
+  <a name="IP">
+    
+  </a>
+  <div class="functionHeader">
+    IP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.AO">
+    
+  </a>
+  <a name="AO">
+    
+  </a>
+  <div class="functionHeader">
+    AO =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.AYT">
+    
+  </a>
+  <a name="AYT">
+    
+  </a>
+  <div class="functionHeader">
+    AYT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.EC">
+    
+  </a>
+  <a name="EC">
+    
+  </a>
+  <div class="functionHeader">
+    EC =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.EL">
+    
+  </a>
+  <a name="EL">
+    
+  </a>
+  <div class="functionHeader">
+    EL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.GA">
+    
+  </a>
+  <a name="GA">
+    
+  </a>
+  <div class="functionHeader">
+    GA =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.SB">
+    
+  </a>
+  <a name="SB">
+    
+  </a>
+  <div class="functionHeader">
+    SB =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.BINARY">
+    
+  </a>
+  <a name="BINARY">
+    
+  </a>
+  <div class="functionHeader">
+    BINARY =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.ECHO">
+    
+  </a>
+  <a name="ECHO">
+    
+  </a>
+  <div class="functionHeader">
+    ECHO =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.RCP">
+    
+  </a>
+  <a name="RCP">
+    
+  </a>
+  <div class="functionHeader">
+    RCP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.SGA">
+    
+  </a>
+  <a name="SGA">
+    
+  </a>
+  <div class="functionHeader">
+    SGA =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.NAMS">
+    
+  </a>
+  <a name="NAMS">
+    
+  </a>
+  <div class="functionHeader">
+    NAMS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.STATUS">
+    
+  </a>
+  <a name="STATUS">
+    
+  </a>
+  <div class="functionHeader">
+    STATUS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.TM">
+    
+  </a>
+  <a name="TM">
+    
+  </a>
+  <div class="functionHeader">
+    TM =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.RCTE">
+    
+  </a>
+  <a name="RCTE">
+    
+  </a>
+  <div class="functionHeader">
+    RCTE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.NAOL">
+    
+  </a>
+  <a name="NAOL">
+    
+  </a>
+  <div class="functionHeader">
+    NAOL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.NAOP">
+    
+  </a>
+  <a name="NAOP">
+    
+  </a>
+  <div class="functionHeader">
+    NAOP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.NAOCRD">
+    
+  </a>
+  <a name="NAOCRD">
+    
+  </a>
+  <div class="functionHeader">
+    NAOCRD =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.NAOHTS">
+    
+  </a>
+  <a name="NAOHTS">
+    
+  </a>
+  <div class="functionHeader">
+    NAOHTS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.NAOHTD">
+    
+  </a>
+  <a name="NAOHTD">
+    
+  </a>
+  <div class="functionHeader">
+    NAOHTD =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.NAOFFD">
+    
+  </a>
+  <a name="NAOFFD">
+    
+  </a>
+  <div class="functionHeader">
+    NAOFFD =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.NAOVTS">
+    
+  </a>
+  <a name="NAOVTS">
+    
+  </a>
+  <div class="functionHeader">
+    NAOVTS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.NAOVTD">
+    
+  </a>
+  <a name="NAOVTD">
+    
+  </a>
+  <div class="functionHeader">
+    NAOVTD =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.NAOLFD">
+    
+  </a>
+  <a name="NAOLFD">
+    
+  </a>
+  <div class="functionHeader">
+    NAOLFD =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.XASCII">
+    
+  </a>
+  <a name="XASCII">
+    
+  </a>
+  <div class="functionHeader">
+    XASCII =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.LOGOUT">
+    
+  </a>
+  <a name="LOGOUT">
+    
+  </a>
+  <div class="functionHeader">
+    LOGOUT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.BM">
+    
+  </a>
+  <a name="BM">
+    
+  </a>
+  <div class="functionHeader">
+    BM =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.DET">
+    
+  </a>
+  <a name="DET">
+    
+  </a>
+  <div class="functionHeader">
+    DET =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.SUPDUP">
+    
+  </a>
+  <a name="SUPDUP">
+    
+  </a>
+  <div class="functionHeader">
+    SUPDUP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.SUPDUPOUTPUT">
+    
+  </a>
+  <a name="SUPDUPOUTPUT">
+    
+  </a>
+  <div class="functionHeader">
+    SUPDUPOUTPUT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.SNDLOC">
+    
+  </a>
+  <a name="SNDLOC">
+    
+  </a>
+  <div class="functionHeader">
+    SNDLOC =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.TTYPE">
+    
+  </a>
+  <a name="TTYPE">
+    
+  </a>
+  <div class="functionHeader">
+    TTYPE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.EOR">
+    
+  </a>
+  <a name="EOR">
+    
+  </a>
+  <div class="functionHeader">
+    EOR =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.TUID">
+    
+  </a>
+  <a name="TUID">
+    
+  </a>
+  <div class="functionHeader">
+    TUID =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.OUTMRK">
+    
+  </a>
+  <a name="OUTMRK">
+    
+  </a>
+  <div class="functionHeader">
+    OUTMRK =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.TTYLOC">
+    
+  </a>
+  <a name="TTYLOC">
+    
+  </a>
+  <div class="functionHeader">
+    TTYLOC =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.VT3270REGIME">
+    
+  </a>
+  <a name="VT3270REGIME">
+    
+  </a>
+  <div class="functionHeader">
+    VT3270REGIME =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.X3PAD">
+    
+  </a>
+  <a name="X3PAD">
+    
+  </a>
+  <div class="functionHeader">
+    X3PAD =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.NAWS">
+    
+  </a>
+  <a name="NAWS">
+    
+  </a>
+  <div class="functionHeader">
+    NAWS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.TSPEED">
+    
+  </a>
+  <a name="TSPEED">
+    
+  </a>
+  <div class="functionHeader">
+    TSPEED =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.LFLOW">
+    
+  </a>
+  <a name="LFLOW">
+    
+  </a>
+  <div class="functionHeader">
+    LFLOW =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.LINEMODE">
+    
+  </a>
+  <a name="LINEMODE">
+    
+  </a>
+  <div class="functionHeader">
+    LINEMODE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.XDISPLOC">
+    
+  </a>
+  <a name="XDISPLOC">
+    
+  </a>
+  <div class="functionHeader">
+    XDISPLOC =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.OLD_ENVIRON">
+    
+  </a>
+  <a name="OLD_ENVIRON">
+    
+  </a>
+  <div class="functionHeader">
+    OLD_ENVIRON =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.AUTHENTICATION">
+    
+  </a>
+  <a name="AUTHENTICATION">
+    
+  </a>
+  <div class="functionHeader">
+    AUTHENTICATION =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.ENCRYPT">
+    
+  </a>
+  <a name="ENCRYPT">
+    
+  </a>
+  <div class="functionHeader">
+    ENCRYPT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.NEW_ENVIRON">
+    
+  </a>
+  <a name="NEW_ENVIRON">
+    
+  </a>
+  <div class="functionHeader">
+    NEW_ENVIRON =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.TN3270E">
+    
+  </a>
+  <a name="TN3270E">
+    
+  </a>
+  <div class="functionHeader">
+    TN3270E =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.XAUTH">
+    
+  </a>
+  <a name="XAUTH">
+    
+  </a>
+  <div class="functionHeader">
+    XAUTH =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.CHARSET">
+    
+  </a>
+  <a name="CHARSET">
+    
+  </a>
+  <div class="functionHeader">
+    CHARSET =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.RSP">
+    
+  </a>
+  <a name="RSP">
+    
+  </a>
+  <div class="functionHeader">
+    RSP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.COM_PORT_OPTION">
+    
+  </a>
+  <a name="COM_PORT_OPTION">
+    
+  </a>
+  <div class="functionHeader">
+    COM_PORT_OPTION =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.SUPPRESS_LOCAL_ECHO">
+    
+  </a>
+  <a name="SUPPRESS_LOCAL_ECHO">
+    
+  </a>
+  <div class="functionHeader">
+    SUPPRESS_LOCAL_ECHO =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.TLS">
+    
+  </a>
+  <a name="TLS">
+    
+  </a>
+  <div class="functionHeader">
+    TLS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.KERMIT">
+    
+  </a>
+  <a name="KERMIT">
+    
+  </a>
+  <div class="functionHeader">
+    KERMIT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.SEND_URL">
+    
+  </a>
+  <a name="SEND_URL">
+    
+  </a>
+  <div class="functionHeader">
+    SEND_URL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.FORWARD_X">
+    
+  </a>
+  <a name="FORWARD_X">
+    
+  </a>
+  <div class="functionHeader">
+    FORWARD_X =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.PRAGMA_LOGON">
+    
+  </a>
+  <a name="PRAGMA_LOGON">
+    
+  </a>
+  <div class="functionHeader">
+    PRAGMA_LOGON =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.SSPI_LOGON">
+    
+  </a>
+  <a name="SSPI_LOGON">
+    
+  </a>
+  <div class="functionHeader">
+    SSPI_LOGON =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.PRAGMA_HEARTBEAT">
+    
+  </a>
+  <a name="PRAGMA_HEARTBEAT">
+    
+  </a>
+  <div class="functionHeader">
+    PRAGMA_HEARTBEAT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.EXOPL">
+    
+  </a>
+  <a name="EXOPL">
+    
+  </a>
+  <div class="functionHeader">
+    EXOPL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.telnetlib.NOOPT">
+    
+  </a>
+  <a name="NOOPT">
+    
+  </a>
+  <div class="functionHeader">
+    NOOPT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.telnetlib.test">
+    
+  </a>
+  <a name="test">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Test program for telnetlib.
+
+Usage: python telnetlib.py [-d] ... [host [port]]
+
+Default host is localhost; default port is 23.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

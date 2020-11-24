@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.email.errors : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.email.html" class="code" data-type="Package">email</a>.<a href="Lib.email.errors.html" class="code" data-type="Module">errors</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">email package exception classes.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id1263">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.errors.MessageError.html" class="code" data-type="Class">MessageError</a></td>
+    <td><span>Base class for errors in the email package.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.errors.MessageParseError.html" class="code" data-type="Class">MessageParseError</a></td>
+    <td><span>Base class for message parsing errors.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.errors.HeaderParseError.html" class="code" data-type="Class">HeaderParseError</a></td>
+    <td><span>Error while parsing headers.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.errors.BoundaryError.html" class="code" data-type="Class">BoundaryError</a></td>
+    <td><span>Couldn't find terminating boundary.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.errors.MultipartConversionError.html" class="code" data-type="Class">MultipartConversionError</a></td>
+    <td><span>Conversion to a multipart is prohibited.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.errors.CharsetError.html" class="code" data-type="Class">CharsetError</a></td>
+    <td><span>An illegal charset was given.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.errors.MessageDefect.html" class="code" data-type="Class">MessageDefect</a></td>
+    <td><span>Base class for a message defect.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.errors.NoBoundaryInMultipartDefect.html" class="code" data-type="Class">NoBoundaryInMultipartDefect</a></td>
+    <td><span>A message claimed to be a multipart but had no boundary parameter.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.errors.StartBoundaryNotFoundDefect.html" class="code" data-type="Class">StartBoundaryNotFoundDefect</a></td>
+    <td><span>The claimed start boundary was never found.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.errors.CloseBoundaryNotFoundDefect.html" class="code" data-type="Class">CloseBoundaryNotFoundDefect</a></td>
+    <td><span>A start boundary was found, but not the corresponding close boundary.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.errors.FirstHeaderLineIsContinuationDefect.html" class="code" data-type="Class">FirstHeaderLineIsContinuationDefect</a></td>
+    <td><span>A message had a continuation line as its first header line.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.errors.MisplacedEnvelopeHeaderDefect.html" class="code" data-type="Class">MisplacedEnvelopeHeaderDefect</a></td>
+    <td><span>A 'Unix-from' header was found in the middle of a header block.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.errors.MissingHeaderBodySeparatorDefect.html" class="code" data-type="Class">MissingHeaderBodySeparatorDefect</a></td>
+    <td><span>Found line with no leading whitespace and no colon before blank line.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.errors.MultipartInvariantViolationDefect.html" class="code" data-type="Class">MultipartInvariantViolationDefect</a></td>
+    <td><span>A message claimed to be a multipart but no subparts were found.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.errors.InvalidMultipartContentTransferEncodingDefect.html" class="code" data-type="Class">InvalidMultipartContentTransferEncodingDefect</a></td>
+    <td><span>An invalid content transfer encoding was set on the multipart itself.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.errors.UndecodableBytesDefect.html" class="code" data-type="Class">UndecodableBytesDefect</a></td>
+    <td><span>Header contained bytes that could not be decoded</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.errors.InvalidBase64PaddingDefect.html" class="code" data-type="Class">InvalidBase64PaddingDefect</a></td>
+    <td><span>base64 encoded sequence had an incorrect length</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.errors.InvalidBase64CharactersDefect.html" class="code" data-type="Class">InvalidBase64CharactersDefect</a></td>
+    <td><span>base64 encoded sequence had characters not in base64 alphabet</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.errors.InvalidBase64LengthDefect.html" class="code" data-type="Class">InvalidBase64LengthDefect</a></td>
+    <td><span>base64 encoded sequence had invalid length (1 mod 4)</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.errors.HeaderDefect.html" class="code" data-type="Class">HeaderDefect</a></td>
+    <td><span>Base class for a header defect.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.errors.InvalidHeaderDefect.html" class="code" data-type="Class">InvalidHeaderDefect</a></td>
+    <td><span>Header is not valid, message gives details.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.errors.HeaderMissingRequiredValue.html" class="code" data-type="Class">HeaderMissingRequiredValue</a></td>
+    <td><span>A header that must have a value had none</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.errors.NonPrintableDefect.html" class="code" data-type="Class">NonPrintableDefect</a></td>
+    <td><span>ASCII characters outside the ascii-printable range found</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.errors.ObsoleteHeaderDefect.html" class="code" data-type="Class">ObsoleteHeaderDefect</a></td>
+    <td><span>Header uses syntax declared obsolete by RFC 5322</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.errors.NonASCIILocalPartDefect.html" class="code" data-type="Class">NonASCIILocalPartDefect</a></td>
+    <td><span>local_part contains non-ASCII characters</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.errors.InvalidDateDefect.html" class="code" data-type="Class">InvalidDateDefect</a></td>
+    <td><span>Header has unparseable or invalid date</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

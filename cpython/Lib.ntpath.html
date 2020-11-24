@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.ntpath : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.ntpath.html" class="code" data-type="Module">ntpath</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Common pathname manipulations, WindowsNT/95 version.
+
+Instead of importing this module directly, import os and refer to this
+module as os.path.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3289">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ntpath.html#curdir" class="code" data-type="Variable">curdir</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ntpath.html#pardir" class="code" data-type="Variable">pardir</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ntpath.html#extsep" class="code" data-type="Variable">extsep</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ntpath.html#sep" class="code" data-type="Variable">sep</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ntpath.html#pathsep" class="code" data-type="Variable">pathsep</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ntpath.html#altsep" class="code" data-type="Variable">altsep</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ntpath.html#defpath" class="code" data-type="Variable">defpath</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ntpath.html#devnull" class="code" data-type="Variable">devnull</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ntpath.html#normcase" class="code" data-type="Function">normcase</a></td>
+    <td><span>Normalize case of pathname.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ntpath.html#isabs" class="code" data-type="Function">isabs</a></td>
+    <td><span>Test whether a path is absolute</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ntpath.html#join" class="code" data-type="Function">join</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ntpath.html#splitdrive" class="code" data-type="Function">splitdrive</a></td>
+    <td><span>Split a pathname into drive/UNC sharepoint and relative path specifiers. Returns a 2-tuple (drive_or_unc, path); either part may be empty.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ntpath.html#split" class="code" data-type="Function">split</a></td>
+    <td><span>Split a pathname.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ntpath.html#splitext" class="code" data-type="Function">splitext</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ntpath.html#basename" class="code" data-type="Function">basename</a></td>
+    <td><span>Returns the final component of a pathname</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ntpath.html#dirname" class="code" data-type="Function">dirname</a></td>
+    <td><span>Returns the directory component of a pathname</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ntpath.html#islink" class="code" data-type="Function">islink</a></td>
+    <td><span>Test whether a path is a symbolic link. This will always return false for Windows prior to 6.0.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ntpath.html#lexists" class="code" data-type="Function">lexists</a></td>
+    <td><span>Test whether a path exists.  Returns True for broken symbolic links</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ntpath.html#ismount" class="code" data-type="Function">ismount</a></td>
+    <td><span>Test whether a path is a mount point (a drive root, the root of a share, or a mounted volume)</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ntpath.html#expanduser" class="code" data-type="Function">expanduser</a></td>
+    <td><span>Expand ~ and ~user constructs.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ntpath.html#expandvars" class="code" data-type="Function">expandvars</a></td>
+    <td><span>Expand shell variables of the forms $var, ${var} and %var%.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ntpath.html#normpath" class="code" data-type="Function">normpath</a></td>
+    <td><span>Normalize path, eliminating double slashes, etc.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ntpath.html#abspath" class="code" data-type="Function">abspath</a></td>
+    <td><span>Return the absolute version of a path.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ntpath.html#realpath" class="code" data-type="Function">realpath</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ntpath.html#supports_unicode_filenames" class="code" data-type="Variable">supports_unicode_filenames</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ntpath.html#relpath" class="code" data-type="Function">relpath</a></td>
+    <td><span>Return a relative version of a path</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.ntpath.html#commonpath" class="code" data-type="Function">commonpath</a></td>
+    <td><span>Given a sequence of path names, returns the longest common sub-path.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.ntpath.html#_get_bothseps" class="code" data-type="Function">_get_bothseps</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.ntpath.html#_getvolumepathname" class="code" data-type="Variable">_getvolumepathname</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.ntpath.html#_abspath_fallback" class="code" data-type="Function">_abspath_fallback</a></td>
+    <td><span>Return the absolute version of a path as a fallback function in case `nt._getfullpathname` is not available or raises OSError. See bpo-31047 for more.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.ntpath.html#_readlink_deep" class="code" data-type="Function">_readlink_deep</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.ntpath.html#_getfinalpathname_nonstrict" class="code" data-type="Function">_getfinalpathname_nonstrict</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.ntpath.curdir">
+    
+  </a>
+  <a name="curdir">
+    
+  </a>
+  <div class="functionHeader">
+    curdir =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.ntpath.pardir">
+    
+  </a>
+  <a name="pardir">
+    
+  </a>
+  <div class="functionHeader">
+    pardir =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.ntpath.extsep">
+    
+  </a>
+  <a name="extsep">
+    
+  </a>
+  <div class="functionHeader">
+    extsep =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.ntpath.sep">
+    
+  </a>
+  <a name="sep">
+    
+  </a>
+  <div class="functionHeader">
+    sep =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.ntpath.pathsep">
+    
+  </a>
+  <a name="pathsep">
+    
+  </a>
+  <div class="functionHeader">
+    pathsep =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.ntpath.altsep">
+    
+  </a>
+  <a name="altsep">
+    
+  </a>
+  <div class="functionHeader">
+    altsep =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.ntpath.defpath">
+    
+  </a>
+  <a name="defpath">
+    
+  </a>
+  <div class="functionHeader">
+    defpath =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.ntpath.devnull">
+    
+  </a>
+  <a name="devnull">
+    
+  </a>
+  <div class="functionHeader">
+    devnull =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.ntpath._get_bothseps">
+    
+  </a>
+  <a name="_get_bothseps">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_bothseps(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ntpath.normcase">
+    
+  </a>
+  <a name="normcase">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    normcase(s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Normalize case of pathname.
+
+Makes all characters lowercase and all slashes into backslashes.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ntpath.isabs">
+    
+  </a>
+  <a name="isabs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    isabs(s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Test whether a path is absolute</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ntpath.join">
+    
+  </a>
+  <a name="join">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    join(path, *paths):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ntpath.splitdrive">
+    
+  </a>
+  <a name="splitdrive">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    splitdrive(p):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Split a pathname into drive/UNC sharepoint and relative path specifiers.
+Returns a 2-tuple (drive_or_unc, path); either part may be empty.
+
+If you assign
+    result = splitdrive(p)
+It is always true that:
+    result[0] + result[1] == p
+
+If the path contained a drive letter, drive_or_unc will contain everything
+up to and including the colon.  e.g. splitdrive("c:/dir") returns ("c:", "/dir")
+
+If the path contained a UNC path, the drive_or_unc will contain the host name
+and share up to but not including the fourth directory separator character.
+e.g. splitdrive("//host/computer/dir") returns ("//host/computer", "/dir")
+
+Paths cannot contain both a drive letter and a UNC path.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ntpath.split">
+    
+  </a>
+  <a name="split">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    split(p):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Split a pathname.
+
+Return tuple (head, tail) where tail is everything after the final slash.
+Either part may be empty.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ntpath.splitext">
+    
+  </a>
+  <a name="splitext">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    splitext(p):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ntpath.basename">
+    
+  </a>
+  <a name="basename">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    basename(p):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns the final component of a pathname</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ntpath.dirname">
+    
+  </a>
+  <a name="dirname">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    dirname(p):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns the directory component of a pathname</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ntpath.islink">
+    
+  </a>
+  <a name="islink">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    islink(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Test whether a path is a symbolic link.
+This will always return false for Windows prior to 6.0.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ntpath.lexists">
+    
+  </a>
+  <a name="lexists">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    lexists(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Test whether a path exists.  Returns True for broken symbolic links</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.ntpath._getvolumepathname">
+    
+  </a>
+  <a name="_getvolumepathname">
+    
+  </a>
+  <div class="functionHeader">
+    _getvolumepathname =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ntpath.ismount">
+    
+  </a>
+  <a name="ismount">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ismount(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Test whether a path is a mount point (a drive root, the root of a
+share, or a mounted volume)</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ntpath.expanduser">
+    
+  </a>
+  <a name="expanduser">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    expanduser(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Expand ~ and ~user constructs.
+
+If user or $HOME is unknown, do nothing.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ntpath.expandvars">
+    
+  </a>
+  <a name="expandvars">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    expandvars(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Expand shell variables of the forms $var, ${var} and %var%.
+
+Unknown variables are left unchanged.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ntpath.normpath">
+    
+  </a>
+  <a name="normpath">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    normpath(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Normalize path, eliminating double slashes, etc.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.ntpath._abspath_fallback">
+    
+  </a>
+  <a name="_abspath_fallback">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _abspath_fallback(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the absolute version of a path as a fallback function in case
+`nt._getfullpathname` is not available or raises OSError. See bpo-31047 for
+more.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ntpath.abspath">
+    
+  </a>
+  <a name="abspath">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    abspath(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the absolute version of a path.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.ntpath._readlink_deep">
+    
+  </a>
+  <a name="_readlink_deep">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _readlink_deep(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.ntpath._getfinalpathname_nonstrict">
+    
+  </a>
+  <a name="_getfinalpathname_nonstrict">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _getfinalpathname_nonstrict(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ntpath.realpath">
+    
+  </a>
+  <a name="realpath">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    realpath(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.ntpath.supports_unicode_filenames">
+    
+  </a>
+  <a name="supports_unicode_filenames">
+    
+  </a>
+  <div class="functionHeader">
+    supports_unicode_filenames =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ntpath.relpath">
+    
+  </a>
+  <a name="relpath">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    relpath(path, start=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a relative version of a path</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.ntpath.commonpath">
+    
+  </a>
+  <a name="commonpath">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    commonpath(paths):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Given a sequence of path names, returns the longest common sub-path.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

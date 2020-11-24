@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.doctest.DocTestRunner : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.doctest.html" class="code" data-type="Module">doctest</a>.<a href="Lib.doctest.DocTestRunner.html" class="code" data-type="Class">DocTestRunner</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.doctest.DocTestRunner:</code></p><p>Known subclasses: <a href="Lib.doctest.DebugRunner.html" class="code" data-type="Class">Lib.doctest.DebugRunner</a></p>
+        <p><a href="classIndex.html#Lib.doctest.DocTestRunner">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">A class used to run DocTest test cases, and accumulate statistics.
+The `run` method is used to process a single DocTest case.  It
+returns a tuple `(f, t)`, where `t` is the number of test cases
+tried, and `f` is the number of test cases that failed.
+
+    &gt;&gt;&gt; tests = DocTestFinder().find(_TestClass)
+    &gt;&gt;&gt; runner = DocTestRunner(verbose=False)
+    &gt;&gt;&gt; tests.sort(key = lambda test: test.name)
+    &gt;&gt;&gt; for test in tests:
+    ...     print(test.name, '-&gt;', runner.run(test))
+    _TestClass -&gt; TestResults(failed=0, attempted=2)
+    _TestClass.__init__ -&gt; TestResults(failed=0, attempted=2)
+    _TestClass.get -&gt; TestResults(failed=0, attempted=2)
+    _TestClass.square -&gt; TestResults(failed=0, attempted=1)
+
+The `summarize` method prints a summary of all the test cases that
+have been run by the runner, and returns an aggregated `(f, t)`
+tuple:
+
+    &gt;&gt;&gt; runner.summarize(verbose=1)
+    4 items passed all tests:
+       2 tests in _TestClass
+       2 tests in _TestClass.__init__
+       2 tests in _TestClass.get
+       1 tests in _TestClass.square
+    7 tests in 4 items.
+    7 passed and 0 failed.
+    Test passed.
+    TestResults(failed=0, attempted=7)
+
+The aggregated number of tried examples and failed examples is
+also available via the `tries` and `failures` attributes:
+
+    &gt;&gt;&gt; runner.tries
+    7
+    &gt;&gt;&gt; runner.failures
+    0
+
+The comparison between expected outputs and actual outputs is done
+by an `OutputChecker`.  This comparison may be customized with a
+number of option flags; see the documentation for `testmod` for
+more information.  If the option flags are insufficient, then the
+comparison may also be customized by passing a subclass of
+`OutputChecker` to the constructor.
+
+The test runner's display output can be controlled in two ways.
+First, an output function (`out) can be passed to
+`TestRunner.run`; this function will be called with strings that
+should be displayed.  It defaults to `sys.stdout.write`.  If
+capturing the output is not sufficient, then the display output
+can be also customized by subclassing DocTestRunner, and
+overriding the methods `report_start`, `report_success`,
+`report_unexpected_exception`, and `report_failure`.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id1119">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.doctest.DocTestRunner.html#DIVIDER" class="code" data-type="Class Variable">DIVIDER</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.doctest.DocTestRunner.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Create a new test runner.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.doctest.DocTestRunner.html#optionflags" class="code" data-type="Instance Variable">optionflags</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.doctest.DocTestRunner.html#original_optionflags" class="code" data-type="Instance Variable">original_optionflags</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.doctest.DocTestRunner.html#tries" class="code" data-type="Instance Variable">tries</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.doctest.DocTestRunner.html#failures" class="code" data-type="Instance Variable">failures</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.doctest.DocTestRunner.html#report_start" class="code" data-type="Method">report_start</a></td>
+    <td><span>Report that the test runner is about to process the given example.  (Only displays a message if verbose=True)</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.doctest.DocTestRunner.html#report_success" class="code" data-type="Method">report_success</a></td>
+    <td><span>Report that the given example ran successfully.  (Only displays a message if verbose=True)</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.doctest.DocTestRunner.html#report_failure" class="code" data-type="Method">report_failure</a></td>
+    <td><span>Report that the given example failed.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.doctest.DocTestRunner.html#report_unexpected_exception" class="code" data-type="Method">report_unexpected_exception</a></td>
+    <td><span>Report that the given example raised an unexpected exception.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.doctest.DocTestRunner.html#run" class="code" data-type="Method">run</a></td>
+    <td><span>Run the examples in `test`, and display the results using the writer function `out`.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.doctest.DocTestRunner.html#test" class="code" data-type="Instance Variable">test</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.doctest.DocTestRunner.html#debugger" class="code" data-type="Instance Variable">debugger</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.doctest.DocTestRunner.html#save_linecache_getlines" class="code" data-type="Instance Variable">save_linecache_getlines</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.doctest.DocTestRunner.html#summarize" class="code" data-type="Method">summarize</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.doctest.DocTestRunner.html#merge" class="code" data-type="Method">merge</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.doctest.DocTestRunner.html#_checker" class="code" data-type="Instance Variable">_checker</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.doctest.DocTestRunner.html#_verbose" class="code" data-type="Instance Variable">_verbose</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.doctest.DocTestRunner.html#_name2ft" class="code" data-type="Instance Variable">_name2ft</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.doctest.DocTestRunner.html#_fakeout" class="code" data-type="Instance Variable">_fakeout</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.doctest.DocTestRunner.html#_failure_header" class="code" data-type="Method">_failure_header</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.doctest.DocTestRunner.html#__run" class="code" data-type="Method">__run</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.doctest.DocTestRunner.html#__record_outcome" class="code" data-type="Method">__record_outcome</a></td>
+    <td><span>Record the fact that the given DocTest (`test`) generated `f` failures out of `t` tried examples.</span></td>
+  </tr><tr class="classvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.doctest.DocTestRunner.html#__LINECACHE_FILENAME_RE" class="code" data-type="Class Variable">__LINECACHE_FILENAME_RE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.doctest.DocTestRunner.html#__patched_linecache_getlines" class="code" data-type="Method">__patched_linecache_getlines</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.doctest.DocTestRunner.DIVIDER">
+    
+  </a>
+  <a name="DIVIDER">
+    
+  </a>
+  <div class="functionHeader">
+    DIVIDER =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.doctest.DocTestRunner.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, checker=None, verbose=None, optionflags=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create a new test runner.
+
+Optional keyword arg `checker` is the `OutputChecker` that
+should be used to compare the expected outputs and actual
+outputs of doctest examples.
+
+Optional keyword arg 'verbose' prints lots of stuff if true,
+only failures if false; by default, it's true iff '-v' is in
+sys.argv.
+
+Optional argument `optionflags` can be used to control how the
+test runner compares expected output to actual output, and how
+it displays failures.  See the documentation for `testmod` for
+more information.</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.doctest.DocTestRunner._checker">
+    
+  </a>
+  <a name="_checker">
+    
+  </a>
+  <div class="functionHeader">
+    _checker =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.doctest.DocTestRunner._verbose">
+    
+  </a>
+  <a name="_verbose">
+    
+  </a>
+  <div class="functionHeader">
+    _verbose =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.doctest.DocTestRunner.optionflags">
+    
+  </a>
+  <a name="optionflags">
+    
+  </a>
+  <div class="functionHeader">
+    optionflags =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.doctest.DocTestRunner.original_optionflags">
+    
+  </a>
+  <a name="original_optionflags">
+    
+  </a>
+  <div class="functionHeader">
+    original_optionflags =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.doctest.DocTestRunner.tries">
+    
+  </a>
+  <a name="tries">
+    
+  </a>
+  <div class="functionHeader">
+    tries =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.doctest.DocTestRunner.failures">
+    
+  </a>
+  <a name="failures">
+    
+  </a>
+  <div class="functionHeader">
+    failures =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.doctest.DocTestRunner._name2ft">
+    
+  </a>
+  <a name="_name2ft">
+    
+  </a>
+  <div class="functionHeader">
+    _name2ft =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.doctest.DocTestRunner._fakeout">
+    
+  </a>
+  <a name="_fakeout">
+    
+  </a>
+  <div class="functionHeader">
+    _fakeout =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.doctest.DocTestRunner.report_start">
+    
+  </a>
+  <a name="report_start">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    report_start(self, out, test, example):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Report that the test runner is about to process the given
+example.  (Only displays a message if verbose=True)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.doctest.DocTestRunner.report_success">
+    
+  </a>
+  <a name="report_success">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    report_success(self, out, test, example, got):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Report that the given example ran successfully.  (Only
+displays a message if verbose=True)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.doctest.DocTestRunner.report_failure">
+    
+  </a>
+  <a name="report_failure">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    report_failure(self, out, test, example, got):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.doctest.DebugRunner.html" class="code" data-type="Class">Lib.doctest.DebugRunner</a></div>
+    
+    <div><p class="pre">Report that the given example failed.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.doctest.DocTestRunner.report_unexpected_exception">
+    
+  </a>
+  <a name="report_unexpected_exception">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    report_unexpected_exception(self, out, test, example, exc_info):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.doctest.DebugRunner.html" class="code" data-type="Class">Lib.doctest.DebugRunner</a></div>
+    
+    <div><p class="pre">Report that the given example raised an unexpected exception.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.doctest.DocTestRunner._failure_header">
+    
+  </a>
+  <a name="_failure_header">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _failure_header(self, test, example):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.doctest.DocTestRunner.__run">
+    
+  </a>
+  <a name="__run">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __run(self, test, compileflags, out):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Run the examples in `test`.  Write the outcome of each example
+with one of the `DocTestRunner.report_*` methods, using the
+writer function `out`.  `compileflags` is the set of compiler
+flags that should be used to execute examples.  Return a tuple
+`(f, t)`, where `t` is the number of examples tried, and `f`
+is the number of examples that failed.  The examples are run
+in the namespace `test.globs`.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.doctest.DocTestRunner.__record_outcome">
+    
+  </a>
+  <a name="__record_outcome">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __record_outcome(self, test, f, t):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Record the fact that the given DocTest (`test`) generated `f`
+failures out of `t` tried examples.</p></div>
+  </div>
+</div><div class="baseclassvariable private">
+  
+  <a name="Lib.doctest.DocTestRunner.__LINECACHE_FILENAME_RE">
+    
+  </a>
+  <a name="__LINECACHE_FILENAME_RE">
+    
+  </a>
+  <div class="functionHeader">
+    __LINECACHE_FILENAME_RE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.doctest.DocTestRunner.__patched_linecache_getlines">
+    
+  </a>
+  <a name="__patched_linecache_getlines">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __patched_linecache_getlines(self, filename, module_globals=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.doctest.DocTestRunner.run">
+    
+  </a>
+  <a name="run">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    run(self, test, compileflags=None, out=None, clear_globs=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.doctest.DebugRunner.html" class="code" data-type="Class">Lib.doctest.DebugRunner</a></div>
+    
+    <div><p class="pre">Run the examples in `test`, and display the results using the
+writer function `out`.
+
+The examples are run in the namespace `test.globs`.  If
+`clear_globs` is true (the default), then this namespace will
+be cleared after the test runs, to help with garbage
+collection.  If you would like to examine the namespace after
+the test completes, then use `clear_globs=False`.
+
+`compileflags` gives the set of flags that should be used by
+the Python compiler when running the examples.  If not
+specified, then it will default to the set of future-import
+flags that apply to `globs`.
+
+The output of each example is checked using
+`DocTestRunner.check_output`, and the results are formatted by
+the `DocTestRunner.report_*` methods.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.doctest.DocTestRunner.test">
+    
+  </a>
+  <a name="test">
+    
+  </a>
+  <div class="functionHeader">
+    test =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.doctest.DocTestRunner.debugger">
+    
+  </a>
+  <a name="debugger">
+    
+  </a>
+  <div class="functionHeader">
+    debugger =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.doctest.DocTestRunner.save_linecache_getlines">
+    
+  </a>
+  <a name="save_linecache_getlines">
+    
+  </a>
+  <div class="functionHeader">
+    save_linecache_getlines =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.doctest.DocTestRunner.summarize">
+    
+  </a>
+  <a name="summarize">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    summarize(self, verbose=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Print a summary of all the test cases that have been run by
+this DocTestRunner, and return a tuple `(f, t)`, where `f` is
+the total number of failed examples, and `t` is the total
+number of tried examples.
+
+The optional `verbose` argument controls how detailed the
+summary is.  If the verbosity is not specified, then the
+DocTestRunner's verbosity is used.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.doctest.DocTestRunner.merge">
+    
+  </a>
+  <a name="merge">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    merge(self, other):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

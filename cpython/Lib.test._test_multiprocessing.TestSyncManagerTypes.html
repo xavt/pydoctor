@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.test._test_multiprocessing.TestSyncManagerTypes : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.test.html" class="code" data-type="Package">test</a>.<a href="Lib.test._test_multiprocessing.html" class="code" data-type="Module">_test_multiprocessing</a>.<a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html" class="code" data-type="Class">TestSyncManagerTypes</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.test._test_multiprocessing.TestSyncManagerTypes(<span title="unittest.TestCase">unittest.TestCase</span>):</code></p>
+        <p><a href="classIndex.html#Lib.test._test_multiprocessing.TestSyncManagerTypes">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Test all the types which can be shared between a parent and a
+child process by using a manager which acts as an intermediary
+between them.
+
+In the following unit-tests the base type is created in the parent
+process, the @classmethod represents the worker process and the
+shared object is readable and editable between the two.
+
+# The child.
+@classmethod
+def _test_list(cls, obj):
+    assert obj[0] == 5
+    assert obj.append(6)
+
+# The parent.
+def test_list(self):
+    o = self.manager.list()
+    o.append(5)
+    self.run_worker(self._test_list, o)
+    assert o[1] == 6</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3797">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#setUp" class="code" data-type="Method">setUp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#manager" class="code" data-type="Instance Variable">manager</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#proc" class="code" data-type="Instance Variable">proc</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#tearDown" class="code" data-type="Method">tearDown</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classmethod">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#setUpClass" class="code" data-type="Class Method">setUpClass</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#wait_proc_exit" class="code" data-type="Method">wait_proc_exit</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#run_worker" class="code" data-type="Method">run_worker</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#test_event" class="code" data-type="Method">test_event</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#test_lock" class="code" data-type="Method">test_lock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#test_rlock" class="code" data-type="Method">test_rlock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#test_semaphore" class="code" data-type="Method">test_semaphore</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#test_bounded_semaphore" class="code" data-type="Method">test_bounded_semaphore</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#test_condition" class="code" data-type="Method">test_condition</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#test_barrier" class="code" data-type="Method">test_barrier</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#test_pool" class="code" data-type="Method">test_pool</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#test_queue" class="code" data-type="Method">test_queue</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#test_joinable_queue" class="code" data-type="Method">test_joinable_queue</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#test_list" class="code" data-type="Method">test_list</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#test_dict" class="code" data-type="Method">test_dict</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#test_value" class="code" data-type="Method">test_value</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#test_array" class="code" data-type="Method">test_array</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#test_namespace" class="code" data-type="Method">test_namespace</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#_test_event" class="code" data-type="Class Method">_test_event</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#_test_lock" class="code" data-type="Class Method">_test_lock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#_test_rlock" class="code" data-type="Class Method">_test_rlock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#_test_semaphore" class="code" data-type="Class Method">_test_semaphore</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#_test_condition" class="code" data-type="Class Method">_test_condition</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#_test_barrier" class="code" data-type="Class Method">_test_barrier</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#_test_pool" class="code" data-type="Class Method">_test_pool</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#_test_queue" class="code" data-type="Class Method">_test_queue</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#_test_list" class="code" data-type="Class Method">_test_list</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#_test_dict" class="code" data-type="Class Method">_test_dict</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#_test_value" class="code" data-type="Class Method">_test_value</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#_test_array" class="code" data-type="Class Method">_test_array</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.test._test_multiprocessing.TestSyncManagerTypes.html#_test_namespace" class="code" data-type="Class Method">_test_namespace</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes.setUp">
+    
+  </a>
+  <a name="setUp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setUp(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes.manager">
+    
+  </a>
+  <a name="manager">
+    
+  </a>
+  <div class="functionHeader">
+    manager =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes.proc">
+    
+  </a>
+  <a name="proc">
+    
+  </a>
+  <div class="functionHeader">
+    proc =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes.tearDown">
+    
+  </a>
+  <a name="tearDown">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tearDown(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassmethod">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes.setUpClass">
+    
+  </a>
+  <a name="setUpClass">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    setUpClass(cls):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes.wait_proc_exit">
+    
+  </a>
+  <a name="wait_proc_exit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    wait_proc_exit(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes.run_worker">
+    
+  </a>
+  <a name="run_worker">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    run_worker(self, worker, obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassmethod private">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes._test_event">
+    
+  </a>
+  <a name="_test_event">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    _test_event(cls, obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes.test_event">
+    
+  </a>
+  <a name="test_event">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_event(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassmethod private">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes._test_lock">
+    
+  </a>
+  <a name="_test_lock">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    _test_lock(cls, obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes.test_lock">
+    
+  </a>
+  <a name="test_lock">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_lock(self, lname="""Lock"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassmethod private">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes._test_rlock">
+    
+  </a>
+  <a name="_test_rlock">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    _test_rlock(cls, obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes.test_rlock">
+    
+  </a>
+  <a name="test_rlock">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_rlock(self, lname="""Lock"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassmethod private">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes._test_semaphore">
+    
+  </a>
+  <a name="_test_semaphore">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    _test_semaphore(cls, obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes.test_semaphore">
+    
+  </a>
+  <a name="test_semaphore">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_semaphore(self, sname="""Semaphore"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes.test_bounded_semaphore">
+    
+  </a>
+  <a name="test_bounded_semaphore">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_bounded_semaphore(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassmethod private">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes._test_condition">
+    
+  </a>
+  <a name="_test_condition">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    _test_condition(cls, obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes.test_condition">
+    
+  </a>
+  <a name="test_condition">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_condition(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassmethod private">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes._test_barrier">
+    
+  </a>
+  <a name="_test_barrier">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    _test_barrier(cls, obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes.test_barrier">
+    
+  </a>
+  <a name="test_barrier">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_barrier(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassmethod private">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes._test_pool">
+    
+  </a>
+  <a name="_test_pool">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    _test_pool(cls, obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes.test_pool">
+    
+  </a>
+  <a name="test_pool">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_pool(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassmethod private">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes._test_queue">
+    
+  </a>
+  <a name="_test_queue">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    _test_queue(cls, obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes.test_queue">
+    
+  </a>
+  <a name="test_queue">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_queue(self, qname="""Queue"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes.test_joinable_queue">
+    
+  </a>
+  <a name="test_joinable_queue">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_joinable_queue(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassmethod private">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes._test_list">
+    
+  </a>
+  <a name="_test_list">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    _test_list(cls, obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes.test_list">
+    
+  </a>
+  <a name="test_list">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_list(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassmethod private">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes._test_dict">
+    
+  </a>
+  <a name="_test_dict">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    _test_dict(cls, obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes.test_dict">
+    
+  </a>
+  <a name="test_dict">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_dict(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassmethod private">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes._test_value">
+    
+  </a>
+  <a name="_test_value">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    _test_value(cls, obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes.test_value">
+    
+  </a>
+  <a name="test_value">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_value(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassmethod private">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes._test_array">
+    
+  </a>
+  <a name="_test_array">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    _test_array(cls, obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes.test_array">
+    
+  </a>
+  <a name="test_array">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_array(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassmethod private">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes._test_namespace">
+    
+  </a>
+  <a name="_test_namespace">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    _test_namespace(cls, obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test._test_multiprocessing.TestSyncManagerTypes.test_namespace">
+    
+  </a>
+  <a name="test_namespace">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_namespace(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

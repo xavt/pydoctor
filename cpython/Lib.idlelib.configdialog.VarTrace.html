@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.idlelib.configdialog.VarTrace : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.idlelib.html" class="code" data-type="Package">idlelib</a>.<a href="Lib.idlelib.configdialog.html" class="code" data-type="Module">configdialog</a>.<a href="Lib.idlelib.configdialog.VarTrace.html" class="code" data-type="Class">VarTrace</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.idlelib.configdialog.VarTrace:</code></p>
+        <p><a href="classIndex.html#Lib.idlelib.configdialog.VarTrace">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Maintain Tk variables trace state.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2069">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.configdialog.VarTrace.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Store Tk variables and callbacks.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.configdialog.VarTrace.html#untraced" class="code" data-type="Instance Variable">untraced</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.configdialog.VarTrace.html#traced" class="code" data-type="Instance Variable">traced</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.configdialog.VarTrace.html#clear" class="code" data-type="Method">clear</a></td>
+    <td><span>Clear lists (for tests).</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.configdialog.VarTrace.html#add" class="code" data-type="Method">add</a></td>
+    <td><span>Add (var, callback) tuple to untraced list.</span></td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><a href="Lib.idlelib.configdialog.VarTrace.html#make_callback" class="code" data-type="Static Method">make_callback</a></td>
+    <td><span>Return default callback function to add values to changes instance.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.configdialog.VarTrace.html#attach" class="code" data-type="Method">attach</a></td>
+    <td><span>Attach callback to all vars that are not traced.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.configdialog.VarTrace.html#detach" class="code" data-type="Method">detach</a></td>
+    <td><span>Remove callback from traced vars.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.idlelib.configdialog.VarTrace.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Store Tk variables and callbacks.
+
+untraced: List of tuples (var, callback)
+    that do not have the callback attached
+    to the Tk var.
+traced: List of tuples (var, callback) where
+    that callback has been attached to the var.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.configdialog.VarTrace.untraced">
+    
+  </a>
+  <a name="untraced">
+    
+  </a>
+  <div class="functionHeader">
+    untraced =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.configdialog.VarTrace.traced">
+    
+  </a>
+  <a name="traced">
+    
+  </a>
+  <div class="functionHeader">
+    traced =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.configdialog.VarTrace.clear">
+    
+  </a>
+  <a name="clear">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    clear(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Clear lists (for tests).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.configdialog.VarTrace.add">
+    
+  </a>
+  <a name="add">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    add(self, var, callback):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Add (var, callback) tuple to untraced list.
+
+Args:
+    var: Tk variable instance.
+    callback: Either function name to be used as a callback
+        or a tuple with IdleConf config-type, section, and
+        option names used in the default callback.
+
+Return:
+    Tk variable instance.</p></div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  <a name="Lib.idlelib.configdialog.VarTrace.make_callback">
+    
+  </a>
+  <a name="make_callback">
+    
+  </a>
+  <div class="functionHeader">
+    @staticmethod<br />
+    def
+    make_callback(var, config):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return default callback function to add values to changes instance.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.configdialog.VarTrace.attach">
+    
+  </a>
+  <a name="attach">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    attach(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Attach callback to all vars that are not traced.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.configdialog.VarTrace.detach">
+    
+  </a>
+  <a name="detach">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    detach(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Remove callback from traced vars.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.unittest.mock._Call : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class private"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.unittest.html" class="code" data-type="Package">unittest</a>.<a href="Lib.unittest.mock.html" class="code" data-type="Module">mock</a>.<a href="Lib.unittest.mock._Call.html" class="code" data-type="Class">_Call</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.unittest.mock._Call(<span title="tuple">tuple</span>):</code></p>
+        <p><a href="classIndex.html#Lib.unittest.mock._Call">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">A tuple for holding the results of a call to a mock, either in the form
+`(args, kwargs)` or `(name, args, kwargs)`.
+
+If args or kwargs are empty then a call tuple will compare equal to
+a tuple without those values. This makes comparisons less verbose::
+
+    _Call(('name', (), {})) == ('name',)
+    _Call(('name', (1,), {})) == ('name', (1,))
+    _Call(((), {'a': 'b'})) == ({'a': 'b'},)
+
+The `_Call` object provides a useful shortcut for comparing with call::
+
+    _Call(((1, 2), {'a': 3})) == call(1, 2, a=3)
+    _Call(('foo', (1, 2), {'a': 3})) == call.foo(1, 2, a=3)
+
+If the _Call has no name then it will match any name.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id11686">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock._Call.html#__new__" class="code" data-type="Method">__new__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock._Call.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock._Call.html#__eq__" class="code" data-type="Method">__eq__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock._Call.html#__call__" class="code" data-type="Method">__call__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock._Call.html#__getattr__" class="code" data-type="Method">__getattr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock._Call.html#__getattribute__" class="code" data-type="Method">__getattribute__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock._Call.html#args" class="code" data-type="Method">args</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock._Call.html#kwargs" class="code" data-type="Method">kwargs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock._Call.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock._Call.html#call_list" class="code" data-type="Method">call_list</a></td>
+    <td><span>For a call object that represents multiple calls, `call_list` returns a list of all the intermediate calls as well as the final call.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.unittest.mock._Call.html#_mock_name" class="code" data-type="Instance Variable">_mock_name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.unittest.mock._Call.html#_mock_parent" class="code" data-type="Instance Variable">_mock_parent</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.unittest.mock._Call.html#_mock_from_kall" class="code" data-type="Instance Variable">_mock_from_kall</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.mock._Call.html#_get_call_arguments" class="code" data-type="Method">_get_call_arguments</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.unittest.mock._Call.__new__">
+    
+  </a>
+  <a name="__new__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __new__(cls, value=(), name="""""", parent=None, two=(False), from_kall=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.mock._Call.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, value=(), name=None, parent=None, two=(False), from_kall=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.unittest.mock._Call._mock_name">
+    
+  </a>
+  <a name="_mock_name">
+    
+  </a>
+  <div class="functionHeader">
+    _mock_name =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.unittest.mock._Call._mock_parent">
+    
+  </a>
+  <a name="_mock_parent">
+    
+  </a>
+  <div class="functionHeader">
+    _mock_parent =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.unittest.mock._Call._mock_from_kall">
+    
+  </a>
+  <a name="_mock_from_kall">
+    
+  </a>
+  <div class="functionHeader">
+    _mock_from_kall =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.mock._Call.__eq__">
+    
+  </a>
+  <a name="__eq__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __eq__(self, other):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.mock._Call.__call__">
+    
+  </a>
+  <a name="__call__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __call__(*args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.mock._Call.__getattr__">
+    
+  </a>
+  <a name="__getattr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __getattr__(self, attr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.mock._Call.__getattribute__">
+    
+  </a>
+  <a name="__getattribute__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __getattribute__(self, attr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.unittest.mock._Call._get_call_arguments">
+    
+  </a>
+  <a name="_get_call_arguments">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_call_arguments(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.mock._Call.args">
+    
+  </a>
+  <a name="args">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    args(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.mock._Call.kwargs">
+    
+  </a>
+  <a name="kwargs">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    kwargs(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.mock._Call.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __repr__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.mock._Call.call_list">
+    
+  </a>
+  <a name="call_list">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    call_list(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">For a call object that represents multiple calls, `call_list`
+returns a list of all the intermediate calls as well as the
+final call.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

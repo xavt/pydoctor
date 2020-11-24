@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.http.cookiejar.CookieJar : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.http.html" class="code" data-type="Package">http</a>.<a href="Lib.http.cookiejar.html" class="code" data-type="Module">cookiejar</a>.<a href="Lib.http.cookiejar.CookieJar.html" class="code" data-type="Class">CookieJar</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.http.cookiejar.CookieJar:</code></p><p>Known subclasses: <a href="Lib.http.cookiejar.FileCookieJar.html" class="code" data-type="Class">Lib.http.cookiejar.FileCookieJar</a></p>
+        <p><a href="classIndex.html#Lib.http.cookiejar.CookieJar">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Collection of HTTP cookies.
+
+You may not need to know about this class: try
+urllib.request.build_opener(HTTPCookieProcessor).open(url).</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2008">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#non_word_re" class="code" data-type="Class Variable">non_word_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#quote_re" class="code" data-type="Class Variable">quote_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#strict_domain_re" class="code" data-type="Class Variable">strict_domain_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#domain_re" class="code" data-type="Class Variable">domain_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#dots_re" class="code" data-type="Class Variable">dots_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#magic_re" class="code" data-type="Class Variable">magic_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#set_policy" class="code" data-type="Method">set_policy</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#add_cookie_header" class="code" data-type="Method">add_cookie_header</a></td>
+    <td><span>Add correct Cookie: header to request (urllib.request.Request object).</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#make_cookies" class="code" data-type="Method">make_cookies</a></td>
+    <td><span>Return sequence of Cookie objects extracted from response object.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#set_cookie_if_ok" class="code" data-type="Method">set_cookie_if_ok</a></td>
+    <td><span>Set a cookie if policy says it's OK to do so.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#set_cookie" class="code" data-type="Method">set_cookie</a></td>
+    <td><span>Set a cookie, without checking whether or not it should be set.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#extract_cookies" class="code" data-type="Method">extract_cookies</a></td>
+    <td><span>Extract cookies from response, where allowable given the request.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#clear" class="code" data-type="Method">clear</a></td>
+    <td><span>Clear some cookies.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#clear_session_cookies" class="code" data-type="Method">clear_session_cookies</a></td>
+    <td><span>Discard all session cookies.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#clear_expired_cookies" class="code" data-type="Method">clear_expired_cookies</a></td>
+    <td><span>Discard all expired cookies.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#__iter__" class="code" data-type="Method">__iter__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#__len__" class="code" data-type="Method">__len__</a></td>
+    <td><span>Return number of contained cookies.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#__str__" class="code" data-type="Method">__str__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#_policy" class="code" data-type="Instance Variable">_policy</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#_cookies_lock" class="code" data-type="Instance Variable">_cookies_lock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#_cookies" class="code" data-type="Instance Variable">_cookies</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#_cookies_for_domain" class="code" data-type="Method">_cookies_for_domain</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#_cookies_for_request" class="code" data-type="Method">_cookies_for_request</a></td>
+    <td><span>Return a list of cookies to be returned to server.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#_cookie_attrs" class="code" data-type="Method">_cookie_attrs</a></td>
+    <td><span>Return a list of cookie-attributes to be returned to server.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#_now" class="code" data-type="Instance Variable">_now</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#_normalized_cookie_tuples" class="code" data-type="Method">_normalized_cookie_tuples</a></td>
+    <td><span>Return list of tuples containing normalised cookie information.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#_cookie_from_cookie_tuple" class="code" data-type="Method">_cookie_from_cookie_tuple</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#_cookies_from_attrs_set" class="code" data-type="Method">_cookies_from_attrs_set</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.cookiejar.CookieJar.html#_process_rfc2109_cookies" class="code" data-type="Method">_process_rfc2109_cookies</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.http.cookiejar.CookieJar.non_word_re">
+    
+  </a>
+  <a name="non_word_re">
+    
+  </a>
+  <div class="functionHeader">
+    non_word_re =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.http.cookiejar.CookieJar.quote_re">
+    
+  </a>
+  <a name="quote_re">
+    
+  </a>
+  <div class="functionHeader">
+    quote_re =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.http.cookiejar.CookieJar.strict_domain_re">
+    
+  </a>
+  <a name="strict_domain_re">
+    
+  </a>
+  <div class="functionHeader">
+    strict_domain_re =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.http.cookiejar.CookieJar.domain_re">
+    
+  </a>
+  <a name="domain_re">
+    
+  </a>
+  <div class="functionHeader">
+    domain_re =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.http.cookiejar.CookieJar.dots_re">
+    
+  </a>
+  <a name="dots_re">
+    
+  </a>
+  <div class="functionHeader">
+    dots_re =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.http.cookiejar.CookieJar.magic_re">
+    
+  </a>
+  <a name="magic_re">
+    
+  </a>
+  <div class="functionHeader">
+    magic_re =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.cookiejar.CookieJar.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, policy=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.http.cookiejar.FileCookieJar.html" class="code" data-type="Class">Lib.http.cookiejar.FileCookieJar</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.http.cookiejar.CookieJar._policy">
+    
+  </a>
+  <a name="_policy">
+    
+  </a>
+  <div class="functionHeader">
+    _policy =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.http.cookiejar.CookieJar._cookies_lock">
+    
+  </a>
+  <a name="_cookies_lock">
+    
+  </a>
+  <div class="functionHeader">
+    _cookies_lock =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.http.cookiejar.CookieJar._cookies">
+    
+  </a>
+  <a name="_cookies">
+    
+  </a>
+  <div class="functionHeader">
+    _cookies =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.http.cookiejar.FileCookieJar.html" class="code" data-type="Class">Lib.http.cookiejar.FileCookieJar</a></div>
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.cookiejar.CookieJar.set_policy">
+    
+  </a>
+  <a name="set_policy">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_policy(self, policy):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.http.cookiejar.CookieJar._cookies_for_domain">
+    
+  </a>
+  <a name="_cookies_for_domain">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _cookies_for_domain(self, domain, request):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.http.cookiejar.CookieJar._cookies_for_request">
+    
+  </a>
+  <a name="_cookies_for_request">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _cookies_for_request(self, request):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a list of cookies to be returned to server.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.http.cookiejar.CookieJar._cookie_attrs">
+    
+  </a>
+  <a name="_cookie_attrs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _cookie_attrs(self, cookies):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a list of cookie-attributes to be returned to server.
+
+like ['foo="bar"; $Path="/"', ...]
+
+The $Version attribute is also added when appropriate (currently only
+once per request).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.cookiejar.CookieJar.add_cookie_header">
+    
+  </a>
+  <a name="add_cookie_header">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    add_cookie_header(self, request):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Add correct Cookie: header to request (urllib.request.Request object).
+
+The Cookie2 header is also added unless policy.hide_cookie2 is true.</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.http.cookiejar.CookieJar._now">
+    
+  </a>
+  <a name="_now">
+    
+  </a>
+  <div class="functionHeader">
+    _now =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.http.cookiejar.CookieJar._normalized_cookie_tuples">
+    
+  </a>
+  <a name="_normalized_cookie_tuples">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _normalized_cookie_tuples(self, attrs_set):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return list of tuples containing normalised cookie information.
+
+attrs_set is the list of lists of key,value pairs extracted from
+the Set-Cookie or Set-Cookie2 headers.
+
+Tuples are name, value, standard, rest, where name and value are the
+cookie name and value, standard is a dictionary containing the standard
+cookie-attributes (discard, secure, version, expires or max-age,
+domain, path and port) and rest is a dictionary containing the rest of
+the cookie-attributes.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.http.cookiejar.CookieJar._cookie_from_cookie_tuple">
+    
+  </a>
+  <a name="_cookie_from_cookie_tuple">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _cookie_from_cookie_tuple(self, tup, request):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.http.cookiejar.CookieJar._cookies_from_attrs_set">
+    
+  </a>
+  <a name="_cookies_from_attrs_set">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _cookies_from_attrs_set(self, attrs_set, request):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.http.cookiejar.CookieJar._process_rfc2109_cookies">
+    
+  </a>
+  <a name="_process_rfc2109_cookies">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _process_rfc2109_cookies(self, cookies):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.cookiejar.CookieJar.make_cookies">
+    
+  </a>
+  <a name="make_cookies">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    make_cookies(self, response, request):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return sequence of Cookie objects extracted from response object.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.cookiejar.CookieJar.set_cookie_if_ok">
+    
+  </a>
+  <a name="set_cookie_if_ok">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_cookie_if_ok(self, cookie, request):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set a cookie if policy says it's OK to do so.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.cookiejar.CookieJar.set_cookie">
+    
+  </a>
+  <a name="set_cookie">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_cookie(self, cookie):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set a cookie, without checking whether or not it should be set.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.cookiejar.CookieJar.extract_cookies">
+    
+  </a>
+  <a name="extract_cookies">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    extract_cookies(self, response, request):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Extract cookies from response, where allowable given the request.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.cookiejar.CookieJar.clear">
+    
+  </a>
+  <a name="clear">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    clear(self, domain=None, path=None, name=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Clear some cookies.
+
+Invoking this method without arguments will clear all cookies.  If
+given a single argument, only cookies belonging to that domain will be
+removed.  If given two arguments, cookies belonging to the specified
+path within that domain are removed.  If given three arguments, then
+the cookie with the specified name, path and domain is removed.
+
+Raises KeyError if no matching cookie exists.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.cookiejar.CookieJar.clear_session_cookies">
+    
+  </a>
+  <a name="clear_session_cookies">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    clear_session_cookies(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Discard all session cookies.
+
+Note that the .save() method won't save session cookies anyway, unless
+you ask otherwise by passing a true ignore_discard argument.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.cookiejar.CookieJar.clear_expired_cookies">
+    
+  </a>
+  <a name="clear_expired_cookies">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    clear_expired_cookies(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Discard all expired cookies.
+
+You probably don't need to call this method: expired cookies are never
+sent back to the server (provided you're using DefaultCookiePolicy),
+this method is called by CookieJar itself every so often, and the
+.save() method won't save expired cookies anyway (unless you ask
+otherwise by passing a true ignore_expires argument).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.cookiejar.CookieJar.__iter__">
+    
+  </a>
+  <a name="__iter__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __iter__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.cookiejar.CookieJar.__len__">
+    
+  </a>
+  <a name="__len__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __len__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return number of contained cookies.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.cookiejar.CookieJar.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __repr__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.cookiejar.CookieJar.__str__">
+    
+  </a>
+  <a name="__str__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __str__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

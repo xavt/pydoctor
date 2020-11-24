@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.idlelib.format.FormatParagraph : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.idlelib.html" class="code" data-type="Package">idlelib</a>.<a href="Lib.idlelib.format.html" class="code" data-type="Module">format</a>.<a href="Lib.idlelib.format.FormatParagraph.html" class="code" data-type="Class">FormatParagraph</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.idlelib.format.FormatParagraph:</code></p>
+        <p><a href="classIndex.html#Lib.idlelib.format.FormatParagraph">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Format a paragraph, comment block, or selection to a max width.
+
+Does basic, standard text formatting, and also understands Python
+comment blocks. Thus, for editing Python source code, this
+extension is really only suitable for reformatting these comment
+blocks or triple-quoted strings.
+
+Known problems with comment reformatting:
+* If there is a selection marked, and the first line of the
+  selection is not complete, the block will probably not be detected
+  as comments, and will have the normal "text formatting" rules
+  applied.
+* If a comment block has leading whitespace that mixes tabs and
+  spaces, they will not be considered part of the same block.
+* Fancy comments, like this bulleted list, aren't handled :-)</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2108">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.format.FormatParagraph.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.format.FormatParagraph.html#editwin" class="code" data-type="Instance Variable">editwin</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classmethod">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.idlelib.format.FormatParagraph.html#reload" class="code" data-type="Class Method">reload</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.format.FormatParagraph.html#close" class="code" data-type="Method">close</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.format.FormatParagraph.html#format_paragraph_event" class="code" data-type="Method">format_paragraph_event</a></td>
+    <td><span>Formats paragraph to a max width specified in idleConf.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.idlelib.format.FormatParagraph.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, editwin):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.format.FormatParagraph.editwin">
+    
+  </a>
+  <a name="editwin">
+    
+  </a>
+  <div class="functionHeader">
+    editwin =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassmethod">
+  
+  <a name="Lib.idlelib.format.FormatParagraph.reload">
+    
+  </a>
+  <a name="reload">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    reload(cls):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.format.FormatParagraph.close">
+    
+  </a>
+  <a name="close">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    close(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.format.FormatParagraph.format_paragraph_event">
+    
+  </a>
+  <a name="format_paragraph_event">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    format_paragraph_event(self, event, limit=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Formats paragraph to a max width specified in idleConf.
+
+If text is selected, format_paragraph_event will start breaking lines
+at the max width, starting from the beginning selection.
+
+If no text is selected, format_paragraph_event uses the current
+cursor location to determine the paragraph (lines of text surrounded
+by blank lines) and formats it.
+
+The length limit parameter is for testing with a known value.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.mailbox.MH : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.mailbox.html" class="code" data-type="Module">mailbox</a>.<a href="Lib.mailbox.MH.html" class="code" data-type="Class">MH</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.mailbox.MH(<a href="Lib.mailbox.Mailbox.html" class="code" data-type="Class">Mailbox</a>):</code></p>
+        <p><a href="classIndex.html#Lib.mailbox.MH">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">An MH mailbox.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3082">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.MH.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Initialize an MH instance.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.MH.html#add" class="code" data-type="Method">add</a></td>
+    <td><span>Add message and return assigned key.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.MH.html#remove" class="code" data-type="Method">remove</a></td>
+    <td><span>Remove the keyed message; raise KeyError if it doesn't exist.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.MH.html#__setitem__" class="code" data-type="Method">__setitem__</a></td>
+    <td><span>Replace the keyed message; raise KeyError if it doesn't exist.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.MH.html#get_message" class="code" data-type="Method">get_message</a></td>
+    <td><span>Return a Message representation or raise a KeyError.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.MH.html#get_bytes" class="code" data-type="Method">get_bytes</a></td>
+    <td><span>Return a bytes representation or raise a KeyError.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.MH.html#get_file" class="code" data-type="Method">get_file</a></td>
+    <td><span>Return a file-like representation or raise a KeyError.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.MH.html#iterkeys" class="code" data-type="Method">iterkeys</a></td>
+    <td><span>Return an iterator over keys.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.MH.html#__contains__" class="code" data-type="Method">__contains__</a></td>
+    <td><span>Return True if the keyed message exists, False otherwise.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.MH.html#__len__" class="code" data-type="Method">__len__</a></td>
+    <td><span>Return a count of messages in the mailbox.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.MH.html#lock" class="code" data-type="Method">lock</a></td>
+    <td><span>Lock the mailbox.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.MH.html#unlock" class="code" data-type="Method">unlock</a></td>
+    <td><span>Unlock the mailbox if it is locked.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.MH.html#flush" class="code" data-type="Method">flush</a></td>
+    <td><span>Write any pending changes to the disk.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.MH.html#close" class="code" data-type="Method">close</a></td>
+    <td><span>Flush and close the mailbox.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.MH.html#list_folders" class="code" data-type="Method">list_folders</a></td>
+    <td><span>Return a list of folder names.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.MH.html#get_folder" class="code" data-type="Method">get_folder</a></td>
+    <td><span>Return an MH instance for the named folder.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.MH.html#add_folder" class="code" data-type="Method">add_folder</a></td>
+    <td><span>Create a folder and return an MH instance representing it.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.MH.html#remove_folder" class="code" data-type="Method">remove_folder</a></td>
+    <td><span>Delete the named folder, which must be empty.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.MH.html#get_sequences" class="code" data-type="Method">get_sequences</a></td>
+    <td><span>Return a name-to-key-list dictionary to define each sequence.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.MH.html#set_sequences" class="code" data-type="Method">set_sequences</a></td>
+    <td><span>Set sequences using the given name-to-key-list dictionary.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.MH.html#pack" class="code" data-type="Method">pack</a></td>
+    <td><span>Re-name messages to eliminate numbering gaps. Invalidates keys.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.mailbox.MH.html#_locked" class="code" data-type="Instance Variable">_locked</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.mailbox.MH.html#_file" class="code" data-type="Instance Variable">_file</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.mailbox.MH.html#_next_key" class="code" data-type="Instance Variable">_next_key</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.MH.html#_dump_sequences" class="code" data-type="Method">_dump_sequences</a></td>
+    <td><span>Inspect a new MHMessage and update sequences appropriately.</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.mailbox.Mailbox.html" class="code" data-type="Class">Mailbox</a>:
+          </p>
+          <table class="children sortable" id="id3083">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#__delitem__" class="code" data-type="Method">__delitem__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#discard" class="code" data-type="Method">discard</a></td>
+    <td><span>If the keyed message exists, remove it.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#get" class="code" data-type="Method">get</a></td>
+    <td><span>Return the keyed message, or default if it doesn't exist.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#__getitem__" class="code" data-type="Method">__getitem__</a></td>
+    <td><span>Return the keyed message; raise KeyError if it doesn't exist.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#get_string" class="code" data-type="Method">get_string</a></td>
+    <td><span>Return a string representation or raise a KeyError.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#keys" class="code" data-type="Method">keys</a></td>
+    <td><span>Return a list of keys.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#itervalues" class="code" data-type="Method">itervalues</a></td>
+    <td><span>Return an iterator over all messages.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#__iter__" class="code" data-type="Method">__iter__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#values" class="code" data-type="Method">values</a></td>
+    <td><span>Return a list of messages. Memory intensive.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#iteritems" class="code" data-type="Method">iteritems</a></td>
+    <td><span>Return an iterator over (key, message) tuples.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#items" class="code" data-type="Method">items</a></td>
+    <td><span>Return a list of (key, message) tuples. Memory intensive.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#clear" class="code" data-type="Method">clear</a></td>
+    <td><span>Delete all messages.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#pop" class="code" data-type="Method">pop</a></td>
+    <td><span>Delete the keyed message and return it, or default.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#popitem" class="code" data-type="Method">popitem</a></td>
+    <td><span>Delete an arbitrary (key, message) pair and return it.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#update" class="code" data-type="Method">update</a></td>
+    <td><span>Change the messages that correspond to certain keys.</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.mailbox.Mailbox.html#__class_getitem__" class="code" data-type="Class Variable">__class_getitem__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.mailbox.Mailbox.html#_path" class="code" data-type="Instance Variable">_path</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.mailbox.Mailbox.html#_factory" class="code" data-type="Instance Variable">_factory</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#_string_to_bytes" class="code" data-type="Method">_string_to_bytes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.mailbox.Mailbox.html#_append_newline" class="code" data-type="Class Variable">_append_newline</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#_dump_message" class="code" data-type="Method">_dump_message</a></td>
+    <td><span>Dump message contents to target file.</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.mailbox.MH.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, path, factory=None, create=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.mailbox.Mailbox.html#__init__" class="code" data-type="Method">Lib.mailbox.Mailbox.__init__</a></div>
+    
+    <div><p class="pre">Initialize an MH instance.</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.mailbox.MH._locked">
+    
+  </a>
+  <a name="_locked">
+    
+  </a>
+  <div class="functionHeader">
+    _locked =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.mailbox.MH.add">
+    
+  </a>
+  <a name="add">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    add(self, message):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.mailbox.Mailbox.html#add" class="code" data-type="Method">Lib.mailbox.Mailbox.add</a></div>
+    
+    <div><p class="pre">Add message and return assigned key.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.mailbox.MH.remove">
+    
+  </a>
+  <a name="remove">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    remove(self, key):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.mailbox.Mailbox.html#remove" class="code" data-type="Method">Lib.mailbox.Mailbox.remove</a></div>
+    
+    <div><p class="pre">Remove the keyed message; raise KeyError if it doesn't exist.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.mailbox.MH.__setitem__">
+    
+  </a>
+  <a name="__setitem__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __setitem__(self, key, message):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.mailbox.Mailbox.html#__setitem__" class="code" data-type="Method">Lib.mailbox.Mailbox.__setitem__</a></div>
+    
+    <div><p class="pre">Replace the keyed message; raise KeyError if it doesn't exist.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.mailbox.MH.get_message">
+    
+  </a>
+  <a name="get_message">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_message(self, key):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.mailbox.Mailbox.html#get_message" class="code" data-type="Method">Lib.mailbox.Mailbox.get_message</a></div>
+    
+    <div><p class="pre">Return a Message representation or raise a KeyError.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.mailbox.MH.get_bytes">
+    
+  </a>
+  <a name="get_bytes">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_bytes(self, key):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.mailbox.Mailbox.html#get_bytes" class="code" data-type="Method">Lib.mailbox.Mailbox.get_bytes</a></div>
+    
+    <div><p class="pre">Return a bytes representation or raise a KeyError.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.mailbox.MH.get_file">
+    
+  </a>
+  <a name="get_file">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_file(self, key):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.mailbox.Mailbox.html#get_file" class="code" data-type="Method">Lib.mailbox.Mailbox.get_file</a></div>
+    
+    <div><p class="pre">Return a file-like representation or raise a KeyError.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.mailbox.MH.iterkeys">
+    
+  </a>
+  <a name="iterkeys">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    iterkeys(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.mailbox.Mailbox.html#iterkeys" class="code" data-type="Method">Lib.mailbox.Mailbox.iterkeys</a></div>
+    
+    <div><p class="pre">Return an iterator over keys.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.mailbox.MH.__contains__">
+    
+  </a>
+  <a name="__contains__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __contains__(self, key):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.mailbox.Mailbox.html#__contains__" class="code" data-type="Method">Lib.mailbox.Mailbox.__contains__</a></div>
+    
+    <div><p class="pre">Return True if the keyed message exists, False otherwise.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.mailbox.MH.__len__">
+    
+  </a>
+  <a name="__len__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __len__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.mailbox.Mailbox.html#__len__" class="code" data-type="Method">Lib.mailbox.Mailbox.__len__</a></div>
+    
+    <div><p class="pre">Return a count of messages in the mailbox.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.mailbox.MH.lock">
+    
+  </a>
+  <a name="lock">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    lock(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.mailbox.Mailbox.html#lock" class="code" data-type="Method">Lib.mailbox.Mailbox.lock</a></div>
+    
+    <div><p class="pre">Lock the mailbox.</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.mailbox.MH._file">
+    
+  </a>
+  <a name="_file">
+    
+  </a>
+  <div class="functionHeader">
+    _file =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.mailbox.MH.unlock">
+    
+  </a>
+  <a name="unlock">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    unlock(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.mailbox.Mailbox.html#unlock" class="code" data-type="Method">Lib.mailbox.Mailbox.unlock</a></div>
+    
+    <div><p class="pre">Unlock the mailbox if it is locked.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.mailbox.MH.flush">
+    
+  </a>
+  <a name="flush">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    flush(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.mailbox.Mailbox.html#flush" class="code" data-type="Method">Lib.mailbox.Mailbox.flush</a></div>
+    
+    <div><p class="pre">Write any pending changes to the disk.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.mailbox.MH.close">
+    
+  </a>
+  <a name="close">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    close(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.mailbox.Mailbox.html#close" class="code" data-type="Method">Lib.mailbox.Mailbox.close</a></div>
+    
+    <div><p class="pre">Flush and close the mailbox.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.mailbox.MH.list_folders">
+    
+  </a>
+  <a name="list_folders">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    list_folders(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a list of folder names.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.mailbox.MH.get_folder">
+    
+  </a>
+  <a name="get_folder">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_folder(self, folder):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return an MH instance for the named folder.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.mailbox.MH.add_folder">
+    
+  </a>
+  <a name="add_folder">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    add_folder(self, folder):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create a folder and return an MH instance representing it.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.mailbox.MH.remove_folder">
+    
+  </a>
+  <a name="remove_folder">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    remove_folder(self, folder):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Delete the named folder, which must be empty.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.mailbox.MH.get_sequences">
+    
+  </a>
+  <a name="get_sequences">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_sequences(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a name-to-key-list dictionary to define each sequence.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.mailbox.MH.set_sequences">
+    
+  </a>
+  <a name="set_sequences">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_sequences(self, sequences):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set sequences using the given name-to-key-list dictionary.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.mailbox.MH.pack">
+    
+  </a>
+  <a name="pack">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    pack(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Re-name messages to eliminate numbering gaps. Invalidates keys.</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.mailbox.MH._next_key">
+    
+  </a>
+  <a name="_next_key">
+    
+  </a>
+  <div class="functionHeader">
+    _next_key =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.mailbox.MH._dump_sequences">
+    
+  </a>
+  <a name="_dump_sequences">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _dump_sequences(self, message, key):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Inspect a new MHMessage and update sequences appropriately.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

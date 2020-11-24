@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.idlelib.help : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.idlelib.html" class="code" data-type="Package">idlelib</a>.<a href="Lib.idlelib.help.html" class="code" data-type="Module">help</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">help.py: Implement the Idle help menu.
+Contents are subject to revision at any time, without notice.
+
+
+Help =&gt; About IDLE: display About Idle dialog
+
+&lt;to be moved here from help_about.py&gt;
+
+
+Help =&gt; IDLE Help: Display help.html with proper formatting.
+Doc/library/idle.rst (Sphinx)=&gt; Doc/build/html/library/idle.html
+(help.copy_strip)=&gt; Lib/idlelib/help.html
+
+HelpParser - Parse help.html and render to tk Text.
+
+HelpText - Display formatted help.html.
+
+HelpFrame - Contain text, scrollbar, and table-of-contents.
+(This will be needed for display in a future tabbed window.)
+
+HelpWindow - Display HelpFrame in a standalone window.
+
+copy_strip - Copy idle.html to help.html, rstripping each line.
+
+show_idlehelp - Create HelpWindow.  Called in EditorWindow.help_dialog.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2114">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.help.HelpParser.html" class="code" data-type="Class">HelpParser</a></td>
+    <td><span>Render help.html into a text widget.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.help.HelpText.html" class="code" data-type="Class">HelpText</a></td>
+    <td><span>Display help.html.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.help.HelpFrame.html" class="code" data-type="Class">HelpFrame</a></td>
+    <td><span>Display html text, scrollbar, and toc.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.help.HelpWindow.html" class="code" data-type="Class">HelpWindow</a></td>
+    <td><span>Display frame with rendered html.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.help.html#copy_strip" class="code" data-type="Function">copy_strip</a></td>
+    <td><span>Copy idle.html to idlelib/help.html, stripping trailing whitespace.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.help.html#show_idlehelp" class="code" data-type="Function">show_idlehelp</a></td>
+    <td><span>Create HelpWindow; called from Idle Help event handler.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction">
+  
+  <a name="Lib.idlelib.help.copy_strip">
+    
+  </a>
+  <a name="copy_strip">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    copy_strip():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Copy idle.html to idlelib/help.html, stripping trailing whitespace.
+
+Files with trailing whitespace cannot be pushed to the git cpython
+repository.  For 3.x (on Windows), help.html is generated, after
+editing idle.rst on the master branch, with
+  sphinx-build -bhtml . build/html
+  python_d.exe -c "from idlelib.help import copy_strip; copy_strip()"
+Check build/html/library/idle.html, the help.html diff, and the text
+displayed by Help =&gt; IDLE Help.  Add a blurb and create a PR.
+
+It can be worthwhile to occasionally generate help.html without
+touching idle.rst.  Changes to the master version and to the doc
+build system may result in changes that should not changed
+the displayed text, but might break HelpParser.
+
+As long as master and maintenance versions of idle.rst remain the
+same, help.html can be backported.  The internal Python version
+number is not displayed.  If maintenance idle.rst diverges from
+the master version, then instead of backporting help.html from
+master, repeat the procedure above to generate a maintenance
+version.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.idlelib.help.show_idlehelp">
+    
+  </a>
+  <a name="show_idlehelp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    show_idlehelp(parent):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create HelpWindow; called from Idle Help event handler.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.tarfile._Stream : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class private"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.tarfile.html" class="code" data-type="Module">tarfile</a>.<a href="Lib.tarfile._Stream.html" class="code" data-type="Class">_Stream</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.tarfile._Stream:</code></p>
+        <p><a href="classIndex.html#Lib.tarfile._Stream">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Class that serves as an adapter between TarFile and
+a stream-like object.  The stream-like object only
+needs to have a read() or write() method and is accessed
+blockwise.  Use of gzip or bzip2 compression is possible.
+A stream-like object could be for example: sys.stdin,
+sys.stdout, a socket, a tape device etc.
+
+_Stream is intended to be used only internally.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3694">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tarfile._Stream.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Construct a _Stream object.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tarfile._Stream.html#name" class="code" data-type="Instance Variable">name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tarfile._Stream.html#mode" class="code" data-type="Instance Variable">mode</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tarfile._Stream.html#comptype" class="code" data-type="Instance Variable">comptype</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tarfile._Stream.html#fileobj" class="code" data-type="Instance Variable">fileobj</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tarfile._Stream.html#bufsize" class="code" data-type="Instance Variable">bufsize</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tarfile._Stream.html#buf" class="code" data-type="Instance Variable">buf</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tarfile._Stream.html#pos" class="code" data-type="Instance Variable">pos</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tarfile._Stream.html#closed" class="code" data-type="Instance Variable">closed</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tarfile._Stream.html#zlib" class="code" data-type="Instance Variable">zlib</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tarfile._Stream.html#crc" class="code" data-type="Instance Variable">crc</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tarfile._Stream.html#exception" class="code" data-type="Instance Variable">exception</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tarfile._Stream.html#dbuf" class="code" data-type="Instance Variable">dbuf</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tarfile._Stream.html#cmp" class="code" data-type="Instance Variable">cmp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tarfile._Stream.html#__del__" class="code" data-type="Method">__del__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tarfile._Stream.html#write" class="code" data-type="Method">write</a></td>
+    <td><span>Write string s to the stream.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tarfile._Stream.html#close" class="code" data-type="Method">close</a></td>
+    <td><span>Close the _Stream object. No operation should be done on it afterwards.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tarfile._Stream.html#tell" class="code" data-type="Method">tell</a></td>
+    <td><span>Return the stream's file pointer position.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tarfile._Stream.html#seek" class="code" data-type="Method">seek</a></td>
+    <td><span>Set the stream's file pointer to pos. Negative seeking is forbidden.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tarfile._Stream.html#read" class="code" data-type="Method">read</a></td>
+    <td><span>Return the next size number of bytes from the stream.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tarfile._Stream.html#_extfileobj" class="code" data-type="Instance Variable">_extfileobj</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.tarfile._Stream.html#_init_write_gz" class="code" data-type="Method">_init_write_gz</a></td>
+    <td><span>Initialize for writing with gzip compression.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.tarfile._Stream.html#__write" class="code" data-type="Method">__write</a></td>
+    <td><span>Write string s to the stream if a whole new block is ready to be written.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.tarfile._Stream.html#_init_read_gz" class="code" data-type="Method">_init_read_gz</a></td>
+    <td><span>Initialize for reading a gzip compressed fileobj.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.tarfile._Stream.html#_read" class="code" data-type="Method">_read</a></td>
+    <td><span>Return size bytes from the stream.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.tarfile._Stream.html#__read" class="code" data-type="Method">__read</a></td>
+    <td><span>Return size bytes from stream. If internal buffer is empty, read another block from the stream.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.tarfile._Stream.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, name, mode, comptype, fileobj, bufsize):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Construct a _Stream object.
+        </p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.tarfile._Stream._extfileobj">
+    
+  </a>
+  <a name="_extfileobj">
+    
+  </a>
+  <div class="functionHeader">
+    _extfileobj =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.tarfile._Stream.name">
+    
+  </a>
+  <a name="name">
+    
+  </a>
+  <div class="functionHeader">
+    name =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.tarfile._Stream.mode">
+    
+  </a>
+  <a name="mode">
+    
+  </a>
+  <div class="functionHeader">
+    mode =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.tarfile._Stream.comptype">
+    
+  </a>
+  <a name="comptype">
+    
+  </a>
+  <div class="functionHeader">
+    comptype =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.tarfile._Stream.fileobj">
+    
+  </a>
+  <a name="fileobj">
+    
+  </a>
+  <div class="functionHeader">
+    fileobj =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.tarfile._Stream.bufsize">
+    
+  </a>
+  <a name="bufsize">
+    
+  </a>
+  <div class="functionHeader">
+    bufsize =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.tarfile._Stream.buf">
+    
+  </a>
+  <a name="buf">
+    
+  </a>
+  <div class="functionHeader">
+    buf =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.tarfile._Stream.pos">
+    
+  </a>
+  <a name="pos">
+    
+  </a>
+  <div class="functionHeader">
+    pos =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.tarfile._Stream.closed">
+    
+  </a>
+  <a name="closed">
+    
+  </a>
+  <div class="functionHeader">
+    closed =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.tarfile._Stream.zlib">
+    
+  </a>
+  <a name="zlib">
+    
+  </a>
+  <div class="functionHeader">
+    zlib =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.tarfile._Stream.crc">
+    
+  </a>
+  <a name="crc">
+    
+  </a>
+  <div class="functionHeader">
+    crc =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.tarfile._Stream.exception">
+    
+  </a>
+  <a name="exception">
+    
+  </a>
+  <div class="functionHeader">
+    exception =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.tarfile._Stream.dbuf">
+    
+  </a>
+  <a name="dbuf">
+    
+  </a>
+  <div class="functionHeader">
+    dbuf =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.tarfile._Stream.cmp">
+    
+  </a>
+  <a name="cmp">
+    
+  </a>
+  <div class="functionHeader">
+    cmp =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tarfile._Stream.__del__">
+    
+  </a>
+  <a name="__del__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __del__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.tarfile._Stream._init_write_gz">
+    
+  </a>
+  <a name="_init_write_gz">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _init_write_gz(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Initialize for writing with gzip compression.
+        </p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tarfile._Stream.write">
+    
+  </a>
+  <a name="write">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    write(self, s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Write string s to the stream.
+        </p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.tarfile._Stream.__write">
+    
+  </a>
+  <a name="__write">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __write(self, s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Write string s to the stream if a whole new block
+is ready to be written.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tarfile._Stream.close">
+    
+  </a>
+  <a name="close">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    close(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Close the _Stream object. No operation should be
+done on it afterwards.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.tarfile._Stream._init_read_gz">
+    
+  </a>
+  <a name="_init_read_gz">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _init_read_gz(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Initialize for reading a gzip compressed fileobj.
+        </p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tarfile._Stream.tell">
+    
+  </a>
+  <a name="tell">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tell(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the stream's file pointer position.
+        </p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tarfile._Stream.seek">
+    
+  </a>
+  <a name="seek">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    seek(self, pos=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set the stream's file pointer to pos. Negative seeking
+is forbidden.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tarfile._Stream.read">
+    
+  </a>
+  <a name="read">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    read(self, size):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the next size number of bytes from the stream.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.tarfile._Stream._read">
+    
+  </a>
+  <a name="_read">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _read(self, size):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return size bytes from the stream.
+        </p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.tarfile._Stream.__read">
+    
+  </a>
+  <a name="__read">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __read(self, size):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return size bytes from stream. If internal buffer is empty,
+read another block from the stream.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

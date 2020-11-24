@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.curses.textpad.Textbox : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.curses.html" class="code" data-type="Package">curses</a>.<a href="Lib.curses.textpad.html" class="code" data-type="Module">textpad</a>.<a href="Lib.curses.textpad.Textbox.html" class="code" data-type="Class">Textbox</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.curses.textpad.Textbox:</code></p>
+        <p><a href="classIndex.html#Lib.curses.textpad.Textbox">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Editing widget using the interior of a window object.
+ Supports the following Emacs-like key bindings:
+
+Ctrl-A      Go to left edge of window.
+Ctrl-B      Cursor left, wrapping to previous line if appropriate.
+Ctrl-D      Delete character under cursor.
+Ctrl-E      Go to right edge (stripspaces off) or end of line (stripspaces on).
+Ctrl-F      Cursor right, wrapping to next line when appropriate.
+Ctrl-G      Terminate, returning the window contents.
+Ctrl-H      Delete character backward.
+Ctrl-J      Terminate if the window is 1 line, otherwise insert newline.
+Ctrl-K      If line is blank, delete it, otherwise clear to end of line.
+Ctrl-L      Refresh screen.
+Ctrl-N      Cursor down; move down one line.
+Ctrl-O      Insert a blank line at cursor location.
+Ctrl-P      Cursor up; move up one line.
+
+Move operations do nothing if the cursor is at an edge where the movement
+is not possible.  The following synonyms are supported where possible:
+
+KEY_LEFT = Ctrl-B, KEY_RIGHT = Ctrl-F, KEY_UP = Ctrl-P, KEY_DOWN = Ctrl-N
+KEY_BACKSPACE = Ctrl-h</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id875">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.curses.textpad.Textbox.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.curses.textpad.Textbox.html#win" class="code" data-type="Instance Variable">win</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.curses.textpad.Textbox.html#insert_mode" class="code" data-type="Instance Variable">insert_mode</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.curses.textpad.Textbox.html#stripspaces" class="code" data-type="Instance Variable">stripspaces</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.curses.textpad.Textbox.html#lastcmd" class="code" data-type="Instance Variable">lastcmd</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.curses.textpad.Textbox.html#maxy" class="code" data-type="Instance Variable">maxy</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.curses.textpad.Textbox.html#maxx" class="code" data-type="Instance Variable">maxx</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.curses.textpad.Textbox.html#do_command" class="code" data-type="Method">do_command</a></td>
+    <td><span>Process a single editing command.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.curses.textpad.Textbox.html#gather" class="code" data-type="Method">gather</a></td>
+    <td><span>Collect and return the contents of the window.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.curses.textpad.Textbox.html#edit" class="code" data-type="Method">edit</a></td>
+    <td><span>Edit in the widget window and collect the results.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.curses.textpad.Textbox.html#_update_max_yx" class="code" data-type="Method">_update_max_yx</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.curses.textpad.Textbox.html#_end_of_line" class="code" data-type="Method">_end_of_line</a></td>
+    <td><span>Go to the location of the first blank on the given line, returning the index of the last non-blank character.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.curses.textpad.Textbox.html#_insert_printable_char" class="code" data-type="Method">_insert_printable_char</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.curses.textpad.Textbox.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, win, insert_mode=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.curses.textpad.Textbox.win">
+    
+  </a>
+  <a name="win">
+    
+  </a>
+  <div class="functionHeader">
+    win =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.curses.textpad.Textbox.insert_mode">
+    
+  </a>
+  <a name="insert_mode">
+    
+  </a>
+  <div class="functionHeader">
+    insert_mode =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.curses.textpad.Textbox.stripspaces">
+    
+  </a>
+  <a name="stripspaces">
+    
+  </a>
+  <div class="functionHeader">
+    stripspaces =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.curses.textpad.Textbox.lastcmd">
+    
+  </a>
+  <a name="lastcmd">
+    
+  </a>
+  <div class="functionHeader">
+    lastcmd =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.curses.textpad.Textbox._update_max_yx">
+    
+  </a>
+  <a name="_update_max_yx">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _update_max_yx(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.curses.textpad.Textbox.maxy">
+    
+  </a>
+  <a name="maxy">
+    
+  </a>
+  <div class="functionHeader">
+    maxy =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.curses.textpad.Textbox.maxx">
+    
+  </a>
+  <a name="maxx">
+    
+  </a>
+  <div class="functionHeader">
+    maxx =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.curses.textpad.Textbox._end_of_line">
+    
+  </a>
+  <a name="_end_of_line">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _end_of_line(self, y):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Go to the location of the first blank on the given line,
+returning the index of the last non-blank character.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.curses.textpad.Textbox._insert_printable_char">
+    
+  </a>
+  <a name="_insert_printable_char">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _insert_printable_char(self, ch):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.curses.textpad.Textbox.do_command">
+    
+  </a>
+  <a name="do_command">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    do_command(self, ch):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Process a single editing command.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.curses.textpad.Textbox.gather">
+    
+  </a>
+  <a name="gather">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    gather(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Collect and return the contents of the window.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.curses.textpad.Textbox.edit">
+    
+  </a>
+  <a name="edit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    edit(self, validate=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Edit in the widget window and collect the results.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

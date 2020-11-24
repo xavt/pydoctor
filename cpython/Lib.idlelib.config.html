@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.idlelib.config : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.idlelib.html" class="code" data-type="Package">idlelib</a>.<a href="Lib.idlelib.config.html" class="code" data-type="Module">config</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">idlelib.config -- Manage IDLE configuration information.
+
+The comments at the beginning of config-main.def describe the
+configuration files and the design implemented to update user
+configuration information.  In particular, user configuration choices
+which duplicate the defaults will be removed from the user's
+configuration files, and if a user file becomes empty, it will be
+deleted.
+
+The configuration database maps options to values.  Conceptually, the
+database keys are tuples (config-type, section, item).  As implemented,
+there are  separate dicts for default and user values.  Each has
+config-type keys 'main', 'extensions', 'highlight', and 'keys'.  The
+value for each key is a ConfigParser instance that maps section and item
+to values.  For 'main' and 'extensions', user values override
+default values.  For 'highlight' and 'keys', user sections augment the
+default sections (and must, therefore, have distinct names).
+
+Throughout this module there is an emphasis on returning useable defaults
+when a problem occurs in returning a requested configuration value back to
+idle. This is to allow IDLE to continue to function in spite of errors in
+the retrieval of config information. When a default is returned instead of
+a requested config value, a message is printed to stderr to aid in
+configuration problem notification and resolution.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2055">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.config.InvalidConfigType.html" class="code" data-type="Class">InvalidConfigType</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.config.InvalidConfigSet.html" class="code" data-type="Class">InvalidConfigSet</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.config.InvalidTheme.html" class="code" data-type="Class">InvalidTheme</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.config.IdleConfParser.html" class="code" data-type="Class">IdleConfParser</a></td>
+    <td><span>A ConfigParser specialised for idle configuration file handling</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.config.IdleUserConfParser.html" class="code" data-type="Class">IdleUserConfParser</a></td>
+    <td><span>IdleConfigParser specialised for user configuration handling.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.config.IdleConf.html" class="code" data-type="Class">IdleConf</a></td>
+    <td><span>Hold config parsers for all idle config files in singleton instance.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.config.html#idleConf" class="code" data-type="Variable">idleConf</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.idlelib.config.ConfigChanges.html" class="code" data-type="Class">ConfigChanges</a></td>
+    <td><span>Manage a user's proposed configuration option changes.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.idlelib.config.html#_warned" class="code" data-type="Variable">_warned</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.config.html#_warn" class="code" data-type="Function">_warn</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.idlelib.config.html#_dump" class="code" data-type="Function">_dump</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.idlelib.config.idleConf">
+    
+  </a>
+  <a name="idleConf">
+    
+  </a>
+  <div class="functionHeader">
+    idleConf =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.idlelib.config._warned">
+    
+  </a>
+  <a name="_warned">
+    
+  </a>
+  <div class="functionHeader">
+    _warned =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.idlelib.config._warn">
+    
+  </a>
+  <a name="_warn">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _warn(msg, *key):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.idlelib.config._dump">
+    
+  </a>
+  <a name="_dump">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _dump():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

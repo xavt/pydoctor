@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.lib2to3.fixes.fix_metaclass : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.lib2to3.html" class="code" data-type="Package">lib2to3</a>.<a href="Lib.lib2to3.fixes.html" class="code" data-type="Package">fixes</a>.<a href="Lib.lib2to3.fixes.fix_metaclass.html" class="code" data-type="Module">fix_metaclass</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Fixer for __metaclass__ = X -&gt; (metaclass=X) methods.
+
+The various forms of classef (inherits nothing, inherits once, inherits
+many) don't parse the same in the CST so we look at ALL classes for
+a __metaclass__ and if we find one normalize the inherits to all be
+an arglist.
+
+For one-liner classes ('class X: pass') there is no indent/dedent so
+we normalize those into having a suite.
+
+Moving the __metaclass__ into the classdef can also cause the class
+body to be empty so there is some special casing for that as well.
+
+This fixer also tries very hard to keep original indenting and spacing
+in all those corner cases.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2723">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixes.fix_metaclass.html#has_metaclass" class="code" data-type="Function">has_metaclass</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixes.fix_metaclass.html#fixup_parse_tree" class="code" data-type="Function">fixup_parse_tree</a></td>
+    <td><span>one-line classes don't get a suite in the parse tree so we add one to normalize the tree</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixes.fix_metaclass.html#fixup_simple_stmt" class="code" data-type="Function">fixup_simple_stmt</a></td>
+    <td><span>if there is a semi-colon all the parts count as part of the same simple_stmt.  We just want the __metaclass__ part so we move everything after the semi-colon into its own simple_stmt node</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixes.fix_metaclass.html#remove_trailing_newline" class="code" data-type="Function">remove_trailing_newline</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixes.fix_metaclass.html#find_metas" class="code" data-type="Function">find_metas</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.fixes.fix_metaclass.html#fixup_indent" class="code" data-type="Function">fixup_indent</a></td>
+    <td><span>If an INDENT is followed by a thing with a prefix then nuke the prefix Otherwise we get in trouble when removing __metaclass__ at suite start</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.lib2to3.fixes.fix_metaclass.FixMetaclass.html" class="code" data-type="Class">FixMetaclass</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixes.fix_metaclass.has_metaclass">
+    
+  </a>
+  <a name="has_metaclass">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    has_metaclass(parent):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">we have to check the cls_node without changing it.
+There are two possibilities:
+  1)  clsdef =&gt; suite =&gt; simple_stmt =&gt; expr_stmt =&gt; Leaf('__meta')
+  2)  clsdef =&gt; simple_stmt =&gt; expr_stmt =&gt; Leaf('__meta')</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixes.fix_metaclass.fixup_parse_tree">
+    
+  </a>
+  <a name="fixup_parse_tree">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    fixup_parse_tree(cls_node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">one-line classes don't get a suite in the parse tree so we add
+one to normalize the tree</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixes.fix_metaclass.fixup_simple_stmt">
+    
+  </a>
+  <a name="fixup_simple_stmt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    fixup_simple_stmt(parent, i, stmt_node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">if there is a semi-colon all the parts count as part of the same
+simple_stmt.  We just want the __metaclass__ part so we move
+everything after the semi-colon into its own simple_stmt node</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixes.fix_metaclass.remove_trailing_newline">
+    
+  </a>
+  <a name="remove_trailing_newline">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    remove_trailing_newline(node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixes.fix_metaclass.find_metas">
+    
+  </a>
+  <a name="find_metas">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    find_metas(cls_node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.fixes.fix_metaclass.fixup_indent">
+    
+  </a>
+  <a name="fixup_indent">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    fixup_indent(suite):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">If an INDENT is followed by a thing with a prefix then nuke the prefix
+Otherwise we get in trouble when removing __metaclass__ at suite start</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

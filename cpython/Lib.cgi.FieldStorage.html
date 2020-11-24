@@ -1,0 +1,1317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.cgi.FieldStorage : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.cgi.html" class="code" data-type="Module">cgi</a>.<a href="Lib.cgi.FieldStorage.html" class="code" data-type="Class">FieldStorage</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.cgi.FieldStorage:</code></p>
+        <p><a href="classIndex.html#Lib.cgi.FieldStorage">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Store a sequence of fields, reading multipart/form-data.
+
+This class provides naming, typing, files stored on disk, and
+more.  At the top level, it is accessible like a dictionary, whose
+keys are the field names.  (Note: None can occur as a field name.)
+The items are either a Python list (if there's multiple values) or
+another FieldStorage or MiniFieldStorage object.  If it's a single
+object, it has the following attributes:
+
+name: the field name, if specified; otherwise None
+
+filename: the filename, if specified; otherwise None; this is the
+    client side filename, *not* the file name on which it is
+    stored (that's a temporary file you don't deal with)
+
+value: the value as a *string*; for file uploads, this
+    transparently reads the file every time you request the value
+    and returns *bytes*
+
+file: the file(-like) object from which you can read the data *as
+    bytes* ; None if the data is stored a simple string
+
+type: the content-type, or None if not specified
+
+type_options: dictionary of options specified on the content-type
+    line
+
+disposition: content-disposition, or None if not specified
+
+disposition_options: dictionary of corresponding options
+
+headers: a dictionary(-like) object (sometimes email.message.Message or a
+    subclass thereof) containing *all* headers
+
+The class is subclassable, mostly for the purpose of overriding
+the make_file() method, which is called internally to come up with
+a file open for reading and writing.  This makes it possible to
+override the default choice of storing all files in a temporary
+directory and unlinking them as soon as they have been opened.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id493">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cgi.FieldStorage.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Constructor.  Read multipart/* until last part.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cgi.FieldStorage.html#keep_blank_values" class="code" data-type="Instance Variable">keep_blank_values</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cgi.FieldStorage.html#strict_parsing" class="code" data-type="Instance Variable">strict_parsing</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cgi.FieldStorage.html#max_num_fields" class="code" data-type="Instance Variable">max_num_fields</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cgi.FieldStorage.html#qs_on_post" class="code" data-type="Instance Variable">qs_on_post</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cgi.FieldStorage.html#headers" class="code" data-type="Instance Variable">headers</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cgi.FieldStorage.html#fp" class="code" data-type="Instance Variable">fp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cgi.FieldStorage.html#encoding" class="code" data-type="Instance Variable">encoding</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cgi.FieldStorage.html#errors" class="code" data-type="Instance Variable">errors</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cgi.FieldStorage.html#outerboundary" class="code" data-type="Instance Variable">outerboundary</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cgi.FieldStorage.html#bytes_read" class="code" data-type="Instance Variable">bytes_read</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cgi.FieldStorage.html#limit" class="code" data-type="Instance Variable">limit</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cgi.FieldStorage.html#disposition" class="code" data-type="Instance Variable">disposition</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cgi.FieldStorage.html#disposition_options" class="code" data-type="Instance Variable">disposition_options</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cgi.FieldStorage.html#name" class="code" data-type="Instance Variable">name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cgi.FieldStorage.html#filename" class="code" data-type="Instance Variable">filename</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cgi.FieldStorage.html#type" class="code" data-type="Instance Variable">type</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cgi.FieldStorage.html#type_options" class="code" data-type="Instance Variable">type_options</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cgi.FieldStorage.html#innerboundary" class="code" data-type="Instance Variable">innerboundary</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cgi.FieldStorage.html#length" class="code" data-type="Instance Variable">length</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cgi.FieldStorage.html#list" class="code" data-type="Instance Variable">list</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cgi.FieldStorage.html#file" class="code" data-type="Instance Variable">file</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cgi.FieldStorage.html#done" class="code" data-type="Instance Variable">done</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cgi.FieldStorage.html#__del__" class="code" data-type="Method">__del__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cgi.FieldStorage.html#__enter__" class="code" data-type="Method">__enter__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cgi.FieldStorage.html#__exit__" class="code" data-type="Method">__exit__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cgi.FieldStorage.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span>Return a printable representation.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cgi.FieldStorage.html#__iter__" class="code" data-type="Method">__iter__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cgi.FieldStorage.html#__getattr__" class="code" data-type="Method">__getattr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cgi.FieldStorage.html#__getitem__" class="code" data-type="Method">__getitem__</a></td>
+    <td><span>Dictionary style indexing.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cgi.FieldStorage.html#getvalue" class="code" data-type="Method">getvalue</a></td>
+    <td><span>Dictionary style get() method, including 'value' lookup.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cgi.FieldStorage.html#getfirst" class="code" data-type="Method">getfirst</a></td>
+    <td><span>Return the first value received.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cgi.FieldStorage.html#getlist" class="code" data-type="Method">getlist</a></td>
+    <td><span>Return list of received values.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cgi.FieldStorage.html#keys" class="code" data-type="Method">keys</a></td>
+    <td><span>Dictionary style keys() method.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cgi.FieldStorage.html#__contains__" class="code" data-type="Method">__contains__</a></td>
+    <td><span>Dictionary style __contains__ method.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cgi.FieldStorage.html#__len__" class="code" data-type="Method">__len__</a></td>
+    <td><span>Dictionary style len(x) support.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cgi.FieldStorage.html#__bool__" class="code" data-type="Method">__bool__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cgi.FieldStorage.html#read_urlencoded" class="code" data-type="Method">read_urlencoded</a></td>
+    <td><span>Internal: read data in query string format.</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.cgi.FieldStorage.html#FieldStorageClass" class="code" data-type="Class Variable">FieldStorageClass</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cgi.FieldStorage.html#read_multi" class="code" data-type="Method">read_multi</a></td>
+    <td><span>Internal: read a part that is itself multipart.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cgi.FieldStorage.html#read_single" class="code" data-type="Method">read_single</a></td>
+    <td><span>Internal: read an atomic part.</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.cgi.FieldStorage.html#bufsize" class="code" data-type="Class Variable">bufsize</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cgi.FieldStorage.html#read_binary" class="code" data-type="Method">read_binary</a></td>
+    <td><span>Internal: read binary data.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cgi.FieldStorage.html#read_lines" class="code" data-type="Method">read_lines</a></td>
+    <td><span>Internal: read lines until EOF or outerboundary.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cgi.FieldStorage.html#read_lines_to_eof" class="code" data-type="Method">read_lines_to_eof</a></td>
+    <td><span>Internal: read lines until EOF.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cgi.FieldStorage.html#read_lines_to_outerboundary" class="code" data-type="Method">read_lines_to_outerboundary</a></td>
+    <td><span>Internal: read lines until outerboundary. Data is read as bytes: boundaries and line ends must be converted to bytes for comparisons.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cgi.FieldStorage.html#skip_lines" class="code" data-type="Method">skip_lines</a></td>
+    <td><span>Internal: skip lines until outer boundary if defined.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.cgi.FieldStorage.html#make_file" class="code" data-type="Method">make_file</a></td>
+    <td><span>Overridable: return a readable &amp; writable file.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cgi.FieldStorage.html#_binary_file" class="code" data-type="Instance Variable">_binary_file</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.cgi.FieldStorage.html#__file" class="code" data-type="Instance Variable">__file</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.cgi.FieldStorage.html#__write" class="code" data-type="Method">__write</a></td>
+    <td><span>line is always bytes, not string</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.cgi.FieldStorage.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, fp=None, headers=None, outerboundary=b'', environ=os.environ, keep_blank_values=0, strict_parsing=0, limit=None, encoding="""utf-8""", errors="""replace""", max_num_fields=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Constructor.  Read multipart/* until last part.
+
+Arguments, all optional:
+
+fp              : file pointer; default: sys.stdin.buffer
+    (not used when the request method is GET)
+    Can be :
+    1. a TextIOWrapper object
+    2. an object whose read() and readline() methods return bytes
+
+headers         : header dictionary-like object; default:
+    taken from environ as per CGI spec
+
+outerboundary   : terminating multipart boundary
+    (for internal use only)
+
+environ         : environment dictionary; default: os.environ
+
+keep_blank_values: flag indicating whether blank values in
+    percent-encoded forms should be treated as blank strings.
+    A true value indicates that blanks should be retained as
+    blank strings.  The default false value indicates that
+    blank values are to be ignored and treated as if they were
+    not included.
+
+strict_parsing: flag indicating what to do with parsing errors.
+    If false (the default), errors are silently ignored.
+    If true, errors raise a ValueError exception.
+
+limit : used internally to read parts of multipart/form-data forms,
+    to exit from the reading loop when reached. It is the difference
+    between the form content-length and the number of bytes already
+    read
+
+encoding, errors : the encoding and error handler used to decode the
+    binary stream to strings. Must be the same as the charset defined
+    for the page sending the form (content-type : meta http-equiv or
+    header)
+
+max_num_fields: int. If set, then __init__ throws a ValueError
+    if there are more than n fields read by parse_qsl().</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.cgi.FieldStorage.keep_blank_values">
+    
+  </a>
+  <a name="keep_blank_values">
+    
+  </a>
+  <div class="functionHeader">
+    keep_blank_values =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.cgi.FieldStorage.strict_parsing">
+    
+  </a>
+  <a name="strict_parsing">
+    
+  </a>
+  <div class="functionHeader">
+    strict_parsing =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.cgi.FieldStorage.max_num_fields">
+    
+  </a>
+  <a name="max_num_fields">
+    
+  </a>
+  <div class="functionHeader">
+    max_num_fields =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.cgi.FieldStorage.qs_on_post">
+    
+  </a>
+  <a name="qs_on_post">
+    
+  </a>
+  <div class="functionHeader">
+    qs_on_post =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.cgi.FieldStorage.headers">
+    
+  </a>
+  <a name="headers">
+    
+  </a>
+  <div class="functionHeader">
+    headers =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.cgi.FieldStorage.fp">
+    
+  </a>
+  <a name="fp">
+    
+  </a>
+  <div class="functionHeader">
+    fp =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.cgi.FieldStorage.encoding">
+    
+  </a>
+  <a name="encoding">
+    
+  </a>
+  <div class="functionHeader">
+    encoding =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.cgi.FieldStorage.errors">
+    
+  </a>
+  <a name="errors">
+    
+  </a>
+  <div class="functionHeader">
+    errors =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.cgi.FieldStorage.outerboundary">
+    
+  </a>
+  <a name="outerboundary">
+    
+  </a>
+  <div class="functionHeader">
+    outerboundary =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.cgi.FieldStorage.bytes_read">
+    
+  </a>
+  <a name="bytes_read">
+    
+  </a>
+  <div class="functionHeader">
+    bytes_read =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.cgi.FieldStorage.limit">
+    
+  </a>
+  <a name="limit">
+    
+  </a>
+  <div class="functionHeader">
+    limit =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.cgi.FieldStorage.disposition">
+    
+  </a>
+  <a name="disposition">
+    
+  </a>
+  <div class="functionHeader">
+    disposition =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.cgi.FieldStorage.disposition_options">
+    
+  </a>
+  <a name="disposition_options">
+    
+  </a>
+  <div class="functionHeader">
+    disposition_options =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.cgi.FieldStorage.name">
+    
+  </a>
+  <a name="name">
+    
+  </a>
+  <div class="functionHeader">
+    name =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.cgi.FieldStorage.filename">
+    
+  </a>
+  <a name="filename">
+    
+  </a>
+  <div class="functionHeader">
+    filename =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.cgi.FieldStorage._binary_file">
+    
+  </a>
+  <a name="_binary_file">
+    
+  </a>
+  <div class="functionHeader">
+    _binary_file =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.cgi.FieldStorage.type">
+    
+  </a>
+  <a name="type">
+    
+  </a>
+  <div class="functionHeader">
+    type =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.cgi.FieldStorage.type_options">
+    
+  </a>
+  <a name="type_options">
+    
+  </a>
+  <div class="functionHeader">
+    type_options =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.cgi.FieldStorage.innerboundary">
+    
+  </a>
+  <a name="innerboundary">
+    
+  </a>
+  <div class="functionHeader">
+    innerboundary =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.cgi.FieldStorage.length">
+    
+  </a>
+  <a name="length">
+    
+  </a>
+  <div class="functionHeader">
+    length =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.cgi.FieldStorage.list">
+    
+  </a>
+  <a name="list">
+    
+  </a>
+  <div class="functionHeader">
+    list =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.cgi.FieldStorage.file">
+    
+  </a>
+  <a name="file">
+    
+  </a>
+  <div class="functionHeader">
+    file =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.cgi.FieldStorage.done">
+    
+  </a>
+  <a name="done">
+    
+  </a>
+  <div class="functionHeader">
+    done =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cgi.FieldStorage.__del__">
+    
+  </a>
+  <a name="__del__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __del__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cgi.FieldStorage.__enter__">
+    
+  </a>
+  <a name="__enter__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __enter__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cgi.FieldStorage.__exit__">
+    
+  </a>
+  <a name="__exit__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __exit__(self, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cgi.FieldStorage.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __repr__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a printable representation.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cgi.FieldStorage.__iter__">
+    
+  </a>
+  <a name="__iter__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __iter__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cgi.FieldStorage.__getattr__">
+    
+  </a>
+  <a name="__getattr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __getattr__(self, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cgi.FieldStorage.__getitem__">
+    
+  </a>
+  <a name="__getitem__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __getitem__(self, key):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Dictionary style indexing.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cgi.FieldStorage.getvalue">
+    
+  </a>
+  <a name="getvalue">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getvalue(self, key, default=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Dictionary style get() method, including 'value' lookup.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cgi.FieldStorage.getfirst">
+    
+  </a>
+  <a name="getfirst">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getfirst(self, key, default=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the first value received.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cgi.FieldStorage.getlist">
+    
+  </a>
+  <a name="getlist">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getlist(self, key):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return list of received values.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cgi.FieldStorage.keys">
+    
+  </a>
+  <a name="keys">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    keys(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Dictionary style keys() method.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cgi.FieldStorage.__contains__">
+    
+  </a>
+  <a name="__contains__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __contains__(self, key):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Dictionary style __contains__ method.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cgi.FieldStorage.__len__">
+    
+  </a>
+  <a name="__len__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __len__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Dictionary style len(x) support.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cgi.FieldStorage.__bool__">
+    
+  </a>
+  <a name="__bool__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __bool__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cgi.FieldStorage.read_urlencoded">
+    
+  </a>
+  <a name="read_urlencoded">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    read_urlencoded(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Internal: read data in query string format.</p></div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.cgi.FieldStorage.FieldStorageClass">
+    
+  </a>
+  <a name="FieldStorageClass">
+    
+  </a>
+  <div class="functionHeader">
+    FieldStorageClass =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cgi.FieldStorage.read_multi">
+    
+  </a>
+  <a name="read_multi">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    read_multi(self, environ, keep_blank_values, strict_parsing):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Internal: read a part that is itself multipart.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cgi.FieldStorage.read_single">
+    
+  </a>
+  <a name="read_single">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    read_single(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Internal: read an atomic part.</p></div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.cgi.FieldStorage.bufsize">
+    
+  </a>
+  <a name="bufsize">
+    
+  </a>
+  <div class="functionHeader">
+    bufsize =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cgi.FieldStorage.read_binary">
+    
+  </a>
+  <a name="read_binary">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    read_binary(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Internal: read binary data.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cgi.FieldStorage.read_lines">
+    
+  </a>
+  <a name="read_lines">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    read_lines(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Internal: read lines until EOF or outerboundary.</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.cgi.FieldStorage.__file">
+    
+  </a>
+  <a name="__file">
+    
+  </a>
+  <div class="functionHeader">
+    __file =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.cgi.FieldStorage.__write">
+    
+  </a>
+  <a name="__write">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __write(self, line):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">line is always bytes, not string</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cgi.FieldStorage.read_lines_to_eof">
+    
+  </a>
+  <a name="read_lines_to_eof">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    read_lines_to_eof(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Internal: read lines until EOF.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cgi.FieldStorage.read_lines_to_outerboundary">
+    
+  </a>
+  <a name="read_lines_to_outerboundary">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    read_lines_to_outerboundary(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Internal: read lines until outerboundary.
+Data is read as bytes: boundaries and line ends must be converted
+to bytes for comparisons.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cgi.FieldStorage.skip_lines">
+    
+  </a>
+  <a name="skip_lines">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    skip_lines(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Internal: skip lines until outer boundary if defined.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.cgi.FieldStorage.make_file">
+    
+  </a>
+  <a name="make_file">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    make_file(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Overridable: return a readable &amp; writable file.
+
+The file will be used as follows:
+- data is written to it
+- seek(0)
+- data is read from it
+
+The file is opened in binary mode for files, in text mode
+for other fields
+
+This version opens a temporary file for reading and writing,
+and immediately deletes (unlinks) it.  The trick (on Unix!) is
+that the file can still be used, but it can't be opened by
+another process, and it will automatically be deleted when it
+is closed or when the current process terminates.
+
+If you want a more permanent file, you derive a class which
+overrides this method.  If you want a visible temporary file
+that is nevertheless automatically deleted when the script
+terminates, try defining a __del__ method in a derived class
+which unlinks the temporary files you have created.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.xmlrpc.client.Unmarshaller : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.xmlrpc.html" class="code" data-type="Package">xmlrpc</a>.<a href="Lib.xmlrpc.client.html" class="code" data-type="Module">client</a>.<a href="Lib.xmlrpc.client.Unmarshaller.html" class="code" data-type="Class">Unmarshaller</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.xmlrpc.client.Unmarshaller:</code></p>
+        <p><a href="classIndex.html#Lib.xmlrpc.client.Unmarshaller">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Unmarshal an XML-RPC response, based on incoming XML event
+messages (start, data, end).  Call close() to get the resulting
+data structure.
+
+Note that this reader is fairly tolerant, and gladly accepts bogus
+XML-RPC data without complaining (but not bogus XML).</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id12181">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#append" class="code" data-type="Instance Variable">append</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#close" class="code" data-type="Method">close</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#getmethodname" class="code" data-type="Method">getmethodname</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#xml" class="code" data-type="Method">xml</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#start" class="code" data-type="Method">start</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#data" class="code" data-type="Method">data</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#end" class="code" data-type="Method">end</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#end_dispatch" class="code" data-type="Method">end_dispatch</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#dispatch" class="code" data-type="Class Variable">dispatch</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#end_nil" class="code" data-type="Method">end_nil</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#end_boolean" class="code" data-type="Method">end_boolean</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#end_int" class="code" data-type="Method">end_int</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#end_double" class="code" data-type="Method">end_double</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#end_bigdecimal" class="code" data-type="Method">end_bigdecimal</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#end_string" class="code" data-type="Method">end_string</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#end_array" class="code" data-type="Method">end_array</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#end_struct" class="code" data-type="Method">end_struct</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#end_base64" class="code" data-type="Method">end_base64</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#end_dateTime" class="code" data-type="Method">end_dateTime</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#end_value" class="code" data-type="Method">end_value</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#end_params" class="code" data-type="Method">end_params</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#end_fault" class="code" data-type="Method">end_fault</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#end_methodName" class="code" data-type="Method">end_methodName</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#_type" class="code" data-type="Instance Variable">_type</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#_stack" class="code" data-type="Instance Variable">_stack</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#_marks" class="code" data-type="Instance Variable">_marks</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#_data" class="code" data-type="Instance Variable">_data</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#_value" class="code" data-type="Instance Variable">_value</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#_methodname" class="code" data-type="Instance Variable">_methodname</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#_encoding" class="code" data-type="Instance Variable">_encoding</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#_use_datetime" class="code" data-type="Instance Variable">_use_datetime</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xmlrpc.client.Unmarshaller.html#_use_bytes" class="code" data-type="Instance Variable">_use_bytes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, use_datetime=(False), use_builtin_types=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller._type">
+    
+  </a>
+  <a name="_type">
+    
+  </a>
+  <div class="functionHeader">
+    _type =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller._stack">
+    
+  </a>
+  <a name="_stack">
+    
+  </a>
+  <div class="functionHeader">
+    _stack =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller._marks">
+    
+  </a>
+  <a name="_marks">
+    
+  </a>
+  <div class="functionHeader">
+    _marks =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller._data">
+    
+  </a>
+  <a name="_data">
+    
+  </a>
+  <div class="functionHeader">
+    _data =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller._value">
+    
+  </a>
+  <a name="_value">
+    
+  </a>
+  <div class="functionHeader">
+    _value =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller._methodname">
+    
+  </a>
+  <a name="_methodname">
+    
+  </a>
+  <div class="functionHeader">
+    _methodname =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller._encoding">
+    
+  </a>
+  <a name="_encoding">
+    
+  </a>
+  <div class="functionHeader">
+    _encoding =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller.append">
+    
+  </a>
+  <a name="append">
+    
+  </a>
+  <div class="functionHeader">
+    append =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller._use_datetime">
+    
+  </a>
+  <a name="_use_datetime">
+    
+  </a>
+  <div class="functionHeader">
+    _use_datetime =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller._use_bytes">
+    
+  </a>
+  <a name="_use_bytes">
+    
+  </a>
+  <div class="functionHeader">
+    _use_bytes =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller.close">
+    
+  </a>
+  <a name="close">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    close(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller.getmethodname">
+    
+  </a>
+  <a name="getmethodname">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getmethodname(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller.xml">
+    
+  </a>
+  <a name="xml">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    xml(self, encoding, standalone):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller.start">
+    
+  </a>
+  <a name="start">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    start(self, tag, attrs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller.data">
+    
+  </a>
+  <a name="data">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    data(self, text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller.end">
+    
+  </a>
+  <a name="end">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    end(self, tag):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller.end_dispatch">
+    
+  </a>
+  <a name="end_dispatch">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    end_dispatch(self, tag, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller.dispatch">
+    
+  </a>
+  <a name="dispatch">
+    
+  </a>
+  <div class="functionHeader">
+    dispatch =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller.end_nil">
+    
+  </a>
+  <a name="end_nil">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    end_nil(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller.end_boolean">
+    
+  </a>
+  <a name="end_boolean">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    end_boolean(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller.end_int">
+    
+  </a>
+  <a name="end_int">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    end_int(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller.end_double">
+    
+  </a>
+  <a name="end_double">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    end_double(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller.end_bigdecimal">
+    
+  </a>
+  <a name="end_bigdecimal">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    end_bigdecimal(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller.end_string">
+    
+  </a>
+  <a name="end_string">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    end_string(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller.end_array">
+    
+  </a>
+  <a name="end_array">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    end_array(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller.end_struct">
+    
+  </a>
+  <a name="end_struct">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    end_struct(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller.end_base64">
+    
+  </a>
+  <a name="end_base64">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    end_base64(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller.end_dateTime">
+    
+  </a>
+  <a name="end_dateTime">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    end_dateTime(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller.end_value">
+    
+  </a>
+  <a name="end_value">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    end_value(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller.end_params">
+    
+  </a>
+  <a name="end_params">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    end_params(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller.end_fault">
+    
+  </a>
+  <a name="end_fault">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    end_fault(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xmlrpc.client.Unmarshaller.end_methodName">
+    
+  </a>
+  <a name="end_methodName">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    end_methodName(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

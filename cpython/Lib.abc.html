@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.abc : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.abc.html" class="code" data-type="Module">abc</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Abstract Base Classes (ABCs) according to PEP 3119.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id190">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.abc.html#abstractmethod" class="code" data-type="Function">abstractmethod</a></td>
+    <td><span>A decorator indicating abstract methods.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.abc.abstractclassmethod.html" class="code" data-type="Class">abstractclassmethod</a></td>
+    <td><span>A decorator indicating abstract classmethods.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.abc.abstractstaticmethod.html" class="code" data-type="Class">abstractstaticmethod</a></td>
+    <td><span>A decorator indicating abstract staticmethods.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.abc.abstractproperty.html" class="code" data-type="Class">abstractproperty</a></td>
+    <td><span>A decorator indicating abstract properties.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.abc.ABCMeta.html" class="code" data-type="Class">ABCMeta</a></td>
+    <td><span>Metaclass for defining Abstract Base Classes (ABCs).</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.abc.html#update_abstractmethods" class="code" data-type="Function">update_abstractmethods</a></td>
+    <td><span>Recalculate the set of abstract methods of an abstract class.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.abc.ABC.html" class="code" data-type="Class">ABC</a></td>
+    <td><span>Helper class that provides a standard way to create an ABC using inheritance.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction">
+  
+  <a name="Lib.abc.abstractmethod">
+    
+  </a>
+  <a name="abstractmethod">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    abstractmethod(funcobj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">A decorator indicating abstract methods.
+
+Requires that the metaclass is ABCMeta or derived from it.  A
+class that has a metaclass derived from ABCMeta cannot be
+instantiated unless all of its abstract methods are overridden.
+The abstract methods can be called using any of the normal
+'super' call mechanisms.  abstractmethod() may be used to declare
+abstract methods for properties and descriptors.
+
+Usage:
+
+    class C(metaclass=ABCMeta):
+        @abstractmethod
+        def my_abstract_method(self, ...):
+            ...</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.abc.update_abstractmethods">
+    
+  </a>
+  <a name="update_abstractmethods">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    update_abstractmethods(cls):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Recalculate the set of abstract methods of an abstract class.
+
+If a class has had one of its abstract methods implemented after the
+class was created, the method will not be considered implemented until
+this function is called. Alternatively, if a new abstract method has been
+added to the class, it will only be considered an abstract method of the
+class after this function is called.
+
+This function should be called before any use is made of the class,
+usually in class decorators that add methods to the subject class.
+
+Returns cls, to allow usage as a class decorator.
+
+If cls is not an instance of ABCMeta, does nothing.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

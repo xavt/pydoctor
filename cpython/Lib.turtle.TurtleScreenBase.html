@@ -1,0 +1,1068 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.turtle.TurtleScreenBase : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.turtle.html" class="code" data-type="Module">turtle</a>.<a href="Lib.turtle.TurtleScreenBase.html" class="code" data-type="Class">TurtleScreenBase</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.turtle.TurtleScreenBase(<span title="object">object</span>):</code></p><p>Known subclasses: <a href="Lib.turtle.TurtleScreen.html" class="code" data-type="Class">Lib.turtle.TurtleScreen</a></p>
+        <p><a href="classIndex.html#Lib.turtle.TurtleScreenBase">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Provide the basic graphics functionality.
+Interface between Tkinter and turtle.py.
+
+To port turtle.py to some different graphics toolkit
+a corresponding TurtleScreenBase class has to be implemented.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id11475">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#cv" class="code" data-type="Instance Variable">cv</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#canvwidth" class="code" data-type="Instance Variable">canvwidth</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#canvheight" class="code" data-type="Instance Variable">canvheight</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#xscale" class="code" data-type="Instance Variable">xscale</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#yscale" class="code" data-type="Instance Variable">yscale</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#mainloop" class="code" data-type="Method">mainloop</a></td>
+    <td><span>Starts event loop - calling Tkinter's mainloop function.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#textinput" class="code" data-type="Method">textinput</a></td>
+    <td><span>Pop up a dialog window for input of a string.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#numinput" class="code" data-type="Method">numinput</a></td>
+    <td><span>Pop up a dialog window for input of a number.</span></td>
+  </tr><tr class="staticmethod private">
+    
+    <td>Static Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#_blankimage" class="code" data-type="Static Method">_blankimage</a></td>
+    <td><span>return a blank image object</span></td>
+  </tr><tr class="staticmethod private">
+    
+    <td>Static Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#_image" class="code" data-type="Static Method">_image</a></td>
+    <td><span>return an image object containing the imagedata from a gif-file named filename.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#_createpoly" class="code" data-type="Method">_createpoly</a></td>
+    <td><span>Create an invisible polygon item on canvas self.cv)</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#_drawpoly" class="code" data-type="Method">_drawpoly</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#_createline" class="code" data-type="Method">_createline</a></td>
+    <td><span>Create an invisible line item on canvas self.cv)</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#_drawline" class="code" data-type="Method">_drawline</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#_delete" class="code" data-type="Method">_delete</a></td>
+    <td><span>Delete graphics item from canvas. If item is"all" delete all graphics items.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#_update" class="code" data-type="Method">_update</a></td>
+    <td><span>Redraw graphics items on canvas</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#_delay" class="code" data-type="Method">_delay</a></td>
+    <td><span>Delay subsequent canvas actions for delay ms.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#_iscolorstring" class="code" data-type="Method">_iscolorstring</a></td>
+    <td><span>Check if the string color is a legal Tkinter color string.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#_bgcolor" class="code" data-type="Method">_bgcolor</a></td>
+    <td><span>Set canvas' backgroundcolor if color is not None, else return backgroundcolor.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#_write" class="code" data-type="Method">_write</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#_onclick" class="code" data-type="Method">_onclick</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#_onrelease" class="code" data-type="Method">_onrelease</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#_ondrag" class="code" data-type="Method">_ondrag</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#_onscreenclick" class="code" data-type="Method">_onscreenclick</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#_onkeyrelease" class="code" data-type="Method">_onkeyrelease</a></td>
+    <td><span>Bind fun to key-release event of key. Canvas must have focus. See method listen</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#_onkeypress" class="code" data-type="Method">_onkeypress</a></td>
+    <td><span>If key is given, bind fun to key-press event of key. Otherwise bind fun to any key-press. Canvas must have focus. See method listen.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#_listen" class="code" data-type="Method">_listen</a></td>
+    <td><span>Set focus on canvas (in order to collect key-events)</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#_ontimer" class="code" data-type="Method">_ontimer</a></td>
+    <td><span>Install a timer, which calls fun after t milliseconds.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#_createimage" class="code" data-type="Method">_createimage</a></td>
+    <td><span>Create and return image item on canvas.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#_drawimage" class="code" data-type="Method">_drawimage</a></td>
+    <td><span>Configure image item as to draw image object at position (x,y) on canvas)</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#_setbgpic" class="code" data-type="Method">_setbgpic</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#_type" class="code" data-type="Method">_type</a></td>
+    <td><span>Return 'line' or 'polygon' or 'image' depending on type of item.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#_pointlist" class="code" data-type="Method">_pointlist</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#_setscrollregion" class="code" data-type="Method">_setscrollregion</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#_rescale" class="code" data-type="Method">_rescale</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#_resize" class="code" data-type="Method">_resize</a></td>
+    <td><span>Resize the canvas the turtles are drawing on. Does not alter the drawing window.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.turtle.TurtleScreenBase.html#_window_size" class="code" data-type="Method">_window_size</a></td>
+    <td><span>Return the width and height of the turtle window.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basestaticmethod private">
+  
+  <a name="Lib.turtle.TurtleScreenBase._blankimage">
+    
+  </a>
+  <a name="_blankimage">
+    
+  </a>
+  <div class="functionHeader">
+    @staticmethod<br />
+    def
+    _blankimage():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">return a blank image object
+        </p></div>
+  </div>
+</div><div class="basestaticmethod private">
+  
+  <a name="Lib.turtle.TurtleScreenBase._image">
+    
+  </a>
+  <a name="_image">
+    
+  </a>
+  <div class="functionHeader">
+    @staticmethod<br />
+    def
+    _image(filename):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">return an image object containing the
+imagedata from a gif-file named filename.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.turtle.TurtleScreenBase.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, cv):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.turtle.TurtleScreen.html" class="code" data-type="Class">Lib.turtle.TurtleScreen</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.turtle.TurtleScreenBase.cv">
+    
+  </a>
+  <a name="cv">
+    
+  </a>
+  <div class="functionHeader">
+    cv =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.turtle.TurtleScreenBase.canvwidth">
+    
+  </a>
+  <a name="canvwidth">
+    
+  </a>
+  <div class="functionHeader">
+    canvwidth =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.turtle.TurtleScreenBase.canvheight">
+    
+  </a>
+  <a name="canvheight">
+    
+  </a>
+  <div class="functionHeader">
+    canvheight =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.turtle.TurtleScreenBase.xscale">
+    
+  </a>
+  <a name="xscale">
+    
+  </a>
+  <div class="functionHeader">
+    xscale =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.turtle.TurtleScreen.html" class="code" data-type="Class">Lib.turtle.TurtleScreen</a></div>
+    <div class="undocumented">Undocumented</div> (type: <code>float</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.turtle.TurtleScreenBase.yscale">
+    
+  </a>
+  <a name="yscale">
+    
+  </a>
+  <div class="functionHeader">
+    yscale =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.turtle.TurtleScreen.html" class="code" data-type="Class">Lib.turtle.TurtleScreen</a></div>
+    <div class="undocumented">Undocumented</div> (type: <code>float</code>)
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.turtle.TurtleScreenBase._createpoly">
+    
+  </a>
+  <a name="_createpoly">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _createpoly(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create an invisible polygon item on canvas self.cv)
+        </p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.turtle.TurtleScreenBase._drawpoly">
+    
+  </a>
+  <a name="_drawpoly">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _drawpoly(self, polyitem, coordlist, fill=None, outline=None, width=None, top=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Configure polygonitem polyitem according to provided
+arguments:
+coordlist is sequence of coordinates
+fill is filling color
+outline is outline color
+top is a boolean value, which specifies if polyitem
+will be put on top of the canvas' displaylist so it
+will not be covered by other items.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.turtle.TurtleScreenBase._createline">
+    
+  </a>
+  <a name="_createline">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _createline(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create an invisible line item on canvas self.cv)
+        </p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.turtle.TurtleScreenBase._drawline">
+    
+  </a>
+  <a name="_drawline">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _drawline(self, lineitem, coordlist=None, fill=None, width=None, top=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Configure lineitem according to provided arguments:
+coordlist is sequence of coordinates
+fill is drawing color
+width is width of drawn line.
+top is a boolean value, which specifies if polyitem
+will be put on top of the canvas' displaylist so it
+will not be covered by other items.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.turtle.TurtleScreenBase._delete">
+    
+  </a>
+  <a name="_delete">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _delete(self, item):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Delete graphics item from canvas.
+If item is"all" delete all graphics items.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.turtle.TurtleScreenBase._update">
+    
+  </a>
+  <a name="_update">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _update(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Redraw graphics items on canvas
+        </p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.turtle.TurtleScreenBase._delay">
+    
+  </a>
+  <a name="_delay">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _delay(self, delay):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Delay subsequent canvas actions for delay ms.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.turtle.TurtleScreenBase._iscolorstring">
+    
+  </a>
+  <a name="_iscolorstring">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _iscolorstring(self, color):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Check if the string color is a legal Tkinter color string.
+        </p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.turtle.TurtleScreenBase._bgcolor">
+    
+  </a>
+  <a name="_bgcolor">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _bgcolor(self, color=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set canvas' backgroundcolor if color is not None,
+else return backgroundcolor.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.turtle.TurtleScreenBase._write">
+    
+  </a>
+  <a name="_write">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _write(self, pos, txt, align, font, pencolor):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Write txt at pos in canvas with specified font
+and color.
+Return text item and x-coord of right bottom corner
+of text's bounding box.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.turtle.TurtleScreenBase._onclick">
+    
+  </a>
+  <a name="_onclick">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _onclick(self, item, fun, num=1, add=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Bind fun to mouse-click event on turtle.
+fun must be a function with two arguments, the coordinates
+of the clicked point on the canvas.
+num, the number of the mouse-button defaults to 1</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.turtle.TurtleScreenBase._onrelease">
+    
+  </a>
+  <a name="_onrelease">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _onrelease(self, item, fun, num=1, add=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Bind fun to mouse-button-release event on turtle.
+fun must be a function with two arguments, the coordinates
+of the point on the canvas where mouse button is released.
+num, the number of the mouse-button defaults to 1
+
+If a turtle is clicked, first _onclick-event will be performed,
+then _onscreensclick-event.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.turtle.TurtleScreenBase._ondrag">
+    
+  </a>
+  <a name="_ondrag">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _ondrag(self, item, fun, num=1, add=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Bind fun to mouse-move-event (with pressed mouse button) on turtle.
+fun must be a function with two arguments, the coordinates of the
+actual mouse position on the canvas.
+num, the number of the mouse-button defaults to 1
+
+Every sequence of mouse-move-events on a turtle is preceded by a
+mouse-click event on that turtle.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.turtle.TurtleScreenBase._onscreenclick">
+    
+  </a>
+  <a name="_onscreenclick">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _onscreenclick(self, fun, num=1, add=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Bind fun to mouse-click event on canvas.
+fun must be a function with two arguments, the coordinates
+of the clicked point on the canvas.
+num, the number of the mouse-button defaults to 1
+
+If a turtle is clicked, first _onclick-event will be performed,
+then _onscreensclick-event.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.turtle.TurtleScreenBase._onkeyrelease">
+    
+  </a>
+  <a name="_onkeyrelease">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _onkeyrelease(self, fun, key):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Bind fun to key-release event of key.
+Canvas must have focus. See method listen</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.turtle.TurtleScreenBase._onkeypress">
+    
+  </a>
+  <a name="_onkeypress">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _onkeypress(self, fun, key=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">If key is given, bind fun to key-press event of key.
+Otherwise bind fun to any key-press.
+Canvas must have focus. See method listen.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.turtle.TurtleScreenBase._listen">
+    
+  </a>
+  <a name="_listen">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _listen(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set focus on canvas (in order to collect key-events)
+        </p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.turtle.TurtleScreenBase._ontimer">
+    
+  </a>
+  <a name="_ontimer">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _ontimer(self, fun, t):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Install a timer, which calls fun after t milliseconds.
+        </p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.turtle.TurtleScreenBase._createimage">
+    
+  </a>
+  <a name="_createimage">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _createimage(self, image):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create and return image item on canvas.
+        </p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.turtle.TurtleScreenBase._drawimage">
+    
+  </a>
+  <a name="_drawimage">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _drawimage(self, item, pos, image):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Configure image item as to draw image object
+at position (x,y) on canvas)</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.turtle.TurtleScreenBase._setbgpic">
+    
+  </a>
+  <a name="_setbgpic">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _setbgpic(self, item, image):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Configure image item as to draw image object
+at center of canvas. Set item to the first item
+in the displaylist, so it will be drawn below
+any other item .</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.turtle.TurtleScreenBase._type">
+    
+  </a>
+  <a name="_type">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _type(self, item):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return 'line' or 'polygon' or 'image' depending on
+type of item.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.turtle.TurtleScreenBase._pointlist">
+    
+  </a>
+  <a name="_pointlist">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _pointlist(self, item):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">returns list of coordinate-pairs of points of item
+Example (for insiders):
+&gt;&gt;&gt; from turtle import *
+&gt;&gt;&gt; getscreen()._pointlist(getturtle().turtle._item)
+[(0.0, 9.9999999999999982), (0.0, -9.9999999999999982),
+(9.9999999999999982, 0.0)]
+&gt;&gt;&gt; </p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.turtle.TurtleScreenBase._setscrollregion">
+    
+  </a>
+  <a name="_setscrollregion">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _setscrollregion(self, srx1, sry1, srx2, sry2):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.turtle.TurtleScreenBase._rescale">
+    
+  </a>
+  <a name="_rescale">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _rescale(self, xscalefactor, yscalefactor):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.turtle.TurtleScreenBase._resize">
+    
+  </a>
+  <a name="_resize">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _resize(self, canvwidth=None, canvheight=None, bg=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Resize the canvas the turtles are drawing on. Does
+not alter the drawing window.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.turtle.TurtleScreenBase._window_size">
+    
+  </a>
+  <a name="_window_size">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _window_size(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the width and height of the turtle window.
+        </p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.turtle.TurtleScreenBase.mainloop">
+    
+  </a>
+  <a name="mainloop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    mainloop(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Starts event loop - calling Tkinter's mainloop function.
+
+No argument.
+
+Must be last statement in a turtle graphics program.
+Must NOT be used if a script is run from within IDLE in -n mode
+(No subprocess) - for interactive use of turtle graphics.
+
+Example (for a TurtleScreen instance named screen):
+&gt;&gt;&gt; screen.mainloop()</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.turtle.TurtleScreenBase.textinput">
+    
+  </a>
+  <a name="textinput">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    textinput(self, title, prompt):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Pop up a dialog window for input of a string.
+
+Arguments: title is the title of the dialog window,
+prompt is a text mostly describing what information to input.
+
+Return the string input
+If the dialog is canceled, return None.
+
+Example (for a TurtleScreen instance named screen):
+&gt;&gt;&gt; screen.textinput("NIM", "Name of first player:")</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.turtle.TurtleScreenBase.numinput">
+    
+  </a>
+  <a name="numinput">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    numinput(self, title, prompt, default=None, minval=None, maxval=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Pop up a dialog window for input of a number.
+
+Arguments: title is the title of the dialog window,
+prompt is a text mostly describing what numerical information to input.
+default: default value
+minval: minimum value for input
+maxval: maximum value for input
+
+The number input must be in the range minval .. maxval if these are
+given. If not, a hint is issued and the dialog remains open for
+correction. Return the number input.
+If the dialog is canceled,  return None.
+
+Example (for a TurtleScreen instance named screen):
+&gt;&gt;&gt; screen.numinput("Poker", "Your stakes:", 1000, minval=10, maxval=10000)</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

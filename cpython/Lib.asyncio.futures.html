@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.asyncio.futures : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.asyncio.html" class="code" data-type="Package">asyncio</a>.<a href="Lib.asyncio.futures.html" class="code" data-type="Module">futures</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">A Future class similar to the one in PEP 3148.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id321">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.asyncio.futures.html#STACK_DEBUG" class="code" data-type="Variable">STACK_DEBUG</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.asyncio.futures.Future.html" class="code" data-type="Class">Future</a></td>
+    <td><span>This class is *almost* compatible with concurrent.futures.Future.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.futures.html#wrap_future" class="code" data-type="Function">wrap_future</a></td>
+    <td><span>Wrap concurrent.futures.Future object.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.futures.html#_get_loop" class="code" data-type="Function">_get_loop</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.futures.html#_set_result_unless_cancelled" class="code" data-type="Function">_set_result_unless_cancelled</a></td>
+    <td><span>Helper setting the result only if the future was not cancelled.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.futures.html#_convert_future_exc" class="code" data-type="Function">_convert_future_exc</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.futures.html#_set_concurrent_future_state" class="code" data-type="Function">_set_concurrent_future_state</a></td>
+    <td><span>Copy state from a future to a concurrent.futures.Future.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.futures.html#_copy_future_state" class="code" data-type="Function">_copy_future_state</a></td>
+    <td><span>Internal helper to copy state from another Future.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.asyncio.futures.html#_chain_future" class="code" data-type="Function">_chain_future</a></td>
+    <td><span>Chain two futures so that when one completes, so does the other.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.asyncio.futures.STACK_DEBUG">
+    
+  </a>
+  <a name="STACK_DEBUG">
+    
+  </a>
+  <div class="functionHeader">
+    STACK_DEBUG =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.asyncio.futures._get_loop">
+    
+  </a>
+  <a name="_get_loop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_loop(fut):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.asyncio.futures._set_result_unless_cancelled">
+    
+  </a>
+  <a name="_set_result_unless_cancelled">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _set_result_unless_cancelled(fut, result):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Helper setting the result only if the future was not cancelled.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.asyncio.futures._convert_future_exc">
+    
+  </a>
+  <a name="_convert_future_exc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _convert_future_exc(exc):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.asyncio.futures._set_concurrent_future_state">
+    
+  </a>
+  <a name="_set_concurrent_future_state">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _set_concurrent_future_state(concurrent, source):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Copy state from a future to a concurrent.futures.Future.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.asyncio.futures._copy_future_state">
+    
+  </a>
+  <a name="_copy_future_state">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _copy_future_state(source, dest):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Internal helper to copy state from another Future.
+
+The other Future may be a concurrent.futures.Future.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.asyncio.futures._chain_future">
+    
+  </a>
+  <a name="_chain_future">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _chain_future(source, destination):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Chain two futures so that when one completes, so does the other.
+
+The result (or exception) of source will be copied to destination.
+If destination is cancelled, source gets cancelled too.
+Compatible with both asyncio.Future and concurrent.futures.Future.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.asyncio.futures.wrap_future">
+    
+  </a>
+  <a name="wrap_future">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    wrap_future(future):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Wrap concurrent.futures.Future object.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

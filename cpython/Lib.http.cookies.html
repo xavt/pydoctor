@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.http.cookies : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.http.html" class="code" data-type="Package">http</a>.<a href="Lib.http.cookies.html" class="code" data-type="Module">cookies</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Here's a sample session to show how to use this module.
+At the moment, this is the only documentation.
+
+The Basics
+----------
+
+Importing is easy...
+
+   &gt;&gt;&gt; from http import cookies
+
+Most of the time you start by creating a cookie.
+
+   &gt;&gt;&gt; C = cookies.SimpleCookie()
+
+Once you've created your Cookie, you can add values just as if it were
+a dictionary.
+
+   &gt;&gt;&gt; C = cookies.SimpleCookie()
+   &gt;&gt;&gt; C["fig"] = "newton"
+   &gt;&gt;&gt; C["sugar"] = "wafer"
+   &gt;&gt;&gt; C.output()
+   'Set-Cookie: fig=newton\r\nSet-Cookie: sugar=wafer'
+
+Notice that the printable representation of a Cookie is the
+appropriate format for a Set-Cookie: header.  This is the
+default behavior.  You can change the header and printed
+attributes by using the .output() function
+
+   &gt;&gt;&gt; C = cookies.SimpleCookie()
+   &gt;&gt;&gt; C["rocky"] = "road"
+   &gt;&gt;&gt; C["rocky"]["path"] = "/cookie"
+   &gt;&gt;&gt; print(C.output(header="Cookie:"))
+   Cookie: rocky=road; Path=/cookie
+   &gt;&gt;&gt; print(C.output(attrs=[], header="Cookie:"))
+   Cookie: rocky=road
+
+The load() method of a Cookie extracts cookies from a string.  In a
+CGI script, you would use this method to extract the cookies from the
+HTTP_COOKIE environment variable.
+
+   &gt;&gt;&gt; C = cookies.SimpleCookie()
+   &gt;&gt;&gt; C.load("chips=ahoy; vienna=finger")
+   &gt;&gt;&gt; C.output()
+   'Set-Cookie: chips=ahoy\r\nSet-Cookie: vienna=finger'
+
+The load() method is darn-tootin smart about identifying cookies
+within a string.  Escaped quotation marks, nested semicolons, and other
+such trickeries do not confuse it.
+
+   &gt;&gt;&gt; C = cookies.SimpleCookie()
+   &gt;&gt;&gt; C.load('keebler="E=everybody; L=\\"Loves\\"; fudge=\\012;";')
+   &gt;&gt;&gt; print(C)
+   Set-Cookie: keebler="E=everybody; L=\"Loves\"; fudge=\012;"
+
+Each element of the Cookie also supports all of the RFC 2109
+Cookie attributes.  Here's an example which sets the Path
+attribute.
+
+   &gt;&gt;&gt; C = cookies.SimpleCookie()
+   &gt;&gt;&gt; C["oreo"] = "doublestuff"
+   &gt;&gt;&gt; C["oreo"]["path"] = "/"
+   &gt;&gt;&gt; print(C)
+   Set-Cookie: oreo=doublestuff; Path=/
+
+Each dictionary element has a 'value' attribute, which gives you
+back the value associated with the key.
+
+   &gt;&gt;&gt; C = cookies.SimpleCookie()
+   &gt;&gt;&gt; C["twix"] = "none for you"
+   &gt;&gt;&gt; C["twix"].value
+   'none for you'
+
+The SimpleCookie expects that all values should be standard strings.
+Just to be sure, SimpleCookie invokes the str() builtin to convert
+the value to a string, when the values are set dictionary-style.
+
+   &gt;&gt;&gt; C = cookies.SimpleCookie()
+   &gt;&gt;&gt; C["number"] = 7
+   &gt;&gt;&gt; C["string"] = "seven"
+   &gt;&gt;&gt; C["number"].value
+   '7'
+   &gt;&gt;&gt; C["string"].value
+   'seven'
+   &gt;&gt;&gt; C.output()
+   'Set-Cookie: number=7\r\nSet-Cookie: string=seven'
+
+Finis.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2017">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.http.cookies.CookieError.html" class="code" data-type="Class">CookieError</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.http.cookies.Morsel.html" class="code" data-type="Class">Morsel</a></td>
+    <td><span>A class to hold ONE (key, value) pair.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.http.cookies.BaseCookie.html" class="code" data-type="Class">BaseCookie</a></td>
+    <td><span>A container class for a set of Morsels.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.http.cookies.SimpleCookie.html" class="code" data-type="Class">SimpleCookie</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.cookies.html#_nulljoin" class="code" data-type="Variable">_nulljoin</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.cookies.html#_semispacejoin" class="code" data-type="Variable">_semispacejoin</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.cookies.html#_spacejoin" class="code" data-type="Variable">_spacejoin</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.cookies.html#_LegalChars" class="code" data-type="Variable">_LegalChars</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.cookies.html#_UnescapedChars" class="code" data-type="Variable">_UnescapedChars</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.cookies.html#_Translator" class="code" data-type="Variable">_Translator</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.cookies.html#_is_legal_key" class="code" data-type="Variable">_is_legal_key</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.http.cookies.html#_quote" class="code" data-type="Function">_quote</a></td>
+    <td><span>Quote a string for use in a cookie header.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.cookies.html#_OctalPatt" class="code" data-type="Variable">_OctalPatt</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.cookies.html#_QuotePatt" class="code" data-type="Variable">_QuotePatt</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.http.cookies.html#_unquote" class="code" data-type="Function">_unquote</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.cookies.html#_weekdayname" class="code" data-type="Variable">_weekdayname</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.cookies.html#_monthname" class="code" data-type="Variable">_monthname</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.http.cookies.html#_getdate" class="code" data-type="Function">_getdate</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.cookies.html#_LegalKeyChars" class="code" data-type="Variable">_LegalKeyChars</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.cookies.html#_LegalValueChars" class="code" data-type="Variable">_LegalValueChars</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.cookies.html#_CookiePattern" class="code" data-type="Variable">_CookiePattern</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable private">
+  
+  <a name="Lib.http.cookies._nulljoin">
+    
+  </a>
+  <a name="_nulljoin">
+    
+  </a>
+  <div class="functionHeader">
+    _nulljoin =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.http.cookies._semispacejoin">
+    
+  </a>
+  <a name="_semispacejoin">
+    
+  </a>
+  <div class="functionHeader">
+    _semispacejoin =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.http.cookies._spacejoin">
+    
+  </a>
+  <a name="_spacejoin">
+    
+  </a>
+  <div class="functionHeader">
+    _spacejoin =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.http.cookies._LegalChars">
+    
+  </a>
+  <a name="_LegalChars">
+    
+  </a>
+  <div class="functionHeader">
+    _LegalChars =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.http.cookies._UnescapedChars">
+    
+  </a>
+  <a name="_UnescapedChars">
+    
+  </a>
+  <div class="functionHeader">
+    _UnescapedChars =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.http.cookies._Translator">
+    
+  </a>
+  <a name="_Translator">
+    
+  </a>
+  <div class="functionHeader">
+    _Translator =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.http.cookies._is_legal_key">
+    
+  </a>
+  <a name="_is_legal_key">
+    
+  </a>
+  <div class="functionHeader">
+    _is_legal_key =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.http.cookies._quote">
+    
+  </a>
+  <a name="_quote">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _quote(str):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Quote a string for use in a cookie header.
+
+If the string does not need to be double-quoted, then just return the
+string.  Otherwise, surround the string in doublequotes and quote
+(with a \) special characters.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.http.cookies._OctalPatt">
+    
+  </a>
+  <a name="_OctalPatt">
+    
+  </a>
+  <div class="functionHeader">
+    _OctalPatt =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.http.cookies._QuotePatt">
+    
+  </a>
+  <a name="_QuotePatt">
+    
+  </a>
+  <div class="functionHeader">
+    _QuotePatt =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.http.cookies._unquote">
+    
+  </a>
+  <a name="_unquote">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _unquote(str):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.http.cookies._weekdayname">
+    
+  </a>
+  <a name="_weekdayname">
+    
+  </a>
+  <div class="functionHeader">
+    _weekdayname =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[str]</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.http.cookies._monthname">
+    
+  </a>
+  <a name="_monthname">
+    
+  </a>
+  <div class="functionHeader">
+    _monthname =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.http.cookies._getdate">
+    
+  </a>
+  <a name="_getdate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _getdate(future=0, weekdayname=_weekdayname, monthname=_monthname):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.http.cookies._LegalKeyChars">
+    
+  </a>
+  <a name="_LegalKeyChars">
+    
+  </a>
+  <div class="functionHeader">
+    _LegalKeyChars =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.http.cookies._LegalValueChars">
+    
+  </a>
+  <a name="_LegalValueChars">
+    
+  </a>
+  <div class="functionHeader">
+    _LegalValueChars =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.http.cookies._CookiePattern">
+    
+  </a>
+  <a name="_CookiePattern">
+    
+  </a>
+  <div class="functionHeader">
+    _CookiePattern =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.email._policybase.Policy : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.email.html" class="code" data-type="Package">email</a>.<a href="Lib.email._policybase.html" class="code" data-type="Module">_policybase</a>.<a href="Lib.email._policybase.Policy.html" class="code" data-type="Class">Policy</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.email._policybase.Policy(<a href="Lib.email._policybase._PolicyBase.html" class="code" data-type="Class">_PolicyBase</a>):</code></p><p>Known subclasses: <a href="Lib.email._policybase.Compat32.html" class="code" data-type="Class">Lib.email._policybase.Compat32</a></p>
+        <p><a href="classIndex.html#Lib.email._policybase.Policy">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Controls for how messages are interpreted and formatted.
+
+Most of the classes and many of the methods in the email package accept
+Policy objects as parameters.  A Policy object contains a set of values and
+functions that control how input is interpreted and how output is rendered.
+For example, the parameter 'raise_on_defect' controls whether or not an RFC
+violation results in an error being raised or not, while 'max_line_length'
+controls the maximum length of output lines when a Message is serialized.
+
+Any valid attribute may be overridden when a Policy is created by passing
+it as a keyword argument to the constructor.  Policy objects are immutable,
+but a new Policy object can be created with only certain values changed by
+calling the Policy instance with keyword arguments.  Policy objects can
+also be added, producing a new Policy object in which the non-default
+attributes set in the right hand operand overwrite those specified in the
+left operand.
+
+Settable attributes:
+
+raise_on_defect     -- If true, then defects should be raised as errors.
+                       Default: False.
+
+linesep             -- string containing the value to use as separation
+                       between output lines.  Default '\n'.
+
+cte_type            -- Type of allowed content transfer encodings
+
+                       7bit  -- ASCII only
+                       8bit  -- Content-Transfer-Encoding: 8bit is allowed
+
+                       Default: 8bit.  Also controls the disposition of
+                       (RFC invalid) binary data in headers; see the
+                       documentation of the binary_fold method.
+
+max_line_length     -- maximum length of lines, excluding 'linesep',
+                       during serialization.  None or 0 means no line
+                       wrapping is done.  Default is 78.
+
+mangle_from_        -- a flag that, when True escapes From_ lines in the
+                       body of the message by putting a `&gt;' in front of
+                       them. This is used when the message is being
+                       serialized by a generator. Default: True.
+
+message_factory     -- the class to use to create new message objects.
+                       If the value is None, the default is Message.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id1252">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.email._policybase.Policy.html#raise_on_defect" class="code" data-type="Class Variable">raise_on_defect</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.email._policybase.Policy.html#linesep" class="code" data-type="Class Variable">linesep</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.email._policybase.Policy.html#cte_type" class="code" data-type="Class Variable">cte_type</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.email._policybase.Policy.html#max_line_length" class="code" data-type="Class Variable">max_line_length</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.email._policybase.Policy.html#mangle_from_" class="code" data-type="Class Variable">mangle_from_</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.email._policybase.Policy.html#message_factory" class="code" data-type="Class Variable">message_factory</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email._policybase.Policy.html#handle_defect" class="code" data-type="Method">handle_defect</a></td>
+    <td><span>Based on policy, either raise defect or call register_defect.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email._policybase.Policy.html#register_defect" class="code" data-type="Method">register_defect</a></td>
+    <td><span>Record 'defect' on 'obj'.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email._policybase.Policy.html#header_max_count" class="code" data-type="Method">header_max_count</a></td>
+    <td><span>Return the maximum allowed number of headers named 'name'.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email._policybase.Policy.html#header_source_parse" class="code" data-type="Method">header_source_parse</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email._policybase.Policy.html#header_store_parse" class="code" data-type="Method">header_store_parse</a></td>
+    <td><span>Given the header name and the value provided by the application program, return the (name, value) that should be stored in the model.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email._policybase.Policy.html#header_fetch_parse" class="code" data-type="Method">header_fetch_parse</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email._policybase.Policy.html#fold" class="code" data-type="Method">fold</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email._policybase.Policy.html#fold_binary" class="code" data-type="Method">fold_binary</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.email._policybase._PolicyBase.html" class="code" data-type="Class">_PolicyBase</a>:
+          </p>
+          <table class="children sortable" id="id1253">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.email._policybase._PolicyBase.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Create new Policy, possibly overriding some defaults.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.email._policybase._PolicyBase.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.email._policybase._PolicyBase.html#clone" class="code" data-type="Method">clone</a></td>
+    <td><span>Return a new instance with specified attributes changed.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.email._policybase._PolicyBase.html#__setattr__" class="code" data-type="Method">__setattr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.email._policybase._PolicyBase.html#__add__" class="code" data-type="Method">__add__</a></td>
+    <td><span>Non-default values from right operand override those from left.</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.email._policybase.Policy.raise_on_defect">
+    
+  </a>
+  <a name="raise_on_defect">
+    
+  </a>
+  <div class="functionHeader">
+    raise_on_defect =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.email._policybase.Policy.linesep">
+    
+  </a>
+  <a name="linesep">
+    
+  </a>
+  <div class="functionHeader">
+    linesep =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.email._policybase.Policy.cte_type">
+    
+  </a>
+  <a name="cte_type">
+    
+  </a>
+  <div class="functionHeader">
+    cte_type =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.email._policybase.Policy.max_line_length">
+    
+  </a>
+  <a name="max_line_length">
+    
+  </a>
+  <div class="functionHeader">
+    max_line_length =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.email._policybase.Policy.mangle_from_">
+    
+  </a>
+  <a name="mangle_from_">
+    
+  </a>
+  <div class="functionHeader">
+    mangle_from_ =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.email._policybase.Compat32.html" class="code" data-type="Class">Lib.email._policybase.Compat32</a></div>
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.email._policybase.Policy.message_factory">
+    
+  </a>
+  <a name="message_factory">
+    
+  </a>
+  <div class="functionHeader">
+    message_factory =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email._policybase.Policy.handle_defect">
+    
+  </a>
+  <a name="handle_defect">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    handle_defect(self, obj, defect):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Based on policy, either raise defect or call register_defect.
+
+    handle_defect(obj, defect)
+
+defect should be a Defect subclass, but in any case must be an
+Exception subclass.  obj is the object on which the defect should be
+registered if it is not raised.  If the raise_on_defect is True, the
+defect is raised as an error, otherwise the object and the defect are
+passed to register_defect.
+
+This method is intended to be called by parsers that discover defects.
+The email package parsers always call it with Defect instances.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email._policybase.Policy.register_defect">
+    
+  </a>
+  <a name="register_defect">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    register_defect(self, obj, defect):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Record 'defect' on 'obj'.
+
+Called by handle_defect if raise_on_defect is False.  This method is
+part of the Policy API so that Policy subclasses can implement custom
+defect handling.  The default implementation calls the append method of
+the defects attribute of obj.  The objects used by the email package by
+default that get passed to this method will always have a defects
+attribute with an append method.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email._policybase.Policy.header_max_count">
+    
+  </a>
+  <a name="header_max_count">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    header_max_count(self, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the maximum allowed number of headers named 'name'.
+
+Called when a header is added to a Message object.  If the returned
+value is not 0 or None, and there are already a number of headers with
+the name 'name' equal to the value returned, a ValueError is raised.
+
+Because the default behavior of Message's __setitem__ is to append the
+value to the list of headers, it is easy to create duplicate headers
+without realizing it.  This method allows certain headers to be limited
+in the number of instances of that header that may be added to a
+Message programmatically.  (The limit is not observed by the parser,
+which will faithfully produce as many headers as exist in the message
+being parsed.)
+
+The default implementation returns None for all header names.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email._policybase.Policy.header_source_parse">
+    
+  </a>
+  <a name="header_source_parse">
+    
+  </a>
+  <div class="functionHeader">
+    @abc.abstractmethod<br />
+    def
+    header_source_parse(self, sourcelines):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.email._policybase.Compat32.html" class="code" data-type="Class">Lib.email._policybase.Compat32</a></div>
+    
+    <div><p class="pre">Given a list of linesep terminated strings constituting the lines of
+a single header, return the (name, value) tuple that should be stored
+in the model.  The input lines should retain their terminating linesep
+characters.  The lines passed in by the email package may contain
+surrogateescaped binary data.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email._policybase.Policy.header_store_parse">
+    
+  </a>
+  <a name="header_store_parse">
+    
+  </a>
+  <div class="functionHeader">
+    @abc.abstractmethod<br />
+    def
+    header_store_parse(self, name, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.email._policybase.Compat32.html" class="code" data-type="Class">Lib.email._policybase.Compat32</a></div>
+    
+    <div><p class="pre">Given the header name and the value provided by the application
+program, return the (name, value) that should be stored in the model.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email._policybase.Policy.header_fetch_parse">
+    
+  </a>
+  <a name="header_fetch_parse">
+    
+  </a>
+  <div class="functionHeader">
+    @abc.abstractmethod<br />
+    def
+    header_fetch_parse(self, name, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.email._policybase.Compat32.html" class="code" data-type="Class">Lib.email._policybase.Compat32</a></div>
+    
+    <div><p class="pre">Given the header name and the value from the model, return the value
+to be returned to the application program that is requesting that
+header.  The value passed in by the email package may contain
+surrogateescaped binary data if the lines were parsed by a BytesParser.
+The returned value should not contain any surrogateescaped data.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email._policybase.Policy.fold">
+    
+  </a>
+  <a name="fold">
+    
+  </a>
+  <div class="functionHeader">
+    @abc.abstractmethod<br />
+    def
+    fold(self, name, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.email._policybase.Compat32.html" class="code" data-type="Class">Lib.email._policybase.Compat32</a></div>
+    
+    <div><p class="pre">Given the header name and the value from the model, return a string
+containing linesep characters that implement the folding of the header
+according to the policy controls.  The value passed in by the email
+package may contain surrogateescaped binary data if the lines were
+parsed by a BytesParser.  The returned value should not contain any
+surrogateescaped data.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email._policybase.Policy.fold_binary">
+    
+  </a>
+  <a name="fold_binary">
+    
+  </a>
+  <div class="functionHeader">
+    @abc.abstractmethod<br />
+    def
+    fold_binary(self, name, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.email._policybase.Compat32.html" class="code" data-type="Class">Lib.email._policybase.Compat32</a></div>
+    
+    <div><p class="pre">Given the header name and the value from the model, return binary
+data containing linesep characters that implement the folding of the
+header according to the policy controls.  The value passed in by the
+email package may contain surrogateescaped binary data.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

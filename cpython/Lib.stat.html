@@ -1,0 +1,1815 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.stat : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.stat.html" class="code" data-type="Module">stat</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Constants/functions for interpreting results of os.stat() and os.lstat().
+
+Suggested usage: from stat import *</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3663">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#ST_MODE" class="code" data-type="Variable">ST_MODE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#ST_INO" class="code" data-type="Variable">ST_INO</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#ST_DEV" class="code" data-type="Variable">ST_DEV</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#ST_NLINK" class="code" data-type="Variable">ST_NLINK</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#ST_UID" class="code" data-type="Variable">ST_UID</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#ST_GID" class="code" data-type="Variable">ST_GID</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#ST_SIZE" class="code" data-type="Variable">ST_SIZE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#ST_ATIME" class="code" data-type="Variable">ST_ATIME</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#ST_MTIME" class="code" data-type="Variable">ST_MTIME</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#ST_CTIME" class="code" data-type="Variable">ST_CTIME</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.stat.html#S_IMODE" class="code" data-type="Function">S_IMODE</a></td>
+    <td><span>Return the portion of the file's mode that can be set by os.chmod().</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.stat.html#S_IFMT" class="code" data-type="Function">S_IFMT</a></td>
+    <td><span>Return the portion of the file's mode that describes the file type.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#S_IFDIR" class="code" data-type="Variable">S_IFDIR</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#S_IFCHR" class="code" data-type="Variable">S_IFCHR</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#S_IFBLK" class="code" data-type="Variable">S_IFBLK</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#S_IFREG" class="code" data-type="Variable">S_IFREG</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#S_IFIFO" class="code" data-type="Variable">S_IFIFO</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#S_IFLNK" class="code" data-type="Variable">S_IFLNK</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#S_IFSOCK" class="code" data-type="Variable">S_IFSOCK</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#S_IFDOOR" class="code" data-type="Variable">S_IFDOOR</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#S_IFPORT" class="code" data-type="Variable">S_IFPORT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#S_IFWHT" class="code" data-type="Variable">S_IFWHT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.stat.html#S_ISDIR" class="code" data-type="Function">S_ISDIR</a></td>
+    <td><span>Return True if mode is from a directory.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.stat.html#S_ISCHR" class="code" data-type="Function">S_ISCHR</a></td>
+    <td><span>Return True if mode is from a character special device file.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.stat.html#S_ISBLK" class="code" data-type="Function">S_ISBLK</a></td>
+    <td><span>Return True if mode is from a block special device file.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.stat.html#S_ISREG" class="code" data-type="Function">S_ISREG</a></td>
+    <td><span>Return True if mode is from a regular file.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.stat.html#S_ISFIFO" class="code" data-type="Function">S_ISFIFO</a></td>
+    <td><span>Return True if mode is from a FIFO (named pipe).</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.stat.html#S_ISLNK" class="code" data-type="Function">S_ISLNK</a></td>
+    <td><span>Return True if mode is from a symbolic link.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.stat.html#S_ISSOCK" class="code" data-type="Function">S_ISSOCK</a></td>
+    <td><span>Return True if mode is from a socket.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.stat.html#S_ISDOOR" class="code" data-type="Function">S_ISDOOR</a></td>
+    <td><span>Return True if mode is from a door.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.stat.html#S_ISPORT" class="code" data-type="Function">S_ISPORT</a></td>
+    <td><span>Return True if mode is from an event port.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.stat.html#S_ISWHT" class="code" data-type="Function">S_ISWHT</a></td>
+    <td><span>Return True if mode is from a whiteout.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#S_ISUID" class="code" data-type="Variable">S_ISUID</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#S_ISGID" class="code" data-type="Variable">S_ISGID</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#S_ISVTX" class="code" data-type="Variable">S_ISVTX</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#S_IREAD" class="code" data-type="Variable">S_IREAD</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#S_IWRITE" class="code" data-type="Variable">S_IWRITE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#S_IEXEC" class="code" data-type="Variable">S_IEXEC</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#S_IRWXU" class="code" data-type="Variable">S_IRWXU</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#S_IRUSR" class="code" data-type="Variable">S_IRUSR</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#S_IWUSR" class="code" data-type="Variable">S_IWUSR</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#S_IXUSR" class="code" data-type="Variable">S_IXUSR</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#S_IRWXG" class="code" data-type="Variable">S_IRWXG</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#S_IRGRP" class="code" data-type="Variable">S_IRGRP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#S_IWGRP" class="code" data-type="Variable">S_IWGRP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#S_IXGRP" class="code" data-type="Variable">S_IXGRP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#S_IRWXO" class="code" data-type="Variable">S_IRWXO</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#S_IROTH" class="code" data-type="Variable">S_IROTH</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#S_IWOTH" class="code" data-type="Variable">S_IWOTH</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#S_IXOTH" class="code" data-type="Variable">S_IXOTH</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#UF_NODUMP" class="code" data-type="Variable">UF_NODUMP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#UF_IMMUTABLE" class="code" data-type="Variable">UF_IMMUTABLE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#UF_APPEND" class="code" data-type="Variable">UF_APPEND</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#UF_OPAQUE" class="code" data-type="Variable">UF_OPAQUE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#UF_NOUNLINK" class="code" data-type="Variable">UF_NOUNLINK</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#UF_COMPRESSED" class="code" data-type="Variable">UF_COMPRESSED</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#UF_HIDDEN" class="code" data-type="Variable">UF_HIDDEN</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#SF_ARCHIVED" class="code" data-type="Variable">SF_ARCHIVED</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#SF_IMMUTABLE" class="code" data-type="Variable">SF_IMMUTABLE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#SF_APPEND" class="code" data-type="Variable">SF_APPEND</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#SF_NOUNLINK" class="code" data-type="Variable">SF_NOUNLINK</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#SF_SNAPSHOT" class="code" data-type="Variable">SF_SNAPSHOT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.stat.html#filemode" class="code" data-type="Function">filemode</a></td>
+    <td><span>Convert a file's mode to a string of the form '-rwxrwxrwx'.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#FILE_ATTRIBUTE_ARCHIVE" class="code" data-type="Variable">FILE_ATTRIBUTE_ARCHIVE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#FILE_ATTRIBUTE_COMPRESSED" class="code" data-type="Variable">FILE_ATTRIBUTE_COMPRESSED</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#FILE_ATTRIBUTE_DEVICE" class="code" data-type="Variable">FILE_ATTRIBUTE_DEVICE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#FILE_ATTRIBUTE_DIRECTORY" class="code" data-type="Variable">FILE_ATTRIBUTE_DIRECTORY</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#FILE_ATTRIBUTE_ENCRYPTED" class="code" data-type="Variable">FILE_ATTRIBUTE_ENCRYPTED</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#FILE_ATTRIBUTE_HIDDEN" class="code" data-type="Variable">FILE_ATTRIBUTE_HIDDEN</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#FILE_ATTRIBUTE_INTEGRITY_STREAM" class="code" data-type="Variable">FILE_ATTRIBUTE_INTEGRITY_STREAM</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#FILE_ATTRIBUTE_NORMAL" class="code" data-type="Variable">FILE_ATTRIBUTE_NORMAL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#FILE_ATTRIBUTE_NOT_CONTENT_INDEXED" class="code" data-type="Variable">FILE_ATTRIBUTE_NOT_CONTENT_INDEXED</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#FILE_ATTRIBUTE_NO_SCRUB_DATA" class="code" data-type="Variable">FILE_ATTRIBUTE_NO_SCRUB_DATA</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#FILE_ATTRIBUTE_OFFLINE" class="code" data-type="Variable">FILE_ATTRIBUTE_OFFLINE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#FILE_ATTRIBUTE_READONLY" class="code" data-type="Variable">FILE_ATTRIBUTE_READONLY</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#FILE_ATTRIBUTE_REPARSE_POINT" class="code" data-type="Variable">FILE_ATTRIBUTE_REPARSE_POINT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#FILE_ATTRIBUTE_SPARSE_FILE" class="code" data-type="Variable">FILE_ATTRIBUTE_SPARSE_FILE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#FILE_ATTRIBUTE_SYSTEM" class="code" data-type="Variable">FILE_ATTRIBUTE_SYSTEM</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#FILE_ATTRIBUTE_TEMPORARY" class="code" data-type="Variable">FILE_ATTRIBUTE_TEMPORARY</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#FILE_ATTRIBUTE_VIRTUAL" class="code" data-type="Variable">FILE_ATTRIBUTE_VIRTUAL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.stat.html#_filemode_table" class="code" data-type="Variable">_filemode_table</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.stat.ST_MODE">
+    
+  </a>
+  <a name="ST_MODE">
+    
+  </a>
+  <div class="functionHeader">
+    ST_MODE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.ST_INO">
+    
+  </a>
+  <a name="ST_INO">
+    
+  </a>
+  <div class="functionHeader">
+    ST_INO =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.ST_DEV">
+    
+  </a>
+  <a name="ST_DEV">
+    
+  </a>
+  <div class="functionHeader">
+    ST_DEV =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.ST_NLINK">
+    
+  </a>
+  <a name="ST_NLINK">
+    
+  </a>
+  <div class="functionHeader">
+    ST_NLINK =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.ST_UID">
+    
+  </a>
+  <a name="ST_UID">
+    
+  </a>
+  <div class="functionHeader">
+    ST_UID =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.ST_GID">
+    
+  </a>
+  <a name="ST_GID">
+    
+  </a>
+  <div class="functionHeader">
+    ST_GID =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.ST_SIZE">
+    
+  </a>
+  <a name="ST_SIZE">
+    
+  </a>
+  <div class="functionHeader">
+    ST_SIZE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.ST_ATIME">
+    
+  </a>
+  <a name="ST_ATIME">
+    
+  </a>
+  <div class="functionHeader">
+    ST_ATIME =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.ST_MTIME">
+    
+  </a>
+  <a name="ST_MTIME">
+    
+  </a>
+  <div class="functionHeader">
+    ST_MTIME =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.ST_CTIME">
+    
+  </a>
+  <a name="ST_CTIME">
+    
+  </a>
+  <div class="functionHeader">
+    ST_CTIME =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.stat.S_IMODE">
+    
+  </a>
+  <a name="S_IMODE">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    S_IMODE(mode):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the portion of the file's mode that can be set by
+os.chmod().</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.stat.S_IFMT">
+    
+  </a>
+  <a name="S_IFMT">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    S_IFMT(mode):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the portion of the file's mode that describes the
+file type.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.S_IFDIR">
+    
+  </a>
+  <a name="S_IFDIR">
+    
+  </a>
+  <div class="functionHeader">
+    S_IFDIR =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.S_IFCHR">
+    
+  </a>
+  <a name="S_IFCHR">
+    
+  </a>
+  <div class="functionHeader">
+    S_IFCHR =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.S_IFBLK">
+    
+  </a>
+  <a name="S_IFBLK">
+    
+  </a>
+  <div class="functionHeader">
+    S_IFBLK =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.S_IFREG">
+    
+  </a>
+  <a name="S_IFREG">
+    
+  </a>
+  <div class="functionHeader">
+    S_IFREG =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.S_IFIFO">
+    
+  </a>
+  <a name="S_IFIFO">
+    
+  </a>
+  <div class="functionHeader">
+    S_IFIFO =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.S_IFLNK">
+    
+  </a>
+  <a name="S_IFLNK">
+    
+  </a>
+  <div class="functionHeader">
+    S_IFLNK =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.S_IFSOCK">
+    
+  </a>
+  <a name="S_IFSOCK">
+    
+  </a>
+  <div class="functionHeader">
+    S_IFSOCK =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.S_IFDOOR">
+    
+  </a>
+  <a name="S_IFDOOR">
+    
+  </a>
+  <div class="functionHeader">
+    S_IFDOOR =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.S_IFPORT">
+    
+  </a>
+  <a name="S_IFPORT">
+    
+  </a>
+  <div class="functionHeader">
+    S_IFPORT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.S_IFWHT">
+    
+  </a>
+  <a name="S_IFWHT">
+    
+  </a>
+  <div class="functionHeader">
+    S_IFWHT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.stat.S_ISDIR">
+    
+  </a>
+  <a name="S_ISDIR">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    S_ISDIR(mode):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True if mode is from a directory.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.stat.S_ISCHR">
+    
+  </a>
+  <a name="S_ISCHR">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    S_ISCHR(mode):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True if mode is from a character special device file.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.stat.S_ISBLK">
+    
+  </a>
+  <a name="S_ISBLK">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    S_ISBLK(mode):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True if mode is from a block special device file.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.stat.S_ISREG">
+    
+  </a>
+  <a name="S_ISREG">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    S_ISREG(mode):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True if mode is from a regular file.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.stat.S_ISFIFO">
+    
+  </a>
+  <a name="S_ISFIFO">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    S_ISFIFO(mode):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True if mode is from a FIFO (named pipe).</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.stat.S_ISLNK">
+    
+  </a>
+  <a name="S_ISLNK">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    S_ISLNK(mode):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True if mode is from a symbolic link.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.stat.S_ISSOCK">
+    
+  </a>
+  <a name="S_ISSOCK">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    S_ISSOCK(mode):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True if mode is from a socket.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.stat.S_ISDOOR">
+    
+  </a>
+  <a name="S_ISDOOR">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    S_ISDOOR(mode):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True if mode is from a door.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.stat.S_ISPORT">
+    
+  </a>
+  <a name="S_ISPORT">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    S_ISPORT(mode):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True if mode is from an event port.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.stat.S_ISWHT">
+    
+  </a>
+  <a name="S_ISWHT">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    S_ISWHT(mode):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True if mode is from a whiteout.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.S_ISUID">
+    
+  </a>
+  <a name="S_ISUID">
+    
+  </a>
+  <div class="functionHeader">
+    S_ISUID =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.S_ISGID">
+    
+  </a>
+  <a name="S_ISGID">
+    
+  </a>
+  <div class="functionHeader">
+    S_ISGID =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.S_ISVTX">
+    
+  </a>
+  <a name="S_ISVTX">
+    
+  </a>
+  <div class="functionHeader">
+    S_ISVTX =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.S_IREAD">
+    
+  </a>
+  <a name="S_IREAD">
+    
+  </a>
+  <div class="functionHeader">
+    S_IREAD =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.S_IWRITE">
+    
+  </a>
+  <a name="S_IWRITE">
+    
+  </a>
+  <div class="functionHeader">
+    S_IWRITE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.S_IEXEC">
+    
+  </a>
+  <a name="S_IEXEC">
+    
+  </a>
+  <div class="functionHeader">
+    S_IEXEC =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.S_IRWXU">
+    
+  </a>
+  <a name="S_IRWXU">
+    
+  </a>
+  <div class="functionHeader">
+    S_IRWXU =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.S_IRUSR">
+    
+  </a>
+  <a name="S_IRUSR">
+    
+  </a>
+  <div class="functionHeader">
+    S_IRUSR =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.S_IWUSR">
+    
+  </a>
+  <a name="S_IWUSR">
+    
+  </a>
+  <div class="functionHeader">
+    S_IWUSR =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.S_IXUSR">
+    
+  </a>
+  <a name="S_IXUSR">
+    
+  </a>
+  <div class="functionHeader">
+    S_IXUSR =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.S_IRWXG">
+    
+  </a>
+  <a name="S_IRWXG">
+    
+  </a>
+  <div class="functionHeader">
+    S_IRWXG =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.S_IRGRP">
+    
+  </a>
+  <a name="S_IRGRP">
+    
+  </a>
+  <div class="functionHeader">
+    S_IRGRP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.S_IWGRP">
+    
+  </a>
+  <a name="S_IWGRP">
+    
+  </a>
+  <div class="functionHeader">
+    S_IWGRP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.S_IXGRP">
+    
+  </a>
+  <a name="S_IXGRP">
+    
+  </a>
+  <div class="functionHeader">
+    S_IXGRP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.S_IRWXO">
+    
+  </a>
+  <a name="S_IRWXO">
+    
+  </a>
+  <div class="functionHeader">
+    S_IRWXO =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.S_IROTH">
+    
+  </a>
+  <a name="S_IROTH">
+    
+  </a>
+  <div class="functionHeader">
+    S_IROTH =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.S_IWOTH">
+    
+  </a>
+  <a name="S_IWOTH">
+    
+  </a>
+  <div class="functionHeader">
+    S_IWOTH =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.S_IXOTH">
+    
+  </a>
+  <a name="S_IXOTH">
+    
+  </a>
+  <div class="functionHeader">
+    S_IXOTH =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.UF_NODUMP">
+    
+  </a>
+  <a name="UF_NODUMP">
+    
+  </a>
+  <div class="functionHeader">
+    UF_NODUMP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.UF_IMMUTABLE">
+    
+  </a>
+  <a name="UF_IMMUTABLE">
+    
+  </a>
+  <div class="functionHeader">
+    UF_IMMUTABLE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.UF_APPEND">
+    
+  </a>
+  <a name="UF_APPEND">
+    
+  </a>
+  <div class="functionHeader">
+    UF_APPEND =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.UF_OPAQUE">
+    
+  </a>
+  <a name="UF_OPAQUE">
+    
+  </a>
+  <div class="functionHeader">
+    UF_OPAQUE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.UF_NOUNLINK">
+    
+  </a>
+  <a name="UF_NOUNLINK">
+    
+  </a>
+  <div class="functionHeader">
+    UF_NOUNLINK =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.UF_COMPRESSED">
+    
+  </a>
+  <a name="UF_COMPRESSED">
+    
+  </a>
+  <div class="functionHeader">
+    UF_COMPRESSED =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.UF_HIDDEN">
+    
+  </a>
+  <a name="UF_HIDDEN">
+    
+  </a>
+  <div class="functionHeader">
+    UF_HIDDEN =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.SF_ARCHIVED">
+    
+  </a>
+  <a name="SF_ARCHIVED">
+    
+  </a>
+  <div class="functionHeader">
+    SF_ARCHIVED =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.SF_IMMUTABLE">
+    
+  </a>
+  <a name="SF_IMMUTABLE">
+    
+  </a>
+  <div class="functionHeader">
+    SF_IMMUTABLE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.SF_APPEND">
+    
+  </a>
+  <a name="SF_APPEND">
+    
+  </a>
+  <div class="functionHeader">
+    SF_APPEND =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.SF_NOUNLINK">
+    
+  </a>
+  <a name="SF_NOUNLINK">
+    
+  </a>
+  <div class="functionHeader">
+    SF_NOUNLINK =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.SF_SNAPSHOT">
+    
+  </a>
+  <a name="SF_SNAPSHOT">
+    
+  </a>
+  <div class="functionHeader">
+    SF_SNAPSHOT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.stat._filemode_table">
+    
+  </a>
+  <a name="_filemode_table">
+    
+  </a>
+  <div class="functionHeader">
+    _filemode_table =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.stat.filemode">
+    
+  </a>
+  <a name="filemode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    filemode(mode):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convert a file's mode to a string of the form '-rwxrwxrwx'.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.FILE_ATTRIBUTE_ARCHIVE">
+    
+  </a>
+  <a name="FILE_ATTRIBUTE_ARCHIVE">
+    
+  </a>
+  <div class="functionHeader">
+    FILE_ATTRIBUTE_ARCHIVE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.FILE_ATTRIBUTE_COMPRESSED">
+    
+  </a>
+  <a name="FILE_ATTRIBUTE_COMPRESSED">
+    
+  </a>
+  <div class="functionHeader">
+    FILE_ATTRIBUTE_COMPRESSED =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.FILE_ATTRIBUTE_DEVICE">
+    
+  </a>
+  <a name="FILE_ATTRIBUTE_DEVICE">
+    
+  </a>
+  <div class="functionHeader">
+    FILE_ATTRIBUTE_DEVICE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.FILE_ATTRIBUTE_DIRECTORY">
+    
+  </a>
+  <a name="FILE_ATTRIBUTE_DIRECTORY">
+    
+  </a>
+  <div class="functionHeader">
+    FILE_ATTRIBUTE_DIRECTORY =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.FILE_ATTRIBUTE_ENCRYPTED">
+    
+  </a>
+  <a name="FILE_ATTRIBUTE_ENCRYPTED">
+    
+  </a>
+  <div class="functionHeader">
+    FILE_ATTRIBUTE_ENCRYPTED =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.FILE_ATTRIBUTE_HIDDEN">
+    
+  </a>
+  <a name="FILE_ATTRIBUTE_HIDDEN">
+    
+  </a>
+  <div class="functionHeader">
+    FILE_ATTRIBUTE_HIDDEN =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.FILE_ATTRIBUTE_INTEGRITY_STREAM">
+    
+  </a>
+  <a name="FILE_ATTRIBUTE_INTEGRITY_STREAM">
+    
+  </a>
+  <div class="functionHeader">
+    FILE_ATTRIBUTE_INTEGRITY_STREAM =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.FILE_ATTRIBUTE_NORMAL">
+    
+  </a>
+  <a name="FILE_ATTRIBUTE_NORMAL">
+    
+  </a>
+  <div class="functionHeader">
+    FILE_ATTRIBUTE_NORMAL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.FILE_ATTRIBUTE_NOT_CONTENT_INDEXED">
+    
+  </a>
+  <a name="FILE_ATTRIBUTE_NOT_CONTENT_INDEXED">
+    
+  </a>
+  <div class="functionHeader">
+    FILE_ATTRIBUTE_NOT_CONTENT_INDEXED =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.FILE_ATTRIBUTE_NO_SCRUB_DATA">
+    
+  </a>
+  <a name="FILE_ATTRIBUTE_NO_SCRUB_DATA">
+    
+  </a>
+  <div class="functionHeader">
+    FILE_ATTRIBUTE_NO_SCRUB_DATA =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.FILE_ATTRIBUTE_OFFLINE">
+    
+  </a>
+  <a name="FILE_ATTRIBUTE_OFFLINE">
+    
+  </a>
+  <div class="functionHeader">
+    FILE_ATTRIBUTE_OFFLINE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.FILE_ATTRIBUTE_READONLY">
+    
+  </a>
+  <a name="FILE_ATTRIBUTE_READONLY">
+    
+  </a>
+  <div class="functionHeader">
+    FILE_ATTRIBUTE_READONLY =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.FILE_ATTRIBUTE_REPARSE_POINT">
+    
+  </a>
+  <a name="FILE_ATTRIBUTE_REPARSE_POINT">
+    
+  </a>
+  <div class="functionHeader">
+    FILE_ATTRIBUTE_REPARSE_POINT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.FILE_ATTRIBUTE_SPARSE_FILE">
+    
+  </a>
+  <a name="FILE_ATTRIBUTE_SPARSE_FILE">
+    
+  </a>
+  <div class="functionHeader">
+    FILE_ATTRIBUTE_SPARSE_FILE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.FILE_ATTRIBUTE_SYSTEM">
+    
+  </a>
+  <a name="FILE_ATTRIBUTE_SYSTEM">
+    
+  </a>
+  <div class="functionHeader">
+    FILE_ATTRIBUTE_SYSTEM =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.FILE_ATTRIBUTE_TEMPORARY">
+    
+  </a>
+  <a name="FILE_ATTRIBUTE_TEMPORARY">
+    
+  </a>
+  <div class="functionHeader">
+    FILE_ATTRIBUTE_TEMPORARY =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.stat.FILE_ATTRIBUTE_VIRTUAL">
+    
+  </a>
+  <a name="FILE_ATTRIBUTE_VIRTUAL">
+    
+  </a>
+  <div class="functionHeader">
+    FILE_ATTRIBUTE_VIRTUAL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

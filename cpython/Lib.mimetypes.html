@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.mimetypes : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.mimetypes.html" class="code" data-type="Module">mimetypes</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Guess the MIME type of a file.
+
+This module defines two useful functions:
+
+guess_type(url, strict=True) -- guess the MIME type and encoding of a URL.
+
+guess_extension(type, strict=True) -- guess the extension for a given MIME type.
+
+It also contains the following, for tuning the behavior:
+
+Data:
+
+knownfiles -- list of files to parse
+inited -- flag set when init() has been called
+suffix_map -- dictionary mapping suffixes to suffixes
+encodings_map -- dictionary mapping suffixes to encodings
+types_map -- dictionary mapping suffixes to types
+
+Functions:
+
+init([files]) -- parse a list of files, default knownfiles (on Windows, the
+  default values are taken from the registry)
+read_mime_types(file) -- parse one file, return a dictionary or None</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3104">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.mimetypes.html#knownfiles" class="code" data-type="Variable">knownfiles</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.mimetypes.html#inited" class="code" data-type="Variable">inited</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.mimetypes.MimeTypes.html" class="code" data-type="Class">MimeTypes</a></td>
+    <td><span>MIME-types datastore.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.mimetypes.html#guess_type" class="code" data-type="Function">guess_type</a></td>
+    <td><span>Guess the type of a file based on its URL.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.mimetypes.html#guess_all_extensions" class="code" data-type="Function">guess_all_extensions</a></td>
+    <td><span>Guess the extensions for a file based on its MIME type.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.mimetypes.html#guess_extension" class="code" data-type="Function">guess_extension</a></td>
+    <td><span>Guess the extension for a file based on its MIME type.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.mimetypes.html#add_type" class="code" data-type="Function">add_type</a></td>
+    <td><span>Add a mapping between a type and an extension.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.mimetypes.html#init" class="code" data-type="Function">init</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.mimetypes.html#read_mime_types" class="code" data-type="Function">read_mime_types</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.mimetypes.html#_winreg" class="code" data-type="Variable">_winreg</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.mimetypes.html#_db" class="code" data-type="Variable">_db</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.mimetypes.html#_default_mime_types" class="code" data-type="Function">_default_mime_types</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.mimetypes.html#_main" class="code" data-type="Function">_main</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable private">
+  
+  <a name="Lib.mimetypes._winreg">
+    
+  </a>
+  <a name="_winreg">
+    
+  </a>
+  <div class="functionHeader">
+    _winreg =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.mimetypes.knownfiles">
+    
+  </a>
+  <a name="knownfiles">
+    
+  </a>
+  <div class="functionHeader">
+    knownfiles =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[str]</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.mimetypes.inited">
+    
+  </a>
+  <a name="inited">
+    
+  </a>
+  <div class="functionHeader">
+    inited =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.mimetypes._db">
+    
+  </a>
+  <a name="_db">
+    
+  </a>
+  <div class="functionHeader">
+    _db =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.mimetypes.guess_type">
+    
+  </a>
+  <a name="guess_type">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    guess_type(url, strict=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Guess the type of a file based on its URL.
+
+Return value is a tuple (type, encoding) where type is None if the
+type can't be guessed (no or unknown suffix) or a string of the
+form type/subtype, usable for a MIME Content-type header; and
+encoding is None for no encoding or the name of the program used
+to encode (e.g. compress or gzip).  The mappings are table
+driven.  Encoding suffixes are case sensitive; type suffixes are
+first tried case sensitive, then case insensitive.
+
+The suffixes .tgz, .taz and .tz (case sensitive!) are all mapped
+to ".tar.gz".  (This is table-driven too, using the dictionary
+suffix_map).
+
+Optional `strict' argument when false adds a bunch of commonly found, but
+non-standard types.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.mimetypes.guess_all_extensions">
+    
+  </a>
+  <a name="guess_all_extensions">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    guess_all_extensions(type, strict=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Guess the extensions for a file based on its MIME type.
+
+Return value is a list of strings giving the possible filename
+extensions, including the leading dot ('.').  The extension is not
+guaranteed to have been associated with any particular data
+stream, but would be mapped to the MIME type `type' by
+guess_type().  If no extension can be guessed for `type', None
+is returned.
+
+Optional `strict' argument when false adds a bunch of commonly found,
+but non-standard types.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.mimetypes.guess_extension">
+    
+  </a>
+  <a name="guess_extension">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    guess_extension(type, strict=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Guess the extension for a file based on its MIME type.
+
+Return value is a string giving a filename extension, including the
+leading dot ('.').  The extension is not guaranteed to have been
+associated with any particular data stream, but would be mapped to the
+MIME type `type' by guess_type().  If no extension can be guessed for
+`type', None is returned.
+
+Optional `strict' argument when false adds a bunch of commonly found,
+but non-standard types.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.mimetypes.add_type">
+    
+  </a>
+  <a name="add_type">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    add_type(type, ext, strict=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Add a mapping between a type and an extension.
+
+When the extension is already known, the new
+type will replace the old one. When the type
+is already known the extension will be added
+to the list of known extensions.
+
+If strict is true, information will be added to
+list of standard types, else to the list of non-standard
+types.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.mimetypes.init">
+    
+  </a>
+  <a name="init">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    init(files=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.mimetypes.read_mime_types">
+    
+  </a>
+  <a name="read_mime_types">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    read_mime_types(file):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.mimetypes._default_mime_types">
+    
+  </a>
+  <a name="_default_mime_types">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _default_mime_types():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.mimetypes._main">
+    
+  </a>
+  <a name="_main">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _main():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

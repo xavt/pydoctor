@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib._pyio.TextIOBase : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib._pyio.html" class="code" data-type="Module">_pyio</a>.<a href="Lib._pyio.TextIOBase.html" class="code" data-type="Class">TextIOBase</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib._pyio.TextIOBase(<a href="Lib._pyio.IOBase.html" class="code" data-type="Class">IOBase</a>):</code></p><p>Known subclasses: <a href="Lib._pyio.TextIOWrapper.html" class="code" data-type="Class">Lib._pyio.TextIOWrapper</a></p>
+        <p><a href="classIndex.html#Lib._pyio.TextIOBase">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Base class for text I/O.
+
+This class provides a character and line based interface to stream
+I/O. There is no public constructor.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id169">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.TextIOBase.html#read" class="code" data-type="Method">read</a></td>
+    <td><span>Read at most size characters from stream, where size is an int.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.TextIOBase.html#write" class="code" data-type="Method">write</a></td>
+    <td><span>Write string s to stream and returning an int.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.TextIOBase.html#truncate" class="code" data-type="Method">truncate</a></td>
+    <td><span>Truncate size to pos, where pos is an int.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.TextIOBase.html#readline" class="code" data-type="Method">readline</a></td>
+    <td><span>Read until newline or EOF.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.TextIOBase.html#detach" class="code" data-type="Method">detach</a></td>
+    <td><span>Separate the underlying buffer from the TextIOBase and return it.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.TextIOBase.html#encoding" class="code" data-type="Method">encoding</a></td>
+    <td><span>Subclasses should override.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.TextIOBase.html#newlines" class="code" data-type="Method">newlines</a></td>
+    <td><span>Line endings translated so far.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.TextIOBase.html#errors" class="code" data-type="Method">errors</a></td>
+    <td><span>Error setting of the decoder or encoder.</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib._pyio.IOBase.html" class="code" data-type="Class">IOBase</a>:
+          </p>
+          <table class="children sortable" id="id170">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#seek" class="code" data-type="Method">seek</a></td>
+    <td><span>Change stream position.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#tell" class="code" data-type="Method">tell</a></td>
+    <td><span>Return an int indicating the current stream position.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#flush" class="code" data-type="Method">flush</a></td>
+    <td><span>Flush write buffers, if applicable.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#close" class="code" data-type="Method">close</a></td>
+    <td><span>Flush and close the IO object.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#__del__" class="code" data-type="Method">__del__</a></td>
+    <td><span>Destructor.  Calls close().</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#seekable" class="code" data-type="Method">seekable</a></td>
+    <td><span>Return a bool indicating whether object supports random access.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#readable" class="code" data-type="Method">readable</a></td>
+    <td><span>Return a bool indicating whether object was opened for reading.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#writable" class="code" data-type="Method">writable</a></td>
+    <td><span>Return a bool indicating whether object was opened for writing.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#closed" class="code" data-type="Method">closed</a></td>
+    <td><span>closed: bool.  True iff the file has been closed.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#__enter__" class="code" data-type="Method">__enter__</a></td>
+    <td><span>Context management protocol.  Returns self (an instance of IOBase).</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#__exit__" class="code" data-type="Method">__exit__</a></td>
+    <td><span>Context management protocol.  Calls close()</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#fileno" class="code" data-type="Method">fileno</a></td>
+    <td><span>Returns underlying file descriptor (an int) if one exists.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#isatty" class="code" data-type="Method">isatty</a></td>
+    <td><span>Return a bool indicating whether this is an 'interactive' stream.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#__iter__" class="code" data-type="Method">__iter__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#__next__" class="code" data-type="Method">__next__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#readlines" class="code" data-type="Method">readlines</a></td>
+    <td><span>Return a list of lines from the stream.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#writelines" class="code" data-type="Method">writelines</a></td>
+    <td><span>Write a list of lines to the stream.</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#_unsupported" class="code" data-type="Method">_unsupported</a></td>
+    <td><span>Internal: raise an OSError exception for unsupported operations.</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib._pyio.IOBase.html#__closed" class="code" data-type="Instance Variable">__closed</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#_checkSeekable" class="code" data-type="Method">_checkSeekable</a></td>
+    <td><span>Internal: raise UnsupportedOperation if file is not seekable</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#_checkReadable" class="code" data-type="Method">_checkReadable</a></td>
+    <td><span>Internal: raise UnsupportedOperation if file is not readable</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#_checkWritable" class="code" data-type="Method">_checkWritable</a></td>
+    <td><span>Internal: raise UnsupportedOperation if file is not writable</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib._pyio.IOBase.html#_checkClosed" class="code" data-type="Method">_checkClosed</a></td>
+    <td><span>Internal: raise a ValueError if file is closed</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib._pyio.TextIOBase.read">
+    
+  </a>
+  <a name="read">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    read(self, size=(-1)):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib._pyio.TextIOWrapper.html" class="code" data-type="Class">Lib._pyio.TextIOWrapper</a></div>
+    
+    <div><p class="pre">Read at most size characters from stream, where size is an int.
+
+Read from underlying buffer until we have size characters or we hit EOF.
+If size is negative or omitted, read until EOF.
+
+Returns a string.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib._pyio.TextIOBase.write">
+    
+  </a>
+  <a name="write">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    write(self, s):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib._pyio.TextIOWrapper.html" class="code" data-type="Class">Lib._pyio.TextIOWrapper</a></div>
+    
+    <div><p class="pre">Write string s to stream and returning an int.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib._pyio.TextIOBase.truncate">
+    
+  </a>
+  <a name="truncate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    truncate(self, pos=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib._pyio.IOBase.html#truncate" class="code" data-type="Method">Lib._pyio.IOBase.truncate</a></div><div class="interfaceinfo">overridden in <a href="Lib._pyio.TextIOWrapper.html" class="code" data-type="Class">Lib._pyio.TextIOWrapper</a></div>
+    
+    <div><p class="pre">Truncate size to pos, where pos is an int.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib._pyio.TextIOBase.readline">
+    
+  </a>
+  <a name="readline">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    readline(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib._pyio.IOBase.html#readline" class="code" data-type="Method">Lib._pyio.IOBase.readline</a></div><div class="interfaceinfo">overridden in <a href="Lib._pyio.TextIOWrapper.html" class="code" data-type="Class">Lib._pyio.TextIOWrapper</a></div>
+    
+    <div><p class="pre">Read until newline or EOF.
+
+Returns an empty string if EOF is hit immediately.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib._pyio.TextIOBase.detach">
+    
+  </a>
+  <a name="detach">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    detach(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib._pyio.TextIOWrapper.html" class="code" data-type="Class">Lib._pyio.TextIOWrapper</a></div>
+    
+    <div><p class="pre">Separate the underlying buffer from the TextIOBase and return it.
+
+After the underlying buffer has been detached, the TextIO is in an
+unusable state.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib._pyio.TextIOBase.encoding">
+    
+  </a>
+  <a name="encoding">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    encoding(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib._pyio.TextIOWrapper.html" class="code" data-type="Class">Lib._pyio.TextIOWrapper</a></div>
+    
+    <div><p class="pre">Subclasses should override.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib._pyio.TextIOBase.newlines">
+    
+  </a>
+  <a name="newlines">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    newlines(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib._pyio.TextIOWrapper.html" class="code" data-type="Class">Lib._pyio.TextIOWrapper</a></div>
+    
+    <div><p class="pre">Line endings translated so far.
+
+Only line endings translated during reading are considered.
+
+Subclasses should override.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib._pyio.TextIOBase.errors">
+    
+  </a>
+  <a name="errors">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    errors(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib._pyio.TextIOWrapper.html" class="code" data-type="Class">Lib._pyio.TextIOWrapper</a></div>
+    
+    <div><p class="pre">Error setting of the decoder or encoder.
+
+Subclasses should override.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

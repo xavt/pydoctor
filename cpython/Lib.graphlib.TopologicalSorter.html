@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.graphlib.TopologicalSorter : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.graphlib.html" class="code" data-type="Module">graphlib</a>.<a href="Lib.graphlib.TopologicalSorter.html" class="code" data-type="Class">TopologicalSorter</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.graphlib.TopologicalSorter:</code></p>
+        <p><a href="classIndex.html#Lib.graphlib.TopologicalSorter">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Provides functionality to topologically sort a graph of hashable nodes</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id1975">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.graphlib.TopologicalSorter.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.graphlib.TopologicalSorter.html#add" class="code" data-type="Method">add</a></td>
+    <td><span>Add a new node and its predecessors to the graph.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.graphlib.TopologicalSorter.html#prepare" class="code" data-type="Method">prepare</a></td>
+    <td><span>Mark the graph as finished and check for cycles in the graph.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.graphlib.TopologicalSorter.html#get_ready" class="code" data-type="Method">get_ready</a></td>
+    <td><span>Return a tuple of all the nodes that are ready.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.graphlib.TopologicalSorter.html#is_active" class="code" data-type="Method">is_active</a></td>
+    <td><span>Return ``True`` if more progress can be made and ``False`` otherwise.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.graphlib.TopologicalSorter.html#__bool__" class="code" data-type="Method">__bool__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.graphlib.TopologicalSorter.html#done" class="code" data-type="Method">done</a></td>
+    <td><span>Marks a set of nodes returned by "get_ready" as processed.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.graphlib.TopologicalSorter.html#static_order" class="code" data-type="Method">static_order</a></td>
+    <td><span>Returns an iterable of nodes in a topological order.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.graphlib.TopologicalSorter.html#_node2info" class="code" data-type="Instance Variable">_node2info</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.graphlib.TopologicalSorter.html#_ready_nodes" class="code" data-type="Instance Variable">_ready_nodes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.graphlib.TopologicalSorter.html#_npassedout" class="code" data-type="Instance Variable">_npassedout</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.graphlib.TopologicalSorter.html#_nfinished" class="code" data-type="Instance Variable">_nfinished</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.graphlib.TopologicalSorter.html#_get_nodeinfo" class="code" data-type="Method">_get_nodeinfo</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.graphlib.TopologicalSorter.html#_find_cycle" class="code" data-type="Method">_find_cycle</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.graphlib.TopologicalSorter.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, graph=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.graphlib.TopologicalSorter._node2info">
+    
+  </a>
+  <a name="_node2info">
+    
+  </a>
+  <div class="functionHeader">
+    _node2info =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.graphlib.TopologicalSorter._ready_nodes">
+    
+  </a>
+  <a name="_ready_nodes">
+    
+  </a>
+  <div class="functionHeader">
+    _ready_nodes =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.graphlib.TopologicalSorter._npassedout">
+    
+  </a>
+  <a name="_npassedout">
+    
+  </a>
+  <div class="functionHeader">
+    _npassedout =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.graphlib.TopologicalSorter._nfinished">
+    
+  </a>
+  <a name="_nfinished">
+    
+  </a>
+  <div class="functionHeader">
+    _nfinished =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.graphlib.TopologicalSorter._get_nodeinfo">
+    
+  </a>
+  <a name="_get_nodeinfo">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_nodeinfo(self, node):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.graphlib.TopologicalSorter.add">
+    
+  </a>
+  <a name="add">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    add(self, node, *predecessors):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Add a new node and its predecessors to the graph.
+
+Both the *node* and all elements in *predecessors* must be hashable.
+
+If called multiple times with the same node argument, the set of dependencies
+will be the union of all dependencies passed in.
+
+It is possible to add a node with no dependencies (*predecessors* is not provided)
+as well as provide a dependency twice. If a node that has not been provided before
+is included among *predecessors* it will be automatically added to the graph with
+no predecessors of its own.
+
+Raises ValueError if called after "prepare".</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.graphlib.TopologicalSorter.prepare">
+    
+  </a>
+  <a name="prepare">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    prepare(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Mark the graph as finished and check for cycles in the graph.
+
+If any cycle is detected, "CycleError" will be raised, but "get_ready" can
+still be used to obtain as many nodes as possible until cycles block more
+progress. After a call to this function, the graph cannot be modified and
+therefore no more nodes can be added using "add".</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.graphlib.TopologicalSorter.get_ready">
+    
+  </a>
+  <a name="get_ready">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_ready(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a tuple of all the nodes that are ready.
+
+Initially it returns all nodes with no predecessors; once those are marked
+as processed by calling "done", further calls will return all new nodes that
+have all their predecessors already processed. Once no more progress can be made,
+empty tuples are returned.
+
+Raises ValueError if called without calling "prepare" previously.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.graphlib.TopologicalSorter.is_active">
+    
+  </a>
+  <a name="is_active">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_active(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return ``True`` if more progress can be made and ``False`` otherwise.
+
+Progress can be made if cycles do not block the resolution and either there
+are still nodes ready that haven't yet been returned by "get_ready" or the
+number of nodes marked "done" is less than the number that have been returned
+by "get_ready".
+
+Raises ValueError if called without calling "prepare" previously.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.graphlib.TopologicalSorter.__bool__">
+    
+  </a>
+  <a name="__bool__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __bool__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.graphlib.TopologicalSorter.done">
+    
+  </a>
+  <a name="done">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    done(self, *nodes):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Marks a set of nodes returned by "get_ready" as processed.
+
+This method unblocks any successor of each node in *nodes* for being returned
+in the future by a call to "get_ready".
+
+Raises :exec:`ValueError` if any node in *nodes* has already been marked as
+processed by a previous call to this method, if a node was not added to the
+graph by using "add" or if called without calling "prepare" previously or if
+node has not yet been returned by "get_ready".</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.graphlib.TopologicalSorter._find_cycle">
+    
+  </a>
+  <a name="_find_cycle">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _find_cycle(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.graphlib.TopologicalSorter.static_order">
+    
+  </a>
+  <a name="static_order">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    static_order(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns an iterable of nodes in a topological order.
+
+The particular order that is returned may depend on the specific
+order in which the items were inserted in the graph.
+
+Using this method does not require to call "prepare" or "done". If any
+cycle is detected, :exc:`CycleError` will be raised.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

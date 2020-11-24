@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.wave : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.wave.html" class="code" data-type="Module">wave</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Stuff to parse WAVE files.
+
+Usage.
+
+Reading WAVE files:
+      f = wave.open(file, 'r')
+where file is either the name of a file or an open file pointer.
+The open file pointer must have methods read(), seek(), and close().
+When the setpos() and rewind() methods are not used, the seek()
+method is not  necessary.
+
+This returns an instance of a class with the following public methods:
+      getnchannels()  -- returns number of audio channels (1 for
+                         mono, 2 for stereo)
+      getsampwidth()  -- returns sample width in bytes
+      getframerate()  -- returns sampling frequency
+      getnframes()    -- returns number of audio frames
+      getcomptype()   -- returns compression type ('NONE' for linear samples)
+      getcompname()   -- returns human-readable version of
+                         compression type ('not compressed' linear samples)
+      getparams()     -- returns a namedtuple consisting of all of the
+                         above in the above order
+      getmarkers()    -- returns None (for compatibility with the
+                         aifc module)
+      getmark(id)     -- raises an error since the mark does not
+                         exist (for compatibility with the aifc module)
+      readframes(n)   -- returns at most n frames of audio
+      rewind()        -- rewind to the beginning of the audio stream
+      setpos(pos)     -- seek to the specified position
+      tell()          -- return the current position
+      close()         -- close the instance (make it unusable)
+The position returned by tell() and the position given to setpos()
+are compatible and have nothing to do with the actual position in the
+file.
+The close() method is called automatically when the class instance
+is destroyed.
+
+Writing WAVE files:
+      f = wave.open(file, 'w')
+where file is either the name of a file or an open file pointer.
+The open file pointer must have methods write(), tell(), seek(), and
+close().
+
+This returns an instance of a class with the following public methods:
+      setnchannels(n) -- set the number of channels
+      setsampwidth(n) -- set the sample width
+      setframerate(n) -- set the frame rate
+      setnframes(n)   -- set the number of frames
+      setcomptype(type, name)
+                      -- set the compression type and the
+                         human-readable compression type
+      setparams(tuple)
+                      -- set all parameters at once
+      tell()          -- return current position in output file
+      writeframesraw(data)
+                      -- write audio frames without patching up the
+                         file header
+      writeframes(data)
+                      -- write audio frames and patch up the file header
+      close()         -- patch up the file header and close the
+                         output file
+You should set the parameters before the first writeframesraw or
+writeframes.  The total number of frames does not need to be set,
+but when it is set to the correct value, the header does not have to
+be patched up.
+It is best to first set all parameters, perhaps possibly the
+compression type, and then write audio frames using writeframesraw.
+When all frames have been written, either call writeframes(b'') or
+close() to patch up the sizes in the header.
+The close() method is called automatically when the class instance
+is destroyed.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id11937">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.wave.Error.html" class="code" data-type="Class">Error</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.wave.html#WAVE_FORMAT_PCM" class="code" data-type="Variable">WAVE_FORMAT_PCM</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.wave.Wave_read.html" class="code" data-type="Class">Wave_read</a></td>
+    <td><span>Variables used in this class:</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.wave.Wave_write.html" class="code" data-type="Class">Wave_write</a></td>
+    <td><span>Variables used in this class:</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.wave.html#open" class="code" data-type="Function">open</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.wave.html#_array_fmts" class="code" data-type="Variable">_array_fmts</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.wave.html#_wave_params" class="code" data-type="Variable">_wave_params</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.wave.WAVE_FORMAT_PCM">
+    
+  </a>
+  <a name="WAVE_FORMAT_PCM">
+    
+  </a>
+  <div class="functionHeader">
+    WAVE_FORMAT_PCM =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.wave._array_fmts">
+    
+  </a>
+  <a name="_array_fmts">
+    
+  </a>
+  <div class="functionHeader">
+    _array_fmts =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Tuple</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.wave._wave_params">
+    
+  </a>
+  <a name="_wave_params">
+    
+  </a>
+  <div class="functionHeader">
+    _wave_params =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.wave.open">
+    
+  </a>
+  <a name="open">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    open(f, mode=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.test.support.import_helper : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.test.html" class="code" data-type="Package">test</a>.<a href="Lib.test.support.html" class="code" data-type="Package">support</a>.<a href="Lib.test.support.import_helper.html" class="code" data-type="Module">import_helper</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div class="undocumented">Undocumented</div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id4161">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.support.import_helper.html#unload" class="code" data-type="Function">unload</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.support.import_helper.html#forget" class="code" data-type="Function">forget</a></td>
+    <td><span>'Forget' a module was ever imported.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.support.import_helper.html#make_legacy_pyc" class="code" data-type="Function">make_legacy_pyc</a></td>
+    <td><span>Move a PEP 3147/488 pyc file to its legacy pyc location.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.support.import_helper.html#import_module" class="code" data-type="Function">import_module</a></td>
+    <td><span>Import and return the module to be tested, raising SkipTest if it is not available.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.support.import_helper.html#import_fresh_module" class="code" data-type="Function">import_fresh_module</a></td>
+    <td><span>Import and return a module, deliberately bypassing sys.modules.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.support.import_helper.CleanImport.html" class="code" data-type="Class">CleanImport</a></td>
+    <td><span>Context manager to force import to return a new module reference.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.test.support.import_helper.DirsOnSysPath.html" class="code" data-type="Class">DirsOnSysPath</a></td>
+    <td><span>Context manager to temporarily add directories to sys.path.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.support.import_helper.html#modules_setup" class="code" data-type="Function">modules_setup</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.support.import_helper.html#modules_cleanup" class="code" data-type="Function">modules_cleanup</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.support.import_helper.html#_ignore_deprecated_imports" class="code" data-type="Function">_ignore_deprecated_imports</a></td>
+    <td><span>Context manager to suppress package and module deprecation warnings when importing them.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.support.import_helper.html#_save_and_remove_module" class="code" data-type="Function">_save_and_remove_module</a></td>
+    <td><span>Helper function to save and remove a module from sys.modules</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.test.support.import_helper.html#_save_and_block_module" class="code" data-type="Function">_save_and_block_module</a></td>
+    <td><span>Helper function to save and block a module in sys.modules</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction private">
+  
+  <a name="Lib.test.support.import_helper._ignore_deprecated_imports">
+    
+  </a>
+  <a name="_ignore_deprecated_imports">
+    
+  </a>
+  <div class="functionHeader">
+    @contextlib.contextmanager<br />
+    def
+    _ignore_deprecated_imports(ignore=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Context manager to suppress package and module deprecation
+warnings when importing them.
+
+If ignore is False, this context manager has no effect.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.support.import_helper.unload">
+    
+  </a>
+  <a name="unload">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    unload(name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.support.import_helper.forget">
+    
+  </a>
+  <a name="forget">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    forget(modname):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">'Forget' a module was ever imported.
+
+This removes the module from sys.modules and deletes any PEP 3147/488 or
+legacy .pyc files.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.support.import_helper.make_legacy_pyc">
+    
+  </a>
+  <a name="make_legacy_pyc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    make_legacy_pyc(source):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Move a PEP 3147/488 pyc file to its legacy pyc location.
+
+:param source: The file system path to the source file.  The source file
+    does not need to exist, however the PEP 3147/488 pyc file must exist.
+:return: The file system path to the legacy pyc file.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.support.import_helper.import_module">
+    
+  </a>
+  <a name="import_module">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    import_module(name, deprecated=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Import and return the module to be tested, raising SkipTest if
+it is not available.
+
+If deprecated is True, any module or package deprecation messages
+will be suppressed. If a module is required on a platform but optional for
+others, set required_on to an iterable of platform prefixes which will be
+compared against sys.platform.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.test.support.import_helper._save_and_remove_module">
+    
+  </a>
+  <a name="_save_and_remove_module">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _save_and_remove_module(name, orig_modules):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Helper function to save and remove a module from sys.modules
+
+Raise ImportError if the module can't be imported.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.test.support.import_helper._save_and_block_module">
+    
+  </a>
+  <a name="_save_and_block_module">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _save_and_block_module(name, orig_modules):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Helper function to save and block a module in sys.modules
+
+Return True if the module was in sys.modules, False otherwise.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.support.import_helper.import_fresh_module">
+    
+  </a>
+  <a name="import_fresh_module">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    import_fresh_module(name, fresh=(), blocked=(), deprecated=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Import and return a module, deliberately bypassing sys.modules.
+
+This function imports and returns a fresh copy of the named Python module
+by removing the named module from sys.modules before doing the import.
+Note that unlike reload, the original module is not affected by
+this operation.
+
+*fresh* is an iterable of additional module names that are also removed
+from the sys.modules cache before doing the import.
+
+*blocked* is an iterable of module names that are replaced with None
+in the module cache during the import to ensure that attempts to import
+them raise ImportError.
+
+The named module and any modules named in the *fresh* and *blocked*
+parameters are saved before starting the import and then reinserted into
+sys.modules when the fresh import is complete.
+
+Module and package deprecation messages are suppressed during this import
+if *deprecated* is True.
+
+This function will raise ImportError if the named module cannot be
+imported.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.support.import_helper.modules_setup">
+    
+  </a>
+  <a name="modules_setup">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    modules_setup():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.test.support.import_helper.modules_cleanup">
+    
+  </a>
+  <a name="modules_cleanup">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    modules_cleanup(oldmodules):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.http.server : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.http.html" class="code" data-type="Package">http</a>.<a href="Lib.http.server.html" class="code" data-type="Module">server</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">HTTP server classes.
+
+Note: BaseHTTPRequestHandler doesn't implement any HTTP request; see
+SimpleHTTPRequestHandler for simple implementations of GET, HEAD and POST,
+and CGIHTTPRequestHandler for CGI scripts.
+
+It does, however, optionally implement HTTP/1.1 persistent connections,
+as of version 0.3.
+
+Notes on CGIHTTPRequestHandler
+------------------------------
+
+This class implements GET and POST requests to cgi-bin scripts.
+
+If the os.fork() function is not present (e.g. on Windows),
+subprocess.Popen() is used as a fallback, with slightly altered semantics.
+
+In all cases, the implementation is intentionally naive -- all
+requests are executed synchronously.
+
+SECURITY WARNING: DON'T USE THIS CODE UNLESS YOU ARE INSIDE A FIREWALL
+-- it may execute arbitrary Python code or external programs.
+
+Note that status code 200 is sent prior to execution of a CGI script, so
+scripts cannot send other status codes such as 302 (redirect).
+
+XXX To do:
+
+- log requests even later (to capture byte count)
+- log user-agent header and other interesting goodies
+- send error log to separate file</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2022">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.server.html#__version__" class="code" data-type="Variable">__version__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.server.html#DEFAULT_ERROR_MESSAGE" class="code" data-type="Variable">DEFAULT_ERROR_MESSAGE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.server.html#DEFAULT_ERROR_CONTENT_TYPE" class="code" data-type="Variable">DEFAULT_ERROR_CONTENT_TYPE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.http.server.HTTPServer.html" class="code" data-type="Class">HTTPServer</a></td>
+    <td><span class="undocumented">No class0/1 class variables docstring; , 0/2 instance variables docstring; , 1/1 methods documented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.http.server.ThreadingHTTPServer.html" class="code" data-type="Class">ThreadingHTTPServer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html" class="code" data-type="Class">BaseHTTPRequestHandler</a></td>
+    <td><span>HTTP request handler base class.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.http.server.SimpleHTTPRequestHandler.html" class="code" data-type="Class">SimpleHTTPRequestHandler</a></td>
+    <td><span>Simple HTTP request handler with GET and HEAD commands.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.server.html#nobody" class="code" data-type="Variable">nobody</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.http.server.html#nobody_uid" class="code" data-type="Function">nobody_uid</a></td>
+    <td><span>Internal routine to get nobody's uid</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.http.server.html#executable" class="code" data-type="Function">executable</a></td>
+    <td><span>Test for executable file.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.http.server.CGIHTTPRequestHandler.html" class="code" data-type="Class">CGIHTTPRequestHandler</a></td>
+    <td><span>Complete HTTP server with GET, HEAD and POST commands.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.http.server.html#test" class="code" data-type="Function">test</a></td>
+    <td><span>Test the HTTP request handler class.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.server.html#parser" class="code" data-type="Variable">parser</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.server.html#args" class="code" data-type="Variable">args</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.http.server.DualStackServer.html" class="code" data-type="Class">DualStackServer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.http.server.html#_url_collapse_path" class="code" data-type="Function">_url_collapse_path</a></td>
+    <td><span>Given a URL path, remove extra '/'s and '.' path elements and collapse any '..' references and returns a collapsed path.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.http.server.html#_get_best_family" class="code" data-type="Function">_get_best_family</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.http.server.__version__">
+    
+  </a>
+  <a name="__version__">
+    
+  </a>
+  <div class="functionHeader">
+    __version__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.http.server.DEFAULT_ERROR_MESSAGE">
+    
+  </a>
+  <a name="DEFAULT_ERROR_MESSAGE">
+    
+  </a>
+  <div class="functionHeader">
+    DEFAULT_ERROR_MESSAGE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.http.server.DEFAULT_ERROR_CONTENT_TYPE">
+    
+  </a>
+  <a name="DEFAULT_ERROR_CONTENT_TYPE">
+    
+  </a>
+  <div class="functionHeader">
+    DEFAULT_ERROR_CONTENT_TYPE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.http.server._url_collapse_path">
+    
+  </a>
+  <a name="_url_collapse_path">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _url_collapse_path(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Given a URL path, remove extra '/'s and '.' path elements and collapse
+any '..' references and returns a collapsed path.
+
+Implements something akin to RFC-2396 5.2 step 6 to parse relative paths.
+The utility of this function is limited to is_cgi method and helps
+preventing some security attacks.
+
+Returns: The reconstituted URL, which will always start with a '/'.
+
+Raises: IndexError if too many '..' occur within the path.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.http.server.nobody">
+    
+  </a>
+  <a name="nobody">
+    
+  </a>
+  <div class="functionHeader">
+    nobody =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.http.server.nobody_uid">
+    
+  </a>
+  <a name="nobody_uid">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    nobody_uid():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Internal routine to get nobody's uid</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.http.server.executable">
+    
+  </a>
+  <a name="executable">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    executable(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Test for executable file.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.http.server._get_best_family">
+    
+  </a>
+  <a name="_get_best_family">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_best_family(*address):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.http.server.test">
+    
+  </a>
+  <a name="test">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test(HandlerClass=BaseHTTPRequestHandler, ServerClass=ThreadingHTTPServer, protocol="""HTTP/1.0""", port=8000, bind=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Test the HTTP request handler class.
+
+This runs an HTTP server on port 8000 (or the port argument).</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.http.server.parser">
+    
+  </a>
+  <a name="parser">
+    
+  </a>
+  <div class="functionHeader">
+    parser =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.http.server.args">
+    
+  </a>
+  <a name="args">
+    
+  </a>
+  <div class="functionHeader">
+    args =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

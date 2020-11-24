@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.mailbox.MMDF : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.mailbox.html" class="code" data-type="Module">mailbox</a>.<a href="Lib.mailbox.MMDF.html" class="code" data-type="Class">MMDF</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.mailbox.MMDF(<a href="Lib.mailbox._mboxMMDF.html" class="code" data-type="Class">_mboxMMDF</a>):</code></p>
+        <p><a href="classIndex.html#Lib.mailbox.MMDF">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">An MMDF mailbox.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3078">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.MMDF.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Initialize an MMDF mailbox.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.mailbox.MMDF.html#_message_factory" class="code" data-type="Instance Variable">_message_factory</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.MMDF.html#_pre_message_hook" class="code" data-type="Method">_pre_message_hook</a></td>
+    <td><span>Called before writing each message to file f.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.MMDF.html#_post_message_hook" class="code" data-type="Method">_post_message_hook</a></td>
+    <td><span>Called after writing each message to file f.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.MMDF.html#_generate_toc" class="code" data-type="Method">_generate_toc</a></td>
+    <td><span>Generate key-to-(start, stop) table of contents.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.mailbox.MMDF.html#_toc" class="code" data-type="Instance Variable">_toc</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.mailbox.MMDF.html#_next_key" class="code" data-type="Instance Variable">_next_key</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.mailbox.MMDF.html#_file_length" class="code" data-type="Instance Variable">_file_length</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.mailbox._mboxMMDF.html" class="code" data-type="Class">_mboxMMDF</a>:
+          </p>
+          <table class="children sortable" id="id3079">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox._mboxMMDF.html#get_message" class="code" data-type="Method">get_message</a></td>
+    <td><span>Return a Message representation or raise a KeyError.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox._mboxMMDF.html#get_string" class="code" data-type="Method">get_string</a></td>
+    <td><span>Return a string representation or raise a KeyError.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox._mboxMMDF.html#get_bytes" class="code" data-type="Method">get_bytes</a></td>
+    <td><span>Return a string representation or raise a KeyError.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox._mboxMMDF.html#get_file" class="code" data-type="Method">get_file</a></td>
+    <td><span>Return a file-like representation or raise a KeyError.</span></td>
+  </tr><tr class="baseclassvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.mailbox._mboxMMDF.html#_mangle_from_" class="code" data-type="Class Variable">_mangle_from_</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox._mboxMMDF.html#_install_message" class="code" data-type="Method">_install_message</a></td>
+    <td><span>Format a message and blindly write to self._file.</span></td>
+  </tr>
+</table>
+          
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.mailbox._singlefileMailbox.html" class="code" data-type="Class">_singlefileMailbox</a> (via <a href="Lib.mailbox._mboxMMDF.html" class="code" data-type="Class">_mboxMMDF</a>):
+          </p>
+          <table class="children sortable" id="id3080">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox._singlefileMailbox.html#add" class="code" data-type="Method">add</a></td>
+    <td><span>Add message and return assigned key.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox._singlefileMailbox.html#remove" class="code" data-type="Method">remove</a></td>
+    <td><span>Remove the keyed message; raise KeyError if it doesn't exist.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox._singlefileMailbox.html#__setitem__" class="code" data-type="Method">__setitem__</a></td>
+    <td><span>Replace the keyed message; raise KeyError if it doesn't exist.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox._singlefileMailbox.html#iterkeys" class="code" data-type="Method">iterkeys</a></td>
+    <td><span>Return an iterator over keys.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox._singlefileMailbox.html#__contains__" class="code" data-type="Method">__contains__</a></td>
+    <td><span>Return True if the keyed message exists, False otherwise.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox._singlefileMailbox.html#__len__" class="code" data-type="Method">__len__</a></td>
+    <td><span>Return a count of messages in the mailbox.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox._singlefileMailbox.html#lock" class="code" data-type="Method">lock</a></td>
+    <td><span>Lock the mailbox.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox._singlefileMailbox.html#unlock" class="code" data-type="Method">unlock</a></td>
+    <td><span>Unlock the mailbox if it is locked.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox._singlefileMailbox.html#flush" class="code" data-type="Method">flush</a></td>
+    <td><span>Write any pending changes to disk.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox._singlefileMailbox.html#close" class="code" data-type="Method">close</a></td>
+    <td><span>Flush and close the mailbox.</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.mailbox._singlefileMailbox.html#_file" class="code" data-type="Instance Variable">_file</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.mailbox._singlefileMailbox.html#_pending" class="code" data-type="Instance Variable">_pending</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.mailbox._singlefileMailbox.html#_pending_sync" class="code" data-type="Instance Variable">_pending_sync</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.mailbox._singlefileMailbox.html#_locked" class="code" data-type="Instance Variable">_locked</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox._singlefileMailbox.html#_pre_mailbox_hook" class="code" data-type="Method">_pre_mailbox_hook</a></td>
+    <td><span>Called before writing the mailbox to file f.</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox._singlefileMailbox.html#_lookup" class="code" data-type="Method">_lookup</a></td>
+    <td><span>Return (start, stop) or raise KeyError.</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox._singlefileMailbox.html#_append_message" class="code" data-type="Method">_append_message</a></td>
+    <td><span>Append message to mailbox and return (start, stop) offsets.</span></td>
+  </tr>
+</table>
+          
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.mailbox.Mailbox.html" class="code" data-type="Class">Mailbox</a> (via <a href="Lib.mailbox._mboxMMDF.html" class="code" data-type="Class">_mboxMMDF</a>, <a href="Lib.mailbox._singlefileMailbox.html" class="code" data-type="Class">_singlefileMailbox</a>):
+          </p>
+          <table class="children sortable" id="id3081">
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#__delitem__" class="code" data-type="Method">__delitem__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#discard" class="code" data-type="Method">discard</a></td>
+    <td><span>If the keyed message exists, remove it.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#get" class="code" data-type="Method">get</a></td>
+    <td><span>Return the keyed message, or default if it doesn't exist.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#__getitem__" class="code" data-type="Method">__getitem__</a></td>
+    <td><span>Return the keyed message; raise KeyError if it doesn't exist.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#keys" class="code" data-type="Method">keys</a></td>
+    <td><span>Return a list of keys.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#itervalues" class="code" data-type="Method">itervalues</a></td>
+    <td><span>Return an iterator over all messages.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#__iter__" class="code" data-type="Method">__iter__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#values" class="code" data-type="Method">values</a></td>
+    <td><span>Return a list of messages. Memory intensive.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#iteritems" class="code" data-type="Method">iteritems</a></td>
+    <td><span>Return an iterator over (key, message) tuples.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#items" class="code" data-type="Method">items</a></td>
+    <td><span>Return a list of (key, message) tuples. Memory intensive.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#clear" class="code" data-type="Method">clear</a></td>
+    <td><span>Delete all messages.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#pop" class="code" data-type="Method">pop</a></td>
+    <td><span>Delete the keyed message and return it, or default.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#popitem" class="code" data-type="Method">popitem</a></td>
+    <td><span>Delete an arbitrary (key, message) pair and return it.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#update" class="code" data-type="Method">update</a></td>
+    <td><span>Change the messages that correspond to certain keys.</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.mailbox.Mailbox.html#__class_getitem__" class="code" data-type="Class Variable">__class_getitem__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.mailbox.Mailbox.html#_path" class="code" data-type="Instance Variable">_path</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.mailbox.Mailbox.html#_factory" class="code" data-type="Instance Variable">_factory</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#_string_to_bytes" class="code" data-type="Method">_string_to_bytes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.mailbox.Mailbox.html#_append_newline" class="code" data-type="Class Variable">_append_newline</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.mailbox.Mailbox.html#_dump_message" class="code" data-type="Method">_dump_message</a></td>
+    <td><span>Dump message contents to target file.</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.mailbox.MMDF.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, path, factory=None, create=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.mailbox._singlefileMailbox.html#__init__" class="code" data-type="Method">Lib.mailbox._singlefileMailbox.__init__</a></div>
+    
+    <div><p class="pre">Initialize an MMDF mailbox.</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.mailbox.MMDF._message_factory">
+    
+  </a>
+  <a name="_message_factory">
+    
+  </a>
+  <div class="functionHeader">
+    _message_factory =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.mailbox.MMDF._pre_message_hook">
+    
+  </a>
+  <a name="_pre_message_hook">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _pre_message_hook(self, f):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.mailbox._singlefileMailbox.html#_pre_message_hook" class="code" data-type="Method">Lib.mailbox._singlefileMailbox._pre_message_hook</a></div>
+    
+    <div><p class="pre">Called before writing each message to file f.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.mailbox.MMDF._post_message_hook">
+    
+  </a>
+  <a name="_post_message_hook">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _post_message_hook(self, f):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.mailbox._singlefileMailbox.html#_post_message_hook" class="code" data-type="Method">Lib.mailbox._singlefileMailbox._post_message_hook</a></div>
+    
+    <div><p class="pre">Called after writing each message to file f.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.mailbox.MMDF._generate_toc">
+    
+  </a>
+  <a name="_generate_toc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _generate_toc(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Generate key-to-(start, stop) table of contents.</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.mailbox.MMDF._toc">
+    
+  </a>
+  <a name="_toc">
+    
+  </a>
+  <div class="functionHeader">
+    _toc =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.mailbox._singlefileMailbox.html#_toc" class="code" data-type="Instance Variable">Lib.mailbox._singlefileMailbox._toc</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.mailbox.MMDF._next_key">
+    
+  </a>
+  <a name="_next_key">
+    
+  </a>
+  <div class="functionHeader">
+    _next_key =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.mailbox._singlefileMailbox.html#_next_key" class="code" data-type="Instance Variable">Lib.mailbox._singlefileMailbox._next_key</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.mailbox.MMDF._file_length">
+    
+  </a>
+  <a name="_file_length">
+    
+  </a>
+  <div class="functionHeader">
+    _file_length =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.mailbox._singlefileMailbox.html#_file_length" class="code" data-type="Instance Variable">Lib.mailbox._singlefileMailbox._file_length</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.functools : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.functools.html" class="code" data-type="Module">functools</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">functools.py - Tools for working with functions and callable objects</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id1958">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.functools.html#WRAPPER_ASSIGNMENTS" class="code" data-type="Variable">WRAPPER_ASSIGNMENTS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.functools.html#WRAPPER_UPDATES" class="code" data-type="Variable">WRAPPER_UPDATES</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.functools.html#update_wrapper" class="code" data-type="Function">update_wrapper</a></td>
+    <td><span>Update a wrapper function to look like the wrapped function</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.functools.html#wraps" class="code" data-type="Function">wraps</a></td>
+    <td><span>Decorator factory to apply update_wrapper() to a wrapper function</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.functools.html#total_ordering" class="code" data-type="Function">total_ordering</a></td>
+    <td><span>Class decorator that fills in missing ordering methods</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.functools.html#cmp_to_key" class="code" data-type="Function">cmp_to_key</a></td>
+    <td><span>Convert a cmp= function into a key= function</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.functools.html#reduce" class="code" data-type="Function">reduce</a></td>
+    <td><span>reduce(function, iterable[, initial]) -&gt; value</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.functools.partial.html" class="code" data-type="Class">partial</a></td>
+    <td><span>New function with partial application of the given arguments and keywords.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.functools.partialmethod.html" class="code" data-type="Class">partialmethod</a></td>
+    <td><span>Method descriptor with partial application of the given arguments and keywords.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.functools.html#lru_cache" class="code" data-type="Function">lru_cache</a></td>
+    <td><span>Least-recently-used cache decorator.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.functools.html#cache" class="code" data-type="Function">cache</a></td>
+    <td><span>Simple lightweight unbounded cache.  Sometimes called "memoize".</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.functools.html#singledispatch" class="code" data-type="Function">singledispatch</a></td>
+    <td><span>Single-dispatch generic function decorator.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.functools.singledispatchmethod.html" class="code" data-type="Class">singledispatchmethod</a></td>
+    <td><span>Single-dispatch generic method descriptor.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.functools.cached_property.html" class="code" data-type="Class">cached_property</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.functools.html#_gt_from_lt" class="code" data-type="Function">_gt_from_lt</a></td>
+    <td><span>Return a &gt; b.  Computed by @total_ordering from (not a &lt; b) and (a != b).</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.functools.html#_le_from_lt" class="code" data-type="Function">_le_from_lt</a></td>
+    <td><span>Return a &lt;= b.  Computed by @total_ordering from (a &lt; b) or (a == b).</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.functools.html#_ge_from_lt" class="code" data-type="Function">_ge_from_lt</a></td>
+    <td><span>Return a &gt;= b.  Computed by @total_ordering from (not a &lt; b).</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.functools.html#_ge_from_le" class="code" data-type="Function">_ge_from_le</a></td>
+    <td><span>Return a &gt;= b.  Computed by @total_ordering from (not a &lt;= b) or (a == b).</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.functools.html#_lt_from_le" class="code" data-type="Function">_lt_from_le</a></td>
+    <td><span>Return a &lt; b.  Computed by @total_ordering from (a &lt;= b) and (a != b).</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.functools.html#_gt_from_le" class="code" data-type="Function">_gt_from_le</a></td>
+    <td><span>Return a &gt; b.  Computed by @total_ordering from (not a &lt;= b).</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.functools.html#_lt_from_gt" class="code" data-type="Function">_lt_from_gt</a></td>
+    <td><span>Return a &lt; b.  Computed by @total_ordering from (not a &gt; b) and (a != b).</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.functools.html#_ge_from_gt" class="code" data-type="Function">_ge_from_gt</a></td>
+    <td><span>Return a &gt;= b.  Computed by @total_ordering from (a &gt; b) or (a == b).</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.functools.html#_le_from_gt" class="code" data-type="Function">_le_from_gt</a></td>
+    <td><span>Return a &lt;= b.  Computed by @total_ordering from (not a &gt; b).</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.functools.html#_le_from_ge" class="code" data-type="Function">_le_from_ge</a></td>
+    <td><span>Return a &lt;= b.  Computed by @total_ordering from (not a &gt;= b) or (a == b).</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.functools.html#_gt_from_ge" class="code" data-type="Function">_gt_from_ge</a></td>
+    <td><span>Return a &gt; b.  Computed by @total_ordering from (a &gt;= b) and (a != b).</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.functools.html#_lt_from_ge" class="code" data-type="Function">_lt_from_ge</a></td>
+    <td><span>Return a &lt; b.  Computed by @total_ordering from (not a &gt;= b).</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.functools.html#_convert" class="code" data-type="Variable">_convert</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.functools.html#_initial_missing" class="code" data-type="Variable">_initial_missing</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.functools.html#_unwrap_partial" class="code" data-type="Function">_unwrap_partial</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.functools.html#_CacheInfo" class="code" data-type="Variable">_CacheInfo</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.functools._HashedSeq.html" class="code" data-type="Class">_HashedSeq</a></td>
+    <td><span>This class guarantees that hash() will be called no more than once per element.  This is important because the lru_cache() will hash the key multiple times on a cache miss.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.functools.html#_make_key" class="code" data-type="Function">_make_key</a></td>
+    <td><span>Make a cache key from optionally typed positional and keyword arguments</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.functools.html#_lru_cache_wrapper" class="code" data-type="Function">_lru_cache_wrapper</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.functools.html#_c3_merge" class="code" data-type="Function">_c3_merge</a></td>
+    <td><span>Merges MROs in *sequences* to a single MRO using the C3 algorithm.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.functools.html#_c3_mro" class="code" data-type="Function">_c3_mro</a></td>
+    <td><span>Computes the method resolution order using extended C3 linearization.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.functools.html#_compose_mro" class="code" data-type="Function">_compose_mro</a></td>
+    <td><span>Calculates the method resolution order for a given class *cls*.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.functools.html#_find_impl" class="code" data-type="Function">_find_impl</a></td>
+    <td><span>Returns the best matching implementation from *registry* for type *cls*.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.functools.html#_NOT_FOUND" class="code" data-type="Variable">_NOT_FOUND</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.functools.WRAPPER_ASSIGNMENTS">
+    
+  </a>
+  <a name="WRAPPER_ASSIGNMENTS">
+    
+  </a>
+  <div class="functionHeader">
+    WRAPPER_ASSIGNMENTS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Tuple[str, ...]</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.functools.WRAPPER_UPDATES">
+    
+  </a>
+  <a name="WRAPPER_UPDATES">
+    
+  </a>
+  <div class="functionHeader">
+    WRAPPER_UPDATES =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Tuple[str, ...]</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.functools.update_wrapper">
+    
+  </a>
+  <a name="update_wrapper">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    update_wrapper(wrapper, wrapped, assigned=WRAPPER_ASSIGNMENTS, updated=WRAPPER_UPDATES):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Update a wrapper function to look like the wrapped function
+
+wrapper is the function to be updated
+wrapped is the original function
+assigned is a tuple naming the attributes assigned directly
+from the wrapped function to the wrapper function (defaults to
+functools.WRAPPER_ASSIGNMENTS)
+updated is a tuple naming the attributes of the wrapper that
+are updated with the corresponding attribute from the wrapped
+function (defaults to functools.WRAPPER_UPDATES)</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.functools.wraps">
+    
+  </a>
+  <a name="wraps">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    wraps(wrapped, assigned=WRAPPER_ASSIGNMENTS, updated=WRAPPER_UPDATES):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Decorator factory to apply update_wrapper() to a wrapper function
+
+Returns a decorator that invokes update_wrapper() with the decorated
+function as the wrapper argument and the arguments to wraps() as the
+remaining arguments. Default arguments are as for update_wrapper().
+This is a convenience function to simplify applying partial() to
+update_wrapper().</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.functools._gt_from_lt">
+    
+  </a>
+  <a name="_gt_from_lt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _gt_from_lt(self, other, NotImplemented=NotImplemented):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a &gt; b.  Computed by @total_ordering from (not a &lt; b) and (a != b).</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.functools._le_from_lt">
+    
+  </a>
+  <a name="_le_from_lt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _le_from_lt(self, other, NotImplemented=NotImplemented):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a &lt;= b.  Computed by @total_ordering from (a &lt; b) or (a == b).</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.functools._ge_from_lt">
+    
+  </a>
+  <a name="_ge_from_lt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _ge_from_lt(self, other, NotImplemented=NotImplemented):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a &gt;= b.  Computed by @total_ordering from (not a &lt; b).</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.functools._ge_from_le">
+    
+  </a>
+  <a name="_ge_from_le">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _ge_from_le(self, other, NotImplemented=NotImplemented):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a &gt;= b.  Computed by @total_ordering from (not a &lt;= b) or (a == b).</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.functools._lt_from_le">
+    
+  </a>
+  <a name="_lt_from_le">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _lt_from_le(self, other, NotImplemented=NotImplemented):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a &lt; b.  Computed by @total_ordering from (a &lt;= b) and (a != b).</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.functools._gt_from_le">
+    
+  </a>
+  <a name="_gt_from_le">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _gt_from_le(self, other, NotImplemented=NotImplemented):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a &gt; b.  Computed by @total_ordering from (not a &lt;= b).</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.functools._lt_from_gt">
+    
+  </a>
+  <a name="_lt_from_gt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _lt_from_gt(self, other, NotImplemented=NotImplemented):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a &lt; b.  Computed by @total_ordering from (not a &gt; b) and (a != b).</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.functools._ge_from_gt">
+    
+  </a>
+  <a name="_ge_from_gt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _ge_from_gt(self, other, NotImplemented=NotImplemented):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a &gt;= b.  Computed by @total_ordering from (a &gt; b) or (a == b).</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.functools._le_from_gt">
+    
+  </a>
+  <a name="_le_from_gt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _le_from_gt(self, other, NotImplemented=NotImplemented):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a &lt;= b.  Computed by @total_ordering from (not a &gt; b).</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.functools._le_from_ge">
+    
+  </a>
+  <a name="_le_from_ge">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _le_from_ge(self, other, NotImplemented=NotImplemented):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a &lt;= b.  Computed by @total_ordering from (not a &gt;= b) or (a == b).</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.functools._gt_from_ge">
+    
+  </a>
+  <a name="_gt_from_ge">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _gt_from_ge(self, other, NotImplemented=NotImplemented):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a &gt; b.  Computed by @total_ordering from (a &gt;= b) and (a != b).</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.functools._lt_from_ge">
+    
+  </a>
+  <a name="_lt_from_ge">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _lt_from_ge(self, other, NotImplemented=NotImplemented):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a &lt; b.  Computed by @total_ordering from (not a &gt;= b).</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.functools._convert">
+    
+  </a>
+  <a name="_convert">
+    
+  </a>
+  <div class="functionHeader">
+    _convert =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.functools.total_ordering">
+    
+  </a>
+  <a name="total_ordering">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    total_ordering(cls):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Class decorator that fills in missing ordering methods</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.functools.cmp_to_key">
+    
+  </a>
+  <a name="cmp_to_key">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    cmp_to_key(mycmp):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convert a cmp= function into a key= function</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.functools._initial_missing">
+    
+  </a>
+  <a name="_initial_missing">
+    
+  </a>
+  <div class="functionHeader">
+    _initial_missing =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.functools.reduce">
+    
+  </a>
+  <a name="reduce">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    reduce(function, sequence, initial=_initial_missing):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">reduce(function, iterable[, initial]) -&gt; value
+
+Apply a function of two arguments cumulatively to the items of a sequence
+or iterable, from left to right, so as to reduce the iterable to a single
+value.  For example, reduce(lambda x, y: x+y, [1, 2, 3, 4, 5]) calculates
+((((1+2)+3)+4)+5).  If initial is present, it is placed before the items
+of the iterable in the calculation, and serves as a default when the
+iterable is empty.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.functools._unwrap_partial">
+    
+  </a>
+  <a name="_unwrap_partial">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _unwrap_partial(func):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.functools._CacheInfo">
+    
+  </a>
+  <a name="_CacheInfo">
+    
+  </a>
+  <div class="functionHeader">
+    _CacheInfo =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.functools._make_key">
+    
+  </a>
+  <a name="_make_key">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _make_key(args, kwds, typed, kwd_mark=(object(),), fasttypes={int, str}, tuple=tuple, type=type, len=len):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Make a cache key from optionally typed positional and keyword arguments
+
+The key is constructed in a way that is flat as possible rather than
+as a nested structure that would take more memory.
+
+If there is only a single argument and its data type is known to cache
+its hash value, then that argument is returned without a wrapper.  This
+saves space and improves lookup speed.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.functools.lru_cache">
+    
+  </a>
+  <a name="lru_cache">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    lru_cache(maxsize=128, typed=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Least-recently-used cache decorator.
+
+If *maxsize* is set to None, the LRU features are disabled and the cache
+can grow without bound.
+
+If *typed* is True, arguments of different types will be cached separately.
+For example, f(3.0) and f(3) will be treated as distinct calls with
+distinct results.
+
+Arguments to the cached function must be hashable.
+
+View the cache statistics named tuple (hits, misses, maxsize, currsize)
+with f.cache_info().  Clear the cache and statistics with f.cache_clear().
+Access the underlying function with f.__wrapped__.
+
+See:  http://en.wikipedia.org/wiki/Cache_replacement_policies#Least_recently_used_(LRU)</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.functools._lru_cache_wrapper">
+    
+  </a>
+  <a name="_lru_cache_wrapper">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _lru_cache_wrapper(user_function, maxsize, typed, _CacheInfo):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.functools.cache">
+    
+  </a>
+  <a name="cache">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    cache():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Simple lightweight unbounded cache.  Sometimes called "memoize".</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.functools._c3_merge">
+    
+  </a>
+  <a name="_c3_merge">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _c3_merge(sequences):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Merges MROs in *sequences* to a single MRO using the C3 algorithm.
+
+Adapted from http://www.python.org/download/releases/2.3/mro/.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.functools._c3_mro">
+    
+  </a>
+  <a name="_c3_mro">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _c3_mro(cls, abcs=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Computes the method resolution order using extended C3 linearization.
+
+If no *abcs* are given, the algorithm works exactly like the built-in C3
+linearization used for method resolution.
+
+If given, *abcs* is a list of abstract base classes that should be inserted
+into the resulting MRO. Unrelated ABCs are ignored and don't end up in the
+result. The algorithm inserts ABCs where their functionality is introduced,
+i.e. issubclass(cls, abc) returns True for the class itself but returns
+False for all its direct base classes. Implicit ABCs for a given class
+(either registered or inferred from the presence of a special method like
+__len__) are inserted directly after the last ABC explicitly listed in the
+MRO of said class. If two implicit ABCs end up next to each other in the
+resulting MRO, their ordering depends on the order of types in *abcs*.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.functools._compose_mro">
+    
+  </a>
+  <a name="_compose_mro">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _compose_mro(cls, types):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Calculates the method resolution order for a given class *cls*.
+
+Includes relevant abstract base classes (with their respective bases) from
+the *types* iterable. Uses a modified C3 linearization algorithm.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.functools._find_impl">
+    
+  </a>
+  <a name="_find_impl">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _find_impl(cls, registry):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns the best matching implementation from *registry* for type *cls*.
+
+Where there is no registered implementation for a specific type, its method
+resolution order is used to find a more generic implementation.
+
+Note: if *registry* does not contain an implementation for the base
+*object* type, this function may return None.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.functools.singledispatch">
+    
+  </a>
+  <a name="singledispatch">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    singledispatch(func):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Single-dispatch generic function decorator.
+
+Transforms a function into a generic function, which can have different
+behaviours depending upon the type of its first argument. The decorated
+function acts as the default implementation, and additional
+implementations can be registered using the register() attribute of the
+generic function.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.functools._NOT_FOUND">
+    
+  </a>
+  <a name="_NOT_FOUND">
+    
+  </a>
+  <div class="functionHeader">
+    _NOT_FOUND =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.optparse.OptionContainer : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.optparse.html" class="code" data-type="Module">optparse</a>.<a href="Lib.optparse.OptionContainer.html" class="code" data-type="Class">OptionContainer</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.optparse.OptionContainer:</code></p><p>Known subclasses: <a href="Lib.optparse.OptionGroup.html" class="code" data-type="Class">Lib.optparse.OptionGroup</a>, <a href="Lib.optparse.OptionParser.html" class="code" data-type="Class">Lib.optparse.OptionParser</a></p>
+        <p><a href="classIndex.html#Lib.optparse.OptionContainer">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Abstract base class.
+
+Class attributes:
+  standard_option_list : [Option]
+    list of standard options that will be accepted by all instances
+    of this parser class (intended to be overridden by subclasses).
+
+Instance attributes:
+  option_list : [Option]
+    the list of Option objects contained by this OptionContainer
+  _short_opt : { string : Option }
+    dictionary mapping short option strings, eg. "-f" or "-X",
+    to the Option instances that implement them.  If an Option
+    has multiple short option strings, it will appear in this
+    dictionary multiple times. [1]
+  _long_opt : { string : Option }
+    dictionary mapping long option strings, eg. "--file" or
+    "--exclude", to the Option instances that implement them.
+    Again, a given Option can occur multiple times in this
+    dictionary. [1]
+  defaults : { string : any }
+    dictionary mapping option destination names to default
+    values for each destination [1]
+
+[1] These mappings are common to (shared by) all components of the
+    controlling OptionParser, where they are initially created.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3328">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionContainer.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.OptionContainer.html#option_class" class="code" data-type="Instance Variable">option_class</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.OptionContainer.html#defaults" class="code" data-type="Instance Variable">defaults</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionContainer.html#set_conflict_handler" class="code" data-type="Method">set_conflict_handler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.OptionContainer.html#conflict_handler" class="code" data-type="Instance Variable">conflict_handler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionContainer.html#set_description" class="code" data-type="Method">set_description</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.OptionContainer.html#description" class="code" data-type="Instance Variable">description</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionContainer.html#get_description" class="code" data-type="Method">get_description</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionContainer.html#destroy" class="code" data-type="Method">destroy</a></td>
+    <td><span>see OptionParser.destroy().</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionContainer.html#add_option" class="code" data-type="Method">add_option</a></td>
+    <td><span>add_option(Option) add_option(opt_str, ..., kwarg=val, ...)</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionContainer.html#add_options" class="code" data-type="Method">add_options</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionContainer.html#get_option" class="code" data-type="Method">get_option</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionContainer.html#has_option" class="code" data-type="Method">has_option</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionContainer.html#remove_option" class="code" data-type="Method">remove_option</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionContainer.html#format_option_help" class="code" data-type="Method">format_option_help</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionContainer.html#format_description" class="code" data-type="Method">format_description</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionContainer.html#format_help" class="code" data-type="Method">format_help</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionContainer.html#_create_option_mappings" class="code" data-type="Method">_create_option_mappings</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.OptionContainer.html#_short_opt" class="code" data-type="Instance Variable">_short_opt</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.optparse.OptionContainer.html#_long_opt" class="code" data-type="Instance Variable">_long_opt</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionContainer.html#_share_option_mappings" class="code" data-type="Method">_share_option_mappings</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.optparse.OptionContainer.html#_check_conflict" class="code" data-type="Method">_check_conflict</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.optparse.OptionContainer.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, option_class, conflict_handler, description):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.optparse.OptionGroup.html" class="code" data-type="Class">Lib.optparse.OptionGroup</a>, <a href="Lib.optparse.OptionParser.html" class="code" data-type="Class">Lib.optparse.OptionParser</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.optparse.OptionContainer.option_class">
+    
+  </a>
+  <a name="option_class">
+    
+  </a>
+  <div class="functionHeader">
+    option_class =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.optparse.OptionContainer._create_option_mappings">
+    
+  </a>
+  <a name="_create_option_mappings">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _create_option_mappings(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.optparse.OptionContainer._short_opt">
+    
+  </a>
+  <a name="_short_opt">
+    
+  </a>
+  <div class="functionHeader">
+    _short_opt =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.optparse.OptionContainer._long_opt">
+    
+  </a>
+  <a name="_long_opt">
+    
+  </a>
+  <div class="functionHeader">
+    _long_opt =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.optparse.OptionContainer.defaults">
+    
+  </a>
+  <a name="defaults">
+    
+  </a>
+  <div class="functionHeader">
+    defaults =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.optparse.OptionContainer._share_option_mappings">
+    
+  </a>
+  <a name="_share_option_mappings">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _share_option_mappings(self, parser):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionContainer.set_conflict_handler">
+    
+  </a>
+  <a name="set_conflict_handler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_conflict_handler(self, handler):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.optparse.OptionContainer.conflict_handler">
+    
+  </a>
+  <a name="conflict_handler">
+    
+  </a>
+  <div class="functionHeader">
+    conflict_handler =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionContainer.set_description">
+    
+  </a>
+  <a name="set_description">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_description(self, description):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.optparse.OptionContainer.description">
+    
+  </a>
+  <a name="description">
+    
+  </a>
+  <div class="functionHeader">
+    description =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionContainer.get_description">
+    
+  </a>
+  <a name="get_description">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_description(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.optparse.OptionParser.html" class="code" data-type="Class">Lib.optparse.OptionParser</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionContainer.destroy">
+    
+  </a>
+  <a name="destroy">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    destroy(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.optparse.OptionGroup.html" class="code" data-type="Class">Lib.optparse.OptionGroup</a>, <a href="Lib.optparse.OptionParser.html" class="code" data-type="Class">Lib.optparse.OptionParser</a></div>
+    
+    <div><p class="pre">see OptionParser.destroy().</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.optparse.OptionContainer._check_conflict">
+    
+  </a>
+  <a name="_check_conflict">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _check_conflict(self, option):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionContainer.add_option">
+    
+  </a>
+  <a name="add_option">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    add_option(self, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">add_option(Option)
+add_option(opt_str, ..., kwarg=val, ...)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionContainer.add_options">
+    
+  </a>
+  <a name="add_options">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    add_options(self, option_list):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionContainer.get_option">
+    
+  </a>
+  <a name="get_option">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_option(self, opt_str):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionContainer.has_option">
+    
+  </a>
+  <a name="has_option">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    has_option(self, opt_str):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionContainer.remove_option">
+    
+  </a>
+  <a name="remove_option">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    remove_option(self, opt_str):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionContainer.format_option_help">
+    
+  </a>
+  <a name="format_option_help">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    format_option_help(self, formatter):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.optparse.OptionParser.html" class="code" data-type="Class">Lib.optparse.OptionParser</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionContainer.format_description">
+    
+  </a>
+  <a name="format_description">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    format_description(self, formatter):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.optparse.OptionContainer.format_help">
+    
+  </a>
+  <a name="format_help">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    format_help(self, formatter):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.optparse.OptionGroup.html" class="code" data-type="Class">Lib.optparse.OptionGroup</a>, <a href="Lib.optparse.OptionParser.html" class="code" data-type="Class">Lib.optparse.OptionParser</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

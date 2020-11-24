@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.email.message : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.email.html" class="code" data-type="Package">email</a>.<a href="Lib.email.message.html" class="code" data-type="Module">message</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Basic message object for the email package object model.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id1334">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email.message.html#SEMISPACE" class="code" data-type="Variable">SEMISPACE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email.message.html#tspecials" class="code" data-type="Variable">tspecials</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.message.Message.html" class="code" data-type="Class">Message</a></td>
+    <td><span>Basic message object.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.message.MIMEPart.html" class="code" data-type="Class">MIMEPart</a></td>
+    <td><span class="undocumented">No class0/1 class variables docstring; , 0/2 instance variables docstring; , 4/20 methods documented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.email.message.EmailMessage.html" class="code" data-type="Class">EmailMessage</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.email.message.html#_splitparam" class="code" data-type="Function">_splitparam</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.email.message.html#_formatparam" class="code" data-type="Function">_formatparam</a></td>
+    <td><span>Convenience function to format and return a key=value pair.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.email.message.html#_parseparam" class="code" data-type="Function">_parseparam</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.email.message.html#_unquotevalue" class="code" data-type="Function">_unquotevalue</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.email.message.SEMISPACE">
+    
+  </a>
+  <a name="SEMISPACE">
+    
+  </a>
+  <div class="functionHeader">
+    SEMISPACE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.email.message.tspecials">
+    
+  </a>
+  <a name="tspecials">
+    
+  </a>
+  <div class="functionHeader">
+    tspecials =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.email.message._splitparam">
+    
+  </a>
+  <a name="_splitparam">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _splitparam(param):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.email.message._formatparam">
+    
+  </a>
+  <a name="_formatparam">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _formatparam(param, value=None, quote=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convenience function to format and return a key=value pair.
+
+This will quote the value if needed or if quote is true.  If value is a
+three tuple (charset, language, value), it will be encoded according
+to RFC2231 rules.  If it contains non-ascii characters it will likewise
+be encoded according to RFC2231 rules, using the utf-8 charset and
+a null language.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.email.message._parseparam">
+    
+  </a>
+  <a name="_parseparam">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _parseparam(s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.email.message._unquotevalue">
+    
+  </a>
+  <a name="_unquotevalue">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _unquotevalue(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

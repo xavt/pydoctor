@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.smtpd.SMTPServer : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.smtpd.html" class="code" data-type="Module">smtpd</a>.<a href="Lib.smtpd.SMTPServer.html" class="code" data-type="Class">SMTPServer</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.smtpd.SMTPServer(<span title="asyncore.dispatcher">asyncore.dispatcher</span>):</code></p><p>Known subclasses: <a href="Lib.smtpd.DebuggingServer.html" class="code" data-type="Class">Lib.smtpd.DebuggingServer</a>, <a href="Lib.smtpd.PureProxy.html" class="code" data-type="Class">Lib.smtpd.PureProxy</a></p>
+        <p><a href="classIndex.html#Lib.smtpd.SMTPServer">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div class="undocumented">Undocumented</div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3512">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPServer.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtpd.SMTPServer.html#data_size_limit" class="code" data-type="Instance Variable">data_size_limit</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtpd.SMTPServer.html#enable_SMTPUTF8" class="code" data-type="Instance Variable">enable_SMTPUTF8</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPServer.html#handle_accepted" class="code" data-type="Method">handle_accepted</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPServer.html#process_message" class="code" data-type="Method">process_message</a></td>
+    <td><span>Override this abstract method to handle messages from the client.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtpd.SMTPServer.html#_localaddr" class="code" data-type="Instance Variable">_localaddr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtpd.SMTPServer.html#_remoteaddr" class="code" data-type="Instance Variable">_remoteaddr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtpd.SMTPServer.html#_decode_data" class="code" data-type="Instance Variable">_decode_data</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.smtpd.SMTPServer.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, localaddr, remoteaddr, data_size_limit=DATA_SIZE_DEFAULT, map=None, enable_SMTPUTF8=(False), decode_data=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.smtpd.PureProxy.html" class="code" data-type="Class">Lib.smtpd.PureProxy</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.smtpd.SMTPServer._localaddr">
+    
+  </a>
+  <a name="_localaddr">
+    
+  </a>
+  <div class="functionHeader">
+    _localaddr =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.smtpd.SMTPServer._remoteaddr">
+    
+  </a>
+  <a name="_remoteaddr">
+    
+  </a>
+  <div class="functionHeader">
+    _remoteaddr =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.smtpd.SMTPServer.data_size_limit">
+    
+  </a>
+  <a name="data_size_limit">
+    
+  </a>
+  <div class="functionHeader">
+    data_size_limit =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.smtpd.SMTPServer.enable_SMTPUTF8">
+    
+  </a>
+  <a name="enable_SMTPUTF8">
+    
+  </a>
+  <div class="functionHeader">
+    enable_SMTPUTF8 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.smtpd.SMTPServer._decode_data">
+    
+  </a>
+  <a name="_decode_data">
+    
+  </a>
+  <div class="functionHeader">
+    _decode_data =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.smtpd.SMTPServer.handle_accepted">
+    
+  </a>
+  <a name="handle_accepted">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    handle_accepted(self, conn, addr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.smtpd.SMTPServer.process_message">
+    
+  </a>
+  <a name="process_message">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    process_message(self, peer, mailfrom, rcpttos, data, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.smtpd.DebuggingServer.html" class="code" data-type="Class">Lib.smtpd.DebuggingServer</a>, <a href="Lib.smtpd.PureProxy.html" class="code" data-type="Class">Lib.smtpd.PureProxy</a></div>
+    
+    <div><p class="pre">Override this abstract method to handle messages from the client.
+
+peer is a tuple containing (ipaddr, port) of the client that made the
+socket connection to our smtp port.
+
+mailfrom is the raw address the client claims the message is coming
+from.
+
+rcpttos is a list of raw addresses the client wishes to deliver the
+message to.
+
+data is a string containing the entire full text of the message,
+headers (if supplied) and all.  It has been `de-transparencied'
+according to RFC 821, Section 4.5.2.  In other words, a line
+containing a `.' followed by other text has had the leading dot
+removed.
+
+kwargs is a dictionary containing additional information.  It is
+empty if decode_data=True was given as init parameter, otherwise
+it will contain the following keys:
+    'mail_options': list of parameters to the mail command.  All
+                    elements are uppercase strings.  Example:
+                    ['BODY=8BITMIME', 'SMTPUTF8'].
+    'rcpt_options': same, for the rcpt command.
+
+This function should return None for a normal `250 Ok' response;
+otherwise, it should return the desired response string in RFC 821
+format.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

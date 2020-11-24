@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.distutils.ccompiler : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.distutils.html" class="code" data-type="Package">distutils</a>.<a href="Lib.distutils.ccompiler.html" class="code" data-type="Module">ccompiler</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">distutils.ccompiler
+
+Contains CCompiler, an abstract base class that defines the interface
+for the Distutils compiler abstraction model.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id910">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.distutils.ccompiler.CCompiler.html" class="code" data-type="Class">CCompiler</a></td>
+    <td><span>Abstract base class to define the interface that must be implemented by real compiler classes.  Also has some utility methods used by several compiler classes.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.ccompiler.html#get_default_compiler" class="code" data-type="Function">get_default_compiler</a></td>
+    <td><span>Determine the default compiler to use for the given platform.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.distutils.ccompiler.html#compiler_class" class="code" data-type="Variable">compiler_class</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.ccompiler.html#show_compilers" class="code" data-type="Function">show_compilers</a></td>
+    <td><span>Print list of available compilers (used by the "--help-compiler" options to "build", "build_ext", "build_clib").</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.ccompiler.html#new_compiler" class="code" data-type="Function">new_compiler</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.ccompiler.html#gen_preprocess_options" class="code" data-type="Function">gen_preprocess_options</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.ccompiler.html#gen_lib_options" class="code" data-type="Function">gen_lib_options</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.distutils.ccompiler.html#_default_compilers" class="code" data-type="Variable">_default_compilers</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable private">
+  
+  <a name="Lib.distutils.ccompiler._default_compilers">
+    
+  </a>
+  <a name="_default_compilers">
+    
+  </a>
+  <div class="functionHeader">
+    _default_compilers =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Tuple</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.distutils.ccompiler.get_default_compiler">
+    
+  </a>
+  <a name="get_default_compiler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_default_compiler(osname=None, platform=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Determine the default compiler to use for the given platform.
+
+osname should be one of the standard Python OS names (i.e. the
+ones returned by os.name) and platform the common value
+returned by sys.platform for the platform in question.
+
+The default values are os.name and sys.platform in case the
+parameters are not given.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.distutils.ccompiler.compiler_class">
+    
+  </a>
+  <a name="compiler_class">
+    
+  </a>
+  <div class="functionHeader">
+    compiler_class =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.distutils.ccompiler.show_compilers">
+    
+  </a>
+  <a name="show_compilers">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    show_compilers():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Print list of available compilers (used by the "--help-compiler"
+options to "build", "build_ext", "build_clib").</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.distutils.ccompiler.new_compiler">
+    
+  </a>
+  <a name="new_compiler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    new_compiler(plat=None, compiler=None, verbose=0, dry_run=0, force=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Generate an instance of some CCompiler subclass for the supplied
+platform/compiler combination.  'plat' defaults to 'os.name'
+(eg. 'posix', 'nt'), and 'compiler' defaults to the default compiler
+for that platform.  Currently only 'posix' and 'nt' are supported, and
+the default compilers are "traditional Unix interface" (UnixCCompiler
+class) and Visual C++ (MSVCCompiler class).  Note that it's perfectly
+possible to ask for a Unix compiler object under Windows, and a
+Microsoft compiler object under Unix -- if you supply a value for
+'compiler', 'plat' is ignored.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.distutils.ccompiler.gen_preprocess_options">
+    
+  </a>
+  <a name="gen_preprocess_options">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    gen_preprocess_options(macros, include_dirs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Generate C pre-processor options (-D, -U, -I) as used by at least
+two types of compilers: the typical Unix compiler and Visual C++.
+'macros' is the usual thing, a list of 1- or 2-tuples, where (name,)
+means undefine (-U) macro 'name', and (name,value) means define (-D)
+macro 'name' to 'value'.  'include_dirs' is just a list of directory
+names to be added to the header file search path (-I).  Returns a list
+of command-line options suitable for either Unix compilers or Visual
+C++.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.distutils.ccompiler.gen_lib_options">
+    
+  </a>
+  <a name="gen_lib_options">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    gen_lib_options(compiler, library_dirs, runtime_library_dirs, libraries):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Generate linker options for searching library directories and
+linking with specific libraries.  'libraries' and 'library_dirs' are,
+respectively, lists of library names (not filenames!) and search
+directories.  Returns a list of command-line options suitable for use
+with some compiler (depending on the two format strings passed in).</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,1756 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.shutil : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.shutil.html" class="code" data-type="Module">shutil</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Utility functions for copying and archiving files and directory trees.
+
+XXX The functions here don't copy the resource fork or other metadata on Mac.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3506">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.shutil.html#getpwnam" class="code" data-type="Variable">getpwnam</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.shutil.html#getgrnam" class="code" data-type="Variable">getgrnam</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.shutil.html#posix" class="code" data-type="Variable">posix</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.shutil.html#nt" class="code" data-type="Variable">nt</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.shutil.html#COPY_BUFSIZE" class="code" data-type="Variable">COPY_BUFSIZE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.shutil.Error.html" class="code" data-type="Class">Error</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.shutil.SameFileError.html" class="code" data-type="Class">SameFileError</a></td>
+    <td><span>Raised when source and destination are the same file.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.shutil.SpecialFileError.html" class="code" data-type="Class">SpecialFileError</a></td>
+    <td><span>Raised when trying to do a kind of operation (e.g. copying) which is not supported on a special file (e.g. a named pipe)</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.shutil.ExecError.html" class="code" data-type="Class">ExecError</a></td>
+    <td><span>Raised when a command could not be executed</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.shutil.ReadError.html" class="code" data-type="Class">ReadError</a></td>
+    <td><span>Raised when an archive cannot be read</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.shutil.RegistryError.html" class="code" data-type="Class">RegistryError</a></td>
+    <td><span>Raised when a registry operation with the archiving and unpacking registries fails</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#copyfileobj" class="code" data-type="Function">copyfileobj</a></td>
+    <td><span>copy data from file-like object fsrc to file-like object fdst</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#copyfile" class="code" data-type="Function">copyfile</a></td>
+    <td><span>Copy data from src to dst in the most efficient way possible.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#copymode" class="code" data-type="Function">copymode</a></td>
+    <td><span>Copy mode bits from src to dst.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#copystat" class="code" data-type="Function">copystat</a></td>
+    <td><span>Copy file metadata</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#copy" class="code" data-type="Function">copy</a></td>
+    <td><span>Copy data and mode bits ("cp src dst"). Return the file's destination.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#copy2" class="code" data-type="Function">copy2</a></td>
+    <td><span>Copy data and metadata. Return the file's destination.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#ignore_patterns" class="code" data-type="Function">ignore_patterns</a></td>
+    <td><span>Function that can be used as copytree() ignore parameter.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#copytree" class="code" data-type="Function">copytree</a></td>
+    <td><span>Recursively copy a directory tree and return the destination directory.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#rmtree" class="code" data-type="Function">rmtree</a></td>
+    <td><span>Recursively delete a directory tree.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#move" class="code" data-type="Function">move</a></td>
+    <td><span>Recursively move a file or directory to another location. This is similar to the Unix "mv" command. Return the file or directory's destination.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#get_archive_formats" class="code" data-type="Function">get_archive_formats</a></td>
+    <td><span>Returns a list of supported formats for archiving and unarchiving.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#register_archive_format" class="code" data-type="Function">register_archive_format</a></td>
+    <td><span>Registers an archive format.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#unregister_archive_format" class="code" data-type="Function">unregister_archive_format</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#make_archive" class="code" data-type="Function">make_archive</a></td>
+    <td><span>Create an archive file (eg. zip or tar).</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#get_unpack_formats" class="code" data-type="Function">get_unpack_formats</a></td>
+    <td><span>Returns a list of supported formats for unpacking.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#register_unpack_format" class="code" data-type="Function">register_unpack_format</a></td>
+    <td><span>Registers an unpack format.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#unregister_unpack_format" class="code" data-type="Function">unregister_unpack_format</a></td>
+    <td><span>Removes the pack format from the registry.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#unpack_archive" class="code" data-type="Function">unpack_archive</a></td>
+    <td><span>Unpack an archive.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#disk_usage" class="code" data-type="Function">disk_usage</a></td>
+    <td><span>Return disk usage statistics about the given path.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#chown" class="code" data-type="Function">chown</a></td>
+    <td><span>Change owner user and group of the given path.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#get_terminal_size" class="code" data-type="Function">get_terminal_size</a></td>
+    <td><span>Get the size of the terminal window.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#which" class="code" data-type="Function">which</a></td>
+    <td><span>Given a command, mode, and a PATH string, return the path which conforms to the given mode on the PATH, or None if there is no such file.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.shutil.html#_ZLIB_SUPPORTED" class="code" data-type="Variable">_ZLIB_SUPPORTED</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.shutil.html#_BZ2_SUPPORTED" class="code" data-type="Variable">_BZ2_SUPPORTED</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.shutil.html#_LZMA_SUPPORTED" class="code" data-type="Variable">_LZMA_SUPPORTED</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.shutil.html#_WINDOWS" class="code" data-type="Variable">_WINDOWS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.shutil.html#_USE_CP_SENDFILE" class="code" data-type="Variable">_USE_CP_SENDFILE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.shutil.html#_HAS_FCOPYFILE" class="code" data-type="Variable">_HAS_FCOPYFILE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.shutil.html#_WIN_DEFAULT_PATHEXT" class="code" data-type="Variable">_WIN_DEFAULT_PATHEXT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.shutil._GiveupOnFastCopy.html" class="code" data-type="Class">_GiveupOnFastCopy</a></td>
+    <td><span>Raised as a signal to fallback on using raw read()/write() file copy when fast-copy functions fail to do so.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#_fastcopy_fcopyfile" class="code" data-type="Function">_fastcopy_fcopyfile</a></td>
+    <td><span>Copy a regular file content or metadata by using high-performance fcopyfile(3) syscall (macOS).</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#_fastcopy_sendfile" class="code" data-type="Function">_fastcopy_sendfile</a></td>
+    <td><span>Copy data from one regular mmap-like fd to another by using high-performance sendfile(2) syscall. This should work on Linux &gt;= 2.6.33 only.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#_copyfileobj_readinto" class="code" data-type="Function">_copyfileobj_readinto</a></td>
+    <td><span>readinto()/memoryview() based variant of copyfileobj(). *fsrc* must support readinto() method and both files must be open in binary mode.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#_samefile" class="code" data-type="Function">_samefile</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#_stat" class="code" data-type="Function">_stat</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#_islink" class="code" data-type="Function">_islink</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#_copyxattr" class="code" data-type="Function">_copyxattr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#_copytree" class="code" data-type="Function">_copytree</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#_rmtree_isdir" class="code" data-type="Function">_rmtree_isdir</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#_rmtree_islink" class="code" data-type="Function">_rmtree_islink</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#_rmtree_unsafe" class="code" data-type="Function">_rmtree_unsafe</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#_rmtree_safe_fd" class="code" data-type="Function">_rmtree_safe_fd</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.shutil.html#_use_fd_functions" class="code" data-type="Variable">_use_fd_functions</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#_basename" class="code" data-type="Function">_basename</a></td>
+    <td><span>A basename() variant which first strips the trailing slash, if present. Thus we always get the last component of the path, even for directories.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#_destinsrc" class="code" data-type="Function">_destinsrc</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#_get_gid" class="code" data-type="Function">_get_gid</a></td>
+    <td><span>Returns a gid, given a group name.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#_get_uid" class="code" data-type="Function">_get_uid</a></td>
+    <td><span>Returns an uid, given a user name.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#_make_tarball" class="code" data-type="Function">_make_tarball</a></td>
+    <td><span>Create a (possibly compressed) tar file from all the files under 'base_dir'.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#_make_zipfile" class="code" data-type="Function">_make_zipfile</a></td>
+    <td><span>Create a zip file from all the files under 'base_dir'.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.shutil.html#_ARCHIVE_FORMATS" class="code" data-type="Variable">_ARCHIVE_FORMATS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#_check_unpack_options" class="code" data-type="Function">_check_unpack_options</a></td>
+    <td><span>Checks what gets registered as an unpacker.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#_ensure_directory" class="code" data-type="Function">_ensure_directory</a></td>
+    <td><span>Ensure that the parent directory of `path` exists</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#_unpack_zipfile" class="code" data-type="Function">_unpack_zipfile</a></td>
+    <td><span>Unpack zip `filename` to `extract_dir`</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#_unpack_tarfile" class="code" data-type="Function">_unpack_tarfile</a></td>
+    <td><span>Unpack tar/tar.gz/tar.bz2/tar.xz `filename` to `extract_dir`</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.shutil.html#_UNPACK_FORMATS" class="code" data-type="Variable">_UNPACK_FORMATS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#_find_unpack_format" class="code" data-type="Function">_find_unpack_format</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.shutil.html#_ntuple_diskusage" class="code" data-type="Variable">_ntuple_diskusage</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.shutil.html#_access_check" class="code" data-type="Function">_access_check</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable private">
+  
+  <a name="Lib.shutil._ZLIB_SUPPORTED">
+    
+  </a>
+  <a name="_ZLIB_SUPPORTED">
+    
+  </a>
+  <div class="functionHeader">
+    _ZLIB_SUPPORTED =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.shutil._BZ2_SUPPORTED">
+    
+  </a>
+  <a name="_BZ2_SUPPORTED">
+    
+  </a>
+  <div class="functionHeader">
+    _BZ2_SUPPORTED =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.shutil._LZMA_SUPPORTED">
+    
+  </a>
+  <a name="_LZMA_SUPPORTED">
+    
+  </a>
+  <div class="functionHeader">
+    _LZMA_SUPPORTED =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.shutil.getpwnam">
+    
+  </a>
+  <a name="getpwnam">
+    
+  </a>
+  <div class="functionHeader">
+    getpwnam =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.shutil.getgrnam">
+    
+  </a>
+  <a name="getgrnam">
+    
+  </a>
+  <div class="functionHeader">
+    getgrnam =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.shutil._WINDOWS">
+    
+  </a>
+  <a name="_WINDOWS">
+    
+  </a>
+  <div class="functionHeader">
+    _WINDOWS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.shutil.posix">
+    
+  </a>
+  <a name="posix">
+    
+  </a>
+  <div class="functionHeader">
+    posix =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.shutil.nt">
+    
+  </a>
+  <a name="nt">
+    
+  </a>
+  <div class="functionHeader">
+    nt =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.shutil.COPY_BUFSIZE">
+    
+  </a>
+  <a name="COPY_BUFSIZE">
+    
+  </a>
+  <div class="functionHeader">
+    COPY_BUFSIZE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.shutil._USE_CP_SENDFILE">
+    
+  </a>
+  <a name="_USE_CP_SENDFILE">
+    
+  </a>
+  <div class="functionHeader">
+    _USE_CP_SENDFILE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.shutil._HAS_FCOPYFILE">
+    
+  </a>
+  <a name="_HAS_FCOPYFILE">
+    
+  </a>
+  <div class="functionHeader">
+    _HAS_FCOPYFILE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.shutil._WIN_DEFAULT_PATHEXT">
+    
+  </a>
+  <a name="_WIN_DEFAULT_PATHEXT">
+    
+  </a>
+  <div class="functionHeader">
+    _WIN_DEFAULT_PATHEXT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.shutil._fastcopy_fcopyfile">
+    
+  </a>
+  <a name="_fastcopy_fcopyfile">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _fastcopy_fcopyfile(fsrc, fdst, flags):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Copy a regular file content or metadata by using high-performance
+fcopyfile(3) syscall (macOS).</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.shutil._fastcopy_sendfile">
+    
+  </a>
+  <a name="_fastcopy_sendfile">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _fastcopy_sendfile(fsrc, fdst):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Copy data from one regular mmap-like fd to another by using
+high-performance sendfile(2) syscall.
+This should work on Linux &gt;= 2.6.33 only.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.shutil._copyfileobj_readinto">
+    
+  </a>
+  <a name="_copyfileobj_readinto">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _copyfileobj_readinto(fsrc, fdst, length=COPY_BUFSIZE):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">readinto()/memoryview() based variant of copyfileobj().
+*fsrc* must support readinto() method and both files must be
+open in binary mode.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.shutil.copyfileobj">
+    
+  </a>
+  <a name="copyfileobj">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    copyfileobj(fsrc, fdst, length=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">copy data from file-like object fsrc to file-like object fdst</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.shutil._samefile">
+    
+  </a>
+  <a name="_samefile">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _samefile(src, dst):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.shutil._stat">
+    
+  </a>
+  <a name="_stat">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _stat(fn):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.shutil._islink">
+    
+  </a>
+  <a name="_islink">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _islink(fn):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.shutil.copyfile">
+    
+  </a>
+  <a name="copyfile">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    copyfile(src, dst):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Copy data from src to dst in the most efficient way possible.
+
+If follow_symlinks is not set and src is a symbolic link, a new
+symlink will be created instead of copying the file it points to.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.shutil.copymode">
+    
+  </a>
+  <a name="copymode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    copymode(src, dst):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Copy mode bits from src to dst.
+
+If follow_symlinks is not set, symlinks aren't followed if and only
+if both `src` and `dst` are symlinks.  If `lchmod` isn't available
+(e.g. Linux) this method does nothing.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.shutil._copyxattr">
+    
+  </a>
+  <a name="_copyxattr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _copyxattr(*args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.shutil.copystat">
+    
+  </a>
+  <a name="copystat">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    copystat(src, dst):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Copy file metadata
+
+Copy the permission bits, last access time, last modification time, and
+flags from `src` to `dst`. On Linux, copystat() also copies the "extended
+attributes" where possible. The file contents, owner, and group are
+unaffected. `src` and `dst` are path-like objects or path names given as
+strings.
+
+If the optional flag `follow_symlinks` is not set, symlinks aren't
+followed if and only if both `src` and `dst` are symlinks.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.shutil.copy">
+    
+  </a>
+  <a name="copy">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    copy(src, dst):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Copy data and mode bits ("cp src dst"). Return the file's destination.
+
+The destination may be a directory.
+
+If follow_symlinks is false, symlinks won't be followed. This
+resembles GNU's "cp -P src dst".
+
+If source and destination are the same file, a SameFileError will be
+raised.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.shutil.copy2">
+    
+  </a>
+  <a name="copy2">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    copy2(src, dst):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Copy data and metadata. Return the file's destination.
+
+Metadata is copied with copystat(). Please see the copystat function
+for more information.
+
+The destination may be a directory.
+
+If follow_symlinks is false, symlinks won't be followed. This
+resembles GNU's "cp -P src dst".</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.shutil.ignore_patterns">
+    
+  </a>
+  <a name="ignore_patterns">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ignore_patterns(*patterns):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Function that can be used as copytree() ignore parameter.
+
+Patterns is a sequence of glob-style patterns
+that are used to exclude files</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.shutil._copytree">
+    
+  </a>
+  <a name="_copytree">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _copytree(entries, src, dst, symlinks, ignore, copy_function, ignore_dangling_symlinks, dirs_exist_ok=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.shutil.copytree">
+    
+  </a>
+  <a name="copytree">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    copytree(src, dst, symlinks=(False), ignore=None, copy_function=copy2, ignore_dangling_symlinks=(False), dirs_exist_ok=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Recursively copy a directory tree and return the destination directory.
+
+dirs_exist_ok dictates whether to raise an exception in case dst or any
+missing parent directory already exists.
+
+If exception(s) occur, an Error is raised with a list of reasons.
+
+If the optional symlinks flag is true, symbolic links in the
+source tree result in symbolic links in the destination tree; if
+it is false, the contents of the files pointed to by symbolic
+links are copied. If the file pointed by the symlink doesn't
+exist, an exception will be added in the list of errors raised in
+an Error exception at the end of the copy process.
+
+You can set the optional ignore_dangling_symlinks flag to true if you
+want to silence this exception. Notice that this has no effect on
+platforms that don't support os.symlink.
+
+The optional ignore argument is a callable. If given, it
+is called with the `src` parameter, which is the directory
+being visited by copytree(), and `names` which is the list of
+`src` contents, as returned by os.listdir():
+
+    callable(src, names) -&gt; ignored_names
+
+Since copytree() is called recursively, the callable will be
+called once for each directory that is copied. It returns a
+list of names relative to the `src` directory that should
+not be copied.
+
+The optional copy_function argument is a callable that will be used
+to copy each file. It will be called with the source path and the
+destination path as arguments. By default, copy2() is used, but any
+function that supports the same signature (like copy()) can be used.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.shutil._rmtree_isdir">
+    
+  </a>
+  <a name="_rmtree_isdir">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _rmtree_isdir(entry):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.shutil._rmtree_islink">
+    
+  </a>
+  <a name="_rmtree_islink">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _rmtree_islink(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.shutil._rmtree_unsafe">
+    
+  </a>
+  <a name="_rmtree_unsafe">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _rmtree_unsafe(path, onerror):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.shutil._rmtree_safe_fd">
+    
+  </a>
+  <a name="_rmtree_safe_fd">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _rmtree_safe_fd(topfd, path, onerror):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.shutil._use_fd_functions">
+    
+  </a>
+  <a name="_use_fd_functions">
+    
+  </a>
+  <div class="functionHeader">
+    _use_fd_functions =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.shutil.rmtree">
+    
+  </a>
+  <a name="rmtree">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    rmtree(path, ignore_errors=(False), onerror=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Recursively delete a directory tree.
+
+If ignore_errors is set, errors are ignored; otherwise, if onerror
+is set, it is called to handle the error with arguments (func,
+path, exc_info) where func is platform and implementation dependent;
+path is the argument to that function that caused it to fail; and
+exc_info is a tuple returned by sys.exc_info().  If ignore_errors
+is false and onerror is None, an exception is raised.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.shutil._basename">
+    
+  </a>
+  <a name="_basename">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _basename(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">A basename() variant which first strips the trailing slash, if present.
+Thus we always get the last component of the path, even for directories.
+
+path: Union[PathLike, str]
+
+e.g.
+&gt;&gt;&gt; os.path.basename('/bar/foo')
+'foo'
+&gt;&gt;&gt; os.path.basename('/bar/foo/')
+''
+&gt;&gt;&gt; _basename('/bar/foo/')
+'foo'</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.shutil.move">
+    
+  </a>
+  <a name="move">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    move(src, dst, copy_function=copy2):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Recursively move a file or directory to another location. This is
+similar to the Unix "mv" command. Return the file or directory's
+destination.
+
+If the destination is a directory or a symlink to a directory, the source
+is moved inside the directory. The destination path must not already
+exist.
+
+If the destination already exists but is not a directory, it may be
+overwritten depending on os.rename() semantics.
+
+If the destination is on our current filesystem, then rename() is used.
+Otherwise, src is copied to the destination and then removed. Symlinks are
+recreated under the new name if os.rename() fails because of cross
+filesystem renames.
+
+The optional `copy_function` argument is a callable that will be used
+to copy the source or it will be delegated to `copytree`.
+By default, copy2() is used, but any function that supports the same
+signature (like copy()) can be used.
+
+A lot more could be done here...  A look at a mv.c shows a lot of
+the issues this implementation glosses over.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.shutil._destinsrc">
+    
+  </a>
+  <a name="_destinsrc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _destinsrc(src, dst):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.shutil._get_gid">
+    
+  </a>
+  <a name="_get_gid">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_gid(name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns a gid, given a group name.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.shutil._get_uid">
+    
+  </a>
+  <a name="_get_uid">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_uid(name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns an uid, given a user name.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.shutil._make_tarball">
+    
+  </a>
+  <a name="_make_tarball">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _make_tarball(base_name, base_dir, compress="""gzip""", verbose=0, dry_run=0, owner=None, group=None, logger=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create a (possibly compressed) tar file from all the files under
+'base_dir'.
+
+'compress' must be "gzip" (the default), "bzip2", "xz", or None.
+
+'owner' and 'group' can be used to define an owner and a group for the
+archive that is being built. If not provided, the current owner and group
+will be used.
+
+The output tar file will be named 'base_name' +  ".tar", possibly plus
+the appropriate compression extension (".gz", ".bz2", or ".xz").
+
+Returns the output filename.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.shutil._make_zipfile">
+    
+  </a>
+  <a name="_make_zipfile">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _make_zipfile(base_name, base_dir, verbose=0, dry_run=0, logger=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create a zip file from all the files under 'base_dir'.
+
+The output zip file will be named 'base_name' + ".zip".  Returns the
+name of the output zip file.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.shutil._ARCHIVE_FORMATS">
+    
+  </a>
+  <a name="_ARCHIVE_FORMATS">
+    
+  </a>
+  <div class="functionHeader">
+    _ARCHIVE_FORMATS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.shutil.get_archive_formats">
+    
+  </a>
+  <a name="get_archive_formats">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_archive_formats():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns a list of supported formats for archiving and unarchiving.
+
+Each element of the returned sequence is a tuple (name, description)</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.shutil.register_archive_format">
+    
+  </a>
+  <a name="register_archive_format">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    register_archive_format(name, function, extra_args=None, description=""""""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Registers an archive format.
+
+name is the name of the format. function is the callable that will be
+used to create archives. If provided, extra_args is a sequence of
+(name, value) tuples that will be passed as arguments to the callable.
+description can be provided to describe the format, and will be returned
+by the get_archive_formats() function.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.shutil.unregister_archive_format">
+    
+  </a>
+  <a name="unregister_archive_format">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    unregister_archive_format(name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.shutil.make_archive">
+    
+  </a>
+  <a name="make_archive">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    make_archive(base_name, format, root_dir=None, base_dir=None, verbose=0, dry_run=0, owner=None, group=None, logger=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create an archive file (eg. zip or tar).
+
+'base_name' is the name of the file to create, minus any format-specific
+extension; 'format' is the archive format: one of "zip", "tar", "gztar",
+"bztar", or "xztar".  Or any other registered format.
+
+'root_dir' is a directory that will be the root directory of the
+archive; ie. we typically chdir into 'root_dir' before creating the
+archive.  'base_dir' is the directory where we start archiving from;
+ie. 'base_dir' will be the common prefix of all files and
+directories in the archive.  'root_dir' and 'base_dir' both default
+to the current directory.  Returns the name of the archive file.
+
+'owner' and 'group' are used when creating a tar archive. By default,
+uses the current owner and group.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.shutil.get_unpack_formats">
+    
+  </a>
+  <a name="get_unpack_formats">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_unpack_formats():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns a list of supported formats for unpacking.
+
+Each element of the returned sequence is a tuple
+(name, extensions, description)</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.shutil._check_unpack_options">
+    
+  </a>
+  <a name="_check_unpack_options">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _check_unpack_options(extensions, function, extra_args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Checks what gets registered as an unpacker.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.shutil.register_unpack_format">
+    
+  </a>
+  <a name="register_unpack_format">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    register_unpack_format(name, extensions, function, extra_args=None, description=""""""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Registers an unpack format.
+
+`name` is the name of the format. `extensions` is a list of extensions
+corresponding to the format.
+
+`function` is the callable that will be
+used to unpack archives. The callable will receive archives to unpack.
+If it's unable to handle an archive, it needs to raise a ReadError
+exception.
+
+If provided, `extra_args` is a sequence of
+(name, value) tuples that will be passed as arguments to the callable.
+description can be provided to describe the format, and will be returned
+by the get_unpack_formats() function.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.shutil.unregister_unpack_format">
+    
+  </a>
+  <a name="unregister_unpack_format">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    unregister_unpack_format(name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Removes the pack format from the registry.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.shutil._ensure_directory">
+    
+  </a>
+  <a name="_ensure_directory">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _ensure_directory(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Ensure that the parent directory of `path` exists</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.shutil._unpack_zipfile">
+    
+  </a>
+  <a name="_unpack_zipfile">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _unpack_zipfile(filename, extract_dir):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Unpack zip `filename` to `extract_dir`
+    </p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.shutil._unpack_tarfile">
+    
+  </a>
+  <a name="_unpack_tarfile">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _unpack_tarfile(filename, extract_dir):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Unpack tar/tar.gz/tar.bz2/tar.xz `filename` to `extract_dir`
+    </p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.shutil._UNPACK_FORMATS">
+    
+  </a>
+  <a name="_UNPACK_FORMATS">
+    
+  </a>
+  <div class="functionHeader">
+    _UNPACK_FORMATS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.shutil._find_unpack_format">
+    
+  </a>
+  <a name="_find_unpack_format">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _find_unpack_format(filename):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.shutil.unpack_archive">
+    
+  </a>
+  <a name="unpack_archive">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    unpack_archive(filename, extract_dir=None, format=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Unpack an archive.
+
+`filename` is the name of the archive.
+
+`extract_dir` is the name of the target directory, where the archive
+is unpacked. If not provided, the current working directory is used.
+
+`format` is the archive format: one of "zip", "tar", "gztar", "bztar",
+or "xztar".  Or any other registered format.  If not provided,
+unpack_archive will use the filename extension and see if an unpacker
+was registered for that extension.
+
+In case none is found, a ValueError is raised.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.shutil._ntuple_diskusage">
+    
+  </a>
+  <a name="_ntuple_diskusage">
+    
+  </a>
+  <div class="functionHeader">
+    _ntuple_diskusage =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.shutil.disk_usage">
+    
+  </a>
+  <a name="disk_usage">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    disk_usage(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return disk usage statistics about the given path.
+
+Returned values is a named tuple with attributes 'total', 'used' and
+'free', which are the amount of total, used and free space, in bytes.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.shutil.chown">
+    
+  </a>
+  <a name="chown">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    chown(path, user=None, group=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Change owner user and group of the given path.
+
+user and group can be the uid/gid or the user/group names, and in that case,
+they are converted to their respective uid/gid.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.shutil.get_terminal_size">
+    
+  </a>
+  <a name="get_terminal_size">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_terminal_size(fallback=(80, 24)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get the size of the terminal window.
+
+For each of the two dimensions, the environment variable, COLUMNS
+and LINES respectively, is checked. If the variable is defined and
+the value is a positive integer, it is used.
+
+When COLUMNS or LINES is not defined, which is the common case,
+the terminal connected to sys.__stdout__ is queried
+by invoking os.get_terminal_size.
+
+If the terminal size cannot be successfully queried, either because
+the system doesn't support querying, or because we are not
+connected to a terminal, the value given in fallback parameter
+is used. Fallback defaults to (80, 24) which is the default
+size used by many terminal emulators.
+
+The value returned is a named tuple of type os.terminal_size.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.shutil._access_check">
+    
+  </a>
+  <a name="_access_check">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _access_check(fn, mode):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.shutil.which">
+    
+  </a>
+  <a name="which">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    which(cmd, mode=(os.F_OK | os.X_OK), path=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Given a command, mode, and a PATH string, return the path which
+conforms to the given mode on the PATH, or None if there is no such
+file.
+
+`mode` defaults to os.F_OK | os.X_OK. `path` defaults to the result
+of os.environ.get("PATH"), or can be overridden with a custom search
+path.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

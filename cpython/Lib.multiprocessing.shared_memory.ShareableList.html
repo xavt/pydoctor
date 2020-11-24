@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.multiprocessing.shared_memory.ShareableList : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.multiprocessing.html" class="code" data-type="Package">multiprocessing</a>.<a href="Lib.multiprocessing.shared_memory.html" class="code" data-type="Module">shared_memory</a>.<a href="Lib.multiprocessing.shared_memory.ShareableList.html" class="code" data-type="Class">ShareableList</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.multiprocessing.shared_memory.ShareableList:</code></p>
+        <p><a href="classIndex.html#Lib.multiprocessing.shared_memory.ShareableList">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Pattern for a mutable list-like object shareable via a shared
+memory block.  It differs from the built-in list type in that these
+lists can not change their overall length (i.e. no append, insert,
+etc.)
+
+Because values are packed into a memoryview as bytes, the struct
+packing format for any storable value must require no more than 8
+characters to describe its format.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3247">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.shared_memory.ShareableList.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.shared_memory.ShareableList.html#shm" class="code" data-type="Instance Variable">shm</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.shared_memory.ShareableList.html#__getitem__" class="code" data-type="Method">__getitem__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.shared_memory.ShareableList.html#__setitem__" class="code" data-type="Method">__setitem__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.shared_memory.ShareableList.html#__reduce__" class="code" data-type="Method">__reduce__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.shared_memory.ShareableList.html#__len__" class="code" data-type="Method">__len__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.shared_memory.ShareableList.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.shared_memory.ShareableList.html#format" class="code" data-type="Method">format</a></td>
+    <td><span>The struct packing format used by all currently stored items.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.shared_memory.ShareableList.html#count" class="code" data-type="Method">count</a></td>
+    <td><span>L.count(value) -&gt; integer -- return number of occurrences of value.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.shared_memory.ShareableList.html#index" class="code" data-type="Method">index</a></td>
+    <td><span>L.index(value) -&gt; integer -- return first index of value. Raises ValueError if the value is not present.</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.multiprocessing.shared_memory.ShareableList.html#__class_getitem__" class="code" data-type="Class Variable">__class_getitem__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.multiprocessing.shared_memory.ShareableList.html#_types_mapping" class="code" data-type="Class Variable">_types_mapping</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.multiprocessing.shared_memory.ShareableList.html#_alignment" class="code" data-type="Class Variable">_alignment</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.multiprocessing.shared_memory.ShareableList.html#_back_transforms_mapping" class="code" data-type="Class Variable">_back_transforms_mapping</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="staticmethod private">
+    
+    <td>Static Method</td>
+    <td><a href="Lib.multiprocessing.shared_memory.ShareableList.html#_extract_recreation_code" class="code" data-type="Static Method">_extract_recreation_code</a></td>
+    <td><span>Used in concert with _back_transforms_mapping to convert values into the appropriate Python objects when retrieving them from the list as well as when storing them.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.shared_memory.ShareableList.html#_list_len" class="code" data-type="Instance Variable">_list_len</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.shared_memory.ShareableList.html#_allocated_offsets" class="code" data-type="Instance Variable">_allocated_offsets</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.shared_memory.ShareableList.html#_get_packing_format" class="code" data-type="Method">_get_packing_format</a></td>
+    <td><span>Gets the packing format for a single value stored in the list.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.shared_memory.ShareableList.html#_get_back_transform" class="code" data-type="Method">_get_back_transform</a></td>
+    <td><span>Gets the back transformation function for a single value.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.shared_memory.ShareableList.html#_set_packing_format_and_transform" class="code" data-type="Method">_set_packing_format_and_transform</a></td>
+    <td><span>Sets the packing format and back transformation code for a single value in the list at the specified position.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.shared_memory.ShareableList.html#_format_size_metainfo" class="code" data-type="Method">_format_size_metainfo</a></td>
+    <td><span>The struct packing format used for the items' storage offsets.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.shared_memory.ShareableList.html#_format_packing_metainfo" class="code" data-type="Method">_format_packing_metainfo</a></td>
+    <td><span>The struct packing format used for the items' packing formats.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.shared_memory.ShareableList.html#_format_back_transform_codes" class="code" data-type="Method">_format_back_transform_codes</a></td>
+    <td><span>The struct packing format used for the items' back transforms.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.shared_memory.ShareableList.html#_offset_data_start" class="code" data-type="Method">_offset_data_start</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.shared_memory.ShareableList.html#_offset_packing_formats" class="code" data-type="Method">_offset_packing_formats</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.shared_memory.ShareableList.html#_offset_back_transform_codes" class="code" data-type="Method">_offset_back_transform_codes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable private">
+  
+  <a name="Lib.multiprocessing.shared_memory.ShareableList._types_mapping">
+    
+  </a>
+  <a name="_types_mapping">
+    
+  </a>
+  <div class="functionHeader">
+    _types_mapping =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable private">
+  
+  <a name="Lib.multiprocessing.shared_memory.ShareableList._alignment">
+    
+  </a>
+  <a name="_alignment">
+    
+  </a>
+  <div class="functionHeader">
+    _alignment =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable private">
+  
+  <a name="Lib.multiprocessing.shared_memory.ShareableList._back_transforms_mapping">
+    
+  </a>
+  <a name="_back_transforms_mapping">
+    
+  </a>
+  <div class="functionHeader">
+    _back_transforms_mapping =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basestaticmethod private">
+  
+  <a name="Lib.multiprocessing.shared_memory.ShareableList._extract_recreation_code">
+    
+  </a>
+  <a name="_extract_recreation_code">
+    
+  </a>
+  <div class="functionHeader">
+    @staticmethod<br />
+    def
+    _extract_recreation_code(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Used in concert with _back_transforms_mapping to convert values
+into the appropriate Python objects when retrieving them from
+the list as well as when storing them.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.shared_memory.ShareableList.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, sequence=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.multiprocessing.shared_memory.ShareableList._list_len">
+    
+  </a>
+  <a name="_list_len">
+    
+  </a>
+  <div class="functionHeader">
+    _list_len =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.multiprocessing.shared_memory.ShareableList._allocated_offsets">
+    
+  </a>
+  <a name="_allocated_offsets">
+    
+  </a>
+  <div class="functionHeader">
+    _allocated_offsets =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.multiprocessing.shared_memory.ShareableList.shm">
+    
+  </a>
+  <a name="shm">
+    
+  </a>
+  <div class="functionHeader">
+    shm =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.multiprocessing.shared_memory.ShareableList._get_packing_format">
+    
+  </a>
+  <a name="_get_packing_format">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_packing_format(self, position):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Gets the packing format for a single value stored in the list.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.multiprocessing.shared_memory.ShareableList._get_back_transform">
+    
+  </a>
+  <a name="_get_back_transform">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_back_transform(self, position):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Gets the back transformation function for a single value.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.multiprocessing.shared_memory.ShareableList._set_packing_format_and_transform">
+    
+  </a>
+  <a name="_set_packing_format_and_transform">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _set_packing_format_and_transform(self, position, fmt_as_str, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Sets the packing format and back transformation code for a
+single value in the list at the specified position.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.shared_memory.ShareableList.__getitem__">
+    
+  </a>
+  <a name="__getitem__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __getitem__(self, position):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.shared_memory.ShareableList.__setitem__">
+    
+  </a>
+  <a name="__setitem__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __setitem__(self, position, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.shared_memory.ShareableList.__reduce__">
+    
+  </a>
+  <a name="__reduce__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __reduce__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.shared_memory.ShareableList.__len__">
+    
+  </a>
+  <a name="__len__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __len__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.shared_memory.ShareableList.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __repr__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.shared_memory.ShareableList.format">
+    
+  </a>
+  <a name="format">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    format(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">The struct packing format used by all currently stored items.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.multiprocessing.shared_memory.ShareableList._format_size_metainfo">
+    
+  </a>
+  <a name="_format_size_metainfo">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    _format_size_metainfo(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">The struct packing format used for the items' storage offsets.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.multiprocessing.shared_memory.ShareableList._format_packing_metainfo">
+    
+  </a>
+  <a name="_format_packing_metainfo">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    _format_packing_metainfo(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">The struct packing format used for the items' packing formats.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.multiprocessing.shared_memory.ShareableList._format_back_transform_codes">
+    
+  </a>
+  <a name="_format_back_transform_codes">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    _format_back_transform_codes(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">The struct packing format used for the items' back transforms.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.multiprocessing.shared_memory.ShareableList._offset_data_start">
+    
+  </a>
+  <a name="_offset_data_start">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    _offset_data_start(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.multiprocessing.shared_memory.ShareableList._offset_packing_formats">
+    
+  </a>
+  <a name="_offset_packing_formats">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    _offset_packing_formats(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.multiprocessing.shared_memory.ShareableList._offset_back_transform_codes">
+    
+  </a>
+  <a name="_offset_back_transform_codes">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    _offset_back_transform_codes(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.shared_memory.ShareableList.count">
+    
+  </a>
+  <a name="count">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    count(self, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">L.count(value) -&gt; integer -- return number of occurrences of value.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.shared_memory.ShareableList.index">
+    
+  </a>
+  <a name="index">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    index(self, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">L.index(value) -&gt; integer -- return first index of value.
+Raises ValueError if the value is not present.</p></div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.multiprocessing.shared_memory.ShareableList.__class_getitem__">
+    
+  </a>
+  <a name="__class_getitem__">
+    
+  </a>
+  <div class="functionHeader">
+    __class_getitem__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

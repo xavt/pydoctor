@@ -1,0 +1,1780 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib._pydecimal : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module private"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib._pydecimal.html" class="code" data-type="Module">_pydecimal</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">This is an implementation of decimal floating point arithmetic based on
+the General Decimal Arithmetic Specification:
+
+    http://speleotrove.com/decimal/decarith.html
+
+and IEEE standard 854-1987:
+
+    http://en.wikipedia.org/wiki/IEEE_854-1987
+
+Decimal floating point has finite precision with arbitrarily large bounds.
+
+The purpose of this module is to support arithmetic using familiar
+"schoolhouse" rules and to avoid some of the tricky representation
+issues associated with binary floating point.  The package is especially
+useful for financial applications or for contexts where users have
+expectations that are at odds with binary floating point (for instance,
+in binary floating point, 1.00 % 0.1 gives 0.09999999999999995 instead
+of 0.0; Decimal('1.00') % Decimal('0.1') returns the expected
+Decimal('0.00')).
+
+Here are some examples of using the decimal module:
+
+&gt;&gt;&gt; from decimal import *
+&gt;&gt;&gt; setcontext(ExtendedContext)
+&gt;&gt;&gt; Decimal(0)
+Decimal('0')
+&gt;&gt;&gt; Decimal('1')
+Decimal('1')
+&gt;&gt;&gt; Decimal('-.0123')
+Decimal('-0.0123')
+&gt;&gt;&gt; Decimal(123456)
+Decimal('123456')
+&gt;&gt;&gt; Decimal('123.45e12345678')
+Decimal('1.2345E+12345680')
+&gt;&gt;&gt; Decimal('1.33') + Decimal('1.27')
+Decimal('2.60')
+&gt;&gt;&gt; Decimal('12.34') + Decimal('3.87') - Decimal('18.41')
+Decimal('-2.20')
+&gt;&gt;&gt; dig = Decimal(1)
+&gt;&gt;&gt; print(dig / Decimal(3))
+0.333333333
+&gt;&gt;&gt; getcontext().prec = 18
+&gt;&gt;&gt; print(dig / Decimal(3))
+0.333333333333333333
+&gt;&gt;&gt; print(dig.sqrt())
+1
+&gt;&gt;&gt; print(Decimal(3).sqrt())
+1.73205080756887729
+&gt;&gt;&gt; print(Decimal(3) ** 123)
+4.85192780976896427E+58
+&gt;&gt;&gt; inf = Decimal(1) / Decimal(0)
+&gt;&gt;&gt; print(inf)
+Infinity
+&gt;&gt;&gt; neginf = Decimal(-1) / Decimal(0)
+&gt;&gt;&gt; print(neginf)
+-Infinity
+&gt;&gt;&gt; print(neginf + inf)
+NaN
+&gt;&gt;&gt; print(neginf * inf)
+-Infinity
+&gt;&gt;&gt; print(dig / 0)
+Infinity
+&gt;&gt;&gt; getcontext().traps[DivisionByZero] = 1
+&gt;&gt;&gt; print(dig / 0)
+Traceback (most recent call last):
+  ...
+  ...
+  ...
+decimal.DivisionByZero: x / 0
+&gt;&gt;&gt; c = Context()
+&gt;&gt;&gt; c.traps[InvalidOperation] = 0
+&gt;&gt;&gt; print(c.flags[InvalidOperation])
+0
+&gt;&gt;&gt; c.divide(Decimal(0), Decimal(0))
+Decimal('NaN')
+&gt;&gt;&gt; c.traps[InvalidOperation] = 1
+&gt;&gt;&gt; print(c.flags[InvalidOperation])
+1
+&gt;&gt;&gt; c.flags[InvalidOperation] = 0
+&gt;&gt;&gt; print(c.flags[InvalidOperation])
+0
+&gt;&gt;&gt; print(c.divide(Decimal(0), Decimal(0)))
+Traceback (most recent call last):
+  ...
+  ...
+  ...
+decimal.InvalidOperation: 0 / 0
+&gt;&gt;&gt; print(c.flags[InvalidOperation])
+1
+&gt;&gt;&gt; c.flags[InvalidOperation] = 0
+&gt;&gt;&gt; c.traps[InvalidOperation] = 0
+&gt;&gt;&gt; print(c.divide(Decimal(0), Decimal(0)))
+NaN
+&gt;&gt;&gt; print(c.flags[InvalidOperation])
+1
+&gt;&gt;&gt;</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id112">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#__name__" class="code" data-type="Variable">__name__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#__version__" class="code" data-type="Variable">__version__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#__libmpdec_version__" class="code" data-type="Variable">__libmpdec_version__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#DecimalTuple" class="code" data-type="Variable">DecimalTuple</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#ROUND_DOWN" class="code" data-type="Variable">ROUND_DOWN</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#ROUND_HALF_UP" class="code" data-type="Variable">ROUND_HALF_UP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#ROUND_HALF_EVEN" class="code" data-type="Variable">ROUND_HALF_EVEN</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#ROUND_CEILING" class="code" data-type="Variable">ROUND_CEILING</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#ROUND_FLOOR" class="code" data-type="Variable">ROUND_FLOOR</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#ROUND_UP" class="code" data-type="Variable">ROUND_UP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#ROUND_HALF_DOWN" class="code" data-type="Variable">ROUND_HALF_DOWN</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#ROUND_05UP" class="code" data-type="Variable">ROUND_05UP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#HAVE_THREADS" class="code" data-type="Variable">HAVE_THREADS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#HAVE_CONTEXTVAR" class="code" data-type="Variable">HAVE_CONTEXTVAR</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#MAX_PREC" class="code" data-type="Variable">MAX_PREC</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#MAX_EMAX" class="code" data-type="Variable">MAX_EMAX</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#MIN_EMIN" class="code" data-type="Variable">MIN_EMIN</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#MIN_ETINY" class="code" data-type="Variable">MIN_ETINY</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib._pydecimal.DecimalException.html" class="code" data-type="Class">DecimalException</a></td>
+    <td><span>Base exception class.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib._pydecimal.Clamped.html" class="code" data-type="Class">Clamped</a></td>
+    <td><span>Exponent of a 0 changed to fit bounds.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib._pydecimal.InvalidOperation.html" class="code" data-type="Class">InvalidOperation</a></td>
+    <td><span>An invalid operation was performed.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib._pydecimal.ConversionSyntax.html" class="code" data-type="Class">ConversionSyntax</a></td>
+    <td><span>Trying to convert badly formed string.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib._pydecimal.DivisionByZero.html" class="code" data-type="Class">DivisionByZero</a></td>
+    <td><span>Division by 0.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib._pydecimal.DivisionImpossible.html" class="code" data-type="Class">DivisionImpossible</a></td>
+    <td><span>Cannot perform the division adequately.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib._pydecimal.DivisionUndefined.html" class="code" data-type="Class">DivisionUndefined</a></td>
+    <td><span>Undefined result of division.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib._pydecimal.Inexact.html" class="code" data-type="Class">Inexact</a></td>
+    <td><span>Had to round, losing information.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib._pydecimal.InvalidContext.html" class="code" data-type="Class">InvalidContext</a></td>
+    <td><span>Invalid context.  Unknown rounding, for example.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib._pydecimal.Rounded.html" class="code" data-type="Class">Rounded</a></td>
+    <td><span>Number got rounded (not  necessarily changed during rounding).</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib._pydecimal.Subnormal.html" class="code" data-type="Class">Subnormal</a></td>
+    <td><span>Exponent &lt; Emin before rounding.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib._pydecimal.Overflow.html" class="code" data-type="Class">Overflow</a></td>
+    <td><span>Numerical overflow.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib._pydecimal.Underflow.html" class="code" data-type="Class">Underflow</a></td>
+    <td><span>Numerical underflow with result rounded to 0.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib._pydecimal.FloatOperation.html" class="code" data-type="Class">FloatOperation</a></td>
+    <td><span>Enable stricter semantics for mixing floats and Decimals.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib._pydecimal.html#getcontext" class="code" data-type="Function">getcontext</a></td>
+    <td><span>Returns this thread's context.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib._pydecimal.html#setcontext" class="code" data-type="Function">setcontext</a></td>
+    <td><span>Set this thread's context to context.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib._pydecimal.html#localcontext" class="code" data-type="Function">localcontext</a></td>
+    <td><span>Return a context manager for a copy of the supplied context</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib._pydecimal.Decimal.html" class="code" data-type="Class">Decimal</a></td>
+    <td><span>Floating point class for decimal arithmetic.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib._pydecimal.Context.html" class="code" data-type="Class">Context</a></td>
+    <td><span>Contains the context for a Decimal instance.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#DefaultContext" class="code" data-type="Variable">DefaultContext</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#BasicContext" class="code" data-type="Variable">BasicContext</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#ExtendedContext" class="code" data-type="Variable">ExtendedContext</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#_signals" class="code" data-type="Variable">_signals</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#_condition_map" class="code" data-type="Variable">_condition_map</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#_rounding_modes" class="code" data-type="Variable">_rounding_modes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#_current_context_var" class="code" data-type="Variable">_current_context_var</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._pydecimal.html#_dec_from_triple" class="code" data-type="Function">_dec_from_triple</a></td>
+    <td><span>Create a decimal instance directly, without any validation, normalization (e.g. removal of leading zeros) or argument conversion.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib._pydecimal._ContextManager.html" class="code" data-type="Class">_ContextManager</a></td>
+    <td><span>Context manager class to support localcontext().</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib._pydecimal._WorkRep.html" class="code" data-type="Class">_WorkRep</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._pydecimal.html#_normalize" class="code" data-type="Function">_normalize</a></td>
+    <td><span>Normalizes op1, op2 to have the same exp and length of coefficient.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._pydecimal.html#_decimal_lshift_exact" class="code" data-type="Function">_decimal_lshift_exact</a></td>
+    <td><span>Given integers n and e, return n * 10**e if it's an integer, else None.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._pydecimal.html#_sqrt_nearest" class="code" data-type="Function">_sqrt_nearest</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._pydecimal.html#_rshift_nearest" class="code" data-type="Function">_rshift_nearest</a></td>
+    <td><span>Given an integer x and a nonnegative integer shift, return closest integer to x / 2**shift; use round-to-even in case of a tie.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._pydecimal.html#_div_nearest" class="code" data-type="Function">_div_nearest</a></td>
+    <td><span>Closest integer to a/b, a and b positive integers; rounds to even in the case of a tie.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._pydecimal.html#_ilog" class="code" data-type="Function">_ilog</a></td>
+    <td><span>Integer approximation to M*log(x/M), with absolute error boundable in terms only of x/M.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._pydecimal.html#_dlog10" class="code" data-type="Function">_dlog10</a></td>
+    <td><span>Given integers c, e and p with c &gt; 0, p &gt;= 0, compute an integer approximation to 10**p * log10(c*10**e), with an absolute error of at most 1.  Assumes that c*10**e is not exactly 1.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._pydecimal.html#_dlog" class="code" data-type="Function">_dlog</a></td>
+    <td><span>Given integers c, e and p with c &gt; 0, compute an integer approximation to 10**p * log(c*10**e), with an absolute error of at most 1.  Assumes that c*10**e is not exactly 1.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib._pydecimal._Log10Memoize.html" class="code" data-type="Class">_Log10Memoize</a></td>
+    <td><span>Class to compute, store, and allow retrieval of, digits of the constant log(10) = 2.302585....  This constant is needed by Decimal.ln, Decimal.log10, Decimal.exp and Decimal.__pow__.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#_log10_digits" class="code" data-type="Variable">_log10_digits</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._pydecimal.html#_iexp" class="code" data-type="Function">_iexp</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._pydecimal.html#_dexp" class="code" data-type="Function">_dexp</a></td>
+    <td><span>Compute an approximation to exp(c*10**e), with p decimal places of precision.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._pydecimal.html#_dpower" class="code" data-type="Function">_dpower</a></td>
+    <td><span>Given integers xc, xe, yc and ye representing Decimals x = xc*10**xe and y = yc*10**ye, compute x**y.  Returns a pair of integers (c, e) such that:</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._pydecimal.html#_log10_lb" class="code" data-type="Function">_log10_lb</a></td>
+    <td><span>Compute a lower bound for 100*log10(c) for a positive integer c.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._pydecimal.html#_convert_other" class="code" data-type="Function">_convert_other</a></td>
+    <td><span>Convert other to Decimal.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._pydecimal.html#_convert_for_comparison" class="code" data-type="Function">_convert_for_comparison</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#_parser" class="code" data-type="Variable">_parser</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#_all_zeros" class="code" data-type="Variable">_all_zeros</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#_exact_half" class="code" data-type="Variable">_exact_half</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#_parse_format_specifier_regex" class="code" data-type="Variable">_parse_format_specifier_regex</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._pydecimal.html#_parse_format_specifier" class="code" data-type="Function">_parse_format_specifier</a></td>
+    <td><span>Parse and validate a format specifier.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._pydecimal.html#_format_align" class="code" data-type="Function">_format_align</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._pydecimal.html#_group_lengths" class="code" data-type="Function">_group_lengths</a></td>
+    <td><span>Convert a localeconv-style grouping into a (possibly infinite) iterable of integers representing group lengths.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._pydecimal.html#_insert_thousands_sep" class="code" data-type="Function">_insert_thousands_sep</a></td>
+    <td><span>Insert thousands separators into a digit string.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._pydecimal.html#_format_sign" class="code" data-type="Function">_format_sign</a></td>
+    <td><span>Determine sign character.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._pydecimal.html#_format_number" class="code" data-type="Function">_format_number</a></td>
+    <td><span>Format a number, given the following data:</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#_Infinity" class="code" data-type="Variable">_Infinity</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#_NegativeInfinity" class="code" data-type="Variable">_NegativeInfinity</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#_NaN" class="code" data-type="Variable">_NaN</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#_Zero" class="code" data-type="Variable">_Zero</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#_One" class="code" data-type="Variable">_One</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#_NegativeOne" class="code" data-type="Variable">_NegativeOne</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#_SignedInfinity" class="code" data-type="Variable">_SignedInfinity</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib._pydecimal.html#_PyHASH_10INV" class="code" data-type="Variable">_PyHASH_10INV</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib._pydecimal.__name__">
+    
+  </a>
+  <a name="__name__">
+    
+  </a>
+  <div class="functionHeader">
+    __name__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib._pydecimal.__version__">
+    
+  </a>
+  <a name="__version__">
+    
+  </a>
+  <div class="functionHeader">
+    __version__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib._pydecimal.__libmpdec_version__">
+    
+  </a>
+  <a name="__libmpdec_version__">
+    
+  </a>
+  <div class="functionHeader">
+    __libmpdec_version__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib._pydecimal.DecimalTuple">
+    
+  </a>
+  <a name="DecimalTuple">
+    
+  </a>
+  <div class="functionHeader">
+    DecimalTuple =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib._pydecimal.ROUND_DOWN">
+    
+  </a>
+  <a name="ROUND_DOWN">
+    
+  </a>
+  <div class="functionHeader">
+    ROUND_DOWN =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib._pydecimal.ROUND_HALF_UP">
+    
+  </a>
+  <a name="ROUND_HALF_UP">
+    
+  </a>
+  <div class="functionHeader">
+    ROUND_HALF_UP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib._pydecimal.ROUND_HALF_EVEN">
+    
+  </a>
+  <a name="ROUND_HALF_EVEN">
+    
+  </a>
+  <div class="functionHeader">
+    ROUND_HALF_EVEN =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib._pydecimal.ROUND_CEILING">
+    
+  </a>
+  <a name="ROUND_CEILING">
+    
+  </a>
+  <div class="functionHeader">
+    ROUND_CEILING =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib._pydecimal.ROUND_FLOOR">
+    
+  </a>
+  <a name="ROUND_FLOOR">
+    
+  </a>
+  <div class="functionHeader">
+    ROUND_FLOOR =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib._pydecimal.ROUND_UP">
+    
+  </a>
+  <a name="ROUND_UP">
+    
+  </a>
+  <div class="functionHeader">
+    ROUND_UP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib._pydecimal.ROUND_HALF_DOWN">
+    
+  </a>
+  <a name="ROUND_HALF_DOWN">
+    
+  </a>
+  <div class="functionHeader">
+    ROUND_HALF_DOWN =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib._pydecimal.ROUND_05UP">
+    
+  </a>
+  <a name="ROUND_05UP">
+    
+  </a>
+  <div class="functionHeader">
+    ROUND_05UP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib._pydecimal.HAVE_THREADS">
+    
+  </a>
+  <a name="HAVE_THREADS">
+    
+  </a>
+  <div class="functionHeader">
+    HAVE_THREADS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib._pydecimal.HAVE_CONTEXTVAR">
+    
+  </a>
+  <a name="HAVE_CONTEXTVAR">
+    
+  </a>
+  <div class="functionHeader">
+    HAVE_CONTEXTVAR =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib._pydecimal.MAX_PREC">
+    
+  </a>
+  <a name="MAX_PREC">
+    
+  </a>
+  <div class="functionHeader">
+    MAX_PREC =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib._pydecimal.MAX_EMAX">
+    
+  </a>
+  <a name="MAX_EMAX">
+    
+  </a>
+  <div class="functionHeader">
+    MAX_EMAX =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib._pydecimal.MIN_EMIN">
+    
+  </a>
+  <a name="MIN_EMIN">
+    
+  </a>
+  <div class="functionHeader">
+    MIN_EMIN =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib._pydecimal.MIN_ETINY">
+    
+  </a>
+  <a name="MIN_ETINY">
+    
+  </a>
+  <div class="functionHeader">
+    MIN_ETINY =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib._pydecimal._signals">
+    
+  </a>
+  <a name="_signals">
+    
+  </a>
+  <div class="functionHeader">
+    _signals =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib._pydecimal._condition_map">
+    
+  </a>
+  <a name="_condition_map">
+    
+  </a>
+  <div class="functionHeader">
+    _condition_map =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib._pydecimal._rounding_modes">
+    
+  </a>
+  <a name="_rounding_modes">
+    
+  </a>
+  <div class="functionHeader">
+    _rounding_modes =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib._pydecimal._current_context_var">
+    
+  </a>
+  <a name="_current_context_var">
+    
+  </a>
+  <div class="functionHeader">
+    _current_context_var =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib._pydecimal.getcontext">
+    
+  </a>
+  <a name="getcontext">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getcontext():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns this thread's context.
+
+If this thread does not yet have a context, returns
+a new context and sets this thread's context.
+New contexts are copies of DefaultContext.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib._pydecimal.setcontext">
+    
+  </a>
+  <a name="setcontext">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setcontext(context):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set this thread's context to context.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib._pydecimal.localcontext">
+    
+  </a>
+  <a name="localcontext">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    localcontext(ctx=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a context manager for a copy of the supplied context
+
+Uses a copy of the current context if no context is specified
+The returned context manager creates a local decimal context
+in a with statement:
+    def sin(x):
+         with localcontext() as ctx:
+             ctx.prec += 2
+             # Rest of sin calculation algorithm
+             # uses a precision 2 greater than normal
+         return +s  # Convert result to normal precision
+
+     def sin(x):
+         with localcontext(ExtendedContext):
+             # Rest of sin calculation algorithm
+             # uses the Extended Context from the
+             # General Decimal Arithmetic Specification
+         return +s  # Convert result to normal context
+
+&gt;&gt;&gt; setcontext(DefaultContext)
+&gt;&gt;&gt; print(getcontext().prec)
+28
+&gt;&gt;&gt; with localcontext():
+...     ctx = getcontext()
+...     ctx.prec += 2
+...     print(ctx.prec)
+...
+30
+&gt;&gt;&gt; with localcontext(ExtendedContext):
+...     print(getcontext().prec)
+...
+9
+&gt;&gt;&gt; print(getcontext().prec)
+28</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._pydecimal._dec_from_triple">
+    
+  </a>
+  <a name="_dec_from_triple">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _dec_from_triple(sign, coefficient, exponent, special=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create a decimal instance directly, without any validation,
+normalization (e.g. removal of leading zeros) or argument
+conversion.
+
+This function is for *internal use only*.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._pydecimal._normalize">
+    
+  </a>
+  <a name="_normalize">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _normalize(op1, op2, prec=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Normalizes op1, op2 to have the same exp and length of coefficient.
+
+Done during addition.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._pydecimal._decimal_lshift_exact">
+    
+  </a>
+  <a name="_decimal_lshift_exact">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _decimal_lshift_exact(n, e):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Given integers n and e, return n * 10**e if it's an integer, else None.
+
+The computation is designed to avoid computing large powers of 10
+unnecessarily.
+
+&gt;&gt;&gt; _decimal_lshift_exact(3, 4)
+30000
+&gt;&gt;&gt; _decimal_lshift_exact(300, -999999999)  # returns None</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._pydecimal._sqrt_nearest">
+    
+  </a>
+  <a name="_sqrt_nearest">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _sqrt_nearest(n, a):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Closest integer to the square root of the positive integer n.  a is
+an initial approximation to the square root.  Any positive integer
+will do for a, but the closer a is to the square root of n the
+faster convergence will be.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._pydecimal._rshift_nearest">
+    
+  </a>
+  <a name="_rshift_nearest">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _rshift_nearest(x, shift):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Given an integer x and a nonnegative integer shift, return closest
+integer to x / 2**shift; use round-to-even in case of a tie.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._pydecimal._div_nearest">
+    
+  </a>
+  <a name="_div_nearest">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _div_nearest(a, b):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Closest integer to a/b, a and b positive integers; rounds to even
+in the case of a tie.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._pydecimal._ilog">
+    
+  </a>
+  <a name="_ilog">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _ilog(x, M, L=8):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Integer approximation to M*log(x/M), with absolute error boundable
+in terms only of x/M.
+
+Given positive integers x and M, return an integer approximation to
+M * log(x/M).  For L = 8 and 0.1 &lt;= x/M &lt;= 10 the difference
+between the approximation and the exact result is at most 22.  For
+L = 8 and 1.0 &lt;= x/M &lt;= 10.0 the difference is at most 15.  In
+both cases these are upper bounds on the error; it will usually be
+much smaller.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._pydecimal._dlog10">
+    
+  </a>
+  <a name="_dlog10">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _dlog10(c, e, p):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Given integers c, e and p with c &gt; 0, p &gt;= 0, compute an integer
+approximation to 10**p * log10(c*10**e), with an absolute error of
+at most 1.  Assumes that c*10**e is not exactly 1.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._pydecimal._dlog">
+    
+  </a>
+  <a name="_dlog">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _dlog(c, e, p):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Given integers c, e and p with c &gt; 0, compute an integer
+approximation to 10**p * log(c*10**e), with an absolute error of
+at most 1.  Assumes that c*10**e is not exactly 1.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib._pydecimal._log10_digits">
+    
+  </a>
+  <a name="_log10_digits">
+    
+  </a>
+  <div class="functionHeader">
+    _log10_digits =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._pydecimal._iexp">
+    
+  </a>
+  <a name="_iexp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _iexp(x, M, L=8):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Given integers x and M, M &gt; 0, such that x/M is small in absolute
+value, compute an integer approximation to M*exp(x/M).  For 0 &lt;=
+x/M &lt;= 2.4, the absolute error in the result is bounded by 60 (and
+is usually much smaller).</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._pydecimal._dexp">
+    
+  </a>
+  <a name="_dexp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _dexp(c, e, p):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Compute an approximation to exp(c*10**e), with p decimal places of
+precision.
+
+Returns integers d, f such that:
+
+  10**(p-1) &lt;= d &lt;= 10**p, and
+  (d-1)*10**f &lt; exp(c*10**e) &lt; (d+1)*10**f
+
+In other words, d*10**f is an approximation to exp(c*10**e) with p
+digits of precision, and with an error in d of at most 1.  This is
+almost, but not quite, the same as the error being &lt; 1ulp: when d
+= 10**(p-1) the error could be up to 10 ulp.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._pydecimal._dpower">
+    
+  </a>
+  <a name="_dpower">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _dpower(xc, xe, yc, ye, p):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Given integers xc, xe, yc and ye representing Decimals x = xc*10**xe and
+y = yc*10**ye, compute x**y.  Returns a pair of integers (c, e) such that:
+
+  10**(p-1) &lt;= c &lt;= 10**p, and
+  (c-1)*10**e &lt; x**y &lt; (c+1)*10**e
+
+in other words, c*10**e is an approximation to x**y with p digits
+of precision, and with an error in c of at most 1.  (This is
+almost, but not quite, the same as the error being &lt; 1ulp: when c
+== 10**(p-1) we can only guarantee error &lt; 10ulp.)
+
+We assume that: x is positive and not equal to 1, and y is nonzero.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._pydecimal._log10_lb">
+    
+  </a>
+  <a name="_log10_lb">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _log10_lb(c, correction={'1': 100, '2': 70, '3': 53, '4': 40, '5': 31, '6': 23, '7': 16, '8': 10,
+    '9': 5}):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Compute a lower bound for 100*log10(c) for a positive integer c.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._pydecimal._convert_other">
+    
+  </a>
+  <a name="_convert_other">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _convert_other(other, raiseit=(False), allow_float=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convert other to Decimal.
+
+Verifies that it's ok to use in an implicit construction.
+If allow_float is true, allow conversion from float;  this
+is used in the comparison methods (__eq__ and friends).</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._pydecimal._convert_for_comparison">
+    
+  </a>
+  <a name="_convert_for_comparison">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _convert_for_comparison(self, other, equality_op=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Given a Decimal instance self and a Python object other, return
+a pair (s, o) of Decimal instances such that "s op o" is
+equivalent to "self op other" for any of the 6 comparison
+operators "op".</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib._pydecimal.DefaultContext">
+    
+  </a>
+  <a name="DefaultContext">
+    
+  </a>
+  <div class="functionHeader">
+    DefaultContext =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib._pydecimal.BasicContext">
+    
+  </a>
+  <a name="BasicContext">
+    
+  </a>
+  <div class="functionHeader">
+    BasicContext =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib._pydecimal.ExtendedContext">
+    
+  </a>
+  <a name="ExtendedContext">
+    
+  </a>
+  <div class="functionHeader">
+    ExtendedContext =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib._pydecimal._parser">
+    
+  </a>
+  <a name="_parser">
+    
+  </a>
+  <div class="functionHeader">
+    _parser =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib._pydecimal._all_zeros">
+    
+  </a>
+  <a name="_all_zeros">
+    
+  </a>
+  <div class="functionHeader">
+    _all_zeros =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib._pydecimal._exact_half">
+    
+  </a>
+  <a name="_exact_half">
+    
+  </a>
+  <div class="functionHeader">
+    _exact_half =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib._pydecimal._parse_format_specifier_regex">
+    
+  </a>
+  <a name="_parse_format_specifier_regex">
+    
+  </a>
+  <div class="functionHeader">
+    _parse_format_specifier_regex =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._pydecimal._parse_format_specifier">
+    
+  </a>
+  <a name="_parse_format_specifier">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _parse_format_specifier(format_spec, _localeconv=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse and validate a format specifier.
+
+Turns a standard numeric format specifier into a dict, with the
+following entries:
+
+  fill: fill character to pad field to minimum width
+  align: alignment type, either '&lt;', '&gt;', '=' or '^'
+  sign: either '+', '-' or ' '
+  minimumwidth: nonnegative integer giving minimum width
+  zeropad: boolean, indicating whether to pad with zeros
+  thousands_sep: string to use as thousands separator, or ''
+  grouping: grouping for thousands separators, in format
+    used by localeconv
+  decimal_point: string to use for decimal point
+  precision: nonnegative integer giving precision, or None
+  type: one of the characters 'eEfFgG%', or None</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._pydecimal._format_align">
+    
+  </a>
+  <a name="_format_align">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _format_align(sign, body, spec):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Given an unpadded, non-aligned numeric string 'body' and sign
+string 'sign', add padding and alignment conforming to the given
+format specifier dictionary 'spec' (as produced by
+parse_format_specifier).</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._pydecimal._group_lengths">
+    
+  </a>
+  <a name="_group_lengths">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _group_lengths(grouping):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convert a localeconv-style grouping into a (possibly infinite)
+iterable of integers representing group lengths.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._pydecimal._insert_thousands_sep">
+    
+  </a>
+  <a name="_insert_thousands_sep">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _insert_thousands_sep(digits, spec, min_width=1):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Insert thousands separators into a digit string.
+
+spec is a dictionary whose keys should include 'thousands_sep' and
+'grouping'; typically it's the result of parsing the format
+specifier using _parse_format_specifier.
+
+The min_width keyword argument gives the minimum length of the
+result, which will be padded on the left with zeros if necessary.
+
+If necessary, the zero padding adds an extra '0' on the left to
+avoid a leading thousands separator.  For example, inserting
+commas every three digits in '123456', with min_width=8, gives
+'0,123,456', even though that has length 9.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._pydecimal._format_sign">
+    
+  </a>
+  <a name="_format_sign">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _format_sign(is_negative, spec):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Determine sign character.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._pydecimal._format_number">
+    
+  </a>
+  <a name="_format_number">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _format_number(is_negative, intpart, fracpart, exp, spec):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Format a number, given the following data:
+
+is_negative: true if the number is negative, else false
+intpart: string of digits that must appear before the decimal point
+fracpart: string of digits that must come after the point
+exp: exponent, as an integer
+spec: dictionary resulting from parsing the format specifier
+
+This function uses the information in spec to:
+  insert separators (decimal separator and thousands separators)
+  format the sign
+  format the exponent
+  add trailing '%' for the '%' type
+  zero-pad if necessary
+  fill and align if necessary</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib._pydecimal._Infinity">
+    
+  </a>
+  <a name="_Infinity">
+    
+  </a>
+  <div class="functionHeader">
+    _Infinity =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib._pydecimal._NegativeInfinity">
+    
+  </a>
+  <a name="_NegativeInfinity">
+    
+  </a>
+  <div class="functionHeader">
+    _NegativeInfinity =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib._pydecimal._NaN">
+    
+  </a>
+  <a name="_NaN">
+    
+  </a>
+  <div class="functionHeader">
+    _NaN =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib._pydecimal._Zero">
+    
+  </a>
+  <a name="_Zero">
+    
+  </a>
+  <div class="functionHeader">
+    _Zero =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib._pydecimal._One">
+    
+  </a>
+  <a name="_One">
+    
+  </a>
+  <div class="functionHeader">
+    _One =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib._pydecimal._NegativeOne">
+    
+  </a>
+  <a name="_NegativeOne">
+    
+  </a>
+  <div class="functionHeader">
+    _NegativeOne =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib._pydecimal._SignedInfinity">
+    
+  </a>
+  <a name="_SignedInfinity">
+    
+  </a>
+  <div class="functionHeader">
+    _SignedInfinity =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib._pydecimal._PyHASH_10INV">
+    
+  </a>
+  <a name="_PyHASH_10INV">
+    
+  </a>
+  <div class="functionHeader">
+    _PyHASH_10INV =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

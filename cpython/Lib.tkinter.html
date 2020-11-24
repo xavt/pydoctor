@@ -1,0 +1,890 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.tkinter : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="package"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.tkinter.html" class="code" data-type="Package">tkinter</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        package documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Wrapper functions for Tcl/Tk.
+
+Tkinter provides classes which allow the display, positioning and
+control of widgets. Toplevel widgets are Tk and Toplevel. Other
+widgets are Frame, Label, Entry, Text, Canvas, Button, Radiobutton,
+Checkbutton, Scale, Listbox, Scrollbar, OptionMenu, Spinbox
+LabelFrame and PanedWindow.
+
+Properties of the widgets are specified with keyword arguments.
+Keyword arguments have the same name as the corresponding resource
+under Tk.
+
+Widgets are positioned with one of the geometry managers Place, Pack
+or Grid. These managers can be called with methods place, pack, grid
+available in every Widget.
+
+Actions are bound to events by resources (e.g. keyword argument
+command) or with the method bind.
+
+Example (Hello, World):
+import tkinter
+from tkinter.constants import *
+tk = tkinter.Tk()
+frame = tkinter.Frame(tk, relief=RIDGE, borderwidth=2)
+frame.pack(fill=BOTH,expand=1)
+label = tkinter.Label(frame, text="Hello, World")
+label.pack(fill=X, expand=1)
+button = tkinter.Button(frame,text="Exit",command=tk.destroy)
+button.pack(side=BOTTOM)
+tk.mainloop()</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id10909">
+  
+  <tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.tkinter.__main__.html" class="code" data-type="Module">__main__</a></td>
+    <td><span>Main entry point</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.tkinter.colorchooser.html" class="code" data-type="Module">colorchooser</a></td>
+    <td><span class="undocumented">No module1/1 classes docstring; , 1/1 functions documented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.tkinter.commondialog.html" class="code" data-type="Module">commondialog</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.tkinter.constants.html" class="code" data-type="Module">constants</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.tkinter.dialog.html" class="code" data-type="Module">dialog</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.tkinter.dnd.html" class="code" data-type="Module">dnd</a></td>
+    <td><span>Drag-and-drop support for Tkinter.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.tkinter.filedialog.html" class="code" data-type="Module">filedialog</a></td>
+    <td><span>File selection dialog classes.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.tkinter.font.html" class="code" data-type="Module">font</a></td>
+    <td><span class="undocumented">No module1/1 classes docstring; , 3/3 functions docstring; , 0/9 variables documented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.tkinter.messagebox.html" class="code" data-type="Module">messagebox</a></td>
+    <td><span class="undocumented">No module1/1 classes docstring; , 8/9 functions docstring; , 0/16 variables documented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.tkinter.scrolledtext.html" class="code" data-type="Module">scrolledtext</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.tkinter.simpledialog.html" class="code" data-type="Module">simpledialog</a></td>
+    <td><span>This modules handles dialog boxes.</span></td>
+  </tr><tr class="package">
+    
+    <td>Package</td>
+    <td><a href="Lib.tkinter.test.html" class="code" data-type="Package">test</a></td>
+    <td><span class="undocumented">No package1/3 modules docstring; , 0/2 packages documented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.tkinter.tix.html" class="code" data-type="Module">tix</a></td>
+    <td><span class="undocumented">No module45/69 classes docstring; , 1/2 functions docstring; , 0/28 variables documented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.tkinter.ttk.html" class="code" data-type="Module">ttk</a></td>
+    <td><span>Ttk wrapper.</span></td>
+  </tr>
+</table>
+        
+
+          <p class="fromInitPy">From the <code>__init__.py</code> module:</p><table class="children sortable" id="id10910">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.BaseWidget.html" class="code" data-type="Class">BaseWidget</a></td>
+    <td><span>Internal class.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.BitmapImage.html" class="code" data-type="Class">BitmapImage</a></td>
+    <td><span>Widget which can display images in XBM format.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.BooleanVar.html" class="code" data-type="Class">BooleanVar</a></td>
+    <td><span>Value holder for boolean variables.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.Button.html" class="code" data-type="Class">Button</a></td>
+    <td><span>Button widget.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.CallWrapper.html" class="code" data-type="Class">CallWrapper</a></td>
+    <td><span>Internal class. Stores function to call when some user defined Tcl function is called e.g. after an event occurred.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.Canvas.html" class="code" data-type="Class">Canvas</a></td>
+    <td><span>Canvas widget to display graphical elements like lines or text.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.Checkbutton.html" class="code" data-type="Class">Checkbutton</a></td>
+    <td><span>Checkbutton widget which is either in on- or off-state.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.DoubleVar.html" class="code" data-type="Class">DoubleVar</a></td>
+    <td><span>Value holder for float variables.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.Entry.html" class="code" data-type="Class">Entry</a></td>
+    <td><span>Entry widget which allows displaying simple text.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.Event.html" class="code" data-type="Class">Event</a></td>
+    <td><span>Container for the properties of an event.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.EventType.html" class="code" data-type="Class">EventType</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.Frame.html" class="code" data-type="Class">Frame</a></td>
+    <td><span>Frame widget which may contain other widgets and can have a 3D border.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.Grid.html" class="code" data-type="Class">Grid</a></td>
+    <td><span>Geometry manager Grid.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.Image.html" class="code" data-type="Class">Image</a></td>
+    <td><span>Base class for images.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.IntVar.html" class="code" data-type="Class">IntVar</a></td>
+    <td><span>Value holder for integer variables.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.Label.html" class="code" data-type="Class">Label</a></td>
+    <td><span>Label widget which can display text and bitmaps.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.LabelFrame.html" class="code" data-type="Class">LabelFrame</a></td>
+    <td><span>labelframe widget.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.Listbox.html" class="code" data-type="Class">Listbox</a></td>
+    <td><span>Listbox widget which can display a list of strings.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.Menu.html" class="code" data-type="Class">Menu</a></td>
+    <td><span>Menu widget which allows displaying menu bars, pull-down menus and pop-up menus.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.Menubutton.html" class="code" data-type="Class">Menubutton</a></td>
+    <td><span>Menubutton widget, obsolete since Tk8.0.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.Message.html" class="code" data-type="Class">Message</a></td>
+    <td><span>Message widget to display multiline text. Obsolete since Label does it too.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.Misc.html" class="code" data-type="Class">Misc</a></td>
+    <td><span>Internal class.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.tkinter.html#NoDefaultRoot" class="code" data-type="Function">NoDefaultRoot</a></td>
+    <td><span>Inhibit setting of default root window.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.OptionMenu.html" class="code" data-type="Class">OptionMenu</a></td>
+    <td><span>OptionMenu which allows the user to select a value from a menu.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.Pack.html" class="code" data-type="Class">Pack</a></td>
+    <td><span>Geometry manager Pack.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.PanedWindow.html" class="code" data-type="Class">PanedWindow</a></td>
+    <td><span>panedwindow widget.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.PhotoImage.html" class="code" data-type="Class">PhotoImage</a></td>
+    <td><span>Widget which can display images in PGM, PPM, GIF, PNG format.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.Place.html" class="code" data-type="Class">Place</a></td>
+    <td><span>Geometry manager Place.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.Radiobutton.html" class="code" data-type="Class">Radiobutton</a></td>
+    <td><span>Radiobutton widget which shows only one of several buttons in on-state.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.Scale.html" class="code" data-type="Class">Scale</a></td>
+    <td><span>Scale widget which can display a numerical scale.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.Scrollbar.html" class="code" data-type="Class">Scrollbar</a></td>
+    <td><span>Scrollbar widget which displays a slider at a certain position.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.Spinbox.html" class="code" data-type="Class">Spinbox</a></td>
+    <td><span>spinbox widget.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.StringVar.html" class="code" data-type="Class">StringVar</a></td>
+    <td><span>Value holder for strings variables.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.tkinter.html#Tcl" class="code" data-type="Function">Tcl</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tkinter.html#TclVersion" class="code" data-type="Variable">TclVersion</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.Text.html" class="code" data-type="Class">Text</a></td>
+    <td><span>Text widget which can display text in various forms.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.Tk.html" class="code" data-type="Class">Tk</a></td>
+    <td><span>Toplevel widget of Tk which represents mostly the main window of an application. It has an associated Tcl interpreter.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tkinter.html#TkVersion" class="code" data-type="Variable">TkVersion</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.Toplevel.html" class="code" data-type="Class">Toplevel</a></td>
+    <td><span>Toplevel widget, e.g. for dialogs.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.Variable.html" class="code" data-type="Class">Variable</a></td>
+    <td><span>Class to define value holders for e.g. buttons.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.Widget.html" class="code" data-type="Class">Widget</a></td>
+    <td><span>Internal class.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.Wm.html" class="code" data-type="Class">Wm</a></td>
+    <td><span>Provides functions for the communication with the window manager.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.XView.html" class="code" data-type="Class">XView</a></td>
+    <td><span>Mix-in class for querying and changing the horizontal position of a widget's window.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter.YView.html" class="code" data-type="Class">YView</a></td>
+    <td><span>Mix-in class for querying and changing the vertical position of a widget's window.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.tkinter.html#getboolean" class="code" data-type="Function">getboolean</a></td>
+    <td><span>Convert true and false to integer values 1 and 0.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.tkinter.html#image_names" class="code" data-type="Function">image_names</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.tkinter.html#image_types" class="code" data-type="Function">image_types</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.tkinter.html#mainloop" class="code" data-type="Function">mainloop</a></td>
+    <td><span>Run the main loop of Tcl.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tkinter.html#wantobjects" class="code" data-type="Variable">wantobjects</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.tkinter.html#_cnfmerge" class="code" data-type="Function">_cnfmerge</a></td>
+    <td><span>Internal function.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tkinter.html#_default_root" class="code" data-type="Variable">_default_root</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.tkinter.html#_exit" class="code" data-type="Function">_exit</a></td>
+    <td><span>Internal function. Calling it will raise the exception SystemExit.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.tkinter.html#_flatten" class="code" data-type="Function">_flatten</a></td>
+    <td><span>Internal function.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.tkinter.html#_join" class="code" data-type="Function">_join</a></td>
+    <td><span>Internal function.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tkinter.html#_magic_re" class="code" data-type="Variable">_magic_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.tkinter._setit.html" class="code" data-type="Class">_setit</a></td>
+    <td><span>Internal class. It wraps the command in the widget OptionMenu.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tkinter.html#_space_re" class="code" data-type="Variable">_space_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.tkinter.html#_splitdict" class="code" data-type="Function">_splitdict</a></td>
+    <td><span>Return a properly formatted dict built from Tcl list pairs.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.tkinter.html#_stringify" class="code" data-type="Function">_stringify</a></td>
+    <td><span>Internal function.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tkinter.html#_support_default_root" class="code" data-type="Variable">_support_default_root</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.tkinter.html#_test" class="code" data-type="Function">_test</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.tkinter.html#_tkerror" class="code" data-type="Function">_tkerror</a></td>
+    <td><span>Internal function.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.tkinter.html#_varnum" class="code" data-type="Variable">_varnum</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.tkinter.wantobjects">
+    
+  </a>
+  <a name="wantobjects">
+    
+  </a>
+  <div class="functionHeader">
+    wantobjects =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tkinter.TkVersion">
+    
+  </a>
+  <a name="TkVersion">
+    
+  </a>
+  <div class="functionHeader">
+    TkVersion =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.tkinter.TclVersion">
+    
+  </a>
+  <a name="TclVersion">
+    
+  </a>
+  <div class="functionHeader">
+    TclVersion =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.tkinter._magic_re">
+    
+  </a>
+  <a name="_magic_re">
+    
+  </a>
+  <div class="functionHeader">
+    _magic_re =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.tkinter._space_re">
+    
+  </a>
+  <a name="_space_re">
+    
+  </a>
+  <div class="functionHeader">
+    _space_re =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.tkinter._join">
+    
+  </a>
+  <a name="_join">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _join(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Internal function.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.tkinter._stringify">
+    
+  </a>
+  <a name="_stringify">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _stringify(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Internal function.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.tkinter._flatten">
+    
+  </a>
+  <a name="_flatten">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _flatten(seq):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Internal function.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.tkinter._cnfmerge">
+    
+  </a>
+  <a name="_cnfmerge">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _cnfmerge(cnfs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Internal function.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.tkinter._splitdict">
+    
+  </a>
+  <a name="_splitdict">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _splitdict(tk, v, cut_minus=(True), conv=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a properly formatted dict built from Tcl list pairs.
+
+If cut_minus is True, the supposed '-' prefix will be removed from
+keys. If conv is specified, it is used to convert values.
+
+Tcl list is expected to contain an even number of elements.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.tkinter._support_default_root">
+    
+  </a>
+  <a name="_support_default_root">
+    
+  </a>
+  <div class="functionHeader">
+    _support_default_root =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.tkinter._default_root">
+    
+  </a>
+  <a name="_default_root">
+    
+  </a>
+  <div class="functionHeader">
+    _default_root =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.tkinter.NoDefaultRoot">
+    
+  </a>
+  <a name="NoDefaultRoot">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    NoDefaultRoot():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Inhibit setting of default root window.
+
+Call this function to inhibit that the first instance of
+Tk is used for windows without an explicit parent window.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.tkinter._tkerror">
+    
+  </a>
+  <a name="_tkerror">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _tkerror(err):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Internal function.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.tkinter._exit">
+    
+  </a>
+  <a name="_exit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _exit(code=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Internal function. Calling it will raise the exception SystemExit.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.tkinter._varnum">
+    
+  </a>
+  <a name="_varnum">
+    
+  </a>
+  <div class="functionHeader">
+    _varnum =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.tkinter.mainloop">
+    
+  </a>
+  <a name="mainloop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    mainloop(n=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Run the main loop of Tcl.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.tkinter.getboolean">
+    
+  </a>
+  <a name="getboolean">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getboolean(s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convert true and false to integer values 1 and 0.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.tkinter.Tcl">
+    
+  </a>
+  <a name="Tcl">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    Tcl(screenName=None, baseName=None, className="""Tk""", useTk=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.tkinter.image_names">
+    
+  </a>
+  <a name="image_names">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    image_names():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.tkinter.image_types">
+    
+  </a>
+  <a name="image_types">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    image_types():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.tkinter._test">
+    
+  </a>
+  <a name="_test">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _test():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

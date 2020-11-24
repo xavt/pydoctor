@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.email._policybase._PolicyBase : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class private"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.email.html" class="code" data-type="Package">email</a>.<a href="Lib.email._policybase.html" class="code" data-type="Module">_policybase</a>.<a href="Lib.email._policybase._PolicyBase.html" class="code" data-type="Class">_PolicyBase</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.email._policybase._PolicyBase:</code></p><p>Known subclasses: <a href="Lib.email._policybase.Policy.html" class="code" data-type="Class">Lib.email._policybase.Policy</a></p>
+        <p><a href="classIndex.html#Lib.email._policybase._PolicyBase">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Policy Object basic framework.
+
+This class is useless unless subclassed.  A subclass should define
+class attributes with defaults for any values that are to be
+managed by the Policy object.  The constructor will then allow
+non-default values to be set for these attributes at instance
+creation time.  The instance will be callable, taking these same
+attributes keyword arguments, and returning a new instance
+identical to the called instance except for those values changed
+by the keyword arguments.  Instances may be added, yielding new
+instances with any non-default values from the right hand
+operand overriding those in the left hand operand.  That is,
+
+    A + B == A(&lt;non-default values of B&gt;)
+
+The repr of an instance can be used to reconstruct the object
+if and only if the repr of the values can be used to reconstruct
+those values.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id1251">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email._policybase._PolicyBase.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Create new Policy, possibly overriding some defaults.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email._policybase._PolicyBase.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email._policybase._PolicyBase.html#clone" class="code" data-type="Method">clone</a></td>
+    <td><span>Return a new instance with specified attributes changed.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email._policybase._PolicyBase.html#__setattr__" class="code" data-type="Method">__setattr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email._policybase._PolicyBase.html#__add__" class="code" data-type="Method">__add__</a></td>
+    <td><span>Non-default values from right operand override those from left.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.email._policybase._PolicyBase.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, **kw):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create new Policy, possibly overriding some defaults.
+
+See class docstring for a list of overridable attributes.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email._policybase._PolicyBase.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __repr__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email._policybase._PolicyBase.clone">
+    
+  </a>
+  <a name="clone">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    clone(self, **kw):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a new instance with specified attributes changed.
+
+The new instance has the same attribute values as the current object,
+except for the changes passed in as keyword arguments.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email._policybase._PolicyBase.__setattr__">
+    
+  </a>
+  <a name="__setattr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __setattr__(self, name, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email._policybase._PolicyBase.__add__">
+    
+  </a>
+  <a name="__add__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __add__(self, other):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Non-default values from right operand override those from left.
+
+The object returned is a new instance of the subclass.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,2539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.unittest.TestCase : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.unittest.html" class="code" data-type="Package">unittest</a>.<a href="Lib.unittest.TestCase.html" class="code" data-type="Class">TestCase</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.unittest.TestCase(<span title="object">object</span>):</code></p><p>Known subclasses: <a href="Lib.unittest.case._SubTest.html" class="code" data-type="Class">Lib.unittest.case._SubTest</a>, <a href="Lib.unittest.FunctionTestCase.html" class="code" data-type="Class">Lib.unittest.FunctionTestCase</a></p>
+        <p><a href="classIndex.html#Lib.unittest.TestCase">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">A class whose instances are single test cases.
+
+By default, the test code itself should be placed in a method named
+'runTest'.
+
+If the fixture may be used for many test cases, create as
+many test methods as are needed. When instantiating such a TestCase
+subclass, specify in the constructor arguments the name of the test method
+that the instance is to execute.
+
+Test authors should subclass TestCase for their own tests. Construction
+and deconstruction of the test's environment ('fixture') can be
+implemented by overriding the 'setUp' and 'tearDown' methods respectively.
+
+If it is necessary to override the __init__ method, the base class
+__init__ method must always be called. It is important that subclasses
+should not change the signature of their __init__ method, since instances
+of the classes are instantiated automatically by parts of the framework
+in order to be run.
+
+When subclassing TestCase, you can set these attributes:
+* failureException: determines which exception will be raised when
+    the instance's assertion methods fail; test methods raising this
+    exception will be deemed to have 'failed' rather than 'errored'.
+* longMessage: determines whether long messages (including repr of
+    objects used in assert methods) will be printed on failure in *addition*
+    to any explicit message passed.
+* maxDiff: sets the maximum length of a diff in failure messages
+    by assert methods using difflib. It is looked up as an instance
+    attribute so can be configured by individual tests if required.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id11610">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.unittest.TestCase.html#longMessage" class="code" data-type="Class Variable">longMessage</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.unittest.TestCase.html#maxDiff" class="code" data-type="Class Variable">maxDiff</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Create an instance of the class that will use the named test method when executed. Raises a ValueError if the instance does not have a method with the specified name.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#addTypeEqualityFunc" class="code" data-type="Method">addTypeEqualityFunc</a></td>
+    <td><span>Add a type specific assertEqual style function to compare a type.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#addCleanup" class="code" data-type="Method">addCleanup</a></td>
+    <td><span>Add a function, with arguments, to be called when the test is completed. Functions added are called on a LIFO basis and are called after tearDown on test failure or success.</span></td>
+  </tr><tr class="classmethod">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.unittest.TestCase.html#addClassCleanup" class="code" data-type="Class Method">addClassCleanup</a></td>
+    <td><span>Same as addCleanup, except the cleanup items are called even if setUpClass fails (unlike tearDownClass).</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#setUp" class="code" data-type="Method">setUp</a></td>
+    <td><span>Hook method for setting up the test fixture before exercising it.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#tearDown" class="code" data-type="Method">tearDown</a></td>
+    <td><span>Hook method for deconstructing the test fixture after testing it.</span></td>
+  </tr><tr class="classmethod">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.unittest.TestCase.html#setUpClass" class="code" data-type="Class Method">setUpClass</a></td>
+    <td><span>Hook method for setting up class fixture before running tests in the class.</span></td>
+  </tr><tr class="classmethod">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.unittest.TestCase.html#tearDownClass" class="code" data-type="Class Method">tearDownClass</a></td>
+    <td><span>Hook method for deconstructing the class fixture after running all tests in the class.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#countTestCases" class="code" data-type="Method">countTestCases</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#defaultTestResult" class="code" data-type="Method">defaultTestResult</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#shortDescription" class="code" data-type="Method">shortDescription</a></td>
+    <td><span>Returns a one-line description of the test, or None if no description has been provided.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#id" class="code" data-type="Method">id</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#__eq__" class="code" data-type="Method">__eq__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#__hash__" class="code" data-type="Method">__hash__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#__str__" class="code" data-type="Method">__str__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#subTest" class="code" data-type="Method">subTest</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#run" class="code" data-type="Method">run</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#doCleanups" class="code" data-type="Method">doCleanups</a></td>
+    <td><span>Execute all cleanup functions. Normally called for you after tearDown.</span></td>
+  </tr><tr class="classmethod">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.unittest.TestCase.html#doClassCleanups" class="code" data-type="Class Method">doClassCleanups</a></td>
+    <td><span>Execute all class cleanup functions. Normally called for you after tearDownClass.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#__call__" class="code" data-type="Method">__call__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#debug" class="code" data-type="Method">debug</a></td>
+    <td><span>Run the test without collecting errors in a TestResult</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#skipTest" class="code" data-type="Method">skipTest</a></td>
+    <td><span>Skip this test.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#fail" class="code" data-type="Method">fail</a></td>
+    <td><span>Fail immediately, with the given message.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertFalse" class="code" data-type="Method">assertFalse</a></td>
+    <td><span>Check that the expression is false.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertTrue" class="code" data-type="Method">assertTrue</a></td>
+    <td><span>Check that the expression is true.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertRaises" class="code" data-type="Method">assertRaises</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertWarns" class="code" data-type="Method">assertWarns</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertLogs" class="code" data-type="Method">assertLogs</a></td>
+    <td><span>Fail unless a log message of level *level* or higher is emitted on *logger_name* or its children.  If omitted, *level* defaults to INFO and *logger* defaults to the root logger.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertNoLogs" class="code" data-type="Method">assertNoLogs</a></td>
+    <td><span>Fail unless no log messages of level *level* or higher are emitted on *logger_name* or its children.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertEqual" class="code" data-type="Method">assertEqual</a></td>
+    <td><span>Fail if the two objects are unequal as determined by the '==' operator.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertNotEqual" class="code" data-type="Method">assertNotEqual</a></td>
+    <td><span>Fail if the two objects are equal as determined by the '!=' operator.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertAlmostEqual" class="code" data-type="Method">assertAlmostEqual</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertNotAlmostEqual" class="code" data-type="Method">assertNotAlmostEqual</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertSequenceEqual" class="code" data-type="Method">assertSequenceEqual</a></td>
+    <td><span>An equality assertion for ordered sequences (like lists and tuples).</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertListEqual" class="code" data-type="Method">assertListEqual</a></td>
+    <td><span>A list-specific equality assertion.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertTupleEqual" class="code" data-type="Method">assertTupleEqual</a></td>
+    <td><span>A tuple-specific equality assertion.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertSetEqual" class="code" data-type="Method">assertSetEqual</a></td>
+    <td><span>A set-specific equality assertion.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertIn" class="code" data-type="Method">assertIn</a></td>
+    <td><span>Just like self.assertTrue(a in b), but with a nicer default message.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertNotIn" class="code" data-type="Method">assertNotIn</a></td>
+    <td><span>Just like self.assertTrue(a not in b), but with a nicer default message.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertIs" class="code" data-type="Method">assertIs</a></td>
+    <td><span>Just like self.assertTrue(a is b), but with a nicer default message.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertIsNot" class="code" data-type="Method">assertIsNot</a></td>
+    <td><span>Just like self.assertTrue(a is not b), but with a nicer default message.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertDictEqual" class="code" data-type="Method">assertDictEqual</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertDictContainsSubset" class="code" data-type="Method">assertDictContainsSubset</a></td>
+    <td><span>Checks whether dictionary is a superset of subset.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertCountEqual" class="code" data-type="Method">assertCountEqual</a></td>
+    <td><span>Asserts that two iterables have the same elements, the same number of times, without regard to order.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertMultiLineEqual" class="code" data-type="Method">assertMultiLineEqual</a></td>
+    <td><span>Assert that two multi-line strings are equal.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertLess" class="code" data-type="Method">assertLess</a></td>
+    <td><span>Just like self.assertTrue(a &lt; b), but with a nicer default message.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertLessEqual" class="code" data-type="Method">assertLessEqual</a></td>
+    <td><span>Just like self.assertTrue(a &lt;= b), but with a nicer default message.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertGreater" class="code" data-type="Method">assertGreater</a></td>
+    <td><span>Just like self.assertTrue(a &gt; b), but with a nicer default message.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertGreaterEqual" class="code" data-type="Method">assertGreaterEqual</a></td>
+    <td><span>Just like self.assertTrue(a &gt;= b), but with a nicer default message.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertIsNone" class="code" data-type="Method">assertIsNone</a></td>
+    <td><span>Same as self.assertTrue(obj is None), with a nicer default message.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertIsNotNone" class="code" data-type="Method">assertIsNotNone</a></td>
+    <td><span>Included for symmetry with assertIsNone.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertIsInstance" class="code" data-type="Method">assertIsInstance</a></td>
+    <td><span>Same as self.assertTrue(isinstance(obj, cls)), with a nicer default message.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertNotIsInstance" class="code" data-type="Method">assertNotIsInstance</a></td>
+    <td><span>Included for symmetry with assertIsInstance.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertRaisesRegex" class="code" data-type="Method">assertRaisesRegex</a></td>
+    <td><span>Asserts that the message in a raised exception matches a regex.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertWarnsRegex" class="code" data-type="Method">assertWarnsRegex</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertRegex" class="code" data-type="Method">assertRegex</a></td>
+    <td><span>Fail the test unless the text matches the regular expression.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#assertNotRegex" class="code" data-type="Method">assertNotRegex</a></td>
+    <td><span>Fail the test if the text matches the regular expression.</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.unittest.TestCase.html#failUnlessEqual" class="code" data-type="Class Variable">failUnlessEqual</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.unittest.TestCase.html#assertEquals" class="code" data-type="Class Variable">assertEquals</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.unittest.TestCase.html#failIfEqual" class="code" data-type="Class Variable">failIfEqual</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.unittest.TestCase.html#assertNotEquals" class="code" data-type="Class Variable">assertNotEquals</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.unittest.TestCase.html#failUnlessAlmostEqual" class="code" data-type="Class Variable">failUnlessAlmostEqual</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.unittest.TestCase.html#assertAlmostEquals" class="code" data-type="Class Variable">assertAlmostEquals</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.unittest.TestCase.html#failIfAlmostEqual" class="code" data-type="Class Variable">failIfAlmostEqual</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.unittest.TestCase.html#assertNotAlmostEquals" class="code" data-type="Class Variable">assertNotAlmostEquals</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.unittest.TestCase.html#failUnless" class="code" data-type="Class Variable">failUnless</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.unittest.TestCase.html#assert_" class="code" data-type="Class Variable">assert_</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.unittest.TestCase.html#failUnlessRaises" class="code" data-type="Class Variable">failUnlessRaises</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.unittest.TestCase.html#failIf" class="code" data-type="Class Variable">failIf</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.unittest.TestCase.html#assertRaisesRegexp" class="code" data-type="Class Variable">assertRaisesRegexp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.unittest.TestCase.html#assertRegexpMatches" class="code" data-type="Class Variable">assertRegexpMatches</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.unittest.TestCase.html#assertNotRegexpMatches" class="code" data-type="Class Variable">assertNotRegexpMatches</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.unittest.TestCase.html#_diffThreshold" class="code" data-type="Class Variable">_diffThreshold</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.unittest.TestCase.html#_classSetupFailed" class="code" data-type="Class Variable">_classSetupFailed</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.unittest.TestCase.html#_class_cleanups" class="code" data-type="Class Variable">_class_cleanups</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.unittest.TestCase.html#_testMethodName" class="code" data-type="Instance Variable">_testMethodName</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.unittest.TestCase.html#_outcome" class="code" data-type="Instance Variable">_outcome</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.unittest.TestCase.html#_testMethodDoc" class="code" data-type="Instance Variable">_testMethodDoc</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.unittest.TestCase.html#_cleanups" class="code" data-type="Instance Variable">_cleanups</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.unittest.TestCase.html#_subtest" class="code" data-type="Instance Variable">_subtest</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.unittest.TestCase.html#_type_equality_funcs" class="code" data-type="Instance Variable">_type_equality_funcs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#_addSkip" class="code" data-type="Method">_addSkip</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#_feedErrorsToResult" class="code" data-type="Method">_feedErrorsToResult</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#_addExpectedFailure" class="code" data-type="Method">_addExpectedFailure</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#_addUnexpectedSuccess" class="code" data-type="Method">_addUnexpectedSuccess</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#_callSetUp" class="code" data-type="Method">_callSetUp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#_callTestMethod" class="code" data-type="Method">_callTestMethod</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#_callTearDown" class="code" data-type="Method">_callTearDown</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#_callCleanup" class="code" data-type="Method">_callCleanup</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#_formatMessage" class="code" data-type="Method">_formatMessage</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#_getAssertEqualityFunc" class="code" data-type="Method">_getAssertEqualityFunc</a></td>
+    <td><span>Get a detailed comparison function for the types of the two args.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#_baseAssertEqual" class="code" data-type="Method">_baseAssertEqual</a></td>
+    <td><span>The default assertEqual implementation, not type specific.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#_truncateMessage" class="code" data-type="Method">_truncateMessage</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestCase.html#_deprecate" class="code" data-type="Method">_deprecate</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.unittest.TestCase.longMessage">
+    
+  </a>
+  <a name="longMessage">
+    
+  </a>
+  <div class="functionHeader">
+    longMessage =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.unittest.TestCase.maxDiff">
+    
+  </a>
+  <a name="maxDiff">
+    
+  </a>
+  <div class="functionHeader">
+    maxDiff =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable private">
+  
+  <a name="Lib.unittest.TestCase._diffThreshold">
+    
+  </a>
+  <a name="_diffThreshold">
+    
+  </a>
+  <div class="functionHeader">
+    _diffThreshold =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable private">
+  
+  <a name="Lib.unittest.TestCase._classSetupFailed">
+    
+  </a>
+  <a name="_classSetupFailed">
+    
+  </a>
+  <div class="functionHeader">
+    _classSetupFailed =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseclassvariable private">
+  
+  <a name="Lib.unittest.TestCase._class_cleanups">
+    
+  </a>
+  <a name="_class_cleanups">
+    
+  </a>
+  <div class="functionHeader">
+    _class_cleanups =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, methodName="""runTest"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.unittest.case._SubTest.html" class="code" data-type="Class">Lib.unittest.case._SubTest</a>, <a href="Lib.unittest.FunctionTestCase.html" class="code" data-type="Class">Lib.unittest.FunctionTestCase</a></div>
+    
+    <div><p class="pre">Create an instance of the class that will use the named test
+method when executed. Raises a ValueError if the instance does
+not have a method with the specified name.</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.unittest.TestCase._testMethodName">
+    
+  </a>
+  <a name="_testMethodName">
+    
+  </a>
+  <div class="functionHeader">
+    _testMethodName =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.unittest.TestCase._outcome">
+    
+  </a>
+  <a name="_outcome">
+    
+  </a>
+  <div class="functionHeader">
+    _outcome =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.unittest.TestCase._testMethodDoc">
+    
+  </a>
+  <a name="_testMethodDoc">
+    
+  </a>
+  <div class="functionHeader">
+    _testMethodDoc =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.unittest.TestCase._cleanups">
+    
+  </a>
+  <a name="_cleanups">
+    
+  </a>
+  <div class="functionHeader">
+    _cleanups =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.unittest.TestCase._subtest">
+    
+  </a>
+  <a name="_subtest">
+    
+  </a>
+  <div class="functionHeader">
+    _subtest =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.unittest.TestCase._type_equality_funcs">
+    
+  </a>
+  <a name="_type_equality_funcs">
+    
+  </a>
+  <div class="functionHeader">
+    _type_equality_funcs =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.addTypeEqualityFunc">
+    
+  </a>
+  <a name="addTypeEqualityFunc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    addTypeEqualityFunc(self, typeobj, function):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Add a type specific assertEqual style function to compare a type.
+
+This method is for use by TestCase subclasses that need to register
+their own type equality functions to provide nicer error messages.
+
+Args:
+    typeobj: The data type to call this function on when both values
+            are of the same type in assertEqual().
+    function: The callable taking two arguments and an optional
+            msg= argument that raises self.failureException with a
+            useful error message when the two arguments are not equal.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.addCleanup">
+    
+  </a>
+  <a name="addCleanup">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    addCleanup(*args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Add a function, with arguments, to be called when the test is
+completed. Functions added are called on a LIFO basis and are
+called after tearDown on test failure or success.
+
+Cleanup items are called even if setUp fails (unlike tearDown).</p></div>
+  </div>
+</div><div class="baseclassmethod">
+  
+  <a name="Lib.unittest.TestCase.addClassCleanup">
+    
+  </a>
+  <a name="addClassCleanup">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    addClassCleanup(*args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Same as addCleanup, except the cleanup items are called even if
+setUpClass fails (unlike tearDownClass).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.setUp">
+    
+  </a>
+  <a name="setUp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setUp(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.unittest.FunctionTestCase.html" class="code" data-type="Class">Lib.unittest.FunctionTestCase</a></div>
+    
+    <div><p class="pre">Hook method for setting up the test fixture before exercising it.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.tearDown">
+    
+  </a>
+  <a name="tearDown">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tearDown(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.unittest.FunctionTestCase.html" class="code" data-type="Class">Lib.unittest.FunctionTestCase</a></div>
+    
+    <div><p class="pre">Hook method for deconstructing the test fixture after testing it.</p></div>
+  </div>
+</div><div class="baseclassmethod">
+  
+  <a name="Lib.unittest.TestCase.setUpClass">
+    
+  </a>
+  <a name="setUpClass">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    setUpClass(cls):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Hook method for setting up class fixture before running tests in the class.</p></div>
+  </div>
+</div><div class="baseclassmethod">
+  
+  <a name="Lib.unittest.TestCase.tearDownClass">
+    
+  </a>
+  <a name="tearDownClass">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    tearDownClass(cls):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Hook method for deconstructing the class fixture after running all tests in the class.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.countTestCases">
+    
+  </a>
+  <a name="countTestCases">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    countTestCases(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.defaultTestResult">
+    
+  </a>
+  <a name="defaultTestResult">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    defaultTestResult(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.shortDescription">
+    
+  </a>
+  <a name="shortDescription">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    shortDescription(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.unittest.case._SubTest.html" class="code" data-type="Class">Lib.unittest.case._SubTest</a>, <a href="Lib.unittest.FunctionTestCase.html" class="code" data-type="Class">Lib.unittest.FunctionTestCase</a></div>
+    
+    <div><p class="pre">Returns a one-line description of the test, or None if no
+description has been provided.
+
+The default implementation of this method returns the first line of
+the specified test method's docstring.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.id">
+    
+  </a>
+  <a name="id">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    id(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.unittest.case._SubTest.html" class="code" data-type="Class">Lib.unittest.case._SubTest</a>, <a href="Lib.unittest.FunctionTestCase.html" class="code" data-type="Class">Lib.unittest.FunctionTestCase</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.__eq__">
+    
+  </a>
+  <a name="__eq__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __eq__(self, other):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.unittest.FunctionTestCase.html" class="code" data-type="Class">Lib.unittest.FunctionTestCase</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.__hash__">
+    
+  </a>
+  <a name="__hash__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __hash__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.unittest.FunctionTestCase.html" class="code" data-type="Class">Lib.unittest.FunctionTestCase</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.__str__">
+    
+  </a>
+  <a name="__str__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __str__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.unittest.case._SubTest.html" class="code" data-type="Class">Lib.unittest.case._SubTest</a>, <a href="Lib.unittest.FunctionTestCase.html" class="code" data-type="Class">Lib.unittest.FunctionTestCase</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __repr__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.unittest.FunctionTestCase.html" class="code" data-type="Class">Lib.unittest.FunctionTestCase</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.unittest.TestCase._addSkip">
+    
+  </a>
+  <a name="_addSkip">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _addSkip(self, result, test_case, reason):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.subTest">
+    
+  </a>
+  <a name="subTest">
+    
+  </a>
+  <div class="functionHeader">
+    @contextlib.contextmanager<br />
+    def
+    subTest(self, msg=_subtest_msg_sentinel, **params):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a context manager that will return the enclosed block
+of code in a subtest identified by the optional message and
+keyword parameters.  A failure in the subtest marks the test
+case as failed but resumes execution at the end of the enclosed
+block, allowing further test code to be executed.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.unittest.TestCase._feedErrorsToResult">
+    
+  </a>
+  <a name="_feedErrorsToResult">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _feedErrorsToResult(self, result, errors):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.unittest.TestCase._addExpectedFailure">
+    
+  </a>
+  <a name="_addExpectedFailure">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _addExpectedFailure(self, result, exc_info):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.unittest.TestCase._addUnexpectedSuccess">
+    
+  </a>
+  <a name="_addUnexpectedSuccess">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _addUnexpectedSuccess(self, result):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.unittest.TestCase._callSetUp">
+    
+  </a>
+  <a name="_callSetUp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _callSetUp(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.unittest.TestCase._callTestMethod">
+    
+  </a>
+  <a name="_callTestMethod">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _callTestMethod(self, method):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.unittest.TestCase._callTearDown">
+    
+  </a>
+  <a name="_callTearDown">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _callTearDown(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.unittest.TestCase._callCleanup">
+    
+  </a>
+  <a name="_callCleanup">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _callCleanup(*args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.run">
+    
+  </a>
+  <a name="run">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    run(self, result=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.doCleanups">
+    
+  </a>
+  <a name="doCleanups">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    doCleanups(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Execute all cleanup functions. Normally called for you after
+tearDown.</p></div>
+  </div>
+</div><div class="baseclassmethod">
+  
+  <a name="Lib.unittest.TestCase.doClassCleanups">
+    
+  </a>
+  <a name="doClassCleanups">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    doClassCleanups(cls):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Execute all class cleanup functions. Normally called for you after
+tearDownClass.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.__call__">
+    
+  </a>
+  <a name="__call__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __call__(self, *args, **kwds):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.debug">
+    
+  </a>
+  <a name="debug">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    debug(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Run the test without collecting errors in a TestResult</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.skipTest">
+    
+  </a>
+  <a name="skipTest">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    skipTest(self, reason):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Skip this test.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.fail">
+    
+  </a>
+  <a name="fail">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    fail(self, msg=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Fail immediately, with the given message.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertFalse">
+    
+  </a>
+  <a name="assertFalse">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertFalse(self, expr, msg=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Check that the expression is false.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertTrue">
+    
+  </a>
+  <a name="assertTrue">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertTrue(self, expr, msg=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Check that the expression is true.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.unittest.TestCase._formatMessage">
+    
+  </a>
+  <a name="_formatMessage">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _formatMessage(self, msg, standardMsg):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Honour the longMessage attribute when generating failure messages.
+If longMessage is False this means:
+* Use only an explicit message if it is provided
+* Otherwise use the standard message for the assert
+
+If longMessage is True:
+* Use the standard message
+* If an explicit message is provided, plus ' : ' and the explicit message</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertRaises">
+    
+  </a>
+  <a name="assertRaises">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertRaises(self, expected_exception, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Fail unless an exception of class expected_exception is raised
+by the callable when invoked with specified positional and
+keyword arguments. If a different type of exception is
+raised, it will not be caught, and the test case will be
+deemed to have suffered an error, exactly as for an
+unexpected exception.
+
+If called with the callable and arguments omitted, will return a
+context object used like this::
+
+     with self.assertRaises(SomeException):
+         do_something()
+
+An optional keyword argument 'msg' can be provided when assertRaises
+is used as a context object.
+
+The context manager keeps a reference to the exception as
+the 'exception' attribute. This allows you to inspect the
+exception after the assertion::
+
+    with self.assertRaises(SomeException) as cm:
+        do_something()
+    the_exception = cm.exception
+    self.assertEqual(the_exception.error_code, 3)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertWarns">
+    
+  </a>
+  <a name="assertWarns">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertWarns(self, expected_warning, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Fail unless a warning of class warnClass is triggered
+by the callable when invoked with specified positional and
+keyword arguments.  If a different type of warning is
+triggered, it will not be handled: depending on the other
+warning filtering rules in effect, it might be silenced, printed
+out, or raised as an exception.
+
+If called with the callable and arguments omitted, will return a
+context object used like this::
+
+     with self.assertWarns(SomeWarning):
+         do_something()
+
+An optional keyword argument 'msg' can be provided when assertWarns
+is used as a context object.
+
+The context manager keeps a reference to the first matching
+warning as the 'warning' attribute; similarly, the 'filename'
+and 'lineno' attributes give you information about the line
+of Python code from which the warning was triggered.
+This allows you to inspect the warning after the assertion::
+
+    with self.assertWarns(SomeWarning) as cm:
+        do_something()
+    the_warning = cm.warning
+    self.assertEqual(the_warning.some_attribute, 147)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertLogs">
+    
+  </a>
+  <a name="assertLogs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertLogs(self, logger=None, level=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Fail unless a log message of level *level* or higher is emitted
+on *logger_name* or its children.  If omitted, *level* defaults to
+INFO and *logger* defaults to the root logger.
+
+This method must be used as a context manager, and will yield
+a recording object with two attributes: `output` and `records`.
+At the end of the context manager, the `output` attribute will
+be a list of the matching formatted log messages and the
+`records` attribute will be a list of the corresponding LogRecord
+objects.
+
+Example::
+
+    with self.assertLogs('foo', level='INFO') as cm:
+        logging.getLogger('foo').info('first message')
+        logging.getLogger('foo.bar').error('second message')
+    self.assertEqual(cm.output, ['INFO:foo:first message',
+                                 'ERROR:foo.bar:second message'])</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertNoLogs">
+    
+  </a>
+  <a name="assertNoLogs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertNoLogs(self, logger=None, level=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Fail unless no log messages of level *level* or higher are emitted
+on *logger_name* or its children.
+
+This method must be used as a context manager.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.unittest.TestCase._getAssertEqualityFunc">
+    
+  </a>
+  <a name="_getAssertEqualityFunc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _getAssertEqualityFunc(self, first, second):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get a detailed comparison function for the types of the two args.
+
+Returns: A callable accepting (first, second, msg=None) that will
+raise a failure exception if first != second with a useful human
+readable error message for those types.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.unittest.TestCase._baseAssertEqual">
+    
+  </a>
+  <a name="_baseAssertEqual">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _baseAssertEqual(self, first, second, msg=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">The default assertEqual implementation, not type specific.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertEqual">
+    
+  </a>
+  <a name="assertEqual">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertEqual(self, first, second, msg=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Fail if the two objects are unequal as determined by the '=='
+operator.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertNotEqual">
+    
+  </a>
+  <a name="assertNotEqual">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertNotEqual(self, first, second, msg=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Fail if the two objects are equal as determined by the '!='
+operator.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertAlmostEqual">
+    
+  </a>
+  <a name="assertAlmostEqual">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertAlmostEqual(self, first, second, places=None, msg=None, delta=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Fail if the two objects are unequal as determined by their
+difference rounded to the given number of decimal places
+(default 7) and comparing to zero, or by comparing that the
+difference between the two objects is more than the given
+delta.
+
+Note that decimal places (from zero) are usually not the same
+as significant digits (measured from the most significant digit).
+
+If the two objects compare equal then they will automatically
+compare almost equal.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertNotAlmostEqual">
+    
+  </a>
+  <a name="assertNotAlmostEqual">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertNotAlmostEqual(self, first, second, places=None, msg=None, delta=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Fail if the two objects are equal as determined by their
+difference rounded to the given number of decimal places
+(default 7) and comparing to zero, or by comparing that the
+difference between the two objects is less than the given delta.
+
+Note that decimal places (from zero) are usually not the same
+as significant digits (measured from the most significant digit).
+
+Objects that are equal automatically fail.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertSequenceEqual">
+    
+  </a>
+  <a name="assertSequenceEqual">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertSequenceEqual(self, seq1, seq2, msg=None, seq_type=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">An equality assertion for ordered sequences (like lists and tuples).
+
+For the purposes of this function, a valid ordered sequence type is one
+which can be indexed, has a length, and has an equality operator.
+
+Args:
+    seq1: The first sequence to compare.
+    seq2: The second sequence to compare.
+    seq_type: The expected datatype of the sequences, or None if no
+            datatype should be enforced.
+    msg: Optional message to use on failure instead of a list of
+            differences.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.unittest.TestCase._truncateMessage">
+    
+  </a>
+  <a name="_truncateMessage">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _truncateMessage(self, message, diff):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertListEqual">
+    
+  </a>
+  <a name="assertListEqual">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertListEqual(self, list1, list2, msg=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">A list-specific equality assertion.
+
+Args:
+    list1: The first list to compare.
+    list2: The second list to compare.
+    msg: Optional message to use on failure instead of a list of
+            differences.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertTupleEqual">
+    
+  </a>
+  <a name="assertTupleEqual">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertTupleEqual(self, tuple1, tuple2, msg=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">A tuple-specific equality assertion.
+
+Args:
+    tuple1: The first tuple to compare.
+    tuple2: The second tuple to compare.
+    msg: Optional message to use on failure instead of a list of
+            differences.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertSetEqual">
+    
+  </a>
+  <a name="assertSetEqual">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertSetEqual(self, set1, set2, msg=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">A set-specific equality assertion.
+
+Args:
+    set1: The first set to compare.
+    set2: The second set to compare.
+    msg: Optional message to use on failure instead of a list of
+            differences.
+
+assertSetEqual uses ducktyping to support different types of sets, and
+is optimized for sets specifically (parameters must support a
+difference method).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertIn">
+    
+  </a>
+  <a name="assertIn">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertIn(self, member, container, msg=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Just like self.assertTrue(a in b), but with a nicer default message.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertNotIn">
+    
+  </a>
+  <a name="assertNotIn">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertNotIn(self, member, container, msg=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Just like self.assertTrue(a not in b), but with a nicer default message.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertIs">
+    
+  </a>
+  <a name="assertIs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertIs(self, expr1, expr2, msg=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Just like self.assertTrue(a is b), but with a nicer default message.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertIsNot">
+    
+  </a>
+  <a name="assertIsNot">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertIsNot(self, expr1, expr2, msg=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Just like self.assertTrue(a is not b), but with a nicer default message.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertDictEqual">
+    
+  </a>
+  <a name="assertDictEqual">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertDictEqual(self, d1, d2, msg=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertDictContainsSubset">
+    
+  </a>
+  <a name="assertDictContainsSubset">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertDictContainsSubset(self, subset, dictionary, msg=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Checks whether dictionary is a superset of subset.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertCountEqual">
+    
+  </a>
+  <a name="assertCountEqual">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertCountEqual(self, first, second, msg=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Asserts that two iterables have the same elements, the same number of
+times, without regard to order.
+
+    self.assertEqual(Counter(list(first)),
+                     Counter(list(second)))
+
+ Example:
+    - [0, 1, 1] and [1, 0, 1] compare equal.
+    - [0, 0, 1] and [0, 1] compare unequal.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertMultiLineEqual">
+    
+  </a>
+  <a name="assertMultiLineEqual">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertMultiLineEqual(self, first, second, msg=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Assert that two multi-line strings are equal.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertLess">
+    
+  </a>
+  <a name="assertLess">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertLess(self, a, b, msg=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Just like self.assertTrue(a &lt; b), but with a nicer default message.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertLessEqual">
+    
+  </a>
+  <a name="assertLessEqual">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertLessEqual(self, a, b, msg=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Just like self.assertTrue(a &lt;= b), but with a nicer default message.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertGreater">
+    
+  </a>
+  <a name="assertGreater">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertGreater(self, a, b, msg=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Just like self.assertTrue(a &gt; b), but with a nicer default message.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertGreaterEqual">
+    
+  </a>
+  <a name="assertGreaterEqual">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertGreaterEqual(self, a, b, msg=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Just like self.assertTrue(a &gt;= b), but with a nicer default message.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertIsNone">
+    
+  </a>
+  <a name="assertIsNone">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertIsNone(self, obj, msg=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Same as self.assertTrue(obj is None), with a nicer default message.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertIsNotNone">
+    
+  </a>
+  <a name="assertIsNotNone">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertIsNotNone(self, obj, msg=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Included for symmetry with assertIsNone.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertIsInstance">
+    
+  </a>
+  <a name="assertIsInstance">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertIsInstance(self, obj, cls, msg=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Same as self.assertTrue(isinstance(obj, cls)), with a nicer
+default message.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertNotIsInstance">
+    
+  </a>
+  <a name="assertNotIsInstance">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertNotIsInstance(self, obj, cls, msg=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Included for symmetry with assertIsInstance.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertRaisesRegex">
+    
+  </a>
+  <a name="assertRaisesRegex">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertRaisesRegex(self, expected_exception, expected_regex, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Asserts that the message in a raised exception matches a regex.
+
+Args:
+    expected_exception: Exception class expected to be raised.
+    expected_regex: Regex (re.Pattern object or string) expected
+            to be found in error message.
+    args: Function to be called and extra positional args.
+    kwargs: Extra kwargs.
+    msg: Optional message used in case of failure. Can only be used
+            when assertRaisesRegex is used as a context manager.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertWarnsRegex">
+    
+  </a>
+  <a name="assertWarnsRegex">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertWarnsRegex(self, expected_warning, expected_regex, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Asserts that the message in a triggered warning matches a regexp.
+Basic functioning is similar to assertWarns() with the addition
+that only warnings whose messages also match the regular expression
+are considered successful matches.
+
+Args:
+    expected_warning: Warning class expected to be triggered.
+    expected_regex: Regex (re.Pattern object or string) expected
+            to be found in error message.
+    args: Function to be called and extra positional args.
+    kwargs: Extra kwargs.
+    msg: Optional message used in case of failure. Can only be used
+            when assertWarnsRegex is used as a context manager.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertRegex">
+    
+  </a>
+  <a name="assertRegex">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertRegex(self, text, expected_regex, msg=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Fail the test unless the text matches the regular expression.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestCase.assertNotRegex">
+    
+  </a>
+  <a name="assertNotRegex">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assertNotRegex(self, text, unexpected_regex, msg=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Fail the test if the text matches the regular expression.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.unittest.TestCase._deprecate">
+    
+  </a>
+  <a name="_deprecate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _deprecate(original_func):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.unittest.TestCase.failUnlessEqual">
+    
+  </a>
+  <a name="failUnlessEqual">
+    
+  </a>
+  <div class="functionHeader">
+    failUnlessEqual =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.unittest.TestCase.assertEquals">
+    
+  </a>
+  <a name="assertEquals">
+    
+  </a>
+  <div class="functionHeader">
+    assertEquals =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.unittest.TestCase.failIfEqual">
+    
+  </a>
+  <a name="failIfEqual">
+    
+  </a>
+  <div class="functionHeader">
+    failIfEqual =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.unittest.TestCase.assertNotEquals">
+    
+  </a>
+  <a name="assertNotEquals">
+    
+  </a>
+  <div class="functionHeader">
+    assertNotEquals =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.unittest.TestCase.failUnlessAlmostEqual">
+    
+  </a>
+  <a name="failUnlessAlmostEqual">
+    
+  </a>
+  <div class="functionHeader">
+    failUnlessAlmostEqual =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.unittest.TestCase.assertAlmostEquals">
+    
+  </a>
+  <a name="assertAlmostEquals">
+    
+  </a>
+  <div class="functionHeader">
+    assertAlmostEquals =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.unittest.TestCase.failIfAlmostEqual">
+    
+  </a>
+  <a name="failIfAlmostEqual">
+    
+  </a>
+  <div class="functionHeader">
+    failIfAlmostEqual =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.unittest.TestCase.assertNotAlmostEquals">
+    
+  </a>
+  <a name="assertNotAlmostEquals">
+    
+  </a>
+  <div class="functionHeader">
+    assertNotAlmostEquals =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.unittest.TestCase.failUnless">
+    
+  </a>
+  <a name="failUnless">
+    
+  </a>
+  <div class="functionHeader">
+    failUnless =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.unittest.TestCase.assert_">
+    
+  </a>
+  <a name="assert_">
+    
+  </a>
+  <div class="functionHeader">
+    assert_ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.unittest.TestCase.failUnlessRaises">
+    
+  </a>
+  <a name="failUnlessRaises">
+    
+  </a>
+  <div class="functionHeader">
+    failUnlessRaises =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.unittest.TestCase.failIf">
+    
+  </a>
+  <a name="failIf">
+    
+  </a>
+  <div class="functionHeader">
+    failIf =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.unittest.TestCase.assertRaisesRegexp">
+    
+  </a>
+  <a name="assertRaisesRegexp">
+    
+  </a>
+  <div class="functionHeader">
+    assertRaisesRegexp =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.unittest.TestCase.assertRegexpMatches">
+    
+  </a>
+  <a name="assertRegexpMatches">
+    
+  </a>
+  <div class="functionHeader">
+    assertRegexpMatches =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.unittest.TestCase.assertNotRegexpMatches">
+    
+  </a>
+  <a name="assertNotRegexpMatches">
+    
+  </a>
+  <div class="functionHeader">
+    assertNotRegexpMatches =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

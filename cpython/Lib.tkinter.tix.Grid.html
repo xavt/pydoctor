@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.tkinter.tix.Grid : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.tkinter.html" class="code" data-type="Package">tkinter</a>.<a href="Lib.tkinter.tix.html" class="code" data-type="Module">tix</a>.<a href="Lib.tkinter.tix.Grid.html" class="code" data-type="Class">Grid</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.tkinter.tix.Grid(<a href="Lib.tkinter.tix.TixWidget.html" class="code" data-type="Class">TixWidget</a>, <span title="XView">XView</span>, <span title="YView">YView</span>):</code></p><p>Known subclasses: <a href="Lib.tkinter.tix.ScrolledGrid.html" class="code" data-type="Class">Lib.tkinter.tix.ScrolledGrid</a></p>
+        <p><a href="classIndex.html#Lib.tkinter.tix.Grid">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">The Tix Grid command creates a new window  and makes it into a
+tixGrid widget. Additional options, may be specified on the command
+line or in the option database to configure aspects such as its cursor
+and relief.
+
+A Grid widget displays its contents in a two dimensional grid of cells.
+Each cell may contain one Tix display item, which may be in text,
+graphics or other formats. See the DisplayStyle class for more information
+about Tix display items. Individual cells, or groups of cells, can be
+formatted with a wide range of attributes, such as its color, relief and
+border.
+
+Subwidgets - None</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id11396">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.Grid.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tkinter.tix.Grid.html#cnf" class="code" data-type="Instance Variable">cnf</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.Grid.html#anchor_clear" class="code" data-type="Method">anchor_clear</a></td>
+    <td><span>Removes the selection anchor.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.Grid.html#anchor_get" class="code" data-type="Method">anchor_get</a></td>
+    <td><span>Get the (x,y) coordinate of the current anchor cell</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.Grid.html#anchor_set" class="code" data-type="Method">anchor_set</a></td>
+    <td><span>Set the selection anchor to the cell at (x, y).</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.Grid.html#delete_row" class="code" data-type="Method">delete_row</a></td>
+    <td><span>Delete rows between from_ and to inclusive. If to is not provided,  delete only row at from_</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.Grid.html#delete_column" class="code" data-type="Method">delete_column</a></td>
+    <td><span>Delete columns between from_ and to inclusive. If to is not provided,  delete only column at from_</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.Grid.html#edit_apply" class="code" data-type="Method">edit_apply</a></td>
+    <td><span>If any cell is being edited, de-highlight the cell  and  applies the changes.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.Grid.html#edit_set" class="code" data-type="Method">edit_set</a></td>
+    <td><span>Highlights  the  cell  at  (x, y) for editing, if the -editnotify command returns True for this cell.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.Grid.html#entrycget" class="code" data-type="Method">entrycget</a></td>
+    <td><span>Get the option value for cell at (x,y)</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.Grid.html#entryconfigure" class="code" data-type="Method">entryconfigure</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.Grid.html#info_exists" class="code" data-type="Method">info_exists</a></td>
+    <td><span>Return True if display item exists at (x,y)</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.Grid.html#info_bbox" class="code" data-type="Method">info_bbox</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.Grid.html#move_column" class="code" data-type="Method">move_column</a></td>
+    <td><span>Moves the range of columns from position FROM through TO by the distance indicated by OFFSET. For example, move_column(2, 4, 1) moves the columns 2,3,4 to columns 3,4,5.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.Grid.html#move_row" class="code" data-type="Method">move_row</a></td>
+    <td><span>Moves the range of rows from position FROM through TO by the distance indicated by OFFSET. For example, move_row(2, 4, 1) moves the rows 2,3,4 to rows 3,4,5.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.Grid.html#nearest" class="code" data-type="Method">nearest</a></td>
+    <td><span>Return coordinate of cell nearest pixel coordinate (x,y)</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.Grid.html#set" class="code" data-type="Method">set</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.Grid.html#size_column" class="code" data-type="Method">size_column</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.Grid.html#size_row" class="code" data-type="Method">size_row</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.Grid.html#unset" class="code" data-type="Method">unset</a></td>
+    <td><span>Clears the cell at (x, y) by removing its display item.</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.tkinter.tix.TixWidget.html" class="code" data-type="Class">TixWidget</a>:
+          </p>
+          <table class="children sortable" id="id11397">
+  
+  <tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tkinter.tix.TixWidget.html#widgetName" class="code" data-type="Instance Variable">widgetName</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.tkinter.tix.TixWidget.html#subwidget_list" class="code" data-type="Instance Variable">subwidget_list</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.TixWidget.html#__getattr__" class="code" data-type="Method">__getattr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.TixWidget.html#set_silent" class="code" data-type="Method">set_silent</a></td>
+    <td><span>Set a variable without calling its action routine</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.TixWidget.html#subwidget" class="code" data-type="Method">subwidget</a></td>
+    <td><span>Return the named subwidget (which must have been created by the sub-class).</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.TixWidget.html#subwidgets_all" class="code" data-type="Method">subwidgets_all</a></td>
+    <td><span>Return all subwidgets.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.TixWidget.html#config_all" class="code" data-type="Method">config_all</a></td>
+    <td><span>Set configuration options for all subwidgets (and self).</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.TixWidget.html#image_create" class="code" data-type="Method">image_create</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.TixWidget.html#image_delete" class="code" data-type="Method">image_delete</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.TixWidget.html#_subwidget_name" class="code" data-type="Method">_subwidget_name</a></td>
+    <td><span>Get a subwidget name (returns a String, not a Widget !)</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.tkinter.tix.TixWidget.html#_subwidget_names" class="code" data-type="Method">_subwidget_names</a></td>
+    <td><span>Return the name of all subwidgets.</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.Grid.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, master=None, cnf={}, **kw):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.tkinter.tix.TixWidget.html#__init__" class="code" data-type="Method">Lib.tkinter.tix.TixWidget.__init__</a></div><div class="interfaceinfo">overridden in <a href="Lib.tkinter.tix.ScrolledGrid.html" class="code" data-type="Class">Lib.tkinter.tix.ScrolledGrid</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.tkinter.tix.Grid.cnf">
+    
+  </a>
+  <a name="cnf">
+    
+  </a>
+  <div class="functionHeader">
+    cnf =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.tkinter.tix.ScrolledGrid.html" class="code" data-type="Class">Lib.tkinter.tix.ScrolledGrid</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.Grid.anchor_clear">
+    
+  </a>
+  <a name="anchor_clear">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    anchor_clear(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Removes the selection anchor.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.Grid.anchor_get">
+    
+  </a>
+  <a name="anchor_get">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    anchor_get(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get the (x,y) coordinate of the current anchor cell</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.Grid.anchor_set">
+    
+  </a>
+  <a name="anchor_set">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    anchor_set(self, x, y):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set the selection anchor to the cell at (x, y).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.Grid.delete_row">
+    
+  </a>
+  <a name="delete_row">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    delete_row(self, from_, to=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Delete rows between from_ and to inclusive.
+If to is not provided,  delete only row at from_</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.Grid.delete_column">
+    
+  </a>
+  <a name="delete_column">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    delete_column(self, from_, to=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Delete columns between from_ and to inclusive.
+If to is not provided,  delete only column at from_</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.Grid.edit_apply">
+    
+  </a>
+  <a name="edit_apply">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    edit_apply(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">If any cell is being edited, de-highlight the cell  and  applies
+the changes.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.Grid.edit_set">
+    
+  </a>
+  <a name="edit_set">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    edit_set(self, x, y):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Highlights  the  cell  at  (x, y) for editing, if the -editnotify
+command returns True for this cell.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.Grid.entrycget">
+    
+  </a>
+  <a name="entrycget">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    entrycget(self, x, y, option):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get the option value for cell at (x,y)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.Grid.entryconfigure">
+    
+  </a>
+  <a name="entryconfigure">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    entryconfigure(self, x, y, cnf=None, **kw):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.Grid.info_exists">
+    
+  </a>
+  <a name="info_exists">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    info_exists(self, x, y):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True if display item exists at (x,y)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.Grid.info_bbox">
+    
+  </a>
+  <a name="info_bbox">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    info_bbox(self, x, y):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.Grid.move_column">
+    
+  </a>
+  <a name="move_column">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    move_column(self, from_, to, offset):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Moves the range of columns from position FROM through TO by
+the distance indicated by OFFSET. For example, move_column(2, 4, 1)
+moves the columns 2,3,4 to columns 3,4,5.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.Grid.move_row">
+    
+  </a>
+  <a name="move_row">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    move_row(self, from_, to, offset):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Moves the range of rows from position FROM through TO by
+the distance indicated by OFFSET.
+For example, move_row(2, 4, 1) moves the rows 2,3,4 to rows 3,4,5.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.Grid.nearest">
+    
+  </a>
+  <a name="nearest">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    nearest(self, x, y):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return coordinate of cell nearest pixel coordinate (x,y)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.Grid.set">
+    
+  </a>
+  <a name="set">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set(self, x, y, itemtype=None, **kw):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.Grid.size_column">
+    
+  </a>
+  <a name="size_column">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    size_column(self, index, **kw):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Queries or sets the size of the column given by
+INDEX.  INDEX may be any non-negative
+integer that gives the position of a given column.
+INDEX can also be the string "default"; in this case, this command
+queries or sets the default size of all columns.
+When no option-value pair is given, this command returns a tuple
+containing the current size setting of the given column.  When
+option-value pairs are given, the corresponding options of the
+size setting of the given column are changed. Options may be one
+of the following:
+      pad0 pixels
+             Specifies the paddings to the left of a column.
+      pad1 pixels
+             Specifies the paddings to the right of a column.
+      size val
+             Specifies the width of a column.  Val may be:
+             "auto" -- the width of the column is set to the
+             width of the widest cell in the column;
+             a valid Tk screen distance unit;
+             or a real number following by the word chars
+             (e.g. 3.4chars) that sets the width of the column to the
+             given number of characters.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.Grid.size_row">
+    
+  </a>
+  <a name="size_row">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    size_row(self, index, **kw):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Queries or sets the size of the row given by
+INDEX. INDEX may be any non-negative
+integer that gives the position of a given row .
+INDEX can also be the string "default"; in this case, this command
+queries or sets the default size of all rows.
+When no option-value pair is given, this command returns a list con-
+taining the current size setting of the given row . When option-value
+pairs are given, the corresponding options of the size setting of the
+given row are changed. Options may be one of the following:
+      pad0 pixels
+             Specifies the paddings to the top of a row.
+      pad1 pixels
+             Specifies the paddings to the bottom of a row.
+      size val
+             Specifies the height of a row.  Val may be:
+             "auto" -- the height of the row is set to the
+             height of the highest cell in the row;
+             a valid Tk screen distance unit;
+             or a real number following by the word chars
+             (e.g. 3.4chars) that sets the height of the row to the
+             given number of characters.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.tkinter.tix.Grid.unset">
+    
+  </a>
+  <a name="unset">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    unset(self, x, y):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Clears the cell at (x, y) by removing its display item.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

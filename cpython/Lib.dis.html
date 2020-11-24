@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.dis : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.dis.html" class="code" data-type="Module">dis</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Disassembler of Python byte code into mnemonics.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id900">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.dis.html#FORMAT_VALUE" class="code" data-type="Variable">FORMAT_VALUE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.dis.html#FORMAT_VALUE_CONVERTERS" class="code" data-type="Variable">FORMAT_VALUE_CONVERTERS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.dis.html#MAKE_FUNCTION" class="code" data-type="Variable">MAKE_FUNCTION</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.dis.html#MAKE_FUNCTION_FLAGS" class="code" data-type="Variable">MAKE_FUNCTION_FLAGS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.dis.html#dis" class="code" data-type="Function">dis</a></td>
+    <td><span>Disassemble classes, methods, functions, and other compiled objects.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.dis.html#distb" class="code" data-type="Function">distb</a></td>
+    <td><span>Disassemble a traceback (default: last traceback).</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.dis.html#COMPILER_FLAG_NAMES" class="code" data-type="Variable">COMPILER_FLAG_NAMES</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.dis.html#pretty_flags" class="code" data-type="Function">pretty_flags</a></td>
+    <td><span>Return pretty representation of code flags.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.dis.html#code_info" class="code" data-type="Function">code_info</a></td>
+    <td><span>Formatted details of methods, functions, or code.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.dis.html#show_code" class="code" data-type="Function">show_code</a></td>
+    <td><span>Print details of methods, functions, or code to *file*.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.dis.Instruction.html" class="code" data-type="Class">Instruction</a></td>
+    <td><span>Details for a bytecode operation</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.dis.html#get_instructions" class="code" data-type="Function">get_instructions</a></td>
+    <td><span>Iterator for the opcodes in methods, functions or code</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.dis.html#disassemble" class="code" data-type="Function">disassemble</a></td>
+    <td><span>Disassemble a code object.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.dis.html#findlabels" class="code" data-type="Function">findlabels</a></td>
+    <td><span>Detect all offsets in a byte code which are jump targets.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.dis.html#findlinestarts" class="code" data-type="Function">findlinestarts</a></td>
+    <td><span>Find the offsets in a byte code which are start of lines in the source.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.dis.Bytecode.html" class="code" data-type="Class">Bytecode</a></td>
+    <td><span>The bytecode operations of a piece of code</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.dis.html#_have_code" class="code" data-type="Variable">_have_code</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.dis.html#_try_compile" class="code" data-type="Function">_try_compile</a></td>
+    <td><span>Attempts to compile the given source, first as an expression and then as a statement if the first approach fails.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.dis.html#_get_code_object" class="code" data-type="Function">_get_code_object</a></td>
+    <td><span>Helper to handle methods, compiled or raw code objects, and strings.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.dis.html#_format_code_info" class="code" data-type="Function">_format_code_info</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.dis.html#_Instruction" class="code" data-type="Variable">_Instruction</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.dis.html#_OPNAME_WIDTH" class="code" data-type="Variable">_OPNAME_WIDTH</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.dis.html#_OPARG_WIDTH" class="code" data-type="Variable">_OPARG_WIDTH</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.dis.html#_get_const_info" class="code" data-type="Function">_get_const_info</a></td>
+    <td><span>Helper to get optional details about const references</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.dis.html#_get_name_info" class="code" data-type="Function">_get_name_info</a></td>
+    <td><span>Helper to get optional details about named references</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.dis.html#_get_instructions_bytes" class="code" data-type="Function">_get_instructions_bytes</a></td>
+    <td><span>Iterate over the instructions in a bytecode string.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.dis.html#_disassemble_recursive" class="code" data-type="Function">_disassemble_recursive</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.dis.html#_disassemble_bytes" class="code" data-type="Function">_disassemble_bytes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.dis.html#_disassemble_str" class="code" data-type="Function">_disassemble_str</a></td>
+    <td><span>Compile the source string, then disassemble the code object.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.dis.html#_unpack_opargs" class="code" data-type="Function">_unpack_opargs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.dis.html#_test" class="code" data-type="Function">_test</a></td>
+    <td><span>Simple test program to disassemble a file.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable private">
+  
+  <a name="Lib.dis._have_code">
+    
+  </a>
+  <a name="_have_code">
+    
+  </a>
+  <div class="functionHeader">
+    _have_code =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.dis.FORMAT_VALUE">
+    
+  </a>
+  <a name="FORMAT_VALUE">
+    
+  </a>
+  <div class="functionHeader">
+    FORMAT_VALUE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.dis.FORMAT_VALUE_CONVERTERS">
+    
+  </a>
+  <a name="FORMAT_VALUE_CONVERTERS">
+    
+  </a>
+  <div class="functionHeader">
+    FORMAT_VALUE_CONVERTERS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.dis.MAKE_FUNCTION">
+    
+  </a>
+  <a name="MAKE_FUNCTION">
+    
+  </a>
+  <div class="functionHeader">
+    MAKE_FUNCTION =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.dis.MAKE_FUNCTION_FLAGS">
+    
+  </a>
+  <a name="MAKE_FUNCTION_FLAGS">
+    
+  </a>
+  <div class="functionHeader">
+    MAKE_FUNCTION_FLAGS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Tuple[str, ...]</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.dis._try_compile">
+    
+  </a>
+  <a name="_try_compile">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _try_compile(source, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Attempts to compile the given source, first as an expression and
+then as a statement if the first approach fails.
+
+Utility function to accept strings in functions that otherwise
+expect code objects</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.dis.dis">
+    
+  </a>
+  <a name="dis">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    dis(x=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Disassemble classes, methods, functions, and other compiled objects.
+
+With no argument, disassemble the last traceback.
+
+Compiled objects currently include generator objects, async generator
+objects, and coroutine objects, all of which store their code object
+in a special attribute.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.dis.distb">
+    
+  </a>
+  <a name="distb">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    distb(tb=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Disassemble a traceback (default: last traceback).</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.dis.COMPILER_FLAG_NAMES">
+    
+  </a>
+  <a name="COMPILER_FLAG_NAMES">
+    
+  </a>
+  <div class="functionHeader">
+    COMPILER_FLAG_NAMES =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict[int, str]</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.dis.pretty_flags">
+    
+  </a>
+  <a name="pretty_flags">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    pretty_flags(flags):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return pretty representation of code flags.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.dis._get_code_object">
+    
+  </a>
+  <a name="_get_code_object">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_code_object(x):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Helper to handle methods, compiled or raw code objects, and strings.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.dis.code_info">
+    
+  </a>
+  <a name="code_info">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    code_info(x):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Formatted details of methods, functions, or code.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.dis._format_code_info">
+    
+  </a>
+  <a name="_format_code_info">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _format_code_info(co):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.dis.show_code">
+    
+  </a>
+  <a name="show_code">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    show_code(co):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Print details of methods, functions, or code to *file*.
+
+If *file* is not provided, the output is printed on stdout.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.dis._Instruction">
+    
+  </a>
+  <a name="_Instruction">
+    
+  </a>
+  <div class="functionHeader">
+    _Instruction =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.dis._OPNAME_WIDTH">
+    
+  </a>
+  <a name="_OPNAME_WIDTH">
+    
+  </a>
+  <div class="functionHeader">
+    _OPNAME_WIDTH =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.dis._OPARG_WIDTH">
+    
+  </a>
+  <a name="_OPARG_WIDTH">
+    
+  </a>
+  <div class="functionHeader">
+    _OPARG_WIDTH =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.dis.get_instructions">
+    
+  </a>
+  <a name="get_instructions">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_instructions(x):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Iterator for the opcodes in methods, functions or code
+
+Generates a series of Instruction named tuples giving the details of
+each operations in the supplied code.
+
+If *first_line* is not None, it indicates the line number that should
+be reported for the first source line in the disassembled code.
+Otherwise, the source line information (if any) is taken directly from
+the disassembled code object.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.dis._get_const_info">
+    
+  </a>
+  <a name="_get_const_info">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_const_info(const_index, const_list):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Helper to get optional details about const references
+
+Returns the dereferenced constant and its repr if the constant
+list is defined.
+Otherwise returns the constant index and its repr().</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.dis._get_name_info">
+    
+  </a>
+  <a name="_get_name_info">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_name_info(name_index, name_list):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Helper to get optional details about named references
+
+Returns the dereferenced name as both value and repr if the name
+list is defined.
+Otherwise returns the name index and its repr().</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.dis._get_instructions_bytes">
+    
+  </a>
+  <a name="_get_instructions_bytes">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_instructions_bytes(code, varnames=None, names=None, constants=None, cells=None, linestarts=None, line_offset=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Iterate over the instructions in a bytecode string.
+
+Generates a sequence of Instruction namedtuples giving the details of each
+opcode.  Additional information about the code's runtime environment
+(e.g. variable names, constants) can be specified using optional
+arguments.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.dis.disassemble">
+    
+  </a>
+  <a name="disassemble">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    disassemble(co, lasti=(-1)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Disassemble a code object.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.dis._disassemble_recursive">
+    
+  </a>
+  <a name="_disassemble_recursive">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _disassemble_recursive(co):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.dis._disassemble_bytes">
+    
+  </a>
+  <a name="_disassemble_bytes">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _disassemble_bytes(code, lasti=(-1), varnames=None, names=None, constants=None, cells=None, linestarts=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.dis._disassemble_str">
+    
+  </a>
+  <a name="_disassemble_str">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _disassemble_str(source, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Compile the source string, then disassemble the code object.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.dis._unpack_opargs">
+    
+  </a>
+  <a name="_unpack_opargs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _unpack_opargs(code):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.dis.findlabels">
+    
+  </a>
+  <a name="findlabels">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    findlabels(code):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Detect all offsets in a byte code which are jump targets.
+
+Return the list of offsets.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.dis.findlinestarts">
+    
+  </a>
+  <a name="findlinestarts">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    findlinestarts(code):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Find the offsets in a byte code which are start of lines in the source.
+
+Generate pairs (offset, lineno)</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.dis._test">
+    
+  </a>
+  <a name="_test">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _test():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Simple test program to disassemble a file.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

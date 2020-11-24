@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.encodings : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="package"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.encodings.html" class="code" data-type="Package">encodings</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        package documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Standard "encodings" Package
+
+    Standard Python encoding modules are stored in this package
+    directory.
+
+    Codec modules must have names corresponding to normalized encoding
+    names as defined in the normalize_encoding() function below, e.g.
+    'utf-8' must be implemented by the module 'utf_8.py'.
+
+    Each codec module must export the following interface:
+
+    * getregentry() -&gt; codecs.CodecInfo object
+    The getregentry() API must return a CodecInfo object with encoder, decoder,
+    incrementalencoder, incrementaldecoder, streamwriter and streamreader
+    attributes which adhere to the Python Codec Interface Standard.
+
+    In addition, a module may optionally also define the following
+    APIs which are then used by the package's codec search function:
+
+    * getaliases() -&gt; sequence of encoding name strings to use as aliases
+
+    Alias names returned by getaliases() must be normalized encoding
+    names as defined by normalize_encoding().
+
+Written by Marc-Andre Lemburg (mal@lemburg.com).
+
+(c) Copyright CNRI, All Rights Reserved. NO WARRANTY.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id1369">
+  
+  <tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.aliases.html" class="code" data-type="Module">aliases</a></td>
+    <td><span>Encoding Aliases Support</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.ascii.html" class="code" data-type="Module">ascii</a></td>
+    <td><span>Python 'ascii' Codec</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.base64_codec.html" class="code" data-type="Module">base64_codec</a></td>
+    <td><span>Python 'base64_codec' Codec - base64 content transfer encoding.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.big5.html" class="code" data-type="Module">big5</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.big5hkscs.html" class="code" data-type="Module">big5hkscs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.bz2_codec.html" class="code" data-type="Module">bz2_codec</a></td>
+    <td><span>Python 'bz2_codec' Codec - bz2 compression encoding.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.charmap.html" class="code" data-type="Module">charmap</a></td>
+    <td><span>Generic Python Character Mapping Codec.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp037.html" class="code" data-type="Module">cp037</a></td>
+    <td><span>Python Character Mapping Codec cp037 generated from 'MAPPINGS/VENDORS/MICSFT/EBCDIC/CP037.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp1006.html" class="code" data-type="Module">cp1006</a></td>
+    <td><span>Python Character Mapping Codec cp1006 generated from 'MAPPINGS/VENDORS/MISC/CP1006.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp1026.html" class="code" data-type="Module">cp1026</a></td>
+    <td><span>Python Character Mapping Codec cp1026 generated from 'MAPPINGS/VENDORS/MICSFT/EBCDIC/CP1026.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp1125.html" class="code" data-type="Module">cp1125</a></td>
+    <td><span>Python Character Mapping Codec for CP1125</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp1140.html" class="code" data-type="Module">cp1140</a></td>
+    <td><span>Python Character Mapping Codec cp1140 generated from 'python-mappings/CP1140.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp1250.html" class="code" data-type="Module">cp1250</a></td>
+    <td><span>Python Character Mapping Codec cp1250 generated from 'MAPPINGS/VENDORS/MICSFT/WINDOWS/CP1250.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp1251.html" class="code" data-type="Module">cp1251</a></td>
+    <td><span>Python Character Mapping Codec cp1251 generated from 'MAPPINGS/VENDORS/MICSFT/WINDOWS/CP1251.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp1252.html" class="code" data-type="Module">cp1252</a></td>
+    <td><span>Python Character Mapping Codec cp1252 generated from 'MAPPINGS/VENDORS/MICSFT/WINDOWS/CP1252.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp1253.html" class="code" data-type="Module">cp1253</a></td>
+    <td><span>Python Character Mapping Codec cp1253 generated from 'MAPPINGS/VENDORS/MICSFT/WINDOWS/CP1253.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp1254.html" class="code" data-type="Module">cp1254</a></td>
+    <td><span>Python Character Mapping Codec cp1254 generated from 'MAPPINGS/VENDORS/MICSFT/WINDOWS/CP1254.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp1255.html" class="code" data-type="Module">cp1255</a></td>
+    <td><span>Python Character Mapping Codec cp1255 generated from 'MAPPINGS/VENDORS/MICSFT/WINDOWS/CP1255.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp1256.html" class="code" data-type="Module">cp1256</a></td>
+    <td><span>Python Character Mapping Codec cp1256 generated from 'MAPPINGS/VENDORS/MICSFT/WINDOWS/CP1256.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp1257.html" class="code" data-type="Module">cp1257</a></td>
+    <td><span>Python Character Mapping Codec cp1257 generated from 'MAPPINGS/VENDORS/MICSFT/WINDOWS/CP1257.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp1258.html" class="code" data-type="Module">cp1258</a></td>
+    <td><span>Python Character Mapping Codec cp1258 generated from 'MAPPINGS/VENDORS/MICSFT/WINDOWS/CP1258.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp273.html" class="code" data-type="Module">cp273</a></td>
+    <td><span>Python Character Mapping Codec cp273 generated from 'python-mappings/CP273.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp424.html" class="code" data-type="Module">cp424</a></td>
+    <td><span>Python Character Mapping Codec cp424 generated from 'MAPPINGS/VENDORS/MISC/CP424.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp437.html" class="code" data-type="Module">cp437</a></td>
+    <td><span>Python Character Mapping Codec cp437 generated from 'VENDORS/MICSFT/PC/CP437.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp500.html" class="code" data-type="Module">cp500</a></td>
+    <td><span>Python Character Mapping Codec cp500 generated from 'MAPPINGS/VENDORS/MICSFT/EBCDIC/CP500.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp720.html" class="code" data-type="Module">cp720</a></td>
+    <td><span>Python Character Mapping Codec cp720 generated on Windows: Vista 6.0.6002 SP2 Multiprocessor Free with the command: python Tools/unicode/genwincodec.py 720</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp737.html" class="code" data-type="Module">cp737</a></td>
+    <td><span>Python Character Mapping Codec cp737 generated from 'VENDORS/MICSFT/PC/CP737.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp775.html" class="code" data-type="Module">cp775</a></td>
+    <td><span>Python Character Mapping Codec cp775 generated from 'VENDORS/MICSFT/PC/CP775.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp850.html" class="code" data-type="Module">cp850</a></td>
+    <td><span>Python Character Mapping Codec generated from 'VENDORS/MICSFT/PC/CP850.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp852.html" class="code" data-type="Module">cp852</a></td>
+    <td><span>Python Character Mapping Codec generated from 'VENDORS/MICSFT/PC/CP852.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp855.html" class="code" data-type="Module">cp855</a></td>
+    <td><span>Python Character Mapping Codec generated from 'VENDORS/MICSFT/PC/CP855.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp856.html" class="code" data-type="Module">cp856</a></td>
+    <td><span>Python Character Mapping Codec cp856 generated from 'MAPPINGS/VENDORS/MISC/CP856.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp857.html" class="code" data-type="Module">cp857</a></td>
+    <td><span>Python Character Mapping Codec generated from 'VENDORS/MICSFT/PC/CP857.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp858.html" class="code" data-type="Module">cp858</a></td>
+    <td><span>Python Character Mapping Codec for CP858, modified from cp850.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp860.html" class="code" data-type="Module">cp860</a></td>
+    <td><span>Python Character Mapping Codec generated from 'VENDORS/MICSFT/PC/CP860.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp861.html" class="code" data-type="Module">cp861</a></td>
+    <td><span>Python Character Mapping Codec generated from 'VENDORS/MICSFT/PC/CP861.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp862.html" class="code" data-type="Module">cp862</a></td>
+    <td><span>Python Character Mapping Codec generated from 'VENDORS/MICSFT/PC/CP862.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp863.html" class="code" data-type="Module">cp863</a></td>
+    <td><span>Python Character Mapping Codec generated from 'VENDORS/MICSFT/PC/CP863.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp864.html" class="code" data-type="Module">cp864</a></td>
+    <td><span>Python Character Mapping Codec generated from 'VENDORS/MICSFT/PC/CP864.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp865.html" class="code" data-type="Module">cp865</a></td>
+    <td><span>Python Character Mapping Codec generated from 'VENDORS/MICSFT/PC/CP865.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp866.html" class="code" data-type="Module">cp866</a></td>
+    <td><span>Python Character Mapping Codec generated from 'VENDORS/MICSFT/PC/CP866.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp869.html" class="code" data-type="Module">cp869</a></td>
+    <td><span>Python Character Mapping Codec generated from 'VENDORS/MICSFT/PC/CP869.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp874.html" class="code" data-type="Module">cp874</a></td>
+    <td><span>Python Character Mapping Codec cp874 generated from 'MAPPINGS/VENDORS/MICSFT/WINDOWS/CP874.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp875.html" class="code" data-type="Module">cp875</a></td>
+    <td><span>Python Character Mapping Codec cp875 generated from 'MAPPINGS/VENDORS/MICSFT/EBCDIC/CP875.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp932.html" class="code" data-type="Module">cp932</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp949.html" class="code" data-type="Module">cp949</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.cp950.html" class="code" data-type="Module">cp950</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.euc_jis_2004.html" class="code" data-type="Module">euc_jis_2004</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.euc_jisx0213.html" class="code" data-type="Module">euc_jisx0213</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.euc_jp.html" class="code" data-type="Module">euc_jp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.euc_kr.html" class="code" data-type="Module">euc_kr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.gb18030.html" class="code" data-type="Module">gb18030</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.gb2312.html" class="code" data-type="Module">gb2312</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.gbk.html" class="code" data-type="Module">gbk</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.hex_codec.html" class="code" data-type="Module">hex_codec</a></td>
+    <td><span>Python 'hex_codec' Codec - 2-digit hex content transfer encoding.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.hp_roman8.html" class="code" data-type="Module">hp_roman8</a></td>
+    <td><span>Python Character Mapping Codec generated from 'hp_roman8.txt' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.hz.html" class="code" data-type="Module">hz</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.idna.html" class="code" data-type="Module">idna</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.iso2022_jp.html" class="code" data-type="Module">iso2022_jp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.iso2022_jp_1.html" class="code" data-type="Module">iso2022_jp_1</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.iso2022_jp_2.html" class="code" data-type="Module">iso2022_jp_2</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.iso2022_jp_2004.html" class="code" data-type="Module">iso2022_jp_2004</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.iso2022_jp_3.html" class="code" data-type="Module">iso2022_jp_3</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.iso2022_jp_ext.html" class="code" data-type="Module">iso2022_jp_ext</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.iso2022_kr.html" class="code" data-type="Module">iso2022_kr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.iso8859_1.html" class="code" data-type="Module">iso8859_1</a></td>
+    <td><span>Python Character Mapping Codec iso8859_1 generated from 'MAPPINGS/ISO8859/8859-1.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.iso8859_10.html" class="code" data-type="Module">iso8859_10</a></td>
+    <td><span>Python Character Mapping Codec iso8859_10 generated from 'MAPPINGS/ISO8859/8859-10.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.iso8859_11.html" class="code" data-type="Module">iso8859_11</a></td>
+    <td><span>Python Character Mapping Codec iso8859_11 generated from 'MAPPINGS/ISO8859/8859-11.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.iso8859_13.html" class="code" data-type="Module">iso8859_13</a></td>
+    <td><span>Python Character Mapping Codec iso8859_13 generated from 'MAPPINGS/ISO8859/8859-13.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.iso8859_14.html" class="code" data-type="Module">iso8859_14</a></td>
+    <td><span>Python Character Mapping Codec iso8859_14 generated from 'MAPPINGS/ISO8859/8859-14.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.iso8859_15.html" class="code" data-type="Module">iso8859_15</a></td>
+    <td><span>Python Character Mapping Codec iso8859_15 generated from 'MAPPINGS/ISO8859/8859-15.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.iso8859_16.html" class="code" data-type="Module">iso8859_16</a></td>
+    <td><span>Python Character Mapping Codec iso8859_16 generated from 'MAPPINGS/ISO8859/8859-16.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.iso8859_2.html" class="code" data-type="Module">iso8859_2</a></td>
+    <td><span>Python Character Mapping Codec iso8859_2 generated from 'MAPPINGS/ISO8859/8859-2.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.iso8859_3.html" class="code" data-type="Module">iso8859_3</a></td>
+    <td><span>Python Character Mapping Codec iso8859_3 generated from 'MAPPINGS/ISO8859/8859-3.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.iso8859_4.html" class="code" data-type="Module">iso8859_4</a></td>
+    <td><span>Python Character Mapping Codec iso8859_4 generated from 'MAPPINGS/ISO8859/8859-4.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.iso8859_5.html" class="code" data-type="Module">iso8859_5</a></td>
+    <td><span>Python Character Mapping Codec iso8859_5 generated from 'MAPPINGS/ISO8859/8859-5.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.iso8859_6.html" class="code" data-type="Module">iso8859_6</a></td>
+    <td><span>Python Character Mapping Codec iso8859_6 generated from 'MAPPINGS/ISO8859/8859-6.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.iso8859_7.html" class="code" data-type="Module">iso8859_7</a></td>
+    <td><span>Python Character Mapping Codec iso8859_7 generated from 'MAPPINGS/ISO8859/8859-7.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.iso8859_8.html" class="code" data-type="Module">iso8859_8</a></td>
+    <td><span>Python Character Mapping Codec iso8859_8 generated from 'MAPPINGS/ISO8859/8859-8.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.iso8859_9.html" class="code" data-type="Module">iso8859_9</a></td>
+    <td><span>Python Character Mapping Codec iso8859_9 generated from 'MAPPINGS/ISO8859/8859-9.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.johab.html" class="code" data-type="Module">johab</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.koi8_r.html" class="code" data-type="Module">koi8_r</a></td>
+    <td><span>Python Character Mapping Codec koi8_r generated from 'MAPPINGS/VENDORS/MISC/KOI8-R.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.koi8_t.html" class="code" data-type="Module">koi8_t</a></td>
+    <td><span>Python Character Mapping Codec koi8_t</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.koi8_u.html" class="code" data-type="Module">koi8_u</a></td>
+    <td><span>Python Character Mapping Codec koi8_u generated from 'python-mappings/KOI8-U.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.kz1048.html" class="code" data-type="Module">kz1048</a></td>
+    <td><span>Python Character Mapping Codec kz1048 generated from 'MAPPINGS/VENDORS/MISC/KZ1048.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.latin_1.html" class="code" data-type="Module">latin_1</a></td>
+    <td><span>Python 'latin-1' Codec</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.mac_arabic.html" class="code" data-type="Module">mac_arabic</a></td>
+    <td><span>Python Character Mapping Codec generated from 'VENDORS/APPLE/ARABIC.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.mac_croatian.html" class="code" data-type="Module">mac_croatian</a></td>
+    <td><span>Python Character Mapping Codec mac_croatian generated from 'MAPPINGS/VENDORS/APPLE/CROATIAN.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.mac_cyrillic.html" class="code" data-type="Module">mac_cyrillic</a></td>
+    <td><span>Python Character Mapping Codec mac_cyrillic generated from 'MAPPINGS/VENDORS/APPLE/CYRILLIC.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.mac_farsi.html" class="code" data-type="Module">mac_farsi</a></td>
+    <td><span>Python Character Mapping Codec mac_farsi generated from 'MAPPINGS/VENDORS/APPLE/FARSI.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.mac_greek.html" class="code" data-type="Module">mac_greek</a></td>
+    <td><span>Python Character Mapping Codec mac_greek generated from 'MAPPINGS/VENDORS/APPLE/GREEK.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.mac_iceland.html" class="code" data-type="Module">mac_iceland</a></td>
+    <td><span>Python Character Mapping Codec mac_iceland generated from 'MAPPINGS/VENDORS/APPLE/ICELAND.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.mac_latin2.html" class="code" data-type="Module">mac_latin2</a></td>
+    <td><span>Python Character Mapping Codec mac_latin2 generated from 'MAPPINGS/VENDORS/MICSFT/MAC/LATIN2.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.mac_roman.html" class="code" data-type="Module">mac_roman</a></td>
+    <td><span>Python Character Mapping Codec mac_roman generated from 'MAPPINGS/VENDORS/APPLE/ROMAN.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.mac_romanian.html" class="code" data-type="Module">mac_romanian</a></td>
+    <td><span>Python Character Mapping Codec mac_romanian generated from 'MAPPINGS/VENDORS/APPLE/ROMANIAN.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.mac_turkish.html" class="code" data-type="Module">mac_turkish</a></td>
+    <td><span>Python Character Mapping Codec mac_turkish generated from 'MAPPINGS/VENDORS/APPLE/TURKISH.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.mbcs.html" class="code" data-type="Module">mbcs</a></td>
+    <td><span>Python 'mbcs' Codec for Windows</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.oem.html" class="code" data-type="Module">oem</a></td>
+    <td><span>Python 'oem' Codec for Windows</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.palmos.html" class="code" data-type="Module">palmos</a></td>
+    <td><span>Python Character Mapping Codec for PalmOS 3.5.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.ptcp154.html" class="code" data-type="Module">ptcp154</a></td>
+    <td><span>Python Character Mapping Codec generated from 'PTCP154.txt' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.punycode.html" class="code" data-type="Module">punycode</a></td>
+    <td><span>Codec for the Punicode encoding, as specified in RFC 3492</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.quopri_codec.html" class="code" data-type="Module">quopri_codec</a></td>
+    <td><span>Codec for quoted-printable encoding.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.raw_unicode_escape.html" class="code" data-type="Module">raw_unicode_escape</a></td>
+    <td><span>Python 'raw-unicode-escape' Codec</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.rot_13.html" class="code" data-type="Module">rot_13</a></td>
+    <td><span>Python Character Mapping Codec for ROT13.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.shift_jis.html" class="code" data-type="Module">shift_jis</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.shift_jis_2004.html" class="code" data-type="Module">shift_jis_2004</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.shift_jisx0213.html" class="code" data-type="Module">shift_jisx0213</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.tis_620.html" class="code" data-type="Module">tis_620</a></td>
+    <td><span>Python Character Mapping Codec tis_620 generated from 'python-mappings/TIS-620.TXT' with gencodec.py.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.undefined.html" class="code" data-type="Module">undefined</a></td>
+    <td><span>Python 'undefined' Codec</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.unicode_escape.html" class="code" data-type="Module">unicode_escape</a></td>
+    <td><span>Python 'unicode-escape' Codec</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.utf_16.html" class="code" data-type="Module">utf_16</a></td>
+    <td><span>Python 'utf-16' Codec</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.utf_16_be.html" class="code" data-type="Module">utf_16_be</a></td>
+    <td><span>Python 'utf-16-be' Codec</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.utf_16_le.html" class="code" data-type="Module">utf_16_le</a></td>
+    <td><span>Python 'utf-16-le' Codec</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.utf_32.html" class="code" data-type="Module">utf_32</a></td>
+    <td><span>Python 'utf-32' Codec</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.utf_32_be.html" class="code" data-type="Module">utf_32_be</a></td>
+    <td><span>Python 'utf-32-be' Codec</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.utf_32_le.html" class="code" data-type="Module">utf_32_le</a></td>
+    <td><span>Python 'utf-32-le' Codec</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.utf_7.html" class="code" data-type="Module">utf_7</a></td>
+    <td><span>Python 'utf-7' Codec</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.utf_8.html" class="code" data-type="Module">utf_8</a></td>
+    <td><span>Python 'utf-8' Codec</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.utf_8_sig.html" class="code" data-type="Module">utf_8_sig</a></td>
+    <td><span>Python 'utf-8-sig' Codec This work similar to UTF-8 with the following changes:</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.uu_codec.html" class="code" data-type="Module">uu_codec</a></td>
+    <td><span>Python 'uu_codec' Codec - UU content transfer encoding.</span></td>
+  </tr><tr class="module">
+    
+    <td>Module</td>
+    <td><a href="Lib.encodings.zlib_codec.html" class="code" data-type="Module">zlib_codec</a></td>
+    <td><span>Python 'zlib_codec' Codec - zlib compression encoding.</span></td>
+  </tr>
+</table>
+        
+
+          <p class="fromInitPy">From the <code>__init__.py</code> module:</p><table class="children sortable" id="id1370">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.encodings.CodecRegistryError.html" class="code" data-type="Class">CodecRegistryError</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.encodings.html#normalize_encoding" class="code" data-type="Function">normalize_encoding</a></td>
+    <td><span>Normalize an encoding name.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.encodings.html#search_function" class="code" data-type="Function">search_function</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.encodings.html#_alias_mbcs" class="code" data-type="Function">_alias_mbcs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.encodings.html#_cache" class="code" data-type="Variable">_cache</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.encodings.html#_import_tail" class="code" data-type="Variable">_import_tail</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.encodings.html#_unknown" class="code" data-type="Variable">_unknown</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable private">
+  
+  <a name="Lib.encodings._cache">
+    
+  </a>
+  <a name="_cache">
+    
+  </a>
+  <div class="functionHeader">
+    _cache =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.encodings._unknown">
+    
+  </a>
+  <a name="_unknown">
+    
+  </a>
+  <div class="functionHeader">
+    _unknown =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.encodings._import_tail">
+    
+  </a>
+  <a name="_import_tail">
+    
+  </a>
+  <div class="functionHeader">
+    _import_tail =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[str]</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.encodings.normalize_encoding">
+    
+  </a>
+  <a name="normalize_encoding">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    normalize_encoding(encoding):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Normalize an encoding name.
+
+Normalization works as follows: all non-alphanumeric
+characters except the dot used for Python package names are
+collapsed and replaced with a single underscore, e.g. '  -;#'
+becomes '_'. Leading and trailing underscores are removed.
+
+Note that encoding names should be ASCII only.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.encodings.search_function">
+    
+  </a>
+  <a name="search_function">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    search_function(encoding):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.encodings._alias_mbcs">
+    
+  </a>
+  <a name="_alias_mbcs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _alias_mbcs(encoding):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

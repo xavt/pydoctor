@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.logging.LoggerAdapter : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.logging.html" class="code" data-type="Package">logging</a>.<a href="Lib.logging.LoggerAdapter.html" class="code" data-type="Class">LoggerAdapter</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.logging.LoggerAdapter(<span title="object">object</span>):</code></p>
+        <p><a href="classIndex.html#Lib.logging.LoggerAdapter">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">An adapter for loggers which makes it easier to specify contextual
+information in logging output.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3029">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.LoggerAdapter.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Initialize the adapter with a logger and a dict-like object which provides contextual information. This constructor signature allows easy stacking of LoggerAdapters, if so desired.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.LoggerAdapter.html#logger" class="code" data-type="Instance Variable">logger</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.LoggerAdapter.html#extra" class="code" data-type="Instance Variable">extra</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.LoggerAdapter.html#process" class="code" data-type="Method">process</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.LoggerAdapter.html#debug" class="code" data-type="Method">debug</a></td>
+    <td><span>Delegate a debug call to the underlying logger.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.LoggerAdapter.html#info" class="code" data-type="Method">info</a></td>
+    <td><span>Delegate an info call to the underlying logger.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.LoggerAdapter.html#warning" class="code" data-type="Method">warning</a></td>
+    <td><span>Delegate a warning call to the underlying logger.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.LoggerAdapter.html#warn" class="code" data-type="Method">warn</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.LoggerAdapter.html#error" class="code" data-type="Method">error</a></td>
+    <td><span>Delegate an error call to the underlying logger.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.LoggerAdapter.html#exception" class="code" data-type="Method">exception</a></td>
+    <td><span>Delegate an exception call to the underlying logger.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.LoggerAdapter.html#critical" class="code" data-type="Method">critical</a></td>
+    <td><span>Delegate a critical call to the underlying logger.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.LoggerAdapter.html#log" class="code" data-type="Method">log</a></td>
+    <td><span>Delegate a log call to the underlying logger, after adding contextual information from this adapter instance.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.LoggerAdapter.html#isEnabledFor" class="code" data-type="Method">isEnabledFor</a></td>
+    <td><span>Is this logger enabled for level 'level'?</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.LoggerAdapter.html#setLevel" class="code" data-type="Method">setLevel</a></td>
+    <td><span>Set the specified level on the underlying logger.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.LoggerAdapter.html#getEffectiveLevel" class="code" data-type="Method">getEffectiveLevel</a></td>
+    <td><span>Get the effective level for the underlying logger.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.LoggerAdapter.html#hasHandlers" class="code" data-type="Method">hasHandlers</a></td>
+    <td><span>See if the underlying logger has any handlers.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.LoggerAdapter.html#manager" class="code" data-type="Method">manager</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.LoggerAdapter.html#name" class="code" data-type="Method">name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.LoggerAdapter.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.LoggerAdapter.html#_log" class="code" data-type="Method">_log</a></td>
+    <td><span>Low-level log implementation, proxied to allow nested logger adapters.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.logging.LoggerAdapter.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, logger, extra=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Initialize the adapter with a logger and a dict-like object which
+provides contextual information. This constructor signature allows
+easy stacking of LoggerAdapters, if so desired.
+
+You can effectively pass keyword arguments as shown in the
+following example:
+
+adapter = LoggerAdapter(someLogger, dict(p1=v1, p2="v2"))</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.logging.LoggerAdapter.logger">
+    
+  </a>
+  <a name="logger">
+    
+  </a>
+  <div class="functionHeader">
+    logger =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.logging.LoggerAdapter.extra">
+    
+  </a>
+  <a name="extra">
+    
+  </a>
+  <div class="functionHeader">
+    extra =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.LoggerAdapter.process">
+    
+  </a>
+  <a name="process">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    process(self, msg, kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Process the logging message and keyword arguments passed in to
+a logging call to insert contextual information. You can either
+manipulate the message itself, the keyword args or both. Return
+the message and kwargs modified (or not) to suit your needs.
+
+Normally, you'll only need to override this one method in a
+LoggerAdapter subclass for your specific needs.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.LoggerAdapter.debug">
+    
+  </a>
+  <a name="debug">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    debug(self, msg, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Delegate a debug call to the underlying logger.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.LoggerAdapter.info">
+    
+  </a>
+  <a name="info">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    info(self, msg, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Delegate an info call to the underlying logger.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.LoggerAdapter.warning">
+    
+  </a>
+  <a name="warning">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    warning(self, msg, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Delegate a warning call to the underlying logger.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.LoggerAdapter.warn">
+    
+  </a>
+  <a name="warn">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    warn(self, msg, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.LoggerAdapter.error">
+    
+  </a>
+  <a name="error">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    error(self, msg, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Delegate an error call to the underlying logger.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.LoggerAdapter.exception">
+    
+  </a>
+  <a name="exception">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    exception(self, msg, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Delegate an exception call to the underlying logger.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.LoggerAdapter.critical">
+    
+  </a>
+  <a name="critical">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    critical(self, msg, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Delegate a critical call to the underlying logger.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.LoggerAdapter.log">
+    
+  </a>
+  <a name="log">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    log(self, level, msg, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Delegate a log call to the underlying logger, after adding
+contextual information from this adapter instance.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.LoggerAdapter.isEnabledFor">
+    
+  </a>
+  <a name="isEnabledFor">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    isEnabledFor(self, level):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Is this logger enabled for level 'level'?</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.LoggerAdapter.setLevel">
+    
+  </a>
+  <a name="setLevel">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setLevel(self, level):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set the specified level on the underlying logger.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.LoggerAdapter.getEffectiveLevel">
+    
+  </a>
+  <a name="getEffectiveLevel">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getEffectiveLevel(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get the effective level for the underlying logger.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.LoggerAdapter.hasHandlers">
+    
+  </a>
+  <a name="hasHandlers">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    hasHandlers(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">See if the underlying logger has any handlers.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.logging.LoggerAdapter._log">
+    
+  </a>
+  <a name="_log">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _log(self, level, msg, args, exc_info=None, extra=None, stack_info=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Low-level log implementation, proxied to allow nested logger adapters.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.LoggerAdapter.manager">
+    
+  </a>
+  <a name="manager">
+    
+  </a>
+  <div class="functionHeader">
+    @manager.setter<br />
+    def
+    manager(self, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.LoggerAdapter.name">
+    
+  </a>
+  <a name="name">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    name(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.LoggerAdapter.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __repr__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

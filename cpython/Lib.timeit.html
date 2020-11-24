@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.timeit : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.timeit.html" class="code" data-type="Module">timeit</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Tool for measuring execution time of small code snippets.
+
+This module avoids a number of common traps for measuring execution
+times.  See also Tim Peters' introduction to the Algorithms chapter in
+the Python Cookbook, published by O'Reilly.
+
+Library usage: see the Timer class.
+
+Command line usage:
+    python timeit.py [-n N] [-r N] [-s S] [-p] [-h] [--] [statement]
+
+Options:
+  -n/--number N: how many times to execute 'statement' (default: see below)
+  -r/--repeat N: how many times to repeat the timer (default 5)
+  -s/--setup S: statement to be executed once initially (default 'pass').
+                Execution time of this setup statement is NOT timed.
+  -p/--process: use time.process_time() (default is time.perf_counter())
+  -v/--verbose: print raw timing results; repeat for more digits precision
+  -u/--unit: set the output time unit (nsec, usec, msec, or sec)
+  -h/--help: print this usage message and exit
+  --: separate options from statement, use when statement starts with -
+  statement: statement to be timed (default 'pass')
+
+A multi-line statement may be given by specifying each line as a
+separate argument; indented lines are possible by enclosing an
+argument in quotes and using leading spaces.  Multiple -s options are
+treated similarly.
+
+If -n is not given, a suitable number of loops is calculated by trying
+increasing numbers from the sequence 1, 2, 5, 10, 20, 50, ... until the
+total time is at least 0.2 seconds.
+
+Note: there is a certain baseline overhead associated with executing a
+pass statement.  It differs between versions.  The code here doesn't try
+to hide it, but you should be aware of it.  The baseline overhead can be
+measured by invoking the program without arguments.
+
+Classes:
+
+    Timer
+
+Functions:
+
+    timeit(string, string) -&gt; float
+    repeat(string, string) -&gt; list
+    default_timer() -&gt; float</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id10907">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.timeit.html#dummy_src_name" class="code" data-type="Variable">dummy_src_name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.timeit.html#default_number" class="code" data-type="Variable">default_number</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.timeit.html#default_repeat" class="code" data-type="Variable">default_repeat</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.timeit.html#template" class="code" data-type="Variable">template</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.timeit.html#reindent" class="code" data-type="Function">reindent</a></td>
+    <td><span>Helper to reindent a multi-line statement.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.timeit.Timer.html" class="code" data-type="Class">Timer</a></td>
+    <td><span>Class for timing execution speed of small code snippets.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.timeit.html#timeit" class="code" data-type="Function">timeit</a></td>
+    <td><span>Convenience function to create Timer object and call timeit method.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.timeit.html#repeat" class="code" data-type="Function">repeat</a></td>
+    <td><span>Convenience function to create Timer object and call repeat method.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.timeit.html#main" class="code" data-type="Function">main</a></td>
+    <td><span>Main program, used when run as a script.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.timeit.dummy_src_name">
+    
+  </a>
+  <a name="dummy_src_name">
+    
+  </a>
+  <div class="functionHeader">
+    dummy_src_name =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.timeit.default_number">
+    
+  </a>
+  <a name="default_number">
+    
+  </a>
+  <div class="functionHeader">
+    default_number =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.timeit.default_repeat">
+    
+  </a>
+  <a name="default_repeat">
+    
+  </a>
+  <div class="functionHeader">
+    default_repeat =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.timeit.template">
+    
+  </a>
+  <a name="template">
+    
+  </a>
+  <div class="functionHeader">
+    template =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.timeit.reindent">
+    
+  </a>
+  <a name="reindent">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    reindent(src, indent):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Helper to reindent a multi-line statement.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.timeit.timeit">
+    
+  </a>
+  <a name="timeit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    timeit(stmt="""pass""", setup="""pass""", timer=default_timer, number=default_number, globals=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convenience function to create Timer object and call timeit method.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.timeit.repeat">
+    
+  </a>
+  <a name="repeat">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    repeat(stmt="""pass""", setup="""pass""", timer=default_timer, repeat=default_repeat, number=default_number, globals=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Convenience function to create Timer object and call repeat method.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.timeit.main">
+    
+  </a>
+  <a name="main">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    main(args=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Main program, used when run as a script.
+
+The optional 'args' argument specifies the command line to be parsed,
+defaulting to sys.argv[1:].
+
+The return value is an exit code to be passed to sys.exit(); it
+may be None to indicate success.
+
+When an exception happens during timing, a traceback is printed to
+stderr and the return value is 1.  Exceptions at other times
+(including the template compilation) are not caught.
+
+'_wrap_timer' is an internal interface used for unit testing.  If it
+is not None, it must be a callable that accepts a timer function
+and returns another timer function (used for unit testing).</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

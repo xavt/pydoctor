@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.distutils.tests.support : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.distutils.html" class="code" data-type="Package">distutils</a>.<a href="Lib.distutils.tests.html" class="code" data-type="Package">tests</a>.<a href="Lib.distutils.tests.support.html" class="code" data-type="Module">support</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Support code for distutils test cases.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id997">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.distutils.tests.support.LoggingSilencer.html" class="code" data-type="Class">LoggingSilencer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.distutils.tests.support.TempdirManager.html" class="code" data-type="Class">TempdirManager</a></td>
+    <td><span>Mix-in class that handles temporary directories for test cases.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.distutils.tests.support.DummyCommand.html" class="code" data-type="Class">DummyCommand</a></td>
+    <td><span>Class to store options for retrieval via set_undefined_options().</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.distutils.tests.support.EnvironGuard.html" class="code" data-type="Class">EnvironGuard</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.tests.support.html#copy_xxmodule_c" class="code" data-type="Function">copy_xxmodule_c</a></td>
+    <td><span>Helper for tests that need the xxmodule.c source file.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.tests.support.html#fixup_build_ext" class="code" data-type="Function">fixup_build_ext</a></td>
+    <td><span>Function needed to make build_ext tests pass.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.tests.support.html#_get_xxmodule_path" class="code" data-type="Function">_get_xxmodule_path</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction">
+  
+  <a name="Lib.distutils.tests.support.copy_xxmodule_c">
+    
+  </a>
+  <a name="copy_xxmodule_c">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    copy_xxmodule_c(directory):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Helper for tests that need the xxmodule.c source file.
+
+Example use:
+
+    def test_compile(self):
+        copy_xxmodule_c(self.tmpdir)
+        self.assertIn('xxmodule.c', os.listdir(self.tmpdir))
+
+If the source file can be found, it will be copied to *directory*.  If not,
+the test will be skipped.  Errors during copy are not caught.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.distutils.tests.support._get_xxmodule_path">
+    
+  </a>
+  <a name="_get_xxmodule_path">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_xxmodule_path():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.distutils.tests.support.fixup_build_ext">
+    
+  </a>
+  <a name="fixup_build_ext">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    fixup_build_ext(cmd):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Function needed to make build_ext tests pass.
+
+When Python was built with --enable-shared on Unix, -L. is not enough to
+find libpython&lt;blah&gt;.so, because regrtest runs in a tempdir, not in the
+source directory where the .so lives.
+
+When Python was built with in debug mode on Windows, build_ext commands
+need their debug attribute set, and it is not done automatically for
+some reason.
+
+This function handles both of these things.  Example use:
+
+    cmd = build_ext(dist)
+    support.fixup_build_ext(cmd)
+    cmd.ensure_finalized()
+
+Unlike most other Unix platforms, Mac OS X embeds absolute paths
+to shared libraries into executables, so the fixup is not needed there.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

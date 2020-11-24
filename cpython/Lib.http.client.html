@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.http.client : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.http.html" class="code" data-type="Package">http</a>.<a href="Lib.http.client.html" class="code" data-type="Module">client</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">HTTP/1.1 client library
+
+&lt;intro stuff goes here&gt;
+&lt;other stuff, too&gt;
+
+HTTPConnection goes through a number of "states", which define when a client
+may legally make another request or fetch the response for a particular
+request. This diagram details these state transitions:
+
+    (null)
+      |
+      | HTTPConnection()
+      v
+    Idle
+      |
+      | putrequest()
+      v
+    Request-started
+      |
+      | ( putheader() )*  endheaders()
+      v
+    Request-sent
+      |\_____________________________
+      |                              | getresponse() raises
+      | response = getresponse()     | ConnectionError
+      v                              v
+    Unread-response                Idle
+    [Response-headers-read]
+      |\____________________
+      |                     |
+      | response.read()     | putrequest()
+      v                     v
+    Idle                  Req-started-unread-response
+                     ______/|
+                   /        |
+   response.read() |        | ( putheader() )*  endheaders()
+                   v        v
+       Request-started    Req-sent-unread-response
+                            |
+                            | response.read()
+                            v
+                          Request-sent
+
+This diagram presents the following rules:
+  -- a second request may not be started until {response-headers-read}
+  -- a response [object] cannot be retrieved until {request-sent}
+  -- there is no differentiation between an unread response body and a
+     partially read response body
+
+Note: this enforcement is applied by the HTTPConnection class. The
+      HTTPResponse class does not enforce this state machine, which
+      implies sophisticated clients may accelerate the request/response
+      pipeline. Caution should be taken, though: accelerating the states
+      beyond the above pattern may imply knowledge of the server's
+      connection-close behavior for certain requests. For example, it
+      is impossible to tell whether the server will close the connection
+      UNTIL the response headers have been read; this means that further
+      requests cannot be placed into the pipeline until it is known that
+      the server will NOT be closing the connection.
+
+Logical State                  __state            __response
+-------------                  -------            ----------
+Idle                           _CS_IDLE           None
+Request-started                _CS_REQ_STARTED    None
+Request-sent                   _CS_REQ_SENT       None
+Unread-response                _CS_IDLE           &lt;response_class&gt;
+Req-started-unread-response    _CS_REQ_STARTED    &lt;response_class&gt;
+Req-sent-unread-response       _CS_REQ_SENT       &lt;response_class&gt;</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id1992">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.client.html#HTTP_PORT" class="code" data-type="Variable">HTTP_PORT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.client.html#HTTPS_PORT" class="code" data-type="Variable">HTTPS_PORT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.client.html#responses" class="code" data-type="Variable">responses</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.http.client.HTTPMessage.html" class="code" data-type="Class">HTTPMessage</a></td>
+    <td><span class="undocumented">No class1/1 methods documented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.http.client.html#parse_headers" class="code" data-type="Function">parse_headers</a></td>
+    <td><span>Parses only RFC2822 headers from a file pointer.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.http.client.HTTPResponse.html" class="code" data-type="Class">HTTPResponse</a></td>
+    <td><span class="undocumented">No class0/13 instance variables docstring; , 11/30 methods documented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.http.client.HTTPConnection.html" class="code" data-type="Class">HTTPConnection</a></td>
+    <td><span class="undocumented">No class0/3 class variables docstring; , 0/15 instance variables docstring; , 14/21 methods docstring; , 2/2 static methods documented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.http.client.HTTPSConnection.html" class="code" data-type="Class">HTTPSConnection</a></td>
+    <td><span>This class allows communication via SSL.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.http.client.HTTPException.html" class="code" data-type="Class">HTTPException</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.http.client.NotConnected.html" class="code" data-type="Class">NotConnected</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.http.client.InvalidURL.html" class="code" data-type="Class">InvalidURL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.http.client.UnknownProtocol.html" class="code" data-type="Class">UnknownProtocol</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.http.client.UnknownTransferEncoding.html" class="code" data-type="Class">UnknownTransferEncoding</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.http.client.UnimplementedFileMode.html" class="code" data-type="Class">UnimplementedFileMode</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.http.client.IncompleteRead.html" class="code" data-type="Class">IncompleteRead</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.http.client.ImproperConnectionState.html" class="code" data-type="Class">ImproperConnectionState</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.http.client.CannotSendRequest.html" class="code" data-type="Class">CannotSendRequest</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.http.client.CannotSendHeader.html" class="code" data-type="Class">CannotSendHeader</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.http.client.ResponseNotReady.html" class="code" data-type="Class">ResponseNotReady</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.http.client.BadStatusLine.html" class="code" data-type="Class">BadStatusLine</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.http.client.LineTooLong.html" class="code" data-type="Class">LineTooLong</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.http.client.RemoteDisconnected.html" class="code" data-type="Class">RemoteDisconnected</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.client.html#_UNKNOWN" class="code" data-type="Variable">_UNKNOWN</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.client.html#_CS_IDLE" class="code" data-type="Variable">_CS_IDLE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.client.html#_CS_REQ_STARTED" class="code" data-type="Variable">_CS_REQ_STARTED</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.client.html#_CS_REQ_SENT" class="code" data-type="Variable">_CS_REQ_SENT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.client.html#_MAXLINE" class="code" data-type="Variable">_MAXLINE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.client.html#_MAXHEADERS" class="code" data-type="Variable">_MAXHEADERS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.client.html#_is_legal_header_name" class="code" data-type="Variable">_is_legal_header_name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.client.html#_is_illegal_header_value" class="code" data-type="Variable">_is_illegal_header_value</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.client.html#_contains_disallowed_url_pchar_re" class="code" data-type="Variable">_contains_disallowed_url_pchar_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.client.html#_contains_disallowed_method_pchar_re" class="code" data-type="Variable">_contains_disallowed_method_pchar_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.http.client.html#_METHODS_EXPECTING_BODY" class="code" data-type="Variable">_METHODS_EXPECTING_BODY</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.http.client.html#_encode" class="code" data-type="Function">_encode</a></td>
+    <td><span>Call data.encode("latin-1") but show a better error message.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.http.client.HTTP_PORT">
+    
+  </a>
+  <a name="HTTP_PORT">
+    
+  </a>
+  <div class="functionHeader">
+    HTTP_PORT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.http.client.HTTPS_PORT">
+    
+  </a>
+  <a name="HTTPS_PORT">
+    
+  </a>
+  <div class="functionHeader">
+    HTTPS_PORT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.http.client._UNKNOWN">
+    
+  </a>
+  <a name="_UNKNOWN">
+    
+  </a>
+  <div class="functionHeader">
+    _UNKNOWN =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.http.client._CS_IDLE">
+    
+  </a>
+  <a name="_CS_IDLE">
+    
+  </a>
+  <div class="functionHeader">
+    _CS_IDLE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.http.client._CS_REQ_STARTED">
+    
+  </a>
+  <a name="_CS_REQ_STARTED">
+    
+  </a>
+  <div class="functionHeader">
+    _CS_REQ_STARTED =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.http.client._CS_REQ_SENT">
+    
+  </a>
+  <a name="_CS_REQ_SENT">
+    
+  </a>
+  <div class="functionHeader">
+    _CS_REQ_SENT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.http.client.responses">
+    
+  </a>
+  <a name="responses">
+    
+  </a>
+  <div class="functionHeader">
+    responses =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.http.client._MAXLINE">
+    
+  </a>
+  <a name="_MAXLINE">
+    
+  </a>
+  <div class="functionHeader">
+    _MAXLINE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.http.client._MAXHEADERS">
+    
+  </a>
+  <a name="_MAXHEADERS">
+    
+  </a>
+  <div class="functionHeader">
+    _MAXHEADERS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.http.client._is_legal_header_name">
+    
+  </a>
+  <a name="_is_legal_header_name">
+    
+  </a>
+  <div class="functionHeader">
+    _is_legal_header_name =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.http.client._is_illegal_header_value">
+    
+  </a>
+  <a name="_is_illegal_header_value">
+    
+  </a>
+  <div class="functionHeader">
+    _is_illegal_header_value =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.http.client._contains_disallowed_url_pchar_re">
+    
+  </a>
+  <a name="_contains_disallowed_url_pchar_re">
+    
+  </a>
+  <div class="functionHeader">
+    _contains_disallowed_url_pchar_re =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.http.client._contains_disallowed_method_pchar_re">
+    
+  </a>
+  <a name="_contains_disallowed_method_pchar_re">
+    
+  </a>
+  <div class="functionHeader">
+    _contains_disallowed_method_pchar_re =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.http.client._METHODS_EXPECTING_BODY">
+    
+  </a>
+  <a name="_METHODS_EXPECTING_BODY">
+    
+  </a>
+  <div class="functionHeader">
+    _METHODS_EXPECTING_BODY =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Set[str]</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.http.client._encode">
+    
+  </a>
+  <a name="_encode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _encode(data, name="""data"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Call data.encode("latin-1") but show a better error message.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.http.client.parse_headers">
+    
+  </a>
+  <a name="parse_headers">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse_headers(fp, _class=HTTPMessage):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parses only RFC2822 headers from a file pointer.
+
+email Parser wants to see strings rather than bytes.
+But a TextIOWrapper around self.rfile would buffer too many bytes
+from the stream, bytes which we later need to read as bytes.
+So we read the correct bytes here, as bytes, for email Parser
+to parse.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,1641 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.test.libregrtest.save_env.saved_test_environment : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.test.html" class="code" data-type="Package">test</a>.<a href="Lib.test.libregrtest.html" class="code" data-type="Package">libregrtest</a>.<a href="Lib.test.libregrtest.save_env.html" class="code" data-type="Module">save_env</a>.<a href="Lib.test.libregrtest.save_env.saved_test_environment.html" class="code" data-type="Class">saved_test_environment</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.test.libregrtest.save_env.saved_test_environment:</code></p>
+        <p><a href="classIndex.html#Lib.test.libregrtest.save_env.saved_test_environment">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Save bits of the test environment and restore them at block exit.
+
+    with saved_test_environment(testname, verbose, quiet):
+        #stuff
+
+Unless quiet is True, a warning is printed to stderr if any of
+the saved items was changed by the test.  The attribute 'changed'
+is initially False, but is set to True if a change is detected.
+
+If verbose is more than 1, the before and after state of changed
+items is also printed.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3960">
+  
+  <tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#changed" class="code" data-type="Instance Variable">changed</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#testname" class="code" data-type="Instance Variable">testname</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#verbose" class="code" data-type="Instance Variable">verbose</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#quiet" class="code" data-type="Instance Variable">quiet</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#pgo" class="code" data-type="Instance Variable">pgo</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#resources" class="code" data-type="Class Variable">resources</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#get_urllib_requests__url_tempfiles" class="code" data-type="Method">get_urllib_requests__url_tempfiles</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#restore_urllib_requests__url_tempfiles" class="code" data-type="Method">restore_urllib_requests__url_tempfiles</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#get_urllib_requests__opener" class="code" data-type="Method">get_urllib_requests__opener</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#restore_urllib_requests__opener" class="code" data-type="Method">restore_urllib_requests__opener</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#get_asyncio_events__event_loop_policy" class="code" data-type="Method">get_asyncio_events__event_loop_policy</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#restore_asyncio_events__event_loop_policy" class="code" data-type="Method">restore_asyncio_events__event_loop_policy</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#get_sys_argv" class="code" data-type="Method">get_sys_argv</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#restore_sys_argv" class="code" data-type="Method">restore_sys_argv</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#get_cwd" class="code" data-type="Method">get_cwd</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#restore_cwd" class="code" data-type="Method">restore_cwd</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#get_sys_stdout" class="code" data-type="Method">get_sys_stdout</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#restore_sys_stdout" class="code" data-type="Method">restore_sys_stdout</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#get_sys_stderr" class="code" data-type="Method">get_sys_stderr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#restore_sys_stderr" class="code" data-type="Method">restore_sys_stderr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#get_sys_stdin" class="code" data-type="Method">get_sys_stdin</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#restore_sys_stdin" class="code" data-type="Method">restore_sys_stdin</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#get_os_environ" class="code" data-type="Method">get_os_environ</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#restore_os_environ" class="code" data-type="Method">restore_os_environ</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#get_sys_path" class="code" data-type="Method">get_sys_path</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#restore_sys_path" class="code" data-type="Method">restore_sys_path</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#get_sys_path_hooks" class="code" data-type="Method">get_sys_path_hooks</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#restore_sys_path_hooks" class="code" data-type="Method">restore_sys_path_hooks</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#get_sys_gettrace" class="code" data-type="Method">get_sys_gettrace</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#restore_sys_gettrace" class="code" data-type="Method">restore_sys_gettrace</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#get___import__" class="code" data-type="Method">get___import__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#restore___import__" class="code" data-type="Method">restore___import__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#get_warnings_filters" class="code" data-type="Method">get_warnings_filters</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#restore_warnings_filters" class="code" data-type="Method">restore_warnings_filters</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#get_asyncore_socket_map" class="code" data-type="Method">get_asyncore_socket_map</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#restore_asyncore_socket_map" class="code" data-type="Method">restore_asyncore_socket_map</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#get_shutil_archive_formats" class="code" data-type="Method">get_shutil_archive_formats</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#restore_shutil_archive_formats" class="code" data-type="Method">restore_shutil_archive_formats</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#get_shutil_unpack_formats" class="code" data-type="Method">get_shutil_unpack_formats</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#restore_shutil_unpack_formats" class="code" data-type="Method">restore_shutil_unpack_formats</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#get_logging__handlers" class="code" data-type="Method">get_logging__handlers</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#restore_logging__handlers" class="code" data-type="Method">restore_logging__handlers</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#get_logging__handlerList" class="code" data-type="Method">get_logging__handlerList</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#restore_logging__handlerList" class="code" data-type="Method">restore_logging__handlerList</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#get_sys_warnoptions" class="code" data-type="Method">get_sys_warnoptions</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#restore_sys_warnoptions" class="code" data-type="Method">restore_sys_warnoptions</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#get_threading__dangling" class="code" data-type="Method">get_threading__dangling</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#restore_threading__dangling" class="code" data-type="Method">restore_threading__dangling</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#get_multiprocessing_process__dangling" class="code" data-type="Method">get_multiprocessing_process__dangling</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#restore_multiprocessing_process__dangling" class="code" data-type="Method">restore_multiprocessing_process__dangling</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#get_sysconfig__CONFIG_VARS" class="code" data-type="Method">get_sysconfig__CONFIG_VARS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#restore_sysconfig__CONFIG_VARS" class="code" data-type="Method">restore_sysconfig__CONFIG_VARS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#get_sysconfig__INSTALL_SCHEMES" class="code" data-type="Method">get_sysconfig__INSTALL_SCHEMES</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#restore_sysconfig__INSTALL_SCHEMES" class="code" data-type="Method">restore_sysconfig__INSTALL_SCHEMES</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#get_files" class="code" data-type="Method">get_files</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#restore_files" class="code" data-type="Method">restore_files</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#get_locale" class="code" data-type="Method">get_locale</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#restore_locale" class="code" data-type="Method">restore_locale</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#get_warnings_showwarning" class="code" data-type="Method">get_warnings_showwarning</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#restore_warnings_showwarning" class="code" data-type="Method">restore_warnings_showwarning</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#resource_info" class="code" data-type="Method">resource_info</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#__enter__" class="code" data-type="Method">__enter__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#saved_values" class="code" data-type="Instance Variable">saved_values</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#__exit__" class="code" data-type="Method">__exit__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.test.libregrtest.save_env.saved_test_environment.html#_lc" class="code" data-type="Class Variable">_lc</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseinstancevariable">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.changed">
+    
+  </a>
+  <a name="changed">
+    
+  </a>
+  <div class="functionHeader">
+    changed =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, testname, verbose=0, quiet=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.testname">
+    
+  </a>
+  <a name="testname">
+    
+  </a>
+  <div class="functionHeader">
+    testname =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.verbose">
+    
+  </a>
+  <a name="verbose">
+    
+  </a>
+  <div class="functionHeader">
+    verbose =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.quiet">
+    
+  </a>
+  <a name="quiet">
+    
+  </a>
+  <div class="functionHeader">
+    quiet =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.pgo">
+    
+  </a>
+  <a name="pgo">
+    
+  </a>
+  <div class="functionHeader">
+    pgo =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.resources">
+    
+  </a>
+  <a name="resources">
+    
+  </a>
+  <div class="functionHeader">
+    resources =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Tuple[str, ...]</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.get_urllib_requests__url_tempfiles">
+    
+  </a>
+  <a name="get_urllib_requests__url_tempfiles">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_urllib_requests__url_tempfiles(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.restore_urllib_requests__url_tempfiles">
+    
+  </a>
+  <a name="restore_urllib_requests__url_tempfiles">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    restore_urllib_requests__url_tempfiles(self, tempfiles):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.get_urllib_requests__opener">
+    
+  </a>
+  <a name="get_urllib_requests__opener">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_urllib_requests__opener(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.restore_urllib_requests__opener">
+    
+  </a>
+  <a name="restore_urllib_requests__opener">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    restore_urllib_requests__opener(self, opener):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.get_asyncio_events__event_loop_policy">
+    
+  </a>
+  <a name="get_asyncio_events__event_loop_policy">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_asyncio_events__event_loop_policy(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.restore_asyncio_events__event_loop_policy">
+    
+  </a>
+  <a name="restore_asyncio_events__event_loop_policy">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    restore_asyncio_events__event_loop_policy(self, policy):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.get_sys_argv">
+    
+  </a>
+  <a name="get_sys_argv">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_sys_argv(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.restore_sys_argv">
+    
+  </a>
+  <a name="restore_sys_argv">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    restore_sys_argv(self, saved_argv):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.get_cwd">
+    
+  </a>
+  <a name="get_cwd">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_cwd(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.restore_cwd">
+    
+  </a>
+  <a name="restore_cwd">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    restore_cwd(self, saved_cwd):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.get_sys_stdout">
+    
+  </a>
+  <a name="get_sys_stdout">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_sys_stdout(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.restore_sys_stdout">
+    
+  </a>
+  <a name="restore_sys_stdout">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    restore_sys_stdout(self, saved_stdout):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.get_sys_stderr">
+    
+  </a>
+  <a name="get_sys_stderr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_sys_stderr(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.restore_sys_stderr">
+    
+  </a>
+  <a name="restore_sys_stderr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    restore_sys_stderr(self, saved_stderr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.get_sys_stdin">
+    
+  </a>
+  <a name="get_sys_stdin">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_sys_stdin(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.restore_sys_stdin">
+    
+  </a>
+  <a name="restore_sys_stdin">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    restore_sys_stdin(self, saved_stdin):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.get_os_environ">
+    
+  </a>
+  <a name="get_os_environ">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_os_environ(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.restore_os_environ">
+    
+  </a>
+  <a name="restore_os_environ">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    restore_os_environ(self, saved_environ):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.get_sys_path">
+    
+  </a>
+  <a name="get_sys_path">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_sys_path(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.restore_sys_path">
+    
+  </a>
+  <a name="restore_sys_path">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    restore_sys_path(self, saved_path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.get_sys_path_hooks">
+    
+  </a>
+  <a name="get_sys_path_hooks">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_sys_path_hooks(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.restore_sys_path_hooks">
+    
+  </a>
+  <a name="restore_sys_path_hooks">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    restore_sys_path_hooks(self, saved_hooks):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.get_sys_gettrace">
+    
+  </a>
+  <a name="get_sys_gettrace">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_sys_gettrace(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.restore_sys_gettrace">
+    
+  </a>
+  <a name="restore_sys_gettrace">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    restore_sys_gettrace(self, trace_fxn):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.get___import__">
+    
+  </a>
+  <a name="get___import__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get___import__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.restore___import__">
+    
+  </a>
+  <a name="restore___import__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    restore___import__(self, import_):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.get_warnings_filters">
+    
+  </a>
+  <a name="get_warnings_filters">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_warnings_filters(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.restore_warnings_filters">
+    
+  </a>
+  <a name="restore_warnings_filters">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    restore_warnings_filters(self, saved_filters):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.get_asyncore_socket_map">
+    
+  </a>
+  <a name="get_asyncore_socket_map">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_asyncore_socket_map(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.restore_asyncore_socket_map">
+    
+  </a>
+  <a name="restore_asyncore_socket_map">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    restore_asyncore_socket_map(self, saved_map):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.get_shutil_archive_formats">
+    
+  </a>
+  <a name="get_shutil_archive_formats">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_shutil_archive_formats(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.restore_shutil_archive_formats">
+    
+  </a>
+  <a name="restore_shutil_archive_formats">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    restore_shutil_archive_formats(self, saved):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.get_shutil_unpack_formats">
+    
+  </a>
+  <a name="get_shutil_unpack_formats">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_shutil_unpack_formats(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.restore_shutil_unpack_formats">
+    
+  </a>
+  <a name="restore_shutil_unpack_formats">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    restore_shutil_unpack_formats(self, saved):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.get_logging__handlers">
+    
+  </a>
+  <a name="get_logging__handlers">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_logging__handlers(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.restore_logging__handlers">
+    
+  </a>
+  <a name="restore_logging__handlers">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    restore_logging__handlers(self, saved_handlers):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.get_logging__handlerList">
+    
+  </a>
+  <a name="get_logging__handlerList">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_logging__handlerList(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.restore_logging__handlerList">
+    
+  </a>
+  <a name="restore_logging__handlerList">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    restore_logging__handlerList(self, saved_handlerList):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.get_sys_warnoptions">
+    
+  </a>
+  <a name="get_sys_warnoptions">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_sys_warnoptions(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.restore_sys_warnoptions">
+    
+  </a>
+  <a name="restore_sys_warnoptions">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    restore_sys_warnoptions(self, saved_options):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.get_threading__dangling">
+    
+  </a>
+  <a name="get_threading__dangling">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_threading__dangling(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.restore_threading__dangling">
+    
+  </a>
+  <a name="restore_threading__dangling">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    restore_threading__dangling(self, saved):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.get_multiprocessing_process__dangling">
+    
+  </a>
+  <a name="get_multiprocessing_process__dangling">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_multiprocessing_process__dangling(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.restore_multiprocessing_process__dangling">
+    
+  </a>
+  <a name="restore_multiprocessing_process__dangling">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    restore_multiprocessing_process__dangling(self, saved):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.get_sysconfig__CONFIG_VARS">
+    
+  </a>
+  <a name="get_sysconfig__CONFIG_VARS">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_sysconfig__CONFIG_VARS(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.restore_sysconfig__CONFIG_VARS">
+    
+  </a>
+  <a name="restore_sysconfig__CONFIG_VARS">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    restore_sysconfig__CONFIG_VARS(self, saved):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.get_sysconfig__INSTALL_SCHEMES">
+    
+  </a>
+  <a name="get_sysconfig__INSTALL_SCHEMES">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_sysconfig__INSTALL_SCHEMES(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.restore_sysconfig__INSTALL_SCHEMES">
+    
+  </a>
+  <a name="restore_sysconfig__INSTALL_SCHEMES">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    restore_sysconfig__INSTALL_SCHEMES(self, saved):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.get_files">
+    
+  </a>
+  <a name="get_files">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_files(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.restore_files">
+    
+  </a>
+  <a name="restore_files">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    restore_files(self, saved_value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable private">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment._lc">
+    
+  </a>
+  <a name="_lc">
+    
+  </a>
+  <div class="functionHeader">
+    _lc =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.get_locale">
+    
+  </a>
+  <a name="get_locale">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_locale(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.restore_locale">
+    
+  </a>
+  <a name="restore_locale">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    restore_locale(self, saved):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.get_warnings_showwarning">
+    
+  </a>
+  <a name="get_warnings_showwarning">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_warnings_showwarning(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.restore_warnings_showwarning">
+    
+  </a>
+  <a name="restore_warnings_showwarning">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    restore_warnings_showwarning(self, fxn):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.resource_info">
+    
+  </a>
+  <a name="resource_info">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    resource_info(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.__enter__">
+    
+  </a>
+  <a name="__enter__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __enter__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.saved_values">
+    
+  </a>
+  <a name="saved_values">
+    
+  </a>
+  <div class="functionHeader">
+    saved_values =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.libregrtest.save_env.saved_test_environment.__exit__">
+    
+  </a>
+  <a name="__exit__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __exit__(self, exc_type, exc_val, exc_tb):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.asyncio.locks.Lock : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.asyncio.html" class="code" data-type="Package">asyncio</a>.<a href="Lib.asyncio.locks.html" class="code" data-type="Module">locks</a>.<a href="Lib.asyncio.locks.Lock.html" class="code" data-type="Class">Lock</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.asyncio.locks.Lock(<a href="Lib.asyncio.locks._ContextManagerMixin.html" class="code" data-type="Class">_ContextManagerMixin</a>):</code></p>
+        <p><a href="classIndex.html#Lib.asyncio.locks.Lock">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Primitive lock objects.
+
+A primitive lock is a synchronization primitive that is not owned
+by a particular coroutine when locked.  A primitive lock is in one
+of two states, 'locked' or 'unlocked'.
+
+It is created in the unlocked state.  It has two basic methods,
+acquire() and release().  When the state is unlocked, acquire()
+changes the state to locked and returns immediately.  When the
+state is locked, acquire() blocks until a call to release() in
+another coroutine changes it to unlocked, then the acquire() call
+resets it to locked and returns.  The release() method should only
+be called in the locked state; it changes the state to unlocked
+and returns immediately.  If an attempt is made to release an
+unlocked lock, a RuntimeError will be raised.
+
+When more than one coroutine is blocked in acquire() waiting for
+the state to turn to unlocked, only one coroutine proceeds when a
+release() call resets the state to unlocked; first coroutine which
+is blocked in acquire() is being processed.
+
+acquire() is a coroutine and should be called with 'await'.
+
+Locks also support the asynchronous context management protocol.
+'async with lock' statement should be used.
+
+Usage:
+
+    lock = Lock()
+    ...
+    await lock.acquire()
+    try:
+        ...
+    finally:
+        lock.release()
+
+Context manager usage:
+
+    lock = Lock()
+    ...
+    async with lock:
+         ...
+
+Lock objects can be tested for locking state:
+
+    if not lock.locked():
+       await lock.acquire()
+    else:
+       # lock is acquired
+       ...</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id324">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.locks.Lock.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.locks.Lock.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.locks.Lock.html#locked" class="code" data-type="Method">locked</a></td>
+    <td><span>Return True if lock is acquired.</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.asyncio.locks.Lock.html#fut" class="code" data-type="Class Variable">fut</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.locks.Lock.html#release" class="code" data-type="Method">release</a></td>
+    <td><span>Release a lock.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.locks.Lock.html#_waiters" class="code" data-type="Instance Variable">_waiters</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.locks.Lock.html#_locked" class="code" data-type="Instance Variable">_locked</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.asyncio.locks.Lock.html#_loop" class="code" data-type="Instance Variable">_loop</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.locks.Lock.html#_wake_up_first" class="code" data-type="Method">_wake_up_first</a></td>
+    <td><span>Wake up the first waiter if it isn't done.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.asyncio.locks.Lock.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.locks.Lock._waiters">
+    
+  </a>
+  <a name="_waiters">
+    
+  </a>
+  <div class="functionHeader">
+    _waiters =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.locks.Lock._locked">
+    
+  </a>
+  <a name="_locked">
+    
+  </a>
+  <div class="functionHeader">
+    _locked =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.asyncio.locks.Lock._loop">
+    
+  </a>
+  <a name="_loop">
+    
+  </a>
+  <div class="functionHeader">
+    _loop =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.locks.Lock.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __repr__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.locks.Lock.locked">
+    
+  </a>
+  <a name="locked">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    locked(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True if lock is acquired.</p></div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.asyncio.locks.Lock.fut">
+    
+  </a>
+  <a name="fut">
+    
+  </a>
+  <div class="functionHeader">
+    fut =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.locks.Lock.release">
+    
+  </a>
+  <a name="release">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    release(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Release a lock.
+
+When the lock is locked, reset it to unlocked, and return.
+If any other coroutines are blocked waiting for the lock to become
+unlocked, allow exactly one of them to proceed.
+
+When invoked on an unlocked lock, a RuntimeError is raised.
+
+There is no return value.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.asyncio.locks.Lock._wake_up_first">
+    
+  </a>
+  <a name="_wake_up_first">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _wake_up_first(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Wake up the first waiter if it isn't done.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

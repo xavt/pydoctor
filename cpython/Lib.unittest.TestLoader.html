@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.unittest.TestLoader : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.unittest.html" class="code" data-type="Package">unittest</a>.<a href="Lib.unittest.TestLoader.html" class="code" data-type="Class">TestLoader</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.unittest.TestLoader(<span title="object">object</span>):</code></p>
+        <p><a href="classIndex.html#Lib.unittest.TestLoader">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">This class is responsible for loading tests according to various criteria
+and returning them wrapped in a TestSuite</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id11615">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.unittest.TestLoader.html#testMethodPrefix" class="code" data-type="Class Variable">testMethodPrefix</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.unittest.TestLoader.html#sortTestMethodsUsing" class="code" data-type="Class Variable">sortTestMethodsUsing</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.unittest.TestLoader.html#testNamePatterns" class="code" data-type="Class Variable">testNamePatterns</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestLoader.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.unittest.TestLoader.html#errors" class="code" data-type="Instance Variable">errors</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestLoader.html#loadTestsFromTestCase" class="code" data-type="Method">loadTestsFromTestCase</a></td>
+    <td><span>Return a suite of all test cases contained in testCaseClass</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestLoader.html#loadTestsFromModule" class="code" data-type="Method">loadTestsFromModule</a></td>
+    <td><span>Return a suite of all test cases contained in the given module</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestLoader.html#loadTestsFromName" class="code" data-type="Method">loadTestsFromName</a></td>
+    <td><span>Return a suite of all test cases given a string specifier.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestLoader.html#loadTestsFromNames" class="code" data-type="Method">loadTestsFromNames</a></td>
+    <td><span>Return a suite of all test cases found using the given sequence of string specifiers. See 'loadTestsFromName()'.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestLoader.html#getTestCaseNames" class="code" data-type="Method">getTestCaseNames</a></td>
+    <td><span>Return a sorted sequence of method names found within testCaseClass</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestLoader.html#discover" class="code" data-type="Method">discover</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.unittest.TestLoader.html#_top_level_dir" class="code" data-type="Instance Variable">_top_level_dir</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.unittest.TestLoader.html#_loading_packages" class="code" data-type="Instance Variable">_loading_packages</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestLoader.html#_get_directory_containing_module" class="code" data-type="Method">_get_directory_containing_module</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestLoader.html#_get_name_from_path" class="code" data-type="Method">_get_name_from_path</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestLoader.html#_get_module_from_name" class="code" data-type="Method">_get_module_from_name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestLoader.html#_match_path" class="code" data-type="Method">_match_path</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestLoader.html#_find_tests" class="code" data-type="Method">_find_tests</a></td>
+    <td><span>Used by discovery. Yields test suites it loads.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.unittest.TestLoader.html#_find_test_path" class="code" data-type="Method">_find_test_path</a></td>
+    <td><span>Used by discovery.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.unittest.TestLoader.testMethodPrefix">
+    
+  </a>
+  <a name="testMethodPrefix">
+    
+  </a>
+  <div class="functionHeader">
+    testMethodPrefix =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.unittest.TestLoader.sortTestMethodsUsing">
+    
+  </a>
+  <a name="sortTestMethodsUsing">
+    
+  </a>
+  <div class="functionHeader">
+    sortTestMethodsUsing =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.unittest.TestLoader.testNamePatterns">
+    
+  </a>
+  <a name="testNamePatterns">
+    
+  </a>
+  <div class="functionHeader">
+    testNamePatterns =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.unittest.TestLoader._top_level_dir">
+    
+  </a>
+  <a name="_top_level_dir">
+    
+  </a>
+  <div class="functionHeader">
+    _top_level_dir =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestLoader.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.unittest.TestLoader.errors">
+    
+  </a>
+  <a name="errors">
+    
+  </a>
+  <div class="functionHeader">
+    errors =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.unittest.TestLoader._loading_packages">
+    
+  </a>
+  <a name="_loading_packages">
+    
+  </a>
+  <div class="functionHeader">
+    _loading_packages =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestLoader.loadTestsFromTestCase">
+    
+  </a>
+  <a name="loadTestsFromTestCase">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    loadTestsFromTestCase(self, testCaseClass):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a suite of all test cases contained in testCaseClass</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestLoader.loadTestsFromModule">
+    
+  </a>
+  <a name="loadTestsFromModule">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    loadTestsFromModule(self, module, *args, **kws):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a suite of all test cases contained in the given module</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestLoader.loadTestsFromName">
+    
+  </a>
+  <a name="loadTestsFromName">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    loadTestsFromName(self, name, module=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a suite of all test cases given a string specifier.
+
+The name may resolve either to a module, a test case class, a
+test method within a test case class, or a callable object which
+returns a TestCase or TestSuite instance.
+
+The method optionally resolves the names relative to a given module.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestLoader.loadTestsFromNames">
+    
+  </a>
+  <a name="loadTestsFromNames">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    loadTestsFromNames(self, names, module=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a suite of all test cases found using the given sequence
+of string specifiers. See 'loadTestsFromName()'.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestLoader.getTestCaseNames">
+    
+  </a>
+  <a name="getTestCaseNames">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getTestCaseNames(self, testCaseClass):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a sorted sequence of method names found within testCaseClass
+        </p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.unittest.TestLoader.discover">
+    
+  </a>
+  <a name="discover">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    discover(self, start_dir, pattern="""test*.py""", top_level_dir=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Find and return all test modules from the specified start
+directory, recursing into subdirectories to find them and return all
+tests found within them. Only test files that match the pattern will
+be loaded. (Using shell style pattern matching.)
+
+All test modules must be importable from the top level of the project.
+If the start directory is not the top level directory then the top
+level directory must be specified separately.
+
+If a test package name (directory with '__init__.py') matches the
+pattern then the package will be checked for a 'load_tests' function. If
+this exists then it will be called with (loader, tests, pattern) unless
+the package has already had load_tests called from the same discovery
+invocation, in which case the package module object is not scanned for
+tests - this ensures that when a package uses discover to further
+discover child tests that infinite recursion does not happen.
+
+If load_tests exists then discovery does *not* recurse into the package,
+load_tests is responsible for loading all tests in the package.
+
+The pattern is deliberately not stored as a loader attribute so that
+packages can continue discovery themselves. top_level_dir is stored so
+load_tests does not need to pass this argument in to loader.discover().
+
+Paths are sorted before being imported to ensure reproducible execution
+order even on filesystems with non-alphabetical ordering like ext3/4.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.unittest.TestLoader._get_directory_containing_module">
+    
+  </a>
+  <a name="_get_directory_containing_module">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_directory_containing_module(self, module_name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.unittest.TestLoader._get_name_from_path">
+    
+  </a>
+  <a name="_get_name_from_path">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_name_from_path(self, path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.unittest.TestLoader._get_module_from_name">
+    
+  </a>
+  <a name="_get_module_from_name">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_module_from_name(self, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.unittest.TestLoader._match_path">
+    
+  </a>
+  <a name="_match_path">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _match_path(self, path, full_path, pattern):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.unittest.TestLoader._find_tests">
+    
+  </a>
+  <a name="_find_tests">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _find_tests(self, start_dir, pattern, namespace=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Used by discovery. Yields test suites it loads.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.unittest.TestLoader._find_test_path">
+    
+  </a>
+  <a name="_find_test_path">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _find_test_path(self, full_path, pattern, namespace=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Used by discovery.
+
+Loads tests from a single file, or a directories' __init__.py when
+passed the directory.
+
+Returns a tuple (None_or_tests_from_file, should_recurse).</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

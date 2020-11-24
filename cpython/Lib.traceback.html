@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.traceback : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.traceback.html" class="code" data-type="Module">traceback</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Extract, format and print information about Python stack traces.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id11454">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.traceback.html#print_list" class="code" data-type="Function">print_list</a></td>
+    <td><span>Print the list of tuples as returned by extract_tb() or extract_stack() as a formatted stack trace to the given file.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.traceback.html#format_list" class="code" data-type="Function">format_list</a></td>
+    <td><span>Format a list of tuples or FrameSummary objects for printing.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.traceback.html#print_tb" class="code" data-type="Function">print_tb</a></td>
+    <td><span>Print up to 'limit' stack trace entries from the traceback 'tb'.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.traceback.html#format_tb" class="code" data-type="Function">format_tb</a></td>
+    <td><span>A shorthand for 'format_list(extract_tb(tb, limit))'.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.traceback.html#extract_tb" class="code" data-type="Function">extract_tb</a></td>
+    <td><span>Return a StackSummary object representing a list of pre-processed entries from traceback.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.traceback.html#print_exception" class="code" data-type="Function">print_exception</a></td>
+    <td><span>Print exception up to 'limit' stack trace entries from 'tb' to 'file'.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.traceback.html#format_exception" class="code" data-type="Function">format_exception</a></td>
+    <td><span>Format a stack trace and the exception information.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.traceback.html#format_exception_only" class="code" data-type="Function">format_exception_only</a></td>
+    <td><span>Format the exception part of a traceback.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.traceback.html#print_exc" class="code" data-type="Function">print_exc</a></td>
+    <td><span>Shorthand for 'print_exception(*sys.exc_info(), limit, file)'.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.traceback.html#format_exc" class="code" data-type="Function">format_exc</a></td>
+    <td><span>Like print_exc() but return a string.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.traceback.html#print_last" class="code" data-type="Function">print_last</a></td>
+    <td><span>This is a shorthand for 'print_exception(sys.last_type, sys.last_value, sys.last_traceback, limit, file)'.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.traceback.html#print_stack" class="code" data-type="Function">print_stack</a></td>
+    <td><span>Print a stack trace from its invocation point.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.traceback.html#format_stack" class="code" data-type="Function">format_stack</a></td>
+    <td><span>Shorthand for 'format_list(extract_stack(f, limit))'.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.traceback.html#extract_stack" class="code" data-type="Function">extract_stack</a></td>
+    <td><span>Extract the raw traceback from the current stack frame.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.traceback.html#clear_frames" class="code" data-type="Function">clear_frames</a></td>
+    <td><span>Clear all references to local variables in the frames of a traceback.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.traceback.FrameSummary.html" class="code" data-type="Class">FrameSummary</a></td>
+    <td><span>A single frame from a traceback.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.traceback.html#walk_stack" class="code" data-type="Function">walk_stack</a></td>
+    <td><span>Walk a stack yielding the frame and line number for each frame.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.traceback.html#walk_tb" class="code" data-type="Function">walk_tb</a></td>
+    <td><span>Walk a traceback yielding the frame and line number for each frame.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.traceback.StackSummary.html" class="code" data-type="Class">StackSummary</a></td>
+    <td><span>A stack of frames.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.traceback.TracebackException.html" class="code" data-type="Class">TracebackException</a></td>
+    <td><span>An exception ready for rendering.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.traceback.html#_cause_message" class="code" data-type="Variable">_cause_message</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.traceback.html#_context_message" class="code" data-type="Variable">_context_message</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.traceback.html#_sentinel" class="code" data-type="Variable">_sentinel</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.traceback.html#_parse_value_tb" class="code" data-type="Function">_parse_value_tb</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.traceback.html#_format_final_exc_line" class="code" data-type="Function">_format_final_exc_line</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.traceback.html#_some_str" class="code" data-type="Function">_some_str</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.traceback.html#_RECURSIVE_CUTOFF" class="code" data-type="Variable">_RECURSIVE_CUTOFF</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction">
+  
+  <a name="Lib.traceback.print_list">
+    
+  </a>
+  <a name="print_list">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    print_list(extracted_list, file=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Print the list of tuples as returned by extract_tb() or
+extract_stack() as a formatted stack trace to the given file.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.traceback.format_list">
+    
+  </a>
+  <a name="format_list">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    format_list(extracted_list):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Format a list of tuples or FrameSummary objects for printing.
+
+Given a list of tuples or FrameSummary objects as returned by
+extract_tb() or extract_stack(), return a list of strings ready
+for printing.
+
+Each string in the resulting list corresponds to the item with the
+same index in the argument list.  Each string ends in a newline;
+the strings may contain internal newlines as well, for those items
+whose source text line is not None.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.traceback.print_tb">
+    
+  </a>
+  <a name="print_tb">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    print_tb(tb, limit=None, file=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Print up to 'limit' stack trace entries from the traceback 'tb'.
+
+If 'limit' is omitted or None, all entries are printed.  If 'file'
+is omitted or None, the output goes to sys.stderr; otherwise
+'file' should be an open file or file-like object with a write()
+method.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.traceback.format_tb">
+    
+  </a>
+  <a name="format_tb">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    format_tb(tb, limit=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">A shorthand for 'format_list(extract_tb(tb, limit))'.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.traceback.extract_tb">
+    
+  </a>
+  <a name="extract_tb">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    extract_tb(tb, limit=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a StackSummary object representing a list of
+pre-processed entries from traceback.
+
+This is useful for alternate formatting of stack traces.  If
+'limit' is omitted or None, all entries are extracted.  A
+pre-processed stack trace entry is a FrameSummary object
+containing attributes filename, lineno, name, and line
+representing the information that is usually printed for a stack
+trace.  The line is a string with leading and trailing
+whitespace stripped; if the source is not available it is None.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.traceback._cause_message">
+    
+  </a>
+  <a name="_cause_message">
+    
+  </a>
+  <div class="functionHeader">
+    _cause_message =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.traceback._context_message">
+    
+  </a>
+  <a name="_context_message">
+    
+  </a>
+  <div class="functionHeader">
+    _context_message =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.traceback._sentinel">
+    
+  </a>
+  <a name="_sentinel">
+    
+  </a>
+  <div class="functionHeader">
+    _sentinel =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.traceback._parse_value_tb">
+    
+  </a>
+  <a name="_parse_value_tb">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _parse_value_tb(exc, value, tb):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.traceback.print_exception">
+    
+  </a>
+  <a name="print_exception">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    print_exception(value=_sentinel, tb=_sentinel, limit=None, file=None, chain=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Print exception up to 'limit' stack trace entries from 'tb' to 'file'.
+
+This differs from print_tb() in the following ways: (1) if
+traceback is not None, it prints a header "Traceback (most recent
+call last):"; (2) it prints the exception type and value after the
+stack trace; (3) if type is SyntaxError and value has the
+appropriate format, it prints the line where the syntax error
+occurred with a caret on the next line indicating the approximate
+position of the error.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.traceback.format_exception">
+    
+  </a>
+  <a name="format_exception">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    format_exception(value=_sentinel, tb=_sentinel, limit=None, chain=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Format a stack trace and the exception information.
+
+The arguments have the same meaning as the corresponding arguments
+to print_exception().  The return value is a list of strings, each
+ending in a newline and some containing internal newlines.  When
+these lines are concatenated and printed, exactly the same text is
+printed as does print_exception().</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.traceback.format_exception_only">
+    
+  </a>
+  <a name="format_exception_only">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    format_exception_only(value=_sentinel):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Format the exception part of a traceback.
+
+The return value is a list of strings, each ending in a newline.
+
+Normally, the list contains a single string; however, for
+SyntaxError exceptions, it contains several lines that (when
+printed) display detailed information about where the syntax
+error occurred.
+
+The message indicating which exception occurred is always the last
+string in the list.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.traceback._format_final_exc_line">
+    
+  </a>
+  <a name="_format_final_exc_line">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _format_final_exc_line(etype, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.traceback._some_str">
+    
+  </a>
+  <a name="_some_str">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _some_str(value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.traceback.print_exc">
+    
+  </a>
+  <a name="print_exc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    print_exc(limit=None, file=None, chain=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Shorthand for 'print_exception(*sys.exc_info(), limit, file)'.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.traceback.format_exc">
+    
+  </a>
+  <a name="format_exc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    format_exc(limit=None, chain=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Like print_exc() but return a string.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.traceback.print_last">
+    
+  </a>
+  <a name="print_last">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    print_last(limit=None, file=None, chain=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">This is a shorthand for 'print_exception(sys.last_type,
+sys.last_value, sys.last_traceback, limit, file)'.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.traceback.print_stack">
+    
+  </a>
+  <a name="print_stack">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    print_stack(f=None, limit=None, file=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Print a stack trace from its invocation point.
+
+The optional 'f' argument can be used to specify an alternate
+stack frame at which to start. The optional 'limit' and 'file'
+arguments have the same meaning as for print_exception().</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.traceback.format_stack">
+    
+  </a>
+  <a name="format_stack">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    format_stack(f=None, limit=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Shorthand for 'format_list(extract_stack(f, limit))'.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.traceback.extract_stack">
+    
+  </a>
+  <a name="extract_stack">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    extract_stack(f=None, limit=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Extract the raw traceback from the current stack frame.
+
+The return value has the same format as for extract_tb().  The
+optional 'f' and 'limit' arguments have the same meaning as for
+print_stack().  Each item in the list is a quadruple (filename,
+line number, function name, text), and the entries are in order
+from oldest to newest stack frame.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.traceback.clear_frames">
+    
+  </a>
+  <a name="clear_frames">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    clear_frames(tb):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Clear all references to local variables in the frames of a traceback.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.traceback.walk_stack">
+    
+  </a>
+  <a name="walk_stack">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    walk_stack(f):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Walk a stack yielding the frame and line number for each frame.
+
+This will follow f.f_back from the given frame. If no frame is given, the
+current stack is used. Usually used with StackSummary.extract.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.traceback.walk_tb">
+    
+  </a>
+  <a name="walk_tb">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    walk_tb(tb):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Walk a traceback yielding the frame and line number for each frame.
+
+This will follow tb.tb_next (and thus is in the opposite order to
+walk_stack). Usually used with StackSummary.extract.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.traceback._RECURSIVE_CUTOFF">
+    
+  </a>
+  <a name="_RECURSIVE_CUTOFF">
+    
+  </a>
+  <div class="functionHeader">
+    _RECURSIVE_CUTOFF =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

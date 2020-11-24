@@ -1,0 +1,1346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.lib2to3.pgen2.tokenize : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.lib2to3.html" class="code" data-type="Package">lib2to3</a>.<a href="Lib.lib2to3.pgen2.html" class="code" data-type="Package">pgen2</a>.<a href="Lib.lib2to3.pgen2.tokenize.html" class="code" data-type="Module">tokenize</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Tokenization help for Python programs.
+
+generate_tokens(readline) is a generator that breaks a stream of
+text into Python tokens.  It accepts a readline-like method which is called
+repeatedly to get the next line of input (or "" for EOF).  It generates
+5-tuples with these members:
+
+    the token type (see token.py)
+    the token (a string)
+    the starting (row, column) indices of the token (a 2-tuple of ints)
+    the ending (row, column) indices of the token (a 2-tuple of ints)
+    the original line (string)
+
+It is designed to match the working of the Python tokenizer exactly, except
+that it produces COMMENT tokens for comments and gives type OP for all
+operators
+
+Older entry points
+    tokenize_loop(readline, tokeneater)
+    tokenize(readline, tokeneater=printtoken)
+are the same, except instead of generating tokens, tokeneater is a callback
+function to which the 5 fields described above are passed as 5 arguments,
+each time a new token is found.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2797">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#__author__" class="code" data-type="Variable">__author__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#__credits__" class="code" data-type="Variable">__credits__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#group" class="code" data-type="Function">group</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#any" class="code" data-type="Function">any</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#maybe" class="code" data-type="Function">maybe</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#Whitespace" class="code" data-type="Variable">Whitespace</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#Comment" class="code" data-type="Variable">Comment</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#Ignore" class="code" data-type="Variable">Ignore</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#Name" class="code" data-type="Variable">Name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#Binnumber" class="code" data-type="Variable">Binnumber</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#Hexnumber" class="code" data-type="Variable">Hexnumber</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#Octnumber" class="code" data-type="Variable">Octnumber</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#Decnumber" class="code" data-type="Variable">Decnumber</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#Intnumber" class="code" data-type="Variable">Intnumber</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#Exponent" class="code" data-type="Variable">Exponent</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#Pointfloat" class="code" data-type="Variable">Pointfloat</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#Expfloat" class="code" data-type="Variable">Expfloat</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#Floatnumber" class="code" data-type="Variable">Floatnumber</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#Imagnumber" class="code" data-type="Variable">Imagnumber</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#Number" class="code" data-type="Variable">Number</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#Single" class="code" data-type="Variable">Single</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#Double" class="code" data-type="Variable">Double</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#Single3" class="code" data-type="Variable">Single3</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#Double3" class="code" data-type="Variable">Double3</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#Triple" class="code" data-type="Variable">Triple</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#String" class="code" data-type="Variable">String</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#Operator" class="code" data-type="Variable">Operator</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#Bracket" class="code" data-type="Variable">Bracket</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#Special" class="code" data-type="Variable">Special</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#Funny" class="code" data-type="Variable">Funny</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#PlainToken" class="code" data-type="Variable">PlainToken</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#Token" class="code" data-type="Variable">Token</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#ContStr" class="code" data-type="Variable">ContStr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#PseudoExtras" class="code" data-type="Variable">PseudoExtras</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#PseudoToken" class="code" data-type="Variable">PseudoToken</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#tokenprog" class="code" data-type="Variable">tokenprog</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#pseudoprog" class="code" data-type="Variable">pseudoprog</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#single3prog" class="code" data-type="Variable">single3prog</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#double3prog" class="code" data-type="Variable">double3prog</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#endprogs" class="code" data-type="Variable">endprogs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#triple_quoted" class="code" data-type="Variable">triple_quoted</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#single_quoted" class="code" data-type="Variable">single_quoted</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#tabsize" class="code" data-type="Variable">tabsize</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.TokenError.html" class="code" data-type="Class">TokenError</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.StopTokenizing.html" class="code" data-type="Class">StopTokenizing</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#printtoken" class="code" data-type="Function">printtoken</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#tokenize" class="code" data-type="Function">tokenize</a></td>
+    <td><span>The tokenize() function accepts two parameters: one representing the input stream, and one providing an output mechanism for tokenize().</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#tokenize_loop" class="code" data-type="Function">tokenize_loop</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.Untokenizer.html" class="code" data-type="Class">Untokenizer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#cookie_re" class="code" data-type="Variable">cookie_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#blank_re" class="code" data-type="Variable">blank_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#detect_encoding" class="code" data-type="Function">detect_encoding</a></td>
+    <td><span>The detect_encoding() function is used to detect the encoding that should be used to decode a Python source file. It requires one argument, readline, in the same way as the tokenize() generator.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#untokenize" class="code" data-type="Function">untokenize</a></td>
+    <td><span>Transform tokens back into Python source code.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#generate_tokens" class="code" data-type="Function">generate_tokens</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#_combinations" class="code" data-type="Function">_combinations</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#_litprefix" class="code" data-type="Variable">_litprefix</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#_strprefixes" class="code" data-type="Variable">_strprefixes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.lib2to3.pgen2.tokenize.html#_get_normal_name" class="code" data-type="Function">_get_normal_name</a></td>
+    <td><span>Imitates get_normal_name in tokenizer.c.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.__author__">
+    
+  </a>
+  <a name="__author__">
+    
+  </a>
+  <div class="functionHeader">
+    __author__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.__credits__">
+    
+  </a>
+  <a name="__credits__">
+    
+  </a>
+  <div class="functionHeader">
+    __credits__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.group">
+    
+  </a>
+  <a name="group">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    group(*choices):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.any">
+    
+  </a>
+  <a name="any">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    any(*choices):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.maybe">
+    
+  </a>
+  <a name="maybe">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    maybe(*choices):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize._combinations">
+    
+  </a>
+  <a name="_combinations">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _combinations(*l):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.Whitespace">
+    
+  </a>
+  <a name="Whitespace">
+    
+  </a>
+  <div class="functionHeader">
+    Whitespace =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.Comment">
+    
+  </a>
+  <a name="Comment">
+    
+  </a>
+  <div class="functionHeader">
+    Comment =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.Ignore">
+    
+  </a>
+  <a name="Ignore">
+    
+  </a>
+  <div class="functionHeader">
+    Ignore =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.Name">
+    
+  </a>
+  <a name="Name">
+    
+  </a>
+  <div class="functionHeader">
+    Name =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.Binnumber">
+    
+  </a>
+  <a name="Binnumber">
+    
+  </a>
+  <div class="functionHeader">
+    Binnumber =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.Hexnumber">
+    
+  </a>
+  <a name="Hexnumber">
+    
+  </a>
+  <div class="functionHeader">
+    Hexnumber =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.Octnumber">
+    
+  </a>
+  <a name="Octnumber">
+    
+  </a>
+  <div class="functionHeader">
+    Octnumber =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.Decnumber">
+    
+  </a>
+  <a name="Decnumber">
+    
+  </a>
+  <div class="functionHeader">
+    Decnumber =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.Intnumber">
+    
+  </a>
+  <a name="Intnumber">
+    
+  </a>
+  <div class="functionHeader">
+    Intnumber =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.Exponent">
+    
+  </a>
+  <a name="Exponent">
+    
+  </a>
+  <div class="functionHeader">
+    Exponent =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.Pointfloat">
+    
+  </a>
+  <a name="Pointfloat">
+    
+  </a>
+  <div class="functionHeader">
+    Pointfloat =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.Expfloat">
+    
+  </a>
+  <a name="Expfloat">
+    
+  </a>
+  <div class="functionHeader">
+    Expfloat =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.Floatnumber">
+    
+  </a>
+  <a name="Floatnumber">
+    
+  </a>
+  <div class="functionHeader">
+    Floatnumber =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.Imagnumber">
+    
+  </a>
+  <a name="Imagnumber">
+    
+  </a>
+  <div class="functionHeader">
+    Imagnumber =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.Number">
+    
+  </a>
+  <a name="Number">
+    
+  </a>
+  <div class="functionHeader">
+    Number =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.Single">
+    
+  </a>
+  <a name="Single">
+    
+  </a>
+  <div class="functionHeader">
+    Single =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.Double">
+    
+  </a>
+  <a name="Double">
+    
+  </a>
+  <div class="functionHeader">
+    Double =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.Single3">
+    
+  </a>
+  <a name="Single3">
+    
+  </a>
+  <div class="functionHeader">
+    Single3 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.Double3">
+    
+  </a>
+  <a name="Double3">
+    
+  </a>
+  <div class="functionHeader">
+    Double3 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize._litprefix">
+    
+  </a>
+  <a name="_litprefix">
+    
+  </a>
+  <div class="functionHeader">
+    _litprefix =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.Triple">
+    
+  </a>
+  <a name="Triple">
+    
+  </a>
+  <div class="functionHeader">
+    Triple =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.String">
+    
+  </a>
+  <a name="String">
+    
+  </a>
+  <div class="functionHeader">
+    String =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.Operator">
+    
+  </a>
+  <a name="Operator">
+    
+  </a>
+  <div class="functionHeader">
+    Operator =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.Bracket">
+    
+  </a>
+  <a name="Bracket">
+    
+  </a>
+  <div class="functionHeader">
+    Bracket =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.Special">
+    
+  </a>
+  <a name="Special">
+    
+  </a>
+  <div class="functionHeader">
+    Special =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.Funny">
+    
+  </a>
+  <a name="Funny">
+    
+  </a>
+  <div class="functionHeader">
+    Funny =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.PlainToken">
+    
+  </a>
+  <a name="PlainToken">
+    
+  </a>
+  <div class="functionHeader">
+    PlainToken =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.Token">
+    
+  </a>
+  <a name="Token">
+    
+  </a>
+  <div class="functionHeader">
+    Token =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.ContStr">
+    
+  </a>
+  <a name="ContStr">
+    
+  </a>
+  <div class="functionHeader">
+    ContStr =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.PseudoExtras">
+    
+  </a>
+  <a name="PseudoExtras">
+    
+  </a>
+  <div class="functionHeader">
+    PseudoExtras =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.PseudoToken">
+    
+  </a>
+  <a name="PseudoToken">
+    
+  </a>
+  <div class="functionHeader">
+    PseudoToken =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.tokenprog">
+    
+  </a>
+  <a name="tokenprog">
+    
+  </a>
+  <div class="functionHeader">
+    tokenprog =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.pseudoprog">
+    
+  </a>
+  <a name="pseudoprog">
+    
+  </a>
+  <div class="functionHeader">
+    pseudoprog =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.single3prog">
+    
+  </a>
+  <a name="single3prog">
+    
+  </a>
+  <div class="functionHeader">
+    single3prog =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.double3prog">
+    
+  </a>
+  <a name="double3prog">
+    
+  </a>
+  <div class="functionHeader">
+    double3prog =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize._strprefixes">
+    
+  </a>
+  <a name="_strprefixes">
+    
+  </a>
+  <div class="functionHeader">
+    _strprefixes =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.endprogs">
+    
+  </a>
+  <a name="endprogs">
+    
+  </a>
+  <div class="functionHeader">
+    endprogs =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.triple_quoted">
+    
+  </a>
+  <a name="triple_quoted">
+    
+  </a>
+  <div class="functionHeader">
+    triple_quoted =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.single_quoted">
+    
+  </a>
+  <a name="single_quoted">
+    
+  </a>
+  <div class="functionHeader">
+    single_quoted =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.tabsize">
+    
+  </a>
+  <a name="tabsize">
+    
+  </a>
+  <div class="functionHeader">
+    tabsize =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.printtoken">
+    
+  </a>
+  <a name="printtoken">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    printtoken(type, token, xxx_todo_changeme, xxx_todo_changeme1, line):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.tokenize">
+    
+  </a>
+  <a name="tokenize">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tokenize(readline, tokeneater=printtoken):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">The tokenize() function accepts two parameters: one representing the
+input stream, and one providing an output mechanism for tokenize().
+
+The first parameter, readline, must be a callable object which provides
+the same interface as the readline() method of built-in file objects.
+Each call to the function should return one line of input as a string.
+
+The second parameter, tokeneater, must also be a callable object. It is
+called once for each token, with five arguments, corresponding to the
+tuples generated by generate_tokens().</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.tokenize_loop">
+    
+  </a>
+  <a name="tokenize_loop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tokenize_loop(readline, tokeneater):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.cookie_re">
+    
+  </a>
+  <a name="cookie_re">
+    
+  </a>
+  <div class="functionHeader">
+    cookie_re =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.blank_re">
+    
+  </a>
+  <a name="blank_re">
+    
+  </a>
+  <div class="functionHeader">
+    blank_re =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize._get_normal_name">
+    
+  </a>
+  <a name="_get_normal_name">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_normal_name(orig_enc):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Imitates get_normal_name in tokenizer.c.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.detect_encoding">
+    
+  </a>
+  <a name="detect_encoding">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    detect_encoding(readline):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">The detect_encoding() function is used to detect the encoding that should
+be used to decode a Python source file. It requires one argument, readline,
+in the same way as the tokenize() generator.
+
+It will call readline a maximum of twice, and return the encoding used
+(as a string) and a list of any lines (left as bytes) it has read
+in.
+
+It detects the encoding from the presence of a utf-8 bom or an encoding
+cookie as specified in pep-0263. If both a bom and a cookie are present, but
+disagree, a SyntaxError will be raised. If the encoding cookie is an invalid
+charset, raise a SyntaxError.  Note that if a utf-8 bom is found,
+'utf-8-sig' is returned.
+
+If no encoding is specified, then the default of 'utf-8' will be returned.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.untokenize">
+    
+  </a>
+  <a name="untokenize">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    untokenize(iterable):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Transform tokens back into Python source code.
+
+Each element returned by the iterable must be a token sequence
+with at least two elements, a token number and token value.  If
+only two tokens are passed, the resulting output is poor.
+
+Round-trip invariant for full input:
+    Untokenized source will match input source exactly
+
+Round-trip invariant for limited input:
+    # Output text will tokenize the back to the input
+    t1 = [tok[:2] for tok in generate_tokens(f.readline)]
+    newcode = untokenize(t1)
+    readline = iter(newcode.splitlines(1)).next
+    t2 = [tok[:2] for tokin generate_tokens(readline)]
+    assert t1 == t2</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.lib2to3.pgen2.tokenize.generate_tokens">
+    
+  </a>
+  <a name="generate_tokens">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    generate_tokens(readline):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">The generate_tokens() generator requires one argument, readline, which
+must be a callable object which provides the same interface as the
+readline() method of built-in file objects. Each call to the function
+should return one line of input as a string.  Alternately, readline
+can be a callable function terminating with StopIteration:
+    readline = open(myfile).next    # Example of alternate readline
+
+The generator produces 5-tuples with these members: the token type; the
+token string; a 2-tuple (srow, scol) of ints specifying the row and
+column where the token begins in the source; a 2-tuple (erow, ecol) of
+ints specifying the row and column where the token ends in the source;
+and the line on which the token was found. The line passed is the
+physical line.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

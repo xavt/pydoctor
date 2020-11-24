@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.calendar : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.calendar.html" class="code" data-type="Module">calendar</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Calendar printing functions
+
+Note when comparing these calendars to the ones printed by cal(1): By
+default, these calendars have Monday as the first day of the week, and
+Sunday as the last (the European convention). Use setfirstweekday() to
+set the first day of the week (0=Monday, 6=Sunday).</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id474">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.calendar.IllegalMonthError.html" class="code" data-type="Class">IllegalMonthError</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.calendar.IllegalWeekdayError.html" class="code" data-type="Class">IllegalWeekdayError</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.calendar.html#January" class="code" data-type="Variable">January</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.calendar.html#February" class="code" data-type="Variable">February</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.calendar.html#mdays" class="code" data-type="Variable">mdays</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.calendar.html#day_name" class="code" data-type="Variable">day_name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.calendar.html#day_abbr" class="code" data-type="Variable">day_abbr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.calendar.html#month_name" class="code" data-type="Variable">month_name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.calendar.html#month_abbr" class="code" data-type="Variable">month_abbr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.calendar.html#MONDAY" class="code" data-type="Variable">MONDAY</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.calendar.html#TUESDAY" class="code" data-type="Variable">TUESDAY</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.calendar.html#WEDNESDAY" class="code" data-type="Variable">WEDNESDAY</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.calendar.html#THURSDAY" class="code" data-type="Variable">THURSDAY</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.calendar.html#FRIDAY" class="code" data-type="Variable">FRIDAY</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.calendar.html#SATURDAY" class="code" data-type="Variable">SATURDAY</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.calendar.html#SUNDAY" class="code" data-type="Variable">SUNDAY</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.calendar.html#isleap" class="code" data-type="Function">isleap</a></td>
+    <td><span>Return True for leap years, False for non-leap years.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.calendar.html#leapdays" class="code" data-type="Function">leapdays</a></td>
+    <td><span>Return number of leap years in range [y1, y2). Assume y1 &lt;= y2.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.calendar.html#weekday" class="code" data-type="Function">weekday</a></td>
+    <td><span>Return weekday (0-6 ~ Mon-Sun) for year, month (1-12), day (1-31).</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.calendar.html#monthrange" class="code" data-type="Function">monthrange</a></td>
+    <td><span>Return weekday (0-6 ~ Mon-Sun) and number of days (28-31) for year, month.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.calendar.Calendar.html" class="code" data-type="Class">Calendar</a></td>
+    <td><span>Base calendar class. This class doesn't do any formatting. It simply provides data to subclasses.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.calendar.TextCalendar.html" class="code" data-type="Class">TextCalendar</a></td>
+    <td><span>Subclass of Calendar that outputs a calendar as a simple plain text similar to the UNIX program cal.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.calendar.HTMLCalendar.html" class="code" data-type="Class">HTMLCalendar</a></td>
+    <td><span>This calendar returns complete HTML pages.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.calendar.different_locale.html" class="code" data-type="Class">different_locale</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.calendar.LocaleTextCalendar.html" class="code" data-type="Class">LocaleTextCalendar</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.calendar.LocaleHTMLCalendar.html" class="code" data-type="Class">LocaleHTMLCalendar</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.calendar.html#c" class="code" data-type="Variable">c</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.calendar.html#setfirstweekday" class="code" data-type="Function">setfirstweekday</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.calendar.html#format" class="code" data-type="Function">format</a></td>
+    <td><span>Prints multi-column formatting for year calendars</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.calendar.html#formatstring" class="code" data-type="Function">formatstring</a></td>
+    <td><span>Returns a string formatted from n strings, centered within n columns.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.calendar.html#EPOCH" class="code" data-type="Variable">EPOCH</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.calendar.html#timegm" class="code" data-type="Function">timegm</a></td>
+    <td><span>Unrelated but handy function to calculate Unix timestamp from GMT.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.calendar.html#main" class="code" data-type="Function">main</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.calendar._localized_month.html" class="code" data-type="Class">_localized_month</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.calendar._localized_day.html" class="code" data-type="Class">_localized_day</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.calendar.html#_monthlen" class="code" data-type="Function">_monthlen</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.calendar.html#_prevmonth" class="code" data-type="Function">_prevmonth</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.calendar.html#_nextmonth" class="code" data-type="Function">_nextmonth</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.calendar.html#_colwidth" class="code" data-type="Variable">_colwidth</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.calendar.html#_spacing" class="code" data-type="Variable">_spacing</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.calendar.html#_EPOCH_ORD" class="code" data-type="Variable">_EPOCH_ORD</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.calendar.January">
+    
+  </a>
+  <a name="January">
+    
+  </a>
+  <div class="functionHeader">
+    January =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.calendar.February">
+    
+  </a>
+  <a name="February">
+    
+  </a>
+  <div class="functionHeader">
+    February =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.calendar.mdays">
+    
+  </a>
+  <a name="mdays">
+    
+  </a>
+  <div class="functionHeader">
+    mdays =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[int]</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.calendar.day_name">
+    
+  </a>
+  <a name="day_name">
+    
+  </a>
+  <div class="functionHeader">
+    day_name =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.calendar.day_abbr">
+    
+  </a>
+  <a name="day_abbr">
+    
+  </a>
+  <div class="functionHeader">
+    day_abbr =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.calendar.month_name">
+    
+  </a>
+  <a name="month_name">
+    
+  </a>
+  <div class="functionHeader">
+    month_name =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.calendar.month_abbr">
+    
+  </a>
+  <a name="month_abbr">
+    
+  </a>
+  <div class="functionHeader">
+    month_abbr =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.calendar.MONDAY">
+    
+  </a>
+  <a name="MONDAY">
+    
+  </a>
+  <div class="functionHeader">
+    MONDAY =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.calendar.TUESDAY">
+    
+  </a>
+  <a name="TUESDAY">
+    
+  </a>
+  <div class="functionHeader">
+    TUESDAY =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.calendar.WEDNESDAY">
+    
+  </a>
+  <a name="WEDNESDAY">
+    
+  </a>
+  <div class="functionHeader">
+    WEDNESDAY =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.calendar.THURSDAY">
+    
+  </a>
+  <a name="THURSDAY">
+    
+  </a>
+  <div class="functionHeader">
+    THURSDAY =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.calendar.FRIDAY">
+    
+  </a>
+  <a name="FRIDAY">
+    
+  </a>
+  <div class="functionHeader">
+    FRIDAY =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.calendar.SATURDAY">
+    
+  </a>
+  <a name="SATURDAY">
+    
+  </a>
+  <div class="functionHeader">
+    SATURDAY =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.calendar.SUNDAY">
+    
+  </a>
+  <a name="SUNDAY">
+    
+  </a>
+  <div class="functionHeader">
+    SUNDAY =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.calendar.isleap">
+    
+  </a>
+  <a name="isleap">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    isleap(year):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True for leap years, False for non-leap years.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.calendar.leapdays">
+    
+  </a>
+  <a name="leapdays">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    leapdays(y1, y2):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return number of leap years in range [y1, y2).
+Assume y1 &lt;= y2.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.calendar.weekday">
+    
+  </a>
+  <a name="weekday">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    weekday(year, month, day):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return weekday (0-6 ~ Mon-Sun) for year, month (1-12), day (1-31).</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.calendar.monthrange">
+    
+  </a>
+  <a name="monthrange">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    monthrange(year, month):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return weekday (0-6 ~ Mon-Sun) and number of days (28-31) for
+year, month.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.calendar._monthlen">
+    
+  </a>
+  <a name="_monthlen">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _monthlen(year, month):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.calendar._prevmonth">
+    
+  </a>
+  <a name="_prevmonth">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _prevmonth(year, month):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.calendar._nextmonth">
+    
+  </a>
+  <a name="_nextmonth">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _nextmonth(year, month):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.calendar.c">
+    
+  </a>
+  <a name="c">
+    
+  </a>
+  <div class="functionHeader">
+    c =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.calendar.setfirstweekday">
+    
+  </a>
+  <a name="setfirstweekday">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setfirstweekday(firstweekday):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.calendar._colwidth">
+    
+  </a>
+  <a name="_colwidth">
+    
+  </a>
+  <div class="functionHeader">
+    _colwidth =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.calendar._spacing">
+    
+  </a>
+  <a name="_spacing">
+    
+  </a>
+  <div class="functionHeader">
+    _spacing =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.calendar.format">
+    
+  </a>
+  <a name="format">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    format(cols, colwidth=_colwidth, spacing=_spacing):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Prints multi-column formatting for year calendars</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.calendar.formatstring">
+    
+  </a>
+  <a name="formatstring">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    formatstring(cols, colwidth=_colwidth, spacing=_spacing):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns a string formatted from n strings, centered within n columns.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.calendar.EPOCH">
+    
+  </a>
+  <a name="EPOCH">
+    
+  </a>
+  <div class="functionHeader">
+    EPOCH =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.calendar._EPOCH_ORD">
+    
+  </a>
+  <a name="_EPOCH_ORD">
+    
+  </a>
+  <div class="functionHeader">
+    _EPOCH_ORD =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.calendar.timegm">
+    
+  </a>
+  <a name="timegm">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    timegm(tuple):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Unrelated but handy function to calculate Unix timestamp from GMT.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.calendar.main">
+    
+  </a>
+  <a name="main">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    main(args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

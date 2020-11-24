@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.test.test_ssl.TestSSLDebug : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.test.html" class="code" data-type="Package">test</a>.<a href="Lib.test.test_ssl.html" class="code" data-type="Module">test_ssl</a>.<a href="Lib.test.test_ssl.TestSSLDebug.html" class="code" data-type="Class">TestSSLDebug</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.test.test_ssl.TestSSLDebug(<span title="unittest.TestCase">unittest.TestCase</span>):</code></p>
+        <p><a href="classIndex.html#Lib.test.test_ssl.TestSSLDebug">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div class="undocumented">Undocumented</div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id9572">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ssl.TestSSLDebug.html#keylog_lines" class="code" data-type="Method">keylog_lines</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ssl.TestSSLDebug.html#test_keylog_defaults" class="code" data-type="Method">test_keylog_defaults</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ssl.TestSSLDebug.html#test_keylog_filename" class="code" data-type="Method">test_keylog_filename</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ssl.TestSSLDebug.html#test_keylog_env" class="code" data-type="Method">test_keylog_env</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ssl.TestSSLDebug.html#test_msg_callback" class="code" data-type="Method">test_msg_callback</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.test.test_ssl.TestSSLDebug.html#test_msg_callback_tls12" class="code" data-type="Method">test_msg_callback_tls12</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.test.test_ssl.TestSSLDebug.keylog_lines">
+    
+  </a>
+  <a name="keylog_lines">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    keylog_lines(self, fname=os_helper.TESTFN):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ssl.TestSSLDebug.test_keylog_defaults">
+    
+  </a>
+  <a name="test_keylog_defaults">
+    
+  </a>
+  <div class="functionHeader">
+    @requires_keylog<br />@unittest.skipIf(Py_DEBUG_WIN32, 'Avoid mixing debug/release CRT on Windows')<br />
+    def
+    test_keylog_defaults(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ssl.TestSSLDebug.test_keylog_filename">
+    
+  </a>
+  <a name="test_keylog_filename">
+    
+  </a>
+  <div class="functionHeader">
+    @requires_keylog<br />@unittest.skipIf(Py_DEBUG_WIN32, 'Avoid mixing debug/release CRT on Windows')<br />
+    def
+    test_keylog_filename(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ssl.TestSSLDebug.test_keylog_env">
+    
+  </a>
+  <a name="test_keylog_env">
+    
+  </a>
+  <div class="functionHeader">
+    @requires_keylog<br />@unittest.skipIf(sys.flags.ignore_environment,
+    'test is not compatible with ignore_environment')<br />@unittest.skipIf(Py_DEBUG_WIN32, 'Avoid mixing debug/release CRT on Windows')<br />
+    def
+    test_keylog_env(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ssl.TestSSLDebug.test_msg_callback">
+    
+  </a>
+  <a name="test_msg_callback">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_msg_callback(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.test.test_ssl.TestSSLDebug.test_msg_callback_tls12">
+    
+  </a>
+  <a name="test_msg_callback_tls12">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_msg_callback_tls12(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

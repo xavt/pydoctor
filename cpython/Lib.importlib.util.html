@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.importlib.util : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.importlib.html" class="code" data-type="Package">importlib</a>.<a href="Lib.importlib.util.html" class="code" data-type="Module">util</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Utility code for constructing importers, etc.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2602">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib.util.html#source_hash" class="code" data-type="Function">source_hash</a></td>
+    <td><span>Return the hash of *source_bytes* as used in hash-based pyc files.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib.util.html#resolve_name" class="code" data-type="Function">resolve_name</a></td>
+    <td><span>Resolve a relative module name to an absolute one.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib.util.html#find_spec" class="code" data-type="Function">find_spec</a></td>
+    <td><span>Return the spec for the specified module.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib.util.html#set_package" class="code" data-type="Function">set_package</a></td>
+    <td><span>Set __package__ on the returned module.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib.util.html#set_loader" class="code" data-type="Function">set_loader</a></td>
+    <td><span>Set __loader__ on the returned module.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib.util.html#module_for_loader" class="code" data-type="Function">module_for_loader</a></td>
+    <td><span>Decorator to handle selecting the proper module for loaders.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.importlib.util.LazyLoader.html" class="code" data-type="Class">LazyLoader</a></td>
+    <td><span>A loader that creates a module which defers loading until attribute access.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib.util.html#_find_spec_from_path" class="code" data-type="Function">_find_spec_from_path</a></td>
+    <td><span>Return the spec for the specified module.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.importlib.util.html#_module_to_load" class="code" data-type="Function">_module_to_load</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.importlib.util._LazyModule.html" class="code" data-type="Class">_LazyModule</a></td>
+    <td><span>A subclass of the module type which triggers loading upon attribute access.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction">
+  
+  <a name="Lib.importlib.util.source_hash">
+    
+  </a>
+  <a name="source_hash">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    source_hash(source_bytes):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the hash of *source_bytes* as used in hash-based pyc files.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.importlib.util.resolve_name">
+    
+  </a>
+  <a name="resolve_name">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    resolve_name(name, package):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Resolve a relative module name to an absolute one.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.importlib.util._find_spec_from_path">
+    
+  </a>
+  <a name="_find_spec_from_path">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _find_spec_from_path(name, path=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the spec for the specified module.
+
+First, sys.modules is checked to see if the module was already imported. If
+so, then sys.modules[name].__spec__ is returned. If that happens to be
+set to None, then ValueError is raised. If the module is not in
+sys.modules, then sys.meta_path is searched for a suitable spec with the
+value of 'path' given to the finders. None is returned if no spec could
+be found.
+
+Dotted names do not have their parent packages implicitly imported. You will
+most likely need to explicitly import all parent packages in the proper
+order for a submodule to get the correct spec.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.importlib.util.find_spec">
+    
+  </a>
+  <a name="find_spec">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    find_spec(name, package=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the spec for the specified module.
+
+First, sys.modules is checked to see if the module was already imported. If
+so, then sys.modules[name].__spec__ is returned. If that happens to be
+set to None, then ValueError is raised. If the module is not in
+sys.modules, then sys.meta_path is searched for a suitable spec with the
+value of 'path' given to the finders. None is returned if no spec could
+be found.
+
+If the name is for submodule (contains a dot), the parent module is
+automatically imported.
+
+The name and package arguments work the same as importlib.import_module().
+In other words, relative module names (with leading dots) work.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.importlib.util._module_to_load">
+    
+  </a>
+  <a name="_module_to_load">
+    
+  </a>
+  <div class="functionHeader">
+    @contextmanager<br />
+    def
+    _module_to_load(name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.importlib.util.set_package">
+    
+  </a>
+  <a name="set_package">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_package(fxn):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set __package__ on the returned module.
+
+This function is deprecated.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.importlib.util.set_loader">
+    
+  </a>
+  <a name="set_loader">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_loader(fxn):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set __loader__ on the returned module.
+
+This function is deprecated.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.importlib.util.module_for_loader">
+    
+  </a>
+  <a name="module_for_loader">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    module_for_loader(fxn):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Decorator to handle selecting the proper module for loaders.
+
+The decorated function is passed the module to use instead of the module
+name. The module passed in to the function is either from sys.modules if
+it already exists or is a new module. If the module is new, then __name__
+is set the first argument to the method, __loader__ is set to self, and
+__package__ is set accordingly (if self.is_package() is defined) will be set
+before it is passed to the decorated function (if self.is_package() does
+not work for the module it will be set post-load).
+
+If an exception is raised and the decorator created the module it is
+subsequently removed from sys.modules.
+
+The decorator assumes that the decorated function takes the module name as
+the second argument.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.email.quoprimime : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.email.html" class="code" data-type="Package">email</a>.<a href="Lib.email.quoprimime.html" class="code" data-type="Module">quoprimime</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Quoted-printable content transfer encoding per RFCs 2045-2047.
+
+This module handles the content transfer encoding method defined in RFC 2045
+to encode US ASCII-like 8-bit data called `quoted-printable'.  It is used to
+safely encode text that is in a character set similar to the 7-bit US ASCII
+character set, but that includes some 8-bit characters that are normally not
+allowed in email bodies or headers.
+
+Quoted-printable is very space-inefficient for encoding binary files; use the
+email.base64mime module for that instead.
+
+This module provides an interface to encode and decode both headers and bodies
+with quoted-printable encoding.
+
+RFC 2045 defines a method for including character set information in an
+`encoded-word' in a header.  This method is commonly used for 8-bit real names
+in To:/From:/Cc: etc. fields, as well as Subject: lines.
+
+This module does not do the line wrapping or end-of-line character
+conversion necessary for proper internationalized headers; it only
+does dumb encoding and decoding.  To deal with the various line
+wrapping issues, use the email.header module.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id1367">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email.quoprimime.html#CRLF" class="code" data-type="Variable">CRLF</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email.quoprimime.html#NL" class="code" data-type="Variable">NL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email.quoprimime.html#EMPTYSTRING" class="code" data-type="Variable">EMPTYSTRING</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email.quoprimime.html#header_check" class="code" data-type="Function">header_check</a></td>
+    <td><span>Return True if the octet should be escaped with header quopri.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email.quoprimime.html#body_check" class="code" data-type="Function">body_check</a></td>
+    <td><span>Return True if the octet should be escaped with body quopri.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email.quoprimime.html#header_length" class="code" data-type="Function">header_length</a></td>
+    <td><span>Return a header quoted-printable encoding length.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email.quoprimime.html#body_length" class="code" data-type="Function">body_length</a></td>
+    <td><span>Return a body quoted-printable encoding length.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email.quoprimime.html#unquote" class="code" data-type="Function">unquote</a></td>
+    <td><span>Turn a string in the form =AB to the ASCII character with value 0xab</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email.quoprimime.html#quote" class="code" data-type="Function">quote</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email.quoprimime.html#header_encode" class="code" data-type="Function">header_encode</a></td>
+    <td><span>Encode a single header line with quoted-printable (like) encoding.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email.quoprimime.html#body_encode" class="code" data-type="Function">body_encode</a></td>
+    <td><span>Encode with quoted-printable, wrapping at maxlinelen characters.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email.quoprimime.html#decode" class="code" data-type="Function">decode</a></td>
+    <td><span>Decode a quoted-printable string.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.email.quoprimime.html#header_decode" class="code" data-type="Function">header_decode</a></td>
+    <td><span>Decode a string encoded with RFC 2045 MIME header `Q' encoding.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email.quoprimime.html#_QUOPRI_MAP" class="code" data-type="Variable">_QUOPRI_MAP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email.quoprimime.html#_QUOPRI_HEADER_MAP" class="code" data-type="Variable">_QUOPRI_HEADER_MAP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email.quoprimime.html#_QUOPRI_BODY_MAP" class="code" data-type="Variable">_QUOPRI_BODY_MAP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.email.quoprimime.html#_max_append" class="code" data-type="Function">_max_append</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.email.quoprimime.html#_QUOPRI_BODY_ENCODE_MAP" class="code" data-type="Variable">_QUOPRI_BODY_ENCODE_MAP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.email.quoprimime.html#_unquote_match" class="code" data-type="Function">_unquote_match</a></td>
+    <td><span>Turn a match in the form =AB to the ASCII character with value 0xab</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.email.quoprimime.CRLF">
+    
+  </a>
+  <a name="CRLF">
+    
+  </a>
+  <div class="functionHeader">
+    CRLF =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.email.quoprimime.NL">
+    
+  </a>
+  <a name="NL">
+    
+  </a>
+  <div class="functionHeader">
+    NL =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.email.quoprimime.EMPTYSTRING">
+    
+  </a>
+  <a name="EMPTYSTRING">
+    
+  </a>
+  <div class="functionHeader">
+    EMPTYSTRING =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.email.quoprimime._QUOPRI_MAP">
+    
+  </a>
+  <a name="_QUOPRI_MAP">
+    
+  </a>
+  <div class="functionHeader">
+    _QUOPRI_MAP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.email.quoprimime._QUOPRI_HEADER_MAP">
+    
+  </a>
+  <a name="_QUOPRI_HEADER_MAP">
+    
+  </a>
+  <div class="functionHeader">
+    _QUOPRI_HEADER_MAP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.email.quoprimime._QUOPRI_BODY_MAP">
+    
+  </a>
+  <a name="_QUOPRI_BODY_MAP">
+    
+  </a>
+  <div class="functionHeader">
+    _QUOPRI_BODY_MAP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email.quoprimime.header_check">
+    
+  </a>
+  <a name="header_check">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    header_check(octet):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True if the octet should be escaped with header quopri.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email.quoprimime.body_check">
+    
+  </a>
+  <a name="body_check">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    body_check(octet):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return True if the octet should be escaped with body quopri.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email.quoprimime.header_length">
+    
+  </a>
+  <a name="header_length">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    header_length(bytearray):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a header quoted-printable encoding length.
+
+Note that this does not include any RFC 2047 chrome added by
+`header_encode()`.
+
+:param bytearray: An array of bytes (a.k.a. octets).
+:return: The length in bytes of the byte array when it is encoded with
+    quoted-printable for headers.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email.quoprimime.body_length">
+    
+  </a>
+  <a name="body_length">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    body_length(bytearray):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a body quoted-printable encoding length.
+
+:param bytearray: An array of bytes (a.k.a. octets).
+:return: The length in bytes of the byte array when it is encoded with
+    quoted-printable for bodies.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.email.quoprimime._max_append">
+    
+  </a>
+  <a name="_max_append">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _max_append(L, s, maxlen, extra=""""""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email.quoprimime.unquote">
+    
+  </a>
+  <a name="unquote">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    unquote(s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Turn a string in the form =AB to the ASCII character with value 0xab</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email.quoprimime.quote">
+    
+  </a>
+  <a name="quote">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    quote(c):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email.quoprimime.header_encode">
+    
+  </a>
+  <a name="header_encode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    header_encode(header_bytes, charset="""iso-8859-1"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Encode a single header line with quoted-printable (like) encoding.
+
+Defined in RFC 2045, this `Q' encoding is similar to quoted-printable, but
+used specifically for email header fields to allow charsets with mostly 7
+bit characters (and some 8 bit) to remain more or less readable in non-RFC
+2045 aware mail clients.
+
+charset names the character set to use in the RFC 2046 header.  It
+defaults to iso-8859-1.</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.email.quoprimime._QUOPRI_BODY_ENCODE_MAP">
+    
+  </a>
+  <a name="_QUOPRI_BODY_ENCODE_MAP">
+    
+  </a>
+  <div class="functionHeader">
+    _QUOPRI_BODY_ENCODE_MAP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email.quoprimime.body_encode">
+    
+  </a>
+  <a name="body_encode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    body_encode(body, maxlinelen=76, eol=NL):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Encode with quoted-printable, wrapping at maxlinelen characters.
+
+Each line of encoded text will end with eol, which defaults to "\n".  Set
+this to "\r\n" if you will be using the result of this function directly
+in an email.
+
+Each line will be wrapped at, at most, maxlinelen characters before the
+eol string (maxlinelen defaults to 76 characters, the maximum value
+permitted by RFC 2045).  Long lines will have the 'soft line break'
+quoted-printable character "=" appended to them, so the decoded text will
+be identical to the original text.
+
+The minimum maxlinelen is 4 to have room for a quoted character ("=XX")
+followed by a soft line break.  Smaller values will generate a
+ValueError.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email.quoprimime.decode">
+    
+  </a>
+  <a name="decode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    decode(encoded, eol=NL):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Decode a quoted-printable string.
+
+Lines are separated with eol, which defaults to \n.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.email.quoprimime._unquote_match">
+    
+  </a>
+  <a name="_unquote_match">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _unquote_match(match):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Turn a match in the form =AB to the ASCII character with value 0xab</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.email.quoprimime.header_decode">
+    
+  </a>
+  <a name="header_decode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    header_decode(s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Decode a string encoded with RFC 2045 MIME header `Q' encoding.
+
+This function does not parse a full MIME header value encoded with
+quoted-printable (like =?iso-8859-1?q?Hello_World?=) -- please use
+the high level email.header class for that functionality.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

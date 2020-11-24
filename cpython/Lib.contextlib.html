@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.contextlib : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.contextlib.html" class="code" data-type="Module">contextlib</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Utilities for with-statement contexts.  See PEP 343.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id603">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.contextlib.AbstractContextManager.html" class="code" data-type="Class">AbstractContextManager</a></td>
+    <td><span>An abstract base class for context managers.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.contextlib.AbstractAsyncContextManager.html" class="code" data-type="Class">AbstractAsyncContextManager</a></td>
+    <td><span>An abstract base class for asynchronous context managers.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.contextlib.ContextDecorator.html" class="code" data-type="Class">ContextDecorator</a></td>
+    <td><span>A base class or mixin that enables context managers to work as decorators.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.contextlib.AsyncContextDecorator.html" class="code" data-type="Class">AsyncContextDecorator</a></td>
+    <td><span>A base class or mixin that enables async context managers to work as decorators.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.contextlib.html#contextmanager" class="code" data-type="Function">contextmanager</a></td>
+    <td><span>@contextmanager decorator.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.contextlib.html#asynccontextmanager" class="code" data-type="Function">asynccontextmanager</a></td>
+    <td><span>@asynccontextmanager decorator.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.contextlib.closing.html" class="code" data-type="Class">closing</a></td>
+    <td><span>Context to automatically close something at the end of a block.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.contextlib.aclosing.html" class="code" data-type="Class">aclosing</a></td>
+    <td><span>Async context manager for safely finalizing an asynchronously cleaned-up resource such as an async generator, calling its ``aclose()`` method.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.contextlib.redirect_stdout.html" class="code" data-type="Class">redirect_stdout</a></td>
+    <td><span>Context manager for temporarily redirecting stdout to another file.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.contextlib.redirect_stderr.html" class="code" data-type="Class">redirect_stderr</a></td>
+    <td><span>Context manager for temporarily redirecting stderr to another file.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.contextlib.suppress.html" class="code" data-type="Class">suppress</a></td>
+    <td><span>Context manager to suppress specified exceptions</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.contextlib.ExitStack.html" class="code" data-type="Class">ExitStack</a></td>
+    <td><span>Context manager for dynamic management of a stack of exit callbacks.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.contextlib.AsyncExitStack.html" class="code" data-type="Class">AsyncExitStack</a></td>
+    <td><span>Async context manager for dynamic management of a stack of exit callbacks.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.contextlib.nullcontext.html" class="code" data-type="Class">nullcontext</a></td>
+    <td><span>Context manager that does no additional processing.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.contextlib._GeneratorContextManagerBase.html" class="code" data-type="Class">_GeneratorContextManagerBase</a></td>
+    <td><span>Shared functionality for @contextmanager and @asynccontextmanager.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.contextlib._GeneratorContextManager.html" class="code" data-type="Class">_GeneratorContextManager</a></td>
+    <td><span>Helper for @contextmanager decorator.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.contextlib._AsyncGeneratorContextManager.html" class="code" data-type="Class">_AsyncGeneratorContextManager</a></td>
+    <td><span>Helper for @asynccontextmanager.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.contextlib._RedirectStream.html" class="code" data-type="Class">_RedirectStream</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.contextlib._BaseExitStack.html" class="code" data-type="Class">_BaseExitStack</a></td>
+    <td><span>A base class for ExitStack and AsyncExitStack.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction">
+  
+  <a name="Lib.contextlib.contextmanager">
+    
+  </a>
+  <a name="contextmanager">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    contextmanager(func):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">@contextmanager decorator.
+
+Typical usage:
+
+    @contextmanager
+    def some_generator(&lt;arguments&gt;):
+        &lt;setup&gt;
+        try:
+            yield &lt;value&gt;
+        finally:
+            &lt;cleanup&gt;
+
+This makes this:
+
+    with some_generator(&lt;arguments&gt;) as &lt;variable&gt;:
+        &lt;body&gt;
+
+equivalent to this:
+
+    &lt;setup&gt;
+    try:
+        &lt;variable&gt; = &lt;value&gt;
+        &lt;body&gt;
+    finally:
+        &lt;cleanup&gt;</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.contextlib.asynccontextmanager">
+    
+  </a>
+  <a name="asynccontextmanager">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    asynccontextmanager(func):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">@asynccontextmanager decorator.
+
+Typical usage:
+
+    @asynccontextmanager
+    async def some_async_generator(&lt;arguments&gt;):
+        &lt;setup&gt;
+        try:
+            yield &lt;value&gt;
+        finally:
+            &lt;cleanup&gt;
+
+This makes this:
+
+    async with some_async_generator(&lt;arguments&gt;) as &lt;variable&gt;:
+        &lt;body&gt;
+
+equivalent to this:
+
+    &lt;setup&gt;
+    try:
+        &lt;variable&gt; = &lt;value&gt;
+        &lt;body&gt;
+    finally:
+        &lt;cleanup&gt;</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

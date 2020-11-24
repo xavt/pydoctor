@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.logging.config.DictConfigurator : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.logging.html" class="code" data-type="Package">logging</a>.<a href="Lib.logging.config.html" class="code" data-type="Module">config</a>.<a href="Lib.logging.config.DictConfigurator.html" class="code" data-type="Class">DictConfigurator</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.logging.config.DictConfigurator(<a href="Lib.logging.config.BaseConfigurator.html" class="code" data-type="Class">BaseConfigurator</a>):</code></p>
+        <p><a href="classIndex.html#Lib.logging.config.DictConfigurator">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Configure logging using a dictionary-like object to describe the
+configuration.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3042">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.config.DictConfigurator.html#configure" class="code" data-type="Method">configure</a></td>
+    <td><span>Do the configuration.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.config.DictConfigurator.html#configure_formatter" class="code" data-type="Method">configure_formatter</a></td>
+    <td><span>Configure a formatter from a dictionary.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.config.DictConfigurator.html#configure_filter" class="code" data-type="Method">configure_filter</a></td>
+    <td><span>Configure a filter from a dictionary.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.config.DictConfigurator.html#add_filters" class="code" data-type="Method">add_filters</a></td>
+    <td><span>Add filters to a filterer from a list of names.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.config.DictConfigurator.html#configure_handler" class="code" data-type="Method">configure_handler</a></td>
+    <td><span>Configure a handler from a dictionary.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.config.DictConfigurator.html#add_handlers" class="code" data-type="Method">add_handlers</a></td>
+    <td><span>Add handlers to a logger from a list of names.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.config.DictConfigurator.html#common_logger_config" class="code" data-type="Method">common_logger_config</a></td>
+    <td><span>Perform configuration which is common to root and non-root loggers.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.config.DictConfigurator.html#configure_logger" class="code" data-type="Method">configure_logger</a></td>
+    <td><span>Configure a non-root logger from a dictionary.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.config.DictConfigurator.html#configure_root" class="code" data-type="Method">configure_root</a></td>
+    <td><span>Configure a root logger from a dictionary.</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.logging.config.BaseConfigurator.html" class="code" data-type="Class">BaseConfigurator</a>:
+          </p>
+          <table class="children sortable" id="id3043">
+  
+  <tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.config.BaseConfigurator.html#CONVERT_PATTERN" class="code" data-type="Class Variable">CONVERT_PATTERN</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.config.BaseConfigurator.html#WORD_PATTERN" class="code" data-type="Class Variable">WORD_PATTERN</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.config.BaseConfigurator.html#DOT_PATTERN" class="code" data-type="Class Variable">DOT_PATTERN</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.config.BaseConfigurator.html#INDEX_PATTERN" class="code" data-type="Class Variable">INDEX_PATTERN</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.config.BaseConfigurator.html#DIGIT_PATTERN" class="code" data-type="Class Variable">DIGIT_PATTERN</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.config.BaseConfigurator.html#value_converters" class="code" data-type="Class Variable">value_converters</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.config.BaseConfigurator.html#importer" class="code" data-type="Class Variable">importer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.config.BaseConfigurator.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.config.BaseConfigurator.html#config" class="code" data-type="Instance Variable">config</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.config.BaseConfigurator.html#resolve" class="code" data-type="Method">resolve</a></td>
+    <td><span>Resolve strings to objects using standard import and attribute syntax.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.config.BaseConfigurator.html#ext_convert" class="code" data-type="Method">ext_convert</a></td>
+    <td><span>Default converter for the ext:// protocol.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.config.BaseConfigurator.html#cfg_convert" class="code" data-type="Method">cfg_convert</a></td>
+    <td><span>Default converter for the cfg:// protocol.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.config.BaseConfigurator.html#convert" class="code" data-type="Method">convert</a></td>
+    <td><span>Convert values to an appropriate type. dicts, lists and tuples are replaced by their converting alternatives. Strings are checked to see if they have a conversion format and are converted if they do.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.config.BaseConfigurator.html#configure_custom" class="code" data-type="Method">configure_custom</a></td>
+    <td><span>Configure an object with a user-supplied factory.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.config.BaseConfigurator.html#as_tuple" class="code" data-type="Method">as_tuple</a></td>
+    <td><span>Utility function which converts lists to tuples.</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.logging.config.DictConfigurator.configure">
+    
+  </a>
+  <a name="configure">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    configure(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Do the configuration.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.config.DictConfigurator.configure_formatter">
+    
+  </a>
+  <a name="configure_formatter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    configure_formatter(self, config):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Configure a formatter from a dictionary.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.config.DictConfigurator.configure_filter">
+    
+  </a>
+  <a name="configure_filter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    configure_filter(self, config):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Configure a filter from a dictionary.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.config.DictConfigurator.add_filters">
+    
+  </a>
+  <a name="add_filters">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    add_filters(self, filterer, filters):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Add filters to a filterer from a list of names.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.config.DictConfigurator.configure_handler">
+    
+  </a>
+  <a name="configure_handler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    configure_handler(self, config):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Configure a handler from a dictionary.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.config.DictConfigurator.add_handlers">
+    
+  </a>
+  <a name="add_handlers">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    add_handlers(self, logger, handlers):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Add handlers to a logger from a list of names.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.config.DictConfigurator.common_logger_config">
+    
+  </a>
+  <a name="common_logger_config">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    common_logger_config(self, logger, config, incremental=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Perform configuration which is common to root and non-root loggers.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.config.DictConfigurator.configure_logger">
+    
+  </a>
+  <a name="configure_logger">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    configure_logger(self, name, config, incremental=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Configure a non-root logger from a dictionary.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.config.DictConfigurator.configure_root">
+    
+  </a>
+  <a name="configure_root">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    configure_root(self, config, incremental=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Configure a root logger from a dictionary.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

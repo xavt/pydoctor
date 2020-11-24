@@ -1,0 +1,1406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.smtpd.SMTPChannel : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.smtpd.html" class="code" data-type="Module">smtpd</a>.<a href="Lib.smtpd.SMTPChannel.html" class="code" data-type="Class">SMTPChannel</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.smtpd.SMTPChannel(<span title="asynchat.async_chat">asynchat.async_chat</span>):</code></p>
+        <p><a href="classIndex.html#Lib.smtpd.SMTPChannel">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div class="undocumented">Undocumented</div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3511">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#COMMAND" class="code" data-type="Class Variable">COMMAND</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#DATA" class="code" data-type="Class Variable">DATA</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#command_size_limit" class="code" data-type="Class Variable">command_size_limit</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#command_size_limits" class="code" data-type="Class Variable">command_size_limits</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#max_command_size_limit" class="code" data-type="Method">max_command_size_limit</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#smtp_server" class="code" data-type="Instance Variable">smtp_server</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#conn" class="code" data-type="Instance Variable">conn</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#addr" class="code" data-type="Instance Variable">addr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#data_size_limit" class="code" data-type="Instance Variable">data_size_limit</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#enable_SMTPUTF8" class="code" data-type="Instance Variable">enable_SMTPUTF8</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#seen_greeting" class="code" data-type="Instance Variable">seen_greeting</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#extended_smtp" class="code" data-type="Instance Variable">extended_smtp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#fqdn" class="code" data-type="Instance Variable">fqdn</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#peer" class="code" data-type="Instance Variable">peer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#smtp_state" class="code" data-type="Instance Variable">smtp_state</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#mailfrom" class="code" data-type="Instance Variable">mailfrom</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#rcpttos" class="code" data-type="Instance Variable">rcpttos</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#require_SMTPUTF8" class="code" data-type="Instance Variable">require_SMTPUTF8</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#num_bytes" class="code" data-type="Instance Variable">num_bytes</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#received_data" class="code" data-type="Instance Variable">received_data</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#received_lines" class="code" data-type="Instance Variable">received_lines</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#push" class="code" data-type="Method">push</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#collect_incoming_data" class="code" data-type="Method">collect_incoming_data</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#found_terminator" class="code" data-type="Method">found_terminator</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#smtp_HELO" class="code" data-type="Method">smtp_HELO</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#smtp_EHLO" class="code" data-type="Method">smtp_EHLO</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#smtp_NOOP" class="code" data-type="Method">smtp_NOOP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#smtp_QUIT" class="code" data-type="Method">smtp_QUIT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#smtp_HELP" class="code" data-type="Method">smtp_HELP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#smtp_VRFY" class="code" data-type="Method">smtp_VRFY</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#smtp_MAIL" class="code" data-type="Method">smtp_MAIL</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#mail_options" class="code" data-type="Instance Variable">mail_options</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#smtp_RCPT" class="code" data-type="Method">smtp_RCPT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#rcpt_options" class="code" data-type="Instance Variable">rcpt_options</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#smtp_RSET" class="code" data-type="Method">smtp_RSET</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#smtp_DATA" class="code" data-type="Method">smtp_DATA</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#smtp_EXPN" class="code" data-type="Method">smtp_EXPN</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#_decode_data" class="code" data-type="Instance Variable">_decode_data</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#_emptystring" class="code" data-type="Instance Variable">_emptystring</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#_linesep" class="code" data-type="Instance Variable">_linesep</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#_dotsep" class="code" data-type="Instance Variable">_dotsep</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#_newline" class="code" data-type="Instance Variable">_newline</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#_set_post_data_state" class="code" data-type="Method">_set_post_data_state</a></td>
+    <td><span>Reset state variables to their post-DATA state.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#_set_rset_state" class="code" data-type="Method">_set_rset_state</a></td>
+    <td><span>Reset all state variables except the greeting.</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#__server" class="code" data-type="Method">__server</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#__line" class="code" data-type="Method">__line</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#__state" class="code" data-type="Method">__state</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#__greeting" class="code" data-type="Method">__greeting</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#__mailfrom" class="code" data-type="Method">__mailfrom</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#__rcpttos" class="code" data-type="Method">__rcpttos</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#__data" class="code" data-type="Method">__data</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#__fqdn" class="code" data-type="Method">__fqdn</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#__peer" class="code" data-type="Method">__peer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#__conn" class="code" data-type="Method">__conn</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#__addr" class="code" data-type="Method">__addr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#_strip_command_keyword" class="code" data-type="Method">_strip_command_keyword</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#_getaddr" class="code" data-type="Method">_getaddr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.smtpd.SMTPChannel.html#_getparams" class="code" data-type="Method">_getparams</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.smtpd.SMTPChannel.COMMAND">
+    
+  </a>
+  <a name="COMMAND">
+    
+  </a>
+  <div class="functionHeader">
+    COMMAND =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.smtpd.SMTPChannel.DATA">
+    
+  </a>
+  <a name="DATA">
+    
+  </a>
+  <div class="functionHeader">
+    DATA =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.smtpd.SMTPChannel.command_size_limit">
+    
+  </a>
+  <a name="command_size_limit">
+    
+  </a>
+  <div class="functionHeader">
+    command_size_limit =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.smtpd.SMTPChannel.command_size_limits">
+    
+  </a>
+  <a name="command_size_limits">
+    
+  </a>
+  <div class="functionHeader">
+    command_size_limits =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.smtpd.SMTPChannel.max_command_size_limit">
+    
+  </a>
+  <a name="max_command_size_limit">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    max_command_size_limit(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.smtpd.SMTPChannel.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, server, conn, addr, data_size_limit=DATA_SIZE_DEFAULT, map=None, enable_SMTPUTF8=(False), decode_data=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.smtpd.SMTPChannel.smtp_server">
+    
+  </a>
+  <a name="smtp_server">
+    
+  </a>
+  <div class="functionHeader">
+    smtp_server =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.smtpd.SMTPChannel.conn">
+    
+  </a>
+  <a name="conn">
+    
+  </a>
+  <div class="functionHeader">
+    conn =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.smtpd.SMTPChannel.addr">
+    
+  </a>
+  <a name="addr">
+    
+  </a>
+  <div class="functionHeader">
+    addr =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.smtpd.SMTPChannel.data_size_limit">
+    
+  </a>
+  <a name="data_size_limit">
+    
+  </a>
+  <div class="functionHeader">
+    data_size_limit =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.smtpd.SMTPChannel.enable_SMTPUTF8">
+    
+  </a>
+  <a name="enable_SMTPUTF8">
+    
+  </a>
+  <div class="functionHeader">
+    enable_SMTPUTF8 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.smtpd.SMTPChannel._decode_data">
+    
+  </a>
+  <a name="_decode_data">
+    
+  </a>
+  <div class="functionHeader">
+    _decode_data =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.smtpd.SMTPChannel._emptystring">
+    
+  </a>
+  <a name="_emptystring">
+    
+  </a>
+  <div class="functionHeader">
+    _emptystring =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.smtpd.SMTPChannel._linesep">
+    
+  </a>
+  <a name="_linesep">
+    
+  </a>
+  <div class="functionHeader">
+    _linesep =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.smtpd.SMTPChannel._dotsep">
+    
+  </a>
+  <a name="_dotsep">
+    
+  </a>
+  <div class="functionHeader">
+    _dotsep =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.smtpd.SMTPChannel._newline">
+    
+  </a>
+  <a name="_newline">
+    
+  </a>
+  <div class="functionHeader">
+    _newline =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.smtpd.SMTPChannel.seen_greeting">
+    
+  </a>
+  <a name="seen_greeting">
+    
+  </a>
+  <div class="functionHeader">
+    seen_greeting =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.smtpd.SMTPChannel.extended_smtp">
+    
+  </a>
+  <a name="extended_smtp">
+    
+  </a>
+  <div class="functionHeader">
+    extended_smtp =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.smtpd.SMTPChannel.fqdn">
+    
+  </a>
+  <a name="fqdn">
+    
+  </a>
+  <div class="functionHeader">
+    fqdn =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.smtpd.SMTPChannel.peer">
+    
+  </a>
+  <a name="peer">
+    
+  </a>
+  <div class="functionHeader">
+    peer =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.smtpd.SMTPChannel._set_post_data_state">
+    
+  </a>
+  <a name="_set_post_data_state">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _set_post_data_state(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Reset state variables to their post-DATA state.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.smtpd.SMTPChannel.smtp_state">
+    
+  </a>
+  <a name="smtp_state">
+    
+  </a>
+  <div class="functionHeader">
+    smtp_state =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.smtpd.SMTPChannel.mailfrom">
+    
+  </a>
+  <a name="mailfrom">
+    
+  </a>
+  <div class="functionHeader">
+    mailfrom =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.smtpd.SMTPChannel.rcpttos">
+    
+  </a>
+  <a name="rcpttos">
+    
+  </a>
+  <div class="functionHeader">
+    rcpttos =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.smtpd.SMTPChannel.require_SMTPUTF8">
+    
+  </a>
+  <a name="require_SMTPUTF8">
+    
+  </a>
+  <div class="functionHeader">
+    require_SMTPUTF8 =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.smtpd.SMTPChannel.num_bytes">
+    
+  </a>
+  <a name="num_bytes">
+    
+  </a>
+  <div class="functionHeader">
+    num_bytes =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.smtpd.SMTPChannel._set_rset_state">
+    
+  </a>
+  <a name="_set_rset_state">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _set_rset_state(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Reset all state variables except the greeting.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.smtpd.SMTPChannel.received_data">
+    
+  </a>
+  <a name="received_data">
+    
+  </a>
+  <div class="functionHeader">
+    received_data =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.smtpd.SMTPChannel.received_lines">
+    
+  </a>
+  <a name="received_lines">
+    
+  </a>
+  <div class="functionHeader">
+    received_lines =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.smtpd.SMTPChannel.__server">
+    
+  </a>
+  <a name="__server">
+    
+  </a>
+  <div class="functionHeader">
+    @__server.setter<br />
+    def
+    __server(self, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.smtpd.SMTPChannel.__line">
+    
+  </a>
+  <a name="__line">
+    
+  </a>
+  <div class="functionHeader">
+    @__line.setter<br />
+    def
+    __line(self, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.smtpd.SMTPChannel.__state">
+    
+  </a>
+  <a name="__state">
+    
+  </a>
+  <div class="functionHeader">
+    @__state.setter<br />
+    def
+    __state(self, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.smtpd.SMTPChannel.__greeting">
+    
+  </a>
+  <a name="__greeting">
+    
+  </a>
+  <div class="functionHeader">
+    @__greeting.setter<br />
+    def
+    __greeting(self, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.smtpd.SMTPChannel.__mailfrom">
+    
+  </a>
+  <a name="__mailfrom">
+    
+  </a>
+  <div class="functionHeader">
+    @__mailfrom.setter<br />
+    def
+    __mailfrom(self, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.smtpd.SMTPChannel.__rcpttos">
+    
+  </a>
+  <a name="__rcpttos">
+    
+  </a>
+  <div class="functionHeader">
+    @__rcpttos.setter<br />
+    def
+    __rcpttos(self, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.smtpd.SMTPChannel.__data">
+    
+  </a>
+  <a name="__data">
+    
+  </a>
+  <div class="functionHeader">
+    @__data.setter<br />
+    def
+    __data(self, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.smtpd.SMTPChannel.__fqdn">
+    
+  </a>
+  <a name="__fqdn">
+    
+  </a>
+  <div class="functionHeader">
+    @__fqdn.setter<br />
+    def
+    __fqdn(self, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.smtpd.SMTPChannel.__peer">
+    
+  </a>
+  <a name="__peer">
+    
+  </a>
+  <div class="functionHeader">
+    @__peer.setter<br />
+    def
+    __peer(self, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.smtpd.SMTPChannel.__conn">
+    
+  </a>
+  <a name="__conn">
+    
+  </a>
+  <div class="functionHeader">
+    @__conn.setter<br />
+    def
+    __conn(self, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.smtpd.SMTPChannel.__addr">
+    
+  </a>
+  <a name="__addr">
+    
+  </a>
+  <div class="functionHeader">
+    @__addr.setter<br />
+    def
+    __addr(self, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.smtpd.SMTPChannel.push">
+    
+  </a>
+  <a name="push">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    push(self, msg):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.smtpd.SMTPChannel.collect_incoming_data">
+    
+  </a>
+  <a name="collect_incoming_data">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    collect_incoming_data(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.smtpd.SMTPChannel.found_terminator">
+    
+  </a>
+  <a name="found_terminator">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    found_terminator(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.smtpd.SMTPChannel.smtp_HELO">
+    
+  </a>
+  <a name="smtp_HELO">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    smtp_HELO(self, arg):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.smtpd.SMTPChannel.smtp_EHLO">
+    
+  </a>
+  <a name="smtp_EHLO">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    smtp_EHLO(self, arg):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.smtpd.SMTPChannel.smtp_NOOP">
+    
+  </a>
+  <a name="smtp_NOOP">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    smtp_NOOP(self, arg):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.smtpd.SMTPChannel.smtp_QUIT">
+    
+  </a>
+  <a name="smtp_QUIT">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    smtp_QUIT(self, arg):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.smtpd.SMTPChannel._strip_command_keyword">
+    
+  </a>
+  <a name="_strip_command_keyword">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _strip_command_keyword(self, keyword, arg):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.smtpd.SMTPChannel._getaddr">
+    
+  </a>
+  <a name="_getaddr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _getaddr(self, arg):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.smtpd.SMTPChannel._getparams">
+    
+  </a>
+  <a name="_getparams">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _getparams(self, params):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.smtpd.SMTPChannel.smtp_HELP">
+    
+  </a>
+  <a name="smtp_HELP">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    smtp_HELP(self, arg):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.smtpd.SMTPChannel.smtp_VRFY">
+    
+  </a>
+  <a name="smtp_VRFY">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    smtp_VRFY(self, arg):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.smtpd.SMTPChannel.smtp_MAIL">
+    
+  </a>
+  <a name="smtp_MAIL">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    smtp_MAIL(self, arg):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.smtpd.SMTPChannel.mail_options">
+    
+  </a>
+  <a name="mail_options">
+    
+  </a>
+  <div class="functionHeader">
+    mail_options =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.smtpd.SMTPChannel.smtp_RCPT">
+    
+  </a>
+  <a name="smtp_RCPT">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    smtp_RCPT(self, arg):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.smtpd.SMTPChannel.rcpt_options">
+    
+  </a>
+  <a name="rcpt_options">
+    
+  </a>
+  <div class="functionHeader">
+    rcpt_options =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.smtpd.SMTPChannel.smtp_RSET">
+    
+  </a>
+  <a name="smtp_RSET">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    smtp_RSET(self, arg):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.smtpd.SMTPChannel.smtp_DATA">
+    
+  </a>
+  <a name="smtp_DATA">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    smtp_DATA(self, arg):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.smtpd.SMTPChannel.smtp_EXPN">
+    
+  </a>
+  <a name="smtp_EXPN">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    smtp_EXPN(self, arg):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

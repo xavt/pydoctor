@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.distutils.cygwinccompiler : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.distutils.html" class="code" data-type="Package">distutils</a>.<a href="Lib.distutils.cygwinccompiler.html" class="code" data-type="Module">cygwinccompiler</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">distutils.cygwinccompiler
+
+Provides the CygwinCCompiler class, a subclass of UnixCCompiler that
+handles the Cygwin port of the GNU C compiler to Windows.  It also contains
+the Mingw32CCompiler class which handles the mingw32 port of GCC (same as
+cygwin in no-cygwin mode).</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id965">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.cygwinccompiler.html#get_msvcr" class="code" data-type="Function">get_msvcr</a></td>
+    <td><span>Include the appropriate MSVC runtime library if Python was built with MSVC 7.0 or later.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.distutils.cygwinccompiler.CygwinCCompiler.html" class="code" data-type="Class">CygwinCCompiler</a></td>
+    <td><span>Handles the Cygwin port of the GNU C compiler to Windows.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.distutils.cygwinccompiler.Mingw32CCompiler.html" class="code" data-type="Class">Mingw32CCompiler</a></td>
+    <td><span>Handles the Mingw32 port of the GNU C compiler to Windows.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.distutils.cygwinccompiler.html#CONFIG_H_OK" class="code" data-type="Variable">CONFIG_H_OK</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.distutils.cygwinccompiler.html#CONFIG_H_NOTOK" class="code" data-type="Variable">CONFIG_H_NOTOK</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.distutils.cygwinccompiler.html#CONFIG_H_UNCERTAIN" class="code" data-type="Variable">CONFIG_H_UNCERTAIN</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.cygwinccompiler.html#check_config_h" class="code" data-type="Function">check_config_h</a></td>
+    <td><span>Check if the current Python installation appears amenable to building extensions with GCC.</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.distutils.cygwinccompiler.html#RE_VERSION" class="code" data-type="Variable">RE_VERSION</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.cygwinccompiler.html#get_versions" class="code" data-type="Function">get_versions</a></td>
+    <td><span>Try to find out the versions of gcc, ld and dllwrap.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.cygwinccompiler.html#is_cygwingcc" class="code" data-type="Function">is_cygwingcc</a></td>
+    <td><span>Try to determine if the gcc that would be used is from cygwin.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.cygwinccompiler.html#_find_exe_version" class="code" data-type="Function">_find_exe_version</a></td>
+    <td><span>Find the version of an executable by running `cmd` in the shell.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction">
+  
+  <a name="Lib.distutils.cygwinccompiler.get_msvcr">
+    
+  </a>
+  <a name="get_msvcr">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_msvcr():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Include the appropriate MSVC runtime library if Python was built
+with MSVC 7.0 or later.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.distutils.cygwinccompiler.CONFIG_H_OK">
+    
+  </a>
+  <a name="CONFIG_H_OK">
+    
+  </a>
+  <div class="functionHeader">
+    CONFIG_H_OK =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.distutils.cygwinccompiler.CONFIG_H_NOTOK">
+    
+  </a>
+  <a name="CONFIG_H_NOTOK">
+    
+  </a>
+  <div class="functionHeader">
+    CONFIG_H_NOTOK =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.distutils.cygwinccompiler.CONFIG_H_UNCERTAIN">
+    
+  </a>
+  <a name="CONFIG_H_UNCERTAIN">
+    
+  </a>
+  <div class="functionHeader">
+    CONFIG_H_UNCERTAIN =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.distutils.cygwinccompiler.check_config_h">
+    
+  </a>
+  <a name="check_config_h">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    check_config_h():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Check if the current Python installation appears amenable to building
+extensions with GCC.
+
+Returns a tuple (status, details), where 'status' is one of the following
+constants:
+
+- CONFIG_H_OK: all is well, go ahead and compile
+- CONFIG_H_NOTOK: doesn't look good
+- CONFIG_H_UNCERTAIN: not sure -- unable to read pyconfig.h
+
+'details' is a human-readable string explaining the situation.
+
+Note there are two ways to conclude "OK": either 'sys.version' contains
+the string "GCC" (implying that this Python was built with GCC), or the
+installed "pyconfig.h" contains the string "__GNUC__".</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.distutils.cygwinccompiler.RE_VERSION">
+    
+  </a>
+  <a name="RE_VERSION">
+    
+  </a>
+  <div class="functionHeader">
+    RE_VERSION =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.distutils.cygwinccompiler._find_exe_version">
+    
+  </a>
+  <a name="_find_exe_version">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _find_exe_version(cmd):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Find the version of an executable by running `cmd` in the shell.
+
+If the command is not found, or the output does not match
+`RE_VERSION`, returns None.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.distutils.cygwinccompiler.get_versions">
+    
+  </a>
+  <a name="get_versions">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_versions():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Try to find out the versions of gcc, ld and dllwrap.
+
+If not possible it returns None for it.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.distutils.cygwinccompiler.is_cygwingcc">
+    
+  </a>
+  <a name="is_cygwingcc">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_cygwingcc():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Try to determine if the gcc that would be used is from cygwin.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

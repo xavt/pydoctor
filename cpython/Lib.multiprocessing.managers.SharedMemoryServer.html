@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.multiprocessing.managers.SharedMemoryServer : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.multiprocessing.html" class="code" data-type="Package">multiprocessing</a>.<a href="Lib.multiprocessing.managers.html" class="code" data-type="Module">managers</a>.<a href="Lib.multiprocessing.managers.SharedMemoryServer.html" class="code" data-type="Class">SharedMemoryServer</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.multiprocessing.managers.SharedMemoryServer(<a href="Lib.multiprocessing.managers.Server.html" class="code" data-type="Class">Server</a>):</code></p>
+        <p><a href="classIndex.html#Lib.multiprocessing.managers.SharedMemoryServer">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div class="undocumented">Undocumented</div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3194">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.multiprocessing.managers.SharedMemoryServer.html#public" class="code" data-type="Class Variable">public</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.managers.SharedMemoryServer.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.managers.SharedMemoryServer.html#shared_memory_context" class="code" data-type="Instance Variable">shared_memory_context</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.managers.SharedMemoryServer.html#create" class="code" data-type="Method">create</a></td>
+    <td><span>Create a new distributed-shared object (not backed by a shared memory block) and return its id to be used in a Proxy Object.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.managers.SharedMemoryServer.html#shutdown" class="code" data-type="Method">shutdown</a></td>
+    <td><span>Call unlink() on all tracked shared memory, terminate the Server.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.managers.SharedMemoryServer.html#track_segment" class="code" data-type="Method">track_segment</a></td>
+    <td><span>Adds the supplied shared memory block name to Server's tracker.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.managers.SharedMemoryServer.html#release_segment" class="code" data-type="Method">release_segment</a></td>
+    <td><span>Calls unlink() on the shared memory block with the supplied name and removes it from the tracker instance inside the Server.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.managers.SharedMemoryServer.html#list_segments" class="code" data-type="Method">list_segments</a></td>
+    <td><span>Returns a list of names of shared memory blocks that the Server is currently tracking.</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.multiprocessing.managers.Server.html" class="code" data-type="Class">Server</a>:
+          </p>
+          <table class="children sortable" id="id3195">
+  
+  <tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.managers.Server.html#registry" class="code" data-type="Instance Variable">registry</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.managers.Server.html#authkey" class="code" data-type="Instance Variable">authkey</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.managers.Server.html#listener" class="code" data-type="Instance Variable">listener</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.managers.Server.html#address" class="code" data-type="Instance Variable">address</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.managers.Server.html#id_to_obj" class="code" data-type="Instance Variable">id_to_obj</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.managers.Server.html#id_to_refcount" class="code" data-type="Instance Variable">id_to_refcount</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.managers.Server.html#id_to_local_proxy_obj" class="code" data-type="Instance Variable">id_to_local_proxy_obj</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.managers.Server.html#mutex" class="code" data-type="Instance Variable">mutex</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.managers.Server.html#serve_forever" class="code" data-type="Method">serve_forever</a></td>
+    <td><span>Run the server forever</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.multiprocessing.managers.Server.html#stop_event" class="code" data-type="Instance Variable">stop_event</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.managers.Server.html#accepter" class="code" data-type="Method">accepter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.managers.Server.html#handle_request" class="code" data-type="Method">handle_request</a></td>
+    <td><span>Handle a new connection</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.managers.Server.html#serve_client" class="code" data-type="Method">serve_client</a></td>
+    <td><span>Handle requests from the proxies in a particular process/thread</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.managers.Server.html#fallback_getvalue" class="code" data-type="Method">fallback_getvalue</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.managers.Server.html#fallback_str" class="code" data-type="Method">fallback_str</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.managers.Server.html#fallback_repr" class="code" data-type="Method">fallback_repr</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.multiprocessing.managers.Server.html#fallback_mapping" class="code" data-type="Class Variable">fallback_mapping</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.managers.Server.html#dummy" class="code" data-type="Method">dummy</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.managers.Server.html#debug_info" class="code" data-type="Method">debug_info</a></td>
+    <td><span>Return some info --- useful to spot problems with refcounting</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.managers.Server.html#number_of_objects" class="code" data-type="Method">number_of_objects</a></td>
+    <td><span>Number of shared objects</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.managers.Server.html#get_methods" class="code" data-type="Method">get_methods</a></td>
+    <td><span>Return the methods of the shared object indicated by token</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.managers.Server.html#accept_connection" class="code" data-type="Method">accept_connection</a></td>
+    <td><span>Spawn a new thread to serve this connection</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.managers.Server.html#incref" class="code" data-type="Method">incref</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.multiprocessing.managers.Server.html#decref" class="code" data-type="Method">decref</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.multiprocessing.managers.SharedMemoryServer.public">
+    
+  </a>
+  <a name="public">
+    
+  </a>
+  <div class="functionHeader">
+    public =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.multiprocessing.managers.Server.html#public" class="code" data-type="Class Variable">Lib.multiprocessing.managers.Server.public</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.managers.SharedMemoryServer.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, *args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.multiprocessing.managers.Server.html#__init__" class="code" data-type="Method">Lib.multiprocessing.managers.Server.__init__</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.multiprocessing.managers.SharedMemoryServer.shared_memory_context">
+    
+  </a>
+  <a name="shared_memory_context">
+    
+  </a>
+  <div class="functionHeader">
+    shared_memory_context =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.managers.SharedMemoryServer.create">
+    
+  </a>
+  <a name="create">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    create(*args, **kwargs):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.multiprocessing.managers.Server.html#create" class="code" data-type="Method">Lib.multiprocessing.managers.Server.create</a></div>
+    
+    <div><p class="pre">Create a new distributed-shared object (not backed by a shared
+memory block) and return its id to be used in a Proxy Object.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.managers.SharedMemoryServer.shutdown">
+    
+  </a>
+  <a name="shutdown">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    shutdown(self, c):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.multiprocessing.managers.Server.html#shutdown" class="code" data-type="Method">Lib.multiprocessing.managers.Server.shutdown</a></div>
+    
+    <div><p class="pre">Call unlink() on all tracked shared memory, terminate the Server.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.managers.SharedMemoryServer.track_segment">
+    
+  </a>
+  <a name="track_segment">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    track_segment(self, c, segment_name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Adds the supplied shared memory block name to Server's tracker.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.managers.SharedMemoryServer.release_segment">
+    
+  </a>
+  <a name="release_segment">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    release_segment(self, c, segment_name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Calls unlink() on the shared memory block with the supplied name
+and removes it from the tracker instance inside the Server.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.multiprocessing.managers.SharedMemoryServer.list_segments">
+    
+  </a>
+  <a name="list_segments">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    list_segments(self, c):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns a list of names of shared memory blocks that the Server
+is currently tracking.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

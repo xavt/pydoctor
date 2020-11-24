@@ -1,0 +1,1010 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.distutils.cmd.Command : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.distutils.html" class="code" data-type="Package">distutils</a>.<a href="Lib.distutils.cmd.html" class="code" data-type="Module">cmd</a>.<a href="Lib.distutils.cmd.Command.html" class="code" data-type="Class">Command</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.distutils.cmd.Command:</code></p>
+        <p><a href="classIndex.html#Lib.distutils.cmd.Command">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Abstract base class for defining command classes, the "worker bees"
+of the Distutils.  A useful analogy for command classes is to think of
+them as subroutines with local variables called "options".  The options
+are "declared" in 'initialize_options()' and "defined" (given their
+final values, aka "finalized") in 'finalize_options()', both of which
+must be defined by every command class.  The distinction between the
+two is necessary because option values might come from the outside
+world (command line, config file, ...), and any options dependent on
+other options must be computed *after* these outside influences have
+been processed -- hence 'finalize_options()'.  The "body" of the
+subroutine, where it does all its work based on the values of its
+options, is the 'run()' method, which must also be implemented by every
+command class.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id913">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.distutils.cmd.Command.html#sub_commands" class="code" data-type="Class Variable">sub_commands</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.distutils.cmd.Command.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.distutils.cmd.Command.html#distribution" class="code" data-type="Instance Variable">distribution</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.distutils.cmd.Command.html#verbose" class="code" data-type="Instance Variable">verbose</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.distutils.cmd.Command.html#force" class="code" data-type="Instance Variable">force</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.distutils.cmd.Command.html#help" class="code" data-type="Instance Variable">help</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.distutils.cmd.Command.html#finalized" class="code" data-type="Instance Variable">finalized</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.distutils.cmd.Command.html#__getattr__" class="code" data-type="Method">__getattr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.distutils.cmd.Command.html#ensure_finalized" class="code" data-type="Method">ensure_finalized</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.distutils.cmd.Command.html#initialize_options" class="code" data-type="Method">initialize_options</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.distutils.cmd.Command.html#finalize_options" class="code" data-type="Method">finalize_options</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.distutils.cmd.Command.html#dump_options" class="code" data-type="Method">dump_options</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.distutils.cmd.Command.html#run" class="code" data-type="Method">run</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.distutils.cmd.Command.html#announce" class="code" data-type="Method">announce</a></td>
+    <td><span>If the current verbosity level is of greater than or equal to 'level' print 'msg' to stdout.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.distutils.cmd.Command.html#debug_print" class="code" data-type="Method">debug_print</a></td>
+    <td><span>Print 'msg' to stdout if the global DEBUG (taken from the DISTUTILS_DEBUG environment variable) flag is true.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.distutils.cmd.Command.html#ensure_string" class="code" data-type="Method">ensure_string</a></td>
+    <td><span>Ensure that 'option' is a string; if not defined, set it to 'default'.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.distutils.cmd.Command.html#ensure_string_list" class="code" data-type="Method">ensure_string_list</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.distutils.cmd.Command.html#ensure_filename" class="code" data-type="Method">ensure_filename</a></td>
+    <td><span>Ensure that 'option' is the name of an existing file.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.distutils.cmd.Command.html#ensure_dirname" class="code" data-type="Method">ensure_dirname</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.distutils.cmd.Command.html#get_command_name" class="code" data-type="Method">get_command_name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.distutils.cmd.Command.html#set_undefined_options" class="code" data-type="Method">set_undefined_options</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.distutils.cmd.Command.html#get_finalized_command" class="code" data-type="Method">get_finalized_command</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.distutils.cmd.Command.html#reinitialize_command" class="code" data-type="Method">reinitialize_command</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.distutils.cmd.Command.html#run_command" class="code" data-type="Method">run_command</a></td>
+    <td><span>Run some other command: uses the 'run_command()' method of Distribution, which creates and finalizes the command object if necessary and then invokes its 'run()' method.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.distutils.cmd.Command.html#get_sub_commands" class="code" data-type="Method">get_sub_commands</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.distutils.cmd.Command.html#warn" class="code" data-type="Method">warn</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.distutils.cmd.Command.html#execute" class="code" data-type="Method">execute</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.distutils.cmd.Command.html#mkpath" class="code" data-type="Method">mkpath</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.distutils.cmd.Command.html#copy_file" class="code" data-type="Method">copy_file</a></td>
+    <td><span>Copy a file respecting verbose, dry-run and force flags.  (The former two default to whatever is in the Distribution object, and the latter defaults to false for commands that don't define it.)</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.distutils.cmd.Command.html#copy_tree" class="code" data-type="Method">copy_tree</a></td>
+    <td><span>Copy an entire directory tree respecting verbose, dry-run, and force flags.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.distutils.cmd.Command.html#move_file" class="code" data-type="Method">move_file</a></td>
+    <td><span>Move a file respecting dry-run flag.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.distutils.cmd.Command.html#spawn" class="code" data-type="Method">spawn</a></td>
+    <td><span>Spawn an external command respecting dry-run flag.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.distutils.cmd.Command.html#make_archive" class="code" data-type="Method">make_archive</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.distutils.cmd.Command.html#make_file" class="code" data-type="Method">make_file</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.distutils.cmd.Command.html#_dry_run" class="code" data-type="Instance Variable">_dry_run</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.distutils.cmd.Command.html#_ensure_stringlike" class="code" data-type="Method">_ensure_stringlike</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.distutils.cmd.Command.html#_ensure_tested_string" class="code" data-type="Method">_ensure_tested_string</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.distutils.cmd.Command.sub_commands">
+    
+  </a>
+  <a name="sub_commands">
+    
+  </a>
+  <div class="functionHeader">
+    sub_commands =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.distutils.cmd.Command.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, dist):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create and initialize a new Command object.  Most importantly,
+invokes the 'initialize_options()' method, which is the real
+initializer and depends on the actual command being
+instantiated.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.distutils.cmd.Command.distribution">
+    
+  </a>
+  <a name="distribution">
+    
+  </a>
+  <div class="functionHeader">
+    distribution =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.distutils.cmd.Command._dry_run">
+    
+  </a>
+  <a name="_dry_run">
+    
+  </a>
+  <div class="functionHeader">
+    _dry_run =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.distutils.cmd.Command.verbose">
+    
+  </a>
+  <a name="verbose">
+    
+  </a>
+  <div class="functionHeader">
+    verbose =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.distutils.cmd.Command.force">
+    
+  </a>
+  <a name="force">
+    
+  </a>
+  <div class="functionHeader">
+    force =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.distutils.cmd.Command.help">
+    
+  </a>
+  <a name="help">
+    
+  </a>
+  <div class="functionHeader">
+    help =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.distutils.cmd.Command.finalized">
+    
+  </a>
+  <a name="finalized">
+    
+  </a>
+  <div class="functionHeader">
+    finalized =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.distutils.cmd.Command.__getattr__">
+    
+  </a>
+  <a name="__getattr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __getattr__(self, attr):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.distutils.cmd.Command.ensure_finalized">
+    
+  </a>
+  <a name="ensure_finalized">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ensure_finalized(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.distutils.cmd.Command.initialize_options">
+    
+  </a>
+  <a name="initialize_options">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    initialize_options(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set default values for all the options that this command
+supports.  Note that these defaults may be overridden by other
+commands, by the setup script, by config files, or by the
+command-line.  Thus, this is not the place to code dependencies
+between options; generally, 'initialize_options()' implementations
+are just a bunch of "self.foo = None" assignments.
+
+This method must be implemented by all command classes.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.distutils.cmd.Command.finalize_options">
+    
+  </a>
+  <a name="finalize_options">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    finalize_options(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set final values for all the options that this command supports.
+This is always called as late as possible, ie.  after any option
+assignments from the command-line or from other commands have been
+done.  Thus, this is the place to code option dependencies: if
+'foo' depends on 'bar', then it is safe to set 'foo' from 'bar' as
+long as 'foo' still has the same value it was assigned in
+'initialize_options()'.
+
+This method must be implemented by all command classes.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.distutils.cmd.Command.dump_options">
+    
+  </a>
+  <a name="dump_options">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    dump_options(self, header=None, indent=""""""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.distutils.cmd.Command.run">
+    
+  </a>
+  <a name="run">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    run(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">A command's raison d'etre: carry out the action it exists to
+perform, controlled by the options initialized in
+'initialize_options()', customized by other commands, the setup
+script, the command-line, and config files, and finalized in
+'finalize_options()'.  All terminal output and filesystem
+interaction should be done by 'run()'.
+
+This method must be implemented by all command classes.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.distutils.cmd.Command.announce">
+    
+  </a>
+  <a name="announce">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    announce(self, msg, level=1):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">If the current verbosity level is of greater than or equal to
+'level' print 'msg' to stdout.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.distutils.cmd.Command.debug_print">
+    
+  </a>
+  <a name="debug_print">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    debug_print(self, msg):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Print 'msg' to stdout if the global DEBUG (taken from the
+DISTUTILS_DEBUG environment variable) flag is true.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.distutils.cmd.Command._ensure_stringlike">
+    
+  </a>
+  <a name="_ensure_stringlike">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _ensure_stringlike(self, option, what, default=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.distutils.cmd.Command.ensure_string">
+    
+  </a>
+  <a name="ensure_string">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ensure_string(self, option, default=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Ensure that 'option' is a string; if not defined, set it to
+'default'.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.distutils.cmd.Command.ensure_string_list">
+    
+  </a>
+  <a name="ensure_string_list">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ensure_string_list(self, option):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Ensure that 'option' is a list of strings.  If 'option' is
+currently a string, we split it either on /,\s*/ or /\s+/, so
+"foo bar baz", "foo,bar,baz", and "foo,   bar baz" all become
+["foo", "bar", "baz"].</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.distutils.cmd.Command._ensure_tested_string">
+    
+  </a>
+  <a name="_ensure_tested_string">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _ensure_tested_string(self, option, tester, what, error_fmt, default=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.distutils.cmd.Command.ensure_filename">
+    
+  </a>
+  <a name="ensure_filename">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ensure_filename(self, option):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Ensure that 'option' is the name of an existing file.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.distutils.cmd.Command.ensure_dirname">
+    
+  </a>
+  <a name="ensure_dirname">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    ensure_dirname(self, option):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.distutils.cmd.Command.get_command_name">
+    
+  </a>
+  <a name="get_command_name">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_command_name(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.distutils.cmd.Command.set_undefined_options">
+    
+  </a>
+  <a name="set_undefined_options">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_undefined_options(self, src_cmd, *option_pairs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set the values of any "undefined" options from corresponding
+option values in some other command object.  "Undefined" here means
+"is None", which is the convention used to indicate that an option
+has not been changed between 'initialize_options()' and
+'finalize_options()'.  Usually called from 'finalize_options()' for
+options that depend on some other command rather than another
+option of the same command.  'src_cmd' is the other command from
+which option values will be taken (a command object will be created
+for it if necessary); the remaining arguments are
+'(src_option,dst_option)' tuples which mean "take the value of
+'src_option' in the 'src_cmd' command object, and copy it to
+'dst_option' in the current command object".</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.distutils.cmd.Command.get_finalized_command">
+    
+  </a>
+  <a name="get_finalized_command">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_finalized_command(self, command, create=1):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Wrapper around Distribution's 'get_command_obj()' method: find
+(create if necessary and 'create' is true) the command object for
+'command', call its 'ensure_finalized()' method, and return the
+finalized command object.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.distutils.cmd.Command.reinitialize_command">
+    
+  </a>
+  <a name="reinitialize_command">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    reinitialize_command(self, command, reinit_subcommands=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.distutils.cmd.Command.run_command">
+    
+  </a>
+  <a name="run_command">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    run_command(self, command):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Run some other command: uses the 'run_command()' method of
+Distribution, which creates and finalizes the command object if
+necessary and then invokes its 'run()' method.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.distutils.cmd.Command.get_sub_commands">
+    
+  </a>
+  <a name="get_sub_commands">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_sub_commands(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Determine the sub-commands that are relevant in the current
+distribution (ie., that need to be run).  This is based on the
+'sub_commands' class attribute: each tuple in that list may include
+a method that we call to determine if the subcommand needs to be
+run for the current distribution.  Return a list of command names.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.distutils.cmd.Command.warn">
+    
+  </a>
+  <a name="warn">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    warn(self, msg):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.distutils.cmd.Command.execute">
+    
+  </a>
+  <a name="execute">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    execute(self, func, args, msg=None, level=1):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.distutils.cmd.Command.mkpath">
+    
+  </a>
+  <a name="mkpath">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    mkpath(self, name, mode=511):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.distutils.cmd.Command.copy_file">
+    
+  </a>
+  <a name="copy_file">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    copy_file(self, infile, outfile, preserve_mode=1, preserve_times=1, link=None, level=1):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Copy a file respecting verbose, dry-run and force flags.  (The
+former two default to whatever is in the Distribution object, and
+the latter defaults to false for commands that don't define it.)</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.distutils.cmd.Command.copy_tree">
+    
+  </a>
+  <a name="copy_tree">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    copy_tree(self, infile, outfile, preserve_mode=1, preserve_times=1, preserve_symlinks=0, level=1):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Copy an entire directory tree respecting verbose, dry-run,
+and force flags.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.distutils.cmd.Command.move_file">
+    
+  </a>
+  <a name="move_file">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    move_file(self, src, dst, level=1):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Move a file respecting dry-run flag.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.distutils.cmd.Command.spawn">
+    
+  </a>
+  <a name="spawn">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    spawn(self, cmd, search_path=1, level=1):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Spawn an external command respecting dry-run flag.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.distutils.cmd.Command.make_archive">
+    
+  </a>
+  <a name="make_archive">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    make_archive(self, base_name, format, root_dir=None, base_dir=None, owner=None, group=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.distutils.cmd.Command.make_file">
+    
+  </a>
+  <a name="make_file">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    make_file(self, infiles, outfile, func, args, exec_msg=None, skip_msg=None, level=1):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Special case of 'execute()' for operations that process one or
+more input files and generate one output file.  Works just like
+'execute()', except the operation is skipped and a different
+message printed if 'outfile' already exists and is newer than all
+files listed in 'infiles'.  If the command defined 'self.force',
+and it is true, then the command is unconditionally run -- does no
+timestamp checks.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

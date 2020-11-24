@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.xml.etree.ElementTree.Element : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.xml.html" class="code" data-type="Package">xml</a>.<a href="Lib.xml.etree.html" class="code" data-type="Package">etree</a>.<a href="Lib.xml.etree.ElementTree.html" class="code" data-type="Module">ElementTree</a>.<a href="Lib.xml.etree.ElementTree.Element.html" class="code" data-type="Class">Element</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.xml.etree.ElementTree.Element:</code></p>
+        <p><a href="classIndex.html#Lib.xml.etree.ElementTree.Element">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">An XML element.
+
+This class is the reference implementation of the Element interface.
+
+An element's length is its number of subelements.  That means if you
+want to check if an element is truly empty, you should check BOTH
+its length AND its text attribute.
+
+The element tag, attribute names, and attribute values can be either
+bytes or strings.
+
+*tag* is the element name.  *attrib* is an optional dictionary containing
+element attributes. *extra* are additional element attributes given as
+keyword arguments.
+
+Example form:
+    &lt;tag attrib&gt;text&lt;child/&gt;...&lt;/tag&gt;tail</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id12134">
+  
+  <tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html#tag" class="code" data-type="Instance Variable">tag</a></td>
+    <td><span>The element's name.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html#attrib" class="code" data-type="Instance Variable">attrib</a></td>
+    <td><span>Dictionary of the element's attributes.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html#text" class="code" data-type="Instance Variable">text</a></td>
+    <td><span>Text before first subelement. This is either a string or the value None. Note that if there is no text, this attribute may be either None or the empty string, depending on the parser.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html#tail" class="code" data-type="Instance Variable">tail</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html#makeelement" class="code" data-type="Method">makeelement</a></td>
+    <td><span>Create a new element with the same type.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html#copy" class="code" data-type="Method">copy</a></td>
+    <td><span>Return copy of current element.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html#__copy__" class="code" data-type="Method">__copy__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html#__len__" class="code" data-type="Method">__len__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html#__bool__" class="code" data-type="Method">__bool__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html#__getitem__" class="code" data-type="Method">__getitem__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html#__setitem__" class="code" data-type="Method">__setitem__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html#__delitem__" class="code" data-type="Method">__delitem__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html#append" class="code" data-type="Method">append</a></td>
+    <td><span>Add *subelement* to the end of this element.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html#extend" class="code" data-type="Method">extend</a></td>
+    <td><span>Append subelements from a sequence.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html#insert" class="code" data-type="Method">insert</a></td>
+    <td><span>Insert *subelement* at position *index*.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html#remove" class="code" data-type="Method">remove</a></td>
+    <td><span>Remove matching subelement.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html#find" class="code" data-type="Method">find</a></td>
+    <td><span>Find first matching element by tag name or path.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html#findtext" class="code" data-type="Method">findtext</a></td>
+    <td><span>Find text for first matching element by tag name or path.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html#findall" class="code" data-type="Method">findall</a></td>
+    <td><span>Find all matching subelements by tag name or path.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html#iterfind" class="code" data-type="Method">iterfind</a></td>
+    <td><span>Find all matching subelements by tag name or path.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html#clear" class="code" data-type="Method">clear</a></td>
+    <td><span>Reset element.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html#get" class="code" data-type="Method">get</a></td>
+    <td><span>Get element attribute.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html#set" class="code" data-type="Method">set</a></td>
+    <td><span>Set element attribute.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html#keys" class="code" data-type="Method">keys</a></td>
+    <td><span>Get list of attribute names.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html#items" class="code" data-type="Method">items</a></td>
+    <td><span>Get element attributes as a sequence.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html#iter" class="code" data-type="Method">iter</a></td>
+    <td><span>Create tree iterator.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html#itertext" class="code" data-type="Method">itertext</a></td>
+    <td><span>Create text iterator.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html#_children" class="code" data-type="Instance Variable">_children</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.xml.etree.ElementTree.Element.html#_assert_is_element" class="code" data-type="Method">_assert_is_element</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseinstancevariable">
+  
+  <a name="Lib.xml.etree.ElementTree.Element.tag">
+    
+  </a>
+  <a name="tag">
+    
+  </a>
+  <div class="functionHeader">
+    tag =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="pre">The element's name.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.xml.etree.ElementTree.Element.attrib">
+    
+  </a>
+  <a name="attrib">
+    
+  </a>
+  <div class="functionHeader">
+    attrib =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="pre">Dictionary of the element's attributes.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.xml.etree.ElementTree.Element.text">
+    
+  </a>
+  <a name="text">
+    
+  </a>
+  <div class="functionHeader">
+    text =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="pre">Text before first subelement. This is either a string or the value None.
+Note that if there is no text, this attribute may be either
+None or the empty string, depending on the parser.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.xml.etree.ElementTree.Element.tail">
+    
+  </a>
+  <a name="tail">
+    
+  </a>
+  <div class="functionHeader">
+    tail =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="pre">Text after this element's end tag, but before the next sibling element's
+start tag.  This is either a string or the value None.  Note that if there
+was no text, this attribute may be either None or an empty string,
+depending on the parser.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.Element.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, tag, attrib={}, **extra):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.xml.etree.ElementTree.Element._children">
+    
+  </a>
+  <a name="_children">
+    
+  </a>
+  <div class="functionHeader">
+    _children =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.Element.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __repr__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.Element.makeelement">
+    
+  </a>
+  <a name="makeelement">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    makeelement(self, tag, attrib):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create a new element with the same type.
+
+*tag* is a string containing the element name.
+*attrib* is a dictionary containing the element attributes.
+
+Do not call this method, use the SubElement factory function instead.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.Element.copy">
+    
+  </a>
+  <a name="copy">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    copy(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return copy of current element.
+
+This creates a shallow copy. Subelements will be shared with the
+original tree.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.Element.__copy__">
+    
+  </a>
+  <a name="__copy__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __copy__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.Element.__len__">
+    
+  </a>
+  <a name="__len__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __len__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.Element.__bool__">
+    
+  </a>
+  <a name="__bool__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __bool__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.Element.__getitem__">
+    
+  </a>
+  <a name="__getitem__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __getitem__(self, index):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.Element.__setitem__">
+    
+  </a>
+  <a name="__setitem__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __setitem__(self, index, element):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.Element.__delitem__">
+    
+  </a>
+  <a name="__delitem__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __delitem__(self, index):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.Element.append">
+    
+  </a>
+  <a name="append">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    append(self, subelement):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Add *subelement* to the end of this element.
+
+The new element will appear in document order after the last existing
+subelement (or directly after the text, if it's the first subelement),
+but before the end tag for this element.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.Element.extend">
+    
+  </a>
+  <a name="extend">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    extend(self, elements):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Append subelements from a sequence.
+
+*elements* is a sequence with zero or more elements.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.Element.insert">
+    
+  </a>
+  <a name="insert">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    insert(self, index, subelement):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Insert *subelement* at position *index*.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.xml.etree.ElementTree.Element._assert_is_element">
+    
+  </a>
+  <a name="_assert_is_element">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _assert_is_element(self, e):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.Element.remove">
+    
+  </a>
+  <a name="remove">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    remove(self, subelement):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Remove matching subelement.
+
+Unlike the find methods, this method compares elements based on
+identity, NOT ON tag value or contents.  To remove subelements by
+other means, the easiest way is to use a list comprehension to
+select what elements to keep, and then use slice assignment to update
+the parent element.
+
+ValueError is raised if a matching element could not be found.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.Element.find">
+    
+  </a>
+  <a name="find">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    find(self, path, namespaces=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Find first matching element by tag name or path.
+
+*path* is a string having either an element tag or an XPath,
+*namespaces* is an optional mapping from namespace prefix to full name.
+
+Return the first matching element, or None if no element was found.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.Element.findtext">
+    
+  </a>
+  <a name="findtext">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    findtext(self, path, default=None, namespaces=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Find text for first matching element by tag name or path.
+
+*path* is a string having either an element tag or an XPath,
+*default* is the value to return if the element was not found,
+*namespaces* is an optional mapping from namespace prefix to full name.
+
+Return text content of first matching element, or default value if
+none was found.  Note that if an element is found having no text
+content, the empty string is returned.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.Element.findall">
+    
+  </a>
+  <a name="findall">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    findall(self, path, namespaces=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Find all matching subelements by tag name or path.
+
+*path* is a string having either an element tag or an XPath,
+*namespaces* is an optional mapping from namespace prefix to full name.
+
+Returns list containing all matching elements in document order.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.Element.iterfind">
+    
+  </a>
+  <a name="iterfind">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    iterfind(self, path, namespaces=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Find all matching subelements by tag name or path.
+
+*path* is a string having either an element tag or an XPath,
+*namespaces* is an optional mapping from namespace prefix to full name.
+
+Return an iterable yielding all matching elements in document order.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.Element.clear">
+    
+  </a>
+  <a name="clear">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    clear(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Reset element.
+
+This function removes all subelements, clears all attributes, and sets
+the text and tail attributes to None.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.Element.get">
+    
+  </a>
+  <a name="get">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get(self, key, default=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get element attribute.
+
+Equivalent to attrib.get, but some implementations may handle this a
+bit more efficiently.  *key* is what attribute to look for, and
+*default* is what to return if the attribute was not found.
+
+Returns a string containing the attribute value, or the default if
+attribute was not found.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.Element.set">
+    
+  </a>
+  <a name="set">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set(self, key, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set element attribute.
+
+Equivalent to attrib[key] = value, but some implementations may handle
+this a bit more efficiently.  *key* is what attribute to set, and
+*value* is the attribute value to set it to.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.Element.keys">
+    
+  </a>
+  <a name="keys">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    keys(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get list of attribute names.
+
+Names are returned in an arbitrary order, just like an ordinary
+Python dict.  Equivalent to attrib.keys()</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.Element.items">
+    
+  </a>
+  <a name="items">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    items(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Get element attributes as a sequence.
+
+The attributes are returned in arbitrary order.  Equivalent to
+attrib.items().
+
+Return a list of (name, value) tuples.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.Element.iter">
+    
+  </a>
+  <a name="iter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    iter(self, tag=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create tree iterator.
+
+The iterator loops over the element and all subelements in document
+order, returning all elements with a matching tag.
+
+If the tree structure is modified during iteration, new or removed
+elements may or may not be included.  To get a stable set, use the
+list() function on the iterator, and loop over the resulting list.
+
+*tag* is what tags to look for (default is to return all elements)
+
+Return an iterator containing all the matching elements.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xml.etree.ElementTree.Element.itertext">
+    
+  </a>
+  <a name="itertext">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    itertext(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Create text iterator.
+
+The iterator loops over the element and all subelements in document
+order, returning all inner text.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

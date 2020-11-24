@@ -1,0 +1,951 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.http.server.BaseHTTPRequestHandler : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.http.html" class="code" data-type="Package">http</a>.<a href="Lib.http.server.html" class="code" data-type="Module">server</a>.<a href="Lib.http.server.BaseHTTPRequestHandler.html" class="code" data-type="Class">BaseHTTPRequestHandler</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.http.server.BaseHTTPRequestHandler(<span title="socketserver.StreamRequestHandler">socketserver.StreamRequestHandler</span>):</code></p><p>Known subclasses: <a href="Lib.http.server.SimpleHTTPRequestHandler.html" class="code" data-type="Class">Lib.http.server.SimpleHTTPRequestHandler</a></p>
+        <p><a href="classIndex.html#Lib.http.server.BaseHTTPRequestHandler">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">HTTP request handler base class.
+
+The following explanation of HTTP serves to guide you through the
+code as well as to expose any misunderstandings I may have about
+HTTP (so you don't need to read the code to figure out I'm wrong
+:-).
+
+HTTP (HyperText Transfer Protocol) is an extensible protocol on
+top of a reliable stream transport (e.g. TCP/IP).  The protocol
+recognizes three parts to a request:
+
+1. One line identifying the request type and path
+2. An optional set of RFC-822-style headers
+3. An optional data part
+
+The headers and data are separated by a blank line.
+
+The first line of the request has the form
+
+&lt;command&gt; &lt;path&gt; &lt;version&gt;
+
+where &lt;command&gt; is a (case-sensitive) keyword such as GET or POST,
+&lt;path&gt; is a string containing path information for the request,
+and &lt;version&gt; should be the string "HTTP/1.0" or "HTTP/1.1".
+&lt;path&gt; is encoded using the URL encoding scheme (using %xx to signify
+the ASCII character with hex code xx).
+
+The specification specifies that lines are separated by CRLF but
+for compatibility with the widest range of clients recommends
+servers also handle LF.  Similarly, whitespace in the request line
+is treated sensibly (allowing multiple spaces between components
+and allowing trailing whitespace).
+
+Similarly, for output, lines ought to be separated by CRLF pairs
+but most clients grok LF characters just fine.
+
+If the first line of the request has the form
+
+&lt;command&gt; &lt;path&gt;
+
+(i.e. &lt;version&gt; is left out) then this is assumed to be an HTTP
+0.9 request; this form has no optional headers and data part and
+the reply consists of just the data.
+
+The reply form of the HTTP 1.x protocol again has three parts:
+
+1. One line giving the response code
+2. An optional set of RFC-822-style headers
+3. The data
+
+Again, the headers and data are separated by a blank line.
+
+The response code line has the form
+
+&lt;version&gt; &lt;responsecode&gt; &lt;responsestring&gt;
+
+where &lt;version&gt; is the protocol version ("HTTP/1.0" or "HTTP/1.1"),
+&lt;responsecode&gt; is a 3-digit response code indicating success or
+failure of the request, and &lt;responsestring&gt; is an optional
+human-readable string explaining what the response code means.
+
+This server parses the request and the headers, and then calls a
+function specific to the request type (&lt;command&gt;).  Specifically,
+a request SPAM will be handled by a method do_SPAM().  If no
+such method exists the server sends an error response to the
+client.  If it exists, it is called with no arguments:
+
+do_SPAM()
+
+Note that the request name is case sensitive (i.e. SPAM and spam
+are different requests).
+
+The various request details are stored in instance variables:
+
+- client_address is the client IP address in the form (host,
+port);
+
+- command, path and version are the broken-down request line;
+
+- headers is an instance of email.message.Message (or a derived
+class) containing the header information;
+
+- rfile is a file object open for reading positioned at the
+start of the optional input data part;
+
+- wfile is a file object open for writing.
+
+IT IS IMPORTANT TO ADHERE TO THE PROTOCOL FOR WRITING!
+
+The first thing to be written must be the response line.  Then
+follow 0 or more header lines, then a blank line, and then the
+actual data (if any).  The meaning of the header lines depends on
+the command executed by the server; in most cases, when data is
+returned, there should be at least one header line of the form
+
+Content-type: &lt;type&gt;/&lt;subtype&gt;
+
+where &lt;type&gt; and &lt;subtype&gt; should be registered MIME types,
+e.g. "text/html" or "text/plain".</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2026">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#sys_version" class="code" data-type="Class Variable">sys_version</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#server_version" class="code" data-type="Class Variable">server_version</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#default_request_version" class="code" data-type="Class Variable">default_request_version</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#parse_request" class="code" data-type="Method">parse_request</a></td>
+    <td><span>Parse a request (internal).</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#command" class="code" data-type="Instance Variable">command</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#request_version" class="code" data-type="Instance Variable">request_version</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#close_connection" class="code" data-type="Instance Variable">close_connection</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#requestline" class="code" data-type="Instance Variable">requestline</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#path" class="code" data-type="Instance Variable">path</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#headers" class="code" data-type="Instance Variable">headers</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#handle_expect_100" class="code" data-type="Method">handle_expect_100</a></td>
+    <td><span>Decide what to do with an "Expect: 100-continue" header.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#handle_one_request" class="code" data-type="Method">handle_one_request</a></td>
+    <td><span>Handle a single HTTP request.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#raw_requestline" class="code" data-type="Instance Variable">raw_requestline</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#handle" class="code" data-type="Method">handle</a></td>
+    <td><span>Handle multiple requests if necessary.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#send_error" class="code" data-type="Method">send_error</a></td>
+    <td><span>Send and log an error reply.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#send_response" class="code" data-type="Method">send_response</a></td>
+    <td><span>Add the response header to the headers buffer and log the response code.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#send_response_only" class="code" data-type="Method">send_response_only</a></td>
+    <td><span>Send the response header only.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#send_header" class="code" data-type="Method">send_header</a></td>
+    <td><span>Send a MIME header to the headers buffer.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#end_headers" class="code" data-type="Method">end_headers</a></td>
+    <td><span>Send the blank line ending the MIME headers.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#flush_headers" class="code" data-type="Method">flush_headers</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#log_request" class="code" data-type="Method">log_request</a></td>
+    <td><span>Log an accepted request.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#log_error" class="code" data-type="Method">log_error</a></td>
+    <td><span>Log an error.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#log_message" class="code" data-type="Method">log_message</a></td>
+    <td><span>Log an arbitrary message.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#version_string" class="code" data-type="Method">version_string</a></td>
+    <td><span>Return the server software version string.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#date_time_string" class="code" data-type="Method">date_time_string</a></td>
+    <td><span>Return the current date and time formatted for a message header.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#log_date_time_string" class="code" data-type="Method">log_date_time_string</a></td>
+    <td><span>Return the current time formatted for logging.</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#weekdayname" class="code" data-type="Class Variable">weekdayname</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#monthname" class="code" data-type="Class Variable">monthname</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#address_string" class="code" data-type="Method">address_string</a></td>
+    <td><span>Return the client address.</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#protocol_version" class="code" data-type="Class Variable">protocol_version</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#responses" class="code" data-type="Class Variable">responses</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.http.server.BaseHTTPRequestHandler.html#_headers_buffer" class="code" data-type="Instance Variable">_headers_buffer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler.sys_version">
+    
+  </a>
+  <a name="sys_version">
+    
+  </a>
+  <div class="functionHeader">
+    sys_version =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler.server_version">
+    
+  </a>
+  <a name="server_version">
+    
+  </a>
+  <div class="functionHeader">
+    server_version =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.http.server.SimpleHTTPRequestHandler.html" class="code" data-type="Class">Lib.http.server.SimpleHTTPRequestHandler</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler.default_request_version">
+    
+  </a>
+  <a name="default_request_version">
+    
+  </a>
+  <div class="functionHeader">
+    default_request_version =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler.parse_request">
+    
+  </a>
+  <a name="parse_request">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse_request(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse a request (internal).
+
+The request should be stored in self.raw_requestline; the results
+are in self.command, self.path, self.request_version and
+self.headers.
+
+Return True for success, False for failure; on failure, any relevant
+error response has already been sent back.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler.command">
+    
+  </a>
+  <a name="command">
+    
+  </a>
+  <div class="functionHeader">
+    command =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler.request_version">
+    
+  </a>
+  <a name="request_version">
+    
+  </a>
+  <div class="functionHeader">
+    request_version =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler.close_connection">
+    
+  </a>
+  <a name="close_connection">
+    
+  </a>
+  <div class="functionHeader">
+    close_connection =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler.requestline">
+    
+  </a>
+  <a name="requestline">
+    
+  </a>
+  <div class="functionHeader">
+    requestline =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler.path">
+    
+  </a>
+  <a name="path">
+    
+  </a>
+  <div class="functionHeader">
+    path =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler.headers">
+    
+  </a>
+  <a name="headers">
+    
+  </a>
+  <div class="functionHeader">
+    headers =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler.handle_expect_100">
+    
+  </a>
+  <a name="handle_expect_100">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    handle_expect_100(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Decide what to do with an "Expect: 100-continue" header.
+
+If the client is expecting a 100 Continue response, we must
+respond with either a 100 Continue or a final response before
+waiting for the request body. The default is to always respond
+with a 100 Continue. You can behave differently (for example,
+reject unauthorized requests) by overriding this method.
+
+This method should either return True (possibly after sending
+a 100 Continue response) or send an error response and return
+False.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler.handle_one_request">
+    
+  </a>
+  <a name="handle_one_request">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    handle_one_request(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Handle a single HTTP request.
+
+You normally don't need to override this method; see the class
+__doc__ string for information on how to handle specific HTTP
+commands such as GET and POST.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler.raw_requestline">
+    
+  </a>
+  <a name="raw_requestline">
+    
+  </a>
+  <div class="functionHeader">
+    raw_requestline =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler.handle">
+    
+  </a>
+  <a name="handle">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    handle(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Handle multiple requests if necessary.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler.send_error">
+    
+  </a>
+  <a name="send_error">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    send_error(self, code, message=None, explain=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Send and log an error reply.
+
+Arguments are
+* code:    an HTTP error code
+           3 digits
+* message: a simple optional 1 line reason phrase.
+           *( HTAB / SP / VCHAR / %x80-FF )
+           defaults to short entry matching the response code
+* explain: a detailed message defaults to the long entry
+           matching the response code.
+
+This sends an error response (so it must be called before any
+output has been generated), logs the error, and finally sends
+a piece of HTML explaining the error to the user.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler.send_response">
+    
+  </a>
+  <a name="send_response">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    send_response(self, code, message=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Add the response header to the headers buffer and log the
+response code.
+
+Also send two standard headers with the server software
+version and the current date.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler.send_response_only">
+    
+  </a>
+  <a name="send_response_only">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    send_response_only(self, code, message=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Send the response header only.</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler._headers_buffer">
+    
+  </a>
+  <a name="_headers_buffer">
+    
+  </a>
+  <div class="functionHeader">
+    _headers_buffer =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler.send_header">
+    
+  </a>
+  <a name="send_header">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    send_header(self, keyword, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Send a MIME header to the headers buffer.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler.end_headers">
+    
+  </a>
+  <a name="end_headers">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    end_headers(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Send the blank line ending the MIME headers.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler.flush_headers">
+    
+  </a>
+  <a name="flush_headers">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    flush_headers(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler.log_request">
+    
+  </a>
+  <a name="log_request">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    log_request(self, code="""-""", size="""-"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Log an accepted request.
+
+This is called by send_response().</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler.log_error">
+    
+  </a>
+  <a name="log_error">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    log_error(self, format, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Log an error.
+
+This is called when a request cannot be fulfilled.  By
+default it passes the message on to log_message().
+
+Arguments are the same as for log_message().
+
+XXX This should go to the separate error log.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler.log_message">
+    
+  </a>
+  <a name="log_message">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    log_message(self, format, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Log an arbitrary message.
+
+This is used by all other logging functions.  Override
+it if you have specific logging wishes.
+
+The first argument, FORMAT, is a format string for the
+message to be logged.  If the format string contains
+any % escapes requiring parameters, they should be
+specified as subsequent arguments (it's just like
+printf!).
+
+The client ip and current date/time are prefixed to
+every message.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler.version_string">
+    
+  </a>
+  <a name="version_string">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    version_string(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the server software version string.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler.date_time_string">
+    
+  </a>
+  <a name="date_time_string">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    date_time_string(self, timestamp=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the current date and time formatted for a message header.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler.log_date_time_string">
+    
+  </a>
+  <a name="log_date_time_string">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    log_date_time_string(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the current time formatted for logging.</p></div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler.weekdayname">
+    
+  </a>
+  <a name="weekdayname">
+    
+  </a>
+  <div class="functionHeader">
+    weekdayname =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[str]</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler.monthname">
+    
+  </a>
+  <a name="monthname">
+    
+  </a>
+  <div class="functionHeader">
+    monthname =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler.address_string">
+    
+  </a>
+  <a name="address_string">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    address_string(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the client address.</p></div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler.protocol_version">
+    
+  </a>
+  <a name="protocol_version">
+    
+  </a>
+  <div class="functionHeader">
+    protocol_version =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.http.server.BaseHTTPRequestHandler.responses">
+    
+  </a>
+  <a name="responses">
+    
+  </a>
+  <div class="functionHeader">
+    responses =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.distutils.filelist : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.distutils.html" class="code" data-type="Package">distutils</a>.<a href="Lib.distutils.filelist.html" class="code" data-type="Module">filelist</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">distutils.filelist
+
+Provides the FileList class, used for poking about the filesystem
+and building lists of files.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id982">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.distutils.filelist.FileList.html" class="code" data-type="Class">FileList</a></td>
+    <td><span>A list of files built by on exploring the filesystem and filtered by applying various patterns to what we find there.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.filelist.html#findall" class="code" data-type="Function">findall</a></td>
+    <td><span>Find all files under 'dir' and return the list of full filenames. Unless dir is '.', return full filenames with dir prepended.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.filelist.html#glob_to_re" class="code" data-type="Function">glob_to_re</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.filelist.html#translate_pattern" class="code" data-type="Function">translate_pattern</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.distutils.filelist.html#_find_all_simple" class="code" data-type="Function">_find_all_simple</a></td>
+    <td><span>Find all files under 'path'</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction private">
+  
+  <a name="Lib.distutils.filelist._find_all_simple">
+    
+  </a>
+  <a name="_find_all_simple">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _find_all_simple(path):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Find all files under 'path'</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.distutils.filelist.findall">
+    
+  </a>
+  <a name="findall">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    findall(dir=os.curdir):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Find all files under 'dir' and return the list of full filenames.
+Unless dir is '.', return full filenames with dir prepended.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.distutils.filelist.glob_to_re">
+    
+  </a>
+  <a name="glob_to_re">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    glob_to_re(pattern):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Translate a shell-like glob pattern to a regular expression; return
+a string containing the regex.  Differs from 'fnmatch.translate()' in
+that '*' does not match "special characters" (which are
+platform-specific).</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.distutils.filelist.translate_pattern">
+    
+  </a>
+  <a name="translate_pattern">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    translate_pattern(pattern, anchor=1, prefix=None, is_regex=0):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Translate a shell-like wildcard pattern to a compiled regular
+expression.  Return the compiled regex.  If 'is_regex' true,
+then 'pattern' is directly compiled to a regex (if it's a string)
+or just returned as-is (assumes it's a regex object).</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

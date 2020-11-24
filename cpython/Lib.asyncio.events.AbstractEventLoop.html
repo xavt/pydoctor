@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.asyncio.events.AbstractEventLoop : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.asyncio.html" class="code" data-type="Package">asyncio</a>.<a href="Lib.asyncio.events.html" class="code" data-type="Module">events</a>.<a href="Lib.asyncio.events.AbstractEventLoop.html" class="code" data-type="Class">AbstractEventLoop</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.asyncio.events.AbstractEventLoop:</code></p>
+        <p><a href="classIndex.html#Lib.asyncio.events.AbstractEventLoop">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Abstract event loop.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id311">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoop.html#run_forever" class="code" data-type="Method">run_forever</a></td>
+    <td><span>Run the event loop until stop() is called.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoop.html#run_until_complete" class="code" data-type="Method">run_until_complete</a></td>
+    <td><span>Run the event loop until a Future is done.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoop.html#stop" class="code" data-type="Method">stop</a></td>
+    <td><span>Stop the event loop as soon as reasonable.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoop.html#is_running" class="code" data-type="Method">is_running</a></td>
+    <td><span>Return whether the event loop is currently running.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoop.html#is_closed" class="code" data-type="Method">is_closed</a></td>
+    <td><span>Returns True if the event loop was closed.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoop.html#close" class="code" data-type="Method">close</a></td>
+    <td><span>Close the loop.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoop.html#call_soon" class="code" data-type="Method">call_soon</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoop.html#call_later" class="code" data-type="Method">call_later</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoop.html#call_at" class="code" data-type="Method">call_at</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoop.html#time" class="code" data-type="Method">time</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoop.html#create_future" class="code" data-type="Method">create_future</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoop.html#create_task" class="code" data-type="Method">create_task</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoop.html#call_soon_threadsafe" class="code" data-type="Method">call_soon_threadsafe</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoop.html#run_in_executor" class="code" data-type="Method">run_in_executor</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoop.html#set_default_executor" class="code" data-type="Method">set_default_executor</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoop.html#add_reader" class="code" data-type="Method">add_reader</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoop.html#remove_reader" class="code" data-type="Method">remove_reader</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoop.html#add_writer" class="code" data-type="Method">add_writer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoop.html#remove_writer" class="code" data-type="Method">remove_writer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoop.html#add_signal_handler" class="code" data-type="Method">add_signal_handler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoop.html#remove_signal_handler" class="code" data-type="Method">remove_signal_handler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoop.html#set_task_factory" class="code" data-type="Method">set_task_factory</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoop.html#get_task_factory" class="code" data-type="Method">get_task_factory</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoop.html#get_exception_handler" class="code" data-type="Method">get_exception_handler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoop.html#set_exception_handler" class="code" data-type="Method">set_exception_handler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoop.html#default_exception_handler" class="code" data-type="Method">default_exception_handler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoop.html#call_exception_handler" class="code" data-type="Method">call_exception_handler</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoop.html#get_debug" class="code" data-type="Method">get_debug</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoop.html#set_debug" class="code" data-type="Method">set_debug</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.asyncio.events.AbstractEventLoop.html#_timer_handle_cancelled" class="code" data-type="Method">_timer_handle_cancelled</a></td>
+    <td><span>Notification that a TimerHandle has been cancelled.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoop.run_forever">
+    
+  </a>
+  <a name="run_forever">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    run_forever(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Run the event loop until stop() is called.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoop.run_until_complete">
+    
+  </a>
+  <a name="run_until_complete">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    run_until_complete(self, future):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Run the event loop until a Future is done.
+
+Return the Future's result, or raise its exception.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoop.stop">
+    
+  </a>
+  <a name="stop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    stop(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Stop the event loop as soon as reasonable.
+
+Exactly how soon that is may depend on the implementation, but
+no more I/O callbacks should be scheduled.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoop.is_running">
+    
+  </a>
+  <a name="is_running">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_running(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return whether the event loop is currently running.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoop.is_closed">
+    
+  </a>
+  <a name="is_closed">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    is_closed(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns True if the event loop was closed.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoop.close">
+    
+  </a>
+  <a name="close">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    close(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Close the loop.
+
+The loop should not be running.
+
+This is idempotent and irreversible.
+
+No other methods should be called after this one.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoop._timer_handle_cancelled">
+    
+  </a>
+  <a name="_timer_handle_cancelled">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _timer_handle_cancelled(self, handle):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Notification that a TimerHandle has been cancelled.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoop.call_soon">
+    
+  </a>
+  <a name="call_soon">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    call_soon(self, callback, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoop.call_later">
+    
+  </a>
+  <a name="call_later">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    call_later(self, delay, callback, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoop.call_at">
+    
+  </a>
+  <a name="call_at">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    call_at(self, when, callback, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoop.time">
+    
+  </a>
+  <a name="time">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    time(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoop.create_future">
+    
+  </a>
+  <a name="create_future">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    create_future(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoop.create_task">
+    
+  </a>
+  <a name="create_task">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    create_task(self, coro):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoop.call_soon_threadsafe">
+    
+  </a>
+  <a name="call_soon_threadsafe">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    call_soon_threadsafe(self, callback, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoop.run_in_executor">
+    
+  </a>
+  <a name="run_in_executor">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    run_in_executor(self, executor, func, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoop.set_default_executor">
+    
+  </a>
+  <a name="set_default_executor">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_default_executor(self, executor):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoop.add_reader">
+    
+  </a>
+  <a name="add_reader">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    add_reader(self, fd, callback, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoop.remove_reader">
+    
+  </a>
+  <a name="remove_reader">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    remove_reader(self, fd):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoop.add_writer">
+    
+  </a>
+  <a name="add_writer">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    add_writer(self, fd, callback, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoop.remove_writer">
+    
+  </a>
+  <a name="remove_writer">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    remove_writer(self, fd):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoop.add_signal_handler">
+    
+  </a>
+  <a name="add_signal_handler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    add_signal_handler(self, sig, callback, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoop.remove_signal_handler">
+    
+  </a>
+  <a name="remove_signal_handler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    remove_signal_handler(self, sig):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoop.set_task_factory">
+    
+  </a>
+  <a name="set_task_factory">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_task_factory(self, factory):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoop.get_task_factory">
+    
+  </a>
+  <a name="get_task_factory">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_task_factory(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoop.get_exception_handler">
+    
+  </a>
+  <a name="get_exception_handler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_exception_handler(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoop.set_exception_handler">
+    
+  </a>
+  <a name="set_exception_handler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_exception_handler(self, handler):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoop.default_exception_handler">
+    
+  </a>
+  <a name="default_exception_handler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    default_exception_handler(self, context):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoop.call_exception_handler">
+    
+  </a>
+  <a name="call_exception_handler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    call_exception_handler(self, context):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoop.get_debug">
+    
+  </a>
+  <a name="get_debug">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_debug(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.asyncio.events.AbstractEventLoop.set_debug">
+    
+  </a>
+  <a name="set_debug">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_debug(self, enabled):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.logging.Formatter : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.logging.html" class="code" data-type="Package">logging</a>.<a href="Lib.logging.Formatter.html" class="code" data-type="Class">Formatter</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.logging.Formatter(<span title="object">object</span>):</code></p>
+        <p><a href="classIndex.html#Lib.logging.Formatter">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Formatter instances are used to convert a LogRecord to text.
+
+Formatters need to know how a LogRecord is constructed. They are
+responsible for converting a LogRecord to (usually) a string which can
+be interpreted by either a human or an external system. The base Formatter
+allows a formatting string to be specified. If none is supplied, the
+style-dependent default value, "%(message)s", "{message}", or
+"${message}", is used.
+
+The Formatter can be initialized with a format string which makes use of
+knowledge of the LogRecord attributes - e.g. the default value mentioned
+above makes use of the fact that the user's message and arguments are pre-
+formatted into a LogRecord's message attribute. Currently, the useful
+attributes in a LogRecord are described by:
+
+%(name)s            Name of the logger (logging channel)
+%(levelno)s         Numeric logging level for the message (DEBUG, INFO,
+                    WARNING, ERROR, CRITICAL)
+%(levelname)s       Text logging level for the message ("DEBUG", "INFO",
+                    "WARNING", "ERROR", "CRITICAL")
+%(pathname)s        Full pathname of the source file where the logging
+                    call was issued (if available)
+%(filename)s        Filename portion of pathname
+%(module)s          Module (name portion of filename)
+%(lineno)d          Source line number where the logging call was issued
+                    (if available)
+%(funcName)s        Function name
+%(created)f         Time when the LogRecord was created (time.time()
+                    return value)
+%(asctime)s         Textual time when the LogRecord was created
+%(msecs)d           Millisecond portion of the creation time
+%(relativeCreated)d Time in milliseconds when the LogRecord was created,
+                    relative to the time the logging module was loaded
+                    (typically at application startup time)
+%(thread)d          Thread ID (if available)
+%(threadName)s      Thread name (if available)
+%(process)d         Process ID (if available)
+%(message)s         The result of record.getMessage(), computed just as
+                    the record is emitted</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3005">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Formatter.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Initialize the formatter with specified format strings.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.Formatter.html#datefmt" class="code" data-type="Instance Variable">datefmt</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.Formatter.html#default_time_format" class="code" data-type="Class Variable">default_time_format</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.Formatter.html#default_msec_format" class="code" data-type="Class Variable">default_msec_format</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Formatter.html#formatTime" class="code" data-type="Method">formatTime</a></td>
+    <td><span>Return the creation time of the specified LogRecord as formatted text.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Formatter.html#formatException" class="code" data-type="Method">formatException</a></td>
+    <td><span>Format and return the specified exception information as a string.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Formatter.html#usesTime" class="code" data-type="Method">usesTime</a></td>
+    <td><span>Check if the format uses the creation time of the record.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Formatter.html#formatMessage" class="code" data-type="Method">formatMessage</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Formatter.html#formatStack" class="code" data-type="Method">formatStack</a></td>
+    <td><span>This method is provided as an extension point for specialized formatting of stack information.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Formatter.html#format" class="code" data-type="Method">format</a></td>
+    <td><span>Format the specified record as text.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.Formatter.html#_style" class="code" data-type="Instance Variable">_style</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.Formatter.html#_fmt" class="code" data-type="Instance Variable">_fmt</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.logging.Formatter.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, fmt=None, datefmt=None, style="""%""", validate=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Initialize the formatter with specified format strings.
+
+Initialize the formatter either with the specified format string, or a
+default as described above. Allow for specialized date formatting with
+the optional datefmt argument. If datefmt is omitted, you get an
+ISO8601-like (or RFC 3339-like) format.
+
+Use a style parameter of '%', '{' or '$' to specify that you want to
+use one of %-formatting, :meth:`str.format` (``{}``) formatting or
+:class:`string.Template` formatting in your format string.
+
+.. versionchanged:: 3.2
+   Added the ``style`` parameter.</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.logging.Formatter._style">
+    
+  </a>
+  <a name="_style">
+    
+  </a>
+  <div class="functionHeader">
+    _style =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.logging.Formatter._fmt">
+    
+  </a>
+  <a name="_fmt">
+    
+  </a>
+  <div class="functionHeader">
+    _fmt =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.logging.Formatter.datefmt">
+    
+  </a>
+  <a name="datefmt">
+    
+  </a>
+  <div class="functionHeader">
+    datefmt =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.Formatter.default_time_format">
+    
+  </a>
+  <a name="default_time_format">
+    
+  </a>
+  <div class="functionHeader">
+    default_time_format =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.logging.Formatter.default_msec_format">
+    
+  </a>
+  <a name="default_msec_format">
+    
+  </a>
+  <div class="functionHeader">
+    default_msec_format =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.Formatter.formatTime">
+    
+  </a>
+  <a name="formatTime">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    formatTime(self, record, datefmt=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the creation time of the specified LogRecord as formatted text.
+
+This method should be called from format() by a formatter which
+wants to make use of a formatted time. This method can be overridden
+in formatters to provide for any specific requirement, but the
+basic behaviour is as follows: if datefmt (a string) is specified,
+it is used with time.strftime() to format the creation time of the
+record. Otherwise, an ISO8601-like (or RFC 3339-like) format is used.
+The resulting string is returned. This function uses a user-configurable
+function to convert the creation time to a tuple. By default,
+time.localtime() is used; to change this for a particular formatter
+instance, set the 'converter' attribute to a function with the same
+signature as time.localtime() or time.gmtime(). To change it for all
+formatters, for example if you want all logging times to be shown in GMT,
+set the 'converter' attribute in the Formatter class.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.Formatter.formatException">
+    
+  </a>
+  <a name="formatException">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    formatException(self, ei):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Format and return the specified exception information as a string.
+
+This default implementation just uses
+traceback.print_exception()</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.Formatter.usesTime">
+    
+  </a>
+  <a name="usesTime">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    usesTime(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Check if the format uses the creation time of the record.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.Formatter.formatMessage">
+    
+  </a>
+  <a name="formatMessage">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    formatMessage(self, record):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.Formatter.formatStack">
+    
+  </a>
+  <a name="formatStack">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    formatStack(self, stack_info):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">This method is provided as an extension point for specialized
+formatting of stack information.
+
+The input data is a string as returned from a call to
+:func:`traceback.print_stack`, but with the last trailing newline
+removed.
+
+The base implementation just returns the value passed in.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.Formatter.format">
+    
+  </a>
+  <a name="format">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    format(self, record):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Format the specified record as text.
+
+The record's attribute dictionary is used as the operand to a
+string formatting operation which yields the returned string.
+Before formatting the dictionary, a couple of preparatory steps
+are carried out. The message attribute of the record is computed
+using LogRecord.getMessage(). If the formatting string uses the
+time (as determined by a call to usesTime(), formatTime() is
+called to format the event time. If there is exception information,
+it is formatted using formatException() and appended to the message.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

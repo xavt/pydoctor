@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.pdb : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.pdb.html" class="code" data-type="Module">pdb</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">The Python Debugger Pdb
+=======================
+
+To use the debugger in its simplest form:
+
+        &gt;&gt;&gt; import pdb
+        &gt;&gt;&gt; pdb.run('&lt;a statement&gt;')
+
+The debugger's prompt is '(Pdb) '.  This will stop in the first
+function call in &lt;a statement&gt;.
+
+Alternatively, if a statement terminated with an unhandled exception,
+you can use pdb's post-mortem facility to inspect the contents of the
+traceback:
+
+        &gt;&gt;&gt; &lt;a statement&gt;
+        &lt;exception traceback&gt;
+        &gt;&gt;&gt; import pdb
+        &gt;&gt;&gt; pdb.pm()
+
+The commands recognized by the debugger are listed in the next
+section.  Most can be abbreviated as indicated; e.g., h(elp) means
+that 'help' can be typed as 'h' or 'help' (but not as 'he' or 'hel',
+nor as 'H' or 'Help' or 'HELP').  Optional arguments are enclosed in
+square brackets.  Alternatives in the command syntax are separated
+by a vertical bar (|).
+
+A blank line repeats the previous command literally, except for
+'list', where it lists the next 11 lines.
+
+Commands that the debugger doesn't recognize are assumed to be Python
+statements and are executed in the context of the program being
+debugged.  Python statements can also be prefixed with an exclamation
+point ('!').  This is a powerful way to inspect the program being
+debugged; it is even possible to change variables or call functions.
+When an exception occurs in such a statement, the exception name is
+printed but the debugger's state is not changed.
+
+The debugger supports aliases, which can save typing.  And aliases can
+have parameters (see the alias help entry) which allows one a certain
+level of adaptability to the context under examination.
+
+Multiple commands may be entered on a single line, separated by the
+pair ';;'.  No intelligence is applied to separating the commands; the
+input is split at the first ';;', even if it is in the middle of a
+quoted string.
+
+If a file ".pdbrc" exists in your home directory or in the current
+directory, it is read in and executed as if it had been typed at the
+debugger prompt.  This is particularly useful for aliases.  If both
+files exist, the one in the home directory is read first and aliases
+defined there can be overridden by the local file.  This behavior can be
+disabled by passing the "readrc=False" argument to the Pdb constructor.
+
+Aside from aliases, the debugger is not directly programmable; but it
+is implemented as a class from which you can derive your own debugger
+class, which you can make as fancy as you like.
+
+
+Debugger commands
+=================</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3369">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.pdb.Restart.html" class="code" data-type="Class">Restart</a></td>
+    <td><span>Causes a debugger to be restarted for the debugged python program.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pdb.html#find_function" class="code" data-type="Function">find_function</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pdb.html#getsourcelines" class="code" data-type="Function">getsourcelines</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pdb.html#lasti2lineno" class="code" data-type="Function">lasti2lineno</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pdb.html#line_prefix" class="code" data-type="Variable">line_prefix</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.pdb.Pdb.html" class="code" data-type="Class">Pdb</a></td>
+    <td><span class="undocumented">No class0/2 class variables docstring; , 0/24 instance variables docstring; , 49/75 methods documented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pdb.html#run" class="code" data-type="Function">run</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pdb.html#runeval" class="code" data-type="Function">runeval</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pdb.html#runctx" class="code" data-type="Function">runctx</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pdb.html#runcall" class="code" data-type="Function">runcall</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pdb.html#set_trace" class="code" data-type="Function">set_trace</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pdb.html#post_mortem" class="code" data-type="Function">post_mortem</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pdb.html#pm" class="code" data-type="Function">pm</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pdb.html#TESTCMD" class="code" data-type="Variable">TESTCMD</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pdb.html#test" class="code" data-type="Function">test</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pdb.html#help" class="code" data-type="Function">help</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.pdb.html#main" class="code" data-type="Function">main</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.pdb._rstr.html" class="code" data-type="Class">_rstr</a></td>
+    <td><span>String that doesn't quote its repr.</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pdb.html#_help_order" class="code" data-type="Variable">_help_order</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.pdb.html#_usage" class="code" data-type="Variable">_usage</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basefunction">
+  
+  <a name="Lib.pdb.find_function">
+    
+  </a>
+  <a name="find_function">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    find_function(funcname, filename):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pdb.getsourcelines">
+    
+  </a>
+  <a name="getsourcelines">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getsourcelines(obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pdb.lasti2lineno">
+    
+  </a>
+  <a name="lasti2lineno">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    lasti2lineno(code, lasti):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pdb.line_prefix">
+    
+  </a>
+  <a name="line_prefix">
+    
+  </a>
+  <div class="functionHeader">
+    line_prefix =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.pdb._help_order">
+    
+  </a>
+  <a name="_help_order">
+    
+  </a>
+  <div class="functionHeader">
+    _help_order =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[str]</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pdb.run">
+    
+  </a>
+  <a name="run">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    run(statement, globals=None, locals=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pdb.runeval">
+    
+  </a>
+  <a name="runeval">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    runeval(expression, globals=None, locals=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pdb.runctx">
+    
+  </a>
+  <a name="runctx">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    runctx(statement, globals, locals):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pdb.runcall">
+    
+  </a>
+  <a name="runcall">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    runcall(*args, **kwds):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pdb.set_trace">
+    
+  </a>
+  <a name="set_trace">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_trace():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pdb.post_mortem">
+    
+  </a>
+  <a name="post_mortem">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    post_mortem(t=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pdb.pm">
+    
+  </a>
+  <a name="pm">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    pm():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.pdb.TESTCMD">
+    
+  </a>
+  <a name="TESTCMD">
+    
+  </a>
+  <div class="functionHeader">
+    TESTCMD =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pdb.test">
+    
+  </a>
+  <a name="test">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pdb.help">
+    
+  </a>
+  <a name="help">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    help():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.pdb._usage">
+    
+  </a>
+  <a name="_usage">
+    
+  </a>
+  <div class="functionHeader">
+    _usage =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.pdb.main">
+    
+  </a>
+  <a name="main">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    main():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

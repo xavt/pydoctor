@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.heapq : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.heapq.html" class="code" data-type="Module">heapq</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Heap queue algorithm (a.k.a. priority queue).
+
+Heaps are arrays for which a[k] &lt;= a[2*k+1] and a[k] &lt;= a[2*k+2] for
+all k, counting elements from 0.  For the sake of comparison,
+non-existing elements are considered to be infinite.  The interesting
+property of a heap is that a[0] is always its smallest element.
+
+Usage:
+
+heap = []            # creates an empty heap
+heappush(heap, item) # pushes a new item on the heap
+item = heappop(heap) # pops the smallest item from the heap
+item = heap[0]       # smallest item on the heap without popping it
+heapify(x)           # transforms list into a heap, in-place, in linear time
+item = heapreplace(heap, item) # pops and returns smallest item, and adds
+                               # new item; the heap size is unchanged
+
+Our API differs from textbook heap algorithms as follows:
+
+- We use 0-based indexing.  This makes the relationship between the
+  index for a node and the indexes for its children slightly less
+  obvious, but is more suitable since Python uses 0-based indexing.
+
+- Our heappop() method returns the smallest item, not the largest.
+
+These two make it possible to view the heap as a regular Python list
+without surprises: heap[0] is the smallest item, and heap.sort()
+maintains the heap invariant!</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id1981">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.heapq.html#__about__" class="code" data-type="Variable">__about__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.heapq.html#heappush" class="code" data-type="Function">heappush</a></td>
+    <td><span>Push item onto heap, maintaining the heap invariant.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.heapq.html#heappop" class="code" data-type="Function">heappop</a></td>
+    <td><span>Pop the smallest item off the heap, maintaining the heap invariant.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.heapq.html#heapreplace" class="code" data-type="Function">heapreplace</a></td>
+    <td><span>Pop and return the current smallest value, and add the new item.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.heapq.html#heappushpop" class="code" data-type="Function">heappushpop</a></td>
+    <td><span>Fast version of a heappush followed by a heappop.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.heapq.html#heapify" class="code" data-type="Function">heapify</a></td>
+    <td><span>Transform list into a heap, in-place, in O(len(x)) time.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.heapq.html#merge" class="code" data-type="Function">merge</a></td>
+    <td><span>Merge multiple sorted inputs into a single sorted output.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.heapq.html#nsmallest" class="code" data-type="Function">nsmallest</a></td>
+    <td><span>Find the n smallest elements in a dataset.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.heapq.html#nlargest" class="code" data-type="Function">nlargest</a></td>
+    <td><span>Find the n largest elements in a dataset.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.heapq.html#_heappop_max" class="code" data-type="Function">_heappop_max</a></td>
+    <td><span>Maxheap version of a heappop.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.heapq.html#_heapreplace_max" class="code" data-type="Function">_heapreplace_max</a></td>
+    <td><span>Maxheap version of a heappop followed by a heappush.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.heapq.html#_heapify_max" class="code" data-type="Function">_heapify_max</a></td>
+    <td><span>Transform list into a maxheap, in-place, in O(len(x)) time.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.heapq.html#_siftdown" class="code" data-type="Function">_siftdown</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.heapq.html#_siftup" class="code" data-type="Function">_siftup</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.heapq.html#_siftdown_max" class="code" data-type="Function">_siftdown_max</a></td>
+    <td><span>Maxheap variant of _siftdown</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.heapq.html#_siftup_max" class="code" data-type="Function">_siftup_max</a></td>
+    <td><span>Maxheap variant of _siftup</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.heapq.__about__">
+    
+  </a>
+  <a name="__about__">
+    
+  </a>
+  <div class="functionHeader">
+    __about__ =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.heapq.heappush">
+    
+  </a>
+  <a name="heappush">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    heappush(heap, item):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Push item onto heap, maintaining the heap invariant.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.heapq.heappop">
+    
+  </a>
+  <a name="heappop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    heappop(heap):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Pop the smallest item off the heap, maintaining the heap invariant.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.heapq.heapreplace">
+    
+  </a>
+  <a name="heapreplace">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    heapreplace(heap, item):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Pop and return the current smallest value, and add the new item.
+
+This is more efficient than heappop() followed by heappush(), and can be
+more appropriate when using a fixed-size heap.  Note that the value
+returned may be larger than item!  That constrains reasonable uses of
+this routine unless written as part of a conditional replacement:
+
+    if item &gt; heap[0]:
+        item = heapreplace(heap, item)</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.heapq.heappushpop">
+    
+  </a>
+  <a name="heappushpop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    heappushpop(heap, item):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Fast version of a heappush followed by a heappop.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.heapq.heapify">
+    
+  </a>
+  <a name="heapify">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    heapify(x):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Transform list into a heap, in-place, in O(len(x)) time.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.heapq._heappop_max">
+    
+  </a>
+  <a name="_heappop_max">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _heappop_max(heap):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Maxheap version of a heappop.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.heapq._heapreplace_max">
+    
+  </a>
+  <a name="_heapreplace_max">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _heapreplace_max(heap, item):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Maxheap version of a heappop followed by a heappush.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.heapq._heapify_max">
+    
+  </a>
+  <a name="_heapify_max">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _heapify_max(x):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Transform list into a maxheap, in-place, in O(len(x)) time.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.heapq._siftdown">
+    
+  </a>
+  <a name="_siftdown">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _siftdown(heap, startpos, pos):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.heapq._siftup">
+    
+  </a>
+  <a name="_siftup">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _siftup(heap, pos):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.heapq._siftdown_max">
+    
+  </a>
+  <a name="_siftdown_max">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _siftdown_max(heap, startpos, pos):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Maxheap variant of _siftdown</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.heapq._siftup_max">
+    
+  </a>
+  <a name="_siftup_max">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _siftup_max(heap, pos):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Maxheap variant of _siftup</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.heapq.merge">
+    
+  </a>
+  <a name="merge">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    merge(*iterables):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Merge multiple sorted inputs into a single sorted output.
+
+Similar to sorted(itertools.chain(*iterables)) but returns a generator,
+does not pull the data into memory all at once, and assumes that each of
+the input streams is already sorted (smallest to largest).
+
+&gt;&gt;&gt; list(merge([1,3,5,7], [0,2,4,8], [5,10,15,20], [], [25]))
+[0, 1, 2, 3, 4, 5, 5, 7, 8, 10, 15, 20, 25]
+
+If *key* is not None, applies a key function to each element to determine
+its sort order.
+
+&gt;&gt;&gt; list(merge(['dog', 'horse'], ['cat', 'fish', 'kangaroo'], key=len))
+['dog', 'cat', 'fish', 'horse', 'kangaroo']</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.heapq.nsmallest">
+    
+  </a>
+  <a name="nsmallest">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    nsmallest(n, iterable, key=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Find the n smallest elements in a dataset.
+
+Equivalent to:  sorted(iterable, key=key)[:n]</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.heapq.nlargest">
+    
+  </a>
+  <a name="nlargest">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    nlargest(n, iterable, key=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Find the n largest elements in a dataset.
+
+Equivalent to:  sorted(iterable, key=key, reverse=True)[:n]</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

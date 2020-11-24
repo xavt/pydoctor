@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.codeop : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.codeop.html" class="code" data-type="Module">codeop</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Utilities to compile possibly incomplete Python source code.
+
+This module provides two interfaces, broadly similar to the builtin
+function compile(), which take program text, a filename and a 'mode'
+and:
+
+- Return code object if the command is complete and valid
+- Return None if the command is incomplete
+- Raise SyntaxError, ValueError or OverflowError if the command is a
+  syntax error (OverflowError and ValueError can be produced by
+  malformed literals).
+
+Approach:
+
+First, check if the source consists entirely of blank lines and
+comments; if so, replace it with 'pass', because the built-in
+parser doesn't always do the right thing for these.
+
+Compile three times: as is, with \n, and with \n\n appended.  If it
+compiles as is, it's complete.  If it compiles with one \n appended,
+we expect more.  If it doesn't compile either way, we compare the
+error we get when compiling with \n or \n\n appended.  If the errors
+are the same, the code is broken.  But if the errors are different, we
+expect more.  Not intuitive; not even guaranteed to hold in future
+releases; but this matches the compiler's behavior from Python 1.4
+through 2.2, at least.
+
+Caveat:
+
+It is possible (but not likely) that the parser stops parsing with a
+successful outcome before reaching the end of the source; in this
+case, trailing symbols may be ignored instead of causing an error.
+For example, a backslash followed by two newlines may be followed by
+arbitrary garbage.  This will be fixed once the API for the parser is
+better.
+
+The two interfaces are:
+
+compile_command(source, filename, symbol):
+
+    Compiles a single command in the manner described above.
+
+CommandCompiler():
+
+    Instances of this class have __call__ methods identical in
+    signature to compile_command; the difference is that if the
+    instance compiles program text containing a __future__ statement,
+    the instance 'remembers' and compiles all subsequent program texts
+    with the statement in force.
+
+The module also provides another class:
+
+Compile():
+
+    Instances of this class act like the built-in function compile,
+    but with 'memory' in the sense described above.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id519">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.codeop.html#PyCF_DONT_IMPLY_DEDENT" class="code" data-type="Variable">PyCF_DONT_IMPLY_DEDENT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.codeop.html#compile_command" class="code" data-type="Function">compile_command</a></td>
+    <td><span>Compile a command and determine whether it is incomplete.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.codeop.Compile.html" class="code" data-type="Class">Compile</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.codeop.CommandCompiler.html" class="code" data-type="Class">CommandCompiler</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.codeop.html#_features" class="code" data-type="Variable">_features</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.codeop.html#_maybe_compile" class="code" data-type="Function">_maybe_compile</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.codeop.html#_compile" class="code" data-type="Function">_compile</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable private">
+  
+  <a name="Lib.codeop._features">
+    
+  </a>
+  <a name="_features">
+    
+  </a>
+  <div class="functionHeader">
+    _features =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.codeop.PyCF_DONT_IMPLY_DEDENT">
+    
+  </a>
+  <a name="PyCF_DONT_IMPLY_DEDENT">
+    
+  </a>
+  <div class="functionHeader">
+    PyCF_DONT_IMPLY_DEDENT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.codeop._maybe_compile">
+    
+  </a>
+  <a name="_maybe_compile">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _maybe_compile(compiler, source, filename, symbol):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.codeop._compile">
+    
+  </a>
+  <a name="_compile">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _compile(source, filename, symbol):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.codeop.compile_command">
+    
+  </a>
+  <a name="compile_command">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    compile_command(source, filename="""&lt;input&gt;""", symbol="""single"""):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Compile a command and determine whether it is incomplete.
+
+Arguments:
+
+source -- the source string; may contain \n characters
+filename -- optional filename from which source was read; default
+            "&lt;input&gt;"
+symbol -- optional grammar start symbol; "single" (default), "exec"
+          or "eval"
+
+Return value / exceptions raised:
+
+- Return a code object if the command is complete and valid
+- Return None if the command is incomplete
+- Raise SyntaxError, ValueError or OverflowError if the command is a
+  syntax error (OverflowError and ValueError can be produced by
+  malformed literals).</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

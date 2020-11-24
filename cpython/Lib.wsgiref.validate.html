@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.wsgiref.validate : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.wsgiref.html" class="code" data-type="Package">wsgiref</a>.<a href="Lib.wsgiref.validate.html" class="code" data-type="Module">validate</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Middleware to check for obedience to the WSGI specification.
+
+Some of the things this checks:
+
+* Signature of the application and start_response (including that
+  keyword arguments are not used).
+
+* Environment checks:
+
+  - Environment is a dictionary (and not a subclass).
+
+  - That all the required keys are in the environment: REQUEST_METHOD,
+    SERVER_NAME, SERVER_PORT, wsgi.version, wsgi.input, wsgi.errors,
+    wsgi.multithread, wsgi.multiprocess, wsgi.run_once
+
+  - That HTTP_CONTENT_TYPE and HTTP_CONTENT_LENGTH are not in the
+    environment (these headers should appear as CONTENT_LENGTH and
+    CONTENT_TYPE).
+
+  - Warns if QUERY_STRING is missing, as the cgi module acts
+    unpredictably in that case.
+
+  - That CGI-style variables (that don't contain a .) have
+    (non-unicode) string values
+
+  - That wsgi.version is a tuple
+
+  - That wsgi.url_scheme is 'http' or 'https' (@@: is this too
+    restrictive?)
+
+  - Warns if the REQUEST_METHOD is not known (@@: probably too
+    restrictive).
+
+  - That SCRIPT_NAME and PATH_INFO are empty or start with /
+
+  - That at least one of SCRIPT_NAME or PATH_INFO are set.
+
+  - That CONTENT_LENGTH is a positive integer.
+
+  - That SCRIPT_NAME is not '/' (it should be '', and PATH_INFO should
+    be '/').
+
+  - That wsgi.input has the methods read, readline, readlines, and
+    __iter__
+
+  - That wsgi.errors has the methods flush, write, writelines
+
+* The status is a string, contains a space, starts with an integer,
+  and that integer is in range (&gt; 100).
+
+* That the headers is a list (not a subclass, not another kind of
+  sequence).
+
+* That the items of the headers are tuples of strings.
+
+* That there is no 'status' header (that is used in CGI, but not in
+  WSGI).
+
+* That the headers don't contain newlines or colons, end in _ or -, or
+  contain characters codes below 037.
+
+* That Content-Type is given if there is content (CGI often has a
+  default content type, but WSGI does not).
+
+* That no Content-Type is given when there is no content (@@: is this
+  too restrictive?)
+
+* That the exc_info argument to start_response is a tuple or None.
+
+* That all calls to the writer are with strings, and no other methods
+  on the writer are accessed.
+
+* That wsgi.input is used properly:
+
+  - .read() is called with exactly one argument
+
+  - That it returns a string
+
+  - That readline, readlines, and __iter__ return strings
+
+  - That .close() is not called
+
+  - No other methods are provided
+
+* That wsgi.errors is used properly:
+
+  - .write() and .writelines() is called with a string
+
+  - That .close() is not called, and no other methods are provided.
+
+* The response iterator:
+
+  - That it is not a string (it should be a list of a single string; a
+    string will work, but perform horribly).
+
+  - That .__next__() returns a string
+
+  - That the iterator is not iterated over until start_response has
+    been called (that can signal either a server or application
+    error).
+
+  - That .close() is called (doesn't raise exception, only prints to
+    sys.stderr, because we only know it isn't called when the object
+    is garbage collected).</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id12008">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.wsgiref.validate.html#header_re" class="code" data-type="Variable">header_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.wsgiref.validate.html#bad_header_value_re" class="code" data-type="Variable">bad_header_value_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.wsgiref.validate.WSGIWarning.html" class="code" data-type="Class">WSGIWarning</a></td>
+    <td><span>Raised in response to WSGI-spec-related warnings</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.wsgiref.validate.html#assert_" class="code" data-type="Function">assert_</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.wsgiref.validate.html#check_string_type" class="code" data-type="Function">check_string_type</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.wsgiref.validate.html#validator" class="code" data-type="Function">validator</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.wsgiref.validate.InputWrapper.html" class="code" data-type="Class">InputWrapper</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.wsgiref.validate.ErrorWrapper.html" class="code" data-type="Class">ErrorWrapper</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.wsgiref.validate.WriteWrapper.html" class="code" data-type="Class">WriteWrapper</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.wsgiref.validate.PartialIteratorWrapper.html" class="code" data-type="Class">PartialIteratorWrapper</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.wsgiref.validate.IteratorWrapper.html" class="code" data-type="Class">IteratorWrapper</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.wsgiref.validate.html#check_environ" class="code" data-type="Function">check_environ</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.wsgiref.validate.html#check_input" class="code" data-type="Function">check_input</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.wsgiref.validate.html#check_errors" class="code" data-type="Function">check_errors</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.wsgiref.validate.html#check_status" class="code" data-type="Function">check_status</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.wsgiref.validate.html#check_headers" class="code" data-type="Function">check_headers</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.wsgiref.validate.html#check_content_type" class="code" data-type="Function">check_content_type</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.wsgiref.validate.html#check_exc_info" class="code" data-type="Function">check_exc_info</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.wsgiref.validate.html#check_iterator" class="code" data-type="Function">check_iterator</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.wsgiref.validate.header_re">
+    
+  </a>
+  <a name="header_re">
+    
+  </a>
+  <div class="functionHeader">
+    header_re =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.wsgiref.validate.bad_header_value_re">
+    
+  </a>
+  <a name="bad_header_value_re">
+    
+  </a>
+  <div class="functionHeader">
+    bad_header_value_re =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.wsgiref.validate.assert_">
+    
+  </a>
+  <a name="assert_">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    assert_(cond, *args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.wsgiref.validate.check_string_type">
+    
+  </a>
+  <a name="check_string_type">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    check_string_type(value, title):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.wsgiref.validate.validator">
+    
+  </a>
+  <a name="validator">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    validator(application):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">When applied between a WSGI server and a WSGI application, this
+middleware will check for WSGI compliancy on a number of levels.
+This middleware does not modify the request or response in any
+way, but will raise an AssertionError if anything seems off
+(except for a failure to close the application iterator, which
+will be printed to stderr -- there's no way to raise an exception
+at that point).</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.wsgiref.validate.check_environ">
+    
+  </a>
+  <a name="check_environ">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    check_environ(environ):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.wsgiref.validate.check_input">
+    
+  </a>
+  <a name="check_input">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    check_input(wsgi_input):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.wsgiref.validate.check_errors">
+    
+  </a>
+  <a name="check_errors">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    check_errors(wsgi_errors):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.wsgiref.validate.check_status">
+    
+  </a>
+  <a name="check_status">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    check_status(status):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.wsgiref.validate.check_headers">
+    
+  </a>
+  <a name="check_headers">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    check_headers(headers):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.wsgiref.validate.check_content_type">
+    
+  </a>
+  <a name="check_content_type">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    check_content_type(status, headers):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.wsgiref.validate.check_exc_info">
+    
+  </a>
+  <a name="check_exc_info">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    check_exc_info(exc_info):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.wsgiref.validate.check_iterator">
+    
+  </a>
+  <a name="check_iterator">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    check_iterator(iterator):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.logging.StreamHandler : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.logging.html" class="code" data-type="Package">logging</a>.<a href="Lib.logging.StreamHandler.html" class="code" data-type="Class">StreamHandler</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.logging.StreamHandler(<a href="Lib.logging.Handler.html" class="code" data-type="Class">Handler</a>):</code></p><p>Known subclasses: <a href="Lib.logging._StderrHandler.html" class="code" data-type="Class">Lib.logging._StderrHandler</a>, <a href="Lib.logging.FileHandler.html" class="code" data-type="Class">Lib.logging.FileHandler</a></p>
+        <p><a href="classIndex.html#Lib.logging.StreamHandler">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">A handler class which writes logging records, appropriately formatted,
+to a stream. Note that this class does not close the stream, as
+sys.stdout or sys.stderr may be used.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3011">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.StreamHandler.html#terminator" class="code" data-type="Class Variable">terminator</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.StreamHandler.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Initialize the handler.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.StreamHandler.html#stream" class="code" data-type="Instance Variable">stream</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.StreamHandler.html#flush" class="code" data-type="Method">flush</a></td>
+    <td><span>Flushes the stream.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.StreamHandler.html#emit" class="code" data-type="Method">emit</a></td>
+    <td><span>Emit a record.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.StreamHandler.html#setStream" class="code" data-type="Method">setStream</a></td>
+    <td><span>Sets the StreamHandler's stream to the specified value, if it is different.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.StreamHandler.html#__repr__" class="code" data-type="Method">__repr__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.logging.Handler.html" class="code" data-type="Class">Handler</a>:
+          </p>
+          <table class="children sortable" id="id3012">
+  
+  <tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.Handler.html#level" class="code" data-type="Instance Variable">level</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.Handler.html#formatter" class="code" data-type="Instance Variable">formatter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Handler.html#get_name" class="code" data-type="Method">get_name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Handler.html#set_name" class="code" data-type="Method">set_name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseclassvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.logging.Handler.html#name" class="code" data-type="Class Variable">name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Handler.html#createLock" class="code" data-type="Method">createLock</a></td>
+    <td><span>Acquire a thread lock for serializing access to the underlying I/O.</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.Handler.html#lock" class="code" data-type="Instance Variable">lock</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Handler.html#acquire" class="code" data-type="Method">acquire</a></td>
+    <td><span>Acquire the I/O thread lock.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Handler.html#release" class="code" data-type="Method">release</a></td>
+    <td><span>Release the I/O thread lock.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Handler.html#setLevel" class="code" data-type="Method">setLevel</a></td>
+    <td><span>Set the logging level of this handler.  level must be an int or a str.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Handler.html#format" class="code" data-type="Method">format</a></td>
+    <td><span>Format the specified record.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Handler.html#handle" class="code" data-type="Method">handle</a></td>
+    <td><span>Conditionally emit the specified logging record.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Handler.html#setFormatter" class="code" data-type="Method">setFormatter</a></td>
+    <td><span>Set the formatter for this handler.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Handler.html#close" class="code" data-type="Method">close</a></td>
+    <td><span>Tidy up any resources used by the handler.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Handler.html#handleError" class="code" data-type="Method">handleError</a></td>
+    <td><span>Handle errors which occur during an emit() call.</span></td>
+  </tr><tr class="baseinstancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.Handler.html#_name" class="code" data-type="Instance Variable">_name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Handler.html#_at_fork_reinit" class="code" data-type="Method">_at_fork_reinit</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.logging.Filterer.html" class="code" data-type="Class">Filterer</a> (via <a href="Lib.logging.Handler.html" class="code" data-type="Class">Handler</a>):
+          </p>
+          <table class="children sortable" id="id3013">
+  
+  <tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.logging.Filterer.html#filters" class="code" data-type="Instance Variable">filters</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Filterer.html#addFilter" class="code" data-type="Method">addFilter</a></td>
+    <td><span>Add the specified filter to this handler.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Filterer.html#removeFilter" class="code" data-type="Method">removeFilter</a></td>
+    <td><span>Remove the specified filter from this handler.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.logging.Filterer.html#filter" class="code" data-type="Method">filter</a></td>
+    <td><span>Determine if a record is loggable by consulting all the filters.</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.logging.StreamHandler.terminator">
+    
+  </a>
+  <a name="terminator">
+    
+  </a>
+  <div class="functionHeader">
+    terminator =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.StreamHandler.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, stream=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.logging.Handler.html#__init__" class="code" data-type="Method">Lib.logging.Handler.__init__</a></div><div class="interfaceinfo">overridden in <a href="Lib.logging._StderrHandler.html" class="code" data-type="Class">Lib.logging._StderrHandler</a>, <a href="Lib.logging.FileHandler.html" class="code" data-type="Class">Lib.logging.FileHandler</a></div>
+    
+    <div><p class="pre">Initialize the handler.
+
+If stream is not specified, sys.stderr is used.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.logging.StreamHandler.stream">
+    
+  </a>
+  <a name="stream">
+    
+  </a>
+  <div class="functionHeader">
+    stream =
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.logging._StderrHandler.html" class="code" data-type="Class">Lib.logging._StderrHandler</a>, <a href="Lib.logging.FileHandler.html" class="code" data-type="Class">Lib.logging.FileHandler</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.StreamHandler.flush">
+    
+  </a>
+  <a name="flush">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    flush(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.logging.Handler.html#flush" class="code" data-type="Method">Lib.logging.Handler.flush</a></div>
+    
+    <div><p class="pre">Flushes the stream.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.StreamHandler.emit">
+    
+  </a>
+  <a name="emit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    emit(self, record):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.logging.Handler.html#emit" class="code" data-type="Method">Lib.logging.Handler.emit</a></div><div class="interfaceinfo">overridden in <a href="Lib.logging.FileHandler.html" class="code" data-type="Class">Lib.logging.FileHandler</a></div>
+    
+    <div><p class="pre">Emit a record.
+
+If a formatter is specified, it is used to format the record.
+The record is then written to the stream with a trailing newline.  If
+exception information is present, it is formatted using
+traceback.print_exception and appended to the stream.  If the stream
+has an 'encoding' attribute, it is used to determine how to do the
+output to the stream.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.StreamHandler.setStream">
+    
+  </a>
+  <a name="setStream">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setStream(self, stream):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Sets the StreamHandler's stream to the specified value,
+if it is different.
+
+Returns the old stream, if the stream was changed, or None
+if it wasn't.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.logging.StreamHandler.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __repr__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.logging.Handler.html#__repr__" class="code" data-type="Method">Lib.logging.Handler.__repr__</a></div><div class="interfaceinfo">overridden in <a href="Lib.logging.FileHandler.html" class="code" data-type="Class">Lib.logging.FileHandler</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

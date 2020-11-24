@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.nntplib : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.nntplib.html" class="code" data-type="Module">nntplib</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">An NNTP client class based on:
+- RFC 977: Network News Transfer Protocol
+- RFC 2980: Common NNTP Extensions
+- RFC 3977: Network News Transfer Protocol (version 2)
+
+Example:
+
+&gt;&gt;&gt; from nntplib import NNTP
+&gt;&gt;&gt; s = NNTP('news')
+&gt;&gt;&gt; resp, count, first, last, name = s.group('comp.lang.python')
+&gt;&gt;&gt; print('Group', name, 'has', count, 'articles, range', first, 'to', last)
+Group comp.lang.python has 51 articles, range 5770 to 5821
+&gt;&gt;&gt; resp, subs = s.xhdr('subject', '{0}-{1}'.format(first, last))
+&gt;&gt;&gt; resp = s.quit()
+&gt;&gt;&gt;
+
+Here 'resp' is the server response line.
+Error responses are turned into exceptions.
+
+To post an article from a file:
+&gt;&gt;&gt; f = open(filename, 'rb') # file containing article, including header
+&gt;&gt;&gt; resp = s.post(f)
+&gt;&gt;&gt;
+
+For descriptions of all methods, read the comments in the code below.
+Note that all arguments and return values representing article numbers
+are strings, not numbers, since they are rarely used for calculations.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3279">
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.nntplib.NNTPError.html" class="code" data-type="Class">NNTPError</a></td>
+    <td><span>Base class for all nntplib exceptions</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.nntplib.NNTPReplyError.html" class="code" data-type="Class">NNTPReplyError</a></td>
+    <td><span>Unexpected [123]xx reply</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.nntplib.NNTPTemporaryError.html" class="code" data-type="Class">NNTPTemporaryError</a></td>
+    <td><span>4xx errors</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.nntplib.NNTPPermanentError.html" class="code" data-type="Class">NNTPPermanentError</a></td>
+    <td><span>5xx errors</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.nntplib.NNTPProtocolError.html" class="code" data-type="Class">NNTPProtocolError</a></td>
+    <td><span>Response does not begin with [1-5]</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.nntplib.NNTPDataError.html" class="code" data-type="Class">NNTPDataError</a></td>
+    <td><span>Error in response data</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.nntplib.html#NNTP_PORT" class="code" data-type="Variable">NNTP_PORT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.nntplib.html#NNTP_SSL_PORT" class="code" data-type="Variable">NNTP_SSL_PORT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.nntplib.html#GroupInfo" class="code" data-type="Variable">GroupInfo</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.nntplib.html#ArticleInfo" class="code" data-type="Variable">ArticleInfo</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.nntplib.html#decode_header" class="code" data-type="Function">decode_header</a></td>
+    <td><span>Takes a unicode string representing a munged header value and decodes it as a (possibly non-ASCII) readable value.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.nntplib.NNTP.html" class="code" data-type="Class">NNTP</a></td>
+    <td><span class="undocumented">No class0/2 class variables docstring; , 0/13 instance variables docstring; , 40/49 methods documented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.nntplib.NNTP_SSL.html" class="code" data-type="Class">NNTP_SSL</a></td>
+    <td><span class="undocumented">No class0/1 instance variables docstring; , 1/2 methods documented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.nntplib.html#parser" class="code" data-type="Variable">parser</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.nntplib.html#args" class="code" data-type="Variable">args</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.nntplib.html#s" class="code" data-type="Variable">s</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.nntplib.html#caps" class="code" data-type="Variable">caps</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.nntplib.html#resp" class="code" data-type="Variable">resp</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.nntplib.html#count" class="code" data-type="Variable">count</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.nntplib.html#first" class="code" data-type="Variable">first</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.nntplib.html#last" class="code" data-type="Variable">last</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.nntplib.html#name" class="code" data-type="Variable">name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.nntplib.html#cut" class="code" data-type="Function">cut</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.nntplib.html#overviews" class="code" data-type="Variable">overviews</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.nntplib.html#author" class="code" data-type="Variable">author</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.nntplib.html#subject" class="code" data-type="Variable">subject</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.nntplib.html#lines" class="code" data-type="Variable">lines</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.nntplib.html#_have_ssl" class="code" data-type="Variable">_have_ssl</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.nntplib.html#_MAXLINE" class="code" data-type="Variable">_MAXLINE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.nntplib.html#_LONGRESP" class="code" data-type="Variable">_LONGRESP</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.nntplib.html#_DEFAULT_OVERVIEW_FMT" class="code" data-type="Variable">_DEFAULT_OVERVIEW_FMT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.nntplib.html#_OVERVIEW_FMT_ALTERNATIVES" class="code" data-type="Variable">_OVERVIEW_FMT_ALTERNATIVES</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.nntplib.html#_CRLF" class="code" data-type="Variable">_CRLF</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.nntplib.html#_parse_overview_fmt" class="code" data-type="Function">_parse_overview_fmt</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.nntplib.html#_parse_overview" class="code" data-type="Function">_parse_overview</a></td>
+    <td><span>Parse the response to an OVER or XOVER command according to the overview format `fmt`.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.nntplib.html#_parse_datetime" class="code" data-type="Function">_parse_datetime</a></td>
+    <td><span>Parse a pair of (date, time) strings, and return a datetime object. If only the date is given, it is assumed to be date and time concatenated together (e.g. response to the DATE command).</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.nntplib.html#_unparse_datetime" class="code" data-type="Function">_unparse_datetime</a></td>
+    <td><span>Format a date or datetime object as a pair of (date, time) strings in the format required by the NEWNEWS and NEWGROUPS commands.  If a date object is passed, the time is assumed to be midnight (00h00).</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.nntplib.html#_encrypt_on" class="code" data-type="Function">_encrypt_on</a></td>
+    <td><span class="undocumented">No summary</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable private">
+  
+  <a name="Lib.nntplib._have_ssl">
+    
+  </a>
+  <a name="_have_ssl">
+    
+  </a>
+  <div class="functionHeader">
+    _have_ssl =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.nntplib._MAXLINE">
+    
+  </a>
+  <a name="_MAXLINE">
+    
+  </a>
+  <div class="functionHeader">
+    _MAXLINE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.nntplib.NNTP_PORT">
+    
+  </a>
+  <a name="NNTP_PORT">
+    
+  </a>
+  <div class="functionHeader">
+    NNTP_PORT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.nntplib.NNTP_SSL_PORT">
+    
+  </a>
+  <a name="NNTP_SSL_PORT">
+    
+  </a>
+  <div class="functionHeader">
+    NNTP_SSL_PORT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.nntplib._LONGRESP">
+    
+  </a>
+  <a name="_LONGRESP">
+    
+  </a>
+  <div class="functionHeader">
+    _LONGRESP =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Set[str]</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.nntplib._DEFAULT_OVERVIEW_FMT">
+    
+  </a>
+  <a name="_DEFAULT_OVERVIEW_FMT">
+    
+  </a>
+  <div class="functionHeader">
+    _DEFAULT_OVERVIEW_FMT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[str]</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.nntplib._OVERVIEW_FMT_ALTERNATIVES">
+    
+  </a>
+  <a name="_OVERVIEW_FMT_ALTERNATIVES">
+    
+  </a>
+  <div class="functionHeader">
+    _OVERVIEW_FMT_ALTERNATIVES =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict[str, str]</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.nntplib._CRLF">
+    
+  </a>
+  <a name="_CRLF">
+    
+  </a>
+  <div class="functionHeader">
+    _CRLF =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.nntplib.GroupInfo">
+    
+  </a>
+  <a name="GroupInfo">
+    
+  </a>
+  <div class="functionHeader">
+    GroupInfo =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.nntplib.ArticleInfo">
+    
+  </a>
+  <a name="ArticleInfo">
+    
+  </a>
+  <div class="functionHeader">
+    ArticleInfo =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.nntplib.decode_header">
+    
+  </a>
+  <a name="decode_header">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    decode_header(header_str):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Takes a unicode string representing a munged header value
+and decodes it as a (possibly non-ASCII) readable value.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.nntplib._parse_overview_fmt">
+    
+  </a>
+  <a name="_parse_overview_fmt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _parse_overview_fmt(lines):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse a list of string representing the response to LIST OVERVIEW.FMT
+and return a list of header/metadata names.
+Raises NNTPDataError if the response is not compliant
+(cf. RFC 3977, section 8.4).</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.nntplib._parse_overview">
+    
+  </a>
+  <a name="_parse_overview">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _parse_overview(lines, fmt, data_process_func=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse the response to an OVER or XOVER command according to the
+overview format `fmt`.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.nntplib._parse_datetime">
+    
+  </a>
+  <a name="_parse_datetime">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _parse_datetime(date_str, time_str=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Parse a pair of (date, time) strings, and return a datetime object.
+If only the date is given, it is assumed to be date and time
+concatenated together (e.g. response to the DATE command).</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.nntplib._unparse_datetime">
+    
+  </a>
+  <a name="_unparse_datetime">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _unparse_datetime(dt, legacy=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Format a date or datetime object as a pair of (date, time) strings
+in the format required by the NEWNEWS and NEWGROUPS commands.  If a
+date object is passed, the time is assumed to be midnight (00h00).
+
+The returned representation depends on the legacy flag:
+* if legacy is False (the default):
+  date has the YYYYMMDD format and time the HHMMSS format
+* if legacy is True:
+  date has the YYMMDD format and time the HHMMSS format.
+RFC 3977 compliant servers should understand both formats; therefore,
+legacy is only needed when talking to old servers.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.nntplib._encrypt_on">
+    
+  </a>
+  <a name="_encrypt_on">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _encrypt_on(sock, context, hostname):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Wrap a socket in SSL/TLS. Arguments:
+- sock: Socket to wrap
+- context: SSL context to use for the encrypted connection
+Returns:
+- sock: New, encrypted socket.</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.nntplib.parser">
+    
+  </a>
+  <a name="parser">
+    
+  </a>
+  <div class="functionHeader">
+    parser =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.nntplib.args">
+    
+  </a>
+  <a name="args">
+    
+  </a>
+  <div class="functionHeader">
+    args =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.nntplib.s">
+    
+  </a>
+  <a name="s">
+    
+  </a>
+  <div class="functionHeader">
+    s =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.nntplib.caps">
+    
+  </a>
+  <a name="caps">
+    
+  </a>
+  <div class="functionHeader">
+    caps =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.nntplib.resp">
+    
+  </a>
+  <a name="resp">
+    
+  </a>
+  <div class="functionHeader">
+    resp =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.nntplib.count">
+    
+  </a>
+  <a name="count">
+    
+  </a>
+  <div class="functionHeader">
+    count =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.nntplib.first">
+    
+  </a>
+  <a name="first">
+    
+  </a>
+  <div class="functionHeader">
+    first =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.nntplib.last">
+    
+  </a>
+  <a name="last">
+    
+  </a>
+  <div class="functionHeader">
+    last =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.nntplib.name">
+    
+  </a>
+  <a name="name">
+    
+  </a>
+  <div class="functionHeader">
+    name =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.nntplib.cut">
+    
+  </a>
+  <a name="cut">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    cut(s, lim):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.nntplib.overviews">
+    
+  </a>
+  <a name="overviews">
+    
+  </a>
+  <div class="functionHeader">
+    overviews =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.nntplib.author">
+    
+  </a>
+  <a name="author">
+    
+  </a>
+  <div class="functionHeader">
+    author =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.nntplib.subject">
+    
+  </a>
+  <a name="subject">
+    
+  </a>
+  <div class="functionHeader">
+    subject =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.nntplib.lines">
+    
+  </a>
+  <a name="lines">
+    
+  </a>
+  <div class="functionHeader">
+    lines =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

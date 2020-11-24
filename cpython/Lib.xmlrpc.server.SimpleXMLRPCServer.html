@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.xmlrpc.server.SimpleXMLRPCServer : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.xmlrpc.html" class="code" data-type="Package">xmlrpc</a>.<a href="Lib.xmlrpc.server.html" class="code" data-type="Module">server</a>.<a href="Lib.xmlrpc.server.SimpleXMLRPCServer.html" class="code" data-type="Class">SimpleXMLRPCServer</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.xmlrpc.server.SimpleXMLRPCServer(<span title="socketserver.TCPServer">socketserver.TCPServer</span>, <a href="Lib.xmlrpc.server.SimpleXMLRPCDispatcher.html" class="code" data-type="Class">SimpleXMLRPCDispatcher</a>):</code></p><p>Known subclasses: <a href="Lib.xmlrpc.server.DocXMLRPCServer.html" class="code" data-type="Class">Lib.xmlrpc.server.DocXMLRPCServer</a>, <a href="Lib.xmlrpc.server.MultiPathXMLRPCServer.html" class="code" data-type="Class">Lib.xmlrpc.server.MultiPathXMLRPCServer</a></p>
+        <p><a href="classIndex.html#Lib.xmlrpc.server.SimpleXMLRPCServer">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Simple XML-RPC server.
+
+Simple XML-RPC server that allows functions and a single instance
+to be installed to handle requests. The default implementation
+attempts to dispatch XML-RPC calls to the functions or instance
+installed in the server. Override the _dispatch method inherited
+from SimpleXMLRPCDispatcher to change this behavior.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id12194">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.xmlrpc.server.SimpleXMLRPCServer.html#allow_reuse_address" class="code" data-type="Class Variable">allow_reuse_address</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.server.SimpleXMLRPCServer.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xmlrpc.server.SimpleXMLRPCServer.html#logRequests" class="code" data-type="Instance Variable">logRequests</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable private">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.xmlrpc.server.SimpleXMLRPCServer.html#_send_traceback_header" class="code" data-type="Class Variable">_send_traceback_header</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+          <p class="inheritedFrom">
+            Inherited from <a href="Lib.xmlrpc.server.SimpleXMLRPCDispatcher.html" class="code" data-type="Class">SimpleXMLRPCDispatcher</a>:
+          </p>
+          <table class="children sortable" id="id12195">
+  
+  <tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xmlrpc.server.SimpleXMLRPCDispatcher.html#funcs" class="code" data-type="Instance Variable">funcs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xmlrpc.server.SimpleXMLRPCDispatcher.html#instance" class="code" data-type="Instance Variable">instance</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xmlrpc.server.SimpleXMLRPCDispatcher.html#allow_none" class="code" data-type="Instance Variable">allow_none</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xmlrpc.server.SimpleXMLRPCDispatcher.html#encoding" class="code" data-type="Instance Variable">encoding</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xmlrpc.server.SimpleXMLRPCDispatcher.html#use_builtin_types" class="code" data-type="Instance Variable">use_builtin_types</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.server.SimpleXMLRPCDispatcher.html#register_instance" class="code" data-type="Method">register_instance</a></td>
+    <td><span>Registers an instance to respond to XML-RPC requests.</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.xmlrpc.server.SimpleXMLRPCDispatcher.html#allow_dotted_names" class="code" data-type="Instance Variable">allow_dotted_names</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.server.SimpleXMLRPCDispatcher.html#register_function" class="code" data-type="Method">register_function</a></td>
+    <td><span>Registers a function to respond to XML-RPC requests.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.server.SimpleXMLRPCDispatcher.html#register_introspection_functions" class="code" data-type="Method">register_introspection_functions</a></td>
+    <td><span>Registers the XML-RPC introspection methods in the system namespace.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.server.SimpleXMLRPCDispatcher.html#register_multicall_functions" class="code" data-type="Method">register_multicall_functions</a></td>
+    <td><span>Registers the XML-RPC multicall method in the system namespace.</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.server.SimpleXMLRPCDispatcher.html#system_listMethods" class="code" data-type="Method">system_listMethods</a></td>
+    <td><span>system.listMethods() =&gt; ['add', 'subtract', 'multiple']</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.server.SimpleXMLRPCDispatcher.html#system_methodSignature" class="code" data-type="Method">system_methodSignature</a></td>
+    <td><span>system.methodSignature('add') =&gt; [double, int, int]</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.server.SimpleXMLRPCDispatcher.html#system_methodHelp" class="code" data-type="Method">system_methodHelp</a></td>
+    <td><span>system.methodHelp('add') =&gt; "Adds two integers together"</span></td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.server.SimpleXMLRPCDispatcher.html#system_multicall" class="code" data-type="Method">system_multicall</a></td>
+    <td><span>system.multicall([{'methodName': 'add', 'params': [2, 2]}, ...]) =&gt; [[4], ...]</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.server.SimpleXMLRPCDispatcher.html#_marshaled_dispatch" class="code" data-type="Method">_marshaled_dispatch</a></td>
+    <td><span>Dispatches an XML-RPC method from marshalled (XML) data.</span></td>
+  </tr><tr class="basemethod private">
+    
+    <td>Method</td>
+    <td><a href="Lib.xmlrpc.server.SimpleXMLRPCDispatcher.html#_dispatch" class="code" data-type="Method">_dispatch</a></td>
+    <td><span>Dispatches the XML-RPC method.</span></td>
+  </tr>
+</table>
+          
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.xmlrpc.server.SimpleXMLRPCServer.allow_reuse_address">
+    
+  </a>
+  <a name="allow_reuse_address">
+    
+  </a>
+  <div class="functionHeader">
+    allow_reuse_address =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="baseclassvariable private">
+  
+  <a name="Lib.xmlrpc.server.SimpleXMLRPCServer._send_traceback_header">
+    
+  </a>
+  <a name="_send_traceback_header">
+    
+  </a>
+  <div class="functionHeader">
+    _send_traceback_header =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bool</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.xmlrpc.server.SimpleXMLRPCServer.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, addr, requestHandler=SimpleXMLRPCRequestHandler, logRequests=(True), allow_none=(False), encoding=None, bind_and_activate=(True), use_builtin_types=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <a href="Lib.xmlrpc.server.SimpleXMLRPCDispatcher.html#__init__" class="code" data-type="Method">Lib.xmlrpc.server.SimpleXMLRPCDispatcher.__init__</a></div><div class="interfaceinfo">overridden in <a href="Lib.xmlrpc.server.DocXMLRPCServer.html" class="code" data-type="Class">Lib.xmlrpc.server.DocXMLRPCServer</a>, <a href="Lib.xmlrpc.server.MultiPathXMLRPCServer.html" class="code" data-type="Class">Lib.xmlrpc.server.MultiPathXMLRPCServer</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.xmlrpc.server.SimpleXMLRPCServer.logRequests">
+    
+  </a>
+  <a name="logRequests">
+    
+  </a>
+  <div class="functionHeader">
+    logRequests =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.multiprocessing.connection : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.multiprocessing.html" class="code" data-type="Package">multiprocessing</a>.<a href="Lib.multiprocessing.connection.html" class="code" data-type="Module">connection</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div class="undocumented">Undocumented</div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3125">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.multiprocessing.connection.html#BUFSIZE" class="code" data-type="Variable">BUFSIZE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.multiprocessing.connection.html#CONNECTION_TIMEOUT" class="code" data-type="Variable">CONNECTION_TIMEOUT</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.multiprocessing.connection.html#default_family" class="code" data-type="Variable">default_family</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.multiprocessing.connection.html#families" class="code" data-type="Variable">families</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.multiprocessing.connection.html#arbitrary_address" class="code" data-type="Function">arbitrary_address</a></td>
+    <td><span>Return an arbitrary free address for the given family</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.multiprocessing.connection.html#address_type" class="code" data-type="Function">address_type</a></td>
+    <td><span>Return the types of the address</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.multiprocessing.connection.PipeConnection.html" class="code" data-type="Class">PipeConnection</a></td>
+    <td><span>Connection class based on a Windows named pipe. Overlapped I/O is used, so the handles must have been created with FILE_FLAG_OVERLAPPED.</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.multiprocessing.connection.Connection.html" class="code" data-type="Class">Connection</a></td>
+    <td><span>Connection class based on an arbitrary file descriptor (Unix only), or a socket handle (Windows).</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.multiprocessing.connection.Listener.html" class="code" data-type="Class">Listener</a></td>
+    <td><span>Returns a listener object.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.multiprocessing.connection.html#Client" class="code" data-type="Function">Client</a></td>
+    <td><span>Returns a connection to the address of a `Listener`</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.multiprocessing.connection.html#Pipe" class="code" data-type="Function">Pipe</a></td>
+    <td><span>Returns pair of connection objects at either end of a pipe</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.multiprocessing.connection.SocketListener.html" class="code" data-type="Class">SocketListener</a></td>
+    <td><span>Representation of a socket which is bound to an address and listening</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.multiprocessing.connection.html#SocketClient" class="code" data-type="Function">SocketClient</a></td>
+    <td><span>Return a connection object connected to the socket given by `address`</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.multiprocessing.connection.PipeListener.html" class="code" data-type="Class">PipeListener</a></td>
+    <td><span>Representation of a named pipe</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.multiprocessing.connection.html#PipeClient" class="code" data-type="Function">PipeClient</a></td>
+    <td><span>Return a connection object connected to the pipe given by `address`</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.multiprocessing.connection.html#MESSAGE_LENGTH" class="code" data-type="Variable">MESSAGE_LENGTH</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.multiprocessing.connection.html#CHALLENGE" class="code" data-type="Variable">CHALLENGE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.multiprocessing.connection.html#WELCOME" class="code" data-type="Variable">WELCOME</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.multiprocessing.connection.html#FAILURE" class="code" data-type="Variable">FAILURE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.multiprocessing.connection.html#deliver_challenge" class="code" data-type="Function">deliver_challenge</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.multiprocessing.connection.html#answer_challenge" class="code" data-type="Function">answer_challenge</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.multiprocessing.connection.ConnectionWrapper.html" class="code" data-type="Class">ConnectionWrapper</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><a href="Lib.multiprocessing.connection.XmlListener.html" class="code" data-type="Class">XmlListener</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.multiprocessing.connection.html#XmlClient" class="code" data-type="Function">XmlClient</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.multiprocessing.connection.html#wait" class="code" data-type="Function">wait</a></td>
+    <td><span>Wait till an object in object_list is ready/readable.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.multiprocessing.connection.html#reduce_connection" class="code" data-type="Function">reduce_connection</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.multiprocessing.connection.html#rebuild_connection" class="code" data-type="Function">rebuild_connection</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.multiprocessing.connection.html#reduce_pipe_connection" class="code" data-type="Function">reduce_pipe_connection</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.multiprocessing.connection.html#rebuild_pipe_connection" class="code" data-type="Function">rebuild_pipe_connection</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.multiprocessing.connection.html#_winapi" class="code" data-type="Variable">_winapi</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.multiprocessing.connection.html#_mmap_counter" class="code" data-type="Variable">_mmap_counter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.multiprocessing.connection.html#_init_timeout" class="code" data-type="Function">_init_timeout</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.multiprocessing.connection.html#_check_timeout" class="code" data-type="Function">_check_timeout</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.multiprocessing.connection.html#_validate_family" class="code" data-type="Function">_validate_family</a></td>
+    <td><span>Checks if the family is valid for the current environment.</span></td>
+  </tr><tr class="class private">
+    
+    <td>Class</td>
+    <td><a href="Lib.multiprocessing.connection._ConnectionBase.html" class="code" data-type="Class">_ConnectionBase</a></td>
+    <td><span class="undocumented">No class0/3 instance variables docstring; , 11/19 methods documented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.multiprocessing.connection.html#_xml_dumps" class="code" data-type="Function">_xml_dumps</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.multiprocessing.connection.html#_xml_loads" class="code" data-type="Function">_xml_loads</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.multiprocessing.connection.html#_exhaustive_wait" class="code" data-type="Function">_exhaustive_wait</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib.multiprocessing.connection.html#_ready_errors" class="code" data-type="Variable">_ready_errors</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable private">
+  
+  <a name="Lib.multiprocessing.connection._winapi">
+    
+  </a>
+  <a name="_winapi">
+    
+  </a>
+  <div class="functionHeader">
+    _winapi =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.multiprocessing.connection.BUFSIZE">
+    
+  </a>
+  <a name="BUFSIZE">
+    
+  </a>
+  <div class="functionHeader">
+    BUFSIZE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.multiprocessing.connection.CONNECTION_TIMEOUT">
+    
+  </a>
+  <a name="CONNECTION_TIMEOUT">
+    
+  </a>
+  <div class="functionHeader">
+    CONNECTION_TIMEOUT =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>float</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.multiprocessing.connection._mmap_counter">
+    
+  </a>
+  <a name="_mmap_counter">
+    
+  </a>
+  <div class="functionHeader">
+    _mmap_counter =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.multiprocessing.connection.default_family">
+    
+  </a>
+  <a name="default_family">
+    
+  </a>
+  <div class="functionHeader">
+    default_family =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.multiprocessing.connection.families">
+    
+  </a>
+  <a name="families">
+    
+  </a>
+  <div class="functionHeader">
+    families =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List[str]</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.multiprocessing.connection._init_timeout">
+    
+  </a>
+  <a name="_init_timeout">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _init_timeout(timeout=CONNECTION_TIMEOUT):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.multiprocessing.connection._check_timeout">
+    
+  </a>
+  <a name="_check_timeout">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _check_timeout(t):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.multiprocessing.connection.arbitrary_address">
+    
+  </a>
+  <a name="arbitrary_address">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    arbitrary_address(family):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return an arbitrary free address for the given family</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.multiprocessing.connection._validate_family">
+    
+  </a>
+  <a name="_validate_family">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _validate_family(family):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Checks if the family is valid for the current environment.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.multiprocessing.connection.address_type">
+    
+  </a>
+  <a name="address_type">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    address_type(address):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the types of the address
+
+This can be 'AF_INET', 'AF_UNIX', or 'AF_PIPE'</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.multiprocessing.connection.Client">
+    
+  </a>
+  <a name="Client">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    Client(address, family=None, authkey=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns a connection to the address of a `Listener`</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.multiprocessing.connection.Pipe">
+    
+  </a>
+  <a name="Pipe">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    Pipe(duplex=(True)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns pair of connection objects at either end of a pipe</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.multiprocessing.connection.SocketClient">
+    
+  </a>
+  <a name="SocketClient">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    SocketClient(address):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a connection object connected to the socket given by `address`</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.multiprocessing.connection.PipeClient">
+    
+  </a>
+  <a name="PipeClient">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    PipeClient(address):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a connection object connected to the pipe given by `address`</p></div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.multiprocessing.connection.MESSAGE_LENGTH">
+    
+  </a>
+  <a name="MESSAGE_LENGTH">
+    
+  </a>
+  <div class="functionHeader">
+    MESSAGE_LENGTH =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>int</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.multiprocessing.connection.CHALLENGE">
+    
+  </a>
+  <a name="CHALLENGE">
+    
+  </a>
+  <div class="functionHeader">
+    CHALLENGE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.multiprocessing.connection.WELCOME">
+    
+  </a>
+  <a name="WELCOME">
+    
+  </a>
+  <div class="functionHeader">
+    WELCOME =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.multiprocessing.connection.FAILURE">
+    
+  </a>
+  <a name="FAILURE">
+    
+  </a>
+  <div class="functionHeader">
+    FAILURE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>bytes</code>)
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.multiprocessing.connection.deliver_challenge">
+    
+  </a>
+  <a name="deliver_challenge">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    deliver_challenge(connection, authkey):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.multiprocessing.connection.answer_challenge">
+    
+  </a>
+  <a name="answer_challenge">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    answer_challenge(connection, authkey):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.multiprocessing.connection._xml_dumps">
+    
+  </a>
+  <a name="_xml_dumps">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _xml_dumps(obj):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.multiprocessing.connection._xml_loads">
+    
+  </a>
+  <a name="_xml_loads">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _xml_loads(s):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.multiprocessing.connection.XmlClient">
+    
+  </a>
+  <a name="XmlClient">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    XmlClient(*args, **kwds):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.multiprocessing.connection._exhaustive_wait">
+    
+  </a>
+  <a name="_exhaustive_wait">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _exhaustive_wait(handles, timeout):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib.multiprocessing.connection._ready_errors">
+    
+  </a>
+  <a name="_ready_errors">
+    
+  </a>
+  <div class="functionHeader">
+    _ready_errors =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.multiprocessing.connection.wait">
+    
+  </a>
+  <a name="wait">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    wait(object_list, timeout=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Wait till an object in object_list is ready/readable.
+
+Returns list of those objects in object_list which are ready/readable.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.multiprocessing.connection.reduce_connection">
+    
+  </a>
+  <a name="reduce_connection">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    reduce_connection(conn):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.multiprocessing.connection.rebuild_connection">
+    
+  </a>
+  <a name="rebuild_connection">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    rebuild_connection(df, readable, writable):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.multiprocessing.connection.reduce_pipe_connection">
+    
+  </a>
+  <a name="reduce_pipe_connection">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    reduce_pipe_connection(conn):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.multiprocessing.connection.rebuild_pipe_connection">
+    
+  </a>
+  <a name="rebuild_pipe_connection">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    rebuild_pipe_connection(dh, readable, writable):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

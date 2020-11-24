@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.idlelib.history.History : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.idlelib.html" class="code" data-type="Package">idlelib</a>.<a href="Lib.idlelib.history.html" class="code" data-type="Module">history</a>.<a href="Lib.idlelib.history.History.html" class="code" data-type="Class">History</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.idlelib.history.History:</code></p>
+        <p><a href="classIndex.html#Lib.idlelib.history.History">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Implement Idle Shell history mechanism.
+
+store - Store source statement (called from pyshell.resetoutput).
+fetch - Fetch stored statement matching prefix already entered.
+history_next - Bound to &lt;&lt;history-next&gt;&gt; event (default Alt-N).
+history_prev - Bound to &lt;&lt;history-prev&gt;&gt; event (default Alt-P).</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id2122">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.history.History.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Initialize data attributes and bind event methods.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.history.History.html#text" class="code" data-type="Instance Variable">text</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.history.History.html#history" class="code" data-type="Instance Variable">history</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.history.History.html#prefix" class="code" data-type="Instance Variable">prefix</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.history.History.html#pointer" class="code" data-type="Instance Variable">pointer</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.idlelib.history.History.html#cyclic" class="code" data-type="Instance Variable">cyclic</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.history.History.html#history_next" class="code" data-type="Method">history_next</a></td>
+    <td><span>Fetch later statement; start with ealiest if cyclic.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.history.History.html#history_prev" class="code" data-type="Method">history_prev</a></td>
+    <td><span>Fetch earlier statement; start with most recent.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.history.History.html#fetch" class="code" data-type="Method">fetch</a></td>
+    <td><span>Fetch statement and replace current line in text widget.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.idlelib.history.History.html#store" class="code" data-type="Method">store</a></td>
+    <td><span>Store Shell input statement into history list.</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.idlelib.history.History.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Initialize data attributes and bind event methods.
+
+.text - Idle wrapper of tk Text widget, with .bell().
+.history - source statements, possibly with multiple lines.
+.prefix - source already entered at prompt; filters history list.
+.pointer - index into history.
+.cyclic - wrap around history list (or not).</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.history.History.text">
+    
+  </a>
+  <a name="text">
+    
+  </a>
+  <div class="functionHeader">
+    text =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.history.History.history">
+    
+  </a>
+  <a name="history">
+    
+  </a>
+  <div class="functionHeader">
+    history =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>List</code>)
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.history.History.prefix">
+    
+  </a>
+  <a name="prefix">
+    
+  </a>
+  <div class="functionHeader">
+    prefix =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.history.History.pointer">
+    
+  </a>
+  <a name="pointer">
+    
+  </a>
+  <div class="functionHeader">
+    pointer =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.idlelib.history.History.cyclic">
+    
+  </a>
+  <a name="cyclic">
+    
+  </a>
+  <div class="functionHeader">
+    cyclic =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.history.History.history_next">
+    
+  </a>
+  <a name="history_next">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    history_next(self, event):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Fetch later statement; start with ealiest if cyclic.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.history.History.history_prev">
+    
+  </a>
+  <a name="history_prev">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    history_prev(self, event):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Fetch earlier statement; start with most recent.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.history.History.fetch">
+    
+  </a>
+  <a name="fetch">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    fetch(self, reverse):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Fetch statement and replace current line in text widget.
+
+Set prefix and pointer as needed for successive fetches.
+Reset them to None, None when returning to the start line.
+Sound bell when return to start line or cannot leave a line
+because cyclic is False.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.idlelib.history.History.store">
+    
+  </a>
+  <a name="store">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    store(self, source):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Store Shell input statement into history list.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

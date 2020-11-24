@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.threading.Semaphore : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.threading.html" class="code" data-type="Module">threading</a>.<a href="Lib.threading.Semaphore.html" class="code" data-type="Class">Semaphore</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.threading.Semaphore:</code></p><p>Known subclasses: <a href="Lib.threading.BoundedSemaphore.html" class="code" data-type="Class">Lib.threading.BoundedSemaphore</a></p>
+        <p><a href="classIndex.html#Lib.threading.Semaphore">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">This class implements semaphore objects.
+
+Semaphores manage a counter representing the number of release() calls minus
+the number of acquire() calls, plus an initial value. The acquire() method
+blocks if necessary until it can return without making the counter
+negative. If not given, value defaults to 1.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id10895">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.Semaphore.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.Semaphore.html#acquire" class="code" data-type="Method">acquire</a></td>
+    <td><span>Acquire a semaphore, decrementing the internal counter by one.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.Semaphore.html#release" class="code" data-type="Method">release</a></td>
+    <td><span>Release a semaphore, incrementing the internal counter by one or more.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.threading.Semaphore.html#__exit__" class="code" data-type="Method">__exit__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.threading.Semaphore.html#_cond" class="code" data-type="Instance Variable">_cond</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.threading.Semaphore.html#_value" class="code" data-type="Instance Variable">_value</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.threading.Semaphore.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, value=1):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.threading.BoundedSemaphore.html" class="code" data-type="Class">Lib.threading.BoundedSemaphore</a></div>
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.threading.Semaphore._cond">
+    
+  </a>
+  <a name="_cond">
+    
+  </a>
+  <div class="functionHeader">
+    _cond =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.threading.Semaphore._value">
+    
+  </a>
+  <a name="_value">
+    
+  </a>
+  <div class="functionHeader">
+    _value =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.threading.Semaphore.acquire">
+    
+  </a>
+  <a name="acquire">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    acquire(self, blocking=(True), timeout=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Acquire a semaphore, decrementing the internal counter by one.
+
+When invoked without arguments: if the internal counter is larger than
+zero on entry, decrement it by one and return immediately. If it is zero
+on entry, block, waiting until some other thread has called release() to
+make it larger than zero. This is done with proper interlocking so that
+if multiple acquire() calls are blocked, release() will wake exactly one
+of them up. The implementation may pick one at random, so the order in
+which blocked threads are awakened should not be relied on. There is no
+return value in this case.
+
+When invoked with blocking set to true, do the same thing as when called
+without arguments, and return true.
+
+When invoked with blocking set to false, do not block. If a call without
+an argument would block, return false immediately; otherwise, do the
+same thing as when called without arguments, and return true.
+
+When invoked with a timeout other than None, it will block for at
+most timeout seconds.  If acquire does not complete successfully in
+that interval, return false.  Return true otherwise.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.threading.Semaphore.release">
+    
+  </a>
+  <a name="release">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    release(self, n=1):
+    
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <a href="Lib.threading.BoundedSemaphore.html" class="code" data-type="Class">Lib.threading.BoundedSemaphore</a></div>
+    
+    <div><p class="pre">Release a semaphore, incrementing the internal counter by one or more.
+
+When the counter is zero on entry and another thread is waiting for it
+to become larger than zero again, wake up that thread.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.threading.Semaphore.__exit__">
+    
+  </a>
+  <a name="__exit__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __exit__(self, t, v, tb):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

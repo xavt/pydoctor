@@ -1,0 +1,819 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.textwrap.TextWrapper : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.textwrap.html" class="code" data-type="Module">textwrap</a>.<a href="Lib.textwrap.TextWrapper.html" class="code" data-type="Class">TextWrapper</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.textwrap.TextWrapper:</code></p>
+        <p><a href="classIndex.html#Lib.textwrap.TextWrapper">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Object for wrapping/filling text.  The public interface consists of
+the wrap() and fill() methods; the other methods are just there for
+subclasses to override in order to tweak the default behaviour.
+If you want to completely replace the main wrapping algorithm,
+you'll probably have to override _wrap_chunks().
+
+Several instance attributes control various aspects of wrapping:
+  width (default: 70)
+    the maximum width of wrapped lines (unless break_long_words
+    is false)
+  initial_indent (default: "")
+    string that will be prepended to the first line of wrapped
+    output.  Counts towards the line's width.
+  subsequent_indent (default: "")
+    string that will be prepended to all lines save the first
+    of wrapped output; also counts towards each line's width.
+  expand_tabs (default: true)
+    Expand tabs in input text to spaces before further processing.
+    Each tab will become 0 .. 'tabsize' spaces, depending on its position
+    in its line.  If false, each tab is treated as a single character.
+  tabsize (default: 8)
+    Expand tabs in input text to 0 .. 'tabsize' spaces, unless
+    'expand_tabs' is false.
+  replace_whitespace (default: true)
+    Replace all whitespace characters in the input text by spaces
+    after tab expansion.  Note that if expand_tabs is false and
+    replace_whitespace is true, every tab will be converted to a
+    single space!
+  fix_sentence_endings (default: false)
+    Ensure that sentence-ending punctuation is always followed
+    by two spaces.  Off by default because the algorithm is
+    (unavoidably) imperfect.
+  break_long_words (default: true)
+    Break words longer than 'width'.  If false, those words will not
+    be broken, and some lines might be longer than 'width'.
+  break_on_hyphens (default: true)
+    Allow breaking hyphenated words. If true, wrapping will occur
+    preferably on whitespaces and right after hyphens part of
+    compound words.
+  drop_whitespace (default: true)
+    Drop leading and trailing whitespace from lines.
+  max_lines (default: None)
+    Truncate wrapped lines.
+  placeholder (default: ' [...]')
+    Append to the last line of truncated text.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id10890">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.textwrap.TextWrapper.html#unicode_whitespace_trans" class="code" data-type="Class Variable">unicode_whitespace_trans</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.textwrap.TextWrapper.html#uspace" class="code" data-type="Class Variable">uspace</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.textwrap.TextWrapper.html#word_punct" class="code" data-type="Class Variable">word_punct</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.textwrap.TextWrapper.html#letter" class="code" data-type="Class Variable">letter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.textwrap.TextWrapper.html#whitespace" class="code" data-type="Class Variable">whitespace</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.textwrap.TextWrapper.html#nowhitespace" class="code" data-type="Class Variable">nowhitespace</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.textwrap.TextWrapper.html#wordsep_re" class="code" data-type="Class Variable">wordsep_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.textwrap.TextWrapper.html#wordsep_simple_re" class="code" data-type="Class Variable">wordsep_simple_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.textwrap.TextWrapper.html#sentence_end_re" class="code" data-type="Class Variable">sentence_end_re</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.textwrap.TextWrapper.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.textwrap.TextWrapper.html#width" class="code" data-type="Instance Variable">width</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.textwrap.TextWrapper.html#initial_indent" class="code" data-type="Instance Variable">initial_indent</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.textwrap.TextWrapper.html#subsequent_indent" class="code" data-type="Instance Variable">subsequent_indent</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.textwrap.TextWrapper.html#expand_tabs" class="code" data-type="Instance Variable">expand_tabs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.textwrap.TextWrapper.html#replace_whitespace" class="code" data-type="Instance Variable">replace_whitespace</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.textwrap.TextWrapper.html#fix_sentence_endings" class="code" data-type="Instance Variable">fix_sentence_endings</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.textwrap.TextWrapper.html#break_long_words" class="code" data-type="Instance Variable">break_long_words</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.textwrap.TextWrapper.html#drop_whitespace" class="code" data-type="Instance Variable">drop_whitespace</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.textwrap.TextWrapper.html#break_on_hyphens" class="code" data-type="Instance Variable">break_on_hyphens</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.textwrap.TextWrapper.html#tabsize" class="code" data-type="Instance Variable">tabsize</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.textwrap.TextWrapper.html#max_lines" class="code" data-type="Instance Variable">max_lines</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.textwrap.TextWrapper.html#placeholder" class="code" data-type="Instance Variable">placeholder</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.textwrap.TextWrapper.html#wrap" class="code" data-type="Method">wrap</a></td>
+    <td><span>wrap(text : string) -&gt; [string]</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.textwrap.TextWrapper.html#fill" class="code" data-type="Method">fill</a></td>
+    <td><span>fill(text : string) -&gt; string</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.textwrap.TextWrapper.html#_munge_whitespace" class="code" data-type="Method">_munge_whitespace</a></td>
+    <td><span>_munge_whitespace(text : string) -&gt; string</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.textwrap.TextWrapper.html#_split" class="code" data-type="Method">_split</a></td>
+    <td><span>_split(text : string) -&gt; [string]</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.textwrap.TextWrapper.html#_fix_sentence_endings" class="code" data-type="Method">_fix_sentence_endings</a></td>
+    <td><span>_fix_sentence_endings(chunks : [string])</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.textwrap.TextWrapper.html#_handle_long_word" class="code" data-type="Method">_handle_long_word</a></td>
+    <td><span>_handle_long_word(chunks : [string], cur_line : [string], cur_len : int, width : int)</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.textwrap.TextWrapper.html#_wrap_chunks" class="code" data-type="Method">_wrap_chunks</a></td>
+    <td><span>_wrap_chunks(chunks : [string]) -&gt; [string]</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><a href="Lib.textwrap.TextWrapper.html#_split_chunks" class="code" data-type="Method">_split_chunks</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.textwrap.TextWrapper.unicode_whitespace_trans">
+    
+  </a>
+  <a name="unicode_whitespace_trans">
+    
+  </a>
+  <div class="functionHeader">
+    unicode_whitespace_trans =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Dict</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.textwrap.TextWrapper.uspace">
+    
+  </a>
+  <a name="uspace">
+    
+  </a>
+  <div class="functionHeader">
+    uspace =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.textwrap.TextWrapper.word_punct">
+    
+  </a>
+  <a name="word_punct">
+    
+  </a>
+  <div class="functionHeader">
+    word_punct =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.textwrap.TextWrapper.letter">
+    
+  </a>
+  <a name="letter">
+    
+  </a>
+  <div class="functionHeader">
+    letter =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.textwrap.TextWrapper.whitespace">
+    
+  </a>
+  <a name="whitespace">
+    
+  </a>
+  <div class="functionHeader">
+    whitespace =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.textwrap.TextWrapper.nowhitespace">
+    
+  </a>
+  <a name="nowhitespace">
+    
+  </a>
+  <div class="functionHeader">
+    nowhitespace =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.textwrap.TextWrapper.wordsep_re">
+    
+  </a>
+  <a name="wordsep_re">
+    
+  </a>
+  <div class="functionHeader">
+    wordsep_re =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.textwrap.TextWrapper.wordsep_simple_re">
+    
+  </a>
+  <a name="wordsep_simple_re">
+    
+  </a>
+  <div class="functionHeader">
+    wordsep_simple_re =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassvariable">
+  
+  <a name="Lib.textwrap.TextWrapper.sentence_end_re">
+    
+  </a>
+  <a name="sentence_end_re">
+    
+  </a>
+  <div class="functionHeader">
+    sentence_end_re =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.textwrap.TextWrapper.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, width=70, initial_indent="""""", subsequent_indent="""""", expand_tabs=(True), replace_whitespace=(True), fix_sentence_endings=(False), break_long_words=(True), drop_whitespace=(True), break_on_hyphens=(True), tabsize=8):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.textwrap.TextWrapper.width">
+    
+  </a>
+  <a name="width">
+    
+  </a>
+  <div class="functionHeader">
+    width =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.textwrap.TextWrapper.initial_indent">
+    
+  </a>
+  <a name="initial_indent">
+    
+  </a>
+  <div class="functionHeader">
+    initial_indent =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.textwrap.TextWrapper.subsequent_indent">
+    
+  </a>
+  <a name="subsequent_indent">
+    
+  </a>
+  <div class="functionHeader">
+    subsequent_indent =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.textwrap.TextWrapper.expand_tabs">
+    
+  </a>
+  <a name="expand_tabs">
+    
+  </a>
+  <div class="functionHeader">
+    expand_tabs =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.textwrap.TextWrapper.replace_whitespace">
+    
+  </a>
+  <a name="replace_whitespace">
+    
+  </a>
+  <div class="functionHeader">
+    replace_whitespace =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.textwrap.TextWrapper.fix_sentence_endings">
+    
+  </a>
+  <a name="fix_sentence_endings">
+    
+  </a>
+  <div class="functionHeader">
+    fix_sentence_endings =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.textwrap.TextWrapper.break_long_words">
+    
+  </a>
+  <a name="break_long_words">
+    
+  </a>
+  <div class="functionHeader">
+    break_long_words =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.textwrap.TextWrapper.drop_whitespace">
+    
+  </a>
+  <a name="drop_whitespace">
+    
+  </a>
+  <div class="functionHeader">
+    drop_whitespace =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.textwrap.TextWrapper.break_on_hyphens">
+    
+  </a>
+  <a name="break_on_hyphens">
+    
+  </a>
+  <div class="functionHeader">
+    break_on_hyphens =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.textwrap.TextWrapper.tabsize">
+    
+  </a>
+  <a name="tabsize">
+    
+  </a>
+  <div class="functionHeader">
+    tabsize =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.textwrap.TextWrapper.max_lines">
+    
+  </a>
+  <a name="max_lines">
+    
+  </a>
+  <div class="functionHeader">
+    max_lines =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.textwrap.TextWrapper.placeholder">
+    
+  </a>
+  <a name="placeholder">
+    
+  </a>
+  <div class="functionHeader">
+    placeholder =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.textwrap.TextWrapper._munge_whitespace">
+    
+  </a>
+  <a name="_munge_whitespace">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _munge_whitespace(self, text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">_munge_whitespace(text : string) -&gt; string
+
+Munge whitespace in text: expand tabs and convert all other
+whitespace characters to spaces.  Eg. " foo\tbar\n\nbaz"
+becomes " foo    bar  baz".</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.textwrap.TextWrapper._split">
+    
+  </a>
+  <a name="_split">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _split(self, text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">_split(text : string) -&gt; [string]
+
+Split the text to wrap into indivisible chunks.  Chunks are
+not quite the same as words; see _wrap_chunks() for full
+details.  As an example, the text
+  Look, goof-ball -- use the -b option!
+breaks into the following chunks:
+  'Look,', ' ', 'goof-', 'ball', ' ', '--', ' ',
+  'use', ' ', 'the', ' ', '-b', ' ', 'option!'
+if break_on_hyphens is True, or in:
+  'Look,', ' ', 'goof-ball', ' ', '--', ' ',
+  'use', ' ', 'the', ' ', '-b', ' ', option!'
+otherwise.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.textwrap.TextWrapper._fix_sentence_endings">
+    
+  </a>
+  <a name="_fix_sentence_endings">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _fix_sentence_endings(self, chunks):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">_fix_sentence_endings(chunks : [string])
+
+Correct for sentence endings buried in 'chunks'.  Eg. when the
+original text contains "... foo.\nBar ...", munge_whitespace()
+and split() will convert that to [..., "foo.", " ", "Bar", ...]
+which has one too few spaces; this method simply changes the one
+space to two.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.textwrap.TextWrapper._handle_long_word">
+    
+  </a>
+  <a name="_handle_long_word">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _handle_long_word(self, reversed_chunks, cur_line, cur_len, width):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">_handle_long_word(chunks : [string],
+                     cur_line : [string],
+                     cur_len : int, width : int)
+
+Handle a chunk of text (most likely a word, not whitespace) that
+is too long to fit in any line.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.textwrap.TextWrapper._wrap_chunks">
+    
+  </a>
+  <a name="_wrap_chunks">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _wrap_chunks(self, chunks):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">_wrap_chunks(chunks : [string]) -&gt; [string]
+
+Wrap a sequence of text chunks and return a list of lines of
+length 'self.width' or less.  (If 'break_long_words' is false,
+some lines may be longer than this.)  Chunks correspond roughly
+to words and the whitespace between them: each chunk is
+indivisible (modulo 'break_long_words'), but a line break can
+come between any two chunks.  Chunks should not have internal
+whitespace; ie. a chunk is either all whitespace or a "word".
+Whitespace chunks will be removed from the beginning and end of
+lines, but apart from that whitespace is preserved.</p></div>
+  </div>
+</div><div class="basemethod private">
+  
+  <a name="Lib.textwrap.TextWrapper._split_chunks">
+    
+  </a>
+  <a name="_split_chunks">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _split_chunks(self, text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.textwrap.TextWrapper.wrap">
+    
+  </a>
+  <a name="wrap">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    wrap(self, text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">wrap(text : string) -&gt; [string]
+
+Reformat the single paragraph in 'text' so it fits in lines of
+no more than 'self.width' columns, and return a list of wrapped
+lines.  Tabs in 'text' are expanded with string.expandtabs(),
+and all other whitespace characters (including newline) are
+converted to space.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.textwrap.TextWrapper.fill">
+    
+  </a>
+  <a name="fill">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    fill(self, text):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">fill(text : string) -&gt; string
+
+Reformat the single paragraph in 'text' to fit in lines of no
+more than 'self.width' columns, and return a new string
+containing the entire wrapped paragraph.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

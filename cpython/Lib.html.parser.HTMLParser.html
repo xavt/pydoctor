@@ -1,0 +1,818 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.html.parser.HTMLParser : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.html.html" class="code" data-type="Package">html</a>.<a href="Lib.html.parser.html" class="code" data-type="Module">parser</a>.<a href="Lib.html.parser.HTMLParser.html" class="code" data-type="Class">HTMLParser</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.html.parser.HTMLParser(<span title="_markupbase.ParserBase">_markupbase.ParserBase</span>):</code></p>
+        <p><a href="classIndex.html#Lib.html.parser.HTMLParser">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Find tags and other markup and call handler functions.
+
+Usage:
+    p = HTMLParser()
+    p.feed(data)
+    ...
+    p.close()
+
+Start tags are handled by calling self.handle_starttag() or
+self.handle_startendtag(); end tags by self.handle_endtag().  The
+data between tags is passed from the parser to the derived class
+by calling self.handle_data() with the data as argument (the data
+may be split up in arbitrary chunks).  If convert_charrefs is
+True the character references are converted automatically to the
+corresponding Unicode character (and self.handle_data() is no
+longer split in chunks), otherwise they are passed by calling
+self.handle_entityref() or self.handle_charref() with the string
+containing respectively the named or numeric reference as the
+argument.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id1988">
+  
+  <tr class="classvariable">
+    
+    <td>Class Variable</td>
+    <td><a href="Lib.html.parser.HTMLParser.html#CDATA_CONTENT_ELEMENTS" class="code" data-type="Class Variable">CDATA_CONTENT_ELEMENTS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.html.parser.HTMLParser.html#__init__" class="code" data-type="Method">__init__</a></td>
+    <td><span>Initialize and reset this instance.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.html.parser.HTMLParser.html#convert_charrefs" class="code" data-type="Instance Variable">convert_charrefs</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.html.parser.HTMLParser.html#reset" class="code" data-type="Method">reset</a></td>
+    <td><span>Reset this instance.  Loses all unprocessed data.</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.html.parser.HTMLParser.html#rawdata" class="code" data-type="Instance Variable">rawdata</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.html.parser.HTMLParser.html#lasttag" class="code" data-type="Instance Variable">lasttag</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.html.parser.HTMLParser.html#interesting" class="code" data-type="Instance Variable">interesting</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.html.parser.HTMLParser.html#cdata_elem" class="code" data-type="Instance Variable">cdata_elem</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.html.parser.HTMLParser.html#feed" class="code" data-type="Method">feed</a></td>
+    <td><span>Feed data to the parser.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.html.parser.HTMLParser.html#close" class="code" data-type="Method">close</a></td>
+    <td><span>Handle any buffered data.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.html.parser.HTMLParser.html#get_starttag_text" class="code" data-type="Method">get_starttag_text</a></td>
+    <td><span>Return full source of start tag: '&lt;...&gt;'.</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.html.parser.HTMLParser.html#set_cdata_mode" class="code" data-type="Method">set_cdata_mode</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.html.parser.HTMLParser.html#clear_cdata_mode" class="code" data-type="Method">clear_cdata_mode</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.html.parser.HTMLParser.html#goahead" class="code" data-type="Method">goahead</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.html.parser.HTMLParser.html#parse_html_declaration" class="code" data-type="Method">parse_html_declaration</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.html.parser.HTMLParser.html#parse_bogus_comment" class="code" data-type="Method">parse_bogus_comment</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.html.parser.HTMLParser.html#parse_pi" class="code" data-type="Method">parse_pi</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.html.parser.HTMLParser.html#parse_starttag" class="code" data-type="Method">parse_starttag</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.html.parser.HTMLParser.html#check_for_whole_start_tag" class="code" data-type="Method">check_for_whole_start_tag</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.html.parser.HTMLParser.html#parse_endtag" class="code" data-type="Method">parse_endtag</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.html.parser.HTMLParser.html#handle_startendtag" class="code" data-type="Method">handle_startendtag</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.html.parser.HTMLParser.html#handle_starttag" class="code" data-type="Method">handle_starttag</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.html.parser.HTMLParser.html#handle_endtag" class="code" data-type="Method">handle_endtag</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.html.parser.HTMLParser.html#handle_charref" class="code" data-type="Method">handle_charref</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.html.parser.HTMLParser.html#handle_entityref" class="code" data-type="Method">handle_entityref</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.html.parser.HTMLParser.html#handle_data" class="code" data-type="Method">handle_data</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.html.parser.HTMLParser.html#handle_comment" class="code" data-type="Method">handle_comment</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.html.parser.HTMLParser.html#handle_decl" class="code" data-type="Method">handle_decl</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.html.parser.HTMLParser.html#handle_pi" class="code" data-type="Method">handle_pi</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.html.parser.HTMLParser.html#unknown_decl" class="code" data-type="Method">unknown_decl</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.html.parser.HTMLParser.html#__starttag_text" class="code" data-type="Instance Variable">__starttag_text</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="baseclassvariable">
+  
+  <a name="Lib.html.parser.HTMLParser.CDATA_CONTENT_ELEMENTS">
+    
+  </a>
+  <a name="CDATA_CONTENT_ELEMENTS">
+    
+  </a>
+  <div class="functionHeader">
+    CDATA_CONTENT_ELEMENTS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Tuple[str, ...]</code>)
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.html.parser.HTMLParser.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Initialize and reset this instance.
+
+If convert_charrefs is True (the default), all character references
+are automatically converted to the corresponding Unicode characters.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.html.parser.HTMLParser.convert_charrefs">
+    
+  </a>
+  <a name="convert_charrefs">
+    
+  </a>
+  <div class="functionHeader">
+    convert_charrefs =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.html.parser.HTMLParser.reset">
+    
+  </a>
+  <a name="reset">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    reset(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Reset this instance.  Loses all unprocessed data.</p></div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.html.parser.HTMLParser.rawdata">
+    
+  </a>
+  <a name="rawdata">
+    
+  </a>
+  <div class="functionHeader">
+    rawdata =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.html.parser.HTMLParser.lasttag">
+    
+  </a>
+  <a name="lasttag">
+    
+  </a>
+  <div class="functionHeader">
+    lasttag =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.html.parser.HTMLParser.interesting">
+    
+  </a>
+  <a name="interesting">
+    
+  </a>
+  <div class="functionHeader">
+    interesting =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  <a name="Lib.html.parser.HTMLParser.cdata_elem">
+    
+  </a>
+  <a name="cdata_elem">
+    
+  </a>
+  <div class="functionHeader">
+    cdata_elem =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.html.parser.HTMLParser.feed">
+    
+  </a>
+  <a name="feed">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    feed(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Feed data to the parser.
+
+Call this as often as you want, with as little or as much text
+as you want (may include '\n').</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.html.parser.HTMLParser.close">
+    
+  </a>
+  <a name="close">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    close(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Handle any buffered data.</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.html.parser.HTMLParser.__starttag_text">
+    
+  </a>
+  <a name="__starttag_text">
+    
+  </a>
+  <div class="functionHeader">
+    __starttag_text =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.html.parser.HTMLParser.get_starttag_text">
+    
+  </a>
+  <a name="get_starttag_text">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_starttag_text(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return full source of start tag: '&lt;...&gt;'.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.html.parser.HTMLParser.set_cdata_mode">
+    
+  </a>
+  <a name="set_cdata_mode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_cdata_mode(self, elem):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.html.parser.HTMLParser.clear_cdata_mode">
+    
+  </a>
+  <a name="clear_cdata_mode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    clear_cdata_mode(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.html.parser.HTMLParser.goahead">
+    
+  </a>
+  <a name="goahead">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    goahead(self, end):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.html.parser.HTMLParser.parse_html_declaration">
+    
+  </a>
+  <a name="parse_html_declaration">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse_html_declaration(self, i):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.html.parser.HTMLParser.parse_bogus_comment">
+    
+  </a>
+  <a name="parse_bogus_comment">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse_bogus_comment(self, i, report=1):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.html.parser.HTMLParser.parse_pi">
+    
+  </a>
+  <a name="parse_pi">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse_pi(self, i):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.html.parser.HTMLParser.parse_starttag">
+    
+  </a>
+  <a name="parse_starttag">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse_starttag(self, i):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.html.parser.HTMLParser.check_for_whole_start_tag">
+    
+  </a>
+  <a name="check_for_whole_start_tag">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    check_for_whole_start_tag(self, i):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.html.parser.HTMLParser.parse_endtag">
+    
+  </a>
+  <a name="parse_endtag">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse_endtag(self, i):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.html.parser.HTMLParser.handle_startendtag">
+    
+  </a>
+  <a name="handle_startendtag">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    handle_startendtag(self, tag, attrs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.html.parser.HTMLParser.handle_starttag">
+    
+  </a>
+  <a name="handle_starttag">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    handle_starttag(self, tag, attrs):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.html.parser.HTMLParser.handle_endtag">
+    
+  </a>
+  <a name="handle_endtag">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    handle_endtag(self, tag):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.html.parser.HTMLParser.handle_charref">
+    
+  </a>
+  <a name="handle_charref">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    handle_charref(self, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.html.parser.HTMLParser.handle_entityref">
+    
+  </a>
+  <a name="handle_entityref">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    handle_entityref(self, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.html.parser.HTMLParser.handle_data">
+    
+  </a>
+  <a name="handle_data">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    handle_data(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.html.parser.HTMLParser.handle_comment">
+    
+  </a>
+  <a name="handle_comment">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    handle_comment(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.html.parser.HTMLParser.handle_decl">
+    
+  </a>
+  <a name="handle_decl">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    handle_decl(self, decl):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.html.parser.HTMLParser.handle_pi">
+    
+  </a>
+  <a name="handle_pi">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    handle_pi(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.html.parser.HTMLParser.unknown_decl">
+    
+  </a>
+  <a name="unknown_decl">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    unknown_decl(self, data):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

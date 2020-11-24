@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.site : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.site.html" class="code" data-type="Module">site</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Append module search paths for third-party packages to sys.path.
+
+****************************************************************
+* This module is automatically imported during initialization. *
+****************************************************************
+
+This will append site-specific paths to the module search path.  On
+Unix (including Mac OSX), it starts with sys.prefix and
+sys.exec_prefix (if different) and appends
+lib/python&lt;version&gt;/site-packages.
+On other platforms (such as Windows), it tries each of the
+prefixes directly, as well as with lib/site-packages appended.  The
+resulting directories, if they exist, are appended to sys.path, and
+also inspected for path configuration files.
+
+If a file named "pyvenv.cfg" exists one directory above sys.executable,
+sys.prefix and sys.exec_prefix are set to that directory and
+it is also checked for site-packages (sys.base_prefix and
+sys.base_exec_prefix will always be the "real" prefixes of the Python
+installation). If "pyvenv.cfg" (a bootstrap configuration file) contains
+the key "include-system-site-packages" set to anything other than "false"
+(case-insensitive), the system-level prefixes will still also be
+searched for site-packages; otherwise they won't.
+
+All of the resulting site-specific directories, if they exist, are
+appended to sys.path, and also inspected for path configuration
+files.
+
+A path configuration file is a file whose name has the form
+&lt;package&gt;.pth; its contents are additional directories (one per line)
+to be added to sys.path.  Non-existing directories (or
+non-directories) are never added to sys.path; no directory is added to
+sys.path more than once.  Blank lines and lines beginning with
+'#' are skipped. Lines starting with 'import' are executed.
+
+For example, suppose sys.prefix and sys.exec_prefix are set to
+/usr/local and there is a directory /usr/local/lib/python2.5/site-packages
+with three subdirectories, foo, bar and spam, and two path
+configuration files, foo.pth and bar.pth.  Assume foo.pth contains the
+following:
+
+  # foo package configuration
+  foo
+  bar
+  bletch
+
+and bar.pth contains:
+
+  # bar package configuration
+  bar
+
+Then the following directories are added to sys.path, in this order:
+
+  /usr/local/lib/python2.5/site-packages/bar
+  /usr/local/lib/python2.5/site-packages/foo
+
+Note that bletch is omitted because it doesn't exist; bar precedes foo
+because bar.pth comes alphabetically before foo.pth; and spam is
+omitted because it is not mentioned in either path configuration file.
+
+The readline module is also automatically configured to enable
+completion for systems that support it.  This can be overridden in
+sitecustomize, usercustomize or PYTHONSTARTUP.  Starting Python in
+isolated mode (-I) disables automatic readline configuration.
+
+After these operations, an attempt is made to import a module
+named sitecustomize, which can perform arbitrary additional
+site-specific customizations.  If this import fails with an
+ImportError exception, it is silently ignored.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id3508">
+  
+  <tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.site.html#PREFIXES" class="code" data-type="Variable">PREFIXES</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.site.html#ENABLE_USER_SITE" class="code" data-type="Variable">ENABLE_USER_SITE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.site.html#USER_SITE" class="code" data-type="Variable">USER_SITE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable">
+    
+    <td>Variable</td>
+    <td><a href="Lib.site.html#USER_BASE" class="code" data-type="Variable">USER_BASE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.site.html#makepath" class="code" data-type="Function">makepath</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.site.html#abs_paths" class="code" data-type="Function">abs_paths</a></td>
+    <td><span>Set all module __file__ and __cached__ attributes to an absolute path</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.site.html#removeduppaths" class="code" data-type="Function">removeduppaths</a></td>
+    <td><span>Remove duplicate entries from sys.path along with making them absolute</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.site.html#addpackage" class="code" data-type="Function">addpackage</a></td>
+    <td><span>Process a .pth file within the site-packages directory: For each line in the file, either combine it with sitedir to a path and add that to known_paths, or execute it if it starts with 'import '.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.site.html#addsitedir" class="code" data-type="Function">addsitedir</a></td>
+    <td><span>Add 'sitedir' argument to sys.path if missing and handle .pth files in 'sitedir'</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.site.html#check_enableusersite" class="code" data-type="Function">check_enableusersite</a></td>
+    <td><span>Check if user site directory is safe for inclusion</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.site.html#getuserbase" class="code" data-type="Function">getuserbase</a></td>
+    <td><span>Returns the `user base` directory path.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.site.html#getusersitepackages" class="code" data-type="Function">getusersitepackages</a></td>
+    <td><span>Returns the user-specific site-packages directory path.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.site.html#addusersitepackages" class="code" data-type="Function">addusersitepackages</a></td>
+    <td><span>Add a per user site-package to sys.path</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.site.html#getsitepackages" class="code" data-type="Function">getsitepackages</a></td>
+    <td><span>Returns a list containing all global site-packages directories.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.site.html#addsitepackages" class="code" data-type="Function">addsitepackages</a></td>
+    <td><span>Add site-packages to sys.path</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.site.html#setquit" class="code" data-type="Function">setquit</a></td>
+    <td><span>Define new builtins 'quit' and 'exit'.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.site.html#setcopyright" class="code" data-type="Function">setcopyright</a></td>
+    <td><span>Set 'copyright' and 'credits' in builtins</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.site.html#sethelper" class="code" data-type="Function">sethelper</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.site.html#enablerlcompleter" class="code" data-type="Function">enablerlcompleter</a></td>
+    <td><span>Enable default readline configuration on interactive prompts, by registering a sys.__interactivehook__.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.site.html#venv" class="code" data-type="Function">venv</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.site.html#execsitecustomize" class="code" data-type="Function">execsitecustomize</a></td>
+    <td><span>Run custom site specific code, if available.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.site.html#execusercustomize" class="code" data-type="Function">execusercustomize</a></td>
+    <td><span>Run custom user specific code, if available.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib.site.html#main" class="code" data-type="Function">main</a></td>
+    <td><span>Add standard site-specific directories to the module search path.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.site.html#_trace" class="code" data-type="Function">_trace</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.site.html#_init_pathinfo" class="code" data-type="Function">_init_pathinfo</a></td>
+    <td><span>Return a set containing all existing file system items from sys.path.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.site.html#_getuserbase" class="code" data-type="Function">_getuserbase</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.site.html#_get_path" class="code" data-type="Function">_get_path</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib.site.html#_script" class="code" data-type="Function">_script</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable">
+  
+  <a name="Lib.site.PREFIXES">
+    
+  </a>
+  <a name="PREFIXES">
+    
+  </a>
+  <div class="functionHeader">
+    PREFIXES =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.site.ENABLE_USER_SITE">
+    
+  </a>
+  <a name="ENABLE_USER_SITE">
+    
+  </a>
+  <div class="functionHeader">
+    ENABLE_USER_SITE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.site.USER_SITE">
+    
+  </a>
+  <a name="USER_SITE">
+    
+  </a>
+  <div class="functionHeader">
+    USER_SITE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basevariable">
+  
+  <a name="Lib.site.USER_BASE">
+    
+  </a>
+  <a name="USER_BASE">
+    
+  </a>
+  <div class="functionHeader">
+    USER_BASE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.site._trace">
+    
+  </a>
+  <a name="_trace">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _trace(message):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.site.makepath">
+    
+  </a>
+  <a name="makepath">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    makepath(*paths):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.site.abs_paths">
+    
+  </a>
+  <a name="abs_paths">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    abs_paths():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set all module __file__ and __cached__ attributes to an absolute path</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.site.removeduppaths">
+    
+  </a>
+  <a name="removeduppaths">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    removeduppaths():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Remove duplicate entries from sys.path along with making them
+absolute</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.site._init_pathinfo">
+    
+  </a>
+  <a name="_init_pathinfo">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _init_pathinfo():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return a set containing all existing file system items from sys.path.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.site.addpackage">
+    
+  </a>
+  <a name="addpackage">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    addpackage(sitedir, name, known_paths):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Process a .pth file within the site-packages directory:
+For each line in the file, either combine it with sitedir to a path
+and add that to known_paths, or execute it if it starts with 'import '.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.site.addsitedir">
+    
+  </a>
+  <a name="addsitedir">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    addsitedir(sitedir, known_paths=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Add 'sitedir' argument to sys.path if missing and handle .pth files in
+'sitedir'</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.site.check_enableusersite">
+    
+  </a>
+  <a name="check_enableusersite">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    check_enableusersite():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Check if user site directory is safe for inclusion
+
+The function tests for the command line flag (including environment var),
+process uid/gid equal to effective uid/gid.
+
+None: Disabled for security reasons
+False: Disabled by user (command line option)
+True: Safe and enabled</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.site._getuserbase">
+    
+  </a>
+  <a name="_getuserbase">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _getuserbase():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.site._get_path">
+    
+  </a>
+  <a name="_get_path">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_path(userbase):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.site.getuserbase">
+    
+  </a>
+  <a name="getuserbase">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getuserbase():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns the `user base` directory path.
+
+The `user base` directory can be used to store data. If the global
+variable ``USER_BASE`` is not initialized yet, this function will also set
+it.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.site.getusersitepackages">
+    
+  </a>
+  <a name="getusersitepackages">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getusersitepackages():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns the user-specific site-packages directory path.
+
+If the global variable ``USER_SITE`` is not initialized yet, this
+function will also set it.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.site.addusersitepackages">
+    
+  </a>
+  <a name="addusersitepackages">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    addusersitepackages(known_paths):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Add a per user site-package to sys.path
+
+Each user has its own python directory with site-packages in the
+home directory.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.site.getsitepackages">
+    
+  </a>
+  <a name="getsitepackages">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    getsitepackages(prefixes=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns a list containing all global site-packages directories.
+
+For each directory present in ``prefixes`` (or the global ``PREFIXES``),
+this function will find its `site-packages` subdirectory depending on the
+system environment, and will return a list of full paths.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.site.addsitepackages">
+    
+  </a>
+  <a name="addsitepackages">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    addsitepackages(known_paths, prefixes=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Add site-packages to sys.path</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.site.setquit">
+    
+  </a>
+  <a name="setquit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setquit():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Define new builtins 'quit' and 'exit'.
+
+These are objects which make the interpreter exit when called.
+The repr of each object contains a hint at how it works.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.site.setcopyright">
+    
+  </a>
+  <a name="setcopyright">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setcopyright():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Set 'copyright' and 'credits' in builtins</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.site.sethelper">
+    
+  </a>
+  <a name="sethelper">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    sethelper():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.site.enablerlcompleter">
+    
+  </a>
+  <a name="enablerlcompleter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    enablerlcompleter():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Enable default readline configuration on interactive prompts, by
+registering a sys.__interactivehook__.
+
+If the readline module can be imported, the hook will set the Tab key
+as completion key and register ~/.python_history as history file.
+This can be overridden in the sitecustomize or usercustomize module,
+or in a PYTHONSTARTUP file.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.site.venv">
+    
+  </a>
+  <a name="venv">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    venv(known_paths):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.site.execsitecustomize">
+    
+  </a>
+  <a name="execsitecustomize">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    execsitecustomize():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Run custom site specific code, if available.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.site.execusercustomize">
+    
+  </a>
+  <a name="execusercustomize">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    execusercustomize():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Run custom user specific code, if available.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib.site.main">
+    
+  </a>
+  <a name="main">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    main():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Add standard site-specific directories to the module search path.
+
+This function is called automatically when this module is imported,
+unless the python interpreter was started with the -S flag.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib.site._script">
+    
+  </a>
+  <a name="_script">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _script():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

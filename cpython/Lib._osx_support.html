@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib._osx_support : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="module private"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib._osx_support.html" class="code" data-type="Module">_osx_support</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        module documentation
+      </div>
+
+      <div class="extrasDocstring">
+        
+        <p></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Shared OS X support functions.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id109">
+  
+  <tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib._osx_support.html#compiler_fixup" class="code" data-type="Function">compiler_fixup</a></td>
+    <td><span>This function will strip '-isysroot PATH' and '-arch ARCH' from the compile flags if the user has specified one them in extra_compile_flags.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib._osx_support.html#customize_config_vars" class="code" data-type="Function">customize_config_vars</a></td>
+    <td><span>Customize Python build configuration variables.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib._osx_support.html#customize_compiler" class="code" data-type="Function">customize_compiler</a></td>
+    <td><span>Customize compiler path and configuration variables.</span></td>
+  </tr><tr class="function">
+    
+    <td>Function</td>
+    <td><a href="Lib._osx_support.html#get_platform_osx" class="code" data-type="Function">get_platform_osx</a></td>
+    <td><span>Filter values for get_platform()</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib._osx_support.html#_UNIVERSAL_CONFIG_VARS" class="code" data-type="Variable">_UNIVERSAL_CONFIG_VARS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib._osx_support.html#_COMPILER_CONFIG_VARS" class="code" data-type="Variable">_COMPILER_CONFIG_VARS</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib._osx_support.html#_INITPRE" class="code" data-type="Variable">_INITPRE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._osx_support.html#_find_executable" class="code" data-type="Function">_find_executable</a></td>
+    <td><span>Tries to find 'executable' in the directories listed in 'path'.</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._osx_support.html#_read_output" class="code" data-type="Function">_read_output</a></td>
+    <td><span>Output from successful command execution or None</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._osx_support.html#_find_build_tool" class="code" data-type="Function">_find_build_tool</a></td>
+    <td><span>Find a build tool on current path or using xcrun</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib._osx_support.html#_SYSTEM_VERSION" class="code" data-type="Variable">_SYSTEM_VERSION</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._osx_support.html#_get_system_version" class="code" data-type="Function">_get_system_version</a></td>
+    <td><span>Return the OS X system version as a string</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib._osx_support.html#_SYSTEM_VERSION_TUPLE" class="code" data-type="Variable">_SYSTEM_VERSION_TUPLE</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._osx_support.html#_get_system_version_tuple" class="code" data-type="Function">_get_system_version_tuple</a></td>
+    <td><span>Return the macOS system version as a tuple</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._osx_support.html#_remove_original_values" class="code" data-type="Function">_remove_original_values</a></td>
+    <td><span>Remove original unmodified values for testing</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._osx_support.html#_save_modified_value" class="code" data-type="Function">_save_modified_value</a></td>
+    <td><span>Save modified and original unmodified value of configuration var</span></td>
+  </tr><tr class="variable private">
+    
+    <td>Variable</td>
+    <td><a href="Lib._osx_support.html#_cache_default_sysroot" class="code" data-type="Variable">_cache_default_sysroot</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._osx_support.html#_default_sysroot" class="code" data-type="Function">_default_sysroot</a></td>
+    <td><span>Returns the root of the default SDK for this system, or '/'</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._osx_support.html#_supports_universal_builds" class="code" data-type="Function">_supports_universal_builds</a></td>
+    <td><span>Returns True if universal builds are supported on this system</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._osx_support.html#_supports_arm64_builds" class="code" data-type="Function">_supports_arm64_builds</a></td>
+    <td><span>Returns True if arm64 builds are supported on this system</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._osx_support.html#_find_appropriate_compiler" class="code" data-type="Function">_find_appropriate_compiler</a></td>
+    <td><span>Find appropriate C compiler for extension module builds</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._osx_support.html#_remove_universal_flags" class="code" data-type="Function">_remove_universal_flags</a></td>
+    <td><span>Remove all universal build arguments from config vars</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._osx_support.html#_remove_unsupported_archs" class="code" data-type="Function">_remove_unsupported_archs</a></td>
+    <td><span>Remove any unsupported archs from config vars</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._osx_support.html#_override_all_archs" class="code" data-type="Function">_override_all_archs</a></td>
+    <td><span>Allow override of all archs with ARCHFLAGS env var</span></td>
+  </tr><tr class="function private">
+    
+    <td>Function</td>
+    <td><a href="Lib._osx_support.html#_check_for_unavailable_sdk" class="code" data-type="Function">_check_for_unavailable_sdk</a></td>
+    <td><span>Remove references to any SDKs not available</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basevariable private">
+  
+  <a name="Lib._osx_support._UNIVERSAL_CONFIG_VARS">
+    
+  </a>
+  <a name="_UNIVERSAL_CONFIG_VARS">
+    
+  </a>
+  <div class="functionHeader">
+    _UNIVERSAL_CONFIG_VARS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Tuple[str, ...]</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib._osx_support._COMPILER_CONFIG_VARS">
+    
+  </a>
+  <a name="_COMPILER_CONFIG_VARS">
+    
+  </a>
+  <div class="functionHeader">
+    _COMPILER_CONFIG_VARS =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>Tuple[str, ...]</code>)
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib._osx_support._INITPRE">
+    
+  </a>
+  <a name="_INITPRE">
+    
+  </a>
+  <div class="functionHeader">
+    _INITPRE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div> (type: <code>str</code>)
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._osx_support._find_executable">
+    
+  </a>
+  <a name="_find_executable">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _find_executable(executable, path=None):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Tries to find 'executable' in the directories listed in 'path'.
+
+A string listing directories separated by 'os.pathsep'; defaults to
+os.environ['PATH'].  Returns the complete filename or None if not found.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._osx_support._read_output">
+    
+  </a>
+  <a name="_read_output">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _read_output(commandstring, capture_stderr=(False)):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Output from successful command execution or None</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._osx_support._find_build_tool">
+    
+  </a>
+  <a name="_find_build_tool">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _find_build_tool(toolname):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Find a build tool on current path or using xcrun</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib._osx_support._SYSTEM_VERSION">
+    
+  </a>
+  <a name="_SYSTEM_VERSION">
+    
+  </a>
+  <div class="functionHeader">
+    _SYSTEM_VERSION =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._osx_support._get_system_version">
+    
+  </a>
+  <a name="_get_system_version">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_system_version():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the OS X system version as a string</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib._osx_support._SYSTEM_VERSION_TUPLE">
+    
+  </a>
+  <a name="_SYSTEM_VERSION_TUPLE">
+    
+  </a>
+  <div class="functionHeader">
+    _SYSTEM_VERSION_TUPLE =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._osx_support._get_system_version_tuple">
+    
+  </a>
+  <a name="_get_system_version_tuple">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _get_system_version_tuple():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Return the macOS system version as a tuple
+
+The return value is safe to use to compare
+two version numbers.</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._osx_support._remove_original_values">
+    
+  </a>
+  <a name="_remove_original_values">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _remove_original_values(_config_vars):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Remove original unmodified values for testing</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._osx_support._save_modified_value">
+    
+  </a>
+  <a name="_save_modified_value">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _save_modified_value(_config_vars, cv, newvalue):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Save modified and original unmodified value of configuration var</p></div>
+  </div>
+</div><div class="basevariable private">
+  
+  <a name="Lib._osx_support._cache_default_sysroot">
+    
+  </a>
+  <a name="_cache_default_sysroot">
+    
+  </a>
+  <div class="functionHeader">
+    _cache_default_sysroot =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._osx_support._default_sysroot">
+    
+  </a>
+  <a name="_default_sysroot">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _default_sysroot(cc):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns the root of the default SDK for this system, or '/' </p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._osx_support._supports_universal_builds">
+    
+  </a>
+  <a name="_supports_universal_builds">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _supports_universal_builds():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns True if universal builds are supported on this system</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._osx_support._supports_arm64_builds">
+    
+  </a>
+  <a name="_supports_arm64_builds">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _supports_arm64_builds():
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Returns True if arm64 builds are supported on this system</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._osx_support._find_appropriate_compiler">
+    
+  </a>
+  <a name="_find_appropriate_compiler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _find_appropriate_compiler(_config_vars):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Find appropriate C compiler for extension module builds</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._osx_support._remove_universal_flags">
+    
+  </a>
+  <a name="_remove_universal_flags">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _remove_universal_flags(_config_vars):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Remove all universal build arguments from config vars</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._osx_support._remove_unsupported_archs">
+    
+  </a>
+  <a name="_remove_unsupported_archs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _remove_unsupported_archs(_config_vars):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Remove any unsupported archs from config vars</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._osx_support._override_all_archs">
+    
+  </a>
+  <a name="_override_all_archs">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _override_all_archs(_config_vars):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Allow override of all archs with ARCHFLAGS env var</p></div>
+  </div>
+</div><div class="basefunction private">
+  
+  <a name="Lib._osx_support._check_for_unavailable_sdk">
+    
+  </a>
+  <a name="_check_for_unavailable_sdk">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _check_for_unavailable_sdk(_config_vars):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Remove references to any SDKs not available</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib._osx_support.compiler_fixup">
+    
+  </a>
+  <a name="compiler_fixup">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    compiler_fixup(compiler_so, cc_args):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">This function will strip '-isysroot PATH' and '-arch ARCH' from the
+compile flags if the user has specified one them in extra_compile_flags.
+
+This is needed because '-arch ARCH' adds another architecture to the
+build, without a way to remove an architecture. Furthermore GCC will
+barf if multiple '-isysroot' arguments are present.</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib._osx_support.customize_config_vars">
+    
+  </a>
+  <a name="customize_config_vars">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    customize_config_vars(_config_vars):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Customize Python build configuration variables.
+
+Called internally from sysconfig with a mutable mapping
+containing name/value pairs parsed from the configured
+makefile used to build this interpreter.  Returns
+the mapping updated as needed to reflect the environment
+in which the interpreter is running; in the case of
+a Python from a binary installer, the installed
+environment may be very different from the build
+environment, i.e. different OS levels, different
+built tools, different available CPU architectures.
+
+This customization is performed whenever
+distutils.sysconfig.get_config_vars() is first
+called.  It may be used in environments where no
+compilers are present, i.e. when installing pure
+Python dists.  Customization of compiler paths
+and detection of unavailable archs is deferred
+until the first extension module build is
+requested (in distutils.sysconfig.customize_compiler).
+
+Currently called from distutils.sysconfig</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib._osx_support.customize_compiler">
+    
+  </a>
+  <a name="customize_compiler">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    customize_compiler(_config_vars):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Customize compiler path and configuration variables.
+
+This customization is performed when the first
+extension module build is requested
+in distutils.sysconfig.customize_compiler).</p></div>
+  </div>
+</div><div class="basefunction">
+  
+  <a name="Lib._osx_support.get_platform_osx">
+    
+  </a>
+  <a name="get_platform_osx">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_platform_osx(_config_vars, osname, release, machine):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Filter values for get_platform()</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

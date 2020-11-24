@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Lib.email.headerregistry.BaseHeader : API documentation</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            Python3.8 API Documentation
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="showPrivate">
+      <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <h1 class="class"><code><a href="Lib.html" class="code" data-type="Package">Lib</a>.<a href="Lib.email.html" class="code" data-type="Package">email</a>.<a href="Lib.email.headerregistry.html" class="code" data-type="Module">headerregistry</a>.<a href="Lib.email.headerregistry.BaseHeader.html" class="code" data-type="Class">BaseHeader</a></code></h1>
+      </div>
+
+      <div class="categoryHeader">
+        class documentation
+      </div>
+
+      <div class="extrasDocstring">
+        <p><code><span class="py-keyword">class</span> Lib.email.headerregistry.BaseHeader(<span title="str">str</span>):</code></p>
+        <p><a href="classIndex.html#Lib.email.headerregistry.BaseHeader">View In Hierarchy</a></p>
+      </div>
+
+      <div class="moduleDocstring">
+        <div><p class="pre">Base class for message headers.
+
+Implements generic behavior and provides tools for subclasses.
+
+A subclass must define a classmethod named 'parse' that takes an unfolded
+value string and a dictionary as its arguments.  The dictionary will
+contain one key, 'defects', initialized to an empty list.  After the call
+the dictionary must contain two additional keys: parse_tree, set to the
+parse tree obtained from parsing the header, and 'decoded', set to the
+string value of the idealized representation of the data from the value.
+(That is, encoded words are decoded, and values that have canonical
+representations are so represented.)
+
+The defects key is intended to collect parsing defects, which the message
+parser will subsequently dispose of as appropriate.  The parser should not,
+insofar as practical, raise any errors.  Defects should be added to the
+list instead.  The standard header parsers register defects for RFC
+compliance issues, for obsolete RFC syntax, and for unrecoverable parsing
+errors.
+
+The parse method may add additional keys to the dictionary.  In this case
+the subclass must define an 'init' method, which will be passed the
+dictionary as its keyword arguments.  The method should use (usually by
+setting them as the value of similarly named attributes) and remove all the
+extra keys added by its parse method, and then use super to call its parent
+class with the remaining arguments and keywords.
+
+The subclass should also make sure that a 'max_count' attribute is defined
+that is either None or 1. XXX: need to better define this API.</p></div>
+      </div>
+
+      <div id="splitTables">
+        <table class="children sortable" id="id1309">
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.headerregistry.BaseHeader.html#__new__" class="code" data-type="Method">__new__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.headerregistry.BaseHeader.html#init" class="code" data-type="Method">init</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.headerregistry.BaseHeader.html#name" class="code" data-type="Method">name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.headerregistry.BaseHeader.html#defects" class="code" data-type="Method">defects</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.headerregistry.BaseHeader.html#__reduce__" class="code" data-type="Method">__reduce__</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><a href="Lib.email.headerregistry.BaseHeader.html#fold" class="code" data-type="Method">fold</a></td>
+    <td><span>Fold header according to policy.</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.email.headerregistry.BaseHeader.html#_name" class="code" data-type="Instance Variable">_name</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.email.headerregistry.BaseHeader.html#_parse_tree" class="code" data-type="Instance Variable">_parse_tree</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><a href="Lib.email.headerregistry.BaseHeader.html#_defects" class="code" data-type="Instance Variable">_defects</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="classmethod private">
+    
+    <td>Class Method</td>
+    <td><a href="Lib.email.headerregistry.BaseHeader.html#_reconstruct" class="code" data-type="Class Method">_reconstruct</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+        
+
+          
+      </div>
+
+      <div id="childList">
+
+        <div class="basemethod">
+  
+  <a name="Lib.email.headerregistry.BaseHeader.__new__">
+    
+  </a>
+  <a name="__new__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __new__(cls, name, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.headerregistry.BaseHeader.init">
+    
+  </a>
+  <a name="init">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    init(self, name):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.email.headerregistry.BaseHeader._name">
+    
+  </a>
+  <a name="_name">
+    
+  </a>
+  <div class="functionHeader">
+    _name =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.email.headerregistry.BaseHeader._parse_tree">
+    
+  </a>
+  <a name="_parse_tree">
+    
+  </a>
+  <div class="functionHeader">
+    _parse_tree =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  <a name="Lib.email.headerregistry.BaseHeader._defects">
+    
+  </a>
+  <a name="_defects">
+    
+  </a>
+  <div class="functionHeader">
+    _defects =
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.headerregistry.BaseHeader.name">
+    
+  </a>
+  <a name="name">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    name(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.headerregistry.BaseHeader.defects">
+    
+  </a>
+  <a name="defects">
+    
+  </a>
+  <div class="functionHeader">
+    @property<br />
+    def
+    defects(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.headerregistry.BaseHeader.__reduce__">
+    
+  </a>
+  <a name="__reduce__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __reduce__(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="baseclassmethod private">
+  
+  <a name="Lib.email.headerregistry.BaseHeader._reconstruct">
+    
+  </a>
+  <a name="_reconstruct">
+    
+  </a>
+  <div class="functionHeader">
+    @classmethod<br />
+    def
+    _reconstruct(cls, value):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="basemethod">
+  
+  <a name="Lib.email.headerregistry.BaseHeader.fold">
+    
+  </a>
+  <a name="fold">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    fold(self):
+    
+  </div>
+  <div class="docstring functionBody">
+    
+    
+    <div><p class="pre">Fold header according to policy.
+
+The parsed representation of the header is folded according to
+RFC5322 rules, as modified by the policy.  If the parse tree
+contains surrogateescaped bytes, the bytes are CTE encoded using
+the charset 'unknown-8bit".
+
+Any non-ASCII characters in the parse tree are CTE encoded using
+charset utf-8. XXX: make this a policy setting.
+
+The returned value is an ASCII-only string possibly containing linesep
+characters, and ending with a linesep character.  The string includes
+the header name and the ': ' separator.</p></div>
+  </div>
+</div>
+
+      </div>
+      <address>
+        <a href="index.html">API Documentation</a> for Python3.8, generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a> 20.7.1 at 2020-11-24 05:02:55.
+      </address>
+
+    </div>
+
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

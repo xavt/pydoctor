@@ -27,6 +27,6 @@ Installation
    :maxdepth: 1
    :caption: Quick links
 
-   api/index
+   api
    GitHub <https://github.com/twisted/pydoctor>
    PyPI <https://pypi.org/project/pydoctor>

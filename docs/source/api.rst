@@ -32,6 +32,8 @@ API Reference
          document.getElementById("glu").style.height = document.body.scrollHeight+"px";
       }
    </script>  
+
+   <base target="_parent" />
    
    <div class="iapiref">
       <iframe id='glu'

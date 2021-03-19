@@ -710,11 +710,20 @@ class System:
                 yield o
 
     def privacyClass(self, ob: Documentable) -> PrivacyClass:
+        
         if ob.kind is None:
             return PrivacyClass.HIDDEN
+        
+        ob_fullName = ob.fullName()
+        if ob_fullName in self.options.exclude:
+            return PrivacyClass.HIDDEN
+        elif ob_fullName in self.options.private:
+            return PrivacyClass.PRIVATE
+
         if ob.name.startswith('_') and \
                not (ob.name.startswith('__') and ob.name.endswith('__')):
             return PrivacyClass.PRIVATE
+        
         return PrivacyClass.VISIBLE
 
     def addObject(self, obj: Documentable) -> None:

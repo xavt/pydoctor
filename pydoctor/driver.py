@@ -136,6 +136,16 @@ def getparser() -> OptionParser:
         help=("Which epydoc-supported format docstrings are assumed "
               "to be in."))
     parser.add_option(
+        '--private', action='append', dest='private',
+        metavar='PRIVATE', default=[],
+        help=("The fullName of modules, or any objects, to mark private. "
+              "Can be repeated to mark multiple packages/modules/classes private."))
+    parser.add_option(
+        '--exclude', action='append', dest='exclude',
+        metavar='EXCLUDED', default=[],
+        help=("The fullName of modules, or any objects, to hide. "
+              "Can be repeated to exclude multiple packages/modules/classes"))
+    parser.add_option(
         '--html-subject', dest='htmlsubjects', action='append',
         help=("The fullName of object to generate API docs for"
               " (default: everything)."))
@@ -281,8 +291,6 @@ def _warn_deprecated_options(options: Values) -> None:
               file=sys.stderr, flush=True)
 
 
-
-
 def main(args: Sequence[str] = sys.argv[1:]) -> int:
     """
     This is the console_scripts entry point for pydoctor CLI.
@@ -302,13 +310,14 @@ def main(args: Sequence[str] = sys.argv[1:]) -> int:
                          maxAge=options.intersphinx_cache_max_age)
 
     try:
-        # step 1: make/find the system
+        # step 1: find the system
         if options.systemclass:
             systemclass = findClassFromDottedName(
                 options.systemclass, '--system-class', model.System)
         else:
             systemclass = zopeinterface.ZopeInterfaceSystem
 
+        # step 1.1: create the system
         system = systemclass(options)
         system.fetchIntersphinxInventories(cache)
 

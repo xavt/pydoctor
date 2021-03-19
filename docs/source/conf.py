@@ -104,6 +104,7 @@ pydoctor_args = {
         f'--project-version={version}',
         '--docformat=epytext',
         '--project-url=../index.html',
+        '--private=pydoctor.test',
         f'{_pydoctor_root}/pydoctor',
         ] + _common_args,
     'epydoc_demo': [

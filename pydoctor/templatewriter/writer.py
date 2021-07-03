@@ -2,11 +2,11 @@
 
 
 from pathlib import Path
-from typing import IO, Iterable, Optional, Type
+from typing import IO, Iterable, Type
 
 from pydoctor import model
 from pydoctor.templatewriter import (
-    DOCTYPE, pages, summary, TemplateLookup, IWriter, _StaticTemplate, Template
+    DOCTYPE, pages, summary, search, TemplateLookup, IWriter, StaticTemplate
 )
 
 from twisted.python.failure import Failure
@@ -41,34 +41,30 @@ class TemplateWriter(IWriter):
                     return False
         return True
 
-    def __init__(self, output_dir: str, template_lookup: Optional[TemplateLookup] = None):
+    def __init__(self, build_directory: Path, template_lookup: TemplateLookup):
         """
-        @arg output_dir: Output directory.
-        @arg template_lookup: Custom L{TemplateLookup} object.
+        @arg build_directory: Build directory.
+        @arg template_lookup: L{TemplateLookup} object.
         """
-        self.output_dir: Path = Path(output_dir)
+        self.build_directory = build_directory
+        """Build directory"""
+
+        self.template_lookup: TemplateLookup = template_lookup
+        """Writer's L{TemplateLookup} object"""
+
         self.written_pages: int = 0
         self.total_pages: int = 0
         self.dry_run: bool = False
-        self.template_lookup:TemplateLookup = (
-            template_lookup if template_lookup else TemplateLookup() )
-        """Writer's L{TemplateLookup} object"""
+        
 
     def prepOutputDirectory(self) -> None:
         """
         Write static CSS and JS files to build directory.
         """
-        self.output_dir.mkdir(exist_ok=True, parents=True)
-        self._writeStaticTemplates(self.template_lookup.templates)
-    
-    def _writeStaticTemplates(self, templates: Iterable[Template]) -> None:
-        """
-        Write all L{_StaticTemplate} to output directory, inspect L{_TemplateSubFolder} 
-        and reccursively write the static templates in subfolders.
-        """
-        for template in templates:
-            if isinstance(template, _StaticTemplate):
-                template.write(self.output_dir)
+        self.build_directory.mkdir(exist_ok=True, parents=True)
+        for template in self.template_lookup.templates:
+            if isinstance(template, StaticTemplate):
+                template.write(self.build_directory)
 
     def writeIndividualFiles(self, obs: Iterable[model.Documentable]) -> None:
         """
@@ -83,13 +79,19 @@ class TemplateWriter(IWriter):
 
     def writeSummaryPages(self, system: model.System) -> None:
         import time
-        for pclass in summary.summarypages:
+        for pclass in summary.summarypages + search.searchpages:
             system.msg('html', 'starting ' + pclass.__name__ + ' ...', nonl=True)
             T = time.time()
             page = pclass(system=system, template_lookup=self.template_lookup)
-            with self.output_dir.joinpath(pclass.filename).open('wb') as fobj:
+            with self.build_directory.joinpath(pclass.filename).open('wb') as fobj:
                 flattenToFile(fobj, page)
             system.msg('html', "took %fs"%(time.time() - T), wantsnl=False)
+        
+        # Generate the searchindex.json file
+        system.msg('html', 'starting lunr search index ...', nonl=True)
+        T = time.time()
+        search.write_lunr_index(self.build_directory, system=system)
+        system.msg('html', "took %fs"%(time.time() - T), wantsnl=False)
 
     def _writeDocsFor(self, ob: model.Documentable) -> None:
         if not ob.isVisible:
@@ -98,7 +100,7 @@ class TemplateWriter(IWriter):
             if self.dry_run:
                 self.total_pages += 1
             else:
-                with self.output_dir.joinpath(f'{ob.fullName()}.html').open('wb') as fobj:
+                with self.build_directory.joinpath(f'{ob.fullName()}.html').open('wb') as fobj:
                     self._writeDocsForOne(ob, fobj)
         for o in ob.contents.values():
             self._writeDocsFor(o)
